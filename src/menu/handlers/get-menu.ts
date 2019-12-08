@@ -1,25 +1,16 @@
 import 'source-map-support/register'
-import { response, APIGatewayProxyHandlerAsync } from 'src/lib/http'
-import { safeLoad as yaml } from 'js-yaml'
-import { readFileSync } from 'fs'
-import { join } from 'path'
-import { Menu } from 'src/db/menu'
+import { response, AGPHA } from 'src/lib/http'
+import { getMenu } from 'src/db/menus'
+import log from 'lambda-log'
 
-const getMenu = (restaurantId: string): Menu | undefined => {
-  const url = join(process.cwd(), 'src', 'db', 'menus.yml')
+export const handler: AGPHA = async (event, _ctx, _cb) => {
+  const restaurantId = event.pathParameters!.restaurantId
 
-  return yaml(readFileSync(url) + '').find(
-    m => m.restaurantId == restaurantId,
-  )
-}
+  const menu = await getMenu(restaurantId).catch(log.error)
 
-export const handler: APIGatewayProxyHandlerAsync = async (
-  event,
-  _ctx,
-  _cb,
-) => {
-  const { restaurantId } = event.pathParameters
-  const menu = getMenu(restaurantId)
+  if (!menu) {
+    return response({ kind: 'NOT_FOUND' })
+  }
 
   return response({ body: menu })
 }

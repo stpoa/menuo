@@ -5,7 +5,9 @@ import {
   APIGatewayProxyCallback,
 } from 'aws-lambda'
 
-type ResponseKind = 'OK' | 'UNAUTHORIZED' | 'UNPROCESSABLE_ENTITY'
+type ResponseKind = 'OK' | 'UNAUTHORIZED' | 'UNPROCESSABLE_ENTITY' | 'NOT_FOUND'
+
+export type AGPHA = APIGatewayProxyHandlerAsync
 
 export type APIGatewayProxyHandlerAsync = (
   event: APIGatewayProxyEvent,
@@ -33,6 +35,7 @@ export const response = (
     [key in ResponseKind]: { statusCode: number; body?: any }
   } = {
     OK: { statusCode: 200 },
+    NOT_FOUND: { statusCode: 400, body: 'Not found' },
     UNAUTHORIZED: { statusCode: 401, body: 'Unauthorized' },
     UNPROCESSABLE_ENTITY: { statusCode: 422, body: 'Unprocessable entity' },
   }

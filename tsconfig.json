@@ -10,6 +10,7 @@
     "sourceMap": true,
     "target": "es2017",
     "outDir": "lib",
+    "strictNullChecks": true,
     "esModuleInterop": true
   },
   "paths": {

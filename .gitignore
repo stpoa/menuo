@@ -10,3 +10,9 @@ jspm_packages
 
 # Env
 .env
+
+# Dist
+client/dist
+
+# Logs
+yarn-error.log

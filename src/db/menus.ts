@@ -1,3 +1,27 @@
+import yaml from 'yaml-tag'
+
+export interface Menu {
+  restaurantId: string
+  menu: {
+    name: string
+    dishes: Dish[]
+  }
+}
+
+interface Dish {
+  name: string
+  variants: Variant[]
+}
+
+interface Variant {
+  price: number
+  description: string
+}
+
+export const getMenu = (restaurantId: string) =>
+  Promise.resolve(menus.find(menu => menu.restaurantId === restaurantId))
+
+export const menus: Menu[] = yaml`
 - restaurantId: 0
   menu:
   - name: Zupy
@@ -63,3 +87,4 @@
       variants:
       - price: 30
       description: Lettuce with grilled chicken, goat cheese and roasted pepper
+`

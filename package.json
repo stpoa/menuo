@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "scripts": {
     "start": "run-p start:local",
-    "deploy": "sls deploy",
+    "deploy": "run-p deploy:server deploy:client",
+    "deploy:server": "sls deploy",
+    "deploy:client": "sls client deploy --no-config-change --no-policy-change --no-cors-change --no-confirm",
     "format": "npm run format:prettier",
     "format:prettier": "prettier './**/*.ts*' --write",
     "start:local": "node ./scripts/start-local.js",
@@ -17,7 +19,9 @@
     "js-yaml": "^3.13.1",
     "lambda-log": "^2.3.1",
     "ramda": "^0.26.1",
-    "source-map-support": "^0.5.10"
+    "serverless-finch": "^2.4.3",
+    "source-map-support": "^0.5.10",
+    "yaml-tag": "^1.1.0"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.17",
