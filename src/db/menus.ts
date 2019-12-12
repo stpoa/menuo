@@ -22,7 +22,7 @@ export const getMenu = (restaurantId: string) =>
   Promise.resolve(menus.find(menu => menu.restaurantId === restaurantId))
 
 export const menus: Menu[] = yaml`
-- restaurantId: 0
+- restaurantId: 'zalewajka'
   menu:
   - name: Zupy
     dishes:
@@ -55,7 +55,7 @@ export const menus: Menu[] = yaml`
       - price: 30
       description: Lettuce with grilled chicken, goat cheese and roasted pepper
 
-- restaurantId: 1
+- restaurantId: 'zadupajka'
   menu:
   - name: Dupy
     dishes:
