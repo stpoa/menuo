@@ -4,7 +4,7 @@ export const wait = (ms: number) =>
   })
 
 export const promiseSequence = async <T>(promises: Promise<T>[]): Promise<T[]> => {
-  const results = []
+  const results: any = []
   for(let i = 0; i < promises.length; ++i) {
     results[i] = await promises[i];
   }

@@ -38,3 +38,7 @@ functions:
             parameters:
               paths:
                 restaurantId: true
+  logs:
+    handler: src/logs/handlers/log.handler
+    events:
+      - cloudwatchLog: '/aws/lambda/menuo-dev-get-menu' # FIXME: hardcoded

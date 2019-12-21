@@ -5,7 +5,8 @@ import log from 'lambda-log'
 
 export const handler: AGPHA = async (event, _ctx, _cb) => {
   const restaurantId = event.pathParameters!.restaurantId
-  log.info('get-menu', { event })
+
+  console.log('get-menu', JSON.stringify({ event }))
 
   const menu = await getMenu(restaurantId).catch(log.error)
 
