@@ -9,7 +9,8 @@ custom:
     webpackConfig: ./webpack.config.js
     includeModules: true
   client:
-    bucketName: serverless-client-menuo
+    bucketName: menuo.me
+    distributionFolder: client/build
 
 plugins:
   - serverless-dotenv-plugin

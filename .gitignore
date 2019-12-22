@@ -16,3 +16,6 @@ client/dist
 
 # Logs
 yarn-error.log
+
+# OS
+.DS_Store
