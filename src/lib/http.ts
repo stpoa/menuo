@@ -40,7 +40,13 @@ export const response = (
     UNPROCESSABLE_ENTITY: { statusCode: 422, body: 'Unprocessable entity' },
   }
 
-  const response = { ...responses[kind], ...rest }
+  const headers = {
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Credentials': true,
+    ...rest.headers,
+  }
+
+  const response = { ...responses[kind], ...rest, headers }
 
   return { ...response, body: JSON.stringify(response.body) }
 }

@@ -35,10 +35,12 @@ functions:
       - http:
           path: menus/{restaurantId}
           method: get
+          cors: true
           request:
             parameters:
               paths:
                 restaurantId: true
+
   logs:
     handler: src/logs/handlers/log.handler
     events:
