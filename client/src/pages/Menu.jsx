@@ -23,7 +23,8 @@ import { H2 } from '../components/H2'
 import { makeStyles, createStyles } from '@material-ui/styles'
 import { PlusMinus } from '../components/PlusMinus'
 
-const API_URL = 'http://localhost:4000'
+const API_URL = process.env.REACT_APP_API_URL
+console.log({ API_URL })
 
 export const Menu = ({ location, match }) => {
   const { restaurantId } = match.params
