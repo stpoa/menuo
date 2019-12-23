@@ -22,11 +22,21 @@ import { Header } from '../components/Header'
 import { H2 } from '../components/H2'
 import { makeStyles, createStyles } from '@material-ui/styles'
 import { PlusMinus } from '../components/PlusMinus'
+import { getConfig } from '../env'
 
-const API_URL = process.env.REACT_APP_API_URL
-console.log({ API_URL })
+const config = getConfig()
 
-export const Menu = ({ location, match }) => {
+const fetchJson: typeof fetch = (input, init) =>
+  fetch(input, init).then(res => res.json())
+
+const api = {
+  get: (url: string, options?: RequestInit) =>
+    fetchJson(config.apiUrl + url, { ...options, method: 'GET' }),
+  post: (url: string, options?: RequestInit) =>
+    fetchJson(config.apiUrl + url, { ...options, method: 'POST' }),
+}
+
+export const Menu = ({ location, match }: any) => {
   const { restaurantId } = match.params
   const { search } = location
   const query = useQuery(search)
@@ -37,7 +47,8 @@ export const Menu = ({ location, match }) => {
 
   useEffect(() => {
     const doEffect = async () => {
-      const restaurant = await window.fetch(API_URL + '/menus/' + restaurantId).then(res => res.json())
+      const restaurant: any = await api.get(`/menus/${restaurantId}`)
+
       const menu = restaurant.menu || []
       setMenu(menu)
     }
@@ -47,18 +58,17 @@ export const Menu = ({ location, match }) => {
 
   useEffect(() => {
     navigator.serviceWorker.addEventListener('message', event => {
-      console.log(event.data.refetch)
       setRefetch(event.data.refetch)
     })
   }, [])
 
-  const [basket, setBasket] = useState({}) // { [itemId + ' ' + optionId]: count }
+  const [basket, setBasket] = useState<any>({}) // { [itemId + ' ' + optionId]: count }
   const [showSummonDialog, setShowSummonDialog] = useState(false)
   const [showOrderedDialog, setShowOrderedDialog] = useState(false)
-  const classes = useStyles()
+  const classes = useStyles() as any
 
   // Handlers
-  const handleOrderClick = ({ basket, userId = 0, tableId }) => async () => {
+  const handleOrderClick = ({ basket, userId = 0, tableId }: any) => async () => {
     await apiCreateOrder({ userId, tableId, basket })
     setShowOrderedDialog(true)
     setBasket({})
@@ -68,42 +78,42 @@ export const Menu = ({ location, match }) => {
     setShowSummonDialog(true)
   }
 
-  const handleSummonClick = ({ tableId }) => async () => {
+  const handleSummonClick = ({ tableId }: any) => async () => {
     await apiSummonWaiter({ tableId })
     setShowSummonDialog(false)
   }
-  const handlePayCardClick = ({ tableId }) => async () => {
+  const handlePayCardClick = ({ tableId }: any) => async () => {
     await apiPayByCard({ tableId })
     setShowSummonDialog(false)
   }
-  const handlePayCashClick = ({ tableId }) => async () => {
+  const handlePayCashClick = ({ tableId }: any) => async () => {
     await apiPayByCash({ tableId })
     setShowSummonDialog(false)
   }
 
-  const handleToggle = (id, count) => () =>
-    setBasket(basket => ({ ...basket, [id]: count ? 0 : 1 }))
+  const handleToggle = (id: any, count: any) => () =>
+    setBasket((basket: any) => ({ ...basket, [id]: count ? 0 : 1 }))
 
-  const handleMinus = (id, count) => () =>
-    setBasket(basket => ({ ...basket, [id]: basket[id] - 1 }))
+  const handleMinus = (id: any, count: any) => () =>
+    setBasket((basket: { [x: string]: number }) => ({ ...basket, [id]: basket[id] - 1 }))
 
-  const handlePlus = (id, count) => () =>
-    setBasket(basket => ({ ...basket, [id]: basket[id] + 1 }))
+  const handlePlus = (id: any, count:any) => () =>
+    setBasket((basket: { [x: string]: number }) => ({ ...basket, [id]: basket[id] + 1 }))
 
-  const handleDishClick = dishId => () => {
+  const handleDishClick = (dishId: string) => () => {
     const id = dishId + ' 0'
     const variantIds = Object.keys(basket).filter(id => id.includes(dishId))
     if (variantIds.some(id => basket[id] > 0)) {
-      variantIds.forEach(id => setBasket(basket => ({ ...basket, [id]: 0 })))
+      variantIds.forEach(id => setBasket((basket: any) => ({ ...basket, [id]: 0 })))
     } else {
       const count = basket[id]
-      setBasket(basket => ({ ...basket, [id]: count ? 0 : 1 }))
+      setBasket((basket: any) => ({ ...basket, [id]: count ? 0 : 1 }))
     }
   }
 
   // Tools
-  const isBasketFilled = basket =>
-    !!Object.values(basket).reduce((a, b) => a + b, 0)
+  const isBasketFilled = (basket: { [s: string]: unknown } | ArrayLike<unknown>) =>
+    !!Object.values(basket as any).reduce((a: any, b: any) => a + b, 0)
 
   // Variables
   const isBasketEmpty = !isBasketFilled(basket)
@@ -113,22 +123,22 @@ export const Menu = ({ location, match }) => {
       <Header>Menu</Header>
 
       <div className={classes.menuContent}>
-        {menu.map((section, key) => (
+        {menu.map((section: any, key) => (
           <div key={key}>
             <H2>{section.name}</H2>
             <Divider />
 
             <List className={classes.list}>
-              {section.dishes.map((dish, id) => (
+              {section.dishes.map((dish: { name: React.ReactNode; description: React.ReactNode; variants: any[]; id: string }, id: string | number | undefined) => (
                 <div key={id}>
-                  <ListItem button onClick={handleDishClick(id)}>
+                  <ListItem button onClick={handleDishClick(id! + '')}>
                     <ListItemText
                       primary={dish.name}
                       secondary={dish.description}
                     />
                   </ListItem>
                   <List component="div" disablePadding>
-                    {dish.variants.map((variant, i) => {
+                    {dish.variants.map((variant: any, i) => {
                       const id = dish.id + ' ' + i
                       const count = basket[id]
                       const variantText =
@@ -137,7 +147,7 @@ export const Menu = ({ location, match }) => {
                         'zł'
                       return (
                         <ListItem
-                          button={!count}
+                          button={!count as any}
                           onClick={!count ? handleToggle(id, count) : undefined}
                           className={classes.nested}
                         >
