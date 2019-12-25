@@ -1,7 +1,7 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import './App.css'
-import { Menu } from './pages/Menu'
+import { RestaurantPage } from './pages/RestaurantPage/RestaurantPage'
 import { Orders } from './pages/Orders'
 import Button from '@material-ui/core/Button'
 
@@ -26,7 +26,7 @@ const App = () => {
     <div className="App">
       <ThemeProvider theme={theme}>
         <Switch>
-          <Route exact path="/:restaurantId/menu" component={Menu} />
+          <Route exact path="/:restaurantId" component={RestaurantPage} />
           <Route exact path="/:restaurantId/orders" component={Orders} />
         </Switch>
       </ThemeProvider>

@@ -4,7 +4,7 @@ import {
   apiCompleteOrder,
   apiDeleteOrder,
   apiCompleteTableAction,
-} from '../api'
+} from '../api-old'
 import { Header } from '../components/Header'
 import {
   Fab,

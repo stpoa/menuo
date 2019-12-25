@@ -1,6 +1,6 @@
 import 'source-map-support/register'
 import { response, AGPHA } from 'src/lib/http'
-import { getMenu } from 'src/db/menus'
+import { getRestaurant } from 'src/db/restaurants'
 import log from 'lambda-log'
 
 export const handler: AGPHA = async (event, _ctx, _cb) => {
@@ -8,7 +8,7 @@ export const handler: AGPHA = async (event, _ctx, _cb) => {
 
   console.log('get-menu', JSON.stringify({ event }))
 
-  const menu = await getMenu(restaurantId).catch(log.error)
+  const menu = await getRestaurant(restaurantId).catch(log.error)
 
   if (!menu) {
     return response({ kind: 'NOT_FOUND' })
