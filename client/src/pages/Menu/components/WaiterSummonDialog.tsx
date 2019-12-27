@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { useStyles } from '../RestaurantPage.styles'
+import { useStyles } from '../Menu.styles'
 import { DialogTitle, DialogContent, Dialog, Button } from '@material-ui/core'
 
 interface WaiterSummonDialogProps {

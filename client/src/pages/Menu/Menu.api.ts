@@ -1,6 +1,6 @@
 import { get } from '../../api'
 
-export const getRestaurant = (id: string) => get<IRestaurant>(`/menus/${id}`)
+export const getRestaurant = (id: string) => get<IRestaurant>(`/restaurants/${id}`)
 
 export interface IRestaurant {
   restaurantId: string

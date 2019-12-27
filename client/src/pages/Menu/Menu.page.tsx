@@ -3,8 +3,8 @@ import { useQuery } from '../../utils'
 import { Button } from '@material-ui/core'
 import { Header } from '../../components/Header'
 
-import { getRestaurant, IRestaurant } from './RestaurantPage.api'
-import { useStyles } from './RestaurantPage.styles'
+import { getRestaurant, IRestaurant } from './Menu.api'
+import { useStyles } from './Menu.styles'
 import { MenuSection } from './components/MenuSection'
 import { OrderSentDialog } from './components/OrderSentDialog'
 import { WaiterSummonDialog } from './components/WaiterSummonDialog'
@@ -14,7 +14,7 @@ const makeInBasketId = (sectionId: number) => (dishId: number) => (
   variantId: number,
 ) => sectionId + ' ' + dishId + ' ' + variantId
 
-export const RestaurantPage = ({ location, match }: any) => {
+export const MenuPage = ({ location, match }: any) => {
   const { restaurantId } = match.params
   const { search } = location
   const query = useQuery(search)
@@ -43,8 +43,6 @@ export const RestaurantPage = ({ location, match }: any) => {
   const [showSummonDialog, setShowSummonDialog] = useState(false)
   const [showOrderedDialog, setShowOrderedDialog] = useState(false)
   const classes = useStyles() as any
-
-  console.log(basket)
 
   // Handlers
   const handleOrderClick = ({
@@ -79,7 +77,6 @@ export const RestaurantPage = ({ location, match }: any) => {
     variantId: number,
     count: number,
   ) => () => {
-    console.log('handle toggle')
     setBasket(basket => ({
       ...basket,
       [makeInBasketId(sectionId)(dishId)(variantId)]: count ? 0 : 1,

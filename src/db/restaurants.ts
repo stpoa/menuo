@@ -1,6 +1,6 @@
 import yaml from 'yaml-tag'
 
-export interface Restaurant {
+export interface Menu {
   restaurantId: string
   menu: {
     name: string
@@ -18,10 +18,12 @@ interface Variant {
   description: string
 }
 
-export const getRestaurant = (restaurantId: string) =>
-  Promise.resolve(restaurants.find(menu => menu.restaurantId === restaurantId))
+export const getMenu = (restaurantId: string) =>
+  Promise.resolve(
+    menus.find(menu => menu.restaurantId === restaurantId),
+  )
 
-export const restaurants: Restaurant[] = yaml`
+export const menus: Menu[] = yaml`
 - restaurantId: 'zalewajka'
   menu:
   - name: Zupy

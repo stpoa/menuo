@@ -29,11 +29,23 @@ provider:
 
 functions:
 
-  get-menu:
-    handler: src/menu/handlers/get-menu.handler
+  get-restaurant-menu:
+    handler: src/restaurant/handlers/get-restaurant-menu.handler
     events:
       - http:
-          path: menus/{restaurantId}
+          path: restaurants/{restaurantId}
+          method: get
+          cors: true
+          request:
+            parameters:
+              paths:
+                restaurantId: true
+
+  get-restaurant-orders:
+    handler: src/restaurant/handlers/get-restaurant-orders.handler
+    events:
+      - http:
+          path: tables/{restaurantId}
           method: get
           cors: true
           request:
@@ -44,4 +56,4 @@ functions:
   logs:
     handler: src/logs/handlers/log.handler
     events:
-      - cloudwatchLog: '/aws/lambda/menuo-dev-get-menu' # FIXME: hardcoded
+      - cloudwatchLog: '/aws/lambda/menuo-dev-get-restaurant' # FIXME: hardcoded
