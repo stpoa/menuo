@@ -10,6 +10,8 @@ jspm_packages
 
 # Env
 .env
+.env.local
+.env.production
 
 # Dist
 client/dist

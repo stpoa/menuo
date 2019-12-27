@@ -19,7 +19,9 @@ interface Variant {
 }
 
 export const getMenu = (restaurantId: string) =>
-  Promise.resolve(menus.find(menu => menu.restaurantId === restaurantId))
+  Promise.resolve(
+    menus.find(menu => menu.restaurantId === restaurantId),
+  )
 
 export const menus: Menu[] = yaml`
 - restaurantId: 'zalewajka'

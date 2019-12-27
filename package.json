@@ -2,7 +2,9 @@
   "name": "menuo",
   "version": "0.0.1",
   "scripts": {
-    "start": "run-p start:local",
+    "start": "run-p start:server start:client",
+    "start:server": "node ./scripts/start-local.js",
+    "start:client": "cd client && yarn start",
     "deploy": "run-p deploy:server deploy:client",
     "deploy:server": "sls deploy",
     "deploy:client": "run-s build:client upload:client",
@@ -10,12 +12,11 @@
     "upload:client": "sls client deploy --no-config-change --no-policy-change --no-cors-change --no-confirm",
     "format": "npm run format:prettier",
     "format:prettier": "prettier './**/*.ts*' --write",
-    "start:local": "node ./scripts/start-local.js",
-    "start:tunel": "node ./scripts/start-tunel.js",
     "test": "run-p test:types test:logic",
     "test:logic": "jest",
     "test:types": "tsc -p . --noEmit"
   },
+  "proxy": "http://localhost:4000",
   "dependencies": {
     "dotenv": "^8.2.0",
     "js-yaml": "^3.13.1",
