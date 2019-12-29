@@ -1,17 +1,27 @@
 import {
   APIGatewayProxyResult,
   APIGatewayProxyEvent,
-  APIGatewayEventRequestContext,
   APIGatewayProxyCallback,
+  Context,
 } from 'aws-lambda'
+import { MongoClient } from 'mongodb'
 
 type ResponseKind = 'OK' | 'UNAUTHORIZED' | 'UNPROCESSABLE_ENTITY' | 'NOT_FOUND'
 
 export type AGPHA = APIGatewayProxyHandlerAsync
+export type AGPHADB = APIGatewayProxyHandlerAsyncDB
+
+export type WithDB<T> = T & { dbClient: MongoClient }
+
+export type APIGatewayProxyHandlerAsyncDB = (
+  event: APIGatewayProxyEvent,
+  context: WithDB<Context>,
+  callback: APIGatewayProxyCallback,
+) => Promise<APIGatewayProxyResult>
 
 export type APIGatewayProxyHandlerAsync = (
   event: APIGatewayProxyEvent,
-  context: APIGatewayEventRequestContext,
+  context: Context,
   callback: APIGatewayProxyCallback,
 ) => Promise<APIGatewayProxyResult>
 

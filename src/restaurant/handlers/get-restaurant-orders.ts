@@ -1,15 +1,16 @@
 import 'source-map-support/register'
-import { response, AGPHA } from 'src/lib/http'
-import { getTables } from 'src/db/tables'
+import { response } from 'src/lib/http'
+import { getOrders, withDB } from 'src/db/db'
+import { log } from 'src/logs/logs'
 
-export const handler: AGPHA = async (event, _ctx, _cb) => {
+export const handler = withDB(async (event, ctx, _cb) => {
   const restaurantId = event.pathParameters!.restaurantId
-  const tables = await getTables(restaurantId)
+  const { tables } = await getOrders(ctx.dbClient)(restaurantId)
 
   if (!tables) {
-    console.log('get-orders', JSON.stringify({ event }))
+    log('Order not found', { restaurantId, tables })
     return response({ kind: 'NOT_FOUND' })
   }
 
   return response({ body: tables })
-}
+})
