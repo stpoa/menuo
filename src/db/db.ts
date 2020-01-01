@@ -1,6 +1,6 @@
 import { MongoClient } from 'mongodb'
-import { Menu } from './restaurants'
-import { OrdersRestaurnat } from './tables'
+import { Menu } from './menus'
+import { OrdersRestaurnat } from './orders'
 import { AGPHADB, WithDB } from 'src/lib/http'
 import { APIGatewayProxyEvent, APIGatewayProxyCallback } from 'aws-lambda'
 import { Context } from 'vm'

@@ -9,12 +9,12 @@ import { Header } from '../../components/Header'
 import { useStyles } from './Orders.styles'
 import { OrdersTable } from './components/Table/OrdersTable'
 
-import { getTables, ITable } from './Orders.api'
+import { getTables, IOrdersTable } from './Orders.api'
 
 export const Orders = ({ search, match }: any) => {
   const { restaurantId } = match.params
   const [refetch, setRefetch] = useState()
-  const [tables, setTables] = useState<ITable[]>([])
+  const [tables, setTables] = useState<IOrdersTable[]>([])
 
   useEffect(() => {
     const doEffect = async () => {
@@ -33,7 +33,7 @@ export const Orders = ({ search, match }: any) => {
   const classes = useStyles()
 
   const handleAcceptOrder = ({ orderId }: any) => async () => {
-    await apiAcceptOrder({ orderId })
+    await apiAcceptOrder({ restaurantId, orderId })
     setRefetch(+new Date())
   }
 
@@ -43,7 +43,7 @@ export const Orders = ({ search, match }: any) => {
   }
 
   const handleCompleteOrderToggle = ({ orderId, status }: any) => async () => {
-    await apiCompleteOrder({ orderId, status })
+    await apiCompleteOrder({ restaurantId, orderId, status })
     setRefetch(+new Date())
   }
 
