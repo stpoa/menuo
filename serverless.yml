@@ -45,8 +45,32 @@ functions:
     handler: src/restaurant/handlers/get-restaurant-orders.handler
     events:
       - http:
-          path: tables/{restaurantId}
-          method: get
+          path: orders/{restaurantId}
+          method: get 
+          cors: true
+          request:
+            parameters:
+              paths:
+                restaurantId: true
+
+  post-restaurant-orders:
+    handler: src/restaurant/handlers/post-restaurant-orders.handler
+    events:
+      - http:
+          path: orders/{restaurantId}
+          method: post
+          cors: true
+          request:
+            parameters:
+              paths:
+                restaurantId: true
+
+  put-restaurant-orders:
+    handler: src/restaurant/handlers/put-restaurant-orders.handler
+    events:
+      - http:
+          path: orders/{restaurantId}
+          method: put 
           cors: true
           request:
             parameters:
