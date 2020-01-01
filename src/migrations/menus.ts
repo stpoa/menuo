@@ -1,6 +1,7 @@
 import { readdirSync, readFileSync } from 'fs'
 import yaml from 'js-yaml'
-import { Menu } from 'src/db/menus'
+import { Menu, MenuEntry } from 'src/db/menus'
+import { groupBy, toPairs } from 'ramda'
 
 export interface IRestaurant {
   restaurant: string
@@ -26,13 +27,13 @@ export interface IVariant {
   description?: string
 }
 
-export const readMenus = (menusDir = './data/menus') =>
+export const readMenus = (menusDir = './data/menus'): IRestaurant[] =>
   readdirSync(menusDir).map(file => ({
     restaurant: file.replace('.yml', ''),
     menu: yaml.safeLoad(readFileSync(`${menusDir}/${file}`).toString()),
   }))
 
-export const flattenMenu = ({ menu, restaurant }: IRestaurant): Menu =>
+export const unnestMenu = ({ menu, restaurant }: IRestaurant): Menu =>
   menu
     .flatMap(s =>
       s.dishes.flatMap(d =>
@@ -48,3 +49,31 @@ export const flattenMenu = ({ menu, restaurant }: IRestaurant): Menu =>
       ),
     )
     .map((entry, index) => ({ index, ...entry }))
+
+const menuEntryToVariant = (entry: MenuEntry): IVariant => ({
+  name: entry.dishVariantName,
+  price: entry.dishVariantPrice,
+})
+
+const buildDishesGroup = (dishes: MenuEntry[]) =>
+  toPairs(groupBy(d => d.dishName, dishes as MenuEntry[])).map(
+    ([dishName, entries]) => ({
+      name: dishName,
+      description: entries[0].dishDescription,
+      variants: entries.map(menuEntryToVariant),
+    }),
+  )
+
+const buildSectionGroup = (menu: Menu): IMenu =>
+  toPairs(groupBy<MenuEntry>(e => e.section, menu)).map(
+    ([sectionName, entries]) => ({
+      name: sectionName,
+      dishes: buildDishesGroup(entries),
+    }),
+  )
+
+export const nestMenu = (menu: Menu): IMenu => buildSectionGroup(menu)
+
+const menu = readMenus().map(unnestMenu)[0]
+
+console.log(JSON.stringify(nestMenu(menu), null, 2))
