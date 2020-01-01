@@ -9,7 +9,6 @@ export const createOrder = (restaurantId: string, order: IOrder) =>
 export const updateOrder = (restaurantId: string, order: IOrder) =>
   put<IOrdersTable[]>(`/orders/${restaurantId}`, order as any)
 
-
 export interface IOrdersTable {
   id: number
   status: string

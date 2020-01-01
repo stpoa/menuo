@@ -73,7 +73,3 @@ const buildSectionGroup = (menu: Menu): IMenu =>
   )
 
 export const nestMenu = (menu: Menu): IMenu => buildSectionGroup(menu)
-
-const menu = readMenus().map(unnestMenu)[0]
-
-console.log(JSON.stringify(nestMenu(menu), null, 2))

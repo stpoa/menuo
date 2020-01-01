@@ -3,16 +3,49 @@ import { useQuery } from '../../utils'
 import { Button } from '@material-ui/core'
 import { Header } from '../../components/Header'
 
-import { getRestaurant, IRestaurant } from './Menu.api'
+import { getRestaurant, IRestaurant, ISection, nestMenu } from './Menu.api'
 import { useStyles } from './Menu.styles'
 import { MenuSection } from './components/MenuSection'
 import { OrderSentDialog } from './components/OrderSentDialog'
 import { WaiterSummonDialog } from './components/WaiterSummonDialog'
+import { createOrder, IOrder, IItem } from '../Orders/Orders.api'
 
 type Basket = { [itemPlusOption: string]: number }
 const makeInBasketId = (sectionId: number) => (dishId: number) => (
   variantId: number,
 ) => sectionId + ' ' + dishId + ' ' + variantId
+
+const decodeInBasketId = (id: string) => {
+  const [sectionId, dishId, variantId] = id.split(' ')
+  return { sectionId, dishId, variantId }
+}
+
+const apiCreateOrder = ({
+  userId,
+  tableId,
+  restaurantId,
+  basket,
+  menu,
+}: {
+  userId: number
+  tableId: number
+  restaurantId: string
+  basket: Basket
+  menu: ISection[]
+}) => {
+  const items = Object.entries(basket).map(
+    ([itemId, count]): IItem => {
+      const { sectionId, dishId, variantId } = decodeInBasketId(itemId)
+      const dishes = menu.flatMap(s => s.dishes)
+      const dish = dishes[+dishId]
+      const variant = dish.variants[+variantId]
+
+      return { count, dish, variant, isDone: false, itemId: +itemId }
+    },
+  )
+  const order: IOrder = { id: 0, status: 'new', tableId, userId, items }
+  return createOrder(restaurantId, order)
+}
 
 export const MenuPage = ({ location, match }: any) => {
   const { restaurantId } = match.params
@@ -23,13 +56,13 @@ export const MenuPage = ({ location, match }: any) => {
   const [refetch, setRefetch] = useState(0)
   const [restaurant, setRestaurant] = useState<IRestaurant>({
     menu: [],
-    restaurantId,
+    restaurant: restaurantId,
   })
 
   useEffect(() => {
     ;(async () => {
       const restaurant = await getRestaurant(restaurantId)
-      setRestaurant(restaurant)
+      setRestaurant({ restaurant: restaurantId, menu: nestMenu(restaurant) })
     })()
   }, [restaurantId, refetch])
 
@@ -49,8 +82,9 @@ export const MenuPage = ({ location, match }: any) => {
     basket,
     userId = 0,
     tableId,
+    menu,
   }: any) => async () => {
-    // await apiCreateOrder({ userId, tableId, basket })
+    await apiCreateOrder({ userId, tableId, basket, menu, restaurantId })
     setShowOrderedDialog(true)
     setBasket({})
   }
@@ -165,7 +199,7 @@ export const MenuPage = ({ location, match }: any) => {
           className={classes.buttonRight}
           variant="contained"
           color="primary"
-          onClick={handleOrderClick({ basket, tableId })}
+          onClick={handleOrderClick({ basket, tableId, menu: restaurant.menu })}
         >
           Zamów
         </Button>

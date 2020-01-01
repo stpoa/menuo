@@ -1,3 +1,5 @@
+import { updateOrder } from './pages/Orders/Orders.api'
+
 export const apiSubscribe = (subscription, kind, table) => {
   console.log('Sending subscription to server')
   return fetch('/api/subscribe', {
@@ -21,22 +23,12 @@ export const apiCreateOrder = ({ basket, userId, tableId }) => {
   })
 }
 
-export const apiAcceptOrder = ({ orderId }) => {
-  console.log('Confirming order')
-
-  return fetch('/api/orders', {
-    method: 'PUT',
-    body: JSON.stringify({ id: orderId, status: 'accepted' }),
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  })
+export const apiAcceptOrder = ({ orderId, restaurantId }) => {
+  return updateOrder(restaurantId, { id: orderId, status: 'accepted' })
 }
 
-export const apiCompleteOrder = ({ orderId, status }) => {
+export const apiCompleteOrder = ({ orderId, status, restaurantId }) => {
   console.log('Completing order')
-
-  console.log({ orderId, status })
 
   return fetch('/api/orders', {
     method: 'PUT',
