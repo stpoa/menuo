@@ -1,9 +1,16 @@
-import { get } from '../../api'
+import { get, post, put } from '../../api'
 
 export const getTables = (restaurantId: string) =>
-  get<ITable[]>(`/tables/${restaurantId}`)
+  get<IOrdersTable[]>(`/orders/${restaurantId}`)
 
-export interface ITable {
+export const createOrder = (restaurantId: string, order: IOrder) =>
+  post<IOrdersTable[]>(`/orders/${restaurantId}`, order as any)
+
+export const updateOrder = (restaurantId: string, order: IOrder) =>
+  put<IOrdersTable[]>(`/orders/${restaurantId}`, order as any)
+
+
+export interface IOrdersTable {
   id: number
   status: string
   orders: IOrder[]
@@ -12,7 +19,7 @@ export interface ITable {
 export interface IOrder {
   id: number
   tableId: number
-  userId: 0
+  userId: number
   items: IItem[]
   status: string
 }
@@ -20,8 +27,8 @@ export interface IOrder {
 export interface IItem {
   dish: IDish
   variant: IVariant
-  count: 1
-  itemId: 0
+  count: number
+  itemId: number
   isDone: boolean
 }
 
