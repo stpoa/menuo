@@ -10,7 +10,7 @@ custom:
     includeModules: true
   client:
     bucketName: menuo.me
-    distributionFolder: client/build
+    distributionFolder: ../client/build
 
 plugins:
   - serverless-dotenv-plugin

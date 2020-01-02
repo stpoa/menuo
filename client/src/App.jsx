@@ -1,18 +1,13 @@
 import React from 'react'
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, NavLink } from 'react-router-dom'
 import './App.css'
 import { MenuPage } from './pages/Menu/Menu.page'
 import { Orders } from './pages/Orders/Orders.page'
-import Button from '@material-ui/core/Button'
 
 import {
   createMuiTheme,
-  makeStyles,
   ThemeProvider,
 } from '@material-ui/core/styles'
-import { orange } from '@material-ui/core/colors'
-import purple from '@material-ui/core/colors/purple'
-import green from '@material-ui/core/colors/green'
 
 const theme = createMuiTheme({
   palette: {
@@ -25,6 +20,10 @@ const App = () => {
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
+        {'   '}
+        <NavLink to="/zalewajka">• zalewajka</NavLink>
+        {' '}
+        <NavLink to="/kolanko">• kolanko</NavLink>
         <Switch>
           <Route exact path="/:restaurantId" component={MenuPage} />
           <Route exact path="/:restaurantId/orders" component={Orders} />

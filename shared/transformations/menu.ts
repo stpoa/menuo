@@ -1,37 +1,11 @@
-import { readdirSync, readFileSync, writeFileSync } from 'fs'
-import yaml from 'js-yaml'
-import { Menu, MenuEntry } from 'src/db/menus'
-import { groupBy, toPairs } from 'ramda'
-
-export interface IRestaurant {
-  restaurant: string
-  menu: IMenu
-}
-
-export type IMenu = ISection[]
-
-export interface ISection {
-  name: string
-  dishes: IDish[]
-}
-
-export interface IDish {
-  name: string
-  description?: string
-  variants: IVariant[]
-}
-
-export interface IVariant {
-  price: number
-  name?: string
-  description?: string
-}
-
-export const readMenus = (menusDir = './data/menus'): IRestaurant[] =>
-  readdirSync(menusDir).map(file => ({
-    restaurant: file.replace('.yml', ''),
-    menu: yaml.safeLoad(readFileSync(`${menusDir}/${file}`).toString()),
-  }))
+import {
+  IRestaurant,
+  Menu,
+  MenuEntry,
+  IVariant,
+  IMenu,
+} from '../interfaces/menu'
+import { toPairs, groupBy } from 'ramda'
 
 export const unnestMenu = ({ menu, restaurant }: IRestaurant): Menu =>
   menu
@@ -73,20 +47,3 @@ const buildSectionGroup = (menu: Menu): IMenu =>
   )
 
 export const nestMenu = (menu: Menu): IMenu => buildSectionGroup(menu)
-
-export const parseMenus = () => {
-  const menusDir = './data/menus'
-  const menusParsedDir = './data/menus-parsed'
-
-  const nestedMenus = readMenus(menusDir)
-  const flatMenus = nestedMenus.map(unnestMenu)
-
-  flatMenus.forEach(m =>
-    writeFileSync(
-      menusParsedDir + '/' + m[0].restaurant + '.json',
-      JSON.stringify(m, null, 2),
-    ),
-  )
-}
-
-parseMenus()

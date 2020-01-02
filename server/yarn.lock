@@ -836,6 +836,13 @@
   dependencies:
     ts-toolbelt "^4.10.7"
 
+"@types/ramda@^0.26.39":
+  version "0.26.39"
+  resolved "https://registry.yarnpkg.com/@types/ramda/-/ramda-0.26.39.tgz#bb392cdb4d431cf6884b3ef11bef635c5d20274f"
+  integrity sha512-3bu32X02VpjJhsYPUWkdOQGoBXjb/UveZgGg4IYMm+SPAXio96BOYrRhVELfM4AoP00sxoi/f2tqrXdwtR4jjg==
+  dependencies:
+    ts-toolbelt "^4.12.0"
+
 "@types/stack-utils@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-1.0.1.tgz#0a851d3bd96498fa25c33ab7278ed3bd65f06c3e"
@@ -5341,6 +5348,12 @@ memorystream@^0.3.1:
   resolved "https://registry.yarnpkg.com/memorystream/-/memorystream-0.3.1.tgz#86d7090b30ce455d63fbae12dda51a47ddcaf9b2"
   integrity sha1-htcJCzDORV1j+64S3aUaR93K+bI=
 
+"menuo-shared@file:../shared":
+  version "1.0.0"
+  dependencies:
+    "@types/ramda" "^0.26.39"
+    ramda "^0.26.1"
+
 merge-stream@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/merge-stream/-/merge-stream-2.0.0.tgz#52823629a14dd00c9770fb6ad47dc6310f2c1f60"
@@ -7835,6 +7848,11 @@ ts-toolbelt@^4.10.7:
   version "4.10.20"
   resolved "https://registry.yarnpkg.com/ts-toolbelt/-/ts-toolbelt-4.10.20.tgz#199a1cbc3976dda28a951baf938ae66da3c13e7b"
   integrity sha512-zxx+CApbwZmvkQnLpncwIGwos25C0fAXDCkA164rpYZKTAMAuOc6mi1aB6Tt9hqDQgL15r6WYmXiKxN6NFqSPQ==
+
+ts-toolbelt@^4.12.0:
+  version "4.14.6"
+  resolved "https://registry.yarnpkg.com/ts-toolbelt/-/ts-toolbelt-4.14.6.tgz#9a232f62276caeee4fa9e81e0c4bffa047de0765"
+  integrity sha512-SONcnRd93+LuYGfn/CZg5A5qhCODohZslAVZKHHu5bnwUxoXLqd2k2VIdwRUXYfKnY+UCeNbI2pTPz+Dno6Mpg==
 
 tsconfig-paths-webpack-plugin@^3.2.0:
   version "3.2.0"

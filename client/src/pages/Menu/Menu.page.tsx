@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react'
+
+import { IRestaurant, ISection, nestMenu, IOrder } from 'menuo-shared'
+
 import { useQuery } from '../../utils'
 import { Button } from '@material-ui/core'
 import { Header } from '../../components/Header'
-
-import { getRestaurant, IRestaurant, ISection, nestMenu } from './Menu.api'
+import { getRestaurant } from './Menu.api'
 import { useStyles } from './Menu.styles'
 import { MenuSection } from './components/MenuSection'
 import { OrderSentDialog } from './components/OrderSentDialog'
 import { WaiterSummonDialog } from './components/WaiterSummonDialog'
-import { createOrder, IOrder, IItem } from '../Orders/Orders.api'
+import { createOrder } from '../Orders/Orders.api'
 
 type Basket = { [itemPlusOption: string]: number }
 const makeInBasketId = (sectionId: number) => (dishId: number) => (
@@ -34,7 +36,7 @@ const apiCreateOrder = ({
   menu: ISection[]
 }) => {
   const items = Object.entries(basket).map(
-    ([itemId, count]): IItem => {
+    ([itemId, count]) => {
       const { sectionId, dishId, variantId } = decodeInBasketId(itemId)
       const dishes = menu.flatMap(s => s.dishes)
       const dish = dishes[+dishId]

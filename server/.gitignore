@@ -13,9 +13,6 @@ jspm_packages
 .env.local
 .env.production
 
-# Dist
-client/dist
-
 # Logs
 yarn-error.log
 

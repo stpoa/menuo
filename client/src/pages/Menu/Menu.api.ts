@@ -1,45 +1,9 @@
 import { get } from '../../api'
 import { toPairs, groupBy } from 'ramda'
+import { Menu, MenuEntry, IRestaurant, IVariant, IMenu } from 'menuo-shared'
 
 export const getRestaurant = (restaurantId: string) =>
   get<Menu>(`/restaurants/${restaurantId}`)
-
-export type Menu = MenuEntry[]
-
-export interface MenuEntry {
-  index: number
-  restaurant: string
-  section: string
-  dishName: string
-  dishDescription?: string
-  dishVariantName?: string
-  dishVariantDescription?: string
-  dishVariantPrice: number
-}
-
-export interface IRestaurant {
-  restaurant: string
-  menu: ISection[]
-}
-
-export type IMenu = ISection[]
-
-export interface ISection {
-  name: string
-  dishes: IDish[]
-}
-
-export interface IDish {
-  name: string
-  description?: string
-  variants: IVariant[]
-}
-
-export interface IVariant {
-  price: number
-  name?: string
-  description?: string
-}
 
 export const unnestMenu = ({ menu, restaurant }: IRestaurant): Menu =>
   menu

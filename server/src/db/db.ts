@@ -1,6 +1,5 @@
 import { MongoClient } from 'mongodb'
-import { Menu, MenuEntry } from './menus'
-import { IOrdersTables } from './orders'
+import { IOrdersTables, Menu, MenuEntry } from 'menuo-shared'
 import { AGPHADB, WithDB } from 'src/lib/http'
 import { APIGatewayProxyEvent, APIGatewayProxyCallback } from 'aws-lambda'
 import { Context } from 'vm'

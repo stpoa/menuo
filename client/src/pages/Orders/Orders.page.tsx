@@ -9,7 +9,8 @@ import { Header } from '../../components/Header'
 import { useStyles } from './Orders.styles'
 import { OrdersTable } from './components/Table/OrdersTable'
 
-import { getTables, IOrdersTable } from './Orders.api'
+import { getTables } from './Orders.api'
+import { IOrdersTable } from 'menuo-shared'
 
 export const Orders = ({ search, match }: any) => {
   const { restaurantId } = match.params

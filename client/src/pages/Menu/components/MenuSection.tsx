@@ -7,10 +7,12 @@ import {
   ListItemIcon,
   Checkbox,
 } from '@material-ui/core'
+
+import { ISection, IDish } from 'menuo-shared'
+
 import { H2 } from '../../../components/H2'
 import { PlusMinus } from '../../../components/PlusMinus'
 
-import { ISection, IDish } from '../Menu.api'
 
 export interface MenuSectionProps {
   section: ISection
