@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync } from 'fs'
+import { readdirSync, readFileSync, writeFileSync } from 'fs'
 import yaml from 'js-yaml'
 import { Menu, MenuEntry } from 'src/db/menus'
 import { groupBy, toPairs } from 'ramda'
@@ -73,3 +73,20 @@ const buildSectionGroup = (menu: Menu): IMenu =>
   )
 
 export const nestMenu = (menu: Menu): IMenu => buildSectionGroup(menu)
+
+export const parseMenus = () => {
+  const menusDir = './data/menus'
+  const menusParsedDir = './data/menus-parsed'
+
+  const nestedMenus = readMenus(menusDir)
+  const flatMenus = nestedMenus.map(unnestMenu)
+
+  flatMenus.forEach(m =>
+    writeFileSync(
+      menusParsedDir + '/' + m[0].restaurant + '.json',
+      JSON.stringify(m, null, 2),
+    ),
+  )
+}
+
+parseMenus()
