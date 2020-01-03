@@ -18,6 +18,7 @@ export interface IDish {
 }
 
 export interface IVariant {
+  _id: string
   price: number
   name?: string
   description?: string
@@ -27,6 +28,7 @@ export interface IVariant {
 export type Menu = MenuEntry[]
 
 export interface MenuEntry {
+  _id: string
   index: number
   restaurant: string
   section: string

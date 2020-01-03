@@ -12,6 +12,7 @@ export const unnestMenu = ({ menu, restaurant }: IRestaurant): Menu =>
     .flatMap(s =>
       s.dishes.flatMap(d =>
         d.variants.map(v => ({
+          _id: v._id,
           restaurant,
           section: s.name,
           dishName: d.name,
@@ -25,6 +26,7 @@ export const unnestMenu = ({ menu, restaurant }: IRestaurant): Menu =>
     .map((entry, index) => ({ index, ...entry }))
 
 const menuEntryToVariant = (entry: MenuEntry): IVariant => ({
+  _id: entry._id,
   name: entry.dishVariantName,
   price: entry.dishVariantPrice,
 })

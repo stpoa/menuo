@@ -1,38 +1,40 @@
+import { MenuEntry } from './menu'
+
+// Client
 export interface IOrdersTables {
-  restaurantId: string
+  restaurant: string
   tables: IOrdersTable[]
 }
 
 export interface IOrdersTable {
-  id: number
+  name: string
   status: string
   orders: IOrder[]
 }
 
 export interface IOrder {
-  id: number
-  tableId: number
-  userId: number
-  items: IItem[]
+  _id: string
+  user: string 
+  items: IOrderItem[]
   status: string
 }
 
-interface IItem {
-  dish: IDish
-  variant: IVariant
+export interface IOrderItem {
+  dishName: string
+  dishVariantPrice: number 
   count: number
-  itemId: number
-  isDone: boolean
+  itemId: string 
+  status: string 
 }
 
-interface IDish {
-  name: string
-  description?: string
-  variants: IVariant[]
-}
+// DB
+export type Orders = Order[]
 
-interface IVariant {
-  price: number
-  name?: string
-  description?: string
+export interface Order {
+  _id: string
+  restaurant: string
+  user: string 
+  table: string
+  status: string
+  entries: [MenuEntry, number][]
 }
