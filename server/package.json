@@ -2,7 +2,7 @@
   "name": "menuo",
   "version": "0.0.1",
   "scripts": {
-    "start": "run-p start:server start:client",
+    "start": "yarn start:server",
     "start:server": "node ./scripts/start-local.js",
     "start:client": "cd ../client && yarn start",
     "deploy": "run-p deploy:server deploy:client",
