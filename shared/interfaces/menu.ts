@@ -8,6 +8,7 @@ export type IMenu = ISection[]
 
 export interface ISection {
   name: string
+  description?: string
   dishes: IDish[]
 }
 
@@ -32,6 +33,7 @@ export interface MenuEntry {
   index: number
   restaurant: string
   section: string
+  sectionDescription?: string
   dishName: string
   dishDescription?: string
   dishVariantName?: string

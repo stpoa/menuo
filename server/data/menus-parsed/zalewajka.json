@@ -310,17 +310,11 @@
     "restaurant": "zalewajka",
     "section": "Napoje",
     "dishName": "Sok ze świeżych owoców",
+    "dishVariantPrice": 16,
     "dishVariantName": "250ml"
   },
   {
     "index": 40,
-    "restaurant": "zalewajka",
-    "section": "Napoje",
-    "dishName": "Sok ze świeżych owoców",
-    "dishVariantPrice": 16
-  },
-  {
-    "index": 41,
     "restaurant": "zalewajka",
     "section": "Napoje",
     "dishName": "Cisowianka niegazowana",
@@ -329,7 +323,7 @@
     "dishVariantName": "300ml"
   },
   {
-    "index": 42,
+    "index": 41,
     "restaurant": "zalewajka",
     "section": "Napoje",
     "dishName": "Cisowianka niegazowana",
@@ -338,7 +332,7 @@
     "dishVariantName": "700ml"
   },
   {
-    "index": 43,
+    "index": 42,
     "restaurant": "zalewajka",
     "section": "Przystawki",
     "dishName": "Gołąbek podawany z sosem pomidorowym lub borowikowym",
@@ -346,7 +340,7 @@
     "dishVariantPrice": 20
   },
   {
-    "index": 44,
+    "index": 43,
     "restaurant": "zalewajka",
     "section": "Przystawki",
     "dishName": "Tatar z polędwicy wołowej",
@@ -354,7 +348,7 @@
     "dishVariantPrice": 35
   },
   {
-    "index": 45,
+    "index": 44,
     "restaurant": "zalewajka",
     "section": "Przystawki",
     "dishName": "Śledź po Krakowsku",
@@ -362,7 +356,7 @@
     "dishVariantPrice": 19
   },
   {
-    "index": 46,
+    "index": 45,
     "restaurant": "zalewajka",
     "section": "Przystawki",
     "dishName": "Kiełbaska jagnięco-cielęce z grilla podawane z konfiturą z czerwonej cebuli",
@@ -370,7 +364,7 @@
     "dishVariantPrice": 29
   },
   {
-    "index": 47,
+    "index": 46,
     "restaurant": "zalewajka",
     "section": "Piwa",
     "dishName": "Piwo lane Miłosław Pilzner",
@@ -378,7 +372,7 @@
     "dishVariantName": "330ml"
   },
   {
-    "index": 48,
+    "index": 47,
     "restaurant": "zalewajka",
     "section": "Piwa",
     "dishName": "Piwo lane Miłosław Pilzner",
@@ -386,7 +380,7 @@
     "dishVariantName": "500ml"
   },
   {
-    "index": 49,
+    "index": 48,
     "restaurant": "zalewajka",
     "section": "Piwa",
     "dishName": "Regionalne piwa z browaru Trzy Korony",
@@ -394,7 +388,7 @@
     "dishVariantPrice": 15
   },
   {
-    "index": 50,
+    "index": 49,
     "restaurant": "zalewajka",
     "section": "Wina",
     "dishName": "Trebbiano, Rocca Estate",
@@ -403,7 +397,7 @@
     "dishVariantName": "150ml"
   },
   {
-    "index": 51,
+    "index": 50,
     "restaurant": "zalewajka",
     "section": "Wina",
     "dishName": "Trebbiano, Rocca Estate",
@@ -412,7 +406,7 @@
     "dishVariantName": "750ml"
   },
   {
-    "index": 52,
+    "index": 51,
     "restaurant": "zalewajka",
     "section": "Wina",
     "dishName": "Kaiken Malbec Reserva 2013",
@@ -421,7 +415,7 @@
     "dishVariantName": "750ml"
   },
   {
-    "index": 53,
+    "index": 52,
     "restaurant": "zalewajka",
     "section": "Wina",
     "dishName": "Sangiovese, Rocca Estate",
@@ -430,7 +424,7 @@
     "dishVariantName": "150ml"
   },
   {
-    "index": 54,
+    "index": 53,
     "restaurant": "zalewajka",
     "section": "Wina",
     "dishName": "Sangiovese, Rocca Estate",
@@ -439,7 +433,7 @@
     "dishVariantName": "750ml"
   },
   {
-    "index": 55,
+    "index": 54,
     "restaurant": "zalewajka",
     "section": "Wina",
     "dishName": "Ripasso Valpolicella 2014",
@@ -448,7 +442,7 @@
     "dishVariantName": "750ml"
   },
   {
-    "index": 56,
+    "index": 55,
     "restaurant": "zalewajka",
     "section": "Wina",
     "dishName": "Picton Bay Sauvignon Blanc",
@@ -457,7 +451,7 @@
     "dishVariantName": "750ml"
   },
   {
-    "index": 57,
+    "index": 56,
     "restaurant": "zalewajka",
     "section": "Wina",
     "dishName": "Prosseco Sartori Brut",
@@ -466,7 +460,7 @@
     "dishVariantName": "200ml"
   },
   {
-    "index": 58,
+    "index": 57,
     "restaurant": "zalewajka",
     "section": "Wina",
     "dishName": "Bodegas Centenarias Reservado Cabernet Sauvignon",
@@ -475,7 +469,7 @@
     "dishVariantName": "750ml"
   },
   {
-    "index": 59,
+    "index": 58,
     "restaurant": "zalewajka",
     "section": "Wina",
     "dishName": "Bodegas Centanarias Reservado Chardonnay",
@@ -484,7 +478,7 @@
     "dishVariantName": "750ml"
   },
   {
-    "index": 60,
+    "index": 59,
     "restaurant": "zalewajka",
     "section": "Alkohle",
     "dishName": "Wyborowa",
@@ -492,7 +486,7 @@
     "dishVariantName": "40ml"
   },
   {
-    "index": 61,
+    "index": 60,
     "restaurant": "zalewajka",
     "section": "Alkohle",
     "dishName": "Finlandia",
@@ -500,7 +494,7 @@
     "dishVariantName": "40ml"
   },
   {
-    "index": 62,
+    "index": 61,
     "restaurant": "zalewajka",
     "section": "Alkohle",
     "dishName": "Chopin",
@@ -508,7 +502,7 @@
     "dishVariantName": "40ml"
   },
   {
-    "index": 63,
+    "index": 62,
     "restaurant": "zalewajka",
     "section": "Alkohle",
     "dishName": "Żołądkowa gorzka",
@@ -516,7 +510,7 @@
     "dishVariantName": "40ml"
   },
   {
-    "index": 64,
+    "index": 63,
     "restaurant": "zalewajka",
     "section": "Alkohle",
     "dishName": "Wiśniówka",
@@ -524,7 +518,7 @@
     "dishVariantName": "40ml"
   },
   {
-    "index": 65,
+    "index": 64,
     "restaurant": "zalewajka",
     "section": "Alkohle",
     "dishName": "Żubrówka",
@@ -532,7 +526,7 @@
     "dishVariantName": "40ml"
   },
   {
-    "index": 66,
+    "index": 65,
     "restaurant": "zalewajka",
     "section": "Alkohle",
     "dishName": "Jack Daniel's",
@@ -540,7 +534,7 @@
     "dishVariantName": "40ml"
   },
   {
-    "index": 67,
+    "index": 66,
     "restaurant": "zalewajka",
     "section": "Alkohle",
     "dishName": "Ballantine's Fnest",
@@ -548,7 +542,7 @@
     "dishVariantName": "40ml"
   },
   {
-    "index": 68,
+    "index": 67,
     "restaurant": "zalewajka",
     "section": "Alkohle",
     "dishName": "Glenvlivet 12YO",
@@ -556,7 +550,7 @@
     "dishVariantName": "40ml"
   },
   {
-    "index": 69,
+    "index": 68,
     "restaurant": "zalewajka",
     "section": "Alkohle",
     "dishName": "Hennesy VS",
@@ -564,7 +558,7 @@
     "dishVariantName": "40ml"
   },
   {
-    "index": 70,
+    "index": 69,
     "restaurant": "zalewajka",
     "section": "Alkohle",
     "dishName": "Hannesy Fine de Cognac",
@@ -572,7 +566,7 @@
     "dishVariantName": "40ml"
   },
   {
-    "index": 71,
+    "index": 70,
     "restaurant": "zalewajka",
     "section": "Alkohle",
     "dishName": "Lagavulin 16YO",

@@ -1,10 +1,12 @@
 - name: ŚNIADANIA
+  description: "codziennie od 8:00 do 12:00"
   dishes:
   - name: Śniadanie w formie bufetu
     variants:
     - price: 25
     description: W bufecie - sałatki, wędliny, pasztety, sery, twarożki, pasty do pieczywa, jajka, tarty. Na gorąco bekon, parówki, jajecznica, warzywa. Również słodkości-  domowe musli, mleko, miód, dżemy, ciasta i ciasteczka. W cenie bufetu również woda, kawa i herbata
 - name: DOMOWY OBIAD
+  description: "od poniedziałku do piątku od 12:00 do ostatniej porcji"
   dishes:
   - name: Obiad dnia
     variants:
@@ -197,9 +199,9 @@
     - price: 14
     description: Ze śliwkami pieczonymi w karmelu i winie, podana z lodami waniliowymi
   - name: Szarlotka
+    description: Na kruchym cieście podawana na ciepło z sosem angielskim i gałką lodów waniliowych
     variants:
     - price: 14
-    description: Na kruchym cieście podawana na ciepło z sosem angielskim i gałką lodów waniliowych
 - name: GORĄCE CZEKOLADY
   dishes:
   - name: Gorąca czekolada z bitą śmietaną
@@ -364,9 +366,10 @@
   - name: Kawa latte 260ml
     variants:
     - price: 11
-  - name: Kawa latte z miodem 260ml
+  - name: Kawa latte z miodem
     variants:
-    - price: 13
+    - name: 260ml
+      price: 13
   - name: Kawa latte macchiato 260ml
     variants:
     - name: Waniliowa
@@ -397,6 +400,26 @@
       price: 14
     - name: Orzechowa
       price: 14
+- name: KAWA Z ALKOHOLEM
+  dishes:
+  - name: Irish Coffee
+    variants:
+    - name: 260 ml
+      price: 17
+    description: czarna kawa z whisky i bitą śmietaną
+  - name: Kawa Cointreau
+    variants:
+    - name: 260 ml
+      price: 17
+    description: czarna kawa z likierem pomarańczowym i bitą śmietaną
+  - name: Malibu latte
+    variants:
+    - name: 260 ml
+      price: 16
+  - name: Bailey's latte
+    variants:
+    - name: 260 ml
+      price: 16
 - name: NAPOJE ZIMNE
   dishes:
   - name: Świeżo wyciskany sok pomarańczowy
@@ -662,7 +685,7 @@
     - price: 8
   - name: Grog na rumie (rum Havana, cytryna, miód, korzenie, woda) 200ml
     variants:
-    - price:: 16
+    - price: 16
   - name: Grog na Krupniku (Krupnik, cytryna, miód, korzenie, woda) 200ml
     variants:
     - price: 11

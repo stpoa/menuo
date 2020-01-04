@@ -199,7 +199,7 @@
     name: Sok ze świeżych owoców
     variants:
     - name: 250ml
-    - price: 16
+      price: 16
   - id: '39'
     name: Cisowianka niegazowana
     variants:

@@ -3,6 +3,7 @@
     "index": 0,
     "restaurant": "kolanko",
     "section": "ŚNIADANIA",
+    "sectionDescription": "codziennie od 8:00 do 12:00",
     "dishName": "Śniadanie w formie bufetu",
     "dishDescription": "W bufecie - sałatki, wędliny, pasztety, sery, twarożki, pasty do pieczywa, jajka, tarty. Na gorąco bekon, parówki, jajecznica, warzywa. Również słodkości-  domowe musli, mleko, miód, dżemy, ciasta i ciasteczka. W cenie bufetu również woda, kawa i herbata",
     "dishVariantPrice": 25
@@ -11,6 +12,7 @@
     "index": 1,
     "restaurant": "kolanko",
     "section": "DOMOWY OBIAD",
+    "sectionDescription": "od poniedziałku do piątku od 12:00 do ostatniej porcji",
     "dishName": "Obiad dnia",
     "dishDescription": "Informacje na temat aktualnej oferty można znaleźć w naszym menu lanczowym, na tablicy, na facebooku i u kelnera",
     "dishVariantPrice": 21,
@@ -20,6 +22,7 @@
     "index": 2,
     "restaurant": "kolanko",
     "section": "DOMOWY OBIAD",
+    "sectionDescription": "od poniedziałku do piątku od 12:00 do ostatniej porcji",
     "dishName": "Obiad dnia",
     "dishDescription": "Informacje na temat aktualnej oferty można znaleźć w naszym menu lanczowym, na tablicy, na facebooku i u kelnera",
     "dishVariantPrice": 19,
@@ -219,6 +222,7 @@
     "index": 27,
     "restaurant": "kolanko",
     "section": "NALEŚNIKI WYTRAWNE",
+    "sectionDescription": "Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem",
     "dishName": "Naleśniki \"chińskie\"",
     "dishDescription": "Z kurczakiem, krótko smażonymi warzywami, orientalnymi przyprawami, sezamem i pestkami dyni",
     "dishVariantPrice": 22
@@ -227,6 +231,7 @@
     "index": 28,
     "restaurant": "kolanko",
     "section": "NALEŚNIKI WYTRAWNE",
+    "sectionDescription": "Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem",
     "dishName": "Naleśniki “meksykańskie\"",
     "dishDescription": "Z mięsem, pomidorami, kukurydzą i czerwoną fasolą, zapieczone z serem",
     "dishVariantPrice": 22
@@ -235,6 +240,7 @@
     "index": 29,
     "restaurant": "kolanko",
     "section": "NALEŚNIKI WYTRAWNE",
+    "sectionDescription": "Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem",
     "dishName": "Naleśniki “indyjskie” z kurczakiem w sosie curry",
     "dishDescription": "Pierś kurczaka, ananas, szpinak, śmietana",
     "dishVariantPrice": 22
@@ -243,6 +249,7 @@
     "index": 30,
     "restaurant": "kolanko",
     "section": "NALEŚNIKI WYTRAWNE",
+    "sectionDescription": "Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem",
     "dishName": "Naleśniki a'la Carbonara z cukinią",
     "dishDescription": "Boczek, cebula, cukinia, śmietana, zielona pietruszka",
     "dishVariantPrice": 22
@@ -251,6 +258,7 @@
     "index": 31,
     "restaurant": "kolanko",
     "section": "NALEŚNIKI WYTRAWNE",
+    "sectionDescription": "Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem",
     "dishName": "Naleśniki z duszonymi na maśle porami",
     "dishDescription": "Marchewką i pieczarkami oraz włoskimi orzechami",
     "dishVariantPrice": 22
@@ -259,6 +267,7 @@
     "index": 32,
     "restaurant": "kolanko",
     "section": "NALEŚNIKI WYTRAWNE",
+    "sectionDescription": "Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem",
     "dishName": "Naleśniki ze szpinakiem",
     "dishDescription": "Z dodatkiem czosnku, śmietanki i sera Grana Padano",
     "dishVariantPrice": 22
@@ -267,6 +276,7 @@
     "index": 33,
     "restaurant": "kolanko",
     "section": "NALEŚNIKI WYTRAWNE",
+    "sectionDescription": "Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem",
     "dishName": "Naleśniki z brokułami i trzema serami",
     "dishDescription": "Camembert, Ementaler, Rokpol",
     "dishVariantPrice": 22
@@ -275,6 +285,7 @@
     "index": 34,
     "restaurant": "kolanko",
     "section": "NALEŚNIKI WYTRAWNE",
+    "sectionDescription": "Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem",
     "dishName": "Naleśniki z duszonymi boczniakami",
     "dishDescription": "Pomidorami i cebulką z dodatkiem wina, czosnku i śmietanki",
     "dishVariantPrice": 22
@@ -283,6 +294,7 @@
     "index": 35,
     "restaurant": "kolanko",
     "section": "NALEŚNIKI WYTRAWNE",
+    "sectionDescription": "Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem",
     "dishName": "Naleśniki \"ruskie\"",
     "dishDescription": "Z twarogiem, ziemniakami i cebulką",
     "dishVariantPrice": 22
@@ -291,6 +303,7 @@
     "index": 36,
     "restaurant": "kolanko",
     "section": "NALEŚNIKI WYTRAWNE",
+    "sectionDescription": "Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem",
     "dishName": "Sosy",
     "dishVariantPrice": 2,
     "dishVariantName": "Czosnkowo-ziołowy"
@@ -299,6 +312,7 @@
     "index": 37,
     "restaurant": "kolanko",
     "section": "NALEŚNIKI WYTRAWNE",
+    "sectionDescription": "Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem",
     "dishName": "Sosy",
     "dishVariantPrice": 2,
     "dishVariantName": "Majonezowo-paprykowy"
@@ -307,6 +321,7 @@
     "index": 38,
     "restaurant": "kolanko",
     "section": "NALEŚNIKI WYTRAWNE",
+    "sectionDescription": "Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem",
     "dishName": "Sosy",
     "dishVariantPrice": 2,
     "dishVariantName": "Śmietana"
@@ -315,6 +330,7 @@
     "index": 39,
     "restaurant": "kolanko",
     "section": "NALEŚNIKI SŁODKIE",
+    "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
     "dishName": "Nasze propozycje",
     "dishVariantPrice": 18,
     "dishVariantName": "Budyń / jabłka / sos czekoladowy"
@@ -323,6 +339,7 @@
     "index": 40,
     "restaurant": "kolanko",
     "section": "NALEŚNIKI SŁODKIE",
+    "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
     "dishName": "Nasze propozycje",
     "dishVariantPrice": 18,
     "dishVariantName": "Jabłka / sos toffi / sezam"
@@ -331,6 +348,7 @@
     "index": 41,
     "restaurant": "kolanko",
     "section": "NALEŚNIKI SŁODKIE",
+    "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
     "dishName": "Nasze propozycje",
     "dishVariantPrice": 18,
     "dishVariantName": "Jogurt / brzoskwinia / mus mango"
@@ -339,6 +357,7 @@
     "index": 42,
     "restaurant": "kolanko",
     "section": "NALEŚNIKI SŁODKIE",
+    "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
     "dishName": "Nasze propozycje",
     "dishVariantPrice": 18,
     "dishVariantName": "Banan / sos czekoladowy / słonecznik i dynia"
@@ -347,6 +366,7 @@
     "index": 43,
     "restaurant": "kolanko",
     "section": "NALEŚNIKI SŁODKIE",
+    "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
     "dishName": "Nasze propozycje",
     "dishVariantPrice": 18,
     "dishVariantName": "Kaszka manna / wiśnie"
@@ -355,6 +375,7 @@
     "index": 44,
     "restaurant": "kolanko",
     "section": "NALEŚNIKI SŁODKIE",
+    "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
     "dishName": "Nasze propozycje",
     "dishVariantPrice": 18,
     "dishVariantName": "Serek / owoce jagodowe"
@@ -363,6 +384,7 @@
     "index": 45,
     "restaurant": "kolanko",
     "section": "NALEŚNIKI SŁODKIE",
+    "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
     "dishName": "Nasze propozycje",
     "dishVariantPrice": 18,
     "dishVariantName": "Budyń / wiśnie / sos czekoladowy"
@@ -371,6 +393,7 @@
     "index": 46,
     "restaurant": "kolanko",
     "section": "NALEŚNIKI SŁODKIE",
+    "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
     "dishName": "Nasze propozycje",
     "dishVariantPrice": 18,
     "dishVariantName": "Kaszka / jabłka / bakalie"
@@ -379,6 +402,7 @@
     "index": 47,
     "restaurant": "kolanko",
     "section": "NALEŚNIKI SŁODKIE",
+    "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
     "dishName": "Nasze propozycje",
     "dishVariantPrice": 18,
     "dishVariantName": "Serek / mus malinowy / bita śmietana"
@@ -387,6 +411,7 @@
     "index": 48,
     "restaurant": "kolanko",
     "section": "NALEŚNIKI SŁODKIE",
+    "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
     "dishName": "Nasze propozycje",
     "dishVariantPrice": 18,
     "dishVariantName": "Banan / sos toffi / bakalie"
@@ -395,6 +420,7 @@
     "index": 49,
     "restaurant": "kolanko",
     "section": "NALEŚNIKI SŁODKIE",
+    "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
     "dishName": "Nasze propozycje",
     "dishVariantPrice": 18,
     "dishVariantName": "Budyń / owoce jagodowe / kokos"
@@ -403,6 +429,7 @@
     "index": 50,
     "restaurant": "kolanko",
     "section": "NALEŚNIKI SŁODKIE",
+    "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
     "dishName": "Nasze propozycje",
     "dishVariantPrice": 18,
     "dishVariantName": "Kaszka manna / mus mango / migdały"
@@ -411,6 +438,7 @@
     "index": 51,
     "restaurant": "kolanko",
     "section": "NALEŚNIKI SŁODKIE",
+    "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
     "dishName": "Gałka lodów waniliowych",
     "dishVariantPrice": 3
   },
@@ -530,6 +558,7 @@
     "index": 66,
     "restaurant": "kolanko",
     "section": "SMOOTHIE",
+    "sectionDescription": "Do niektórych smoothie dodajemy cukier",
     "dishName": "Mango lassi - jogurt, puree z mango, kardamon",
     "dishVariantPrice": 13
   },
@@ -537,6 +566,7 @@
     "index": 67,
     "restaurant": "kolanko",
     "section": "SMOOTHIE",
+    "sectionDescription": "Do niektórych smoothie dodajemy cukier",
     "dishName": "Kiwi, pomarańcza, bazylia, mięta",
     "dishVariantPrice": 11
   },
@@ -544,6 +574,7 @@
     "index": 68,
     "restaurant": "kolanko",
     "section": "SMOOTHIE",
+    "sectionDescription": "Do niektórych smoothie dodajemy cukier",
     "dishName": "Mango, ananas, banan, jogurt (lub mleko sojowe)",
     "dishVariantPrice": 13
   },
@@ -551,6 +582,7 @@
     "index": 69,
     "restaurant": "kolanko",
     "section": "SMOOTHIE",
+    "sectionDescription": "Do niektórych smoothie dodajemy cukier",
     "dishName": null,
     "dishVariantPrice": 12
   },
@@ -558,6 +590,7 @@
     "index": 70,
     "restaurant": "kolanko",
     "section": "SMOOTHIE",
+    "sectionDescription": "Do niektórych smoothie dodajemy cukier",
     "dishName": "Porzeczka, truskawka, banan",
     "dishVariantPrice": 11
   },
@@ -821,6 +854,7 @@
     "index": 103,
     "restaurant": "kolanko",
     "section": "KAWY",
+    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
     "dishName": "Espresso 30ml",
     "dishVariantPrice": 7
   },
@@ -828,6 +862,7 @@
     "index": 104,
     "restaurant": "kolanko",
     "section": "KAWY",
+    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
     "dishName": "Podwójne espresso 60ml",
     "dishVariantPrice": 9
   },
@@ -835,6 +870,7 @@
     "index": 105,
     "restaurant": "kolanko",
     "section": "KAWY",
+    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
     "dishName": "Espresso macchiato (espresso z mleczną pianką)",
     "dishVariantPrice": 7
   },
@@ -842,6 +878,7 @@
     "index": 106,
     "restaurant": "kolanko",
     "section": "KAWY",
+    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
     "dishName": "Espresso con panna (espresso z bitą śmietaną)",
     "dishVariantPrice": 9
   },
@@ -849,6 +886,7 @@
     "index": 107,
     "restaurant": "kolanko",
     "section": "KAWY",
+    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
     "dishName": "Espresso Romano (z odrobiną skórki cytrynowej)",
     "dishVariantPrice": 7.5
   },
@@ -856,6 +894,7 @@
     "index": 108,
     "restaurant": "kolanko",
     "section": "KAWY",
+    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
     "dishName": "Kawa czarna 180ml",
     "dishVariantPrice": 9
   },
@@ -863,6 +902,7 @@
     "index": 109,
     "restaurant": "kolanko",
     "section": "KAWY",
+    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
     "dishName": "Kawa bała 180ml",
     "dishVariantPrice": 9.5
   },
@@ -870,6 +910,7 @@
     "index": 110,
     "restaurant": "kolanko",
     "section": "KAWY",
+    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
     "dishName": "Kawa biała XL 320ml",
     "dishVariantPrice": 10.5
   },
@@ -877,6 +918,7 @@
     "index": 111,
     "restaurant": "kolanko",
     "section": "KAWY",
+    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
     "dishName": "Cappuccino",
     "dishVariantPrice": 10,
     "dishVariantName": "Małe 210ml"
@@ -885,6 +927,7 @@
     "index": 112,
     "restaurant": "kolanko",
     "section": "KAWY",
+    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
     "dishName": "Cappuccino",
     "dishVariantPrice": 11,
     "dishVariantName": "Duże 340ml"
@@ -893,6 +936,7 @@
     "index": 113,
     "restaurant": "kolanko",
     "section": "KAWY",
+    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
     "dishName": "Kawa latte 260ml",
     "dishVariantPrice": 11
   },
@@ -900,13 +944,16 @@
     "index": 114,
     "restaurant": "kolanko",
     "section": "KAWY",
-    "dishName": "Kawa latte z miodem 260ml",
-    "dishVariantPrice": 13
+    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
+    "dishName": "Kawa latte z miodem",
+    "dishVariantPrice": 13,
+    "dishVariantName": "260ml"
   },
   {
     "index": 115,
     "restaurant": "kolanko",
     "section": "KAWY",
+    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
     "dishName": "Kawa latte macchiato 260ml",
     "dishVariantPrice": 13,
     "dishVariantName": "Waniliowa"
@@ -915,6 +962,7 @@
     "index": 116,
     "restaurant": "kolanko",
     "section": "KAWY",
+    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
     "dishName": "Kawa latte macchiato 260ml",
     "dishVariantPrice": 13,
     "dishVariantName": "Karmelowa"
@@ -923,6 +971,7 @@
     "index": 117,
     "restaurant": "kolanko",
     "section": "KAWY",
+    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
     "dishName": "Kawa latte macchiato 260ml",
     "dishVariantPrice": 13,
     "dishVariantName": "Kokosowa"
@@ -931,6 +980,7 @@
     "index": 118,
     "restaurant": "kolanko",
     "section": "KAWY",
+    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
     "dishName": "Kawa latte macchiato 260ml",
     "dishVariantPrice": 13,
     "dishVariantName": "Migdałowa"
@@ -939,6 +989,7 @@
     "index": 119,
     "restaurant": "kolanko",
     "section": "KAWY",
+    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
     "dishName": "Kawa latte macchiato 260ml",
     "dishVariantPrice": 13,
     "dishVariantName": "Orzechowa"
@@ -947,6 +998,7 @@
     "index": 120,
     "restaurant": "kolanko",
     "section": "KAWY",
+    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
     "dishName": "Mocha (z mlekiem, czekoladą i bitą śmietaną) 260ml",
     "dishVariantPrice": 13
   },
@@ -954,6 +1006,7 @@
     "index": 121,
     "restaurant": "kolanko",
     "section": "KAWY",
+    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
     "dishName": "Kawa mrożona z bitą śmietaną 330ml",
     "dishVariantPrice": 13
   },
@@ -961,6 +1014,7 @@
     "index": 122,
     "restaurant": "kolanko",
     "section": "KAWY",
+    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
     "dishName": "Kawa mrożona z syropem i bitą śmietaną 330ml",
     "dishVariantPrice": 14,
     "dishVariantName": "Waniliowa"
@@ -969,6 +1023,7 @@
     "index": 123,
     "restaurant": "kolanko",
     "section": "KAWY",
+    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
     "dishName": "Kawa mrożona z syropem i bitą śmietaną 330ml",
     "dishVariantPrice": 14,
     "dishVariantName": "Karmelowa"
@@ -977,6 +1032,7 @@
     "index": 124,
     "restaurant": "kolanko",
     "section": "KAWY",
+    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
     "dishName": "Kawa mrożona z syropem i bitą śmietaną 330ml",
     "dishVariantPrice": 14,
     "dishVariantName": "Kokosowa"
@@ -985,6 +1041,7 @@
     "index": 125,
     "restaurant": "kolanko",
     "section": "KAWY",
+    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
     "dishName": "Kawa mrożona z syropem i bitą śmietaną 330ml",
     "dishVariantPrice": 14,
     "dishVariantName": "Migdałowa"
@@ -993,6 +1050,7 @@
     "index": 126,
     "restaurant": "kolanko",
     "section": "KAWY",
+    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
     "dishName": "Kawa mrożona z syropem i bitą śmietaną 330ml",
     "dishVariantPrice": 14,
     "dishVariantName": "Orzechowa"
@@ -1000,13 +1058,47 @@
   {
     "index": 127,
     "restaurant": "kolanko",
+    "section": "KAWA Z ALKOHOLEM",
+    "dishName": "Irish Coffee",
+    "dishDescription": "czarna kawa z whisky i bitą śmietaną",
+    "dishVariantPrice": 17,
+    "dishVariantName": "260 ml"
+  },
+  {
+    "index": 128,
+    "restaurant": "kolanko",
+    "section": "KAWA Z ALKOHOLEM",
+    "dishName": "Kawa Cointreau",
+    "dishDescription": "czarna kawa z likierem pomarańczowym i bitą śmietaną",
+    "dishVariantPrice": 17,
+    "dishVariantName": "260 ml"
+  },
+  {
+    "index": 129,
+    "restaurant": "kolanko",
+    "section": "KAWA Z ALKOHOLEM",
+    "dishName": "Malibu latte",
+    "dishVariantPrice": 16,
+    "dishVariantName": "260 ml"
+  },
+  {
+    "index": 130,
+    "restaurant": "kolanko",
+    "section": "KAWA Z ALKOHOLEM",
+    "dishName": "Bailey's latte",
+    "dishVariantPrice": 16,
+    "dishVariantName": "260 ml"
+  },
+  {
+    "index": 131,
+    "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Świeżo wyciskany sok pomarańczowy",
     "dishVariantPrice": 10,
     "dishVariantName": "200ml"
   },
   {
-    "index": 128,
+    "index": 132,
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Świeżo wyciskany sok pomarańczowy",
@@ -1014,46 +1106,46 @@
     "dishVariantName": "300ml"
   },
   {
-    "index": 129,
-    "restaurant": "kolanko",
-    "section": "NAPOJE ZIMNE",
-    "dishName": "Domowa lemoniada ze świeżych cytryn",
-    "dishVariantPrice": 10,
-    "dishVariantName": "300ml"
-  },
-  {
-    "index": 130,
-    "restaurant": "kolanko",
-    "section": "NAPOJE ZIMNE",
-    "dishName": "Domowa lemoniada ze świeżych cytryn",
-    "dishVariantPrice": 22,
-    "dishVariantName": "1000ml"
-  },
-  {
-    "index": 131,
-    "restaurant": "kolanko",
-    "section": "NAPOJE ZIMNE",
-    "dishName": "Domowa lemoniada ze świeżych pomarańczy",
-    "dishVariantPrice": 10,
-    "dishVariantName": "300ml"
-  },
-  {
-    "index": 132,
-    "restaurant": "kolanko",
-    "section": "NAPOJE ZIMNE",
-    "dishName": "Domowa lemoniada ze świeżych pomarańczy",
-    "dishVariantPrice": 22,
-    "dishVariantName": "1000ml"
-  },
-  {
     "index": 133,
+    "restaurant": "kolanko",
+    "section": "NAPOJE ZIMNE",
+    "dishName": "Domowa lemoniada ze świeżych cytryn",
+    "dishVariantPrice": 10,
+    "dishVariantName": "300ml"
+  },
+  {
+    "index": 134,
+    "restaurant": "kolanko",
+    "section": "NAPOJE ZIMNE",
+    "dishName": "Domowa lemoniada ze świeżych cytryn",
+    "dishVariantPrice": 22,
+    "dishVariantName": "1000ml"
+  },
+  {
+    "index": 135,
+    "restaurant": "kolanko",
+    "section": "NAPOJE ZIMNE",
+    "dishName": "Domowa lemoniada ze świeżych pomarańczy",
+    "dishVariantPrice": 10,
+    "dishVariantName": "300ml"
+  },
+  {
+    "index": 136,
+    "restaurant": "kolanko",
+    "section": "NAPOJE ZIMNE",
+    "dishName": "Domowa lemoniada ze świeżych pomarańczy",
+    "dishVariantPrice": 22,
+    "dishVariantName": "1000ml"
+  },
+  {
+    "index": 137,
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Domowa mrożona herbata z cytryną i miętą 300ml",
     "dishVariantPrice": 9
   },
   {
-    "index": 134,
+    "index": 138,
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Woda mineralna podawana z cytryną lub miętą",
@@ -1061,7 +1153,7 @@
     "dishVariantName": "300ml"
   },
   {
-    "index": 135,
+    "index": 139,
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Woda mineralna podawana z cytryną lub miętą",
@@ -1069,7 +1161,7 @@
     "dishVariantName": "1000ml"
   },
   {
-    "index": 136,
+    "index": 140,
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Sok",
@@ -1077,7 +1169,7 @@
     "dishVariantName": "pomarańczowy 200ml"
   },
   {
-    "index": 137,
+    "index": 141,
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Sok",
@@ -1085,7 +1177,7 @@
     "dishVariantName": "pomarańczowy 1000ml"
   },
   {
-    "index": 138,
+    "index": 142,
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Sok",
@@ -1093,7 +1185,7 @@
     "dishVariantName": "jabłkowy 200ml"
   },
   {
-    "index": 139,
+    "index": 143,
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Sok",
@@ -1101,7 +1193,7 @@
     "dishVariantName": "jabłkowy 1000ml"
   },
   {
-    "index": 140,
+    "index": 144,
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Sok",
@@ -1109,7 +1201,7 @@
     "dishVariantName": "porzeczkowy 200ml"
   },
   {
-    "index": 141,
+    "index": 145,
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Sok",
@@ -1117,7 +1209,7 @@
     "dishVariantName": "porzeczkowy 1000ml"
   },
   {
-    "index": 142,
+    "index": 146,
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Sok",
@@ -1125,7 +1217,7 @@
     "dishVariantName": "grejfrutowy 200ml"
   },
   {
-    "index": 143,
+    "index": 147,
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Sok",
@@ -1133,7 +1225,7 @@
     "dishVariantName": "grejfrutowy 1000ml"
   },
   {
-    "index": 144,
+    "index": 148,
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Sok",
@@ -1141,7 +1233,7 @@
     "dishVariantName": "ananasowy 200ml"
   },
   {
-    "index": 145,
+    "index": 149,
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Sok",
@@ -1149,35 +1241,35 @@
     "dishVariantName": "ananasowy 1000ml"
   },
   {
-    "index": 146,
+    "index": 150,
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Naturalny kwas chlebowy 330ml",
     "dishVariantPrice": 10
   },
   {
-    "index": 147,
+    "index": 151,
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Coca Cola 250ml",
     "dishVariantPrice": 6
   },
   {
-    "index": 148,
+    "index": 152,
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Sprite 250ml",
     "dishVariantPrice": 6
   },
   {
-    "index": 149,
+    "index": 153,
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Tonik Kinley 250ml",
     "dishVariantPrice": 6
   },
   {
-    "index": 150,
+    "index": 154,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwa z polskich browarów rzemieślniczych",
@@ -1185,7 +1277,7 @@
     "dishVariantName": "Krak (English IPA) 500ml"
   },
   {
-    "index": 151,
+    "index": 155,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwa z polskich browarów rzemieślniczych",
@@ -1193,7 +1285,7 @@
     "dishVariantName": "Kacper Ryx (Polish IPA) 500ml"
   },
   {
-    "index": 152,
+    "index": 156,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwa z polskich browarów rzemieślniczych",
@@ -1201,7 +1293,7 @@
     "dishVariantName": "PSZEkulturalna (Citrus Weizen) 500ml"
   },
   {
-    "index": 153,
+    "index": 157,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwa z polskich browarów rzemieślniczych",
@@ -1209,7 +1301,7 @@
     "dishVariantName": "PoraNaNas (Pineapple IPA) 500ml"
   },
   {
-    "index": 154,
+    "index": 158,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwa z polskich browarów rzemieślniczych",
@@ -1217,7 +1309,7 @@
     "dishVariantName": "Atak Chmielu AIPA (Polish AIPA) 500ml"
   },
   {
-    "index": 155,
+    "index": 159,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwa z polskich browarów rzemieślniczych",
@@ -1225,7 +1317,7 @@
     "dishVariantName": "Pan IPAni (Wheat IPA) 500ml"
   },
   {
-    "index": 156,
+    "index": 160,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Inne piwa butelkowe",
@@ -1233,7 +1325,7 @@
     "dishVariantName": "Piwo Żywe (niepasteryzowane) 500ml"
   },
   {
-    "index": 157,
+    "index": 161,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Inne piwa butelkowe",
@@ -1241,7 +1333,7 @@
     "dishVariantName": "Pszeniczniak 500ml"
   },
   {
-    "index": 158,
+    "index": 162,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Inne piwa butelkowe",
@@ -1249,7 +1341,7 @@
     "dishVariantName": "Miłosław Niefiltrowane 500ml"
   },
   {
-    "index": 159,
+    "index": 163,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Inne piwa butelkowe",
@@ -1257,7 +1349,7 @@
     "dishVariantName": "Mirabelka - warzone z naturalnym sokiem śliwkowym 500ml"
   },
   {
-    "index": 160,
+    "index": 164,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Inne piwa butelkowe",
@@ -1265,7 +1357,7 @@
     "dishVariantName": "Klasztorne - ciemne, warzone w stylu piwa Trapistów 500ml"
   },
   {
-    "index": 161,
+    "index": 165,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Inne piwa butelkowe",
@@ -1273,7 +1365,7 @@
     "dishVariantName": "Piwo Na Miodzie Gryczanym 500ml"
   },
   {
-    "index": 162,
+    "index": 166,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Inne piwa butelkowe",
@@ -1281,7 +1373,7 @@
     "dishVariantName": "Krzepkie 7,4% 500ml"
   },
   {
-    "index": 163,
+    "index": 167,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Inne piwa butelkowe",
@@ -1289,7 +1381,7 @@
     "dishVariantName": "Miodne - ciemne piwo z warmińskim miodem 500ml"
   },
   {
-    "index": 164,
+    "index": 168,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Inne piwa butelkowe",
@@ -1297,7 +1389,7 @@
     "dishVariantName": "Wiśnia w Piwie - warzone z naturalnym sokiem wiśniowym 500ml"
   },
   {
-    "index": 165,
+    "index": 169,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Inne piwa butelkowe",
@@ -1305,7 +1397,7 @@
     "dishVariantName": "BezGlutenNowe 500ml"
   },
   {
-    "index": 166,
+    "index": 170,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Inne piwa butelkowe",
@@ -1313,7 +1405,7 @@
     "dishVariantName": "Jurajskie Miodowe - jasny miodowy lager 500ml"
   },
   {
-    "index": 167,
+    "index": 171,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Inne piwa butelkowe",
@@ -1321,7 +1413,7 @@
     "dishVariantName": "Cornelius Grapefruitowy (piwo pszeniczne z sokiem grapefruitowym) 400ml"
   },
   {
-    "index": 168,
+    "index": 172,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Inne piwa butelkowe",
@@ -1329,7 +1421,7 @@
     "dishVariantName": "Paulaner (piwo pszeniczne) 500ml"
   },
   {
-    "index": 169,
+    "index": 173,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Inne piwa butelkowe",
@@ -1337,7 +1429,7 @@
     "dishVariantName": "Svijany Maz (czeski niepasteryzowany pilsner) 500ml"
   },
   {
-    "index": 170,
+    "index": 174,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Inne piwa butelkowe",
@@ -1345,7 +1437,7 @@
     "dishVariantName": "Shandy - Piwo Tyskie, Sprite, cytryna, świeża mięta 500ml"
   },
   {
-    "index": 171,
+    "index": 175,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwo lane",
@@ -1353,7 +1445,7 @@
     "dishVariantName": "Jurajskie Bursztynowe 300ml"
   },
   {
-    "index": 172,
+    "index": 176,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwo lane",
@@ -1361,7 +1453,7 @@
     "dishVariantName": "Jurajskie Bursztynowe 500ml"
   },
   {
-    "index": 173,
+    "index": 177,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwo lane",
@@ -1369,7 +1461,7 @@
     "dishVariantName": "Jurajskie Ciemne 300ml"
   },
   {
-    "index": 174,
+    "index": 178,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwo lane",
@@ -1377,7 +1469,7 @@
     "dishVariantName": "Jurajskie Ciemne 500ml"
   },
   {
-    "index": 175,
+    "index": 179,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwo lane",
@@ -1385,7 +1477,7 @@
     "dishVariantName": "Tyskie Klasyczne 300ml"
   },
   {
-    "index": 176,
+    "index": 180,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwo lane",
@@ -1393,7 +1485,7 @@
     "dishVariantName": "Tyskie Klasyczne 500ml"
   },
   {
-    "index": 177,
+    "index": 181,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwo lane",
@@ -1401,7 +1493,7 @@
     "dishVariantName": "Tyskomat 5000ml"
   },
   {
-    "index": 178,
+    "index": 182,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwo lane",
@@ -1409,7 +1501,7 @@
     "dishVariantName": "Książęce Złote Pszeniczne 300ml"
   },
   {
-    "index": 179,
+    "index": 183,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwo lane",
@@ -1417,7 +1509,7 @@
     "dishVariantName": "Książęce Złote Pszeniczne 500ml"
   },
   {
-    "index": 180,
+    "index": 184,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwa bezalkoholowe",
@@ -1425,7 +1517,7 @@
     "dishVariantName": "Łomża 0% 500ml"
   },
   {
-    "index": 181,
+    "index": 185,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwa bezalkoholowe",
@@ -1433,7 +1525,7 @@
     "dishVariantName": "Łomża Pszeniczne 0% 500ml"
   },
   {
-    "index": 182,
+    "index": 186,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwa bezalkoholowe",
@@ -1441,7 +1533,7 @@
     "dishVariantName": "Lech Free Pomelo i Grejpfrut 0% 500ml"
   },
   {
-    "index": 183,
+    "index": 187,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwa bezalkoholowe",
@@ -1449,7 +1541,7 @@
     "dishVariantName": "Żywiec Sesyjne IPA 0% 500ml"
   },
   {
-    "index": 184,
+    "index": 188,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Cydr",
@@ -1457,7 +1549,7 @@
     "dishVariantName": "Cydr Miłosławski półwytrawny 500ml"
   },
   {
-    "index": 185,
+    "index": 189,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Cydr",
@@ -1465,7 +1557,7 @@
     "dishVariantName": "Cydr Miłosławski półsłodki 500ml"
   },
   {
-    "index": 186,
+    "index": 190,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Cydr",
@@ -1473,7 +1565,7 @@
     "dishVariantName": "Cydr Ignaców 275ml"
   },
   {
-    "index": 187,
+    "index": 191,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Drinki na bazie cydru",
@@ -1481,7 +1573,7 @@
     "dishVariantName": "Sklepy Cynamonowe (cydr, sok jabłkowy, syrop Monin cynamonowy) 350ml"
   },
   {
-    "index": 188,
+    "index": 192,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Drinki na bazie cydru",
@@ -1489,7 +1581,7 @@
     "dishVariantName": "Pod Papugami (cydr, wódka Wyborowa, sok ananasowy) 500ml"
   },
   {
-    "index": 189,
+    "index": 193,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Drinki na bazie cydru",
@@ -1497,7 +1589,7 @@
     "dishVariantName": "Wyspy Szczęśliwe (cydr, sok pomarańczowy, syrop Monin kokosowy) 350ml"
   },
   {
-    "index": 190,
+    "index": 194,
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Drinki na bazie cydru",
@@ -1505,7 +1597,7 @@
     "dishVariantName": "Semper Fidelis (cydr, wódka Żołądkowa Gorzka, cukier trzcinowy, limonka, mięta) 350ml"
   },
   {
-    "index": 191,
+    "index": 195,
     "restaurant": "kolanko",
     "section": "WINA BIAŁE",
     "dishName": "Cantina Castelnuovo Del Garda Chardonnay IGT Veneto",
@@ -1514,7 +1606,7 @@
     "dishVariantName": "100ml"
   },
   {
-    "index": 192,
+    "index": 196,
     "restaurant": "kolanko",
     "section": "WINA BIAŁE",
     "dishName": "Cantina Castelnuovo Del Garda Chardonnay IGT Veneto",
@@ -1523,7 +1615,7 @@
     "dishVariantName": "250ml"
   },
   {
-    "index": 193,
+    "index": 197,
     "restaurant": "kolanko",
     "section": "WINA BIAŁE",
     "dishName": "Cantina Castelnuovo Del Garda Chardonnay IGT Veneto",
@@ -1532,7 +1624,7 @@
     "dishVariantName": "500ml"
   },
   {
-    "index": 194,
+    "index": 198,
     "restaurant": "kolanko",
     "section": "WINA BIAŁE",
     "dishName": "Cantina Castelnuovo Del Garda Chardonnay IGT Veneto",
@@ -1541,7 +1633,7 @@
     "dishVariantName": "1000ml"
   },
   {
-    "index": 195,
+    "index": 199,
     "restaurant": "kolanko",
     "section": "WINA BIAŁE",
     "dishName": "Pinot Grigio Marchese della Torre IGT 750ml",
@@ -1549,7 +1641,7 @@
     "dishVariantPrice": 58
   },
   {
-    "index": 196,
+    "index": 200,
     "restaurant": "kolanko",
     "section": "WINA BIAŁE",
     "dishName": "Abadim Vinho Verde DOC 750ml",
@@ -1557,7 +1649,7 @@
     "dishVariantPrice": 58
   },
   {
-    "index": 197,
+    "index": 201,
     "restaurant": "kolanko",
     "section": "WINA BIAŁE",
     "dishName": "Sauvignon Blanc Vina Falernia 750ml",
@@ -1565,7 +1657,7 @@
     "dishVariantPrice": 68
   },
   {
-    "index": 198,
+    "index": 202,
     "restaurant": "kolanko",
     "section": "WINA BIAŁE",
     "dishName": "Sutter Home Moscato",
@@ -1574,7 +1666,7 @@
     "dishVariantName": "100ml"
   },
   {
-    "index": 199,
+    "index": 203,
     "restaurant": "kolanko",
     "section": "WINA BIAŁE",
     "dishName": "Sutter Home Moscato",
@@ -1583,7 +1675,7 @@
     "dishVariantName": "750ml"
   },
   {
-    "index": 200,
+    "index": 204,
     "restaurant": "kolanko",
     "section": "WINA BIAŁE",
     "dishName": "Cavas Hill-Cava 750ml",
@@ -1591,7 +1683,7 @@
     "dishVariantPrice": 59
   },
   {
-    "index": 201,
+    "index": 205,
     "restaurant": "kolanko",
     "section": "WINA BIAŁE",
     "dishName": "Gancia Prosecco D.O.C",
@@ -1600,7 +1692,7 @@
     "dishVariantName": "200ml"
   },
   {
-    "index": 202,
+    "index": 206,
     "restaurant": "kolanko",
     "section": "WINA BIAŁE",
     "dishName": "Gancia Prosecco D.O.C",
@@ -1609,7 +1701,7 @@
     "dishVariantName": "750ml"
   },
   {
-    "index": 203,
+    "index": 207,
     "restaurant": "kolanko",
     "section": "WINA CZERWONE",
     "dishName": "Cantina Castelnuovo Del Garda Merlot IGT Veneto",
@@ -1618,7 +1710,7 @@
     "dishVariantName": "100ml"
   },
   {
-    "index": 204,
+    "index": 208,
     "restaurant": "kolanko",
     "section": "WINA CZERWONE",
     "dishName": "Cantina Castelnuovo Del Garda Merlot IGT Veneto",
@@ -1627,7 +1719,7 @@
     "dishVariantName": "250ml"
   },
   {
-    "index": 205,
+    "index": 209,
     "restaurant": "kolanko",
     "section": "WINA CZERWONE",
     "dishName": "Cantina Castelnuovo Del Garda Merlot IGT Veneto",
@@ -1636,7 +1728,7 @@
     "dishVariantName": "500ml"
   },
   {
-    "index": 206,
+    "index": 210,
     "restaurant": "kolanko",
     "section": "WINA CZERWONE",
     "dishName": "Cantina Castelnuovo Del Garda Merlot IGT Veneto",
@@ -1645,7 +1737,7 @@
     "dishVariantName": "1000ml"
   },
   {
-    "index": 207,
+    "index": 211,
     "restaurant": "kolanko",
     "section": "WINA CZERWONE",
     "dishName": "Syrah Vina Falernia 750ml",
@@ -1653,7 +1745,7 @@
     "dishVariantPrice": 63
   },
   {
-    "index": 208,
+    "index": 212,
     "restaurant": "kolanko",
     "section": "WINA CZERWONE",
     "dishName": "Riparosso Montepulciano D'Abruzzo DOC 750ml",
@@ -1661,7 +1753,7 @@
     "dishVariantPrice": 68
   },
   {
-    "index": 209,
+    "index": 213,
     "restaurant": "kolanko",
     "section": "WINA CZERWONE",
     "dishName": "Ser Dante Chianti 750ml",
@@ -1669,7 +1761,7 @@
     "dishVariantPrice": 73
   },
   {
-    "index": 210,
+    "index": 214,
     "restaurant": "kolanko",
     "section": "INNE",
     "dishName": "Rose Genuss Auer 750ml",
@@ -1677,7 +1769,7 @@
     "dishVariantPrice": 63
   },
   {
-    "index": 211,
+    "index": 215,
     "restaurant": "kolanko",
     "section": "INNE",
     "dishName": "Martini 100ml",
@@ -1685,7 +1777,7 @@
     "dishVariantName": "Bianco - białe, słodkie"
   },
   {
-    "index": 212,
+    "index": 216,
     "restaurant": "kolanko",
     "section": "INNE",
     "dishName": "Martini 100ml",
@@ -1693,7 +1785,7 @@
     "dishVariantName": "Extra dry - białe, wytrawne"
   },
   {
-    "index": 213,
+    "index": 217,
     "restaurant": "kolanko",
     "section": "INNE",
     "dishName": "Martini 100ml",
@@ -1701,7 +1793,7 @@
     "dishVariantName": "Rosso - czerwone, półsłodkie"
   },
   {
-    "index": 214,
+    "index": 218,
     "restaurant": "kolanko",
     "section": "INNE",
     "dishName": "Martini 100ml",
@@ -1709,7 +1801,7 @@
     "dishVariantName": "Rose - różowe, półsłodkie"
   },
   {
-    "index": 215,
+    "index": 219,
     "restaurant": "kolanko",
     "section": "GRZAŃCE",
     "dishName": "Piwo grzane z sokiem (malinowym lub imbirowym), pomarańczą i przyprawami korzennymi",
@@ -1717,7 +1809,7 @@
     "dishVariantName": "300ml"
   },
   {
-    "index": 216,
+    "index": 220,
     "restaurant": "kolanko",
     "section": "GRZAŃCE",
     "dishName": "Piwo grzane z sokiem (malinowym lub imbirowym), pomarańczą i przyprawami korzennymi",
@@ -1725,90 +1817,91 @@
     "dishVariantName": "500ml"
   },
   {
-    "index": 217,
+    "index": 221,
     "restaurant": "kolanko",
     "section": "GRZAŃCE",
     "dishName": "Grzaniec Galicyjski z pomarańczą, rodzynkami i korzeniami 150ml",
     "dishVariantPrice": 9
   },
   {
-    "index": 218,
+    "index": 222,
     "restaurant": "kolanko",
     "section": "GRZAŃCE",
     "dishName": "Biały Miś (Advocat, cynamon, mleko) 160ml",
     "dishVariantPrice": 9
   },
   {
-    "index": 219,
+    "index": 223,
     "restaurant": "kolanko",
     "section": "GRZAŃCE",
     "dishName": "Bury Miś (Advocat, czekolada, mleko) 160ml",
     "dishVariantPrice": 11
   },
   {
-    "index": 220,
+    "index": 224,
     "restaurant": "kolanko",
     "section": "GRZAŃCE",
     "dishName": "Bombardino (Advocat, likier kawowy Kahlua, bita śmietana) 100ml",
     "dishVariantPrice": 8
   },
   {
-    "index": 221,
+    "index": 225,
     "restaurant": "kolanko",
     "section": "GRZAŃCE",
-    "dishName": "Grog na rumie (rum Havana, cytryna, miód, korzenie, woda) 200ml"
+    "dishName": "Grog na rumie (rum Havana, cytryna, miód, korzenie, woda) 200ml",
+    "dishVariantPrice": 16
   },
   {
-    "index": 222,
+    "index": 226,
     "restaurant": "kolanko",
     "section": "GRZAŃCE",
     "dishName": "Grog na Krupniku (Krupnik, cytryna, miód, korzenie, woda) 200ml",
     "dishVariantPrice": 11
   },
   {
-    "index": 223,
+    "index": 227,
     "restaurant": "kolanko",
     "section": "GRZAŃCE",
     "dishName": "Grzany Cydr z naturalnym syropem korzennym 330ml",
     "dishVariantPrice": 13
   },
   {
-    "index": 224,
+    "index": 228,
     "restaurant": "kolanko",
     "section": "GRZAŃCE",
     "dishName": "Grzany kwas chlebowy z naturalnym syropem korzennym, pomarańczą i cytryną 330ml",
     "dishVariantPrice": 12
   },
   {
-    "index": 225,
+    "index": 229,
     "restaurant": "kolanko",
     "section": "DRINKI BEZALKOHOLOWE",
     "dishName": "Mojito Virgin z wodą gazowaną 300ml",
     "dishVariantPrice": 12
   },
   {
-    "index": 226,
+    "index": 230,
     "restaurant": "kolanko",
     "section": "DRINKI BEZALKOHOLOWE",
     "dishName": "Mojito Virgin z wodą gazowaną malinowe 300ml",
     "dishVariantPrice": 13
   },
   {
-    "index": 227,
+    "index": 231,
     "restaurant": "kolanko",
     "section": "DRINKI BEZALKOHOLOWE",
     "dishName": "Mojito Virgin ze Spritem 300ml",
     "dishVariantPrice": 14
   },
   {
-    "index": 228,
+    "index": 232,
     "restaurant": "kolanko",
     "section": "DRINKI BEZALKOHOLOWE",
     "dishName": "Mojito Virgin ze Spritem malinowe 300ml",
     "dishVariantPrice": 15
   },
   {
-    "index": 229,
+    "index": 233,
     "restaurant": "kolanko",
     "section": "DRINKI BEZALKOHOLOWE",
     "dishName": "Cabriolet 300ml",
@@ -1816,7 +1909,7 @@
     "dishVariantPrice": 13
   },
   {
-    "index": 230,
+    "index": 234,
     "restaurant": "kolanko",
     "section": "DRINKI BEZALKOHOLOWE",
     "dishName": "Piña Kolanko 250ml",
@@ -1824,7 +1917,7 @@
     "dishVariantPrice": 10
   },
   {
-    "index": 231,
+    "index": 235,
     "restaurant": "kolanko",
     "section": "DRINKI BEZALKOHOLOWE",
     "dishName": "Pomarańczowa Alternatywa 300ml",
@@ -1832,7 +1925,7 @@
     "dishVariantPrice": 13
   },
   {
-    "index": 232,
+    "index": 236,
     "restaurant": "kolanko",
     "section": "DRINKI BEZALKOHOLOWE",
     "dishName": "Rozważna i Romantyczna 250ml",
@@ -1840,7 +1933,7 @@
     "dishVariantPrice": 11
   },
   {
-    "index": 233,
+    "index": 237,
     "restaurant": "kolanko",
     "section": "DRINKI BEZALKOHOLOWE",
     "dishName": "Over The Rainbow 250ml",
@@ -1848,7 +1941,7 @@
     "dishVariantPrice": 12
   },
   {
-    "index": 234,
+    "index": 238,
     "restaurant": "kolanko",
     "section": "SHORT DRINKI",
     "dishName": "Black Russian 60ml",
@@ -1856,7 +1949,7 @@
     "dishVariantPrice": 14
   },
   {
-    "index": 235,
+    "index": 239,
     "restaurant": "kolanko",
     "section": "SHORT DRINKI",
     "dishName": "Blue Hawaiian 100ml",
@@ -1864,7 +1957,7 @@
     "dishVariantPrice": 14
   },
   {
-    "index": 236,
+    "index": 240,
     "restaurant": "kolanko",
     "section": "SHORT DRINKI",
     "dishName": "Blue Lagoon 120ml",
@@ -1872,7 +1965,7 @@
     "dishVariantPrice": 15
   },
   {
-    "index": 237,
+    "index": 241,
     "restaurant": "kolanko",
     "section": "SHORT DRINKI",
     "dishName": "Cosmopolitan 120ml",
@@ -1880,7 +1973,7 @@
     "dishVariantPrice": 19
   },
   {
-    "index": 238,
+    "index": 242,
     "restaurant": "kolanko",
     "section": "SHORT DRINKI",
     "dishName": "Kamikaze 6 x 25 ml (shot)",
@@ -1888,7 +1981,7 @@
     "dishVariantPrice": 28
   },
   {
-    "index": 239,
+    "index": 243,
     "restaurant": "kolanko",
     "section": "SHORT DRINKI",
     "dishName": "Margarita 80ml",
@@ -1896,7 +1989,7 @@
     "dishVariantPrice": 22
   },
   {
-    "index": 240,
+    "index": 244,
     "restaurant": "kolanko",
     "section": "SHORT DRINKI",
     "dishName": "Negroni 60ml",
@@ -1904,7 +1997,7 @@
     "dishVariantPrice": 14
   },
   {
-    "index": 241,
+    "index": 245,
     "restaurant": "kolanko",
     "section": "SHORT DRINKI",
     "dishName": "Orgazm 80ml",
@@ -1912,7 +2005,7 @@
     "dishVariantPrice": 14
   },
   {
-    "index": 242,
+    "index": 246,
     "restaurant": "kolanko",
     "section": "SHORT DRINKI",
     "dishName": "Piña Colada 120ml",
@@ -1920,7 +2013,7 @@
     "dishVariantPrice": 16
   },
   {
-    "index": 243,
+    "index": 247,
     "restaurant": "kolanko",
     "section": "SHORT DRINKI",
     "dishName": "White Russian 80ml",
@@ -1928,7 +2021,7 @@
     "dishVariantPrice": 13
   },
   {
-    "index": 244,
+    "index": 248,
     "restaurant": "kolanko",
     "section": "SHORT DRINKI",
     "dishName": "Wściekły Pies 50ml (shot)",
@@ -1936,7 +2029,7 @@
     "dishVariantPrice": 7
   },
   {
-    "index": 245,
+    "index": 249,
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "008 250ml",
@@ -1944,7 +2037,7 @@
     "dishVariantPrice": 12
   },
   {
-    "index": 246,
+    "index": 250,
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Aperol Spritz 200ml",
@@ -1952,7 +2045,7 @@
     "dishVariantPrice": 23
   },
   {
-    "index": 247,
+    "index": 251,
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Campari Orange 250ml",
@@ -1960,7 +2053,7 @@
     "dishVariantPrice": 17
   },
   {
-    "index": 248,
+    "index": 252,
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Campari Spritz 200ml",
@@ -1968,7 +2061,7 @@
     "dishVariantPrice": 25
   },
   {
-    "index": 249,
+    "index": 253,
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Cuba Libra 250ml",
@@ -1976,7 +2069,7 @@
     "dishVariantPrice": 19
   },
   {
-    "index": 250,
+    "index": 254,
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Cztery Róże dla Lucienne 300ml",
@@ -1984,7 +2077,7 @@
     "dishVariantPrice": 17
   },
   {
-    "index": 251,
+    "index": 255,
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Exotic Russian 300ml",
@@ -1992,7 +2085,7 @@
     "dishVariantPrice": 19
   },
   {
-    "index": 252,
+    "index": 256,
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Golden Eye 250ml",
@@ -2000,7 +2093,7 @@
     "dishVariantPrice": 15
   },
   {
-    "index": 253,
+    "index": 257,
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Gorączka Sobotniej Nocy 300ml",
@@ -2008,7 +2101,7 @@
     "dishVariantPrice": 17
   },
   {
-    "index": 254,
+    "index": 258,
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "John Lemon 250ml",
@@ -2016,7 +2109,7 @@
     "dishVariantPrice": 16
   },
   {
-    "index": 255,
+    "index": 259,
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Long Island Ice Tea 300ml",
@@ -2024,7 +2117,7 @@
     "dishVariantPrice": 21
   },
   {
-    "index": 256,
+    "index": 260,
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Long Island Ice Tea",
@@ -2032,7 +2125,7 @@
     "dishVariantPrice": 69
   },
   {
-    "index": 257,
+    "index": 261,
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Malibu z mlekiem 200ml",
@@ -2040,7 +2133,7 @@
     "dishVariantPrice": 12
   },
   {
-    "index": 258,
+    "index": 262,
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Mechaniczna Pomarańcza 300ml",
@@ -2048,7 +2141,7 @@
     "dishVariantPrice": 18
   },
   {
-    "index": 259,
+    "index": 263,
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Mojito 300ml",
@@ -2056,7 +2149,7 @@
     "dishVariantPrice": 20
   },
   {
-    "index": 260,
+    "index": 264,
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Mojito malinowe 300ml",
@@ -2064,7 +2157,7 @@
     "dishVariantPrice": 22
   },
   {
-    "index": 261,
+    "index": 265,
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Mojito Passoa 300ml",
@@ -2072,7 +2165,7 @@
     "dishVariantPrice": 19
   },
   {
-    "index": 262,
+    "index": 266,
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Monkey Business 270ml",
@@ -2080,7 +2173,7 @@
     "dishVariantPrice": 16.5
   },
   {
-    "index": 263,
+    "index": 267,
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Orzechówka z mlekiem 200ml",
@@ -2088,7 +2181,7 @@
     "dishVariantPrice": 12
   },
   {
-    "index": 264,
+    "index": 268,
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Pod Osłoną Nieba 150ml",
@@ -2096,7 +2189,7 @@
     "dishVariantPrice": 16
   },
   {
-    "index": 265,
+    "index": 269,
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Po Drugiej Stronie Lustra 300ml",
@@ -2104,7 +2197,7 @@
     "dishVariantPrice": 15
   },
   {
-    "index": 266,
+    "index": 270,
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Szprycer 250ml",
@@ -2112,7 +2205,7 @@
     "dishVariantPrice": 12
   },
   {
-    "index": 267,
+    "index": 271,
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Tatanka 200ml",
@@ -2120,7 +2213,7 @@
     "dishVariantPrice": 12
   },
   {
-    "index": 268,
+    "index": 272,
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Tatanka miętowa 200ml",
@@ -2128,7 +2221,7 @@
     "dishVariantPrice": 13
   },
   {
-    "index": 269,
+    "index": 273,
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Tequila Sunrise 250ml",
@@ -2136,7 +2229,7 @@
     "dishVariantPrice": 19
   },
   {
-    "index": 270,
+    "index": 274,
     "restaurant": "kolanko",
     "section": "WÓDKI",
     "dishName": "Finlandia",
@@ -2144,7 +2237,7 @@
     "dishVariantName": "40ml"
   },
   {
-    "index": 271,
+    "index": 275,
     "restaurant": "kolanko",
     "section": "WÓDKI",
     "dishName": "Finlandia",
@@ -2152,235 +2245,235 @@
     "dishVariantName": "700ml"
   },
   {
-    "index": 272,
-    "restaurant": "kolanko",
-    "section": "WÓDKI",
-    "dishName": "Wyborowa",
-    "dishVariantPrice": 8,
-    "dishVariantName": "40ml"
-  },
-  {
-    "index": 273,
-    "restaurant": "kolanko",
-    "section": "WÓDKI",
-    "dishName": "Wyborowa",
-    "dishVariantPrice": 95,
-    "dishVariantName": "700ml"
-  },
-  {
-    "index": 274,
-    "restaurant": "kolanko",
-    "section": "WÓDKI",
-    "dishName": "Żołądkowa Gorzka",
-    "dishVariantPrice": 8,
-    "dishVariantName": "40ml"
-  },
-  {
-    "index": 275,
-    "restaurant": "kolanko",
-    "section": "WÓDKI",
-    "dishName": "Żołądkowa Gorzka",
-    "dishVariantPrice": 95,
-    "dishVariantName": "700ml"
-  },
-  {
     "index": 276,
+    "restaurant": "kolanko",
+    "section": "WÓDKI",
+    "dishName": "Wyborowa",
+    "dishVariantPrice": 8,
+    "dishVariantName": "40ml"
+  },
+  {
+    "index": 277,
+    "restaurant": "kolanko",
+    "section": "WÓDKI",
+    "dishName": "Wyborowa",
+    "dishVariantPrice": 95,
+    "dishVariantName": "700ml"
+  },
+  {
+    "index": 278,
+    "restaurant": "kolanko",
+    "section": "WÓDKI",
+    "dishName": "Żołądkowa Gorzka",
+    "dishVariantPrice": 8,
+    "dishVariantName": "40ml"
+  },
+  {
+    "index": 279,
+    "restaurant": "kolanko",
+    "section": "WÓDKI",
+    "dishName": "Żołądkowa Gorzka",
+    "dishVariantPrice": 95,
+    "dishVariantName": "700ml"
+  },
+  {
+    "index": 280,
     "restaurant": "kolanko",
     "section": "WÓDKI",
     "dishName": "Żołądkowa Gorzka 40ml",
     "dishVariantPrice": 8
   },
   {
-    "index": 277,
+    "index": 281,
     "restaurant": "kolanko",
     "section": "WÓDKI",
     "dishName": "Lubelska Cytrynowa 40ml",
     "dishVariantPrice": 8
   },
   {
-    "index": 278,
+    "index": 282,
     "restaurant": "kolanko",
     "section": "WÓDKI",
     "dishName": "Soplica Malinowa 40ml",
     "dishVariantPrice": 8
   },
   {
-    "index": 279,
+    "index": 283,
     "restaurant": "kolanko",
     "section": "WÓDKI",
     "dishName": "Soplica Orzechowa 40ml",
     "dishVariantPrice": 8
   },
   {
-    "index": 280,
+    "index": 284,
     "restaurant": "kolanko",
     "section": "WÓDKI",
     "dishName": "Soplica Pigwowa 40ml",
     "dishVariantPrice": 8
   },
   {
-    "index": 281,
+    "index": 285,
     "restaurant": "kolanko",
     "section": "WÓDKI",
     "dishName": "Soplica Śliwkowa 40ml",
     "dishVariantPrice": 8
   },
   {
-    "index": 282,
+    "index": 286,
     "restaurant": "kolanko",
     "section": "WÓDKI",
     "dishName": "Soplica Wiśniowa 40ml",
     "dishVariantPrice": 8
   },
   {
-    "index": 283,
+    "index": 287,
     "restaurant": "kolanko",
     "section": "LIKIERY",
     "dishName": "Advocat 40ml",
     "dishVariantPrice": 7
   },
   {
-    "index": 284,
+    "index": 288,
     "restaurant": "kolanko",
     "section": "LIKIERY",
     "dishName": "Amaretto 20ml",
     "dishVariantPrice": 6
   },
   {
-    "index": 285,
+    "index": 289,
     "restaurant": "kolanko",
     "section": "LIKIERY",
     "dishName": "Blue Curacao 20ml",
     "dishVariantPrice": 6
   },
   {
-    "index": 286,
+    "index": 290,
     "restaurant": "kolanko",
     "section": "LIKIERY",
     "dishName": "Baileys 40ml",
     "dishVariantPrice": 12
   },
   {
-    "index": 287,
+    "index": 291,
     "restaurant": "kolanko",
     "section": "LIKIERY",
     "dishName": "Cointreau 20ml",
     "dishVariantPrice": 7
   },
   {
-    "index": 288,
+    "index": 292,
     "restaurant": "kolanko",
     "section": "LIKIERY",
     "dishName": "Kahlua Coffee Liquer 20ml",
     "dishVariantPrice": 6
   },
   {
-    "index": 289,
+    "index": 293,
     "restaurant": "kolanko",
     "section": "INNE ALKOHOLE",
     "dishName": "Aperol 40ml",
     "dishVariantPrice": 13
   },
   {
-    "index": 290,
+    "index": 294,
     "restaurant": "kolanko",
     "section": "INNE ALKOHOLE",
     "dishName": "Campari 40ml",
     "dishVariantPrice": 14
   },
   {
-    "index": 291,
+    "index": 295,
     "restaurant": "kolanko",
     "section": "INNE ALKOHOLE",
     "dishName": "Gin Seagram's 40ml",
     "dishVariantPrice": 8
   },
   {
-    "index": 292,
+    "index": 296,
     "restaurant": "kolanko",
     "section": "INNE ALKOHOLE",
     "dishName": "Jagermeister 40ml",
     "dishVariantPrice": 10
   },
   {
-    "index": 293,
+    "index": 297,
     "restaurant": "kolanko",
     "section": "INNE ALKOHOLE",
     "dishName": "Krupnik 40ml",
     "dishVariantPrice": 7
   },
   {
-    "index": 294,
+    "index": 298,
     "restaurant": "kolanko",
     "section": "INNE ALKOHOLE",
     "dishName": "Passoa 40ml",
     "dishVariantPrice": 9
   },
   {
-    "index": 295,
+    "index": 299,
     "restaurant": "kolanko",
     "section": "INNE ALKOHOLE",
     "dishName": "Rum Havana Club 40ml",
     "dishVariantPrice": 14
   },
   {
-    "index": 296,
+    "index": 300,
     "restaurant": "kolanko",
     "section": "INNE ALKOHOLE",
     "dishName": "Rum Malibu 40ml",
     "dishVariantPrice": 10
   },
   {
-    "index": 297,
+    "index": 301,
     "restaurant": "kolanko",
     "section": "INNE ALKOHOLE",
     "dishName": "Stock Brandy 40ml",
     "dishVariantPrice": 10
   },
   {
-    "index": 298,
+    "index": 302,
     "restaurant": "kolanko",
     "section": "INNE ALKOHOLE",
     "dishName": "Tequila Olmeca Gold 40ml",
     "dishVariantPrice": 15
   },
   {
-    "index": 299,
+    "index": 303,
     "restaurant": "kolanko",
     "section": "INNE ALKOHOLE",
     "dishName": "Tequila Olmeca Silver 40ml",
     "dishVariantPrice": 15
   },
   {
-    "index": 300,
+    "index": 304,
     "restaurant": "kolanko",
     "section": "INNE ALKOHOLE",
     "dishName": "Whisky Ballantines 40ml",
     "dishVariantPrice": 15
   },
   {
-    "index": 301,
+    "index": 305,
     "restaurant": "kolanko",
     "section": "INNE ALKOHOLE",
     "dishName": "Whisky Jack Daniels 40ml",
     "dishVariantPrice": 15
   },
   {
-    "index": 302,
+    "index": 306,
     "restaurant": "kolanko",
     "section": "INNE ALKOHOLE",
     "dishName": "Whisky Jameson 40ml",
     "dishVariantPrice": 15
   },
   {
-    "index": 303,
+    "index": 307,
     "restaurant": "kolanko",
     "section": "INNE ALKOHOLE",
     "dishName": "Whisky Johnnie Walker 40ml",
     "dishVariantPrice": 15
   },
   {
-    "index": 304,
+    "index": 308,
     "restaurant": "kolanko",
     "section": "INNE ALKOHOLE",
     "dishName": "Whisky Jim Beam 40ml",

@@ -13,7 +13,6 @@ import { ISection, IDish } from 'menuo-shared'
 import { H2 } from '../../../components/H2'
 import { PlusMinus } from '../../../components/PlusMinus'
 
-
 export interface MenuSectionProps {
   section: ISection
   handleDishClick: any
@@ -23,6 +22,8 @@ export interface MenuSectionProps {
   handlePlus: any
   makeInBasketId: any
 }
+
+const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1)
 
 export const MenuSection = ({
   section,
@@ -36,6 +37,7 @@ export const MenuSection = ({
   return (
     <div>
       <H2>{section.name}</H2>
+      {capitalize((section as any).description || '')}
       <Divider />
 
       <List>

@@ -15,6 +15,7 @@ export const unnestMenu = ({ menu, restaurant }: IRestaurant): Menu =>
           _id: v._id,
           restaurant,
           section: s.name,
+          sectionDescription: s.description,
           dishName: d.name,
           dishDescription: d.description,
           dishVariantDescription: v.description,
@@ -32,20 +33,26 @@ const menuEntryToVariant = (entry: MenuEntry): IVariant => ({
 })
 
 const buildDishesGroup = (dishes: MenuEntry[]) =>
-  toPairs(groupBy(d => d.dishName, dishes as MenuEntry[])).map(
-    ([dishName, entries]) => ({
+  toPairs(groupBy(d => d.dishName, dishes as MenuEntry[]))
+    .sort(([s1, e1], [s2, e2]) => e1[0].index - e2[0].index)
+    .map(([dishName, entries]) => ({
       name: dishName,
       description: entries[0].dishDescription,
-      variants: entries.map(menuEntryToVariant),
-    }),
-  )
+      variants: entries
+        .sort((e1, e2) => e1.index - e2.index)
+        .map(menuEntryToVariant),
+    }))
 
 const buildSectionGroup = (menu: Menu): IMenu =>
-  toPairs(groupBy<MenuEntry>(e => e.section, menu)).map(
-    ([sectionName, entries]) => ({
-      name: sectionName,
-      dishes: buildDishesGroup(entries),
-    }),
-  )
+  toPairs(
+    groupBy<MenuEntry>(
+      e => e.section,
+      menu.sort((e1, e2) => e1.index - e2.index),
+    ),
+  ).map(([sectionName, entries]) => ({
+    name: sectionName,
+    description: entries[0].sectionDescription,
+    dishes: buildDishesGroup(entries),
+  }))
 
 export const nestMenu = (menu: Menu): IMenu => buildSectionGroup(menu)
