@@ -9,12 +9,13 @@ import {
   ListItemSecondaryAction,
 } from '@material-ui/core'
 import { Check, DeleteForever, ArrowForwardIos } from '@material-ui/icons'
+import { IOrder } from 'menuo-shared'
 
 interface TabbleOrderProps {
-  order: any
-  handleCompleteOrderToggle: any
+  order: IOrder
+  handleCompleteOrderToggle: (order: string, status: string) => () => void
   handleAcceptOrder: any
-  handleDeleteOrder: any
+  handleDeleteOrder: (order: string) => () => void
 }
 
 export const TableOrder = ({
@@ -22,63 +23,64 @@ export const TableOrder = ({
   handleCompleteOrderToggle,
   handleAcceptOrder,
   handleDeleteOrder,
-}: TabbleOrderProps) => (
-  <div>
-    <ListItem>
-      <ListItemIcon>
-        <Checkbox
-          disabled={order.status === 'new'}
-          edge="start"
-          onChange={handleCompleteOrderToggle({
-            orderId: order.id,
-            status: order.status,
-          })}
-          checked={order.status === 'completed'}
+}: TabbleOrderProps) =>
+  order.status === '' ? null : (
+    <div>
+      <ListItem>
+        <ListItemIcon>
+          <Checkbox
+            disabled={order.status === 'new'}
+            edge="start"
+            onChange={handleCompleteOrderToggle(order._id, order.status)}
+            checked={order.status === 'completed'}
+          />
+        </ListItemIcon>
+        <ListItemText
+          primary={'Zamówienie - ' + order._id.slice(-3)}
+          // secondary={dish.description}
         />
-      </ListItemIcon>
-      <ListItemText
-        primary={'Zamówienie ' + order.id}
-        // secondary={dish.description}
-      />
-      <ListItemSecondaryAction>
-        {order.status === 'new' && (
+        <ListItemSecondaryAction>
+          {order.status === 'new' && (
+            <Fab
+              size="small"
+              variant="extended"
+              color="primary"
+              onClick={handleAcceptOrder(order._id)}
+            >
+              <Check />
+            </Fab>
+          )}
           <Fab
+            style={{ marginLeft: '1rem' }}
             size="small"
             variant="extended"
             color="primary"
-            onClick={handleAcceptOrder({ orderId: order.id })}
+            onClick={handleDeleteOrder(order._id)}
           >
-            <Check />
+            <DeleteForever />
           </Fab>
-        )}
-        <Fab
-          style={{ marginLeft: '1rem' }}
-          size="small"
-          variant="extended"
-          color="primary"
-          onClick={handleDeleteOrder({ orderId: order.id })}
-        >
-          <DeleteForever />
-        </Fab>
-      </ListItemSecondaryAction>
-    </ListItem>
-    <List component="div" disablePadding>
-      {order.items.map(({ dish, variant, count, isDone, itemId }: any) => {
-        const variantText =
-          `${count} x ${dish.name}` + (variant.name ? `- ${variant.name}` : '')
+        </ListItemSecondaryAction>
+      </ListItem>
+      <List component="div" disablePadding>
+        {order.items.map(item => {
+          const variantText =
+            `${item.count} x ${item.dishName}` +
+            (item.entry.dishVariantName
+              ? `- ${item.entry.dishVariantName}`
+              : '')
 
-        return (
-          <ListItem
-            button={(order.status !== 'new') as true}
-            onClick={order.status === 'new' ? undefined : () => {}}
-          >
-            <ListItemIcon>
-              <ArrowForwardIos />
-            </ListItemIcon>
-            <ListItemText>{variantText}</ListItemText>
-          </ListItem>
-        )
-      })}
-    </List>
-  </div>
-)
+          return (
+            <ListItem
+              button={(order.status !== 'new') as true}
+              onClick={order.status === 'new' ? undefined : () => {}}
+            >
+              <ListItemIcon>
+                <ArrowForwardIos />
+              </ListItemIcon>
+              <ListItemText>{variantText}</ListItemText>
+            </ListItem>
+          )
+        })}
+      </List>
+    </div>
+  )

@@ -1,38 +1,30 @@
-import { get } from '../../api'
+import { get, put, del } from '../../api'
+import {
+  ListRestaurantOrders,
+  DeleteRestaurantOrder,
+  DeleteRestaurantOrders,
+} from 'menuo-shared/interfaces/api'
+import { IOrdersTable, IOrder } from 'menuo-shared'
 
-export const getTables = (restaurantId: string) =>
-  get<ITable[]>(`/tables/${restaurantId}`)
+export const getRestaurantOrders = ({
+  restaurant,
+}: ListRestaurantOrders.Params) =>
+  get<ListRestaurantOrders.Response>(`/restaurants/${restaurant}/orders`)
 
-export interface ITable {
-  id: number
-  status: string
-  orders: IOrder[]
-}
+export const updateOrder = (restaurantId: string, order: IOrder) =>
+  put<IOrdersTable[]>(`/orders/${restaurantId}`, order as any)
 
-export interface IOrder {
-  id: number
-  tableId: number
-  userId: 0
-  items: IItem[]
-  status: string
-}
+export const deleteRestaurantOrder = ({
+  restaurant,
+  order,
+}: DeleteRestaurantOrder.Params) =>
+  del(`/restaurants/${restaurant}/orders/${order}`)
 
-export interface IItem {
-  dish: IDish
-  variant: IVariant
-  count: 1
-  itemId: 0
-  isDone: boolean
-}
-
-export interface IDish {
-  name: string
-  description?: string
-  variants: IVariant[]
-}
-
-export interface IVariant {
-  price: number
-  name?: string
-  description?: string
-}
+export const deleteRestaurantOrders = ({
+  restaurant,
+  table,
+  tableStatus,
+}: DeleteRestaurantOrders.Params & DeleteRestaurantOrders.QueryParams) =>
+  del(
+    `/restaurants/${restaurant}/orders/?table=${table}&tablestatus=${tableStatus}`,
+  )

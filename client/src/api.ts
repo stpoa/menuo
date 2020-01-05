@@ -4,8 +4,22 @@ import { getConfig } from './env'
 const api = axios.create({ baseURL: getConfig().apiUrl })
 
 type Get = <T = any>(url: string, config?: AxiosRequestConfig) => Promise<T>
+type Post = <T = any, K = any>(url: string, data?: K, config?: AxiosRequestConfig) => Promise<T>
+type Put = <T = any, K = any>(url: string, data?: K, config?: AxiosRequestConfig) => Promise<T>
+type Del = <T = any>(url: string, config?: AxiosRequestConfig) => Promise<T>
+
 export const get: Get = (url, config) =>
   api.get(url, config).then(response => response.data)
+
+export const post: Post = (url, body, config) =>
+  api.post(url, body, config).then(response => response.data)
+
+export const put: Put = (url, data, config) =>
+  api.put(url, data, config).then(response => response.data)
+
+export const del: Del = (url, config) =>
+  api.delete(url, config).then(response => response.data)
+
 
 export function wrapPromise<T>(promise: Promise<T>) {
   let status = 'pending'

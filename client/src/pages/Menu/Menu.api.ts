@@ -1,25 +1,53 @@
-import { get } from '../../api'
+import { get, put, post } from '../../api'
+import {
+  ReadRestaurantTable,
+  ListRestaurantDishes,
+  CreateRestaurantOrder,
+  UpdateRestaurantOrder,
+} from 'menuo-shared/interfaces/api'
+import { Table } from 'menuo-shared/interfaces/tables'
 
-export const getRestaurant = (id: string) => get<IRestaurant>(`/restaurants/${id}`)
+export const listRestaurantDishes = ({
+  restaurant,
+}: ListRestaurantDishes.Params) =>
+  get<ListRestaurantDishes.Response>(`/restaurants/${restaurant}/dishes`)
 
-export interface IRestaurant {
-  restaurantId: string
-  menu: ISection[]
-}
+export const readRestaurantTable = ({
+  restaurant,
+  table,
+}: ReadRestaurantTable.Params) =>
+  get<ReadRestaurantTable.Response>(
+    `/restaurants/${restaurant}/tables/${table}`,
+  )
 
-export interface ISection {
-  name: string
-  dishes: IDish[]
-}
+export const createRestaurantOrder = (
+  { restaurant }: CreateRestaurantOrder.Params,
+  order: CreateRestaurantOrder.Body,
+) =>
+  post<CreateRestaurantOrder.Response, typeof order>(
+    `/restaurants/${restaurant}/orders`,
+    order,
+  )
 
-export interface IDish {
-  name: string
-  description?: string
-  variants: IVariant[]
-}
+export const updateRestaurantOrder = (
+  { restaurant, order }: UpdateRestaurantOrder.Params,
+  updates: UpdateRestaurantOrder.Body,
+) =>
+  put<UpdateRestaurantOrder.Response, typeof updates>(
+    `/restaurants/${restaurant}/orders/${order}`,
+    updates,
+  )
 
-export interface IVariant {
-  price: number
-  name?: string
-  description?: string
+// Helpers
+
+export const summonWaiter = async (restaurant: string, table: Table) => {
+  await createRestaurantOrder(
+    { restaurant },
+    {
+      status: '',
+      table: { ...table, status: 'summon-waiter' },
+      entries: [],
+      user: '',
+    },
+  )
 }

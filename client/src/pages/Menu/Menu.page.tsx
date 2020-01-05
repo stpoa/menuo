@@ -1,37 +1,84 @@
 import React, { useState, useEffect } from 'react'
+
+import { nestMenu, Order, MenuEntry, Menu, IMenu } from 'menuo-shared'
+
 import { useQuery } from '../../utils'
 import { Button } from '@material-ui/core'
 import { Header } from '../../components/Header'
-
-import { getRestaurant, IRestaurant } from './Menu.api'
+import {
+  listRestaurantDishes,
+  readRestaurantTable,
+  createRestaurantOrder,
+  summonWaiter
+} from './Menu.api'
 import { useStyles } from './Menu.styles'
 import { MenuSection } from './components/MenuSection'
 import { OrderSentDialog } from './components/OrderSentDialog'
 import { WaiterSummonDialog } from './components/WaiterSummonDialog'
+import { Table } from 'menuo-shared/interfaces/tables'
 
-type Basket = { [itemPlusOption: string]: number }
-const makeInBasketId = (sectionId: number) => (dishId: number) => (
-  variantId: number,
-) => sectionId + ' ' + dishId + ' ' + variantId
+type Basket = { [itemId: string]: number }
+
+const apiCreateOrder = ({
+  user,
+  table,
+  restaurant,
+  basket,
+  menu,
+}: {
+  user: string
+  table: Order['table']
+  restaurant: string
+  basket: Basket
+  menu: Menu
+}) => {
+  const entries: [MenuEntry, number][] = Object.entries(basket).map(
+    ([itemId, count]) => {
+      const entry = menu.find(e => e._id === itemId)!
+
+      return [entry, count]
+    },
+  )
+
+  return createRestaurantOrder(
+    { restaurant },
+    { status: 'new', table, user, entries },
+  )
+}
 
 export const MenuPage = ({ location, match }: any) => {
-  const { restaurantId } = match.params
+  const { restaurant } = match.params as { restaurant: string }
   const { search } = location
   const query = useQuery(search)
-  const tableId = +(query.get('table') || '0')
+  const tableName = query.get('table')
 
   const [refetch, setRefetch] = useState(0)
-  const [restaurant, setRestaurant] = useState<IRestaurant>({
-    menu: [],
-    restaurantId,
+  const [menu, setMenu] = useState<IMenu>([])
+  const [dishes, setDishes] = useState<Menu>([])
+  const [table, setTable] = useState<Table>({
+    name: '',
+    status: '',
+    _id: '',
+    restaurant: '',
   })
 
   useEffect(() => {
     ;(async () => {
-      const restaurant = await getRestaurant(restaurantId)
-      setRestaurant(restaurant)
+      const dishes = await listRestaurantDishes({ restaurant })
+      setDishes(dishes)
+      setMenu(nestMenu(dishes))
     })()
-  }, [restaurantId, refetch])
+  }, [restaurant, refetch])
+
+  useEffect(() => {
+    ;(async () => {
+      const table = await readRestaurantTable({
+        restaurant,
+        table: tableName || '',
+      })
+      setTable(table)
+    })()
+  }, [restaurant, refetch])
 
   useEffect(() => {
     navigator.serviceWorker.addEventListener('message', event => {
@@ -44,13 +91,23 @@ export const MenuPage = ({ location, match }: any) => {
   const [showOrderedDialog, setShowOrderedDialog] = useState(false)
   const classes = useStyles() as any
 
+  if (!tableName) {
+    return <div>Error, no table param</div>
+  }
+
   // Handlers
   const handleOrderClick = ({
     basket,
-    userId = 0,
-    tableId,
-  }: any) => async () => {
-    // await apiCreateOrder({ userId, tableId, basket })
+    user,
+    table,
+    menu,
+  }: {
+    basket: Basket
+    user: string
+    table: Table
+    menu: Menu
+  }) => async () => {
+    await apiCreateOrder({ user, table, basket, menu, restaurant: restaurant })
     setShowOrderedDialog(true)
     setBasket({})
   }
@@ -59,60 +116,43 @@ export const MenuPage = ({ location, match }: any) => {
     setShowSummonDialog(true)
   }
 
-  const handleSummonClick = ({ tableId }: any) => async () => {
-    // await apiSummonWaiter({ tableId })
+  const handleSummonClick = (table: Table) => async () => {
+    await summonWaiter(restaurant, table)
     setShowSummonDialog(false)
   }
-  const handlePayCardClick = ({ tableId }: any) => async () => {
+  const handlePayCardClick = (tableId: string) => async () => {
     // await apiPayByCard({ tableId })
     setShowSummonDialog(false)
   }
-  const handlePayCashClick = ({ tableId }: any) => async () => {
+  const handlePayCashClick = (tableId: string) => async () => {
     // await apiPayByCash({ tableId })
     setShowSummonDialog(false)
   }
 
-  const handleToggle = (sectionId: number) => (
-    dishId: number,
-    variantId: number,
-    count: number,
-  ) => () => {
+  const handleToggle = () => (entryId: string, count: number) => () => {
     setBasket(basket => ({
       ...basket,
-      [makeInBasketId(sectionId)(dishId)(variantId)]: count ? 0 : 1,
+      [entryId]: count ? 0 : 1,
     }))
   }
 
-  const handleMinus = (sectionId: number) => (
-    dishId: number,
-    variantId: number,
-    count: number,
-  ) => () => {
-    const id = makeInBasketId(sectionId)(dishId)(variantId)
+  const handleMinus = () => (entryId: string) => () => {
+    const id = entryId
     return setBasket((basket: { [x: string]: number }) => ({
       ...basket,
       [id]: basket[id] - 1,
     }))
   }
 
-  const handlePlus = (sectionId: number) => (
-    dishId: number,
-    variantId: number,
-    count: number,
-  ) => () => {
-    const id = makeInBasketId(sectionId)(dishId)(variantId)
+  const handlePlus = () => (entryId: string) => () => {
+    const id = entryId
     return setBasket(basket => ({ ...basket, [id]: basket[id] + 1 }))
   }
 
-  const handleDishClick = (sectionId: number) => (dishId: number) => () => {
-    const id = makeInBasketId(sectionId)(dishId)(0)
+  const handleDishClick = () => (entryId: string) => () => {
+    const id = entryId
     const variantIds = Object.keys(basket)
-      .map(id => {
-        const [sId, dId, vId] = id.split(' ')
-        return [+sId, +dId, +vId]
-      })
-      .filter(([sId, dId]) => sId === sectionId && dId === dishId)
-      .map(([sId, dId, vId]) => makeInBasketId(sId)(dId)(vId))
+    // FIXME: Something is missing here, filter
 
     if (variantIds.some(id => basket[id] > 0)) {
       variantIds.forEach(id => setBasket(basket => ({ ...basket, [id]: 0 })))
@@ -135,17 +175,16 @@ export const MenuPage = ({ location, match }: any) => {
       <Header>Menu</Header>
 
       <div className={classes.menuContent}>
-        {restaurant.menu.map((section, sectionId) => (
+        {menu.map((section, i) => (
           <MenuSection
             {...{
               section,
-              key: sectionId,
-              handleDishClick: handleDishClick(sectionId),
+              key: i,
+              handleDishClick: handleDishClick(),
               basket,
-              handleToggle: handleToggle(sectionId),
-              handleMinus: handleMinus(sectionId),
-              handlePlus: handlePlus(sectionId),
-              makeInBasketId: makeInBasketId(sectionId),
+              handleToggle: handleToggle(),
+              handleMinus: handleMinus(),
+              handlePlus: handlePlus(),
             }}
           />
         ))}
@@ -165,7 +204,7 @@ export const MenuPage = ({ location, match }: any) => {
           className={classes.buttonRight}
           variant="contained"
           color="primary"
-          onClick={handleOrderClick({ basket, tableId })}
+          onClick={handleOrderClick({ basket, table, menu: dishes, user: '' })}
         >
           Zamów
         </Button>
@@ -176,8 +215,8 @@ export const MenuPage = ({ location, match }: any) => {
         handleClose={() => setShowSummonDialog(false)}
         handlePayCardClick={handlePayCardClick}
         handlePayCashClick={handlePayCashClick}
-        handleSummonClick={handleSummonClick}
-        tableId={tableId}
+        handleSummonClick={handleSummonClick(table)}
+        table={table}
       />
 
       <OrderSentDialog
