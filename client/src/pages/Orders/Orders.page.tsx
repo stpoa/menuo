@@ -3,9 +3,10 @@ import { Header } from '../../components/Header'
 import { useStyles } from './Orders.styles'
 import { OrdersTable } from './components/Table/OrdersTable'
 
-import { getRestaurantOrders } from './Orders.api'
-import { IOrdersTable, IOrdersTables } from 'menuo-shared'
+import { getRestaurantOrders, deleteRestaurantOrder } from './Orders.api'
+import { IOrdersTables } from 'menuo-shared'
 import { nestOrders } from 'menuo-shared/dist/transformations/orders'
+import { apiCompleteTableAction } from '../../api-old'
 
 export const Orders = ({ match }: any) => {
   const { restaurant } = match.params
@@ -46,8 +47,12 @@ export const Orders = ({ match }: any) => {
     setRefetch(+new Date())
   }
 
-  const handleCompleteAction = ({ id }: any) => async () => {
-    // await apiCompleteTableAction({ id })
+  const handleCompleteAction = (
+    restaurant: string,
+  ) => (
+    order: string,
+  ) => async () => {
+    await deleteRestaurantOrder({ restaurant, order })
     setRefetch(+new Date())
   }
 
@@ -63,7 +68,7 @@ export const Orders = ({ match }: any) => {
             handleAcceptOrder,
             handleDeleteOrder,
             handleCompleteOrderToggle,
-            handleCompleteAction,
+            handleCompleteAction: handleCompleteAction(restaurant),
           }}
         />
       ))}

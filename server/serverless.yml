@@ -65,6 +65,19 @@ functions:
               paths:
                 restaurant: true
 
+  delete-restaurant-order:
+    handler: src/restaurant/handlers/delete-restaurant-order.handler
+    events:
+      - http:
+          path: restaurants/{restaurant}/orders/{order}
+          method: delete
+          cors: true
+          request:
+            parameters:
+              paths:
+                restaurant: true
+                order: true
+
   put-restaurant-orders:
     handler: src/restaurant/handlers/put-restaurant-orders.handler
     events:

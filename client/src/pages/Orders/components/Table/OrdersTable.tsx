@@ -23,18 +23,20 @@ export const OrdersTable = ({
   handleCompleteOrderToggle,
   handleCompleteAction,
 }: OrdersTableProps) => {
+  const emptyOrder = orders.find(o => o.status === '')
+  console.log(orders, { emptyOrder }, table.status)
 
   return (
     <div>
       <div style={{ position: 'relative' }}>
         <H2> Stół {table.name} </H2>
-        {table.status === 'summon-waiter' && (
+        {table.status === 'summon-waiter' && emptyOrder && (
           <Fab
             style={{ position: 'absolute', top: '0', right: '1rem' }}
             size="small"
             variant="extended"
             color="secondary"
-            onClick={handleCompleteAction({ id: table._id })}
+            onClick={handleCompleteAction(emptyOrder._id)}
           >
             <AccessibilityNew />
           </Fab>

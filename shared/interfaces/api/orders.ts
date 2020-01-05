@@ -26,3 +26,10 @@ export namespace UpdateRestaurantOrder {
   export type Body = Partial<Order>
   export type Response = { _id: string }
 }
+
+/**
+ * DELETE /{restaurant}/orders/{order}
+ **/
+export namespace DeleteRestaurantOrder {
+  export type Params = { restaurant: string; order: string }
+}

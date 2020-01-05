@@ -6,7 +6,7 @@ import {
 } from 'aws-lambda'
 import { MongoClient } from 'mongodb'
 
-type ResponseKind = 'OK' | 'UNAUTHORIZED' | 'UNPROCESSABLE_ENTITY' | 'NOT_FOUND'
+type ResponseKind = 'OK' | 'NO_CONTENT' | 'UNAUTHORIZED' | 'UNPROCESSABLE_ENTITY' | 'NOT_FOUND'
 
 export type AGPHA = APIGatewayProxyHandlerAsync
 export type AGPHADB = APIGatewayProxyHandlerAsyncDB
@@ -45,6 +45,7 @@ export const response = <T = string>(
     [key in ResponseKind]: { statusCode: number; body?: any }
   } = {
     OK: { statusCode: 200 },
+    NO_CONTENT: { statusCode: 204, body: 'No content' },
     NOT_FOUND: { statusCode: 400, body: 'Not found' },
     UNAUTHORIZED: { statusCode: 401, body: 'Unauthorized' },
     UNPROCESSABLE_ENTITY: { statusCode: 422, body: 'Unprocessable entity' },

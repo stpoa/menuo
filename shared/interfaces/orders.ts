@@ -13,17 +13,17 @@ export interface IOrdersTable {
 
 export interface IOrder {
   _id: string
-  user: string 
+  user: string
   items: IOrderItem[]
   status: string
 }
 
 export interface IOrderItem {
   dishName: string
-  dishVariantPrice: number 
+  dishVariantPrice: number
   count: number
   entry: MenuEntry
-  status: string 
+  status: string
 }
 
 export type Orders = Order[]
@@ -31,8 +31,8 @@ export type Orders = Order[]
 export interface Order {
   _id: string
   restaurant: string
-  user: string 
-  table: Table
+  user: string
+  table: Omit<Table, 'status'> & { status?: string }
   status: string
   entries: [MenuEntry, number][]
 }

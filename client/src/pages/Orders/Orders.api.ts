@@ -1,8 +1,5 @@
-import { get, post, put } from '../../api'
-import {
-  CreateRestaurantOrder,
-  ListRestaurantOrders,
-} from 'menuo-shared/interfaces/api'
+import { get, put, del } from '../../api'
+import { ListRestaurantOrders, DeleteRestaurantOrder } from 'menuo-shared/interfaces/api'
 import { IOrdersTable, IOrder } from 'menuo-shared'
 
 export const getRestaurantOrders = ({
@@ -10,14 +7,11 @@ export const getRestaurantOrders = ({
 }: ListRestaurantOrders.Params) =>
   get<ListRestaurantOrders.Response>(`/restaurants/${restaurant}/orders`)
 
-export const createRestaurantOrder = (
-  { restaurant }: CreateRestaurantOrder.Params,
-  order: CreateRestaurantOrder.Body,
-) =>
-  post<CreateRestaurantOrder.Response, typeof order>(
-    `/restaurants/${restaurant}/orders`,
-    order,
-  )
-
 export const updateOrder = (restaurantId: string, order: IOrder) =>
   put<IOrdersTable[]>(`/orders/${restaurantId}`, order as any)
+
+export const deleteRestaurantOrder = ({
+  restaurant,
+  order,
+}: DeleteRestaurantOrder.Params) =>
+  del(`/restaurants/${restaurant}/orders/${order}`)

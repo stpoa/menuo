@@ -5,12 +5,15 @@ import { nestMenu, Order, MenuEntry, Menu, IMenu } from 'menuo-shared'
 import { useQuery } from '../../utils'
 import { Button } from '@material-ui/core'
 import { Header } from '../../components/Header'
-import { getRestaurantDishes, getRestaurantTable } from './Menu.api'
+import {
+  listRestaurantDishes,
+  readRestaurantTable,
+  createRestaurantOrder,
+} from './Menu.api'
 import { useStyles } from './Menu.styles'
 import { MenuSection } from './components/MenuSection'
 import { OrderSentDialog } from './components/OrderSentDialog'
 import { WaiterSummonDialog } from './components/WaiterSummonDialog'
-import { createRestaurantOrder } from '../Orders/Orders.api'
 import { Table } from 'menuo-shared/interfaces/tables'
 
 type Basket = { [itemId: string]: number }
@@ -36,7 +39,10 @@ const apiCreateOrder = ({
     },
   )
 
-  return createRestaurantOrder({ restaurant }, { status: 'new', table, user, entries })
+  return createRestaurantOrder(
+    { restaurant },
+    { status: 'new', table, user, entries },
+  )
 }
 
 export const MenuPage = ({ location, match }: any) => {
@@ -57,7 +63,7 @@ export const MenuPage = ({ location, match }: any) => {
 
   useEffect(() => {
     ;(async () => {
-      const dishes = await getRestaurantDishes({ restaurant })
+      const dishes = await listRestaurantDishes({ restaurant })
       setDishes(dishes)
       setMenu(nestMenu(dishes))
     })()
@@ -65,7 +71,7 @@ export const MenuPage = ({ location, match }: any) => {
 
   useEffect(() => {
     ;(async () => {
-      const table = await getRestaurantTable({
+      const table = await readRestaurantTable({
         restaurant,
         table: tableName || '',
       })
@@ -109,15 +115,15 @@ export const MenuPage = ({ location, match }: any) => {
     setShowSummonDialog(true)
   }
 
-  const handleSummonClick = ({ tableId }: any) => async () => {
-    // await apiSummonWaiter({ tableId })
+  const handleSummonClick = (table: Table) => async () => {
+    await summonWaiter(restaurant, table)
     setShowSummonDialog(false)
   }
-  const handlePayCardClick = ({ tableId }: any) => async () => {
+  const handlePayCardClick = (tableId: string) => async () => {
     // await apiPayByCard({ tableId })
     setShowSummonDialog(false)
   }
-  const handlePayCashClick = ({ tableId }: any) => async () => {
+  const handlePayCashClick = (tableId: string) => async () => {
     // await apiPayByCash({ tableId })
     setShowSummonDialog(false)
   }
@@ -208,8 +214,8 @@ export const MenuPage = ({ location, match }: any) => {
         handleClose={() => setShowSummonDialog(false)}
         handlePayCardClick={handlePayCardClick}
         handlePayCashClick={handlePayCashClick}
-        handleSummonClick={handleSummonClick}
-        tableId={table._id}
+        handleSummonClick={handleSummonClick(table)}
+        table={table}
       />
 
       <OrderSentDialog
