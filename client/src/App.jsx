@@ -21,9 +21,9 @@ const App = () => {
     <div className="App">
       <ThemeProvider theme={theme}>
         {'   '}
-        <NavLink to="/zalewajka">• zalewajka</NavLink>
+        <NavLink to="/zalewajka?table=1">• zalewajka</NavLink>
         {' '}
-        <NavLink to="/kolanko">• kolanko</NavLink>
+        <NavLink to="/kolanko?table=1">• kolanko</NavLink>
         <Switch>
           <Route exact path="/:restaurant" component={MenuPage} />
           <Route exact path="/:restaurant/orders" component={Orders} />
