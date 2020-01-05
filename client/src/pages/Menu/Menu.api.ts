@@ -31,7 +31,7 @@ export const createRestaurantOrder = (
 
 export const updateRestaurantOrder = (
   { restaurant, order }: UpdateRestaurantOrder.Params,
-  updates: CreateRestaurantOrder.Body,
+  updates: UpdateRestaurantOrder.Body,
 ) =>
   put<UpdateRestaurantOrder.Response, typeof updates>(
     `/restaurants/${restaurant}/orders/${order}`,

@@ -15,10 +15,14 @@ export const createOrder = (client: MongoClient) => async (
 
 export const updateOrder = (client: MongoClient) => async ({
   _id,
+  restaurant,
   ...updates
 }: Partial<Order>) => {
   const db = getOrdersCollection(client)
-  const result = await db.updateOne({ _id: new ObjectId(_id) }, updates)
+  const result = await db.updateOne(
+    { _id: new ObjectId(_id), restaurant },
+    { $set: updates },
+  )
   return result
 }
 

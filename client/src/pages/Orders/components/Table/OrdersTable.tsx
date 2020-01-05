@@ -9,10 +9,10 @@ import { Table } from 'menuo-shared/interfaces/tables'
 interface OrdersTableProps {
   orders: IOrder[]
   table: Table
-  handleAcceptOrder: any
+  handleAcceptOrder: (restaurant: string) => () => void
   handleDeleteOrder: (order: string) => () => void
-  handleCompleteOrderToggle: any
-  handleCompleteAction: any
+  handleCompleteOrderToggle: (order: string) => () => void
+  handleCompleteAction: (order: string) => () => void
 }
 
 export const OrdersTable = ({
@@ -41,24 +41,24 @@ export const OrdersTable = ({
             <AccessibilityNew />
           </Fab>
         )}
-        {table.status === 'pay-card' && (
+        {table.status === 'pay-card' && emptyOrder && (
           <Fab
             style={{ position: 'absolute', top: '0', right: '1rem' }}
             size="small"
             variant="extended"
             color="secondary"
-            onClick={handleCompleteAction({ id: table._id })}
+            onClick={handleCompleteAction(emptyOrder._id)}
           >
             <CreditCard />
           </Fab>
         )}
-        {table.status === 'pay-cash' && (
+        {table.status === 'pay-cash' && emptyOrder && (
           <Fab
             style={{ position: 'absolute', top: '0', right: '1rem' }}
             size="small"
             variant="extended"
             color="secondary"
-            onClick={handleCompleteAction({ id: table._id })}
+            onClick={handleCompleteAction(emptyOrder._id)}
           >
             <Money />
           </Fab>

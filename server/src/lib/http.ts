@@ -59,7 +59,5 @@ export const response = <T = string>(
 
   const response = { ...responses[kind], ...rest, headers }
 
-  console.log({ response })
-
   return { ...response, body: JSON.stringify(response.body) }
 }

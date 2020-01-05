@@ -48,7 +48,7 @@ export const TableOrder = ({
               size="small"
               variant="extended"
               color="primary"
-              onClick={handleAcceptOrder({ orderId: order._id })}
+              onClick={handleAcceptOrder(order._id)}
             >
               <Check />
             </Fab>

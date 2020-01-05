@@ -89,6 +89,7 @@ functions:
             parameters:
               paths:
                 restaurant: true
+                order: true
 
   get-restaurant-table:
     handler: src/restaurant/handlers/get-restaurant-table.handler
