@@ -3,7 +3,11 @@ import { Header } from '../../components/Header'
 import { useStyles } from './Orders.styles'
 import { OrdersTable } from './components/Table/OrdersTable'
 
-import { getRestaurantOrders, deleteRestaurantOrder } from './Orders.api'
+import {
+  getRestaurantOrders,
+  deleteRestaurantOrder,
+  deleteRestaurantOrders,
+} from './Orders.api'
 import { IOrdersTables } from 'menuo-shared'
 import { nestOrders } from 'menuo-shared/dist/transformations/orders'
 import { updateRestaurantOrder } from '../Menu/Menu.api'
@@ -58,9 +62,10 @@ export const Orders = ({ match }: any) => {
   }
 
   const handleCompleteAction = (restaurant: string) => (
-    order: string,
+    table: string,
+    tableStatus: string,
   ) => async () => {
-    await deleteRestaurantOrder({ restaurant, order })
+    await deleteRestaurantOrders({ restaurant, table, tableStatus })
     setRefetch(+new Date())
   }
 

@@ -12,7 +12,7 @@ interface OrdersTableProps {
   handleAcceptOrder: (restaurant: string) => () => void
   handleDeleteOrder: (order: string) => () => void
   handleCompleteOrderToggle: (order: string, status: string) => () => void
-  handleCompleteAction: (order: string) => () => void
+  handleCompleteAction: (table: string, tableStatus: string) => () => void
 }
 
 export const OrdersTable = ({
@@ -23,41 +23,39 @@ export const OrdersTable = ({
   handleCompleteOrderToggle,
   handleCompleteAction,
 }: OrdersTableProps) => {
-  const emptyOrder = orders.find(o => o.status === '')
-
   return (
     <div>
       <div style={{ position: 'relative' }}>
         <H2> Stół {table.name} </H2>
-        {table.status === 'summon-waiter' && emptyOrder && (
+        {table.status === 'summon-waiter' && (
           <Fab
             style={{ position: 'absolute', top: '0', right: '1rem' }}
             size="small"
             variant="extended"
             color="secondary"
-            onClick={handleCompleteAction(emptyOrder._id)}
+            onClick={handleCompleteAction(table._id, table.status)}
           >
             <AccessibilityNew />
           </Fab>
         )}
-        {table.status === 'pay-card' && emptyOrder && (
+        {table.status === 'pay-card' && (
           <Fab
             style={{ position: 'absolute', top: '0', right: '1rem' }}
             size="small"
             variant="extended"
             color="secondary"
-            onClick={handleCompleteAction(emptyOrder._id)}
+            onClick={handleCompleteAction(table._id, table.status)}
           >
             <CreditCard />
           </Fab>
         )}
-        {table.status === 'pay-cash' && emptyOrder && (
+        {table.status === 'pay-cash' && (
           <Fab
             style={{ position: 'absolute', top: '0', right: '1rem' }}
             size="small"
             variant="extended"
             color="secondary"
-            onClick={handleCompleteAction(emptyOrder._id)}
+            onClick={handleCompleteAction(table._id, table.status)}
           >
             <Money />
           </Fab>
