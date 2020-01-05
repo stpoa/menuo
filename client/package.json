@@ -29,7 +29,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "yarn build && yarn upload",
+    "upload": "cd ../server && sls client deploy --no-config-change --no-policy-change --no-cors-change --no-confirm"
   },
   "eslintConfig": {
     "extends": "react-app"
