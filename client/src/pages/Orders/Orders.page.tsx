@@ -10,7 +10,7 @@ import { updateRestaurantOrder } from '../Menu/Menu.api'
 
 export const Orders = ({ match }: any) => {
   const { restaurant } = match.params
-  const [refetch, setRefetch] = useState()
+  const [refetch, setRefetch] = useState(0)
   const [orders, setOrders] = useState<IOrdersTables>({
     restaurant,
     tables: [],
@@ -41,8 +41,12 @@ export const Orders = ({ match }: any) => {
 
   const handleCompleteOrderToggle = (restaurant: string) => (
     order: string,
+    status: string,
   ) => async () => {
-    await updateRestaurantOrder({ order, restaurant }, { status: 'completed' })
+    await updateRestaurantOrder(
+      { order, restaurant },
+      { status: status !== 'completed' ? 'completed' : 'accepted' },
+    )
     setRefetch(+new Date())
   }
 

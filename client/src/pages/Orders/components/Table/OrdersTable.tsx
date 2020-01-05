@@ -11,7 +11,7 @@ interface OrdersTableProps {
   table: Table
   handleAcceptOrder: (restaurant: string) => () => void
   handleDeleteOrder: (order: string) => () => void
-  handleCompleteOrderToggle: (order: string) => () => void
+  handleCompleteOrderToggle: (order: string, status: string) => () => void
   handleCompleteAction: (order: string) => () => void
 }
 
@@ -24,7 +24,6 @@ export const OrdersTable = ({
   handleCompleteAction,
 }: OrdersTableProps) => {
   const emptyOrder = orders.find(o => o.status === '')
-  console.log(orders, { emptyOrder }, table.status)
 
   return (
     <div>

@@ -16,7 +16,6 @@ export const handler = withDB(async (event, ctx, _cb) => {
 
   if (!orders.length) {
     log('No orders found', { restaurant: params.restaurant, orders })
-    return response({ kind: 'NOT_FOUND' })
   }
 
   return response<ListRestaurantOrders.Response>({ body: orders })

@@ -13,7 +13,7 @@ import { IOrder } from 'menuo-shared'
 
 interface TabbleOrderProps {
   order: IOrder
-  handleCompleteOrderToggle: any
+  handleCompleteOrderToggle: (order: string, status: string) => () => void
   handleAcceptOrder: any
   handleDeleteOrder: (order: string) => () => void
 }
@@ -31,10 +31,7 @@ export const TableOrder = ({
           <Checkbox
             disabled={order.status === 'new'}
             edge="start"
-            onChange={handleCompleteOrderToggle({
-              orderId: order._id,
-              status: order.status,
-            })}
+            onChange={handleCompleteOrderToggle(order._id, order.status)}
             checked={order.status === 'completed'}
           />
         </ListItemIcon>

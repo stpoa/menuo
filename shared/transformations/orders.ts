@@ -49,7 +49,7 @@ export const nestOrders = (orders: Orders): IOrdersTables => {
   })
 
   return {
-    restaurant: orders[0].restaurant,
+    restaurant: (orders[0] || ({} as any)).restaurant,
     tables,
   }
 }
