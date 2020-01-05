@@ -9,9 +9,10 @@ import {
   ListItemSecondaryAction,
 } from '@material-ui/core'
 import { Check, DeleteForever, ArrowForwardIos } from '@material-ui/icons'
+import { IOrder } from 'menuo-shared'
 
 interface TabbleOrderProps {
-  order: any
+  order: IOrder 
   handleCompleteOrderToggle: any
   handleAcceptOrder: any
   handleDeleteOrder: any
@@ -30,14 +31,14 @@ export const TableOrder = ({
           disabled={order.status === 'new'}
           edge="start"
           onChange={handleCompleteOrderToggle({
-            orderId: order.id,
+            orderId: order._id,
             status: order.status,
           })}
           checked={order.status === 'completed'}
         />
       </ListItemIcon>
       <ListItemText
-        primary={'Zamówienie ' + order.id}
+        primary={'Zamówienie ' + order._id}
         // secondary={dish.description}
       />
       <ListItemSecondaryAction>
@@ -46,7 +47,7 @@ export const TableOrder = ({
             size="small"
             variant="extended"
             color="primary"
-            onClick={handleAcceptOrder({ orderId: order.id })}
+            onClick={handleAcceptOrder({ orderId: order._id })}
           >
             <Check />
           </Fab>
@@ -56,16 +57,16 @@ export const TableOrder = ({
           size="small"
           variant="extended"
           color="primary"
-          onClick={handleDeleteOrder({ orderId: order.id })}
+          onClick={handleDeleteOrder({ orderId: order._id })}
         >
           <DeleteForever />
         </Fab>
       </ListItemSecondaryAction>
     </ListItem>
     <List component="div" disablePadding>
-      {order.items.map(({ dish, variant, count, isDone, itemId }: any) => {
+      {order.items.map((item) => {
         const variantText =
-          `${count} x ${dish.name}` + (variant.name ? `- ${variant.name}` : '')
+          `${item.count} x ${item.dishName}` + (item.entry.dishVariantName ? `- ${item.entry.dishVariantName}` : '')
 
         return (
           <ListItem

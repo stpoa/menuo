@@ -1,33 +1,29 @@
 import { MongoClient } from 'mongodb'
-import { IOrder, IOrdersTables } from 'menuo-shared'
+import { Order } from 'menuo-shared'
 
-const getOrdersCollection = (client: MongoClient) =>
-  client.db('menuo').collection<IOrdersTables>('orders')
+const getOrdersCollection = <T = Order>(client: MongoClient) =>
+  client.db('menuo').collection<T>('orders')
 
 export const createOrder = (client: MongoClient) => async (
-  restaurantId: string,
-  order: IOrder,
+  order: Omit<Order, '_id'>,
 ) => {
-  const db = getOrdersCollection(client)
-  await db.updateOne(
-    { restaurantId },
-    { $push: { [`tables.${order.tableId}.orders`]: order } },
-  )
-  return order
+  const db = getOrdersCollection<typeof order>(client)
+  const result = await db.insertOne(order)
+  return { _id: result.insertedId.toHexString() }
 }
 
 export const updateOrder = (client: MongoClient) => async (
-  restaurantId: string,
-  order: IOrder,
+  { _id, ...updates }: Partial<Order>,
 ) => {
   const db = getOrdersCollection(client)
-  await db.updateOne(
-    { restaurantId },
-    { $set: { [`tables.${order.tableId}.orders.${order.id}`]: order } },
-  )
-  return order
+  const result = await db.updateOne({ _id }, updates)
+  return result
 }
 
-export const deleteOrder = (orderId: string) => {
-  return orderId
+export const deleteOrder = (client: MongoClient) => async (
+  order: Partial<Order>,
+) => {
+  const db = getOrdersCollection(client)
+  const result = await db.deleteOne(order)
+  return result 
 }

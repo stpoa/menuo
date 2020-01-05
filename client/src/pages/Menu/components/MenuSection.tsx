@@ -15,12 +15,11 @@ import { PlusMinus } from '../../../components/PlusMinus'
 
 export interface MenuSectionProps {
   section: ISection
-  handleDishClick: any
-  handleToggle: any
+  handleDishClick: (entryId: string) => () => void
+  handleToggle: (entryId: string, count: number) => () => void
   basket: any
-  handleMinus: any
-  handlePlus: any
-  makeInBasketId: any
+  handleMinus: (entryId: string) => () => void
+  handlePlus: (entryId: string) => () => void
 }
 
 const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1)
@@ -32,7 +31,6 @@ export const MenuSection = ({
   handleToggle,
   handleMinus,
   handlePlus,
-  makeInBasketId,
 }: MenuSectionProps) => {
   return (
     <div>
@@ -41,14 +39,18 @@ export const MenuSection = ({
       <Divider />
 
       <List>
-        {section.dishes.map((dish: IDish, dishId) => (
-          <div key={dishId}>
-            <ListItem button onClick={handleDishClick(dishId)}>
+        {section.dishes.map((dish: IDish, i) => (
+          <div key={i}>
+            <ListItem
+              button
+              onClick={handleDishClick(dish.variants[0].entry._id)}
+            >
               <ListItemText primary={dish.name} secondary={dish.description} />
             </ListItem>
             <List component="div" disablePadding>
               {dish.variants.map((variant, variantId) => {
-                const count = basket[makeInBasketId(dishId)(variantId)]
+                const id = variant.entry._id
+                const count = basket[id]
                 const variantText =
                   (variant.name ? variant.name + ' - ' : '') +
                   variant.price +
@@ -59,14 +61,14 @@ export const MenuSection = ({
                     button={!count as true}
                     onClick={
                       !count
-                        ? handleToggle(dishId, variantId, count)
+                        ? handleToggle(id, count)
                         : undefined
                     }
                   >
                     <ListItemIcon>
                       <Checkbox
                         edge="start"
-                        onChange={handleToggle(dishId, variantId, count)}
+                        onChange={handleToggle(id, count)}
                         checked={count > 0}
                       />
                     </ListItemIcon>
@@ -74,8 +76,8 @@ export const MenuSection = ({
                     {count > 0 && (
                       <PlusMinus
                         count={count}
-                        handleMinusClick={handleMinus(dishId, variantId, count)}
-                        handlePlusClick={handlePlus(dishId, variantId, count)}
+                        handleMinusClick={handleMinus(id)}
+                        handlePlusClick={handlePlus(id)}
                       />
                     )}
                   </ListItem>

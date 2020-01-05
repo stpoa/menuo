@@ -25,7 +25,7 @@ export type APIGatewayProxyHandlerAsync = (
   callback: APIGatewayProxyCallback,
 ) => Promise<APIGatewayProxyResult>
 
-interface ResponseConfig {
+interface ResponseConfig<T> {
   kind?: ResponseKind
   statusCode?: number
   headers?: {
@@ -34,12 +34,12 @@ interface ResponseConfig {
   multiValueHeaders?: {
     [header: string]: Array<boolean | number | string>
   }
-  body?: {}
+  body?: T
   isBase64Encoded?: boolean
 }
 
-export const response = (
-  { kind = 'OK', ...rest }: ResponseConfig = { kind: 'OK' },
+export const response = <T = string>(
+  { kind = 'OK', ...rest }: ResponseConfig<T> = { kind: 'OK' },
 ): APIGatewayProxyResult => {
   const responses: {
     [key in ResponseKind]: { statusCode: number; body?: any }

@@ -25,8 +25,8 @@ const App = () => {
         {' '}
         <NavLink to="/kolanko">• kolanko</NavLink>
         <Switch>
-          <Route exact path="/:restaurantId" component={MenuPage} />
-          <Route exact path="/:restaurantId/orders" component={Orders} />
+          <Route exact path="/:restaurant" component={MenuPage} />
+          <Route exact path="/:restaurant/orders" component={Orders} />
         </Switch>
       </ThemeProvider>
     </div>

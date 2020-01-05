@@ -1,5 +1,5 @@
 import { MongoClient } from 'mongodb'
-import { IOrdersTables, Menu, MenuEntry } from 'menuo-shared'
+import { Menu, MenuEntry, Order } from 'menuo-shared'
 import { AGPHADB, WithDB } from 'src/lib/http'
 import { APIGatewayProxyEvent, APIGatewayProxyCallback } from 'aws-lambda'
 import { Context } from 'vm'
@@ -27,22 +27,20 @@ export const withDB = (f: AGPHADB) => (
   }
 }
 
-export const getMenu = (client: MongoClient) => async (
+export const getRestaurantDishes = (client: MongoClient) => async (
   restaurant: string,
 ): Promise<Menu> => {
   const collection = client.db('menuo').collection<MenuEntry>('menus')
   const menu = await collection.find({ restaurant }).toArray()
-  console.log({ menu })
 
   return menu
 }
 
-export const getOrders = (client: MongoClient) => async (
-  restaurantId: string,
-): Promise<IOrdersTables> => {
-  const collection = client.db('menuo').collection('orders')
-  const orders = await collection.findOne({ restaurantId })
-  console.log({ orders })
+export const getRestaurantOrders = (client: MongoClient) => async (
+  restaurant: string,
+): Promise<Order[]> => {
+  const collection = client.db('menuo').collection<Order>('orders')
+  const orders = await collection.find({ restaurant }).toArray()
 
   return orders
 }

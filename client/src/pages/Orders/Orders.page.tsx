@@ -1,29 +1,27 @@
 import React, { useEffect, useState } from 'react'
-import {
-  apiAcceptOrder,
-  apiCompleteOrder,
-  apiDeleteOrder,
-  apiCompleteTableAction,
-} from '../../api-old'
 import { Header } from '../../components/Header'
 import { useStyles } from './Orders.styles'
 import { OrdersTable } from './components/Table/OrdersTable'
 
-import { getTables } from './Orders.api'
-import { IOrdersTable } from 'menuo-shared'
+import { getRestaurantOrders } from './Orders.api'
+import { IOrdersTable, IOrdersTables } from 'menuo-shared'
+import { nestOrders } from 'menuo-shared/dist/transformations/orders'
 
-export const Orders = ({ search, match }: any) => {
-  const { restaurantId } = match.params
+export const Orders = ({ match }: any) => {
+  const { restaurant } = match.params
   const [refetch, setRefetch] = useState()
-  const [tables, setTables] = useState<IOrdersTable[]>([])
+  const [orders, setOrders] = useState<IOrdersTables>({
+    restaurant,
+    tables: [],
+  })
 
   useEffect(() => {
     const doEffect = async () => {
-      const tables = await getTables(restaurantId)
-      setTables(tables)
+      const orders = await getRestaurantOrders({ restaurant })
+      setOrders(nestOrders(orders))
     }
     doEffect()
-  }, [refetch])
+  }, [restaurant, refetch])
 
   useEffect(() => {
     navigator.serviceWorker.addEventListener('message', event => {
@@ -34,22 +32,22 @@ export const Orders = ({ search, match }: any) => {
   const classes = useStyles()
 
   const handleAcceptOrder = ({ orderId }: any) => async () => {
-    await apiAcceptOrder({ restaurantId, orderId })
+    // await apiAcceptOrder({ restaurant, orderId })
     setRefetch(+new Date())
   }
 
   const handleDeleteOrder = ({ orderId }: any) => async () => {
-    await apiDeleteOrder(orderId)
+    // await apiDeleteOrder(orderId)
     setRefetch(+new Date())
   }
 
   const handleCompleteOrderToggle = ({ orderId, status }: any) => async () => {
-    await apiCompleteOrder({ restaurantId, orderId, status })
+    // await apiCompleteOrder({ restaurant, orderId, status })
     setRefetch(+new Date())
   }
 
   const handleCompleteAction = ({ id }: any) => async () => {
-    await apiCompleteTableAction({ id })
+    // await apiCompleteTableAction({ id })
     setRefetch(+new Date())
   }
 
@@ -57,11 +55,10 @@ export const Orders = ({ search, match }: any) => {
     <div className={classes.root}>
       <Header>Zamówienia</Header>
 
-      {tables.map(({ id, status, orders }) => (
+      {orders.tables.map(({ orders, table }) => (
         <OrdersTable
           {...{
-            id,
-            status,
+            table,
             orders,
             handleAcceptOrder,
             handleDeleteOrder,

@@ -5349,7 +5349,7 @@ memorystream@^0.3.1:
   integrity sha1-htcJCzDORV1j+64S3aUaR93K+bI=
 
 "menuo-shared@file:../shared":
-  version "1.0.0"
+  version "1.0.1"
   dependencies:
     "@types/ramda" "^0.26.39"
     ramda "^0.26.1"

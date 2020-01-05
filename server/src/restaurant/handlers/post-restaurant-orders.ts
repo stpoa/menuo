@@ -3,16 +3,27 @@ import { response } from 'src/lib/http'
 import { withDB } from 'src/db/db'
 import { log } from 'src/logs/logs'
 import { createOrder } from 'src/db/orders'
+import { CreateRestaurantOrder } from 'menuo-shared/interfaces/api'
 
 export const handler = withDB(async (event, ctx, _cb) => {
-  const restaurantId = event.pathParameters!.restaurantId
+  if (!(event.pathParameters && event.pathParameters.restaurant)) {
+    return response({ kind: 'UNPROCESSABLE_ENTITY' })
+  }
+  const params: CreateRestaurantOrder.Params = {
+    restaurant: event.pathParameters.restaurant,
+  }
+
   const order = JSON.parse(event.body || '')
 
   try {
-    await createOrder(ctx.dbClient)(restaurantId, order)
-  } catch (error) {
-    log('Error while saving', { restaurantId, error })
-  }
+    const result = await createOrder(ctx.dbClient)({
+      ...order,
+      restaurant: params.restaurant,
+    })
 
-  return response({ body: order })
+    return response<CreateRestaurantOrder.Response>({ body: result })
+  } catch (error) {
+    log('Error while saving', { restaurant: params.restaurant, error })
+    return response({ kind: 'UNPROCESSABLE_ENTITY' })
+  }
 })

@@ -1,6 +1,6 @@
-import { nestOrdersTables } from './orders'
+import { nestOrders } from './orders'
 
 test('shit', () => {
-  expect(nestOrdersTables([[], []])).toEqual({});
+  expect(nestOrders([])).toEqual({});
 });
 

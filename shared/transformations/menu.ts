@@ -30,6 +30,7 @@ const menuEntryToVariant = (entry: MenuEntry): IVariant => ({
   _id: entry._id,
   name: entry.dishVariantName,
   price: entry.dishVariantPrice,
+  entry,
 })
 
 const buildDishesGroup = (dishes: MenuEntry[]) =>

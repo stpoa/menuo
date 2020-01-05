@@ -8,7 +8,7 @@ interface WaiterSummonDialogProps {
   handlePayCardClick: any
   handlePayCashClick: any
   handleSummonClick: any
-  tableId: number
+  tableId:string 
 }
 
 export const WaiterSummonDialog: FC<WaiterSummonDialogProps> = ({

@@ -3,11 +3,12 @@ import { Fab, Divider, List } from '@material-ui/core'
 import { AccessibilityNew, CreditCard, Money } from '@material-ui/icons'
 import { H2 } from '../../../../components/H2'
 import { TableOrder } from './components/TableOrder'
+import { IOrder } from 'menuo-shared'
+import { Table } from 'menuo-shared/interfaces/tables'
 
 interface OrdersTableProps {
-  id: number
-  status: string
-  orders: any[]
+  orders: IOrder[]
+  table: Table
   handleAcceptOrder: any
   handleDeleteOrder: any
   handleCompleteOrderToggle: any
@@ -15,9 +16,8 @@ interface OrdersTableProps {
 }
 
 export const OrdersTable = ({
-  id,
-  status,
   orders,
+  table,
   handleAcceptOrder,
   handleDeleteOrder,
   handleCompleteOrderToggle,
@@ -25,36 +25,36 @@ export const OrdersTable = ({
 }: OrdersTableProps) => (
   <div>
     <div style={{ position: 'relative' }}>
-      <H2> Stół {id} </H2>
-      {status === 'summon-waiter' && (
+      <H2> Stół {table.name} </H2>
+      {table.status === 'summon-waiter' && (
         <Fab
           style={{ position: 'absolute', top: '0', right: '1rem' }}
           size="small"
           variant="extended"
           color="secondary"
-          onClick={handleCompleteAction({ id })}
+          onClick={handleCompleteAction({ id: table._id })}
         >
           <AccessibilityNew />
         </Fab>
       )}
-      {status === 'pay-card' && (
+      {table.status === 'pay-card' && (
         <Fab
           style={{ position: 'absolute', top: '0', right: '1rem' }}
           size="small"
           variant="extended"
           color="secondary"
-          onClick={handleCompleteAction({ id })}
+          onClick={handleCompleteAction({ id: table._id })}
         >
           <CreditCard />
         </Fab>
       )}
-      {status === 'pay-cash' && (
+      {table.status === 'pay-cash' && (
         <Fab
           style={{ position: 'absolute', top: '0', right: '1rem' }}
           size="small"
           variant="extended"
           color="secondary"
-          onClick={handleCompleteAction({ id })}
+          onClick={handleCompleteAction({ id: table._id })}
         >
           <Money />
         </Fab>

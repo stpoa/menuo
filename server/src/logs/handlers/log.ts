@@ -3,7 +3,6 @@ import zlib from 'zlib'
 import { promisify } from 'util'
 
 const parseEventGzipData = event => {
-  console.log({ event })
   return JSON.parse(
     zlib.unzipSync(Buffer.from(event.awslogs.data, 'base64')).toString(),
   )
@@ -14,7 +13,6 @@ const extractJson = (message: string) => {
    const jsonEnd = message.lastIndexOf('}') + 1
 
    const json = message.slice(jsonStart, jsonEnd)
-   console.log({ jsonStart, jsonEnd, message, json })
    return isValidJson(json) ? json : '{}'
 }
 
@@ -26,7 +24,6 @@ const isValidJson = (message: string) => {
 }
 
 const prepareLogs = eventData => {
-  console.log(eventData)
   return eventData.logEvents.map(event => {
 
     
@@ -35,7 +32,7 @@ const prepareLogs = eventData => {
 
     let message
     if (true) {
-      const [_date, _id, _level, ...messages] = event.message.split('\t')
+      const [,,, ...messages] = event.message.split('\t')
 
       message = messages.join('').replace(json, '')
     }
@@ -74,7 +71,6 @@ const prepareLogs = eventData => {
 }
 
 const sendLine = (payload, callback) => {
-  console.log({ payload })
   if (!process.env.LOGDNA_KEY) return callback('Missing LogDNA Ingestion Key')
   const apiKey = process.env.LOGDNA_KEY
   const logger = Logger.setupDefaultLogger(apiKey, {})
@@ -86,6 +82,5 @@ const sendLine = (payload, callback) => {
 }
 
 export const handler = (event, _context, callback) => {
-  console.log({ event })
   return sendLine(prepareLogs(parseEventGzipData(event)), callback)
 }

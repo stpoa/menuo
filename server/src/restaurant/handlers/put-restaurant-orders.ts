@@ -9,7 +9,7 @@ export const handler = withDB(async (event, ctx, _cb) => {
   const order = JSON.parse(event.body || '')
 
   try {
-    await updateOrder(ctx.dbClient)(restaurantId, order)
+    await updateOrder(ctx.dbClient)(order)
   } catch (error) {
     log('Error while saving', { restaurantId, error })
   }

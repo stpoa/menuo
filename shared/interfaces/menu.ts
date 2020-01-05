@@ -23,6 +23,7 @@ export interface IVariant {
   price: number
   name?: string
   description?: string
+  entry: MenuEntry
 }
 
 // DB

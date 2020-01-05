@@ -1,15 +1,14 @@
 import { MenuEntry } from './menu'
+import { Table } from './tables'
 
-// Client
 export interface IOrdersTables {
   restaurant: string
   tables: IOrdersTable[]
 }
 
 export interface IOrdersTable {
-  name: string
-  status: string
   orders: IOrder[]
+  table: Table
 }
 
 export interface IOrder {
@@ -23,18 +22,17 @@ export interface IOrderItem {
   dishName: string
   dishVariantPrice: number 
   count: number
-  itemId: string 
+  entry: MenuEntry
   status: string 
 }
 
-// DB
 export type Orders = Order[]
 
 export interface Order {
   _id: string
   restaurant: string
   user: string 
-  table: string
+  table: Table
   status: string
   entries: [MenuEntry, number][]
 }
