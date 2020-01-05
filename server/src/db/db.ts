@@ -3,6 +3,7 @@ import { Menu, MenuEntry, Order } from 'menuo-shared'
 import { AGPHADB, WithDB } from 'src/lib/http'
 import { APIGatewayProxyEvent, APIGatewayProxyCallback } from 'aws-lambda'
 import { Context } from 'vm'
+import { Table } from 'menuo-shared/interfaces/tables'
 
 const mongodbPassword = process.env.MONGODB_PASSWORD
 
@@ -43,4 +44,14 @@ export const getRestaurantOrders = (client: MongoClient) => async (
   const orders = await collection.find({ restaurant }).toArray()
 
   return orders
+}
+
+export const getRestaurantTable = (client: MongoClient) => async (
+  restaurant: string,
+  name: string,
+): Promise<Table | null> => {
+  const collection = client.db('menuo').collection<Table>('tables')
+  const table = await collection.findOne({ restaurant, name })
+
+  return table
 }

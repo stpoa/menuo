@@ -38,7 +38,7 @@ export const TableOrder = ({
         />
       </ListItemIcon>
       <ListItemText
-        primary={'Zamówienie ' + order._id}
+        primary={'Zamówienie - ' + order._id.slice(-3)}
         // secondary={dish.description}
       />
       <ListItemSecondaryAction>

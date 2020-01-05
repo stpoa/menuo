@@ -77,6 +77,19 @@ functions:
               paths:
                 restaurant: true
 
+  get-restaurant-table:
+    handler: src/restaurant/handlers/get-restaurant-table.handler
+    events:
+      - http:
+          path: restaurants/{restaurant}/tables/{table}
+          method: get 
+          cors: true
+          request:
+            parameters:
+              paths:
+                restaurant: true
+                table: true
+
   logs:
     handler: src/logs/handlers/log.handler
     events:

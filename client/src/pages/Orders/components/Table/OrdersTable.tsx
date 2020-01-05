@@ -22,58 +22,61 @@ export const OrdersTable = ({
   handleDeleteOrder,
   handleCompleteOrderToggle,
   handleCompleteAction,
-}: OrdersTableProps) => (
-  <div>
-    <div style={{ position: 'relative' }}>
-      <H2> Stół {table.name} </H2>
-      {table.status === 'summon-waiter' && (
-        <Fab
-          style={{ position: 'absolute', top: '0', right: '1rem' }}
-          size="small"
-          variant="extended"
-          color="secondary"
-          onClick={handleCompleteAction({ id: table._id })}
-        >
-          <AccessibilityNew />
-        </Fab>
-      )}
-      {table.status === 'pay-card' && (
-        <Fab
-          style={{ position: 'absolute', top: '0', right: '1rem' }}
-          size="small"
-          variant="extended"
-          color="secondary"
-          onClick={handleCompleteAction({ id: table._id })}
-        >
-          <CreditCard />
-        </Fab>
-      )}
-      {table.status === 'pay-cash' && (
-        <Fab
-          style={{ position: 'absolute', top: '0', right: '1rem' }}
-          size="small"
-          variant="extended"
-          color="secondary"
-          onClick={handleCompleteAction({ id: table._id })}
-        >
-          <Money />
-        </Fab>
-      )}
-    </div>
-    <Divider />
+}: OrdersTableProps) => {
 
-    <List>
-      {orders.map((order, key) => (
-        <TableOrder
-          {...{
-            order,
-            key,
-            handleCompleteOrderToggle,
-            handleAcceptOrder,
-            handleDeleteOrder,
-          }}
-        />
-      ))}
-    </List>
-  </div>
-)
+  return (
+    <div>
+      <div style={{ position: 'relative' }}>
+        <H2> Stół {table.name} </H2>
+        {table.status === 'summon-waiter' && (
+          <Fab
+            style={{ position: 'absolute', top: '0', right: '1rem' }}
+            size="small"
+            variant="extended"
+            color="secondary"
+            onClick={handleCompleteAction({ id: table._id })}
+          >
+            <AccessibilityNew />
+          </Fab>
+        )}
+        {table.status === 'pay-card' && (
+          <Fab
+            style={{ position: 'absolute', top: '0', right: '1rem' }}
+            size="small"
+            variant="extended"
+            color="secondary"
+            onClick={handleCompleteAction({ id: table._id })}
+          >
+            <CreditCard />
+          </Fab>
+        )}
+        {table.status === 'pay-cash' && (
+          <Fab
+            style={{ position: 'absolute', top: '0', right: '1rem' }}
+            size="small"
+            variant="extended"
+            color="secondary"
+            onClick={handleCompleteAction({ id: table._id })}
+          >
+            <Money />
+          </Fab>
+        )}
+      </div>
+      <Divider />
+
+      <List>
+        {orders.map((order, key) => (
+          <TableOrder
+            {...{
+              order,
+              key,
+              handleCompleteOrderToggle,
+              handleAcceptOrder,
+              handleDeleteOrder,
+            }}
+          />
+        ))}
+      </List>
+    </div>
+  )
+}
