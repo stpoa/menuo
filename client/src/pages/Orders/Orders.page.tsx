@@ -6,7 +6,6 @@ import { OrdersTable } from './components/Table/OrdersTable'
 import { getRestaurantOrders, deleteRestaurantOrder } from './Orders.api'
 import { IOrdersTables } from 'menuo-shared'
 import { nestOrders } from 'menuo-shared/dist/transformations/orders'
-import { apiCompleteTableAction } from '../../api-old'
 
 export const Orders = ({ match }: any) => {
   const { restaurant } = match.params
@@ -37,8 +36,8 @@ export const Orders = ({ match }: any) => {
     setRefetch(+new Date())
   }
 
-  const handleDeleteOrder = ({ orderId }: any) => async () => {
-    // await apiDeleteOrder(orderId)
+  const handleDeleteOrder = (restaurant: string) => (order: string) => async () => {
+    await deleteRestaurantOrder({ restaurant, order })
     setRefetch(+new Date())
   }
 
@@ -66,7 +65,7 @@ export const Orders = ({ match }: any) => {
             table,
             orders,
             handleAcceptOrder,
-            handleDeleteOrder,
+            handleDeleteOrder: handleCompleteAction(restaurant),
             handleCompleteOrderToggle,
             handleCompleteAction: handleCompleteAction(restaurant),
           }}

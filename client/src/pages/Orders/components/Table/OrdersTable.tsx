@@ -10,7 +10,7 @@ interface OrdersTableProps {
   orders: IOrder[]
   table: Table
   handleAcceptOrder: any
-  handleDeleteOrder: any
+  handleDeleteOrder: (order: string) => () => void
   handleCompleteOrderToggle: any
   handleCompleteAction: any
 }

@@ -9,6 +9,7 @@ import {
   listRestaurantDishes,
   readRestaurantTable,
   createRestaurantOrder,
+  summonWaiter
 } from './Menu.api'
 import { useStyles } from './Menu.styles'
 import { MenuSection } from './components/MenuSection'

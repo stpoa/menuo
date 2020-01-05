@@ -15,7 +15,7 @@ interface TabbleOrderProps {
   order: IOrder
   handleCompleteOrderToggle: any
   handleAcceptOrder: any
-  handleDeleteOrder: any
+  handleDeleteOrder: (order: string) => () => void
 }
 
 export const TableOrder = ({
@@ -58,7 +58,7 @@ export const TableOrder = ({
             size="small"
             variant="extended"
             color="primary"
-            onClick={handleDeleteOrder({ orderId: order._id })}
+            onClick={handleDeleteOrder(order._id)}
           >
             <DeleteForever />
           </Fab>
