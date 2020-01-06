@@ -35,7 +35,7 @@ export const MenuSection = ({
   return (
     <div>
       <H2>{section.name}</H2>
-      {capitalize((section as any).description || '')}
+      {capitalize(section.description ?? '')}
       <Divider />
 
       <List>

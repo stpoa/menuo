@@ -5,7 +5,7 @@ import { log } from 'src/logs/logs'
 import { ListRestaurantDishes } from 'menuo-shared/interfaces/api'
 
 export const handler = withDB(async (event, ctx, _cb) => {
-  if (!(event.pathParameters && event.pathParameters.restaurant)) {
+  if (!(event?.pathParameters?.restaurant)) {
     return response({ kind: 'UNPROCESSABLE_ENTITY' })
   }
   const params: ListRestaurantDishes.Params = {

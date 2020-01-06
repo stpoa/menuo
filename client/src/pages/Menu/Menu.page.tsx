@@ -74,7 +74,7 @@ export const MenuPage = ({ location, match }: any) => {
     ;(async () => {
       const table = await readRestaurantTable({
         restaurant,
-        table: tableName || '',
+        table: tableName ?? '',
       })
       setTable(table)
     })()

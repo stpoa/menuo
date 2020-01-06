@@ -33,11 +33,3 @@ export namespace UpdateRestaurantOrder {
 export namespace DeleteRestaurantOrder {
   export type Params = { restaurant: string; order: string }
 }
-
-/**
- * DELETE /{restaurant}/orders/?table={table}
- **/
-export namespace DeleteRestaurantOrders {
-  export type Params = { restaurant: string }
-  export type QueryParams = { table: string; tableStatus: string }
-}

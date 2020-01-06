@@ -18,3 +18,8 @@ ts-toolbelt@^4.12.0:
   version "4.14.6"
   resolved "https://registry.yarnpkg.com/ts-toolbelt/-/ts-toolbelt-4.14.6.tgz#9a232f62276caeee4fa9e81e0c4bffa047de0765"
   integrity sha512-SONcnRd93+LuYGfn/CZg5A5qhCODohZslAVZKHHu5bnwUxoXLqd2k2VIdwRUXYfKnY+UCeNbI2pTPz+Dno6Mpg==
+
+typescript@^3.7.4:
+  version "3.7.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.7.4.tgz#1743a5ec5fef6a1fa9f3e4708e33c81c73876c19"
+  integrity sha512-A25xv5XCtarLwXpcDNZzCGvW2D1S3/bACratYBx2sax8PefsFhlYmkQicKHvpYflFS8if4zne5zT5kpJ7pzuvw==

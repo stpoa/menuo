@@ -6,13 +6,7 @@ import { deleteOrder } from 'src/db/orders'
 import { DeleteRestaurantOrder } from 'menuo-shared/interfaces/api'
 
 export const handler = withDB(async (event, ctx, _cb) => {
-  if (
-    !(
-      event.pathParameters &&
-      event.pathParameters.restaurant &&
-      event.pathParameters.order
-    )
-  ) {
+  if (!(event?.pathParameters?.restaurant && event.pathParameters.order)) {
     return response({ kind: 'UNPROCESSABLE_ENTITY' })
   }
   const params: DeleteRestaurantOrder.Params = {

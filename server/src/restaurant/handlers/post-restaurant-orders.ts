@@ -6,14 +6,14 @@ import { createOrder } from 'src/db/orders'
 import { CreateRestaurantOrder } from 'menuo-shared/interfaces/api'
 
 export const handler = withDB(async (event, ctx, _cb) => {
-  if (!(event.pathParameters && event.pathParameters.restaurant)) {
+  if (!(event?.pathParameters?.restaurant)) {
     return response({ kind: 'UNPROCESSABLE_ENTITY' })
   }
   const params: CreateRestaurantOrder.Params = {
     restaurant: event.pathParameters.restaurant,
   }
 
-  const order = JSON.parse(event.body || '')
+  const order = JSON.parse(event.body ?? '')
 
   try {
     const result = await createOrder(ctx.dbClient)({

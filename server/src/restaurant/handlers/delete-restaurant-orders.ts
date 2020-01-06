@@ -8,10 +8,8 @@ import { DeleteRestaurantOrders } from 'menuo-shared/interfaces/api'
 export const handler = withDB(async (event, ctx, _cb) => {
   if (
     !(
-      event.pathParameters &&
-      event.pathParameters.restaurant &&
-      event.queryStringParameters &&
-      event.queryStringParameters.table &&
+      event?.pathParameters?.restaurant &&
+      event?.queryStringParameters?.table &&
       event.queryStringParameters.tablestatus
     )
   ) {
