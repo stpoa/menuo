@@ -47,7 +47,8 @@ export const summonWaiter = async (restaurant: string, table: Table) => {
       status: '',
       table: { ...table, status: 'summon-waiter' },
       entries: [],
-      user: '',
+      customer: '',
+      waiter: ''
     },
   )
 }

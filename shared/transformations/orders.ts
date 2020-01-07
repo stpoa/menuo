@@ -41,7 +41,7 @@ export const nestOrders = (orders: Orders): IOrdersTables => {
           )
           .filter(v => v.count),
         status: o.status,
-        user: o.user,
+        user: o.customer,
       }),
     )
 

@@ -1,7 +1,6 @@
 import 'source-map-support/register'
 import { response } from 'src/lib/http'
 import { getRestaurantOrders, withDB } from 'src/db/db'
-import { log } from 'src/logs/logs'
 import { ListRestaurantOrders } from 'menuo-shared/interfaces/api'
 
 export const handler = withDB(async (event, ctx, _cb) => {

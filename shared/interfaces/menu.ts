@@ -1,6 +1,9 @@
 // Client
+export type Lanuage = 'en' | 'pl'
+
 export interface IRestaurant {
   restaurant: string
+  language: Lanuage
   menu: IMenu
 }
 
@@ -31,6 +34,7 @@ export type Menu = MenuEntry[]
 
 export interface MenuEntry {
   _id: string
+  language: Lanuage,
   index: number
   restaurant: string
   section: string

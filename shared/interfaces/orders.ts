@@ -31,7 +31,8 @@ export type Orders = Order[]
 export interface Order {
   _id: string
   restaurant: string
-  user: string
+  customer: string
+  waiter: string
   table: Omit<Table, 'status'> & { status?: string }
   status: string
   entries: [MenuEntry, number][]

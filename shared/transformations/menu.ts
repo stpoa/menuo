@@ -7,12 +7,13 @@ import {
 } from '../interfaces/menu'
 import { toPairs, groupBy } from 'ramda'
 
-export const unnestMenu = ({ menu, restaurant }: IRestaurant): Menu =>
+export const unnestMenu = ({ menu, restaurant, language }: IRestaurant): Menu =>
   menu
     .flatMap(s =>
       s.dishes.flatMap(d =>
         d.variants.map(v => ({
           _id: v._id,
+          language,
           restaurant,
           section: s.name,
           sectionDescription: s.description,

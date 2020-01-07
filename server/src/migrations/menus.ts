@@ -1,12 +1,28 @@
 import { readdirSync, readFileSync, writeFileSync } from 'fs'
 import yaml from 'js-yaml'
-import { IRestaurant, unnestMenu } from 'menuo-shared'
+import { IRestaurant, unnestMenu, Lanuage } from 'menuo-shared'
+import { last } from 'ramda'
 
 export const readMenus = (menusDir = './data/menus'): IRestaurant[] =>
-  readdirSync(menusDir).map(file => ({
-    restaurant: file.replace('.yml', ''),
-    menu: yaml.safeLoad(readFileSync(`${menusDir}/${file}`).toString()),
-  }))
+  readdirSync(menusDir).map(fileName => {
+    const nameWithoutExtension = fileName.replace('.yml', '')
+    const l = last(nameWithoutExtension.split('-'))
+    const language: Lanuage | undefined =
+      l === 'pl' || l === 'en' ? l : undefined
+    if (!language) {
+      throw new Error('No language for file found!')
+    }
+    const restaurant = nameWithoutExtension.replace('-' + language, '')
+    const menu = yaml.safeLoad(
+      readFileSync(`${menusDir}/${fileName}`).toString(),
+    )
+
+    return {
+      language,
+      restaurant,
+      menu,
+    }
+  })
 
 export const parseMenus = () => {
   const menusDir = './data/menus'
