@@ -4,7 +4,7 @@ import { AGPHADB, WithDB } from 'src/lib/http'
 import { APIGatewayProxyEvent, APIGatewayProxyCallback } from 'aws-lambda'
 import { Context } from 'vm'
 import { Table } from 'menuo-shared/interfaces/tables'
-import { User, RegisteredUser, WaiterUser } from 'menuo-shared/interfaces/users'
+import { User, WaiterUser } from 'menuo-shared/interfaces/users'
 
 const mongodbPassword = process.env.MONGODB_PASSWORD
 

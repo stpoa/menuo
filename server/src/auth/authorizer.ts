@@ -1,4 +1,4 @@
-import { authorize } from './token'
+import { verifyToken } from './token'
 
 const generateAWSPolicy = (
   principalId: string,
@@ -30,19 +30,18 @@ const generateAWSPolicy = (
 
 export const handler = (event: any, context: any, cb: any) => {
   try {
-    const token = event.authorizationToken.substring(7)
+    const token = event.authorizationToken
     const secret = process.env.JWT_SECRET
 
-    authorize(secret)(token)
+    verifyToken(secret || '')(token)
+      .then(t => (!t ? Promise.reject() : t))
       .then(result => {
-        cb(null, generateAWSPolicy(result.sub, 'Allow', event.methodArn))
+        cb(null, generateAWSPolicy(result.iss, 'Allow', event.methodArn))
       })
       .catch(err => {
-        console.log(err)
         cb('Unauthorized')
       })
   } catch (err) {
-    console.log(err)
     cb('Unauthorized')
   }
 }

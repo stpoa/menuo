@@ -1,8 +1,6 @@
 import 'source-map-support/register'
 
 import { response, AGPHA } from 'src/lib/http'
-import { log } from 'src/logs/logs'
-
 import { authorize } from '../token'
 
 export const handler: AGPHA = async event => {
