@@ -16,6 +16,7 @@ import { MenuSection } from './components/MenuSection'
 import { OrderSentDialog } from './components/OrderSentDialog'
 import { WaiterSummonDialog } from './components/WaiterSummonDialog'
 import { Table } from 'menuo-shared/interfaces/tables'
+import { RouteComponentProps } from 'react-router'
 
 type Basket = { [itemId: string]: number }
 
@@ -48,7 +49,7 @@ const apiCreateOrder = ({
   )
 }
 
-export const MenuPage = ({ location, match }: any) => {
+export const MenuPage = ({ location, match }: RouteComponentProps) => {
   const { restaurant } = match.params as { restaurant: string }
   const { search } = location
   const query = useQuery(search)

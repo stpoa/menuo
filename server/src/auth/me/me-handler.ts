@@ -8,7 +8,6 @@ import { authorize } from '../token'
 export const handler: AGPHA = async event => {
   const secret = process.env.JWT_SECRET
   if (!secret) {
-    log('Secret is empty!')
     return response({ kind: 'INTERNAL_SERVER_ERROR' })
   }
 

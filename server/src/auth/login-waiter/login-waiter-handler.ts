@@ -29,10 +29,12 @@ export const handler = withDB(async (event, ctx, _cb) => {
 
   const user = await getWaiterUser(ctx.dbClient)({ username: body.username })
   if (!user) {
+    console.log('Invalid user')
     return response({ kind: 'UNAUTHORIZED' })
   }
 
   if (!(await isPasswordValid(body.password, user.password))) {
+    console.log('Invalid password')
     return response({ kind: 'UNAUTHORIZED' })
   }
 

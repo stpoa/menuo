@@ -89,6 +89,7 @@ export const createWaiterUser = (client: MongoClient) => async ({
 export const getWaiterUser = (client: MongoClient) => async ({
   username,
 }: Pick<WaiterUser, 'username'>) => {
+  console.log(username)
   const collection = client.db('menuo').collection<WaiterUser>('users')
   const user = await collection.findOne({ username })
   return user
