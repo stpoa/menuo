@@ -21,7 +21,7 @@ plugins:
 provider:
   name: aws
   region: eu-central-1
-  runtime: nodejs10.x
+  runtime: nodejs12.x
   apiGateway:
     minimumCompressionSize: 1024 # Enable gzip compression for responses > 1 KB
   environment:
@@ -47,6 +47,11 @@ functions:
           path: restaurants/{restaurant}/orders
           method: get
           cors: true
+          authorizer:
+            name: verify-token
+            type: token
+            identitySource: method.request.header.Authorization
+            authorizerResultTtlInSeconds: 0
           request:
             parameters:
               paths:
@@ -71,6 +76,11 @@ functions:
           path: restaurants/{restaurant}/orders/{order}
           method: delete
           cors: true
+          authorizer:
+            name: verify-token
+            type: token
+            identitySource: method.request.header.Authorization
+            authorizerResultTtlInSeconds: 0
           request:
             parameters:
               paths:
@@ -84,6 +94,11 @@ functions:
           path: restaurants/{restaurant}/orders
           method: delete
           cors: true
+          authorizer:
+            name: verify-token
+            type: token
+            identitySource: method.request.header.Authorization
+            authorizerResultTtlInSeconds: 0
           request:
             parameters:
               paths:
@@ -152,6 +167,11 @@ functions:
           path: me
           method: get
           cors: true
+          authorizer:
+            name: verify-token
+            type: token
+            identitySource: method.request.header.Authorization
+            authorizerResultTtlInSeconds: 0
 
   logs:
     handler: src/logs/handlers/log.handler

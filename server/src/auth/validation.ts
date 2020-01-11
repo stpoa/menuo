@@ -1,4 +1,4 @@
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcryptjs'
 
 export const isPasswordValid = (eventPassword: string, userPassword: string) =>
   bcrypt

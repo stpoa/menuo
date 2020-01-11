@@ -14,6 +14,7 @@ export const handler = withDB(async (event, ctx, _cb) => {
     return response({ kind: 'UNAUTHORIZED' })
   }
   if (!event?.pathParameters?.restaurant) {
+    console.log(event)
     return response({ kind: 'UNPROCESSABLE_ENTITY' })
   }
   const params: ListRestaurantOrders.Params = {

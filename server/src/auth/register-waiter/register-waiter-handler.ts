@@ -5,7 +5,7 @@ import { response } from 'src/lib/http'
 import { withDB, createWaiterUser, getWaiterUser } from 'src/db/db'
 import { log } from 'src/logs/logs'
 
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcryptjs'
 
 import { signToken } from '../token'
 
