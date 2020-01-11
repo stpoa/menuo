@@ -28,7 +28,6 @@ provider:
     AWS_NODEJS_CONNECTION_REUSE_ENABLED: 1
 
 functions:
-
   get-restaurant-menu:
     handler: src/restaurant/handlers/get-restaurant-menu.handler
     events:
@@ -46,7 +45,7 @@ functions:
     events:
       - http:
           path: restaurants/{restaurant}/orders
-          method: get 
+          method: get
           cors: true
           request:
             parameters:
@@ -98,7 +97,7 @@ functions:
     events:
       - http:
           path: restaurants/{restaurant}/orders/{order}
-          method: put 
+          method: put
           cors: true
           request:
             parameters:
@@ -111,13 +110,48 @@ functions:
     events:
       - http:
           path: restaurants/{restaurant}/tables/{table}
-          method: get 
+          method: get
           cors: true
           request:
             parameters:
               paths:
                 restaurant: true
                 table: true
+
+  verify-token:
+    handler: src/handlers.verifyToken
+
+  login:
+    handler: src/handlers.loginWaiter
+    events:
+      - http:
+          path: restaurants/{restaurant}/login
+          method: post
+          cors: true
+          request:
+            parameters:
+              paths:
+                restaurant: true
+
+  register:
+    handler: src/handlers.registerWaiter
+    events:
+      - http:
+          path: restaurants/{restaurant}/register
+          method: post
+          cors: true
+          request:
+            parameters:
+              paths:
+                restaurant: true
+
+  me:
+    handler: src/handlers.me
+    events:
+      - http:
+          path: me
+          method: get
+          cors: true
 
   logs:
     handler: src/logs/handlers/log.handler

@@ -6,7 +6,14 @@ import {
 } from 'aws-lambda'
 import { MongoClient } from 'mongodb'
 
-type ResponseKind = 'OK' | 'NO_CONTENT' | 'UNAUTHORIZED' | 'UNPROCESSABLE_ENTITY' | 'NOT_FOUND'
+type ResponseKind =
+  | 'OK'
+  | 'NO_CONTENT'
+  | 'UNAUTHORIZED'
+  | 'UNPROCESSABLE_ENTITY'
+  | 'NOT_FOUND'
+  | 'INTERNAL_SERVER_ERROR'
+  | 'BAD_REQUEST'
 
 export type AGPHA = APIGatewayProxyHandlerAsync
 export type AGPHADB = APIGatewayProxyHandlerAsyncDB
@@ -46,9 +53,11 @@ export const response = <T = string>(
   } = {
     OK: { statusCode: 200 },
     NO_CONTENT: { statusCode: 204, body: 'No content' },
-    NOT_FOUND: { statusCode: 400, body: 'Not found' },
+    NOT_FOUND: { statusCode: 404, body: 'Not found' },
     UNAUTHORIZED: { statusCode: 401, body: 'Unauthorized' },
     UNPROCESSABLE_ENTITY: { statusCode: 422, body: 'Unprocessable entity' },
+    INTERNAL_SERVER_ERROR: { statusCode: 500, body: 'Internal Server Error' },
+    BAD_REQUEST: { statusCode: 400, body: 'Bad request' },
   }
 
   const headers = {

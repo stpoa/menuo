@@ -4,6 +4,7 @@ import { AGPHADB, WithDB } from 'src/lib/http'
 import { APIGatewayProxyEvent, APIGatewayProxyCallback } from 'aws-lambda'
 import { Context } from 'vm'
 import { Table } from 'menuo-shared/interfaces/tables'
+import { User, RegisteredUser, WaiterUser } from 'menuo-shared/interfaces/users'
 
 const mongodbPassword = process.env.MONGODB_PASSWORD
 
@@ -57,4 +58,38 @@ export const getRestaurantTable = (client: MongoClient) => async (
   const table = await collection.findOne({ restaurant, name })
 
   return table
+}
+
+export const getUser = (client: MongoClient) => async (username: string) => {
+  const collection = client.db('menuo').collection<User>('users')
+  const user = await collection.findOne({ username })
+  return user
+}
+
+export const createWaiterUser = (client: MongoClient) => async ({
+  deviceId,
+  username,
+  password,
+  roles,
+  restaurant,
+}: Omit<WaiterUser, '_id'>) => {
+  const collection = client
+    .db('menuo')
+    .collection<Omit<WaiterUser, '_id'>>('users')
+  const user = await collection.insertOne({
+    restaurant,
+    username,
+    password,
+    deviceId,
+    roles,
+  })
+  return user.insertedId
+}
+
+export const getWaiterUser = (client: MongoClient) => async ({
+  username,
+}: Pick<WaiterUser, 'username'>) => {
+  const collection = client.db('menuo').collection<WaiterUser>('users')
+  const user = await collection.findOne({ username })
+  return user
 }
