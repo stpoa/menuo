@@ -4,6 +4,7 @@ import { withDB } from 'src/db/db'
 import { log } from 'src/logs/logs'
 import { updateOrder } from 'src/db/orders'
 import { UpdateRestaurantOrder } from 'menuo-shared/interfaces/api'
+import { sendNotifications } from 'src/notifications/notifications'
 
 export const handler = withDB(async (event, ctx, _cb) => {
   if (!(event?.pathParameters?.restaurant && event.pathParameters.order)) {
@@ -17,11 +18,19 @@ export const handler = withDB(async (event, ctx, _cb) => {
   const updates: UpdateRestaurantOrder.Body = JSON.parse(event.body ?? '')
 
   try {
-    await updateOrder(ctx.dbClient)({
+    const order = await updateOrder(ctx.dbClient)({
       ...updates,
       restaurant: params.restaurant,
       _id: params.order,
     })
+
+    if (updates.status === 'accepted') {
+      console.log(updates)
+      sendNotifications(ctx)([order!.customerSub])(
+        'Zamówienie w przygotowaniu! ',
+        'Twoje zamówienie jest w trakcie przygotowania, kelner zaniesie je do stołu',
+      )
+    }
   } catch (error) {
     log('Error while saving', { restaurant: params.restaurant, error })
     return response({ kind: 'UNPROCESSABLE_ENTITY' })

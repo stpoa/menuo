@@ -11,6 +11,7 @@ import {
 import { IOrdersTables } from 'menuo-shared'
 import { nestOrders } from 'menuo-shared/dist/transformations/orders'
 import { updateRestaurantOrder } from '../Menu/Menu.api'
+import { readSubscription } from '../../notifications'
 
 export const Orders = ({ match }: any) => {
   const { restaurant } = match.params
@@ -39,7 +40,10 @@ export const Orders = ({ match }: any) => {
   const handleAcceptOrder = (restaurant: string) => (
     order: string,
   ) => async () => {
-    await updateRestaurantOrder({ order, restaurant }, { status: 'accepted' })
+    await updateRestaurantOrder(
+      { order, restaurant },
+      { status: 'accepted', waiterSub: readSubscription() },
+    )
     setRefetch(+new Date())
   }
 
