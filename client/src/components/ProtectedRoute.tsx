@@ -1,14 +1,23 @@
 import * as React from 'react'
 import { Redirect, Route, RouteProps } from 'react-router'
+import { isLoggedIn } from '../auth/service'
 
 export interface ProtectedRouteProps extends RouteProps {
-  isAuthenticated: boolean
   authenticationPath: string
 }
 
-export const ProtectedRoute: React.FC<ProtectedRouteProps> = props => {
+export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ...props }) => {
+  const [isAuthenticated, setIsAuthenticated] = React.useState(true)
+  React.useEffect(() => {
+    if (isLoggedIn()) {
+      setIsAuthenticated(true)
+    } else {
+      setIsAuthenticated(false)
+    }
+  })
+
   let redirectPath = ''
-  if (!props.isAuthenticated) {
+  if (!isAuthenticated) {
     redirectPath = props.authenticationPath
   }
 

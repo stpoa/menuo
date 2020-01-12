@@ -28,7 +28,6 @@ const App = () => {
           <ProtectedRoute
             exact
             path="/:restaurant/orders"
-            isAuthenticated={isLoggedIn()}
             authenticationPath="login"
             component={Orders}
           />
