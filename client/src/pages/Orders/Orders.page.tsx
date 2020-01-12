@@ -76,6 +76,7 @@ export const Orders = ({ match }: any) => {
       {orders.tables.map(({ orders, table }) => (
         <OrdersTable
           {...{
+            key: table._id,
             table,
             orders,
             handleAcceptOrder: handleAcceptOrder(restaurant),

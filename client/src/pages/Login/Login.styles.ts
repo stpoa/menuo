@@ -2,10 +2,10 @@ import { makeStyles, createStyles } from '@material-ui/styles'
 
 export const useStyles = makeStyles(theme =>
   createStyles({
-    margin: {
+    root: {
       margin: '2rem',
     },
-    padding: {
+    container: {
       padding: '1rem',
     },
   }),

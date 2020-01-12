@@ -81,7 +81,7 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
       })
       setTable(table)
     })()
-  }, [restaurant, refetch])
+  }, [restaurant, tableName, refetch])
 
   useEffect(() => {
     navigator.serviceWorker.addEventListener('message', event => {

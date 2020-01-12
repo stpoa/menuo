@@ -71,6 +71,7 @@ export const TableOrder = ({
 
           return (
             <ListItem
+              key={item.entry._id}
               button={(order.status !== 'new') as true}
               onClick={order.status === 'new' ? undefined : () => {}}
             >
