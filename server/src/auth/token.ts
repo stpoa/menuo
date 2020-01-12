@@ -7,7 +7,7 @@ export const signToken = (secret: string) => (id: string, context: any) =>
 export const verifyToken = <T = any>(secret: string) => (
   token: string,
 ): Promise<T | null> => {
-  const verify = promisify(jwt.verify.bind(this))
+  const verify = promisify(jwt.verify.bind(jwt))
   return verify(token, secret).catch(() => null)
 }
 

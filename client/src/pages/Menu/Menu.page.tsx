@@ -17,6 +17,7 @@ import { OrderSentDialog } from './components/OrderSentDialog'
 import { WaiterSummonDialog } from './components/WaiterSummonDialog'
 import { Table } from 'menuo-shared/interfaces/tables'
 import { RouteComponentProps } from 'react-router'
+import { readSubscription } from '../../notifications'
 
 type Basket = { [itemId: string]: number }
 
@@ -45,7 +46,14 @@ const apiCreateOrder = ({
 
   return createRestaurantOrder(
     { restaurant },
-    { status: 'new', table, customer, entries, waiter },
+    {
+      status: 'new',
+      table,
+      customer,
+      entries,
+      waiter,
+      customerSub: readSubscription(),
+    },
   )
 }
 

@@ -3,7 +3,12 @@ import ReactDOM from 'react-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
 import './index.css'
 import App from './App'
-import { registerServiceWorker, waitForDocumentLoad } from './utils'
+import {
+  registerServiceWorker,
+  waitForDocumentLoad,
+  getSubscription,
+  publicVapidKey,
+} from './utils'
 // import { apiSubscribe } from './api-old'
 
 ReactDOM.render(
@@ -19,7 +24,9 @@ const run = async () => {
   await waitForDocumentLoad()
   await registerServiceWorker()
   // const isWaiter = window.location.pathname.includes('orders')
-  // const subscription = await getSubscription(publicVapidKey)
+  const subscription = await getSubscription(publicVapidKey)
+  localStorage.setItem('subscription', JSON.stringify(subscription))
+  console.log(localStorage.getItem('subscription'))
   // const query = new URLSearchParams(window.location.search)
   // await apiSubscribe(
   //   subscription,

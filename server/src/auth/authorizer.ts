@@ -36,12 +36,19 @@ export const handler = (event: any, context: any, cb: any) => {
     verifyToken(secret || '')(token)
       .then(t => (!t ? Promise.reject() : t))
       .then(result => {
-        cb(null, generateAWSPolicy(result.iss, 'Allow', event.methodArn))
+        console.log(result)
+        console.log(event)
+        cb(
+          null,
+          generateAWSPolicy(result.iss, 'Allow', 'arn:aws:execute-api:*'),
+        )
       })
       .catch(err => {
+        console.log(err)
         cb('Unauthorized')
       })
   } catch (err) {
+    console.log(err)
     cb('Unauthorized')
   }
 }

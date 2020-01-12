@@ -2,7 +2,7 @@ import { LoginWaiterUser } from 'menuo-shared/interfaces/api/auth'
 import 'source-map-support/register'
 
 import { response } from 'src/lib/http'
-import { withDB, getWaiterUser } from 'src/db/db'
+import { withDB, getWaiterUser, updateWaiterUser } from 'src/db/db'
 import { log } from 'src/logs/logs'
 
 import { isPasswordValid } from '../validation'
@@ -32,6 +32,11 @@ export const handler = withDB(async (event, ctx, _cb) => {
     console.log('Invalid user')
     return response({ kind: 'UNAUTHORIZED' })
   }
+
+  await updateWaiterUser(ctx.dbClient)(
+    { _id: user._id },
+    { subscription: body.subscription },
+  )
 
   if (!(await isPasswordValid(body.password, user.password))) {
     console.log('Invalid password')
