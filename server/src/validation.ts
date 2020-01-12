@@ -3,7 +3,6 @@ import {
   APIGatewayProxyResult,
   APIGatewayProxyCallback,
 } from 'aws-lambda'
-import log from 'lambda-log'
 
 export interface ValidatorConfig {
   validator: (e: APIGatewayProxyEvent) => Boolean | Promise<Boolean>
@@ -17,8 +16,20 @@ export const validateEvent = (validatorConfig: ValidatorConfig[]) => (
   Promise.all(
     validatorConfig.map(async ({ validator, message, result }) => {
       if (!(await Promise.resolve(validator(event)))) {
-        log.warn(message)
         return callback(null, result)
       }
     }),
   )
+
+export type UnknownObject<O extends object> = {
+  [K in keyof O]: O[K] extends object ? unknown | UnknownObject<O[K]> : unknown
+}
+
+export const isNumber = (variableToCheck: any): variableToCheck is number =>
+  typeof variableToCheck === 'number'
+
+export const isString = (variableToCheck: any): variableToCheck is string =>
+  typeof variableToCheck === 'string'
+
+export const isArray = (variableToCheck: any): variableToCheck is Array<any> =>
+  Array.isArray(variableToCheck)

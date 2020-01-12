@@ -3,11 +3,11 @@ import { Switch, Route, NavLink } from 'react-router-dom'
 import './App.css'
 import { MenuPage } from './pages/Menu/Menu.page'
 import { Orders } from './pages/Orders/Orders.page'
+import ProtectedRoute from './components/ProtectedRoute'
 
-import {
-  createMuiTheme,
-  ThemeProvider,
-} from '@material-ui/core/styles'
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
+import { isLoggedIn } from './auth/service'
+import { LoginPage } from './pages/Login/Login.page'
 
 const theme = createMuiTheme({
   palette: {
@@ -21,12 +21,17 @@ const App = () => {
     <div className="App">
       <ThemeProvider theme={theme}>
         {'   '}
-        <NavLink to="/zalewajka?table=1">• zalewajka</NavLink>
-        {' '}
+        <NavLink to="/zalewajka?table=1">• zalewajka</NavLink>{' '}
         <NavLink to="/kolanko?table=1">• kolanko</NavLink>
         <Switch>
           <Route exact path="/:restaurant" component={MenuPage} />
-          <Route exact path="/:restaurant/orders" component={Orders} />
+          <ProtectedRoute
+            exact
+            path="/:restaurant/orders"
+            authenticationPath="login"
+            component={Orders}
+          />
+          <Route exact path="/:restaurant/login" component={LoginPage} />
         </Switch>
       </ThemeProvider>
     </div>

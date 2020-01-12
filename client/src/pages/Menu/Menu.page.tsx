@@ -9,24 +9,27 @@ import {
   listRestaurantDishes,
   readRestaurantTable,
   createRestaurantOrder,
-  summonWaiter
+  summonWaiter,
 } from './Menu.api'
 import { useStyles } from './Menu.styles'
 import { MenuSection } from './components/MenuSection'
 import { OrderSentDialog } from './components/OrderSentDialog'
 import { WaiterSummonDialog } from './components/WaiterSummonDialog'
 import { Table } from 'menuo-shared/interfaces/tables'
+import { RouteComponentProps } from 'react-router'
 
 type Basket = { [itemId: string]: number }
 
 const apiCreateOrder = ({
-  user,
+  customer,
+  waiter,
   table,
   restaurant,
   basket,
   menu,
 }: {
-  user: string
+  customer: string
+  waiter: string
   table: Order['table']
   restaurant: string
   basket: Basket
@@ -42,11 +45,11 @@ const apiCreateOrder = ({
 
   return createRestaurantOrder(
     { restaurant },
-    { status: 'new', table, user, entries },
+    { status: 'new', table, customer, entries, waiter },
   )
 }
 
-export const MenuPage = ({ location, match }: any) => {
+export const MenuPage = ({ location, match }: RouteComponentProps) => {
   const { restaurant } = match.params as { restaurant: string }
   const { search } = location
   const query = useQuery(search)
@@ -78,7 +81,7 @@ export const MenuPage = ({ location, match }: any) => {
       })
       setTable(table)
     })()
-  }, [restaurant, refetch])
+  }, [restaurant, tableName, refetch])
 
   useEffect(() => {
     navigator.serviceWorker.addEventListener('message', event => {
@@ -98,7 +101,7 @@ export const MenuPage = ({ location, match }: any) => {
   // Handlers
   const handleOrderClick = ({
     basket,
-    user,
+    user: customer,
     table,
     menu,
   }: {
@@ -107,7 +110,14 @@ export const MenuPage = ({ location, match }: any) => {
     table: Table
     menu: Menu
   }) => async () => {
-    await apiCreateOrder({ user, table, basket, menu, restaurant: restaurant })
+    await apiCreateOrder({
+      customer,
+      waiter: '',
+      table,
+      basket,
+      menu,
+      restaurant: restaurant,
+    })
     setShowOrderedDialog(true)
     setBasket({})
   }

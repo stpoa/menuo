@@ -21,14 +21,13 @@ plugins:
 provider:
   name: aws
   region: eu-central-1
-  runtime: nodejs10.x
+  runtime: nodejs12.x
   apiGateway:
     minimumCompressionSize: 1024 # Enable gzip compression for responses > 1 KB
   environment:
     AWS_NODEJS_CONNECTION_REUSE_ENABLED: 1
 
 functions:
-
   get-restaurant-menu:
     handler: src/restaurant/handlers/get-restaurant-menu.handler
     events:
@@ -46,8 +45,13 @@ functions:
     events:
       - http:
           path: restaurants/{restaurant}/orders
-          method: get 
+          method: get
           cors: true
+          authorizer:
+            name: verify-token
+            type: token
+            identitySource: method.request.header.Authorization
+            authorizerResultTtlInSeconds: 0
           request:
             parameters:
               paths:
@@ -72,6 +76,11 @@ functions:
           path: restaurants/{restaurant}/orders/{order}
           method: delete
           cors: true
+          authorizer:
+            name: verify-token
+            type: token
+            identitySource: method.request.header.Authorization
+            authorizerResultTtlInSeconds: 0
           request:
             parameters:
               paths:
@@ -85,6 +94,11 @@ functions:
           path: restaurants/{restaurant}/orders
           method: delete
           cors: true
+          authorizer:
+            name: verify-token
+            type: token
+            identitySource: method.request.header.Authorization
+            authorizerResultTtlInSeconds: 0
           request:
             parameters:
               paths:
@@ -98,7 +112,7 @@ functions:
     events:
       - http:
           path: restaurants/{restaurant}/orders/{order}
-          method: put 
+          method: put
           cors: true
           request:
             parameters:
@@ -111,13 +125,53 @@ functions:
     events:
       - http:
           path: restaurants/{restaurant}/tables/{table}
-          method: get 
+          method: get
           cors: true
           request:
             parameters:
               paths:
                 restaurant: true
                 table: true
+
+  verify-token:
+    handler: src/handlers.verifyToken
+
+  login:
+    handler: src/handlers.loginWaiter
+    events:
+      - http:
+          path: restaurants/{restaurant}/login
+          method: post
+          cors: true
+          request:
+            parameters:
+              paths:
+                restaurant: true
+
+  register:
+    handler: src/handlers.registerWaiter
+    events:
+      - http:
+          path: restaurants/{restaurant}/register
+          method: post
+          cors: true
+          request:
+            parameters:
+              paths:
+                restaurant: true
+
+  me:
+    handler: src/handlers.me
+    events:
+      - http:
+          path: me
+          method: get
+          cors: true
+          authorizer:
+            name: verify-token
+            type: token
+            identitySource: method.request.header.Authorization
+            authorizerResultTtlInSeconds: 0
 
   logs:
     handler: src/logs/handlers/log.handler

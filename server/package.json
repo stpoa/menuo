@@ -12,10 +12,13 @@
     "test:logic": "jest",
     "test:types": "tsc -p . --noEmit"
   },
-  "proxy": "http://localhost:4000",
   "dependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/jsonwebtoken": "^8.3.5",
+    "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
     "js-yaml": "^3.13.1",
+    "jsonwebtoken": "^8.5.1",
     "logdna": "^3.4.0",
     "menuo-shared": "file:../shared",
     "mongodb": "^3.4.1",
@@ -38,7 +41,7 @@
     "npm-run-all": "^4.1.5",
     "serverless": "^1.57.0",
     "serverless-dotenv-plugin": "^2.1.1",
-    "serverless-offline": "^6.0.0-alpha.43",
+    "serverless-offline": "5.12.1",
     "serverless-webpack": "^5.2.0",
     "ts-jest": "^24.1.0",
     "ts-loader": "^5.3.3",

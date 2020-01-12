@@ -4,7 +4,7 @@ import { getRestaurantOrders, withDB } from 'src/db/db'
 import { ListRestaurantOrders } from 'menuo-shared/interfaces/api'
 
 export const handler = withDB(async (event, ctx, _cb) => {
-  if (!(event?.pathParameters?.restaurant)) {
+  if (!event?.pathParameters?.restaurant) {
     return response({ kind: 'UNPROCESSABLE_ENTITY' })
   }
   const params: ListRestaurantOrders.Params = {
@@ -12,6 +12,5 @@ export const handler = withDB(async (event, ctx, _cb) => {
   }
 
   const orders = await getRestaurantOrders(ctx.dbClient)(params.restaurant)
-
   return response<ListRestaurantOrders.Response>({ body: orders })
 })
