@@ -10,6 +10,8 @@ import {
   readRestaurantTable,
   createRestaurantOrder,
   summonWaiter,
+  payByCard,
+  payByCash,
 } from './Menu.api'
 import { useStyles } from './Menu.styles'
 import { MenuSection } from './components/MenuSection'
@@ -87,19 +89,20 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
       ])
       setTable(table)
       setDishes(dishes)
+      setMenu(nestMenu(dishes))
       setLoading(false)
     })()
   }, [restaurant, tableName, refetch])
 
-  useEffect(() => {
-    const doOptimizeMenuRenderingEffect = async () => {
-      for (let i = 0; i < dishes.length; i += 30) {
-        setMenu(nestMenu(dishes.slice(0, i + 1)))
-        await wait(0)
-      }
-    }
-    doOptimizeMenuRenderingEffect()
-  }, [dishes])
+  // useEffect(() => {
+  //   const doOptimizeMenuRenderingEffect = async () => {
+  //     for (let i = 0; i < dishes.length; i += 30) {
+  //       setMenu(nestMenu(dishes.slice(0, i + 1)))
+  //       await wait(0)
+  //     }
+  //   }
+  //   doOptimizeMenuRenderingEffect()
+  // }, [dishes])
 
   useEffect(() => {
     navigator.serviceWorker.addEventListener('message', event => {
@@ -152,12 +155,12 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
     setShowSummonDialog(false)
     setLoading(false)
   }
-  const handlePayCardClick = (tableId: string) => async () => {
-    // await apiPayByCard({ tableId })
+  const handlePayCardClick = (table: Table) => async () => {
+    await payByCard(restaurant, table)
     setShowSummonDialog(false)
   }
-  const handlePayCashClick = (tableId: string) => async () => {
-    // await apiPayByCash({ tableId })
+  const handlePayCashClick = (table: Table) => async () => {
+    await payByCash(restaurant, table)
     setShowSummonDialog(false)
   }
 
@@ -246,10 +249,9 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
       <WaiterSummonDialog
         open={showSummonDialog}
         handleClose={() => setShowSummonDialog(false)}
-        handlePayCardClick={handlePayCardClick}
-        handlePayCashClick={handlePayCashClick}
+        handlePayCardClick={handlePayCardClick(table)}
+        handlePayCashClick={handlePayCashClick(table)}
         handleSummonClick={handleSummonClick(table)}
-        table={table}
       />
 
       <OrderSentDialog

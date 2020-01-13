@@ -28,10 +28,27 @@ export const handler = withDB(async (event, ctx, _cb) => {
       })
     ).map(w => w.subscription)
 
-    sendNotifications(ctx)(waiterSubscriptions)(
-      'Nowe zamówienie przy stole ' + order.table.name,
-      order.entries.flatMap(([e, n]) => e.dishName + ' x ' + n).join(', '),
-    )
+    if (order.table.status === 'pay-card') {
+      sendNotifications(ctx)(waiterSubscriptions)(
+        'Płatność kartą przy stole ' + order.table.name,
+        'Klient chce uregulować rachunek kartą',
+      )
+    } else if (order.table.status === 'pay-cash') {
+      sendNotifications(ctx)(waiterSubscriptions)(
+        'Płatność gotówką przy stole ' + order.table.name,
+        'Klient chce uregulować rachunek gotówką',
+      )
+    } else if (order.table.status === 'summon-waiter') {
+      sendNotifications(ctx)(waiterSubscriptions)(
+        'Wezwanie kelnera do stolika ' + order.table.name,
+        'Klient wzywa kelnera',
+      )
+    } else {
+      sendNotifications(ctx)(waiterSubscriptions)(
+        'Nowe zamówienie przy stole ' + order.table.name,
+        order.entries.flatMap(([e, n]) => e.dishName + ' x ' + n).join(', '),
+      )
+    }
 
     return response<CreateRestaurantOrder.Response>({ body: result })
   } catch (error) {
