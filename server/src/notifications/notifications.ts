@@ -25,6 +25,8 @@ export const sendNotifications = ({
   // ctx.callbackWaitsForEmptyEventLoop = false
   const [serviceName, serviceStage] = functionName.split('-')
   const region = 'eu-central-1'
+
+  console.log('a')
   const lambda = new Lambda({
     region,
     endpoint: process.env.IS_OFFLINE
@@ -32,6 +34,8 @@ export const sendNotifications = ({
       : `https://lambda.${region}.amazonaws.com`,
   })
   const getFunctionName = getLambdaName(serviceName)(serviceStage)
+
+  console.log('b')
 
   lambda.invoke(
     {
@@ -43,8 +47,11 @@ export const sendNotifications = ({
         title,
       }),
     },
-    () => {},
+    (e, v) => {
+      console.log({ e, v })
+    },
   )
+  console.log('c')
 }
 
 const getLambdaName = (serviceName: string) => (serviceStage: string) => (
