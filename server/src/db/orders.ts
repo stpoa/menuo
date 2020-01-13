@@ -19,11 +19,11 @@ export const updateOrder = (client: MongoClient) => async ({
   ...updates
 }: Partial<Order>) => {
   const db = getOrdersCollection(client)
-  const result = await db.updateOne(
+  const result = await db.findOneAndUpdate(
     { _id: new ObjectId(_id), restaurant },
     { $set: updates },
   )
-  return result
+  return result.value
 }
 
 export const deleteOrder = (client: MongoClient) => async ({

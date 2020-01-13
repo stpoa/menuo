@@ -4,9 +4,9 @@ import { LoginWaiterUser } from 'menuo-shared/interfaces/api/auth'
 export const getValidBody = (
   body: UnknownObject<LoginWaiterUser.Body>,
 ): LoginWaiterUser.Body | null => {
-  const { username, password } = body
+  const { username, password, subscription } = body
   if (isString(username) && isString(password)) {
-    return { username, password }
+    return { username, password, subscription }
   }
   return null
 }

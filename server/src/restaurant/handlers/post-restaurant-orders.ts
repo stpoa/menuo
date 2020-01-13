@@ -1,25 +1,54 @@
 import 'source-map-support/register'
 import { response } from 'src/lib/http'
-import { withDB } from 'src/db/db'
+import { withDB, getWaiterUser, getRestaurantWaiterUsers } from 'src/db/db'
 import { log } from 'src/logs/logs'
 import { createOrder } from 'src/db/orders'
 import { CreateRestaurantOrder } from 'menuo-shared/interfaces/api'
+import { sendNotifications } from 'src/notifications/notifications'
 
 export const handler = withDB(async (event, ctx, _cb) => {
-  if (!(event?.pathParameters?.restaurant)) {
+  if (!event?.pathParameters?.restaurant) {
     return response({ kind: 'UNPROCESSABLE_ENTITY' })
   }
   const params: CreateRestaurantOrder.Params = {
     restaurant: event.pathParameters.restaurant,
   }
 
-  const order = JSON.parse(event.body ?? '')
+  const order: CreateRestaurantOrder.Body = JSON.parse(event.body ?? '')
 
   try {
     const result = await createOrder(ctx.dbClient)({
       ...order,
       restaurant: params.restaurant,
     })
+
+    const waiterSubscriptions = (
+      await getRestaurantWaiterUsers(ctx.dbClient)({
+        restaurant: params.restaurant,
+      })
+    ).map(w => w.subscription)
+
+    if (order.table.status === 'pay-card') {
+      sendNotifications(ctx)(waiterSubscriptions)(
+        'Płatność kartą przy stole ' + order.table.name,
+        'Klient chce uregulować rachunek kartą',
+      )
+    } else if (order.table.status === 'pay-cash') {
+      sendNotifications(ctx)(waiterSubscriptions)(
+        'Płatność gotówką przy stole ' + order.table.name,
+        'Klient chce uregulować rachunek gotówką',
+      )
+    } else if (order.table.status === 'summon-waiter') {
+      sendNotifications(ctx)(waiterSubscriptions)(
+        'Wezwanie kelnera do stolika ' + order.table.name,
+        'Klient wzywa kelnera',
+      )
+    } else {
+      sendNotifications(ctx)(waiterSubscriptions)(
+        'Nowe zamówienie przy stole ' + order.table.name,
+        order.entries.flatMap(([e, n]) => e.dishName + ' x ' + n).join(', '),
+      )
+    }
 
     return response<CreateRestaurantOrder.Response>({ body: result })
   } catch (error) {

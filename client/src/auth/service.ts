@@ -6,11 +6,16 @@ export const storeToken = ({ token }: { token: string }) =>
 
 export const login = (
   { restaurant }: { restaurant: string },
-  { username, password }: { username: string; password: string },
+  {
+    username,
+    password,
+    subscription,
+  }: { username: string; password: string; subscription: any },
 ): Promise<string | void> =>
   post<{ token: string }>(`restaurants/${restaurant}/login`, {
     username,
     password,
+    subscription,
   })
     .then(storeToken)
     .catch(console.log)

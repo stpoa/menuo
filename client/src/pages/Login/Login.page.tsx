@@ -5,6 +5,7 @@ import { useStyles } from './Login.styles'
 import { Paper, Grid, TextField, Button } from '@material-ui/core'
 import { Face, Fingerprint } from '@material-ui/icons'
 import { login, isLoggedIn } from '../../auth/service'
+import { readSubscription } from '../../notifications'
 
 export const LoginPage = ({ location, match }: RouteComponentProps) => {
   const { restaurant } = match.params as { restaurant: string }
@@ -19,7 +20,10 @@ export const LoginPage = ({ location, match }: RouteComponentProps) => {
     const username = usernameInput?.current?.value ?? ''
     const password = passwordInput?.current?.value ?? ''
 
-    login({ restaurant }, { username, password }).then(() => setLoggedIn(true))
+    login(
+      { restaurant },
+      { username, password, subscription: readSubscription() },
+    ).then(() => setLoggedIn(true))
   }
 
   return loggedIn ? (

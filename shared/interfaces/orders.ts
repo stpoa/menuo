@@ -28,11 +28,14 @@ export interface IOrderItem {
 
 export type Orders = Order[]
 
+export type NotificationsSubscription = any
 export interface Order {
   _id: string
   restaurant: string
   customer: string
   waiter: string
+  waiterSub?: NotificationsSubscription[]
+  customerSub: NotificationsSubscription[]
   table: Omit<Table, 'status'> & { status?: string }
   status: string
   entries: [MenuEntry, number][]

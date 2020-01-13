@@ -1,36 +1,32 @@
 import React, { FC, useEffect, useState } from 'react'
-import { makeStyles, createStyles } from '@material-ui/core'
+import { makeStyles, createStyles, LinearProgress } from '@material-ui/core'
 
 const useStyles = makeStyles(theme =>
   createStyles({
-    root: {},
-    inner: {},
-    content: {},
-    spinner: {},
+    progress: {
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      width: '100vw',
+    },
   }),
 )
 
-export const Loading: FC<LoadingProps> = ({ delay = 500 }) => {
+export const Loading: FC<LoadingProps> = ({ loading }) => {
+  const [showSpinner, setShowSpinner] = useState(false)
   const classes = useStyles()
-  const [showLoader, setShowLoader] = useState(delay === 0)
 
   useEffect(() => {
-    const delayTimeout = setTimeout(() => setShowLoader(true), delay)
+    const timer = setTimeout(() => setShowSpinner(true), 300)
 
-    return () => clearTimeout(delayTimeout)
-  }, [delay])
+    return () => clearTimeout(timer)
+  })
 
-  return (
-    <div className={classes.root}>
-      <div className={classes.inner}>
-        <div className={classes.content}>
-          <span className={classes.spinner}></span>
-        </div>
-      </div>
-    </div>
-  )
+  return loading && showSpinner ? (
+    <LinearProgress className={classes.progress} />
+  ) : null
 }
 
 interface LoadingProps {
-  delay?: number 
+  loading: boolean
 }

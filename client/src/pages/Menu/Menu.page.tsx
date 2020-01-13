@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 import { nestMenu, Order, MenuEntry, Menu, IMenu } from 'menuo-shared'
 
-import { useQuery } from '../../utils'
+import { useQuery, wait } from '../../utils'
 import { Button } from '@material-ui/core'
 import { Header } from '../../components/Header'
 import {
@@ -10,6 +10,8 @@ import {
   readRestaurantTable,
   createRestaurantOrder,
   summonWaiter,
+  payByCard,
+  payByCash,
 } from './Menu.api'
 import { useStyles } from './Menu.styles'
 import { MenuSection } from './components/MenuSection'
@@ -17,6 +19,8 @@ import { OrderSentDialog } from './components/OrderSentDialog'
 import { WaiterSummonDialog } from './components/WaiterSummonDialog'
 import { Table } from 'menuo-shared/interfaces/tables'
 import { RouteComponentProps } from 'react-router'
+import { readSubscription } from '../../notifications'
+import { Loading } from '../../components/Loading'
 
 type Basket = { [itemId: string]: number }
 
@@ -45,7 +49,14 @@ const apiCreateOrder = ({
 
   return createRestaurantOrder(
     { restaurant },
-    { status: 'new', table, customer, entries, waiter },
+    {
+      status: 'new',
+      table,
+      customer,
+      entries,
+      waiter,
+      customerSub: readSubscription(),
+    },
   )
 }
 
@@ -56,6 +67,7 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
   const tableName = query.get('table')
 
   const [refetch, setRefetch] = useState(0)
+  const [loading, setLoading] = useState(true)
   const [menu, setMenu] = useState<IMenu>([])
   const [dishes, setDishes] = useState<Menu>([])
   const [table, setTable] = useState<Table>({
@@ -67,21 +79,30 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
 
   useEffect(() => {
     ;(async () => {
-      const dishes = await listRestaurantDishes({ restaurant })
+      setLoading(true)
+      const [dishes, table] = await Promise.all([
+        listRestaurantDishes({ restaurant }),
+        readRestaurantTable({
+          restaurant,
+          table: tableName ?? '',
+        }),
+      ])
+      setTable(table)
       setDishes(dishes)
       setMenu(nestMenu(dishes))
-    })()
-  }, [restaurant, refetch])
-
-  useEffect(() => {
-    ;(async () => {
-      const table = await readRestaurantTable({
-        restaurant,
-        table: tableName ?? '',
-      })
-      setTable(table)
+      setLoading(false)
     })()
   }, [restaurant, tableName, refetch])
+
+  // useEffect(() => {
+  //   const doOptimizeMenuRenderingEffect = async () => {
+  //     for (let i = 0; i < dishes.length; i += 30) {
+  //       setMenu(nestMenu(dishes.slice(0, i + 1)))
+  //       await wait(0)
+  //     }
+  //   }
+  //   doOptimizeMenuRenderingEffect()
+  // }, [dishes])
 
   useEffect(() => {
     navigator.serviceWorker.addEventListener('message', event => {
@@ -110,6 +131,7 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
     table: Table
     menu: Menu
   }) => async () => {
+    setLoading(true)
     await apiCreateOrder({
       customer,
       waiter: '',
@@ -120,6 +142,7 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
     })
     setShowOrderedDialog(true)
     setBasket({})
+    setLoading(false)
   }
 
   const handleSummonDialogClick = () => {
@@ -127,15 +150,17 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
   }
 
   const handleSummonClick = (table: Table) => async () => {
+    setLoading(true)
     await summonWaiter(restaurant, table)
     setShowSummonDialog(false)
+    setLoading(false)
   }
-  const handlePayCardClick = (tableId: string) => async () => {
-    // await apiPayByCard({ tableId })
+  const handlePayCardClick = (table: Table) => async () => {
+    await payByCard(restaurant, table)
     setShowSummonDialog(false)
   }
-  const handlePayCashClick = (tableId: string) => async () => {
-    // await apiPayByCash({ tableId })
+  const handlePayCashClick = (table: Table) => async () => {
+    await payByCash(restaurant, table)
     setShowSummonDialog(false)
   }
 
@@ -182,6 +207,7 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
 
   return (
     <div className={classes.root}>
+      <Loading loading={loading} />
       <Header>Menu</Header>
 
       <div className={classes.menuContent}>
@@ -223,10 +249,9 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
       <WaiterSummonDialog
         open={showSummonDialog}
         handleClose={() => setShowSummonDialog(false)}
-        handlePayCardClick={handlePayCardClick}
-        handlePayCashClick={handlePayCashClick}
+        handlePayCardClick={handlePayCardClick(table)}
+        handlePayCashClick={handlePayCashClick(table)}
         handleSummonClick={handleSummonClick(table)}
-        table={table}
       />
 
       <OrderSentDialog

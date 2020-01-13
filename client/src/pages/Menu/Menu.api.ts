@@ -6,6 +6,7 @@ import {
   UpdateRestaurantOrder,
 } from 'menuo-shared/interfaces/api'
 import { Table } from 'menuo-shared/interfaces/tables'
+import { readSubscription } from '../../notifications'
 
 export const listRestaurantDishes = ({
   restaurant,
@@ -40,15 +41,22 @@ export const updateRestaurantOrder = (
 
 // Helpers
 
-export const summonWaiter = async (restaurant: string, table: Table) => {
-  await createRestaurantOrder(
+export const changeTableStatus = (status: string) => (
+  restaurant: string,
+  table: Table,
+) =>
+  createRestaurantOrder(
     { restaurant },
     {
+      customerSub: readSubscription(),
       status: '',
-      table: { ...table, status: 'summon-waiter' },
+      table: { ...table, status },
       entries: [],
       customer: '',
-      waiter: ''
+      waiter: '',
     },
   )
-}
+
+export const summonWaiter = changeTableStatus('summon-waiter')
+export const payByCard = changeTableStatus('pay-card')
+export const payByCash = changeTableStatus('pay-cash')

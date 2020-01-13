@@ -11,6 +11,6 @@ export namespace RegisterWaiterUser {
 
 export namespace LoginWaiterUser {
   export type Params = { restaurant: string }
-  export type Body = Pick<WaiterUser, 'username' | 'password'>
+  export type Body = Pick<WaiterUser, 'username' | 'password' | 'subscription'>
   export type Response = { token: string }
 }

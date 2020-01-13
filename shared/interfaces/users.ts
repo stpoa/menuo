@@ -6,6 +6,7 @@ export type CustomerUser = UnregisteredUser
 
 export interface WaiterUser extends RegisteredUser {
   restaurant: string
+  subscription: any
 }
 
 export interface UnregisteredUser {

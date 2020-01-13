@@ -14,7 +14,7 @@ export const validateEvent = (validatorConfig: ValidatorConfig[]) => (
   callback: APIGatewayProxyCallback,
 ) => (event: APIGatewayProxyEvent) =>
   Promise.all(
-    validatorConfig.map(async ({ validator, message, result }) => {
+    validatorConfig.map(async ({ validator, result }) => {
       if (!(await Promise.resolve(validator(event)))) {
         return callback(null, result)
       }

@@ -6,10 +6,9 @@ import { Table } from 'menuo-shared/interfaces/tables'
 interface WaiterSummonDialogProps {
   open: boolean
   handleClose: () => void
-  handlePayCardClick: (tableId: string) => () => void
-  handlePayCashClick: (tableId: string) => () => void
+  handlePayCardClick: () => void
+  handlePayCashClick: () => void
   handleSummonClick: () => void
-  table: Table
 }
 
 export const WaiterSummonDialog: FC<WaiterSummonDialogProps> = ({
@@ -18,20 +17,18 @@ export const WaiterSummonDialog: FC<WaiterSummonDialogProps> = ({
   handlePayCardClick,
   handlePayCashClick,
   handleSummonClick,
-  table,
 }) => {
   const classes = useStyles()
-  const tableId = table._id
 
   return (
     <Dialog open={open} onClose={handleClose}>
       <DialogTitle>W jakim celu chcesz zawołać kelnera?</DialogTitle>
       <DialogContent></DialogContent>
       <div className={classes.dialogButtons}>
-        <Button onClick={handlePayCashClick(tableId)} color="primary">
+        <Button onClick={handlePayCashClick} color="primary">
           Płatność gotówką
         </Button>
-        <Button onClick={handlePayCardClick(tableId)} color="primary">
+        <Button onClick={handlePayCardClick} color="primary">
           Płatność kartą
         </Button>
         <Button color="primary" onClick={handleSummonClick}>

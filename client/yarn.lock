@@ -6609,7 +6609,7 @@ memory-fs@^0.5.0:
     readable-stream "^2.0.1"
 
 "menuo-shared@file:../shared":
-  version "1.0.1"
+  version "1.0.3"
   dependencies:
     "@types/ramda" "^0.26.39"
     ramda "^0.26.1"
