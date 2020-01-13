@@ -17,7 +17,7 @@ import { Loading } from '../../components/Loading'
 export const Orders = ({ match }: any) => {
   const { restaurant } = match.params
   const [refetch, setRefetch] = useState(0)
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
 
   const [orders, setOrders] = useState<IOrdersTables>({
     restaurant,

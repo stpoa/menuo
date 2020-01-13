@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 import { nestMenu, Order, MenuEntry, Menu, IMenu } from 'menuo-shared'
 
-import { useQuery } from '../../utils'
+import { useQuery, wait } from '../../utils'
 import { Button } from '@material-ui/core'
 import { Header } from '../../components/Header'
 import {
@@ -18,6 +18,7 @@ import { WaiterSummonDialog } from './components/WaiterSummonDialog'
 import { Table } from 'menuo-shared/interfaces/tables'
 import { RouteComponentProps } from 'react-router'
 import { readSubscription } from '../../notifications'
+import { Loading } from '../../components/Loading'
 
 type Basket = { [itemId: string]: number }
 
@@ -64,6 +65,7 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
   const tableName = query.get('table')
 
   const [refetch, setRefetch] = useState(0)
+  const [loading, setLoading] = useState(true)
   const [menu, setMenu] = useState<IMenu>([])
   const [dishes, setDishes] = useState<Menu>([])
   const [table, setTable] = useState<Table>({
@@ -75,21 +77,29 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
 
   useEffect(() => {
     ;(async () => {
-      const dishes = await listRestaurantDishes({ restaurant })
-      setDishes(dishes)
-      setMenu(nestMenu(dishes))
-    })()
-  }, [restaurant, refetch])
-
-  useEffect(() => {
-    ;(async () => {
-      const table = await readRestaurantTable({
-        restaurant,
-        table: tableName ?? '',
-      })
+      setLoading(true)
+      const [dishes, table] = await Promise.all([
+        listRestaurantDishes({ restaurant }),
+        readRestaurantTable({
+          restaurant,
+          table: tableName ?? '',
+        }),
+      ])
       setTable(table)
+      setDishes(dishes)
+      setLoading(false)
     })()
   }, [restaurant, tableName, refetch])
+
+  useEffect(() => {
+    const doOptimizeMenuRenderingEffect = async () => {
+      for (let i = 0; i < dishes.length; i += 30) {
+        setMenu(nestMenu(dishes.slice(0, i + 1)))
+        await wait(0)
+      }
+    }
+    doOptimizeMenuRenderingEffect()
+  }, [dishes])
 
   useEffect(() => {
     navigator.serviceWorker.addEventListener('message', event => {
@@ -118,6 +128,7 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
     table: Table
     menu: Menu
   }) => async () => {
+    setLoading(true)
     await apiCreateOrder({
       customer,
       waiter: '',
@@ -128,6 +139,7 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
     })
     setShowOrderedDialog(true)
     setBasket({})
+    setLoading(false)
   }
 
   const handleSummonDialogClick = () => {
@@ -135,8 +147,10 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
   }
 
   const handleSummonClick = (table: Table) => async () => {
+    setLoading(true)
     await summonWaiter(restaurant, table)
     setShowSummonDialog(false)
+    setLoading(false)
   }
   const handlePayCardClick = (tableId: string) => async () => {
     // await apiPayByCard({ tableId })
@@ -190,6 +204,7 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
 
   return (
     <div className={classes.root}>
+      <Loading loading={loading} />
       <Header>Menu</Header>
 
       <div className={classes.menuContent}>

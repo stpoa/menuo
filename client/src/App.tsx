@@ -23,16 +23,18 @@ const App = () => {
         {'   '}
         <NavLink to="/zalewajka?table=1">• zalewajka</NavLink>{' '}
         <NavLink to="/kolanko?table=1">• kolanko</NavLink>
-        <Switch>
-          <Route exact path="/:restaurant" component={MenuPage} />
-          <ProtectedRoute
-            exact
-            path="/:restaurant/orders"
-            authenticationPath="login"
-            component={Orders}
-          />
-          <Route exact path="/:restaurant/login" component={LoginPage} />
-        </Switch>
+        {process.env.NODE_ENV === 'development' ? (
+          <Switch>
+            <Route exact path="/:restaurant" component={MenuPage} />
+            <ProtectedRoute
+              exact
+              path="/:restaurant/orders"
+              authenticationPath="login"
+              component={Orders}
+            />
+            <Route exact path="/:restaurant/login" component={LoginPage} />
+          </Switch>
+        ) : null}
       </ThemeProvider>
     </div>
   )
