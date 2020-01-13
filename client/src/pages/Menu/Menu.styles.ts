@@ -12,8 +12,14 @@ export const useStyles = makeStyles(theme =>
     },
     buttons: {
       display: 'flex',
+      position: 'fixed',
+      bottom: '0.5rem',
+      left: '50%',
+      width: '96%',
+      marginLeft: '-48%',
       flexDirection: 'row',
       justifyContent: 'center',
+      background: 'white',
     },
     buttonLeft: {
       width: '50%',
