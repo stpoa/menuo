@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   Fab,
   ListItem,
@@ -10,6 +10,7 @@ import {
 } from '@material-ui/core'
 import { Check, DeleteForever, ArrowForwardIos } from '@material-ui/icons'
 import { IOrder } from 'menuo-shared'
+import { DeleteOrderDialog } from '../../DeleteOrderDialog'
 
 interface TabbleOrderProps {
   order: IOrder
@@ -23,8 +24,10 @@ export const TableOrder = ({
   handleCompleteOrderToggle,
   handleAcceptOrder,
   handleDeleteOrder,
-}: TabbleOrderProps) =>
-  order.status === '' ? null : (
+}: TabbleOrderProps) => {
+  const [showDeleteDialog, setShowDeleteDialog] = useState(false)
+
+  return order.status === '' ? null : (
     <div>
       <ListItem>
         <ListItemIcon>
@@ -55,7 +58,7 @@ export const TableOrder = ({
             size="small"
             variant="extended"
             color="primary"
-            onClick={handleDeleteOrder(order._id)}
+            onClick={() => setShowDeleteDialog(true)}
           >
             <DeleteForever />
           </Fab>
@@ -83,5 +86,15 @@ export const TableOrder = ({
           )
         })}
       </List>
+
+      <DeleteOrderDialog
+        handleClose={() => setShowDeleteDialog(false)}
+        handleConfirm={() => {
+          handleDeleteOrder(order._id)
+          setShowDeleteDialog(false)
+        }}
+        open={showDeleteDialog}
+      />
     </div>
   )
+}
