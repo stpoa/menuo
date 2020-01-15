@@ -1,11 +1,5 @@
 import React, { FC } from 'react'
-import {
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  Button,
-  DialogActions,
-} from '@material-ui/core'
+import { Dialog, DialogTitle, Button, DialogActions } from '@material-ui/core'
 
 interface OrderSentDialogProps {
   open: boolean
@@ -20,10 +14,6 @@ export const DeleteOrderDialog: FC<OrderSentDialogProps> = ({
 }: any) => (
   <Dialog open={open} onClose={handleClose}>
     <DialogTitle>Czy napewno chcesz usunąć zamówienie?</DialogTitle>
-    <DialogContent>
-      zamówienie. Pamiętaj, że w każdej chwili możesz zawołać kelnera klikając
-      na przycisk.
-    </DialogContent>
     <DialogActions>
       <Button color="primary" onClick={handleClose}>
         Anuluj
