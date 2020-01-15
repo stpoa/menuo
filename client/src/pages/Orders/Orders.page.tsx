@@ -101,7 +101,6 @@ export const Orders = ({ match, history }: any) => {
     <div className={classes.root}>
       <Loading loading={loading} />
       <Header>Zamówienia</Header>
-      <Button>Wyloguj</Button>
       <Fab
         onClick={handleLogoutClick}
         color="primary"

@@ -1,25 +1,36 @@
 import React, { FC } from 'react'
 import { Dialog, DialogTitle, DialogContent, Button } from '@material-ui/core'
+import { MenuEntry } from 'menuo-shared'
 
 interface OrderSentDialogProps {
-  showOrderedDialog: any,
-  handleClose: any,
-  handleConfirm: any,
+  showOrderedDialog: any
+  handleClose: any
+  handleConfirm: any
+  ordered: [MenuEntry, number][]
 }
 
 export const OrderSentDialog: FC<OrderSentDialogProps> = ({
   showOrderedDialog,
   handleClose,
   handleConfirm,
-}: any) => (
+  ordered,
+}: OrderSentDialogProps) => (
   <Dialog open={showOrderedDialog} onClose={handleClose}>
     <DialogTitle>Zamówienie wysłane!</DialogTitle>
     <DialogContent>
-      Twoje zamówienie zostało wysłane i oczekuje na akceptacje przez
-      restauracje, otrzymsz powiadomienie inforumujące o zaakceptowaniu
-      zamówienia. Jeżeli chcesz coś jeszcze zamówić możesz złożyć kolejne
-      zamówienie. Pamiętaj, że w każdej chwili możesz zawołać kelnera klikając
-      na przycisk.
+      <p>Twoje zamówienie zostało wysłane!</p>
+      {ordered.map(([entry, count]) => (
+        <li>
+          {count}x {entry.dishName} - {entry.dishVariantName} (
+          {entry.dishVariantPrice}zł)
+        </li>
+      ))}
+
+      <p>
+        Jeżeli chcesz coś jeszcze zamówić możesz złożyć kolejne zamówienie.
+        Pamiętaj, że w każdej chwili możesz zawołać kelnera klikając na
+        przycisk.
+      </p>
     </DialogContent>
     <Button color="primary" onClick={handleConfirm}>
       Ok

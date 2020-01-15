@@ -24,6 +24,13 @@ import { Loading } from '../../components/Loading'
 
 type Basket = { [itemId: string]: number }
 
+const getOrderedEntries = (menu: Menu, basket: Basket) =>
+  Object.entries(basket).map(([itemId, count]) => {
+    const entry = menu.find(e => e._id === itemId)!
+
+    return [entry, count] as [MenuEntry, number]
+  })
+
 const apiCreateOrder = ({
   customer,
   waiter,
@@ -39,13 +46,7 @@ const apiCreateOrder = ({
   basket: Basket
   menu: Menu
 }) => {
-  const entries: [MenuEntry, number][] = Object.entries(basket).map(
-    ([itemId, count]) => {
-      const entry = menu.find(e => e._id === itemId)!
-
-      return [entry, count]
-    },
-  )
+  const entries = getOrderedEntries(menu, basket)
 
   return createRestaurantOrder(
     { restaurant },
@@ -76,6 +77,7 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
     _id: '',
     restaurant: '',
   })
+  const [ordered, setOrdered] = useState<[MenuEntry, number][]>([])
 
   useEffect(() => {
     ;(async () => {
@@ -145,7 +147,7 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
       restaurant: restaurant,
     })
     setShowOrderedDialog(true)
-    setBasket({})
+    setOrdered(o => [...o, ...getOrderedEntries(dishes, basket)])
     setLoading(false)
   }
 
@@ -260,8 +262,12 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
 
       <OrderSentDialog
         handleClose={() => setShowOrderedDialog(false)}
-        handleConfirm={() => setShowOrderedDialog(false)}
+        handleConfirm={() => {
+          setBasket({})
+          setShowOrderedDialog(false)
+        }}
         showOrderedDialog={showOrderedDialog}
+        ordered={getOrderedEntries(dishes, basket)}
       />
     </div>
   )
