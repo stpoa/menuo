@@ -8,8 +8,8 @@ export const useStyles = makeStyles(theme =>
     },
     logoutFab: {
       position: 'absolute',
-      top: '2rem',
-      right: '2rem',
+      top: '1rem',
+      right: '1rem',
       width: '40px',
       height: '40px',
     },
