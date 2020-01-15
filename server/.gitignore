@@ -10,8 +10,7 @@ jspm_packages
 
 # Env
 .env
-.env.local
-.env.production
+.env.*
 
 # Logs
 yarn-error.log
