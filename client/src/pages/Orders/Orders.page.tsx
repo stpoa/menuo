@@ -8,12 +8,11 @@ import {
   deleteRestaurantOrder,
   deleteRestaurantOrders,
 } from './Orders.api'
-import { IOrdersTables } from 'menuo-shared'
-import { nestOrders } from 'menuo-shared/dist/transformations/orders'
+import { IOrdersTables, nestOrders } from 'menuo-shared'
 import { updateRestaurantOrder } from '../Menu/Menu.api'
 import { readSubscription } from '../../notifications'
 import { Loading } from '../../components/Loading'
-import { Button, Fab } from '@material-ui/core'
+import { Fab } from '@material-ui/core'
 import { ExitToApp as ExitToAppIcon } from '@material-ui/icons'
 
 export const Orders = ({ match, history }: any) => {

@@ -10,8 +10,8 @@ export const useStyles = makeStyles(theme =>
       position: 'absolute',
       top: '2rem',
       right: '2rem',
-      width: '2.5rem',
-      height: '2.5rem',
+      width: '40px',
+      height: '40px',
     },
   }),
 )
