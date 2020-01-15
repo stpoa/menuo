@@ -24,14 +24,24 @@ export const useStyles = makeStyles(theme =>
     buttonLeft: {
       width: '50%',
       marginRight: '0.5rem',
+      fontSize: '0.8rem',
     },
     buttonRight: {
       width: '50%',
       marginLeft: '0.5rem',
+      fontSize: '0.8rem',
     },
     dialogButtons: {
       display: 'flex',
       flexDirection: 'column',
+    },
+    orderedListFab: {
+      position: 'fixed',
+      top: '1rem',
+      right: '1rem',
+      width: '40px',
+      height: '40px',
+      zIndex: 100,
     },
   }),
 )

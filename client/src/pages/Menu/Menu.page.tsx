@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import { filter } from 'ramda'
 
 import { nestMenu, Order, MenuEntry, Menu, IMenu } from 'menuo-shared'
 
-import { useQuery, wait } from '../../utils'
-import { Button } from '@material-ui/core'
+import { useQuery } from '../../utils'
+import { Button, Fab } from '@material-ui/core'
 import { Header } from '../../components/Header'
 import {
   listRestaurantDishes,
@@ -21,6 +22,8 @@ import { Table } from 'menuo-shared/interfaces/tables'
 import { RouteComponentProps } from 'react-router'
 import { readSubscription } from '../../notifications'
 import { Loading } from '../../components/Loading'
+import { Receipt as ReceiptIcon } from '@material-ui/icons'
+import { OrderedListDialog } from './components/OrderedListDialog'
 
 type Basket = { [itemId: string]: number }
 
@@ -96,16 +99,6 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
     })()
   }, [restaurant, tableName, refetch])
 
-  // useEffect(() => {
-  //   const doOptimizeMenuRenderingEffect = async () => {
-  //     for (let i = 0; i < dishes.length; i += 30) {
-  //       setMenu(nestMenu(dishes.slice(0, i + 1)))
-  //       await wait(0)
-  //     }
-  //   }
-  //   doOptimizeMenuRenderingEffect()
-  // }, [dishes])
-
   useEffect(() => {
     try {
       navigator.serviceWorker.addEventListener('message', event => {
@@ -118,7 +111,8 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
 
   const [basket, setBasket] = useState<Basket>({})
   const [showSummonDialog, setShowSummonDialog] = useState(false)
-  const [showOrderedDialog, setShowOrderedDialog] = useState(false)
+  const [showOrderedInfo, setShowOrderedInfo] = useState(false)
+  const [showOrderedList, setShowOrderedList] = useState(false)
   const classes = useStyles() as any
 
   if (!tableName) {
@@ -146,7 +140,7 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
       menu,
       restaurant: restaurant,
     })
-    setShowOrderedDialog(true)
+    setShowOrderedInfo(true)
     setOrdered(o => [...o, ...getOrderedEntries(dishes, basket)])
     setLoading(false)
   }
@@ -171,18 +165,22 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
   }
 
   const handleToggle = () => (entryId: string, count: number) => () => {
-    setBasket(basket => ({
-      ...basket,
-      [entryId]: count ? 0 : 1,
-    }))
+    setBasket(basket =>
+      filter(v => v > 0, {
+        ...basket,
+        [entryId]: count ? 0 : 1,
+      }),
+    )
   }
 
   const handleMinus = () => (entryId: string) => () => {
     const id = entryId
-    return setBasket((basket: { [x: string]: number }) => ({
-      ...basket,
-      [id]: basket[id] - 1,
-    }))
+    return setBasket((basket: { [x: string]: number }) =>
+      filter(v => v > 0, {
+        ...basket,
+        [id]: basket[id] - 1,
+      }),
+    )
   }
 
   const handlePlus = () => (entryId: string) => () => {
@@ -203,6 +201,8 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
     }
   }
 
+  const handleOrderedClick = () => setShowOrderedList(true)
+
   // Tools
   const isBasketFilled = (
     basket: { [s: string]: unknown } | ArrayLike<unknown>,
@@ -214,7 +214,16 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
   return (
     <div className={classes.root}>
       <Loading loading={loading} />
-      <Header>Menu</Header>
+      <Header>{restaurant}</Header>
+      <Fab
+        disabled={ordered.length === 0}
+        onClick={handleOrderedClick}
+        color="primary"
+        aria-label="logout"
+        className={classes.orderedListFab}
+      >
+        <ReceiptIcon />
+      </Fab>
 
       <div className={classes.menuContent}>
         {menu.map((section, i) => (
@@ -261,13 +270,20 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
       />
 
       <OrderSentDialog
-        handleClose={() => setShowOrderedDialog(false)}
+        handleClose={() => setShowOrderedInfo(false)}
         handleConfirm={() => {
           setBasket({})
-          setShowOrderedDialog(false)
+          setShowOrderedInfo(false)
         }}
-        showOrderedDialog={showOrderedDialog}
+        showOrderedDialog={showOrderedInfo}
         ordered={getOrderedEntries(dishes, basket)}
+      />
+
+      <OrderedListDialog
+        onClose={() => setShowOrderedList(false)}
+        onConfirm={() => setShowOrderedList(false)}
+        open={showOrderedList}
+        ordered={ordered}
       />
     </div>
   )
