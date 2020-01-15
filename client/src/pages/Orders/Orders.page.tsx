@@ -13,8 +13,10 @@ import { nestOrders } from 'menuo-shared/dist/transformations/orders'
 import { updateRestaurantOrder } from '../Menu/Menu.api'
 import { readSubscription } from '../../notifications'
 import { Loading } from '../../components/Loading'
+import { Button, Fab } from '@material-ui/core'
+import { ExitToApp as ExitToAppIcon } from '@material-ui/icons'
 
-export const Orders = ({ match }: any) => {
+export const Orders = ({ match, history }: any) => {
   const { restaurant } = match.params
   const [refetch, setRefetch] = useState(0)
   const [loading, setLoading] = useState(true)
@@ -35,9 +37,13 @@ export const Orders = ({ match }: any) => {
   }, [restaurant, refetch])
 
   useEffect(() => {
-    navigator.serviceWorker.addEventListener('message', event => {
-      setRefetch(event.data.refetch)
-    })
+    try {
+      navigator.serviceWorker.addEventListener('message', event => {
+        setRefetch(event.data.refetch)
+      })
+    } catch (e) {
+      console.log(e)
+    }
   }, [])
 
   const classes = useStyles()
@@ -86,10 +92,24 @@ export const Orders = ({ match }: any) => {
     setLoading(false)
   }
 
+  const handleLogoutClick = () => {
+    localStorage.setItem('jwt', '')
+    history.push(`/${restaurant}/orders`)
+  }
+
   return (
     <div className={classes.root}>
       <Loading loading={loading} />
       <Header>Zamówienia</Header>
+      <Button>Wyloguj</Button>
+      <Fab
+        onClick={handleLogoutClick}
+        color="primary"
+        aria-label="logout"
+        className={classes.logoutFab}
+      >
+        <ExitToAppIcon />
+      </Fab>
 
       {orders.tables.map(({ orders, table }) => (
         <OrdersTable
