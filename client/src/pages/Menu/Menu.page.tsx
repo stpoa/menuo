@@ -105,9 +105,13 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
   // }, [dishes])
 
   useEffect(() => {
-    navigator.serviceWorker.addEventListener('message', event => {
-      setRefetch(event.data.refetch)
-    })
+    try {
+      navigator.serviceWorker.addEventListener('message', event => {
+        setRefetch(event.data.refetch)
+      })
+    } catch (e) {
+      console.log(e)
+    }
   }, [])
 
   const [basket, setBasket] = useState<Basket>({})
