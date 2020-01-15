@@ -9,7 +9,7 @@ custom:
     webpackConfig: ./webpack.config.js
     includeModules: true
   client:
-    bucketName: menuo.me
+    bucketName: ${env:SLS_BUCKET_NAME}
     distributionFolder: ../client/build
 
 plugins:
@@ -186,10 +186,10 @@ functions:
   send_notifications:
     handler: src/handlers.sendNotifications
 
-  logs:
-    handler: src/logs/handlers/log.handler
-    events:
-      - cloudwatchLog: '/aws/lambda/menuo-dev-get-restaurant' # FIXME: hardcoded
+  # logs:
+  #   handler: src/logs/handlers/log.handler
+  #   events:
+  #     - cloudwatchLog: '/aws/lambda/menuo-dev-get-restaurant' # FIXME: hardcoded
 
 resources:
   Resources:
