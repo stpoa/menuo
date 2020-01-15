@@ -20,13 +20,6 @@ const App = () => {
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-        {process.env.NODE_ENV === 'development' ? (
-          <>
-            {'   '}
-            <NavLink to="/zalewajka?table=1">• zalewajka</NavLink>{' '}
-            <NavLink to="/kolanko?table=1">• kolanko</NavLink>
-          </>
-        ) : null}
         <Switch>
           <Route exact path="/:restaurant" component={MenuPage} />
           <ProtectedRoute

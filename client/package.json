@@ -5,9 +5,11 @@
   "dependencies": {
     "@material-ui/core": "^4.6.1",
     "@material-ui/icons": "^4.5.1",
+    "@types/ramda": "^0.26.39",
     "axios": "^0.19.0",
     "axios-hooks": "^1.7.2",
     "menuo-shared": "file:../shared",
+    "ramda": "^0.26.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
@@ -23,15 +25,19 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
     "@types/react-router": "^5.1.3",
-    "@types/react-router-dom": "^5.1.3"
+    "@types/react-router-dom": "^5.1.3",
+    "env-cmd": "^10.0.1"
   },
   "scripts": {
     "start": "PORT=3001 react-scripts start",
-    "build": "react-scripts build",
+    "build:production": "env-cmd -f .env.production react-scripts build",
+    "build:staging": "env-cmd -f .env.staging react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "yarn build && yarn upload",
-    "upload": "cd ../server && sls client deploy --no-config-change --no-policy-change --no-cors-change --no-confirm"
+    "deploy:staging": "yarn build:staging && yarn upload:staging",
+    "deploy:production": "yarn build:production && yarn upload:production",
+    "upload:staging": "cd ../server && sls client deploy --no-config-change --no-policy-change --no-cors-change --no-confirm --env staging",
+    "upload:production": "cd ../server && sls client deploy --no-config-change --no-policy-change --no-cors-change --no-confirm --env production"
   },
   "eslintConfig": {
     "extends": "react-app"

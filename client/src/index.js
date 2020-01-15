@@ -16,17 +16,13 @@ ReactDOM.render(
   document.getElementById('root'),
 )
 
-registerServiceWorker()
-  .then(() => console.log('Registered service worker'))
-  .catch(console.error)
-
 const run = async () => {
   await waitForDocumentLoad()
   await registerServiceWorker()
   // const isWaiter = window.location.pathname.includes('orders')
   const subscription = await getSubscription(publicVapidKey)
   localStorage.setItem('subscription', JSON.stringify(subscription))
-  console.log(localStorage.getItem('subscription'))
+  // console.log(localStorage.getItem('subscription'))
   // const query = new URLSearchParams(window.location.search)
   // await apiSubscribe(
   //   subscription,
@@ -35,4 +31,8 @@ const run = async () => {
   // )
 }
 
-run()
+try {
+  run()
+} catch (e) {
+  console.log(e)
+}

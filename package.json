@@ -9,7 +9,8 @@
     "deploy:client": "cd ./client && yarn deploy",
     "upload:client": "cd ./server && sls client deploy --no-config-change --no-policy-change --no-cors-change --no-confirm",
     "start:server": "cd ./server && yarn start",
-    "deploy:server": "cd ./server && yarn deploy",
+    "deploy:server:dev": "cd ./server && yarn deploy:dev",
+    "deploy:server:prod": "cd ./server && yarn deploy:prod",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

@@ -1,10 +1,12 @@
 export const getSubscription = async publicVapidKey => {
   const registration = await navigator.serviceWorker.ready
 
-  return registration.pushManager.subscribe({
-    userVisibleOnly: true,
-    applicationServerKey: urlBase64ToUint8Array(publicVapidKey),
-  }).catch(console.log)
+  return registration.pushManager
+    .subscribe({
+      userVisibleOnly: true,
+      applicationServerKey: urlBase64ToUint8Array(publicVapidKey),
+    })
+    .catch(console.log)
 }
 
 export function urlBase64ToUint8Array(base64String) {
@@ -34,7 +36,7 @@ export const registerServiceWorker = async () => {
 }
 
 export function useQuery(search) {
-  return new URLSearchParams(search);
+  return new URLSearchParams(search)
 }
 
 export const waitForDocumentLoad = () =>
@@ -44,10 +46,9 @@ export const waitForDocumentLoad = () =>
     }
   })
 
-export const wait = (time) =>
+export const wait = time =>
   new Promise(res => {
     window.setTimeout(() => {
       res()
     }, time)
   })
-

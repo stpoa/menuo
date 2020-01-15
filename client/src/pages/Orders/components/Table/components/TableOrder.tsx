@@ -90,7 +90,7 @@ export const TableOrder = ({
       <DeleteOrderDialog
         handleClose={() => setShowDeleteDialog(false)}
         handleConfirm={() => {
-          handleDeleteOrder(order._id)
+          handleDeleteOrder(order._id)()
           setShowDeleteDialog(false)
         }}
         open={showDeleteDialog}
