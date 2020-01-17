@@ -43,6 +43,10 @@ export const Orders = ({ match, history }: any) => {
     } catch (e) {
       console.log(e)
     }
+
+    const interval = setInterval(() => setRefetch(+new Date()), 30 * 1000)
+
+    return () => clearInterval(interval)
   }, [])
 
   const classes = useStyles()
