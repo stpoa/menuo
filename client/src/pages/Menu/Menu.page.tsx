@@ -68,7 +68,7 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
   const { restaurant } = match.params as { restaurant: string }
   const { search } = location
   const query = useQuery(search)
-  const tableName = query.get('table')
+  const [tableName, setTableName] = useState('')
 
   const [refetch, setRefetch] = useState(0)
   const [loading, setLoading] = useState(true)
@@ -100,6 +100,10 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
   }, [restaurant, tableName, refetch])
 
   useEffect(() => {
+    console.log(location, match)
+    setTableName(query.get('table') || '')
+    window.history.pushState('', '', location.pathname)
+
     try {
       navigator.serviceWorker.addEventListener('message', event => {
         setRefetch(event.data.refetch)
@@ -116,7 +120,11 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
   const classes = useStyles() as any
 
   if (!tableName) {
-    return <div>Error, no table param</div>
+    return (
+      <div>
+        Zeskanuj kod QR w aparacie bądź innej aplikacji aby zobaczyć menu
+      </div>
+    )
   }
 
   // Handlers
