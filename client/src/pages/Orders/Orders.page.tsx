@@ -44,7 +44,7 @@ export const Orders = ({ match, history }: any) => {
       console.log(e)
     }
 
-    const interval = setInterval(() => setRefetch(+new Date()), 30 * 1000)
+    const interval = setInterval(() => setRefetch(+new Date()), 60 * 1000)
 
     return () => clearInterval(interval)
   }, [])

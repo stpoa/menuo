@@ -100,7 +100,6 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
   }, [restaurant, tableName, refetch])
 
   useEffect(() => {
-    console.log(location, match)
     setTableName(query.get('table') || '')
     window.history.pushState('', '', location.pathname)
 
