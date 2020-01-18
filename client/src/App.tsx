@@ -6,8 +6,17 @@ import { Orders } from './pages/Orders/Orders.page'
 import ProtectedRoute from './components/ProtectedRoute'
 
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
-import { isLoggedIn } from './auth/service'
 import { LoginPage } from './pages/Login/Login.page'
+
+import TagManager from 'react-gtm-module'
+
+// Setup google tag manager
+const GTM_ID = process.env.REACT_APP_GTM_ID
+if (GTM_ID) {
+  TagManager.initialize({
+    gtmId: GTM_ID,
+  })
+}
 
 const theme = createMuiTheme({
   palette: {
