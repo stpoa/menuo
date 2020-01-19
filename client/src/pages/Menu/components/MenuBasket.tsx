@@ -53,7 +53,7 @@ export const BasketDialog: FC<BasketDialogProps> = ({
     <DialogTitle>Aktualnie w koszyku</DialogTitle>
     <DialogContent>
       {inBasket.map(([entry, count]) => (
-        <li>
+        <li key={entry._id}>
           {count}x {truncate(80)(entry.dishName)} -{' '}
           {truncate(80)(entry.dishVariantName || '')} ({entry.dishVariantPrice}
           zł)

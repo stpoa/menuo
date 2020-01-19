@@ -1,7 +1,6 @@
 import React, { FC } from 'react'
 import { useStyles } from '../Menu.styles'
 import { DialogTitle, DialogContent, Dialog, Button } from '@material-ui/core'
-import { Table } from 'menuo-shared/interfaces/tables'
 
 interface WaiterSummonDialogProps {
   open: boolean
