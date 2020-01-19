@@ -43,5 +43,13 @@ export const useStyles = makeStyles(theme =>
       height: '40px',
       zIndex: 100,
     },
+    basketButton: {
+      position: 'fixed',
+      top: '1rem',
+      right: '4rem',
+      width: '40px',
+      height: '40px',
+      zIndex: 100,
+    },
   }),
 )

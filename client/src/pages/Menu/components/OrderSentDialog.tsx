@@ -9,6 +9,21 @@ interface OrderSentDialogProps {
   ordered: [MenuEntry, number][]
 }
 
+interface OrderedListProps {
+  ordered: [MenuEntry, number][]
+}
+
+export const OrderedList: FC<OrderedListProps> = ({ ordered }) => (
+  <ul>
+    {ordered.map(([entry, count]) => (
+      <li key={entry._id}>
+        {count}x {entry.dishName} - {entry.dishVariantName} (
+        {entry.dishVariantPrice}zł)
+      </li>
+    ))}
+  </ul>
+)
+
 export const OrderSentDialog: FC<OrderSentDialogProps> = ({
   showOrderedDialog,
   handleClose,
@@ -19,13 +34,7 @@ export const OrderSentDialog: FC<OrderSentDialogProps> = ({
     <DialogTitle>Zamówienie wysłane!</DialogTitle>
     <DialogContent>
       <p>Twoje zamówienie zostało wysłane!</p>
-      {ordered.map(([entry, count]) => (
-        <li>
-          {count}x {entry.dishName} - {entry.dishVariantName} (
-          {entry.dishVariantPrice}zł)
-        </li>
-      ))}
-
+      <OrderedList {...{ ordered }} />
       <p>
         Jeżeli chcesz coś jeszcze zamówić możesz złożyć kolejne zamówienie.
         Pamiętaj, że w każdej chwili możesz zawołać kelnera klikając na

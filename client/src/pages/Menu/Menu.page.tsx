@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { filter } from 'ramda'
 
-import { nestMenu, Order, MenuEntry, Menu, IMenu } from 'menuo-shared'
+import { nestMenu, Order, MenuEntry, Menu, IMenu, IVariant } from 'menuo-shared'
 
 import { useQuery } from '../../utils'
 import { Button, Fab } from '@material-ui/core'
@@ -24,6 +24,9 @@ import { readSubscription } from '../../notifications'
 import { Loading } from '../../components/Loading'
 import { Receipt as ReceiptIcon } from '@material-ui/icons'
 import { OrderedListDialog } from './components/OrderedListDialog'
+import { MenuBasketButton, BasketDialog } from './components/MenuBasket'
+
+const DEV_REDIRECTS = process.env.REACT_APP_DEV_REDIRECTS
 
 type Basket = { [itemId: string]: number }
 
@@ -101,7 +104,9 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
 
   useEffect(() => {
     setTableName(query.get('table') || '')
-    window.history.pushState('', '', location.pathname)
+    if (!DEV_REDIRECTS) {
+      window.history.pushState('', '', location.pathname)
+    }
 
     try {
       navigator.serviceWorker.addEventListener('message', event => {
@@ -116,6 +121,7 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
   const [showSummonDialog, setShowSummonDialog] = useState(false)
   const [showOrderedInfo, setShowOrderedInfo] = useState(false)
   const [showOrderedList, setShowOrderedList] = useState(false)
+  const [showBasket, setShowBasket] = useState(false)
   const classes = useStyles() as any
 
   if (!tableName) {
@@ -195,33 +201,44 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
     return setBasket(basket => ({ ...basket, [id]: basket[id] + 1 }))
   }
 
-  const handleDishClick = () => (entryId: string) => () => {
-    const id = entryId
-    const variantIds = Object.keys(basket)
-    // FIXME: Something is missing here, filter
+  const handleDishClick = () => (variants: IVariant[]) => () => {
+    const id = variants[0]._id
 
-    if (variantIds.some(id => basket[id] > 0)) {
-      variantIds.forEach(id => setBasket(basket => ({ ...basket, [id]: 0 })))
+    if (variants.some(v => basket[v._id] > 0)) {
+      const newBasketPart = Object.fromEntries(
+        variants.map(v => [v._id, 0] as [string, number]),
+      )
+      setBasket(basket =>
+        filter((v: number) => v > 0)({
+          ...basket,
+          ...newBasketPart,
+        }),
+      )
     } else {
       const count = basket[id]
-      setBasket(basket => ({ ...basket, [id]: count ? 0 : 1 }))
+      setBasket(basket =>
+        filter((v: number) => v > 0)({ ...basket, [id]: count ? 0 : 1 }),
+      )
     }
   }
 
   const handleOrderedClick = () => setShowOrderedList(true)
-
-  // Tools
-  const isBasketFilled = (
-    basket: { [s: string]: unknown } | ArrayLike<unknown>,
-  ) => !!Object.values(basket as any).reduce((a: any, b: any) => a + b, 0)
+  const handleBasketClick = () => setShowBasket(true)
 
   // Variables
-  const isBasketEmpty = !isBasketFilled(basket)
+  const basketItemCount = Object.values(basket).length
+  const isBasketEmpty = !basketItemCount
 
   return (
     <div className={classes.root}>
       <Loading loading={loading} />
       <Header>{restaurant}</Header>
+      <MenuBasketButton
+        className={classes.basketButton}
+        count={basketItemCount}
+        disabled={!basketItemCount}
+        onClick={handleBasketClick}
+      />
       <Fab
         disabled={ordered.length === 0}
         onClick={handleOrderedClick}
@@ -247,7 +264,6 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
           />
         ))}
       </div>
-
       <div className={classes.buttons}>
         <Button
           className={classes.buttonLeft}
@@ -267,7 +283,6 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
           Zamów
         </Button>
       </div>
-
       <WaiterSummonDialog
         open={showSummonDialog}
         handleClose={() => setShowSummonDialog(false)}
@@ -275,7 +290,6 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
         handlePayCashClick={handlePayCashClick(table)}
         handleSummonClick={handleSummonClick(table)}
       />
-
       <OrderSentDialog
         handleClose={() => setShowOrderedInfo(false)}
         handleConfirm={() => {
@@ -285,12 +299,17 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
         showOrderedDialog={showOrderedInfo}
         ordered={getOrderedEntries(dishes, basket)}
       />
-
       <OrderedListDialog
         onClose={() => setShowOrderedList(false)}
         onConfirm={() => setShowOrderedList(false)}
         open={showOrderedList}
         ordered={ordered}
+      />
+      <BasketDialog
+        onClose={() => setShowBasket(false)}
+        onConfirm={() => setShowBasket(false)}
+        open={showBasket}
+        inBasket={getOrderedEntries(dishes, basket)}
       />
     </div>
   )
