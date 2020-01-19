@@ -7,6 +7,8 @@ import { Table } from 'menuo-shared/interfaces/tables'
 import { User, WaiterUser } from 'menuo-shared/interfaces/users'
 
 const mongodbPassword = process.env.MONGODB_PASSWORD
+const mongodbUrl = process.env.MONGODB_URL
+const mongodbUser = process.env.MONGODB_USER
 
 export const withDB = (f: AGPHADB) => (
   event: APIGatewayProxyEvent,
@@ -16,7 +18,7 @@ export const withDB = (f: AGPHADB) => (
   ctx.callbackWaitsForEmptyEventLoop = false
 
   // connect
-  const uri = `mongodb+srv://menuo:${mongodbPassword}@menuo-u36ys.mongodb.net/test?retryWrites=true&w=majority`
+  const uri = `mongodb+srv://${mongodbUser}:${mongodbPassword}@${mongodbUrl}`
   if (!ctx.dbClient) {
     MongoClient.connect(uri, { useNewUrlParser: true }).then(dbClient => {
       f(event, { ...ctx, dbClient } as any, cb)
