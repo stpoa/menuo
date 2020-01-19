@@ -25,6 +25,7 @@ import { Loading } from '../../components/Loading'
 import { Receipt as ReceiptIcon } from '@material-ui/icons'
 import { OrderedListDialog } from './components/OrderedListDialog'
 import { MenuBasketButton, BasketDialog } from './components/MenuBasket'
+import { OrderConfirmationDialog } from './components/OrderConfirmationDialog'
 
 const DEV_REDIRECTS = process.env.REACT_APP_DEV_REDIRECTS
 
@@ -122,6 +123,7 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
   const [showOrderedInfo, setShowOrderedInfo] = useState(false)
   const [showOrderedList, setShowOrderedList] = useState(false)
   const [showBasket, setShowBasket] = useState(false)
+  const [showConfirmationDialog, setShowConfirmationDialog] = useState(false)
   const classes = useStyles() as any
 
   if (!tableName) {
@@ -282,7 +284,7 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
           className={classes.buttonRight}
           variant="contained"
           color="primary"
-          onClick={handleOrderClick({ basket, table, menu: dishes, user: '' })}
+          onClick={() => setShowConfirmationDialog(true)}
         >
           Zamów
         </Button>
@@ -295,6 +297,17 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
         handlePayCashClick={handlePayCashClick(table)}
         handleSummonClick={handleSummonClick(table)}
       />
+      <OrderConfirmationDialog
+        disabled={loading}
+        open={showConfirmationDialog}
+        onClose={() => setShowConfirmationDialog(false)}
+        onConfirm={async () => {
+          await handleOrderClick({ basket, table, menu: dishes, user: '' })()
+          setShowConfirmationDialog(false)
+        }}
+        onReject={() => setShowConfirmationDialog(false)}
+        inBasket={getOrderedEntries(dishes, basket)}
+      />
       <OrderSentDialog
         handleClose={() => setShowOrderedInfo(false)}
         handleConfirm={() => {
@@ -305,15 +318,15 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
         ordered={getOrderedEntries(dishes, basket)}
       />
       <OrderedListDialog
+        open={showOrderedList}
         onClose={() => setShowOrderedList(false)}
         onConfirm={() => setShowOrderedList(false)}
-        open={showOrderedList}
         ordered={ordered}
       />
       <BasketDialog
+        open={showBasket}
         onClose={() => setShowBasket(false)}
         onConfirm={() => setShowBasket(false)}
-        open={showBasket}
         inBasket={getOrderedEntries(dishes, basket)}
       />
     </div>

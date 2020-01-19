@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { Dialog, DialogTitle, DialogContent, Button } from '@material-ui/core'
 import { MenuEntry } from 'menuo-shared'
-import { truncate } from '../../../utils/text'
+import { OrderedList } from './OrderList'
 
 interface OrderedListDialogProps {
   open: boolean
@@ -19,13 +19,7 @@ export const OrderedListDialog: FC<OrderedListDialogProps> = ({
   <Dialog open={open} onClose={onClose}>
     <DialogTitle>Lista twoich zamówień</DialogTitle>
     <DialogContent>
-      {ordered.map(([entry, count]) => (
-        <li>
-          {count}x {truncate(80)(entry.dishName)} -{' '}
-          {truncate(80)(entry.dishVariantName || '')} ({entry.dishVariantPrice}
-          zł)
-        </li>
-      ))}
+      <OrderedList ordered={ordered} />
     </DialogContent>
     <Button color="primary" onClick={onConfirm}>
       Ok

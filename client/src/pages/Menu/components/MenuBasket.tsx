@@ -3,7 +3,7 @@ import { withStyles, createStyles, Badge, Theme, Fab } from '@material-ui/core'
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
 import { Dialog, DialogTitle, DialogContent, Button } from '@material-ui/core'
 import { MenuEntry } from 'menuo-shared'
-import { truncate } from '../../../utils/text'
+import { OrderedList } from './OrderList'
 
 const StyledBadge = withStyles((theme: Theme) =>
   createStyles({
@@ -52,13 +52,7 @@ export const BasketDialog: FC<BasketDialogProps> = ({
   <Dialog open={open} onClose={onClose}>
     <DialogTitle>Aktualnie w koszyku</DialogTitle>
     <DialogContent>
-      {inBasket.map(([entry, count]) => (
-        <li key={entry._id}>
-          {count}x {truncate(80)(entry.dishName)} -{' '}
-          {truncate(80)(entry.dishVariantName || '')} ({entry.dishVariantPrice}
-          zł)
-        </li>
-      ))}
+      <OrderedList ordered={inBasket} />
     </DialogContent>
     <Button color="primary" onClick={onConfirm}>
       Ok
