@@ -269,6 +269,7 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
       </div>
       <div className={classes.buttons}>
         <Button
+          disabled={loading}
           className={classes.buttonLeft}
           variant="outlined"
           color="primary"
@@ -277,7 +278,7 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
           Zawołaj kelnera
         </Button>
         <Button
-          disabled={isBasketEmpty}
+          disabled={isBasketEmpty || loading}
           className={classes.buttonRight}
           variant="contained"
           color="primary"
@@ -287,6 +288,7 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
         </Button>
       </div>
       <WaiterSummonDialog
+        disabled={loading}
         open={showSummonDialog}
         handleClose={() => setShowSummonDialog(false)}
         handlePayCardClick={handlePayCardClick(table)}
