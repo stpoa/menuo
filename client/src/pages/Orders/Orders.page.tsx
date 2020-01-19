@@ -15,6 +15,10 @@ import { Loading } from '../../components/Loading'
 import { Fab } from '@material-ui/core'
 import { ExitToApp as ExitToAppIcon } from '@material-ui/icons'
 
+const ORDERS_REFETCH_INTERVAL = +(
+  process.env.REACT_APP_ORDERS_REFETCH_INTERVAL || 24 * 60 * 60
+)
+
 export const Orders = ({ match, history }: any) => {
   const { restaurant } = match.params
   const [refetch, setRefetch] = useState(0)
@@ -44,7 +48,10 @@ export const Orders = ({ match, history }: any) => {
       console.log(e)
     }
 
-    const interval = setInterval(() => setRefetch(+new Date()), 60 * 1000)
+    const interval = setInterval(
+      () => setRefetch(+new Date()),
+      ORDERS_REFETCH_INTERVAL * 1000,
+    )
 
     return () => clearInterval(interval)
   }, [])
