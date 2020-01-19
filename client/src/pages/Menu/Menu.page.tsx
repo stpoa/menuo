@@ -226,7 +226,10 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
   const handleBasketClick = () => setShowBasket(true)
 
   // Variables
-  const basketItemCount = Object.values(basket).length
+  const add = (a: number, b: number) => a + b
+  const basketItemCount = Object.values(basket)
+    .filter(v => !!v)
+    .reduce(add, 0)
   const isBasketEmpty = !basketItemCount
 
   return (
