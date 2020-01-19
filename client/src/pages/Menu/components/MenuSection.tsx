@@ -8,14 +8,14 @@ import {
   Checkbox,
 } from '@material-ui/core'
 
-import { ISection, IDish } from 'menuo-shared'
+import { ISection, IDish, IVariant } from 'menuo-shared'
 
 import { H2 } from '../../../components/H2'
 import { PlusMinus } from '../../../components/PlusMinus'
 
 export interface MenuSectionProps {
   section: ISection
-  handleDishClick: (entryId: string) => () => void
+  handleDishClick: (varaints: IVariant[]) => () => void
   handleToggle: (entryId: string, count: number) => () => void
   basket: any
   handleMinus: (entryId: string) => () => void
@@ -41,10 +41,7 @@ export const MenuSection = ({
       <List>
         {section.dishes.map((dish: IDish, i) => (
           <div key={i}>
-            <ListItem
-              button
-              onClick={handleDishClick(dish.variants[0].entry._id)}
-            >
+            <ListItem button onClick={handleDishClick(dish.variants)}>
               <ListItemText primary={dish.name} secondary={dish.description} />
             </ListItem>
             <List component="div" disablePadding>
@@ -59,11 +56,7 @@ export const MenuSection = ({
                   <ListItem
                     key={variantId}
                     button={!count as true}
-                    onClick={
-                      !count
-                        ? handleToggle(id, count)
-                        : undefined
-                    }
+                    onClick={!count ? handleToggle(id, count) : undefined}
                   >
                     <ListItemIcon>
                       <Checkbox
