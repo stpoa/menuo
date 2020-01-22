@@ -3,8 +3,10 @@ import { makeStyles, createStyles } from '@material-ui/styles'
 export const useStyles = makeStyles(theme =>
   createStyles({
     root: {
+      backgroundColor: '#f5f5f5',
       flexDirection: 'column',
-      padding: '1rem',
+      padding: '0.75rem 1rem',
+      minHeight: '100vh',
     },
     menuContent: {
       marginTop: '1rem',
@@ -19,12 +21,12 @@ export const useStyles = makeStyles(theme =>
       marginLeft: '-48%',
       flexDirection: 'row',
       justifyContent: 'center',
-      background: 'white',
     },
     buttonLeft: {
       width: '50%',
       marginRight: '0.5rem',
       fontSize: '0.8rem',
+      background: 'white',
     },
     buttonRight: {
       width: '50%',

@@ -237,7 +237,7 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
   return (
     <div className={classes.root}>
       <Loading loading={loading} />
-      <Header>{restaurant}</Header>
+      <Header>menuo</Header>
       <MenuBasketButton
         className={classes.basketButton}
         count={basketItemCount}
@@ -258,6 +258,7 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
         {menu.map((section, i) => (
           <MenuSection
             {...{
+              id: 'section-' + i,
               section,
               key: i,
               handleDishClick: handleDishClick(),

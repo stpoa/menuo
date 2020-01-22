@@ -5,8 +5,9 @@ import { H1 } from '../components/H1'
 const useStyles = makeStyles(theme =>
   createStyles({
     root: {
-      marginTop: '1rem',
-      marginBottom: '1rem',
+      paddingTop: '1rem',
+      paddingBottom: '1.35rem',
+      borderBottom: '1px solid #ccc',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',

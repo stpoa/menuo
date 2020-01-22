@@ -17,18 +17,14 @@ ReactDOM.render(
 )
 
 const run = async () => {
-  await waitForDocumentLoad()
-  await registerServiceWorker()
-  // const isWaiter = window.location.pathname.includes('orders')
-  const subscription = await getSubscription(publicVapidKey)
-  localStorage.setItem('subscription', JSON.stringify(subscription))
-  // console.log(localStorage.getItem('subscription'))
-  // const query = new URLSearchParams(window.location.search)
-  // await apiSubscribe(
-  //   subscription,
-  //   isWaiter ? 'waiter' : 'customer',
-  //   query.get('table'),
-  // )
+  try {
+    await waitForDocumentLoad()
+    await registerServiceWorker()
+    const subscription = await getSubscription(publicVapidKey)
+    localStorage.setItem('subscription', JSON.stringify(subscription))
+  } catch (e) {
+    console.log(e)
+  }
 }
 
 try {
