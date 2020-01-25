@@ -7,9 +7,10 @@ import {
   Checkbox,
   ListItemText,
   ListItemSecondaryAction,
+  Card,
 } from '@material-ui/core'
 import { Check, DeleteForever, ArrowForwardIos } from '@material-ui/icons'
-import { IOrder, Order, MenuEntry, IOrderItem } from 'menuo-shared'
+import { IOrder, IOrderItem } from 'menuo-shared'
 import { DeleteOrderDialog } from '../../DeleteOrderDialog'
 import { PrioritySelect } from '../../../../Menu/components/Priority'
 import { SelectInputProps } from '@material-ui/core/Select/SelectInput'
@@ -36,7 +37,7 @@ export const TableOrder = ({
   const [showDeleteDialog, setShowDeleteDialog] = useState(false)
 
   return order.status === '' ? null : (
-    <div>
+    <Card style={{ margin: '1rem 0', paddingBottom: '1rem' }}>
       <ListItem>
         <ListItemIcon>
           <Checkbox
@@ -107,6 +108,6 @@ export const TableOrder = ({
         }}
         open={showDeleteDialog}
       />
-    </div>
+    </Card>
   )
 }

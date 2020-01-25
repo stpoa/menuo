@@ -31,7 +31,7 @@ export const OrdersTable = ({
   loading,
 }: OrdersTableProps) => {
   return (
-    <div>
+    <div style={{ marginTop: '2rem' }}>
       <div style={{ position: 'relative' }}>
         <H2> Stół {table.name} </H2>
         {table.status === 'summon-waiter' && (
@@ -68,7 +68,6 @@ export const OrdersTable = ({
           </Fab>
         )}
       </div>
-      <Divider />
 
       <List>
         {orders.map((order, key) => (
