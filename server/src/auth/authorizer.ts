@@ -1,4 +1,4 @@
-import { verifyToken } from './token'
+import { decodeToken } from './token'
 
 const generateAWSPolicy = (
   principalId: string,
@@ -20,27 +20,22 @@ const generateAWSPolicy = (
   context,
 })
 
-export const handler = (event: any, context: any, cb: any) => {
+export const handler = async (event: any, context: any, cb: any) => {
   try {
     const token = event.authorizationToken
-    const secret = process.env.JWT_SECRET
+    const secret = process.env.JWT_SECRET || ''
+    console.log(!!token, !!secret)
 
-    verifyToken(secret || '')(token)
-      .then(t => (!t ? Promise.reject() : t))
-      .then(result => {
-        cb(
-          null,
-          generateAWSPolicy(
-            result.iss,
-            'Allow',
-            process.env.IS_OFFLINE ? event.methodArn : 'arn:aws:execute-api:*',
-          ),
-        )
-      })
-      .catch(err => {
-        cb('Unauthorized')
-      })
+    const decoded = await decodeToken<{ iss: string }>(secret)(token)
+    console.log({ decoded })
+
+    return generateAWSPolicy(
+      decoded.iss,
+      'Allow',
+      process.env.IS_OFFLINE ? event.methodArn : 'arn:aws:execute-api:*',
+    )
   } catch (err) {
-    cb('Unauthorized')
+    console.log({ err })
+    return 'Unauthorized'
   }
 }
