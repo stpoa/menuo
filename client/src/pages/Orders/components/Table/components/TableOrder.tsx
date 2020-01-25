@@ -9,14 +9,20 @@ import {
   ListItemSecondaryAction,
 } from '@material-ui/core'
 import { Check, DeleteForever, ArrowForwardIos } from '@material-ui/icons'
-import { IOrder } from 'menuo-shared'
+import { IOrder, Order, MenuEntry, IOrderItem } from 'menuo-shared'
 import { DeleteOrderDialog } from '../../DeleteOrderDialog'
+import { PrioritySelect } from '../../../../Menu/components/Priority'
+import { SelectInputProps } from '@material-ui/core/Select/SelectInput'
 
 interface TabbleOrderProps {
   order: IOrder
   handleCompleteOrderToggle: (order: string, status: string) => () => void
   handleAcceptOrder: any
   handleDeleteOrder: (order: string) => () => void
+  handlePriorityChange: (
+    order: IOrder,
+  ) => (item: IOrderItem) => SelectInputProps['onChange']
+  loading: boolean
 }
 
 export const TableOrder = ({
@@ -24,6 +30,8 @@ export const TableOrder = ({
   handleCompleteOrderToggle,
   handleAcceptOrder,
   handleDeleteOrder,
+  handlePriorityChange,
+  loading,
 }: TabbleOrderProps) => {
   const [showDeleteDialog, setShowDeleteDialog] = useState(false)
 
@@ -65,12 +73,14 @@ export const TableOrder = ({
         </ListItemSecondaryAction>
       </ListItem>
       <List component="div" disablePadding>
-        {order.items.map(item => {
+        {order.items.map((item: IOrderItem) => {
+          const priority: number = item.entry.priority || 1
           const variantText =
-            `${item.count} x ${item.dishName}` +
+            `${item.dishName}` +
             (item.entry.dishVariantName
               ? `- ${item.entry.dishVariantName}`
-              : '')
+              : '') +
+            ` x ${item.count}`
 
           return (
             <ListItem
@@ -78,9 +88,12 @@ export const TableOrder = ({
               button={(order.status !== 'new') as true}
               onClick={order.status === 'new' ? undefined : () => {}}
             >
-              <ListItemIcon>
-                <ArrowForwardIos />
-              </ListItemIcon>
+              <PrioritySelect
+                disabled={loading}
+                value={priority}
+                onChange={handlePriorityChange(order)(item)}
+                style={{ marginRight: '1rem' }}
+              />
               <ListItemText>{variantText}</ListItemText>
             </ListItem>
           )

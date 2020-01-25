@@ -110,7 +110,7 @@ export const Orders = ({ match, history }: any) => {
   return (
     <div className={classes.root}>
       <Loading loading={loading} />
-      <Header>Zamówienia</Header>
+      <Header>menuo</Header>
       <Fab
         onClick={handleLogoutClick}
         color="primary"
@@ -123,6 +123,7 @@ export const Orders = ({ match, history }: any) => {
       {orders.tables.map(({ orders, table }) => (
         <OrdersTable
           {...{
+            loading,
             key: table._id,
             table,
             orders,
@@ -130,6 +131,23 @@ export const Orders = ({ match, history }: any) => {
             handleDeleteOrder: handleDeleteOrder(restaurant),
             handleCompleteOrderToggle: handleCompleteOrderToggle(restaurant),
             handleCompleteAction: handleCompleteAction(restaurant),
+            handlePriorityChange: order => orderEntry => async e => {
+              await updateRestaurantOrder(
+                { restaurant, order: order._id },
+                {
+                  entries: order.items.map(i => {
+                    const priority =
+                      i.entry._id === orderEntry.entry._id
+                        ? (e.target.value as number)
+                        : i.entry.priority
+                    const entry = { ...i.entry, priority }
+
+                    return [entry, i.count]
+                  }),
+                },
+              )
+              setRefetch(+new Date())
+            },
           }}
         />
       ))}

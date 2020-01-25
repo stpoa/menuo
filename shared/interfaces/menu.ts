@@ -34,7 +34,7 @@ export type Menu = MenuEntry[]
 
 export interface MenuEntry {
   _id: string
-  language: Lanuage,
+  language: Lanuage
   index: number
   restaurant: string
   section: string
@@ -44,4 +44,5 @@ export interface MenuEntry {
   dishVariantName?: string
   dishVariantDescription?: string
   dishVariantPrice: number
+  priority?: number | undefined
 }

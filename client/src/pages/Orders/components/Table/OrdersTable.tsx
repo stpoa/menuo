@@ -3,8 +3,9 @@ import { Fab, Divider, List } from '@material-ui/core'
 import { AccessibilityNew, CreditCard, Money } from '@material-ui/icons'
 import { H2 } from '../../../../components/H2'
 import { TableOrder } from './components/TableOrder'
-import { IOrder } from 'menuo-shared'
+import { IOrder, IOrderItem } from 'menuo-shared'
 import { Table } from 'menuo-shared/interfaces/tables'
+import { SelectInputProps } from '@material-ui/core/Select/SelectInput'
 
 interface OrdersTableProps {
   orders: IOrder[]
@@ -13,6 +14,10 @@ interface OrdersTableProps {
   handleDeleteOrder: (order: string) => () => void
   handleCompleteOrderToggle: (order: string, status: string) => () => void
   handleCompleteAction: (table: string, tableStatus: string) => () => void
+  handlePriorityChange: (
+    order: IOrder,
+  ) => (item: IOrderItem) => SelectInputProps['onChange']
+  loading: boolean
 }
 
 export const OrdersTable = ({
@@ -22,6 +27,8 @@ export const OrdersTable = ({
   handleDeleteOrder,
   handleCompleteOrderToggle,
   handleCompleteAction,
+  handlePriorityChange,
+  loading,
 }: OrdersTableProps) => {
   return (
     <div>
@@ -67,9 +74,11 @@ export const OrdersTable = ({
         {orders.map((order, key) => (
           <TableOrder
             {...{
+              loading,
               order,
               key,
               handleCompleteOrderToggle,
+              handlePriorityChange,
               handleAcceptOrder,
               handleDeleteOrder,
             }}
