@@ -27,7 +27,7 @@ const theme = createMuiTheme({
 
 const App = () => {
   return (
-    <div className="App">
+    <div id="app">
       <ThemeProvider theme={theme}>
         <Switch>
           <Route exact path="/:restaurant" component={MenuPage} />

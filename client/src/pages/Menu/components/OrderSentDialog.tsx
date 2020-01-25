@@ -6,7 +6,7 @@ import { OrderedList } from './OrderList'
 interface OrderSentDialogProps {
   showOrderedDialog: any
   handleClose: any
-  handleConfirm: any
+  handleConfirm: () => void
   ordered: [MenuEntry, number][]
 }
 
