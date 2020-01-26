@@ -13,5 +13,12 @@ export const useStyles = makeStyles(theme =>
       width: '40px',
       height: '40px',
     },
+    tablesFab: {
+      position: 'absolute',
+      top: '1rem',
+      right: '4rem',
+      width: '40px',
+      height: '40px',
+    },
   }),
 )

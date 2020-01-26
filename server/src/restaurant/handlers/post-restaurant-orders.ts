@@ -1,6 +1,6 @@
 import 'source-map-support/register'
 import { response } from 'src/lib/http'
-import { withDB, getWaiterUser, getRestaurantWaiterUsers } from 'src/db/db'
+import { withDB, getRestaurantWaiterUsers } from 'src/db/db'
 import { log } from 'src/logs/logs'
 import { createOrder } from 'src/db/orders'
 import { CreateRestaurantOrder } from 'menuo-shared/interfaces/api'
@@ -22,11 +22,15 @@ export const handler = withDB(async (event, ctx, _cb) => {
       restaurant: params.restaurant,
     })
 
-    const waiterSubscriptions = (
-      await getRestaurantWaiterUsers(ctx.dbClient)({
-        restaurant: params.restaurant,
-      })
-    ).map(w => w.subscription)
+    const waiters = await getRestaurantWaiterUsers(ctx.dbClient)({
+      restaurant: params.restaurant,
+    })
+
+    const waiterSubscriptions = waiters
+      .flatMap(w => w.tables.map(table => ({ ...w, table })))
+      .filter(w => w.table === order.table.name)
+      .map(w => w.subscription)
+      .filter(s => !!s)
 
     if (order.table.status === 'pay-card') {
       sendNotifications(ctx)(waiterSubscriptions)(
@@ -45,8 +49,8 @@ export const handler = withDB(async (event, ctx, _cb) => {
       )
     } else {
       sendNotifications(ctx)(waiterSubscriptions)(
-        'Nowe zamówienie przy stole ' + order.table.name,
-        order.entries.flatMap(([e, n]) => e.dishName + ' x ' + n).join(', '),
+        'Nowe zamówienie przy stole ' + order?.table?.name,
+        order?.entries?.flatMap(([e, n]) => e?.dishName + ' x ' + n).join(', '),
       )
     }
 

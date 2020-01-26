@@ -1,4 +1,4 @@
-import { get, put, del } from '../../api'
+import { get, put, del, getStaticJSONData } from '../../api'
 import {
   ListRestaurantOrders,
   DeleteRestaurantOrder,
@@ -28,3 +28,20 @@ export const deleteRestaurantOrders = ({
   del(
     `/restaurants/${restaurant}/orders/?table=${table}&tablestatus=${tableStatus}`,
   )
+
+export const getTables = ({
+  restaurant,
+}: {
+  restaurant: string
+}): Promise<string[]> => getStaticJSONData(`${restaurant}/tables.json`)
+
+export const getTablesMine = ({ restaurant }: { restaurant: string }) =>
+  get<string[]>(`/restaurants/${restaurant}/my-tables`)
+
+export const updateTablesMine = ({
+  tables,
+  restaurant,
+}: {
+  tables: string[]
+  restaurant: string
+}) => put<any>(`/restaurants/${restaurant}/my-tables`, { tables })
