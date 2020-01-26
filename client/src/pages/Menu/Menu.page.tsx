@@ -8,7 +8,6 @@ import { Button, Fab } from '@material-ui/core'
 import { Header } from '../../components/Header'
 import {
   listRestaurantDishes,
-  readRestaurantTable,
   createRestaurantOrder,
   summonWaiter,
   payByCard,
@@ -89,14 +88,13 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
   useEffect(() => {
     ;(async () => {
       setLoading(true)
-      const [dishes, table] = await Promise.all([
-        listRestaurantDishes({ restaurant }),
-        readRestaurantTable({
-          restaurant,
-          table: tableName ?? '',
-        }),
-      ])
-      setTable(table)
+      const [dishes] = await Promise.all([listRestaurantDishes({ restaurant })])
+      setTable({
+        name: query.get('table') || '',
+        restaurant,
+        _id: '',
+        status: 'new',
+      })
       setDishes(dishes)
       setMenu(nestMenu(dishes))
       setLoading(false)
