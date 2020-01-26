@@ -27,7 +27,7 @@ export const handler = withDB(async (event, ctx, _cb) => {
     if (updates.status === 'accepted') {
       sendNotifications(ctx)([order!.customerSub])(
         'Zamówienie w przygotowaniu! ',
-        'Twoje zamówienie jest w trakcie przygotowania, kelner zaniesie je do stołu',
+        'Twoje zamówienie jest w trakcie przygotowania, kelner wkrótce przyniesie je do stołu',
       )
     }
   } catch (error) {

@@ -22,9 +22,9 @@ export const OrderSentDialog: FC<OrderSentDialogProps> = ({
       <p>Twoje zamówienie zostało wysłane!</p>
       <OrderedList {...{ ordered }} />
       <p>
-        Jeżeli chcesz coś jeszcze zamówić możesz złożyć kolejne zamówienie.
-        Pamiętaj, że w każdej chwili możesz zawołać kelnera klikając na
-        przycisk.
+        Pamiętaj, że w każdej chwili możesz złożyć kolejne zamówienie lub
+        zawołać kelnera. Zamówione wcześniej dania możesz sprawdzić klikając
+        ikonke w prawym, górnym rogu.
       </p>
     </DialogContent>
     <Button color="primary" onClick={handleConfirm}>
