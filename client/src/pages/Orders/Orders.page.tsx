@@ -43,12 +43,14 @@ export const Orders = ({ match, history }: any) => {
     [key: string]: boolean
   }>({})
 
-  useEffect(() => {
-    const mine = tablesMine.reduce(
+  const getInitialCheckedTables = () =>
+    tablesMine.reduce(
       (acc: { [key: string]: boolean }, t) => ({ ...acc, [t]: true }),
       {},
     )
-    setCheckedTables(mine)
+
+  useEffect(() => {
+    setCheckedTables(getInitialCheckedTables())
   }, [tablesMine])
 
   useEffect(() => {
@@ -213,8 +215,14 @@ export const Orders = ({ match, history }: any) => {
             [table]: !checked[table],
           }))
         }}
-        onClose={() => setShowTablesDialog(false)}
-        onReject={() => setShowTablesDialog(false)}
+        onClose={() => {
+          setShowTablesDialog(false)
+          setCheckedTables(getInitialCheckedTables())
+        }}
+        onReject={() => {
+          setShowTablesDialog(false)
+          setCheckedTables(getInitialCheckedTables())
+        }}
         onConfirm={async () => {
           await updateTablesMine({
             restaurant,
