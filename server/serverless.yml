@@ -183,6 +183,40 @@ functions:
             identitySource: method.request.header.Authorization
             authorizerResultTtlInSeconds: 0
 
+  get_restaurant_user_tables:
+    handler: src/restaurant/handlers/get-restaurant-user-tables.handler
+    events:
+      - http:
+          path: restaurants/{restaurant}/my-tables
+          method: get
+          cors: true
+          authorizer:
+            name: verify_token
+            type: token
+            identitySource: method.request.header.Authorization
+            authorizerResultTtlInSeconds: 0
+          request:
+            parameters:
+              paths:
+                restaurant: true
+
+  put_restaurant_user_tables:
+    handler: src/restaurant/handlers/put-restaurant-user-tables.handler
+    events:
+      - http:
+          path: restaurants/{restaurant}/my-tables
+          method: put
+          cors: true
+          authorizer:
+            name: verify_token
+            type: token
+            identitySource: method.request.header.Authorization
+            authorizerResultTtlInSeconds: 0
+          request:
+            parameters:
+              paths:
+                restaurant: true
+
   send_notifications:
     handler: src/handlers.sendNotifications
 

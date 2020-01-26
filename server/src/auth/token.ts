@@ -16,9 +16,9 @@ export const decodeToken = <T extends {}>(secret: string) => (
   })
 }
 
-export const authorize = (secret: string) => (event: {
+export const authorize = <T extends {}>(secret: string) => (event: {
   headers: { [x: string]: any }
 }) => {
   const token = event.headers['Authorization']
-  return token && decodeToken(secret)(token)
+  return token && decodeToken<T>(secret)(token)
 }

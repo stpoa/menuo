@@ -1,9 +1,8 @@
-import { MongoClient } from 'mongodb'
+import { MongoClient, ObjectId } from 'mongodb'
 import { Menu, MenuEntry, Order } from 'menuo-shared'
 import { AGPHADB, WithDB } from 'src/lib/http'
 import { APIGatewayProxyEvent, APIGatewayProxyCallback } from 'aws-lambda'
 import { Context } from 'vm'
-import { Table } from 'menuo-shared/interfaces/tables'
 import { User, WaiterUser } from 'menuo-shared/interfaces/users'
 
 const mongodbPassword = process.env.MONGODB_PASSWORD
@@ -52,33 +51,20 @@ export const getRestaurantOrders = (client: MongoClient) => async (
   return orders
 }
 
-export const getRestaurantTable = (client: MongoClient) => async (
-  restaurant: string,
-  name: string,
-): Promise<Table | null> => {
-  const collection = client.db('menuo').collection<Table>('tables')
-  const table = await collection.findOne({ restaurant, name })
-
-  return table
-}
-
-export const getUser = (client: MongoClient) => async (username: string) => {
-  const collection = client.db('menuo').collection<User>('users')
-  const user = await collection.findOne({ username })
-  return user
-}
-
 export const createWaiterUser = (client: MongoClient) => async ({
   deviceId,
   username,
   password,
   roles,
   restaurant,
+  subscription,
 }: Omit<WaiterUser, '_id'>) => {
   const collection = client
     .db('menuo')
     .collection<Omit<WaiterUser, '_id'>>('users')
   const user = await collection.insertOne({
+    tables: [],
+    subscription,
     restaurant,
     username,
     password,
@@ -91,7 +77,6 @@ export const createWaiterUser = (client: MongoClient) => async ({
 export const getWaiterUser = (client: MongoClient) => async ({
   username,
 }: Pick<WaiterUser, 'username'>) => {
-  console.log(username)
   const collection = client.db('menuo').collection<WaiterUser>('users')
   const user = await collection.findOne({ username })
   return user
@@ -102,7 +87,10 @@ export const updateWaiterUser = (client: MongoClient) => async (
   updates: Partial<WaiterUser>,
 ) => {
   const collection = client.db('menuo').collection<WaiterUser>('users')
-  return await collection.updateOne({ _id }, { $set: updates })
+  return await collection.updateOne(
+    { _id: new ObjectId(_id) },
+    { $set: updates },
+  )
 }
 
 export const getRestaurantWaiterUsers = (client: MongoClient) => async ({
