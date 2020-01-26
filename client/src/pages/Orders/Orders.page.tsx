@@ -66,7 +66,11 @@ export const Orders = ({ match, history }: any) => {
   useEffect(() => {
     const doEffect = async () => {
       const tables = await getTables({ restaurant })
-      setTables(tables)
+      setTables(
+        tables.every(v => Number(v) >= 0)
+          ? tables.sort((a, b) => +a - +b)
+          : tables.sort(),
+      )
     }
     doEffect()
   }, [restaurant, refetch])

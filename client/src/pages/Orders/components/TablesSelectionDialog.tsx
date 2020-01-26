@@ -52,7 +52,7 @@ export const TablesSelectionDialog: FC<OrderedListDialogProps> = ({
                 <ListItemIcon>
                   <Checkbox edge="start" checked={isChecked} />
                 </ListItemIcon>
-                <ListItemText primary={`Table: ${table.name}`} />
+                <ListItemText primary={`Stolik: ${table.name}`} />
               </ListItem>
             )
           })}
