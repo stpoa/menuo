@@ -2,6 +2,7 @@
   "name": "@menuo/shared",
   "version": "1.0.3",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "dependencies": {
     "@types/ramda": "^0.26.39",
     "ramda": "^0.26.1"
@@ -10,6 +11,7 @@
     "typescript": "^3.7.4"
   },
   "scripts": {
+    "start": "tsc --watch",
     "preinstall": "tsc"
   }
 }
