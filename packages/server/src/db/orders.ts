@@ -47,13 +47,11 @@ export const deleteOrders = (client: MongoClient) => async ({
   table: string
   tableStatus: string
 }) => {
-  console.log({ table, restaurant })
   const db = getOrdersCollection(client)
   const result = await db.deleteMany({
     restaurant,
     'table.name': table,
     'table.status': tableStatus,
   })
-  console.log({ result })
   return result
 }

@@ -13,7 +13,7 @@ interface OrdersTableProps {
   handleAcceptOrder: (restaurant: string) => () => void
   handleDeleteOrder: (order: string) => () => void
   handleCompleteOrderToggle: (order: string, status: string) => () => void
-  handleCompleteAction: (table: string, tableStatus: string) => () => void
+  handleCompleteAction: () => void
   handlePriorityChange: (
     order: IOrder,
   ) => (item: IOrderItem) => SelectInputProps['onChange']
@@ -30,7 +30,6 @@ export const OrdersTable = ({
   handlePriorityChange,
   loading,
 }: OrdersTableProps) => {
-  console.log(table.status)
   return (
     <div style={{ marginTop: '2rem' }}>
       <div style={{ position: 'relative' }}>
@@ -41,7 +40,7 @@ export const OrdersTable = ({
             size="small"
             variant="extended"
             color="secondary"
-            onClick={handleCompleteAction(table.name, table.status)}
+            onClick={handleCompleteAction}
           >
             <AccessibilityNew />
           </Fab>
@@ -52,7 +51,7 @@ export const OrdersTable = ({
             size="small"
             variant="extended"
             color="secondary"
-            onClick={handleCompleteAction(table._id, table.status)}
+            onClick={handleCompleteAction}
           >
             <CreditCard />
           </Fab>
@@ -63,7 +62,7 @@ export const OrdersTable = ({
             size="small"
             variant="extended"
             color="secondary"
-            onClick={handleCompleteAction(table._id, table.status)}
+            onClick={handleCompleteAction}
           >
             <Money />
           </Fab>

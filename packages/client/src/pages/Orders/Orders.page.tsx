@@ -11,7 +11,7 @@ import {
   getTablesMine,
   updateTablesMine,
 } from './Orders.api'
-import { IOrdersTables, nestOrders } from '@menuo/shared'
+import { IOrdersTables, nestOrders, Table } from '@menuo/shared'
 import { updateRestaurantOrder } from '../Menu/Menu.api'
 import { readSubscription } from '../../notifications'
 import { Loading } from '../../components/Loading'
@@ -136,12 +136,16 @@ export const Orders = ({ match, history }: any) => {
     setLoading(false)
   }
 
-  const handleCompleteAction = (restaurant: string) => (
-    table: string,
-    tableStatus: string,
-  ) => async () => {
+  const handleCompleteAction = (restaurant: string) => ({
+    name,
+    status,
+  }: Table) => async () => {
     setLoading(true)
-    await deleteRestaurantOrders({ restaurant, table, tableStatus })
+    await deleteRestaurantOrders({
+      restaurant,
+      table: name,
+      tableStatus: status,
+    })
     setRefetch(+new Date())
     setLoading(false)
   }
@@ -167,7 +171,6 @@ export const Orders = ({ match, history }: any) => {
       >
         <ExitToAppIcon />
       </Fab>
-
       <Fab
         onClick={handleTablesFabClick}
         color="primary"
@@ -176,17 +179,8 @@ export const Orders = ({ match, history }: any) => {
       >
         <ListIcon />
       </Fab>
-
       {orders.tables
-        // .map(t => {
-        //   console.log(t.table.name)
-        //   return t
-        // })
         .filter(t => tablesMine.includes(t.table.name))
-        .map(({ table, orders }) => {
-          console.log(table)
-          return { table, orders }
-        })
         .map(({ orders, table }) => (
           <OrdersTable
             {...{
@@ -197,7 +191,7 @@ export const Orders = ({ match, history }: any) => {
               handleAcceptOrder: handleAcceptOrder(restaurant),
               handleDeleteOrder: handleDeleteOrder(restaurant),
               handleCompleteOrderToggle: handleCompleteOrderToggle(restaurant),
-              handleCompleteAction: handleCompleteAction(restaurant),
+              handleCompleteAction: handleCompleteAction(restaurant)(table),
               handlePriorityChange: order => orderEntry => async e => {
                 await updateRestaurantOrder(
                   { restaurant, order: order._id },
@@ -218,7 +212,6 @@ export const Orders = ({ match, history }: any) => {
             }}
           />
         ))}
-
       <TablesSelectionDialog
         open={showTablesDialog}
         onCheck={(table: string) => () => {

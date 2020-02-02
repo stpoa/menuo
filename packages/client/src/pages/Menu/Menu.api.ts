@@ -45,7 +45,6 @@ export const changeTableStatus = (status: string) => (
   restaurant: string,
   table: Table,
 ) => {
-  console.log(table, status)
   return createRestaurantOrder(
     { restaurant },
     {
