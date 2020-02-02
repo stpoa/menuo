@@ -1,8 +1,8 @@
 import React from 'react'
-import { Switch, Route, NavLink } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import './App.css'
-import { MenuPage } from './pages/Menu/Menu.page'
-import { Orders } from './pages/Orders/Orders.page'
+import MenuPage from './pages/Menu/Menu.page'
+import OrdersPage from './pages/Orders/Orders.page'
 import ProtectedRoute from './components/ProtectedRoute'
 
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
@@ -35,7 +35,7 @@ const App = () => {
             exact
             path="/:restaurant/orders"
             authenticationPath="login"
-            component={Orders}
+            component={OrdersPage}
           />
           <Route exact path="/:restaurant/login" component={LoginPage} />
         </Switch>

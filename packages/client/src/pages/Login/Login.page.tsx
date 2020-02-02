@@ -1,17 +1,26 @@
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useRef, useState, FC } from 'react'
 import { RouteComponentProps, Redirect } from 'react-router'
 
-import { useStyles } from './Login.styles'
-import { Paper, Grid, TextField, Button } from '@material-ui/core'
+import {
+  Paper,
+  Grid,
+  TextField,
+  Button,
+  withStyles,
+  WithStyles,
+  createStyles,
+} from '@material-ui/core'
 import { Face, Fingerprint } from '@material-ui/icons'
 import { login, isLoggedIn } from '../../auth/service'
 import { readSubscription } from '../../notifications'
 
-export const LoginPage = ({ location, match }: RouteComponentProps) => {
+export const LoginPage: FC<RouteComponentProps & WithStyles> = ({
+  match,
+  classes,
+}) => {
   const { restaurant } = match.params as { restaurant: string }
 
   const [loggedIn, setLoggedIn] = useState(isLoggedIn())
-  const classes = useStyles()
   const usernameInput = useRef<HTMLInputElement>(null)
   const passwordInput = useRef<HTMLInputElement>(null)
 
@@ -29,7 +38,7 @@ export const LoginPage = ({ location, match }: RouteComponentProps) => {
   return loggedIn ? (
     <Redirect to={`/${restaurant}/orders`} />
   ) : (
-    <Paper>
+    <Paper className={classes.root}>
       <form onSubmit={handleSubmit}>
         <Grid container spacing={8} alignItems="flex-end">
           <Grid item>
@@ -77,3 +86,9 @@ export const LoginPage = ({ location, match }: RouteComponentProps) => {
     </Paper>
   )
 }
+
+export default withStyles(_ =>
+  createStyles({
+    root: {},
+  }),
+)(LoginPage)

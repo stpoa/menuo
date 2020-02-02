@@ -1,20 +1,16 @@
 import React, { FC, useEffect, useState } from 'react'
-import { makeStyles, createStyles, LinearProgress } from '@material-ui/core'
+import {
+  createStyles,
+  LinearProgress,
+  WithStyles,
+  withStyles,
+} from '@material-ui/core'
 
-const useStyles = makeStyles(theme =>
-  createStyles({
-    progress: {
-      position: 'fixed',
-      top: 0,
-      left: 0,
-      width: '100vw',
-    },
-  }),
-)
-
-export const Loading: FC<LoadingProps> = ({ loading }) => {
+export const Loading: FC<LoadingProps & WithStyles> = ({
+  loading,
+  classes,
+}) => {
   const [showSpinner, setShowSpinner] = useState(false)
-  const classes = useStyles()
 
   useEffect(() => {
     const timer = setTimeout(() => setShowSpinner(true), 300)
@@ -26,6 +22,17 @@ export const Loading: FC<LoadingProps> = ({ loading }) => {
     <LinearProgress className={classes.progress} />
   ) : null
 }
+
+export default withStyles(_ =>
+  createStyles({
+    progress: {
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      width: '100vw',
+    },
+  }),
+)(Loading)
 
 interface LoadingProps {
   loading: boolean

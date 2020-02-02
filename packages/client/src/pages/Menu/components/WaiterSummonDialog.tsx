@@ -1,8 +1,15 @@
 import React, { FC } from 'react'
-import { useStyles } from '../Menu.styles'
-import { DialogTitle, DialogContent, Dialog, Button } from '@material-ui/core'
+import {
+  DialogTitle,
+  DialogContent,
+  Dialog,
+  Button,
+  withStyles,
+  createStyles,
+  WithStyles,
+} from '@material-ui/core'
 
-interface WaiterSummonDialogProps {
+interface WaiterSummonDialogProps extends WithStyles {
   open: boolean
   disabled: boolean
   handleClose: () => void
@@ -18,9 +25,8 @@ export const WaiterSummonDialog: FC<WaiterSummonDialogProps> = ({
   handlePayCardClick,
   handlePayCashClick,
   handleSummonClick,
+  classes,
 }) => {
-  const classes = useStyles()
-
   return (
     <Dialog open={open} onClose={handleClose}>
       <DialogTitle>W jakim celu chcesz zawołać kelnera?</DialogTitle>
@@ -39,3 +45,13 @@ export const WaiterSummonDialog: FC<WaiterSummonDialogProps> = ({
     </Dialog>
   )
 }
+
+const styles = () =>
+  createStyles({
+    dialogButtons: {
+      display: 'flex',
+      flexDirection: 'column',
+    },
+  })
+
+export default withStyles(styles)(WaiterSummonDialog)

@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, FC } from 'react'
 import { Header } from '../../components/Header'
-import { useStyles } from './Orders.styles'
 import { OrdersTable } from './components/Table/OrdersTable'
 
 import {
@@ -14,20 +13,22 @@ import {
 import { IOrdersTables, nestOrders, Table } from '@menuo/shared'
 import { updateRestaurantOrder } from '../Menu/Menu.api'
 import { readSubscription } from '../../notifications'
-import { Loading } from '../../components/Loading'
-import { Fab } from '@material-ui/core'
+import Loading from '../../components/Loading'
+import { Fab, withStyles, createStyles, WithStyles } from '@material-ui/core'
 import {
   ExitToApp as ExitToAppIcon,
   List as ListIcon,
 } from '@material-ui/icons'
 import { TablesSelectionDialog } from './components/TablesSelectionDialog'
+import { RouteChildrenProps } from 'react-router'
 
 const ORDERS_REFETCH_INTERVAL = +(
   process.env.REACT_APP_ORDERS_REFETCH_INTERVAL || 24 * 60 * 60
 )
 
-export const Orders = ({ match, history }: any) => {
-  const { restaurant } = match.params
+export const OrdersPage: FC<RouteChildrenProps<{ restaurant: string }> &
+  WithStyles> = ({ match, history, classes }) => {
+  const { restaurant } = match!.params
   const [refetch, setRefetch] = useState(0)
   const [loading, setLoading] = useState(true)
   const [showTablesDialog, setShowTablesDialog] = useState(false)
@@ -99,8 +100,6 @@ export const Orders = ({ match, history }: any) => {
 
     return () => clearInterval(interval)
   }, [])
-
-  const classes = useStyles()
 
   const handleAcceptOrder = (restaurant: string) => (
     order: string,
@@ -249,3 +248,26 @@ export const Orders = ({ match, history }: any) => {
     </div>
   )
 }
+
+export default withStyles(theme =>
+  createStyles({
+    root: {
+      flexDirection: 'column',
+      padding: '1rem',
+    },
+    logoutFab: {
+      position: 'absolute',
+      top: '1rem',
+      right: '1rem',
+      width: '40px',
+      height: '40px',
+    },
+    tablesFab: {
+      position: 'absolute',
+      top: '1rem',
+      right: '4rem',
+      width: '40px',
+      height: '40px',
+    },
+  }),
+)(OrdersPage)

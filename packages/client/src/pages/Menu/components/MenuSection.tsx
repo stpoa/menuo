@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { FC } from 'react'
 import {
-  Divider,
   List,
   ListItem,
   ListItemText,
@@ -8,15 +7,17 @@ import {
   Checkbox,
   Card,
   Typography,
+  withStyles,
+  createStyles,
+  WithStyles,
 } from '@material-ui/core'
 
 import { ISection, IDish, IVariant } from '@menuo/shared'
 
 import { H2 } from '../../../components/H2'
-import { PlusMinus } from '../../../components/PlusMinus'
-import { useStyles } from './MenuSection.styles'
+import PlusMinus from '../../../components/PlusMinus'
 
-export interface MenuSectionProps {
+export interface MenuSectionProps extends WithStyles {
   id: string
   section: ISection
   handleDishClick: (varaints: IVariant[]) => () => void
@@ -28,7 +29,7 @@ export interface MenuSectionProps {
 
 const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1)
 
-export const MenuSection = ({
+export const MenuSection: FC<MenuSectionProps> = ({
   id,
   section,
   handleDishClick,
@@ -36,9 +37,8 @@ export const MenuSection = ({
   handleToggle,
   handleMinus,
   handlePlus,
-}: MenuSectionProps) => {
-  const classes = useStyles()
-
+  classes,
+}) => {
   return (
     <div id={id} className={classes.root}>
       <div className={classes.head}>
@@ -93,3 +93,26 @@ export const MenuSection = ({
     </div>
   )
 }
+
+export default withStyles(_ =>
+  createStyles({
+    root: {},
+    head: {
+      color: '#777',
+      padding: '0 1rem',
+      marginTop: '3rem',
+    },
+    dish: {
+      color: '#444444',
+      margin: '1rem 0',
+    },
+    dishVariant: {
+      padding: '0 1rem',
+      fontSize: '0.8rem',
+      borderTop: '1px solid #ccc',
+    },
+    variantText: {
+      fontSize: '0.8rem',
+    },
+  }),
+)(MenuSection)

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, FC } from 'react'
 import { filter } from 'ramda'
 
 import {
@@ -11,7 +11,13 @@ import {
 } from '@menuo/shared'
 
 import { useQuery } from '../../utils'
-import { Button, Fab } from '@material-ui/core'
+import {
+  Button,
+  Fab,
+  withStyles,
+  createStyles,
+  WithStyles,
+} from '@material-ui/core'
 import { Header } from '../../components/Header'
 import {
   listRestaurantDishes,
@@ -20,14 +26,13 @@ import {
   payByCard,
   payByCash,
 } from './Menu.api'
-import { useStyles } from './Menu.styles'
-import { MenuSection } from './components/MenuSection'
+import MenuSection from './components/MenuSection'
 import { OrderSentDialog } from './components/OrderSentDialog'
-import { WaiterSummonDialog } from './components/WaiterSummonDialog'
+import WaiterSummonDialog from './components/WaiterSummonDialog'
 import { Table } from '@menuo/shared/interfaces/tables'
 import { RouteComponentProps } from 'react-router'
 import { readSubscription } from '../../notifications'
-import { Loading } from '../../components/Loading'
+import Loading from '../../components/Loading'
 import { Receipt as ReceiptIcon } from '@material-ui/icons'
 import { OrderedListDialog } from './components/OrderedListDialog'
 import { MenuBasketButton, BasketDialog } from './components/MenuBasket'
@@ -74,7 +79,11 @@ const apiCreateOrder = ({
   )
 }
 
-export const MenuPage = ({ location, match }: RouteComponentProps) => {
+export const MenuPage: FC<RouteComponentProps & WithStyles> = ({
+  location,
+  match,
+  classes,
+}) => {
   const { restaurant } = match.params as { restaurant: string }
   const { search } = location
   const query = useQuery(search)
@@ -129,7 +138,6 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
   const [showOrderedList, setShowOrderedList] = useState(false)
   const [showBasket, setShowBasket] = useState(false)
   const [showConfirmationDialog, setShowConfirmationDialog] = useState(false)
-  const classes = useStyles() as any
 
   if (!tableName) {
     return (
@@ -338,3 +346,55 @@ export const MenuPage = ({ location, match }: RouteComponentProps) => {
     </div>
   )
 }
+
+export default withStyles(_ =>
+  createStyles({
+    root: {
+      backgroundColor: '#f5f5f5',
+      flexDirection: 'column',
+      padding: '0.75rem 1rem',
+      minHeight: '100vh',
+    },
+    menuContent: {
+      marginTop: '1rem',
+      marginBottom: '1rem',
+    },
+    buttons: {
+      display: 'flex',
+      position: 'fixed',
+      bottom: '0.5rem',
+      left: '50%',
+      width: '96%',
+      marginLeft: '-48%',
+      flexDirection: 'row',
+      justifyContent: 'center',
+    },
+    buttonLeft: {
+      width: '50%',
+      marginRight: '0.5rem',
+      fontSize: '0.8rem',
+      background: 'white',
+    },
+    buttonRight: {
+      width: '50%',
+      marginLeft: '0.5rem',
+      fontSize: '0.8rem',
+    },
+    orderedListFab: {
+      position: 'fixed',
+      top: '1rem',
+      right: '1rem',
+      width: '40px',
+      height: '40px',
+      zIndex: 100,
+    },
+    basketButton: {
+      position: 'fixed',
+      top: '1rem',
+      right: '4rem',
+      width: '40px',
+      height: '40px',
+      zIndex: 100,
+    },
+  }),
+)(MenuPage)
