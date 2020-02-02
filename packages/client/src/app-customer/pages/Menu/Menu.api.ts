@@ -1,4 +1,4 @@
-import { get, put, post } from '../../api'
+import { get, put, post } from '../../../api'
 import {
   ReadRestaurantTable,
   ListRestaurantDishes,
@@ -6,7 +6,7 @@ import {
   UpdateRestaurantOrder,
 } from '@menuo/shared/interfaces/api'
 import { Table } from '@menuo/shared/interfaces/tables'
-import { readSubscription } from '../../notifications'
+import { readSubscription } from '../../../notifications'
 
 export const listRestaurantDishes = ({
   restaurant,

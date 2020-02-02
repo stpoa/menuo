@@ -1,4 +1,4 @@
-import { get, put, del, getStaticJSONData } from '../../api'
+import { get, put, del, getStaticJSONData } from '../../../api'
 import {
   ListRestaurantOrders,
   DeleteRestaurantOrder,

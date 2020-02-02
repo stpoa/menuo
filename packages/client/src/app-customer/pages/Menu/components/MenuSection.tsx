@@ -13,9 +13,8 @@ import {
 } from '@material-ui/core'
 
 import { ISection, IDish, IVariant } from '@menuo/shared'
-
-import { H2 } from '../../../components/H2'
-import PlusMinus from '../../../components/PlusMinus'
+import { H2 } from '../../../../components/H2'
+import PlusMinus from '../../../../components/PlusMinus'
 
 export interface MenuSectionProps extends WithStyles {
   id: string

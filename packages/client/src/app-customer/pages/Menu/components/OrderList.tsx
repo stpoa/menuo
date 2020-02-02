@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { MenuEntry } from '@menuo/shared'
-import { truncate } from '../../../utils/text'
+import { truncate } from '../../../../utils/text'
 
 interface OrderedListProps {
   ordered: [MenuEntry, number][]

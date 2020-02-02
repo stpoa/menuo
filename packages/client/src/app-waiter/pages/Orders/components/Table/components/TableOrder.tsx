@@ -11,9 +11,10 @@ import {
 } from '@material-ui/core'
 import { Check, DeleteForever, ArrowForwardIos } from '@material-ui/icons'
 import { IOrder, IOrderItem } from '@menuo/shared'
-import { DeleteOrderDialog } from '../../DeleteOrderDialog'
-import { PrioritySelect } from '../../../../Menu/components/Priority'
 import { SelectInputProps } from '@material-ui/core/Select/SelectInput'
+
+import { DeleteOrderDialog } from '../../DeleteOrderDialog'
+import { PrioritySelect } from '../../Priority'
 
 interface TabbleOrderProps {
   order: IOrder

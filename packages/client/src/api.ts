@@ -1,6 +1,6 @@
 import axios, { AxiosRequestConfig } from 'axios'
 import { getConfig } from './env'
-import { readToken } from './auth/service'
+import { readToken } from './app-waiter/auth/service'
 
 const api = axios.create({ baseURL: getConfig().apiUrl })
 api.interceptors.request.use(config => {

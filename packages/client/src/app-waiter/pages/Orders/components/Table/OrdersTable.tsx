@@ -1,7 +1,7 @@
 import React from 'react'
 import { Fab, Divider, List } from '@material-ui/core'
 import { AccessibilityNew, CreditCard, Money } from '@material-ui/icons'
-import { H2 } from '../../../../components/H2'
+import { H2 } from '../../../../../components/H2'
 import { TableOrder } from './components/TableOrder'
 import { IOrder, IOrderItem } from '@menuo/shared'
 import { Table } from '@menuo/shared/interfaces/tables'

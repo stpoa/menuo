@@ -10,7 +10,7 @@ import {
   IVariant,
 } from '@menuo/shared'
 
-import { useQuery } from '../../utils'
+import { useQuery } from '../../../utils'
 import {
   Button,
   Fab,
@@ -18,7 +18,7 @@ import {
   createStyles,
   WithStyles,
 } from '@material-ui/core'
-import { Header } from '../../components/Header'
+import { Header } from '../../../components/Header'
 import {
   listRestaurantDishes,
   createRestaurantOrder,
@@ -31,8 +31,8 @@ import { OrderSentDialog } from './components/OrderSentDialog'
 import WaiterSummonDialog from './components/WaiterSummonDialog'
 import { Table } from '@menuo/shared/interfaces/tables'
 import { RouteComponentProps } from 'react-router'
-import { readSubscription } from '../../notifications'
-import Loading from '../../components/Loading'
+import { readSubscription } from '../../../notifications'
+import Loading from '../../../components/Loading'
 import { Receipt as ReceiptIcon } from '@material-ui/icons'
 import { OrderedListDialog } from './components/OrderedListDialog'
 import { MenuBasketButton, BasketDialog } from './components/MenuBasket'
