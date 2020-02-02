@@ -1,0 +1,63 @@
+{
+  "name": "@menuo/client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.6.1",
+    "@material-ui/icons": "^4.5.1",
+    "@types/ramda": "^0.26.39",
+    "@menuo/shared": "link:../shared",
+    "axios": "^0.19.0",
+    "axios-hooks": "^1.7.2",
+    "ramda": "^0.26.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-gtm-module": "^2.0.8",
+    "react-router-dom": "^5.1.2",
+    "react-router-hash-link": "^1.2.2",
+    "react-scripts": "^3.3.0",
+    "typescript": "^3.7.4"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-gtm-module": "^2.0.0",
+    "@types/react-router": "^5.1.3",
+    "@types/react-router-dom": "^5.1.3",
+    "@types/react-router-hash-link": "^1.2.1",
+    "env-cmd": "^10.0.1"
+  },
+  "scripts": {
+    "start": "PORT=3001 react-scripts start",
+    "build:production": "env-cmd -f .env.production react-scripts build",
+    "build:staging": "env-cmd -f .env.staging react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy:staging": "yarn build:staging && yarn upload:staging",
+    "deploy:production": "yarn build:production && yarn upload:production",
+    "upload:staging": "yarn upload:stageless --env staging",
+    "upload:production": "yarn upload:stageless --env production",
+    "upload:stageless": "cd ../server && sls client deploy --no-config-change --no-policy-change --no-cors-change --no-delete-contents --no-confirm"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "proxy": "http://localhost:3000",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
