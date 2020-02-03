@@ -1,15 +1,44 @@
-import { createAction, createReducer } from '@reduxjs/toolkit'
+import { createAction, createReducer, getType } from '@reduxjs/toolkit'
+import { Epic } from 'redux-observable'
+import { filter, map, mergeMap, catchError } from 'rxjs/operators'
+import { isOfType } from 'typesafe-actions'
+import { of, from } from 'rxjs'
+import { listRestaurantDishes } from '../pages/Menu/Menu.api'
 
-const getMenuRequest = createAction('GET_MENU_REQUEST')
-const getMenuReceive = createAction('GET_MENU_RECEIVE')
-const getMenuFailure = createAction('GET_MENU_FAILIRE')
+export const actions = {
+  getMenuRequest: createAction('GET_MENU', (restaurant: any) => ({
+    payload: { restaurant },
+  })),
+  getMenuReceive: createAction('GET_MENU_SUCCESS', (dishes: any) => ({
+    payload: { dishes },
+  })),
+  getMenuFailure: createAction<any>('GET_MENU_FAILIRE'),
+}
 
-export type MenuActionTypes = never
-
-const initialState = {}
+const initialState = { dishes: [] }
 
 export const menuReducer = createReducer(initialState, {
-  [getMenuRequest.type]: (state, action) => state,
-  [getMenuReceive.type]: (state, action) => state,
-  [getMenuFailure.type]: (state, action) => state,
+  [actions.getMenuRequest.type]: state => state,
+  [actions.getMenuReceive.type]: (state, action) => {
+    console.log({ action })
+    return {
+      ...state,
+      dishes: [...action.payload.dishes] as any,
+    }
+  },
+  [actions.getMenuFailure.type]: state => state,
 })
+
+export const menuEpic: Epic = action$ =>
+  action$.pipe(
+    filter(isOfType(actions.getMenuRequest.type)),
+    mergeMap(({ payload: { restaurant } }) =>
+      from(listRestaurantDishes({ restaurant })).pipe(
+        map(response => {
+          console.log(response)
+          return actions.getMenuReceive(response)
+        }),
+        catchError(error => of(actions.getMenuFailure(error))),
+      ),
+    ),
+  )

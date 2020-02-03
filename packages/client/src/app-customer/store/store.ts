@@ -1,8 +1,13 @@
-import { combineReducers, createStore } from 'redux'
-import { menuReducer } from './menu'
+import { createStore, applyMiddleware } from 'redux'
+import { rootReducer, rootEpic } from './root'
+import { createEpicMiddleware } from 'redux-observable'
+import { composeWithDevTools } from 'redux-devtools-extension'
 
-export const rootReducer = combineReducers({
-  menu: menuReducer,
-})
+const epicMiddleware = createEpicMiddleware<any>()
 
-export const store = createStore(rootReducer)
+export const store = createStore(
+  rootReducer,
+  composeWithDevTools(applyMiddleware(epicMiddleware)),
+)
+
+epicMiddleware.run(rootEpic)

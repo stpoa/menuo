@@ -1,5 +1,6 @@
 import React, { useState, useEffect, FC } from 'react'
 import { filter } from 'ramda'
+import { connect } from 'react-redux'
 
 import {
   nestMenu,
@@ -37,6 +38,7 @@ import { Receipt as ReceiptIcon } from '@material-ui/icons'
 import { OrderedListDialog } from './components/OrderedListDialog'
 import { MenuBasketButton, BasketDialog } from './components/MenuBasket'
 import { OrderConfirmationDialog } from './components/OrderConfirmationDialog'
+import { actions } from '../../store/menu'
 
 const DEV_REDIRECTS = process.env.REACT_APP_DEV_REDIRECTS
 
@@ -79,11 +81,15 @@ const apiCreateOrder = ({
   )
 }
 
-export const MenuPage: FC<RouteComponentProps & WithStyles> = ({
+export const MenuPage: FC<RouteComponentProps &
+  WithStyles & { dishes: any; getDishes: any }> = ({
   location,
   match,
   classes,
+  dishes,
+  getDishes,
 }) => {
+  console.log({ dishes })
   const { restaurant } = match.params as { restaurant: string }
   const { search } = location
   const query = useQuery(search)
@@ -91,8 +97,6 @@ export const MenuPage: FC<RouteComponentProps & WithStyles> = ({
 
   const [refetch, setRefetch] = useState(0)
   const [loading, setLoading] = useState(true)
-  const [menu, setMenu] = useState<IMenu>([])
-  const [dishes, setDishes] = useState<Menu>([])
   const [table, setTable] = useState<Table>({
     name: query.get('table') || '',
     status: '',
@@ -101,18 +105,21 @@ export const MenuPage: FC<RouteComponentProps & WithStyles> = ({
   })
   const [ordered, setOrdered] = useState<[MenuEntry, number][]>([])
 
+  const menu = nestMenu([...dishes])
+
   useEffect(() => {
     ;(async () => {
       setLoading(true)
-      const dishes = await listRestaurantDishes({ restaurant })
+      // const dishes = await listRestaurantDishes({ restaurant })
+      getDishes(restaurant)
       setTable({
         name: query.get('table') || '',
         restaurant,
         _id: '',
         status: 'new',
       })
-      setDishes(dishes)
-      setMenu(nestMenu(dishes))
+      // setDishes(dishes)
+      // setMenu(nestMenu(dishes))
       setLoading(false)
     })()
   }, [restaurant, refetch])
@@ -347,7 +354,7 @@ export const MenuPage: FC<RouteComponentProps & WithStyles> = ({
   )
 }
 
-export default withStyles(_ =>
+const styles = () =>
   createStyles({
     root: {
       backgroundColor: '#f5f5f5',
@@ -396,5 +403,12 @@ export default withStyles(_ =>
       height: '40px',
       zIndex: 100,
     },
+  })
+
+export default connect(
+  (state: any) => ({ dishes: state.menu.dishes }),
+  dispatch => ({
+    getDishes: (restaurant: string) =>
+      dispatch(actions.getMenuRequest(restaurant)),
   }),
-)(MenuPage)
+)(withStyles(styles)(MenuPage))
