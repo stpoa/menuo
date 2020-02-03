@@ -2,14 +2,7 @@ import React, { useState, useEffect, FC } from 'react'
 import { filter } from 'ramda'
 import { connect } from 'react-redux'
 
-import {
-  nestMenu,
-  Order,
-  MenuEntry,
-  Menu,
-  IMenu,
-  IVariant,
-} from '@menuo/shared'
+import { nestMenu, Order, MenuEntry, Menu, IVariant } from '@menuo/shared'
 
 import { useQuery } from '../../../utils'
 import {
@@ -21,7 +14,6 @@ import {
 } from '@material-ui/core'
 import { Header } from '../../../components/Header'
 import {
-  listRestaurantDishes,
   createRestaurantOrder,
   summonWaiter,
   payByCard,
@@ -39,8 +31,6 @@ import { OrderedListDialog } from './components/OrderedListDialog'
 import { MenuBasketButton, BasketDialog } from './components/MenuBasket'
 import { OrderConfirmationDialog } from './components/OrderConfirmationDialog'
 import { actions } from '../../store/menu'
-
-const DEV_REDIRECTS = process.env.REACT_APP_DEV_REDIRECTS
 
 type Basket = { [itemId: string]: number }
 
@@ -89,12 +79,9 @@ export const MenuPage: FC<RouteComponentProps &
   dishes,
   getDishes,
 }) => {
-  console.log({ dishes })
   const { restaurant } = match.params as { restaurant: string }
   const { search } = location
   const query = useQuery(search)
-  const [tableName, setTableName] = useState('')
-
   const [refetch, setRefetch] = useState(0)
   const [loading, setLoading] = useState(true)
   const [table, setTable] = useState<Table>({
@@ -110,7 +97,6 @@ export const MenuPage: FC<RouteComponentProps &
   useEffect(() => {
     ;(async () => {
       setLoading(true)
-      // const dishes = await listRestaurantDishes({ restaurant })
       getDishes(restaurant)
       setTable({
         name: query.get('table') || '',
@@ -118,18 +104,11 @@ export const MenuPage: FC<RouteComponentProps &
         _id: '',
         status: 'new',
       })
-      // setDishes(dishes)
-      // setMenu(nestMenu(dishes))
       setLoading(false)
     })()
   }, [restaurant, refetch])
 
   useEffect(() => {
-    setTableName(query.get('table') || '')
-    if (!DEV_REDIRECTS) {
-      window.history.pushState('', '', location.pathname)
-    }
-
     try {
       navigator.serviceWorker.addEventListener('message', event => {
         setRefetch(event.data.refetch)
@@ -146,7 +125,7 @@ export const MenuPage: FC<RouteComponentProps &
   const [showBasket, setShowBasket] = useState(false)
   const [showConfirmationDialog, setShowConfirmationDialog] = useState(false)
 
-  if (!tableName) {
+  if (!table.name) {
     return (
       <div>
         Zeskanuj kod QR w aparacie bądź innej aplikacji aby zobaczyć menu
