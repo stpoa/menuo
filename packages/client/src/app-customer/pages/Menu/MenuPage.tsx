@@ -1,5 +1,4 @@
 import React, { useState, useEffect, FC } from 'react'
-import { filter } from 'ramda'
 import { connect } from 'react-redux'
 
 import { nestMenu, Order, MenuEntry, Menu, IVariant } from '@menuo/shared'
@@ -39,9 +38,9 @@ const getOrderedEntries = (menu: Menu, basket: Basket) =>
     const entries = menu.filter(
       e =>
         e.dishName === basketEntry.dish &&
-        e.dishVariantName === basketEntry.variant,
+        (!e.dishVariantName === !basketEntry.variant ||
+          e.dishVariantName === basketEntry.variant),
     )
-
     return [entries[0], entries.length] as [MenuEntry, number]
   })
 
@@ -88,7 +87,9 @@ export const MenuPage: FC<RouteComponentProps &
     isLoading: boolean
     newBasket: BasketEntry[]
     addToBasket: any
+    subFromBasket: any
     toggleBasketVariant: any
+    toggleBasketDish: any
   }> = ({
   location,
   match,
@@ -100,7 +101,9 @@ export const MenuPage: FC<RouteComponentProps &
   isLoading,
   newBasket,
   addToBasket,
+  subFromBasket,
   toggleBasketVariant,
+  toggleBasketDish,
 }) => {
   const { restaurant } = match.params as { restaurant: string }
   const { search } = location
@@ -160,7 +163,7 @@ export const MenuPage: FC<RouteComponentProps &
     table: Table
     menu: Menu
   }) => async () => {
-    // setLoading(true)
+    setLoading(true)
     await apiCreateOrder({
       customer,
       waiter: '',
@@ -171,7 +174,7 @@ export const MenuPage: FC<RouteComponentProps &
     })
     setShowOrderedInfo(true)
     setOrdered(o => [...o, ...getOrderedEntries(dishes, basket)])
-    // setLoading(false)
+    setLoading(false)
   }
 
   const handleSummonDialogClick = () => {
@@ -179,10 +182,10 @@ export const MenuPage: FC<RouteComponentProps &
   }
 
   const handleSummonClick = (table: Table) => async () => {
-    // setLoading(true)
+    setLoading(true)
     await summonWaiter(restaurant, table)
     setShowSummonDialog(false)
-    // setLoading(false)
+    setLoading(false)
   }
   const handlePayCardClick = (table: Table) => async () => {
     await payByCard(restaurant, { ...table, status: 'pay-card' })
@@ -195,55 +198,24 @@ export const MenuPage: FC<RouteComponentProps &
 
   const handleToggle = () => (entry: BasketEntry) => () => {
     toggleBasketVariant(entry)
-    // setBasket(basket =>
-    //   filter(v => v > 0, {
-    //     ...basket,
-    //     [entryId]: count ? 0 : 1,
-    //   }),
-    // )
   }
 
-  const handleMinus = () => (entryId: string) => () => {
-    // const id = entryId
-    // return setBasket((basket: { [x: string]: number }) =>
-    //   filter(v => v > 0, {
-    //     ...basket,
-    //     [id]: basket[id] - 1,
-    //   }),
-    // )
+  const handleMinus = () => (entry: BasketEntry) => () => {
+    subFromBasket(entry)
   }
 
   const handlePlus = () => (entry: BasketEntry) => () => {
     addToBasket(entry)
-    // const id = entryId
-    // return setBasket(basket => ({ ...basket, [id]: basket[id] + 1 }))
   }
 
-  const handleDishClick = () => (variants: IVariant[]) => () => {
-    // const id = variants[0]._id
-    // if (variants.some(v => basket[v._id] > 0)) {
-    //   const newBasketPart = Object.fromEntries(
-    //     variants.map(v => [v._id, 0] as [string, number]),
-    //   )
-    //   setBasket(basket =>
-    //     filter((v: number) => v > 0)({
-    //       ...basket,
-    //       ...newBasketPart,
-    //     }),
-    //   )
-    // } else {
-    //   const count = basket[id]
-    //   setBasket(basket =>
-    //     filter((v: number) => v > 0)({ ...basket, [id]: count ? 0 : 1 }),
-    //   )
-    // }
+  const handleDishClick = () => (entry: BasketEntry) => () => {
+    toggleBasketDish(entry)
   }
 
   const handleOrderedClick = () => setShowOrderedList(true)
   const handleBasketClick = () => setShowBasket(true)
 
   // Variables
-  const add = (a: number, b: number) => a + b
   const basketItemCount = basket.length
   const isBasketEmpty = !basketItemCount
 
@@ -411,7 +383,11 @@ export default connect(
       dispatch(actions.getMenuRequest(restaurant)),
     setTable: (table: Table) => dispatch(actions.setTable(table)),
     addToBasket: (entry: BasketEntry) => dispatch(actions.basketAdd(entry)),
+    subFromBasket: (entry: BasketEntry) =>
+      dispatch(actions.basketRemove(entry)),
     toggleBasketVariant: (entry: BasketEntry) =>
       dispatch(actions.basketToggleVariant(entry)),
+    toggleBasketDish: (entry: BasketEntry) =>
+      dispatch(actions.basketToggleDish(entry)),
   }),
 )(withStyles(styles)(MenuPage))

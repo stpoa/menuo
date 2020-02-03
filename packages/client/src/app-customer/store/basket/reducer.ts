@@ -21,7 +21,7 @@ export const basketReducer = createReducer(initialState, {
   ],
   [actions.basketRemove.type]: (state, action) => {
     const index = state.findIndex(isEntryEqual(action.payload.basketEntry))
-    return [...state.slice(0, index - 1), ...state.slice(index + 1)]
+    state.splice(index, 1)
   },
   [actions.basketClear.type]: () => {
     return []

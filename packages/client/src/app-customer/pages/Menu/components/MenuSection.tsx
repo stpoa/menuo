@@ -20,10 +20,10 @@ import { BasketEntry } from '../MenuPage'
 export interface MenuSectionProps extends WithStyles {
   id: string
   section: ISection
-  handleDishClick: (varaints: IVariant[]) => () => void
+  handleDishClick: (entry: BasketEntry) => () => void
   handleToggle: (entry: BasketEntry) => () => void
   basket: any
-  handleMinus: (entryId: string) => () => void
+  handleMinus: (entry: BasketEntry) => () => void
   handlePlus: (entry: BasketEntry) => () => void
 }
 
@@ -48,7 +48,10 @@ export const MenuSection: FC<MenuSectionProps> = ({
       <List>
         {section.dishes.map((dish: IDish, i) => (
           <Card className={classes.dish} key={i}>
-            <ListItem button onClick={handleDishClick(dish.variants)}>
+            <ListItem
+              button
+              onClick={handleDishClick({ dish: dish.name, variant: '' })}
+            >
               <ListItemText primary={dish.name} secondary={dish.description} />
             </ListItem>
             <List component="div" disablePadding>
@@ -57,7 +60,8 @@ export const MenuSection: FC<MenuSectionProps> = ({
                 const count = basket.filter(
                   (entry: any) =>
                     entry.dish === variant.entry.dishName &&
-                    entry.variant === variant.entry.dishVariantName,
+                    (entry.variant === variant.entry.dishVariantName ||
+                      (!entry.variant && !variant.entry.dishVariantName)),
                 ).length
                 const variantText =
                   (variant.name ? variant.name + ' - ' : '') +
@@ -77,7 +81,7 @@ export const MenuSection: FC<MenuSectionProps> = ({
                     <ListItemIcon>
                       <Checkbox
                         edge="start"
-                        onChange={handleToggle(basketEntry)}
+                        onChange={count ? handleToggle(basketEntry) : undefined}
                         checked={count > 0}
                       />
                     </ListItemIcon>
@@ -87,7 +91,7 @@ export const MenuSection: FC<MenuSectionProps> = ({
                     {count > 0 && (
                       <PlusMinus
                         count={count}
-                        handleMinusClick={handleMinus(id)}
+                        handleMinusClick={handleMinus(basketEntry)}
                         handlePlusClick={handlePlus(basketEntry)}
                       />
                     )}
