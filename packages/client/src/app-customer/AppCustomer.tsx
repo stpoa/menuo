@@ -2,7 +2,7 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
 
-import MenuPage from './pages/Menu/Menu.page'
+import MenuPage from './pages/Menu/MenuPage'
 import { Provider } from 'react-redux'
 import { store } from './store/store'
 

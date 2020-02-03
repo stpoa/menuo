@@ -19,7 +19,7 @@ import {
 } from '@material-ui/icons'
 import { TablesSelectionDialog } from './components/TablesSelectionDialog'
 import { RouteChildrenProps } from 'react-router'
-import { updateRestaurantOrder } from '../../../app-customer/pages/Menu/Menu.api'
+import { updateRestaurantOrder } from '../../../app-customer/store/menu/api'
 import { readSubscription } from '../../../notifications'
 
 const ORDERS_REFETCH_INTERVAL = +(

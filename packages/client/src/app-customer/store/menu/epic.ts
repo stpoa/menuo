@@ -3,7 +3,7 @@ import { filter, map, mergeMap, catchError } from 'rxjs/operators'
 import { isOfType } from 'typesafe-actions'
 import { of, from } from 'rxjs'
 
-import { listRestaurantDishes } from '../../pages/Menu/Menu.api'
+import { listRestaurantDishes } from './api'
 import * as actions from './actions'
 
 export const menuEpic: Epic = action$ =>
@@ -11,10 +11,7 @@ export const menuEpic: Epic = action$ =>
     filter(isOfType(actions.getMenuRequest.type)),
     mergeMap(({ payload: { restaurant } }) =>
       from(listRestaurantDishes({ restaurant })).pipe(
-        map(response => {
-          console.log(response)
-          return actions.getMenuReceive(response)
-        }),
+        map(actions.getMenuReceive),
         catchError(error => of(actions.getMenuFailure(error))),
       ),
     ),

@@ -18,7 +18,7 @@ import {
   summonWaiter,
   payByCard,
   payByCash,
-} from './Menu.api'
+} from '../../store/menu/api'
 import MenuSection from './components/MenuSection'
 import { OrderSentDialog } from './components/OrderSentDialog'
 import WaiterSummonDialog from './components/WaiterSummonDialog'
@@ -77,19 +77,28 @@ export const MenuPage: FC<RouteComponentProps &
     getDishes: any
     table: Table
     setTable: any
-  }> = ({ location, match, classes, dishes, getDishes, table, setTable }) => {
+    isLoading: boolean
+  }> = ({
+  location,
+  match,
+  classes,
+  dishes,
+  getDishes,
+  table,
+  setTable,
+  isLoading,
+}) => {
   const { restaurant } = match.params as { restaurant: string }
   const { search } = location
   const query = useQuery(search)
   const [refetch, setRefetch] = useState(0)
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
   const [ordered, setOrdered] = useState<[MenuEntry, number][]>([])
 
   const menu = nestMenu([...dishes])
 
   useEffect(() => {
     ;(async () => {
-      setLoading(true)
       getDishes(restaurant)
       setTable({
         name: query.get('table') || '',
@@ -97,7 +106,6 @@ export const MenuPage: FC<RouteComponentProps &
         _id: '',
         status: 'new',
       })
-      setLoading(false)
     })()
   }, [restaurant, refetch])
 
@@ -228,7 +236,7 @@ export const MenuPage: FC<RouteComponentProps &
 
   return (
     <div className={classes.root}>
-      <Loading loading={loading} />
+      <Loading loading={loading || isLoading} />
       <Header>menuo</Header>
       <MenuBasketButton
         className={classes.basketButton}
@@ -378,7 +386,11 @@ const styles = () =>
   })
 
 export default connect(
-  (state: any) => ({ dishes: state.menu.dishes, table: state.table }),
+  (state: any) => ({
+    dishes: state.menu.dishes,
+    table: state.table,
+    isLoading: state.menu.isFetching,
+  }),
   dispatch => ({
     getDishes: (restaurant: string) =>
       dispatch(actions.getMenuRequest(restaurant)),
