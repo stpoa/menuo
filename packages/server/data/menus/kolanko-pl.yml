@@ -3,7 +3,8 @@
   dishes:
   - name: Śniadanie w formie bufetu
     variants:
-    - price: 25
+    - name: ""
+      price: 25
     description: W bufecie - sałatki, wędliny, pasztety, sery, twarożki, pasty do pieczywa, jajka, tarty. Na gorąco bekon, parówki, jajecznica, warzywa. Również słodkości-  domowe musli, mleko, miód, dżemy, ciasta i ciasteczka. W cenie bufetu również woda, kawa i herbata
 - name: DOMOWY OBIAD
   description: "od poniedziałku do piątku od 12:00 do ostatniej porcji"
@@ -19,23 +20,28 @@
   dishes:
   - name: Kofty wegetariańskie (4 szt.)
     variants:
-    - price: 12
+    - name: ""
+      price: 12
     description: Ziemniaczano - serowe krokieciki z marchewką i rodzynkami przyprawione w stylu indyjskim, podane z czatni z mango
   - name: Tarta lotaryńska
     variants:
-    - price: 13
+    - name: ""
+      price: 13
     description: Tarta z boczkiem, serem Gruyère i śmietaną, podawana na ciepło z miksem sałat w sosie vinaigrette
   - name: Indonezyjski satay
     variants:
-    - price: 16
+    - name: ""
+      price: 16
     description: Szaszłyki z kurczaka marynowanego z trawą cytrynową i tamaryndem podawane z sosem orzechowo - kokosowym i sałatką z ogórka
   - name: Szakszuka - potrawa rodem z Tunezji
     variants:
-    - price: 13
+    - name: ""
+      price: 13
     description: Kawałki papryki duszone z pomidorami, przyprawione ostro, słodko i korzennie, zapieczone z żółtkiem, podawane z bagietką i odrobiną kwaśnej śmietany
   - name: Grzanki (3 szt.)
     variants:
-    - price: 14
+    - name: ""
+      price: 14
     description: Grzanki z kozim serem, suszonymi pomidorami i rukolą
 - name: GORACE KANAPKI Z CHRUPIACEJ CIABATTY
   dishes:
@@ -61,19 +67,24 @@
   dishes:
   - name: Tom Kha - tajska zupa kokosowa z kurczakiem i warzywami
     variants:
-    - price: 17
+    - name: ""
+      price: 17
   - name: Meksykańska zupa chili z mięsem i czerwoną fasolą z dodatkiem sera i kwaśnej śmietany
     variants:
-    - price: 10.50
+    - name: ""
+      price: 10.50
   - name: Krem dyniowy z rozmarynem i nutką pomarańczy podawany z maślaną grzanką
     variants:
-    - price: 9.50
+    - name: ""
+      price: 9.50
   - name: Krem z pomidorów podawany z bagietką oraz bazyliowo-orzechowym pesto
     variants:
-    - price: 9
+    - name: ""
+      price: 9
   - name: Zupa dnia - od poniedziałku do piątku
     variants:
-    - price: 7.50
+    - name: ""
+      price: 7.50
 - name: DANIA GŁÓWNE
   dishes:
   - name: Kokosowe tajskie curry z
@@ -87,62 +98,76 @@
     description: przyrządzane z mlekiem kokosowym z dodatkiem aromatycznych przypraw, warzyw i ananasa, podawane z ryżem basmati
   - name: Musaka
     variants:
-    - price: 29
+    - name: ""
+      price: 29
     description: Grecka potrawa z zapiekanego pod beszamelem mielonego mięsa i bakłażana, podana z domowymi chlebkami pita oraz sałatką z pomidorów, ogórków, oliwek i cebuli
   - name: Peposo
     variants:
-    - price: 31
+    - name: ""
+      price: 31
     description: Toskański gulasz wołowy, duszony z czerwonym winem, rozmarynem i pieprzem, do tego polenta z dodatkiem sera Grana Padano oraz szpinak z czosnkiem i śmietanką
   - name: Mesir Wat
     variants:
-    - price: 27
+    - name: ""
+      price: 27
     description: Wegetariańskie danie rodem z Etiopii - pyszna, pikantna czerwona soczewica duszona z cebulą, imbirem, pomidorami oraz mieszanką przypraw berbere, podawana z ogórkowym jogurtem oraz podpłomykiem
   - name: Murgh Makhani
     variants:
-    - price: 28
+    - name: ""
+      price: 28
     description: Popularne danie kuchni indyjsko - brytyjskiej kawałki kurczaka w aromatycznym sosie z pomidorów, cebuli, nerkowców, z dodatkiem masła i śmietanki oraz indyjskich przypraw, podane z ryżem basmati
   - name: Żeberka wieprzowe
     variants:
-    - price: 29
+    - name: ""
+      price: 29
     description: Pieczone w pomidorach, miodzie i cebuli podawane z domowymi frytkami i surówką colesław
 - name: NALEŚNIKI WYTRAWNE
   description: Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem
   dishes:
   - name: Naleśniki "chińskie"
     variants:
-    - price: 22
+    - name: ""
+      price: 22
     description: Z kurczakiem, krótko smażonymi warzywami, orientalnymi przyprawami, sezamem i pestkami dyni
   - name: Naleśniki “meksykańskie"
     variants:
-    - price: 22
+    - name: ""
+      price: 22
     description: Z mięsem, pomidorami, kukurydzą i czerwoną fasolą, zapieczone z serem
   - name: Naleśniki “indyjskie” z kurczakiem w sosie curry
     variants:
-    - price: 22
+    - name: ""
+      price: 22
     description: Pierś kurczaka, ananas, szpinak, śmietana
   - name: Naleśniki a'la Carbonara z cukinią
     variants:
-    - price: 22
+    - name: ""
+      price: 22
     description: Boczek, cebula, cukinia, śmietana, zielona pietruszka
   - name: Naleśniki z duszonymi na maśle porami
     variants:
-    - price: 22
+    - name: ""
+      price: 22
     description: Marchewką i pieczarkami oraz włoskimi orzechami
   - name: Naleśniki ze szpinakiem
     variants:
-    - price: 22
+    - name: ""
+      price: 22
     description: Z dodatkiem czosnku, śmietanki i sera Grana Padano
   - name: Naleśniki z brokułami i trzema serami
     variants:
-    - price: 22
+    - name: ""
+      price: 22
     description: Camembert, Ementaler, Rokpol
   - name: Naleśniki z duszonymi boczniakami
     variants:
-    - price: 22
+    - name: ""
+      price: 22
     description: Pomidorami i cebulką z dodatkiem wina, czosnku i śmietanki
   - name: Naleśniki "ruskie"
     variants:
-    - price: 22
+    - name: ""
+      price: 22
     description: Z twarogiem, ziemniakami i cebulką
   - name: Sosy
     variants:
@@ -183,25 +208,30 @@
       price: 18
   - name: Gałka lodów waniliowych
     variants:
-    - price: 3
+    - name: ""
+      price: 3
 - name: CIASTA
   dishes:
   - name: Sernik
     variants:
-    - price: 14
+    - name: ""
+      price: 14
     description: Z domowym sosem czekoladowym, wiśniami i bitą śmietaną
   - name: Ciasto czekoladowe
     variants:
-    - price: 14
+    - name: ""
+      price: 14
     description: Podawane na ciepło z sosem z malin, jagód i porzeczek
   - name: Francuska tarta Tatin 
     variants:
-    - price: 14
+    - name: ""
+      price: 14
     description: Ze śliwkami pieczonymi w karmelu i winie, podana z lodami waniliowymi
   - name: Szarlotka
     description: Na kruchym cieście podawana na ciepło z sosem angielskim i gałką lodów waniliowych
     variants:
-    - price: 14
+    - name: ""
+      price: 14
 - name: GORĄCE CZEKOLADY
   dishes:
   - name: Gorąca czekolada z bitą śmietaną
@@ -226,26 +256,32 @@
       price: 12
   - name: Kakao z bitą śmietaną
     variants:
-    - price: 8
+    - name: ""
+      price: 8
     description: Można również zamówić kakao na mleku bezlaktozowym lub sojowym
 - name: SMOOTHIE
   description: Do niektórych smoothie dodajemy cukier
   dishes:
   - name: Mango lassi - jogurt, puree z mango, kardamon
     variants:
-    - price: 13
+    - name: ""
+      price: 13
   - name: Kiwi, pomarańcza, bazylia, mięta
     variants:
-    - price: 11
+    - name: ""
+      price: 11
   - name: Mango, ananas, banan, jogurt (lub mleko sojowe)
     variants:
-    - price: 13
+    - name: ""
+      price: 13
   - name: 
     variants:
-    - price: 12
+    - name: ""
+      price: 12
   - name: Porzeczka, truskawka, banan
     variants:
-    - price: 11
+    - name: ""
+      price: 11
 - name: HERBATY
   dishes:
   - name: Czarna Lipton
@@ -314,7 +350,8 @@
       price: 10
   - name: Mieszanka herbaty czarnej i zelonej
     variants:
-    - price: 10
+    - name: ""
+      price: 10
     description: Maharani - czarna i zielona herbata z papają, płatkami ostu i cytrusami
   - name: Herbaty owocowe
     variants:
@@ -335,28 +372,36 @@
   dishes:
   - name: Espresso 30ml
     variants:
-    - price: 7
+    - name: ""
+      price: 7
   - name: Podwójne espresso 60ml
     variants:
-    - price: 9
+    - name: ""
+      price: 9
   - name: Espresso macchiato (espresso z mleczną pianką)
     variants:
-    - price: 7
+    - name: ""
+      price: 7
   - name: Espresso con panna (espresso z bitą śmietaną)
     variants:
-    - price: 9
+    - name: ""
+      price: 9
   - name: Espresso Romano (z odrobiną skórki cytrynowej)
     variants:
-    - price: 7.50
+    - name: ""
+      price: 7.50
   - name: Kawa czarna 180ml
     variants:
-    - price: 9
+    - name: ""
+      price: 9
   - name: Kawa bała 180ml
     variants:
-    - price: 9.50
+    - name: ""
+      price: 9.50
   - name: Kawa biała XL 320ml
     variants:
-    - price: 10.50
+    - name: ""
+      price: 10.50
   - name: Cappuccino
     variants:
     - name: Małe 210ml
@@ -365,7 +410,8 @@
       price: 11
   - name: Kawa latte 260ml
     variants:
-    - price: 11
+    - name: ""
+      price: 11
   - name: Kawa latte z miodem
     variants:
     - name: 260ml
@@ -384,10 +430,12 @@
       price: 13
   - name: Mocha (z mlekiem, czekoladą i bitą śmietaną) 260ml
     variants:
-    - price: 13
+    - name: ""
+      price: 13
   - name: Kawa mrożona z bitą śmietaną 330ml
     variants:
-    - price: 13
+    - name: ""
+      price: 13
   - name: Kawa mrożona z syropem i bitą śmietaną 330ml
     variants:
     - name: Waniliowa
@@ -473,16 +521,20 @@
       price: 15
   - name: Naturalny kwas chlebowy 330ml
     variants:
-    - price: 10
+    - name: ""
+      price: 10
   - name: Coca Cola 250ml
     variants:
-    - price: 6
+    - name: ""
+      price: 6
   - name: Sprite 250ml
     variants:
-    - price: 6
+    - name: ""
+      price: 6
   - name: Tonik Kinley 250ml
     variants:
-    - price: 6
+    - name: ""
+      price: 6
 - name: PIWA
   dishes:
   - name: Piwa z polskich browarów rzemieślniczych
@@ -594,15 +646,18 @@
     description: Włoskie, wytrawne
   - name: Pinot Grigio Marchese della Torre IGT 750ml
     variants:
-    - price: 58
+    - name: ""
+      price: 58
     description: Włoskie, wytrawne
   - name: Abadim Vinho Verde DOC 750ml
     variants:
-    - price: 58
+    - name: ""
+      price: 58
     description: Portugalskie, półwytrawne
   - name: Sauvignon Blanc Vina Falernia 750ml
     variants:
-    - price: 68
+    - name: ""
+      price: 68
     description: Chilijskie, wytrawne
   - name: Sutter Home Moscato
     variants:
@@ -613,7 +668,8 @@
     description: Kalifornijskie, deserowe
   - name: Cavas Hill-Cava 750ml
     variants:
-    - price: 59
+    - name: ""
+      price: 59
     description: Białe, hiszpańskie, półwytrawne wino, wytwarzane metodą tradycyjną
   - name: Gancia Prosecco D.O.C
     variants:
@@ -637,21 +693,25 @@
     description: Włoskie, wytrawne
   - name: Syrah Vina Falernia 750ml
     variants:
-    - price: 63
+    - name: ""
+      price: 63
     description: Chilijskie, wytrawne
   - name: Riparosso Montepulciano D'Abruzzo DOC 750ml
     variants:
-    - price: 68
+    - name: ""
+      price: 68
     description: Włoskie, wytrawne
   - name: Ser Dante Chianti 750ml
     variants:
-    - price: 73
+    - name: ""
+      price: 73
     description: Włoskie, wytrawne
 - name: INNE
   dishes:
   - name: Rose Genuss Auer 750ml
     variants:
-    - price: 63
+    - name: ""
+      price: 63
     description: Austriackie, półwytrawne
   - name: Martini 100ml
     variants:
@@ -673,209 +733,262 @@
       price: 11
   - name: Grzaniec Galicyjski z pomarańczą, rodzynkami i korzeniami 150ml
     variants:
-    - price: 9
+    - name: ""
+      price: 9
   - name: Biały Miś (Advocat, cynamon, mleko) 160ml
     variants:
-    - price: 9  
+    - name: ""
+      price: 9  
   - name: Bury Miś (Advocat, czekolada, mleko) 160ml
     variants:
-    - price: 11  
+    - name: ""
+      price: 11  
   - name: Bombardino (Advocat, likier kawowy Kahlua, bita śmietana) 100ml
     variants:
-    - price: 8
+    - name: ""
+      price: 8
   - name: Grog na rumie (rum Havana, cytryna, miód, korzenie, woda) 200ml
     variants:
-    - price: 16
+    - name: ""
+      price: 16
   - name: Grog na Krupniku (Krupnik, cytryna, miód, korzenie, woda) 200ml
     variants:
-    - price: 11
+    - name: ""
+      price: 11
   - name: Grzany Cydr z naturalnym syropem korzennym 330ml
     variants:
-    - price: 13
+    - name: ""
+      price: 13
   - name: Grzany kwas chlebowy z naturalnym syropem korzennym, pomarańczą i cytryną 330ml
     variants:
-    - price: 12
+    - name: ""
+      price: 12
 - name: DRINKI BEZALKOHOLOWE
   dishes:
   - name: Mojito Virgin z wodą gazowaną 300ml
     variants:
-    - price: 12
+    - name: ""
+      price: 12
   - name: Mojito Virgin z wodą gazowaną malinowe 300ml
     variants:
-    - price: 13
+    - name: ""
+      price: 13
   - name: Mojito Virgin ze Spritem 300ml
     variants:
-    - price: 14
+    - name: ""
+      price: 14
   - name: Mojito Virgin ze Spritem malinowe 300ml
     variants:
-    - price: 15
+    - name: ""
+      price: 15
   - name: Cabriolet 300ml
     variants:
-    - price: 13
+    - name: ""
+      price: 13
     description: Sok grejfrutowy, sok cytrynowy, tonik, syrop Monin Blue Curacao
   - name: Piña Kolanko 250ml
     variants:
-    - price: 10
+    - name: ""
+      price: 10
     description: Sok ananasowy, sok pomarańczowy, syrop Monin kokosowy, pomarańcza
   - name: Pomarańczowa Alternatywa 300ml
     variants:
-    - price: 13
+    - name: ""
+      price: 13
     description: Soki - pomarańczowy, grapefruitowy, ananasowy, syrop Monin truskawkowy, pomarańcza, limonka, świeża mięta, kruszony lód
   - name: Rozważna i Romantyczna 250ml
     variants:
-    - price: 11
+    - name: ""
+      price: 11
     description: Sok pomarańczowy, sok ananasowy, sok grejfrutowy, syrop Monin truskawkowy, mus malinowy
   - name: Over The Rainbow 250ml
     variants:
-    - price: 12
+    - name: ""
+      price: 12
     description: Sok pomarańczowy, sok cytrynowy, Grenadine, syrop Monin Blue Curacao
 - name: SHORT DRINKI
   dishes:
   - name: Black Russian 60ml 
     variants:
-    - price: 14
+    - name: ""
+      price: 14
     description: Wódka Wyborowa, likier kawowy Kahlua
   - name: Blue Hawaiian 100ml
     variants:
-    - price: 14
+    - name: ""
+      price: 14
     description: Likier Blue Curacao, Havana Rum, Malibu, sok ananasowy, śmietanka
   - name: Blue Lagoon 120ml
     variants:
-    - price: 15
+    - name: ""
+      price: 15
     description: Wódka Wyborowa, syrop Monin Blue Curacao, Cointreau, sok ananasowy
   - name: Cosmopolitan 120ml
     variants:
-    - price: 19
+    - name: ""
+      price: 19
     description: Cointreau, Wódka Wyborowa, sok z cytryny, sok porzeczkowy
   - name: Kamikaze 6 x 25 ml (shot)
     variants:
-    - price: 28
+    - name: ""
+      price: 28
     description: Wódka Wyborowa, Blue Curacao, sok cytrynowy
   - name: Margarita 80ml
     variants:
-    - price: 22
+    - name: ""
+      price: 22
     description: Tequila Silver, Cointreau, sok cytrynowy
   - name: Negroni 60ml
     variants:
-    - price: 14
+    - name: ""
+      price: 14
     description: Seagram's Gin, Campari, Martini Rosso
   - name: Orgazm 80ml
     variants:
-    - price: 14
+    - name: ""
+      price: 14
     description: Likier kawowy Kahlua, Amaretto, Cointreau, Wódka Wyborowa, śmietanka
   - name: Piña Colada 120ml
     variants:
-    - price: 16
+    - name: ""
+      price: 16
     description: Rum Havana Club, Malibu, śmietanka, sok ananasowy
   - name: White Russian 80ml
     variants:
-    - price: 13
+    - name: ""
+      price: 13
     description: Wódka Wyborowa, likier kawowy Kahlua, śmietanka
   - name: Wściekły Pies 50ml (shot)
     variants:
-    - price: 7
+    - name: ""
+      price: 7
     description: Wódka Wyborowa, sok malinowy, tabasco
 - name: LONG DRINKI
   dishes:
   - name: 008 250ml
     variants:
-    - price: 12
+    - name: ""
+      price: 12
     description: Wódka Wyborowa, Martini Bianco, sok grejfrutowy
   - name: Aperol Spritz 200ml
     variants:
-    - price: 23
+    - name: ""
+      price: 23
     description: Prosecco, Aperol, woda gazowana, pomarańcza
   - name: Campari Orange 250ml
     variants:
-    - price: 17
+    - name: ""
+      price: 17
     description: Prosecco, Campari, woda gazowana
   - name: Campari Spritz 200ml
     variants:
-    - price: 25
+    - name: ""
+      price: 25
     description: Prosecco, Campari, woda gazowana, pomarańcza
   - name: Cuba Libra 250ml
     variants:
-    - price: 19
+    - name: ""
+      price: 19
     description: Rum Havana Club, coca cola, sok cytrynowy
   - name: Cztery Róże dla Lucienne 300ml
     variants:
-    - price: 17
+    - name: ""
+      price: 17
     description: Wódka Wyborowa, syrop truskawkowy Monin, mus malinowy, sprite
   - name: Exotic Russian 300ml
     variants:
-    - price: 19
+    - name: ""
+      price: 19
     description: Wódka Wyborowa, likier Passoa, Grenadina, sprite
   - name: Golden Eye 250ml
     variants:
-    - price: 15
+    - name: ""
+      price: 15
     description: Orzechówka, Gin Seagram’s, sok jabłkowy
   - name: Gorączka Sobotniej Nocy 300ml
     variants:
-    - price: 17
+    - name: ""
+      price: 17
     description: Wódka Wyborowa, Cointreau, sok pomarańczowy, sok ananasowy, Grenadyna
   - name: John Lemon 250ml
     variants:
-    - price: 16
+    - name: ""
+      price: 16
     description: Cytrynówka, syrop Monin limonkowy, woda gazowana, owoce cytrusowe
   - name: Long Island Ice Tea 300ml
     variants:
-    - price: 21
+    - name: ""
+      price: 21
     description: Wódka Wyborowa, gin Seagram’s, rum Havana Club, tequila Olmeca Silver, Cointreau, sok cytrynowy, coca cola
   - name: Long Island Ice Tea
     variants:
-    - price: 69
+    - name: ""
+      price: 69
     description: Dzbanek 4 porcje
   - name: Malibu z mlekiem 200ml
     variants:
-    - price: 12
+    - name: ""
+      price: 12
     description: Malibu, mleko
   - name: Mechaniczna Pomarańcza 300ml
     variants:
-    - price: 18
+    - name: ""
+      price: 18
     description: Malibu, świeżo wyciskany sok pomarańczowy, pomarańcza, mięta
   - name: Mojito 300ml
     variants:
-    - price: 20
+    - name: ""
+      price: 20
     description: Rum Havana, cukier trzcinowy, woda gazowana, mięta, limonka
   - name: Mojito malinowe 300ml
     variants:
-    - price: 22
+    - name: ""
+      price: 22
     description: Rum Havana, cukier trzcinowy, woda gazowana, mięta, limonka, maliny 
   - name: Mojito Passoa 300ml
     variants:
-    - price: 19
+    - name: ""
+      price: 19
     description: Likier Passoa, Grenadina, cukier trzcinowy, woda gazowana, mięta, limonka
   - name: Monkey Business 270ml
     variants:
-    - price: 16.50
+    - name: ""
+      price: 16.50
     description: Wódka Wyborowa, Malibu, sok pomarańczowy, Grenadyna
   - name: Orzechówka z mlekiem 200ml
     variants:
-    - price: 12
+    - name: ""
+      price: 12
     description: Wódka orzechowa, mleko
   - name: Pod Osłoną Nieba 150ml
     variants:
-    - price: 16
+    - name: ""
+      price: 16
     description: Białe wino, likier Passoa, Grenadina, limonka
   - name: Po Drugiej Stronie Lustra 300ml
     variants:
-    - price: 15
+    - name: ""
+      price: 15
     description: Żołądkowa Gorzka, sok cytrynowy, sok ananasowy, sprite, plasterki ogórka
   - name: Szprycer 250ml
     variants:
-    - price: 12
+    - name: ""
+      price: 12
     description: Białe wino wytrawne, woda gazowana, cytryna
   - name: Tatanka 200ml
     variants:
-    - price: 12
+    - name: ""
+      price: 12
     description: Żubrówka, sok jabłkowy
   - name: Tatanka miętowa 200ml
     variants:
-    - price: 13
+    - name: ""
+      price: 13
     description: Żubrówka, sok jabłkowy, mięta
   - name: Tequila Sunrise 250ml
     variants:
-    - price: 19
+    - name: ""
+      price: 19
     description: Tequila Olmeca Gold, sok pomarańczowy, Grenadina
 - name: WÓDKI
   dishes:
@@ -899,92 +1012,121 @@
       price: 95
   - name: Żołądkowa Gorzka 40ml
     variants:
-    - price: 8
+    - name: ""
+      price: 8
   - name: Lubelska Cytrynowa 40ml
     variants:
-    - price: 8
+    - name: ""
+      price: 8
   - name: Soplica Malinowa 40ml
     variants:
-    - price: 8
+    - name: ""
+      price: 8
   - name: Soplica Orzechowa 40ml
     variants:
-    - price: 8
+    - name: ""
+      price: 8
   - name: Soplica Pigwowa 40ml
     variants:
-    - price: 8
+    - name: ""
+      price: 8
   - name: Soplica Śliwkowa 40ml
     variants:
-    - price: 8
+    - name: ""
+      price: 8
   - name: Soplica Wiśniowa 40ml
     variants:
-    - price: 8
+    - name: ""
+      price: 8
 - name: LIKIERY
   dishes:
   - name: Advocat 40ml
     variants:
-    - price: 7
+    - name: ""
+      price: 7
   - name: Amaretto 20ml
     variants:
-    - price: 6
+    - name: ""
+      price: 6
   - name: Blue Curacao 20ml
     variants:
-    - price: 6
+    - name: ""
+      price: 6
   - name: Baileys 40ml
     variants:
-    - price: 12
+    - name: ""
+      price: 12
   - name: Cointreau 20ml
     variants:
-    - price: 7
+    - name: ""
+      price: 7
   - name: Kahlua Coffee Liquer 20ml
     variants:
-    - price: 6
+    - name: ""
+      price: 6
 - name: INNE ALKOHOLE
   dishes:
   - name: Aperol 40ml
     variants:
-    - price: 13
+    - name: ""
+      price: 13
   - name: Campari 40ml
     variants:
-    - price: 14
+    - name: ""
+      price: 14
   - name: Gin Seagram's 40ml
     variants:
-    - price: 8
+    - name: ""
+      price: 8
   - name: Jagermeister 40ml
     variants:
-    - price: 10
+    - name: ""
+      price: 10
   - name: Krupnik 40ml
     variants:
-    - price: 7
+    - name: ""
+      price: 7
   - name: Passoa 40ml
     variants:
-    - price: 9
+    - name: ""
+      price: 9
   - name: Rum Havana Club 40ml
     variants:
-    - price: 14
+    - name: ""
+      price: 14
   - name: Rum Malibu 40ml
     variants:
-    - price: 10
+    - name: ""
+      price: 10
   - name: Stock Brandy 40ml
     variants:
-    - price: 10
+    - name: ""
+      price: 10
   - name: Tequila Olmeca Gold 40ml
     variants:
-    - price: 15
+    - name: ""
+      price: 15
   - name: Tequila Olmeca Silver 40ml
     variants:
-    - price: 15
+    - name: ""
+      price: 15
   - name: Whisky Ballantines 40ml
     variants:
-    - price: 15
+    - name: ""
+      price: 15
   - name: Whisky Jack Daniels 40ml
     variants:
-    - price: 15
+    - name: ""
+      price: 15
   - name: Whisky Jameson 40ml
     variants:
-    - price: 15
+    - name: ""
+      price: 15
   - name: Whisky Johnnie Walker 40ml
     variants:
-    - price: 15
+    - name: ""
+      price: 15
   - name: Whisky Jim Beam 40ml
     variants:
-    - price: 15
+    - name: ""
+      price: 15
