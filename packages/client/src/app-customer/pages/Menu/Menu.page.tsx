@@ -30,7 +30,7 @@ import { Receipt as ReceiptIcon } from '@material-ui/icons'
 import { OrderedListDialog } from './components/OrderedListDialog'
 import { MenuBasketButton, BasketDialog } from './components/MenuBasket'
 import { OrderConfirmationDialog } from './components/OrderConfirmationDialog'
-import { actions } from '../../store/menu'
+import * as actions from '../../store/actions'
 
 type Basket = { [itemId: string]: number }
 
@@ -72,24 +72,17 @@ const apiCreateOrder = ({
 }
 
 export const MenuPage: FC<RouteComponentProps &
-  WithStyles & { dishes: any; getDishes: any }> = ({
-  location,
-  match,
-  classes,
-  dishes,
-  getDishes,
-}) => {
+  WithStyles & {
+    dishes: any
+    getDishes: any
+    table: Table
+    setTable: any
+  }> = ({ location, match, classes, dishes, getDishes, table, setTable }) => {
   const { restaurant } = match.params as { restaurant: string }
   const { search } = location
   const query = useQuery(search)
   const [refetch, setRefetch] = useState(0)
   const [loading, setLoading] = useState(true)
-  const [table, setTable] = useState<Table>({
-    name: query.get('table') || '',
-    status: '',
-    _id: '',
-    restaurant: '',
-  })
   const [ordered, setOrdered] = useState<[MenuEntry, number][]>([])
 
   const menu = nestMenu([...dishes])
@@ -385,9 +378,10 @@ const styles = () =>
   })
 
 export default connect(
-  (state: any) => ({ dishes: state.menu.dishes }),
+  (state: any) => ({ dishes: state.menu.dishes, table: state.table }),
   dispatch => ({
     getDishes: (restaurant: string) =>
       dispatch(actions.getMenuRequest(restaurant)),
+    setTable: (table: Table) => dispatch(actions.setTable(table)),
   }),
 )(withStyles(styles)(MenuPage))
