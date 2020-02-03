@@ -9,7 +9,7 @@ interface OrderedListProps {
 export const OrderedList: FC<OrderedListProps> = ({ ordered }) => (
   <ul>
     {ordered.map(([entry, count]) => (
-      <li key={entry._id}>
+      <li key={entry.dishName}>
         {count}x {truncate(80)(entry.dishName)} -{' '}
         {truncate(80)(entry.dishVariantName || '')} ({entry.dishVariantPrice}
         zł)
