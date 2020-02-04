@@ -12,19 +12,21 @@ import {
   WithStyles,
 } from '@material-ui/core'
 
-import { ISection, IDish, IVariant } from '@menuo/shared'
+import * as actions from '../../../store/actions'
+import { ISection, IDish } from '@menuo/shared'
 import { H2 } from '../../../../components/H2'
 import PlusMinus from '../../../../components/PlusMinus'
 import { BasketEntry } from '../MenuPage'
+import { connect } from 'react-redux'
 
 export interface MenuSectionProps extends WithStyles {
   id: string
   section: ISection
-  handleDishClick: (entry: BasketEntry) => () => void
-  handleToggle: (entry: BasketEntry) => () => void
-  basket: any
-  handleMinus: (entry: BasketEntry) => () => void
-  handlePlus: (entry: BasketEntry) => () => void
+  basket: BasketEntry[]
+  toggleBasketDish: (entry: BasketEntry) => void
+  toggleBasketVariant: (entry: BasketEntry) => void
+  subFromBasket: (entry: BasketEntry) => void
+  addToBasket: (entry: BasketEntry) => void
 }
 
 const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1)
@@ -32,11 +34,11 @@ const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1)
 export const MenuSection: FC<MenuSectionProps> = ({
   id,
   section,
-  handleDishClick,
   basket,
-  handleToggle,
-  handleMinus,
-  handlePlus,
+  toggleBasketDish,
+  toggleBasketVariant,
+  subFromBasket,
+  addToBasket,
   classes,
 }) => {
   return (
@@ -54,7 +56,10 @@ export const MenuSection: FC<MenuSectionProps> = ({
 
           return (
             <Card className={classes.dish} key={i}>
-              <ListItem button onClick={handleDishClick(firstEntryInSection)}>
+              <ListItem
+                button
+                onClick={() => toggleBasketDish(firstEntryInSection)}
+              >
                 <ListItemText
                   primary={dish.name}
                   secondary={dish.description}
@@ -82,13 +87,19 @@ export const MenuSection: FC<MenuSectionProps> = ({
                       className={classes.dishVariant}
                       key={variantId}
                       button={!count as true}
-                      onClick={!count ? handleToggle(basketEntry) : undefined}
+                      onClick={
+                        !count
+                          ? () => toggleBasketVariant(basketEntry)
+                          : undefined
+                      }
                     >
                       <ListItemIcon>
                         <Checkbox
                           edge="start"
                           onChange={
-                            count ? handleToggle(basketEntry) : undefined
+                            count
+                              ? () => toggleBasketVariant(basketEntry)
+                              : undefined
                           }
                           checked={count > 0}
                         />
@@ -101,8 +112,8 @@ export const MenuSection: FC<MenuSectionProps> = ({
                       {count > 0 && (
                         <PlusMinus
                           count={count}
-                          handleMinusClick={handleMinus(basketEntry)}
-                          handlePlusClick={handlePlus(basketEntry)}
+                          handleMinusClick={() => subFromBasket(basketEntry)}
+                          handlePlusClick={() => addToBasket(basketEntry)}
                         />
                       )}
                     </ListItem>
@@ -117,7 +128,7 @@ export const MenuSection: FC<MenuSectionProps> = ({
   )
 }
 
-export default withStyles(_ =>
+const styleComponent = withStyles(() =>
   createStyles({
     root: {},
     head: {
@@ -138,4 +149,21 @@ export default withStyles(_ =>
       fontSize: '0.8rem',
     },
   }),
-)(MenuSection)
+)
+
+const connectComponent = connect(
+  (state: any) => ({
+    basket: state.basket,
+  }),
+  dispatch => ({
+    toggleBasketDish: (entry: BasketEntry) =>
+      dispatch(actions.basketToggleDish(entry)),
+    toggleBasketVariant: (entry: BasketEntry) =>
+      dispatch(actions.basketToggleVariant(entry)),
+    subFromBasket: (entry: BasketEntry) =>
+      dispatch(actions.basketRemove(entry)),
+    addToBasket: (entry: BasketEntry) => dispatch(actions.basketAdd(entry)),
+  }),
+)
+
+export default connectComponent(styleComponent(MenuSection))

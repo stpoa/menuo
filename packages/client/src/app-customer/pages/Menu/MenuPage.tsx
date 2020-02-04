@@ -85,7 +85,7 @@ export const MenuPage: FC<RouteComponentProps &
     table: Table
     setTable: any
     isLoading: boolean
-    newBasket: BasketEntry[]
+    basket: BasketEntry[]
     addToBasket: any
     subFromBasket: any
     toggleBasketVariant: any
@@ -99,11 +99,7 @@ export const MenuPage: FC<RouteComponentProps &
   table,
   setTable,
   isLoading,
-  newBasket,
-  addToBasket,
-  subFromBasket,
-  toggleBasketVariant,
-  toggleBasketDish,
+  basket,
 }) => {
   const { restaurant } = match.params as { restaurant: string }
   const { search } = location
@@ -136,7 +132,6 @@ export const MenuPage: FC<RouteComponentProps &
     }
   }, [])
 
-  const basket = newBasket
   const [showSummonDialog, setShowSummonDialog] = useState(false)
   const [showOrderedInfo, setShowOrderedInfo] = useState(false)
   const [showOrderedList, setShowOrderedList] = useState(false)
@@ -196,22 +191,6 @@ export const MenuPage: FC<RouteComponentProps &
     setShowSummonDialog(false)
   }
 
-  const handleToggle = () => (entry: BasketEntry) => () => {
-    toggleBasketVariant(entry)
-  }
-
-  const handleMinus = () => (entry: BasketEntry) => () => {
-    subFromBasket(entry)
-  }
-
-  const handlePlus = () => (entry: BasketEntry) => () => {
-    addToBasket(entry)
-  }
-
-  const handleDishClick = () => (entry: BasketEntry) => () => {
-    toggleBasketDish(entry)
-  }
-
   const handleOrderedClick = () => setShowOrderedList(true)
   const handleBasketClick = () => setShowBasket(true)
 
@@ -241,20 +220,10 @@ export const MenuPage: FC<RouteComponentProps &
 
       <div className={classes.menuContent}>
         {menu.map((section, i) => (
-          <MenuSection
-            {...{
-              id: 'section-' + i,
-              section,
-              key: i,
-              handleDishClick: handleDishClick(),
-              basket,
-              handleToggle: handleToggle(),
-              handleMinus: handleMinus(),
-              handlePlus: handlePlus(),
-            }}
-          />
+          <MenuSection id={'section-' + i} section={section} key={i} />
         ))}
       </div>
+
       <div className={classes.buttons}>
         <Button
           disabled={loading}
@@ -275,6 +244,7 @@ export const MenuPage: FC<RouteComponentProps &
           Zamów
         </Button>
       </div>
+
       <WaiterSummonDialog
         disabled={loading}
         open={showSummonDialog}
@@ -320,7 +290,7 @@ export const MenuPage: FC<RouteComponentProps &
   )
 }
 
-const styles = () =>
+const styleComponent = withStyles(() =>
   createStyles({
     root: {
       backgroundColor: '#f5f5f5',
@@ -369,25 +339,21 @@ const styles = () =>
       height: '40px',
       zIndex: 100,
     },
-  })
+  }),
+)
 
-export default connect(
+const connectComponent = connect(
   (state: any) => ({
     dishes: state.menu.dishes,
     table: state.table,
     isLoading: state.menu.isFetching,
-    newBasket: state.basket,
+    basket: state.basket,
   }),
   dispatch => ({
     getDishes: (restaurant: string) =>
       dispatch(actions.getMenuRequest(restaurant)),
     setTable: (table: Table) => dispatch(actions.setTable(table)),
-    addToBasket: (entry: BasketEntry) => dispatch(actions.basketAdd(entry)),
-    subFromBasket: (entry: BasketEntry) =>
-      dispatch(actions.basketRemove(entry)),
-    toggleBasketVariant: (entry: BasketEntry) =>
-      dispatch(actions.basketToggleVariant(entry)),
-    toggleBasketDish: (entry: BasketEntry) =>
-      dispatch(actions.basketToggleDish(entry)),
   }),
-)(withStyles(styles)(MenuPage))
+)
+
+export default connectComponent(styleComponent(MenuPage))
