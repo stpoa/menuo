@@ -30,6 +30,7 @@ import { MenuBasketButton, BasketDialog } from './components/MenuBasket'
 import { OrderConfirmationDialog } from './components/OrderConfirmationDialog'
 import * as actions from '../../store/actions'
 import { RootState } from '../../store/store'
+import { groupBy } from 'ramda'
 
 type Basket = BasketEntry[]
 
@@ -255,16 +256,22 @@ export const MenuPage: FC<MenuPageProps> = ({
   )
 }
 
-const getOrderedEntries = (menu: Menu, basket: Basket) =>
-  basket.map(basketEntry => {
-    const entries = menu.filter(
-      e =>
-        e.dishName === basketEntry.dish &&
-        (!e.dishVariantName === !basketEntry.variant ||
-          e.dishVariantName === basketEntry.variant),
-    )
-    return [entries[0], entries.length] as [MenuEntry, number]
-  })
+const getOrderedEntries = (menu: Menu, basket: Basket) => {
+  const byEntry = groupBy<BasketEntry>(
+    entry => `${entry.dish} | ${entry.variant}`,
+  )
+
+  const compare = (b: BasketEntry) => (e: MenuEntry) =>
+    e.dishName === b.dish &&
+    (e.dishVariantName === b.variant || (e.dishVariantName || '') === b.variant)
+
+  return Object.values(byEntry(basket))
+    .map(entries => ({ entry: entries[0], count: entries.length }))
+    .map(({ entry, count }) => {
+      const menuEntry = menu.find(compare(entry))!
+      return [menuEntry, count] as [MenuEntry, number]
+    })
+}
 
 const apiCreateOrder = ({
   customer,
