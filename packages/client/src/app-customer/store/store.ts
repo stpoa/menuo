@@ -1,17 +1,23 @@
 import { createStore, applyMiddleware } from 'redux'
-import { rootReducer } from './reducer'
-import { rootEpic } from './epic'
+import { createBrowserHistory } from 'history'
 import { createEpicMiddleware } from 'redux-observable'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import { StateType } from 'typesafe-actions'
+import { routerMiddleware } from 'connected-react-router'
 
+import { createRootReducer } from './reducer'
+import { rootEpic } from './epic'
+
+export const history = createBrowserHistory()
 const epicMiddleware = createEpicMiddleware<any>()
 
 export const store = createStore(
-  rootReducer,
-  composeWithDevTools(applyMiddleware(epicMiddleware)),
+  createRootReducer(history),
+  composeWithDevTools(
+    applyMiddleware(epicMiddleware, routerMiddleware(history)),
+  ),
 )
 
 epicMiddleware.run(rootEpic)
 
-export type RootState = StateType<typeof rootReducer>
+export type RootState = StateType<ReturnType<typeof createRootReducer>>

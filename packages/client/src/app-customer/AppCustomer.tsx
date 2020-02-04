@@ -1,10 +1,11 @@
 import React from 'react'
+import { Provider } from 'react-redux'
 import { Switch, Route } from 'react-router-dom'
+import { ConnectedRouter } from 'connected-react-router'
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
 
 import MenuPage from './pages/Menu/MenuPage'
-import { Provider } from 'react-redux'
-import { store } from './store/store'
+import { store, history } from './store/store'
 
 const theme = createMuiTheme({
   palette: {
@@ -16,11 +17,13 @@ const theme = createMuiTheme({
 const AppCustomer = () => {
   return (
     <Provider store={store}>
-      <ThemeProvider theme={theme}>
-        <Switch>
-          <Route exact path="/:restaurant" component={MenuPage} />
-        </Switch>
-      </ThemeProvider>
+      <ConnectedRouter history={history}>
+        <ThemeProvider theme={theme}>
+          <Switch>
+            <Route exact path="/:restaurant" component={MenuPage} />
+          </Switch>
+        </ThemeProvider>
+      </ConnectedRouter>
     </Provider>
   )
 }

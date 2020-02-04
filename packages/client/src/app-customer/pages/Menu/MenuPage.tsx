@@ -1,6 +1,5 @@
 import React, { useState, useEffect, FC } from 'react'
 import { connect } from 'react-redux'
-
 import { nestMenu, Order, MenuEntry, Menu } from '@menuo/shared'
 
 import { useQuery } from '../../../utils'
@@ -34,46 +33,6 @@ import { RootState } from '../../store/store'
 
 type Basket = BasketEntry[]
 
-const getOrderedEntries = (menu: Menu, basket: Basket) =>
-  basket.map(basketEntry => {
-    const entries = menu.filter(
-      e =>
-        e.dishName === basketEntry.dish &&
-        (!e.dishVariantName === !basketEntry.variant ||
-          e.dishVariantName === basketEntry.variant),
-    )
-    return [entries[0], entries.length] as [MenuEntry, number]
-  })
-
-const apiCreateOrder = ({
-  customer,
-  waiter,
-  table,
-  restaurant,
-  basket,
-  menu,
-}: {
-  customer: string
-  waiter: string
-  table: Order['table']
-  restaurant: string
-  basket: Basket
-  menu: Menu
-}) => {
-  const entries = getOrderedEntries(menu, basket)
-
-  return createRestaurantOrder(
-    { restaurant },
-    {
-      status: 'new',
-      table,
-      customer,
-      entries,
-      waiter,
-      customerSub: readSubscription(),
-    },
-  )
-}
 export interface BasketEntry {
   dish: string
   variant: string
@@ -118,19 +77,6 @@ export const MenuPage: FC<MenuPageProps> = ({
   const menu = nestMenu([...dishes])
 
   useEffect(() => {
-    ;(async () => {
-      console.log('get dishes', restaurant)
-      getDishes(restaurant)
-      setTable({
-        name: query.get('table') || '',
-        restaurant,
-        _id: '',
-        status: 'new',
-      })
-    })()
-  }, [restaurant, refetch])
-
-  useEffect(() => {
     try {
       navigator.serviceWorker.addEventListener('message', event => {
         setRefetch(event.data.refetch)
@@ -139,6 +85,19 @@ export const MenuPage: FC<MenuPageProps> = ({
       console.log(e)
     }
   }, [])
+
+  useEffect(() => {
+    setTable({
+      name: query.get('table') || '',
+      restaurant,
+      _id: '',
+      status: 'new',
+    })
+  }, [])
+
+  useEffect(() => {
+    getDishes(restaurant)
+  }, [restaurant, refetch])
 
   const [showSummonDialog, setShowSummonDialog] = useState(false)
   const [showOrderedInfo, setShowOrderedInfo] = useState(false)
@@ -275,8 +234,6 @@ export const MenuPage: FC<MenuPageProps> = ({
       <OrderSentDialog
         handleClose={() => setShowOrderedInfo(false)}
         handleConfirm={() => {
-          // setBasket({})
-          // basketClear()
           setShowOrderedInfo(false)
         }}
         showOrderedDialog={showOrderedInfo}
@@ -295,6 +252,47 @@ export const MenuPage: FC<MenuPageProps> = ({
         inBasket={getOrderedEntries(dishes, basket)}
       />
     </div>
+  )
+}
+
+const getOrderedEntries = (menu: Menu, basket: Basket) =>
+  basket.map(basketEntry => {
+    const entries = menu.filter(
+      e =>
+        e.dishName === basketEntry.dish &&
+        (!e.dishVariantName === !basketEntry.variant ||
+          e.dishVariantName === basketEntry.variant),
+    )
+    return [entries[0], entries.length] as [MenuEntry, number]
+  })
+
+const apiCreateOrder = ({
+  customer,
+  waiter,
+  table,
+  restaurant,
+  basket,
+  menu,
+}: {
+  customer: string
+  waiter: string
+  table: Order['table']
+  restaurant: string
+  basket: Basket
+  menu: Menu
+}) => {
+  const entries = getOrderedEntries(menu, basket)
+
+  return createRestaurantOrder(
+    { restaurant },
+    {
+      status: 'new',
+      table,
+      customer,
+      entries,
+      waiter,
+      customerSub: readSubscription(),
+    },
   )
 }
 
