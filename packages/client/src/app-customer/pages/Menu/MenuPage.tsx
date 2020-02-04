@@ -30,6 +30,7 @@ import { OrderedListDialog } from './components/OrderedListDialog'
 import { MenuBasketButton, BasketDialog } from './components/MenuBasket'
 import { OrderConfirmationDialog } from './components/OrderConfirmationDialog'
 import * as actions from '../../store/actions'
+import { RootState } from '../../store/store'
 
 type Basket = BasketEntry[]
 
@@ -78,19 +79,25 @@ export interface BasketEntry {
   variant: string
 }
 
-export const MenuPage: FC<RouteComponentProps &
-  WithStyles & {
-    dishes: any
-    getDishes: any
-    table: Table
-    setTable: any
-    isLoading: boolean
-    basket: BasketEntry[]
-    addToBasket: any
-    subFromBasket: any
-    toggleBasketVariant: any
-    toggleBasketDish: any
-  }> = ({
+interface MenuPageStateProps {
+  dishes: any
+  table: Table
+  isLoading: boolean
+  basket: BasketEntry[]
+}
+interface MenuPageDispatchProps {
+  getDishes: any
+  setTable: any
+}
+interface MenuPageOwnProps {}
+interface MenuPageProps
+  extends MenuPageStateProps,
+    MenuPageDispatchProps,
+    MenuPageOwnProps,
+    RouteComponentProps,
+    WithStyles {}
+
+export const MenuPage: FC<MenuPageProps> = ({
   location,
   match,
   classes,
@@ -343,8 +350,13 @@ const styleComponent = withStyles(() =>
   }),
 )
 
-const connectComponent = connect(
-  (state: any) => ({
+const connectComponent = connect<
+  MenuPageStateProps,
+  MenuPageDispatchProps,
+  MenuPageOwnProps,
+  RootState
+>(
+  state => ({
     dishes: state.menu.dishes,
     table: state.table,
     isLoading: state.menu.isFetching,
@@ -353,7 +365,7 @@ const connectComponent = connect(
   dispatch => ({
     getDishes: (restaurant: string) =>
       dispatch(actions.menuGetRequest(restaurant)),
-    setTable: (table: Table) => dispatch(actions.setTable(table)),
+    setTable: (table: Table) => dispatch(actions.tableSet(table)),
   }),
 )
 

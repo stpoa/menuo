@@ -1,5 +1,4 @@
-import { createAction } from '@reduxjs/toolkit'
+import { createStandardAction } from 'typesafe-actions'
 
-export const setTable = createAction('SET_TABLE', (table: any) => ({
-  payload: { table },
-}))
+type Table = { name: string; status: string; _id: string; restaurant: string }
+export const tableSet = createStandardAction('TABLE / SET')<Table>()
