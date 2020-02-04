@@ -46,61 +46,72 @@ export const MenuSection: FC<MenuSectionProps> = ({
         <Typography>{capitalize(section.description ?? '')}</Typography>
       </div>
       <List>
-        {section.dishes.map((dish: IDish, i) => (
-          <Card className={classes.dish} key={i}>
-            <ListItem
-              button
-              onClick={handleDishClick({ dish: dish.name, variant: '' })}
-            >
-              <ListItemText primary={dish.name} secondary={dish.description} />
-            </ListItem>
-            <List component="div" disablePadding>
-              {dish.variants.map((variant, variantId) => {
-                // const id = variant.entry._id
-                const count = basket.filter(
-                  (entry: any) =>
-                    entry.dish === variant.entry.dishName &&
-                    (entry.variant === variant.entry.dishVariantName ||
-                      (!entry.variant && !variant.entry.dishVariantName)),
-                ).length
-                const variantText =
-                  (variant.name ? variant.name + ' - ' : '') +
-                  variant.price +
-                  'zł'
-                const basketEntry = {
-                  dish: dish.name,
-                  variant: variant.name || '',
-                }
-                return (
-                  <ListItem
-                    className={classes.dishVariant}
-                    key={variantId}
-                    button={!count as true}
-                    onClick={!count ? handleToggle(basketEntry) : undefined}
-                  >
-                    <ListItemIcon>
-                      <Checkbox
-                        edge="start"
-                        onChange={count ? handleToggle(basketEntry) : undefined}
-                        checked={count > 0}
-                      />
-                    </ListItemIcon>
-                    <ListItemText>
-                      <span className={classes.variantText}>{variantText}</span>
-                    </ListItemText>
-                    {count > 0 && (
-                      <PlusMinus
-                        count={count}
-                        handleMinusClick={handleMinus(basketEntry)}
-                        handlePlusClick={handlePlus(basketEntry)}
-                      />
-                    )}
-                  </ListItem>
-                )
-              })}
-            </List>
-          </Card>
-        ))}
+        {section.dishes.map((dish: IDish, i) => {
+          const firstEntryInSection = {
+            dish: dish.name,
+            variant: dish.variants[0].name || '',
+          }
+
+          return (
+            <Card className={classes.dish} key={i}>
+              <ListItem button onClick={handleDishClick(firstEntryInSection)}>
+                <ListItemText
+                  primary={dish.name}
+                  secondary={dish.description}
+                />
+              </ListItem>
+              <List component="div" disablePadding>
+                {dish.variants.map((variant, variantId) => {
+                  // const id = variant.entry._id
+                  const count = basket.filter(
+                    (entry: any) =>
+                      entry.dish === variant.entry.dishName &&
+                      (entry.variant === variant.entry.dishVariantName ||
+                        (!entry.variant && !variant.entry.dishVariantName)),
+                  ).length
+                  const variantText =
+                    (variant.name ? variant.name + ' - ' : '') +
+                    variant.price +
+                    'zł'
+                  const basketEntry = {
+                    dish: dish.name,
+                    variant: variant.name || '',
+                  }
+                  return (
+                    <ListItem
+                      className={classes.dishVariant}
+                      key={variantId}
+                      button={!count as true}
+                      onClick={!count ? handleToggle(basketEntry) : undefined}
+                    >
+                      <ListItemIcon>
+                        <Checkbox
+                          edge="start"
+                          onChange={
+                            count ? handleToggle(basketEntry) : undefined
+                          }
+                          checked={count > 0}
+                        />
+                      </ListItemIcon>
+                      <ListItemText>
+                        <span className={classes.variantText}>
+                          {variantText}
+                        </span>
+                      </ListItemText>
+                      {count > 0 && (
+                        <PlusMinus
+                          count={count}
+                          handleMinusClick={handleMinus(basketEntry)}
+                          handlePlusClick={handlePlus(basketEntry)}
+                        />
+                      )}
+                    </ListItem>
+                  )
+                })}
+              </List>
+            </Card>
+          )
+        })}
       </List>
     </div>
   )

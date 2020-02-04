@@ -13,6 +13,8 @@ const isEntryEqual = (a: BasketEntry) => (b: BasketEntry) =>
   a.dish === b.dish && a.variant === b.variant
 const isEntryNotEqual = (a: BasketEntry) => (b: BasketEntry) =>
   a.dish !== b.dish || a.variant !== b.variant
+const isEntryDishNotEqual = (a: BasketEntry) => (b: BasketEntry) =>
+  a.dish !== b.dish
 
 export const basketReducer = createReducer(initialState, {
   [actions.basketAdd.type]: (state, action) => [
@@ -37,7 +39,7 @@ export const basketReducer = createReducer(initialState, {
       entry => entry.dish === action.payload.basketEntry.dish,
     )
     return found
-      ? state.filter(isEntryNotEqual(action.payload.basketEntry))
+      ? state.filter(isEntryDishNotEqual(action.payload.basketEntry))
       : [...state, action.payload.basketEntry]
   },
 })

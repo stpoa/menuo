@@ -1,7 +1,7 @@
 import React, { useState, useEffect, FC } from 'react'
 import { connect } from 'react-redux'
 
-import { nestMenu, Order, MenuEntry, Menu, IVariant } from '@menuo/shared'
+import { nestMenu, Order, MenuEntry, Menu } from '@menuo/shared'
 
 import { useQuery } from '../../../utils'
 import {
