@@ -18,16 +18,30 @@ import { H2 } from '../../../../components/H2'
 import PlusMinus from '../../../../components/PlusMinus'
 import { BasketEntry } from '../MenuPage'
 import { connect } from 'react-redux'
+import { RootState } from '../../../store/store'
+import { bindActionCreators } from 'redux'
 
-export interface MenuSectionProps extends WithStyles {
+export interface MenuSectionOwnProps {
   id: string
   section: ISection
+}
+
+export interface MenuSectionStateProps {
   basket: BasketEntry[]
+}
+
+export interface MenuSectionDispatchProps {
   toggleBasketDish: (entry: BasketEntry) => void
   toggleBasketVariant: (entry: BasketEntry) => void
   subFromBasket: (entry: BasketEntry) => void
   addToBasket: (entry: BasketEntry) => void
 }
+
+export interface MenuSectionProps
+  extends MenuSectionOwnProps,
+    MenuSectionStateProps,
+    MenuSectionDispatchProps,
+    WithStyles {}
 
 const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1)
 
@@ -151,19 +165,25 @@ const styleComponent = withStyles(() =>
   }),
 )
 
-const connectComponent = connect(
-  (state: any) => ({
+const connectComponent = connect<
+  MenuSectionStateProps,
+  MenuSectionDispatchProps,
+  MenuSectionOwnProps,
+  RootState
+>(
+  state => ({
     basket: state.basket,
   }),
-  dispatch => ({
-    toggleBasketDish: (entry: BasketEntry) =>
-      dispatch(actions.basketToggleDish(entry)),
-    toggleBasketVariant: (entry: BasketEntry) =>
-      dispatch(actions.basketToggleVariant(entry)),
-    subFromBasket: (entry: BasketEntry) =>
-      dispatch(actions.basketRemove(entry)),
-    addToBasket: (entry: BasketEntry) => dispatch(actions.basketAdd(entry)),
-  }),
+  dispatch =>
+    bindActionCreators(
+      {
+        toggleBasketDish: actions.basketToggleDish,
+        toggleBasketVariant: actions.basketToggleVariant,
+        subFromBasket: actions.basketRemove,
+        addToBasket: actions.basketAdd,
+      },
+      dispatch,
+    ),
 )
 
 export default connectComponent(styleComponent(MenuSection))

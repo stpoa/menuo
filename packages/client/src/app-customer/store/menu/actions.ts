@@ -1,14 +1,15 @@
-import { createAction } from '@reduxjs/toolkit'
+import { createStandardAction } from 'typesafe-actions'
 
-export const getMenuRequest = createAction('GET_MENU', (restaurant: any) => ({
-  payload: { restaurant },
-}))
+type Restaurant = string
+export const menuGetRequest = createStandardAction('MENU / GET_REQUEST')<
+  Restaurant
+>()
 
-export const getMenuReceive = createAction(
-  'GET_MENU_SUCCESS',
-  (dishes: any) => ({
-    payload: { dishes },
-  }),
-)
+type Dishes = any[]
+export const menuGetReceive = createStandardAction('MENU / GET_RECEIVE')<
+  Dishes
+>()
 
-export const getMenuFailure = createAction<any>('GET_MENU_FAILIRE')
+export const menuGetFailure = createStandardAction('MENU / GET_FAILIRE')<
+  Error
+>()

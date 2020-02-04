@@ -1,18 +1,20 @@
-import { createReducer } from '@reduxjs/toolkit'
 import * as actions from './actions'
+import { createReducer } from 'typesafe-actions'
 
 const initialState = { dishes: [], isFetching: false }
 
-export const menuReducer = createReducer(initialState, {
-  [actions.getMenuRequest.type]: state => ({ ...state, isFetching: true }),
-  [actions.getMenuReceive.type]: (state, action) => ({
+export const menuReducer = createReducer(initialState)
+  .handleAction(actions.menuGetRequest, state => ({
     ...state,
-    dishes: [...action.payload.dishes] as any,
-    isFetching: false,
-  }),
-  [actions.getMenuFailure.type]: (state, action) => ({
+    isFetching: true,
+  }))
+  .handleAction(actions.menuGetReceive, (state, action) => ({
     ...state,
-    error: action.payload.error,
+    dishes: action.payload,
     isFetching: false,
-  }),
-})
+  }))
+  .handleAction(actions.menuGetFailure, (state, action) => ({
+    ...state,
+    error: action.payload,
+    isFetching: false,
+  }))

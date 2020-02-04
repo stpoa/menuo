@@ -3,6 +3,7 @@ import { rootReducer } from './reducer'
 import { rootEpic } from './epic'
 import { createEpicMiddleware } from 'redux-observable'
 import { composeWithDevTools } from 'redux-devtools-extension'
+import { StateType } from 'typesafe-actions'
 
 const epicMiddleware = createEpicMiddleware<any>()
 
@@ -12,3 +13,5 @@ export const store = createStore(
 )
 
 epicMiddleware.run(rootEpic)
+
+export type RootState = StateType<typeof rootReducer>

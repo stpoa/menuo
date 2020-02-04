@@ -112,6 +112,7 @@ export const MenuPage: FC<RouteComponentProps &
 
   useEffect(() => {
     ;(async () => {
+      console.log('get dishes', restaurant)
       getDishes(restaurant)
       setTable({
         name: query.get('table') || '',
@@ -351,7 +352,7 @@ const connectComponent = connect(
   }),
   dispatch => ({
     getDishes: (restaurant: string) =>
-      dispatch(actions.getMenuRequest(restaurant)),
+      dispatch(actions.menuGetRequest(restaurant)),
     setTable: (table: Table) => dispatch(actions.setTable(table)),
   }),
 )
