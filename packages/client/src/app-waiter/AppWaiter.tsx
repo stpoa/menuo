@@ -4,7 +4,7 @@ import OrdersPage from './pages/Orders/Orders.page'
 import ProtectedRoute from '../components/ProtectedRoute'
 
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
-import { LoginPage } from './pages/Login/Login.page'
+import LoginPage from './pages/Login/Login.page'
 
 const theme = createMuiTheme({
   palette: {
