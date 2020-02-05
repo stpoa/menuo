@@ -1328,7 +1328,8 @@
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Domowa mrożona herbata z cytryną i miętą 300ml",
-    "dishVariantPrice": 9
+    "dishVariantPrice": 9,
+    "dishVariantName": ""
   },
   {
     "index": 138,
