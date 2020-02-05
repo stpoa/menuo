@@ -33,7 +33,7 @@ export const parseMenus = () => {
 
   flatMenus.forEach(m =>
     writeFileSync(
-      menusParsedDir + '/' + m[0].restaurant + '.json',
+      menusParsedDir + '/' + m[0].restaurant + '-' + m[0].language + '.json',
       JSON.stringify(m, null, 2),
     ),
   )

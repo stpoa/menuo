@@ -1,14 +1,10 @@
 import React from 'react'
-import { Switch, Route } from 'react-router-dom'
 import './App.css'
-import MenuPage from './pages/Menu/Menu.page'
-import OrdersPage from './pages/Orders/Orders.page'
-import ProtectedRoute from './components/ProtectedRoute'
-
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
-import { LoginPage } from './pages/Login/Login.page'
 
 import TagManager from 'react-gtm-module'
+import AppCustomer from './app-customer/AppCustomer'
+import AppWaiter from './app-waiter/AppWaiter'
 
 // Setup google tag manager
 const GTM_ID = process.env.REACT_APP_GTM_ID
@@ -28,18 +24,8 @@ const theme = createMuiTheme({
 const App = () => {
   return (
     <div id="app">
-      <ThemeProvider theme={theme}>
-        <Switch>
-          <Route exact path="/:restaurant" component={MenuPage} />
-          <ProtectedRoute
-            exact
-            path="/:restaurant/orders"
-            authenticationPath="login"
-            component={OrdersPage}
-          />
-          <Route exact path="/:restaurant/login" component={LoginPage} />
-        </Switch>
-      </ThemeProvider>
+      <AppCustomer />
+      <AppWaiter />
     </div>
   )
 }
