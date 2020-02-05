@@ -1,4 +1,4 @@
-import { get, put, post } from '../../../api'
+import { get, put, post, getStaticJSONData } from '../../../api'
 import {
   ReadRestaurantTable,
   ListRestaurantDishes,
@@ -12,6 +12,15 @@ export const listRestaurantDishes = ({
   restaurant,
 }: ListRestaurantDishes.Params) =>
   get<ListRestaurantDishes.Response>(`/restaurants/${restaurant}/dishes`)
+
+export const getRestaurantDishes = ({
+  restaurant,
+  language = 'pl',
+}: {
+  restaurant: string
+  language?: string
+}): Promise<ListRestaurantDishes.Response> =>
+  getStaticJSONData(`${restaurant}/menu/${language}.json`)
 
 export const readRestaurantTable = ({
   restaurant,
