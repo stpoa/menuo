@@ -13,6 +13,18 @@ export const createOrder = (client: MongoClient) => async (
   return { _id: result.insertedId.toHexString() }
 }
 
+export const getRestaurantOrders = (client: MongoClient) => async (
+  restaurant: string,
+): Promise<Order[]> => {
+  const collection = client.db('menuo').collection<Order>('orders')
+  const orders = await collection
+    .find({ restaurant })
+    .sort({ _id: -1 })
+    .toArray()
+
+  return orders
+}
+
 export const updateOrder = (client: MongoClient) => async ({
   _id,
   restaurant,

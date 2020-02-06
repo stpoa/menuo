@@ -1,7 +1,8 @@
 import 'source-map-support/register'
 import { response } from 'src/lib/http'
-import { getRestaurantOrders, withDB } from 'src/db/db'
+import { withDB } from 'src/db/db'
 import { ListRestaurantOrders } from '@menuo/shared/interfaces/api'
+import { getRestaurantOrders } from 'src/db/orders'
 
 export const handler = withDB(async (event, ctx, _cb) => {
   if (!event?.pathParameters?.restaurant) {

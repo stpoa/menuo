@@ -1,10 +1,11 @@
 import 'source-map-support/register'
 import { response } from 'src/lib/http'
-import { withDB, getRestaurantWaiterUsers } from 'src/db/db'
+import { withDB } from 'src/db/db'
 import { log } from 'src/logs/logs'
 import { createOrder } from 'src/db/orders'
 import { CreateRestaurantOrder } from '@menuo/shared/interfaces/api'
 import { sendNotifications } from 'src/notifications/notifications'
+import { getRestaurantWaiterUsers } from 'src/db/users'
 
 export const handler = withDB(async (event, ctx, _cb) => {
   if (!event?.pathParameters?.restaurant) {

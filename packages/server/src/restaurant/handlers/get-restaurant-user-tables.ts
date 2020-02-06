@@ -1,8 +1,9 @@
 import 'source-map-support/register'
 
 import { response } from 'src/lib/http'
-import { getWaiterUser, withDB } from 'src/db/db'
+import { withDB } from 'src/db/db'
 import { authorize } from 'src/auth/token'
+import { getWaiterUser } from 'src/db/users'
 
 export const handler = withDB(async (event, ctx) => {
   const secret = process.env.JWT_SECRET

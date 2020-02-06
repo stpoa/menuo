@@ -33,18 +33,6 @@ provider:
       Resource: '*'
 
 functions:
-  get_restaurant_menu:
-    handler: src/restaurant/handlers/get-restaurant-menu.handler
-    events:
-      - http:
-          path: restaurants/{restaurant}/dishes
-          method: get
-          cors: true
-          request:
-            parameters:
-              paths:
-                restaurant: true
-
   get_restaurant_orders:
     handler: src/restaurant/handlers/get-restaurant-orders.handler
     events:
@@ -129,19 +117,6 @@ functions:
               paths:
                 restaurant: true
                 order: true
-
-  get_restaurant_table:
-    handler: src/restaurant/handlers/get-restaurant-table.handler
-    events:
-      - http:
-          path: restaurants/{restaurant}/tables/{table}
-          method: get
-          cors: true
-          request:
-            parameters:
-              paths:
-                restaurant: true
-                table: true
 
   verify_token:
     handler: src/handlers.verifyToken
