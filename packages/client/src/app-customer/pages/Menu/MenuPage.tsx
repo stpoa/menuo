@@ -46,8 +46,9 @@ interface MenuPageStateProps {
   basket: BasketEntry[]
 }
 interface MenuPageDispatchProps {
-  getDishes: any
-  setTable: any
+  getDishes: (restaurant: string) => void
+  setTable: (table: Table) => void
+  clearBasket: () => void
 }
 interface MenuPageOwnProps {}
 interface MenuPageProps
@@ -67,6 +68,7 @@ export const MenuPage: FC<MenuPageProps> = ({
   setTable,
   isLoading,
   basket,
+  clearBasket,
 }) => {
   const { restaurant } = match.params as { restaurant: string }
   const { search } = location
@@ -137,6 +139,7 @@ export const MenuPage: FC<MenuPageProps> = ({
     })
     setShowOrderedInfo(true)
     setOrdered(o => [...o, ...getOrderedEntries(dishes, basket)])
+    clearBasket()
     setLoading(false)
   }
 
@@ -370,6 +373,7 @@ const connectComponent = connect<
   dispatch => ({
     getDishes: (restaurant: string) =>
       dispatch(actions.menuGetRequest(restaurant)),
+    clearBasket: () => dispatch(actions.basketClear()),
     setTable: (table: Table) => dispatch(actions.tableSet(table)),
   }),
 )
