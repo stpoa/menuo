@@ -197,7 +197,9 @@ export const OrdersPage: FC<RouteChildrenProps<{ restaurant: string }> &
                   {
                     entries: order.items.map(i => {
                       const priority =
-                        i.entry._id === orderEntry.entry._id
+                        (i.entry.dishVariantName || '') ===
+                          (orderEntry.entry.dishVariantName || '') &&
+                        i.entry.dishName === orderEntry.entry.dishName
                           ? (e.target.value as number)
                           : i.entry.priority
                       const entry = { ...i.entry, priority }
