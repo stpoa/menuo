@@ -1,5 +1,5 @@
 {
-  "name": "@menuo/client",
+  "name": "@menuo/customer",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
