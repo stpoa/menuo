@@ -3,13 +3,7 @@ import { connect } from 'react-redux'
 import { nestMenu, Order, MenuEntry, Menu } from '@menuo/shared'
 
 import { useQuery } from '../../utils'
-import {
-  Button,
-  Fab,
-  withStyles,
-  createStyles,
-  WithStyles,
-} from '@material-ui/core'
+import { Button, Fab, withStyles, WithStyles } from '@material-ui/core'
 import { Header } from '../../components/Header'
 import {
   createRestaurantOrder,
@@ -31,6 +25,7 @@ import { OrderConfirmationDialog } from './components/OrderConfirmationDialog'
 import * as actions from '../../store/actions'
 import { RootState } from '../../store/store'
 import { groupBy } from 'ramda'
+import { styles } from './MenuPage.styles'
 
 type Basket = BasketEntry[]
 
@@ -78,16 +73,6 @@ export const MenuPage: FC<MenuPageProps> = ({
   const [ordered, setOrdered] = useState<[MenuEntry, number][]>([])
 
   const menu = nestMenu([...dishes])
-
-  useEffect(() => {
-    try {
-      navigator.serviceWorker.addEventListener('message', event => {
-        setRefetch(event.data.refetch)
-      })
-    } catch (e) {
-      console.log(e)
-    }
-  }, [])
 
   useEffect(() => {
     setTable({
@@ -306,57 +291,7 @@ const apiCreateOrder = ({
   )
 }
 
-const styleComponent = withStyles(() =>
-  createStyles({
-    root: {
-      backgroundColor: '#f5f5f5',
-      flexDirection: 'column',
-      padding: '0.75rem 1rem',
-      minHeight: '100vh',
-    },
-    menuContent: {
-      marginTop: '1rem',
-      marginBottom: '1rem',
-    },
-    buttons: {
-      display: 'flex',
-      position: 'fixed',
-      bottom: '0.5rem',
-      left: '50%',
-      width: '96%',
-      marginLeft: '-48%',
-      flexDirection: 'row',
-      justifyContent: 'center',
-    },
-    buttonLeft: {
-      width: '50%',
-      marginRight: '0.5rem',
-      fontSize: '0.8rem',
-      background: 'white',
-    },
-    buttonRight: {
-      width: '50%',
-      marginLeft: '0.5rem',
-      fontSize: '0.8rem',
-    },
-    orderedListFab: {
-      position: 'fixed',
-      top: '1rem',
-      right: '1rem',
-      width: '40px',
-      height: '40px',
-      zIndex: 100,
-    },
-    basketButton: {
-      position: 'fixed',
-      top: '1rem',
-      right: '4rem',
-      width: '40px',
-      height: '40px',
-      zIndex: 100,
-    },
-  }),
-)
+const styleComponent = withStyles(styles)
 
 const connectComponent = connect<
   MenuPageStateProps,
