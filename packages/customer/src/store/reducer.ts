@@ -4,6 +4,7 @@ import { connectRouter } from 'connected-react-router'
 import { tableReducer } from './table/reducer'
 import { menuReducer } from './menu/reducer'
 import { basketReducer } from './basket/reducer'
+import { restaurantReducer } from './restaurant/reducer'
 
 export const createRootReducer = (history: any) =>
   combineReducers({
@@ -11,4 +12,5 @@ export const createRootReducer = (history: any) =>
     menu: menuReducer,
     table: tableReducer,
     basket: basketReducer,
+    restaurant: restaurantReducer,
   })

@@ -2,7 +2,6 @@ import React, { useState, useEffect, FC } from 'react'
 import { connect } from 'react-redux'
 import { nestMenu, Order, MenuEntry, Menu } from '@menuo/shared'
 
-import { useQuery } from '../../utils'
 import { Button, Fab, withStyles, WithStyles } from '@material-ui/core'
 import { Header } from '../../components/Header'
 import {
@@ -15,7 +14,6 @@ import MenuSection from './components/MenuSection'
 import { OrderSentDialog } from './components/OrderSentDialog'
 import WaiterSummonDialog from './components/WaiterSummonDialog'
 import { Table } from '@menuo/shared/interfaces/tables'
-import { RouteComponentProps } from 'react-router'
 import { readSubscription } from '../../notifications'
 import Loading from '../../components/Loading'
 import { Receipt as ReceiptIcon } from '@material-ui/icons'
@@ -37,12 +35,14 @@ export interface BasketEntry {
 interface MenuPageStateProps {
   dishes: any
   table: Table
+  restaurant: string
   isLoading: boolean
   basket: BasketEntry[]
 }
 interface MenuPageDispatchProps {
-  getDishes: (restaurant: string) => void
-  setTable: (table: Table) => void
+  getDishes: () => void
+  getTable: () => void
+  getRestaurant: () => void
   clearBasket: () => void
 }
 interface MenuPageOwnProps {}
@@ -50,42 +50,30 @@ interface MenuPageProps
   extends MenuPageStateProps,
     MenuPageDispatchProps,
     MenuPageOwnProps,
-    RouteComponentProps,
     WithStyles {}
 
 export const MenuPage: FC<MenuPageProps> = ({
-  location,
-  match,
   classes,
   dishes,
   getDishes,
   table,
-  setTable,
+  getTable,
+  restaurant,
+  getRestaurant,
   isLoading,
   basket,
   clearBasket,
 }) => {
-  const { restaurant } = match.params as { restaurant: string }
-  const { search } = location
-  const query = useQuery(search)
-  const [refetch, setRefetch] = useState(0)
   const [loading, setLoading] = useState(false)
   const [ordered, setOrdered] = useState<[MenuEntry, number][]>([])
 
   const menu = nestMenu([...dishes])
 
   useEffect(() => {
-    setTable({
-      name: query.get('table') || '',
-      restaurant,
-      _id: '',
-      status: 'new',
-    })
+    getRestaurant()
+    getTable()
+    getDishes()
   }, [])
-
-  useEffect(() => {
-    getDishes(restaurant)
-  }, [restaurant, refetch])
 
   const [showSummonDialog, setShowSummonDialog] = useState(false)
   const [showOrderedInfo, setShowOrderedInfo] = useState(false)
@@ -120,7 +108,7 @@ export const MenuPage: FC<MenuPageProps> = ({
       table,
       basket,
       menu,
-      restaurant: restaurant,
+      restaurant,
     })
     setShowOrderedInfo(true)
     setOrdered(o => [...o, ...getOrderedEntries(dishes, basket)])
@@ -304,12 +292,13 @@ const connectComponent = connect<
     table: state.table,
     isLoading: state.menu.isFetching,
     basket: state.basket,
+    restaurant: state.restaurant,
   }),
   dispatch => ({
-    getDishes: (restaurant: string) =>
-      dispatch(actions.menuGetRequest(restaurant)),
+    getDishes: () => dispatch(actions.menuGetRequest()),
     clearBasket: () => dispatch(actions.basketClear()),
-    setTable: (table: Table) => dispatch(actions.tableSet(table)),
+    getTable: () => dispatch(actions.tableGet()),
+    getRestaurant: () => dispatch(actions.restaurantGet()),
   }),
 )
 

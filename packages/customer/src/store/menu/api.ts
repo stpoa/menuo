@@ -19,8 +19,10 @@ export const getRestaurantDishes = ({
 }: {
   restaurant: string
   language?: string
-}): Promise<ListRestaurantDishes.Response> =>
-  getStaticJSONData(`${restaurant}/menu/${language}.json`)
+}): Promise<ListRestaurantDishes.Response> => {
+  console.log({ restaurant, language })
+  return getStaticJSONData(`${restaurant}/menu/${language}.json`)
+}
 
 export const readRestaurantTable = ({
   restaurant,
