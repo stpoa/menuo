@@ -43,15 +43,15 @@
     "env-cmd": "^10.0.1"
   },
   "scripts": {
-    "start": "PORT=3001 react-scripts start",
+    "start": "PORT=3002 react-scripts start",
     "build:production": "env-cmd -f .env.production react-scripts build",
     "build:staging": "env-cmd -f .env.staging react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy:staging": "yarn build:staging && yarn upload:staging",
     "deploy:production": "yarn build:production && yarn upload:production",
-    "upload:staging": "yarn upload:stageless --env staging",
-    "upload:production": "yarn upload:stageless --env production",
+    "upload:staging": "aws s3 sync ./build s3://menuo.me/waiter",
+    "upload:production": "aws s3 sync ./build s3://menuo.app/waiter",
     "upload:stageless": "cd ../server && sls client deploy --no-config-change --no-policy-change --no-cors-change --no-delete-contents --no-confirm"
   },
   "eslintConfig": {

@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react'
-import { Switch, Route, BrowserRouter as Router } from 'react-router-dom'
+import { Switch, Route, HashRouter as Router } from 'react-router-dom'
 import TagManager from 'react-gtm-module'
 import OrdersPage from './pages/Orders/Orders.page'
 import ProtectedRoute from './components/ProtectedRoute'
@@ -17,21 +17,23 @@ const theme = createMuiTheme({
 
 const App = () => {
   return (
-    <Suspense fallback={() => <span>Loading...</span>}>
-      <ThemeProvider theme={theme}>
-        <Router>
-          <Switch>
-            <ProtectedRoute
-              exact
-              path="/:restaurant/orders"
-              authenticationPath="login"
-              component={OrdersPage}
-            />
-            <Route exact path="/:restaurant/login" component={LoginPage} />
-          </Switch>
-        </Router>
-      </ThemeProvider>
-    </Suspense>
+    <div id="app">
+      <Suspense fallback={() => <span>Loading...</span>}>
+        <ThemeProvider theme={theme}>
+          <Router>
+            <Switch>
+              <ProtectedRoute
+                exact
+                path="/:restaurant/orders"
+                authenticationPath="login"
+                component={OrdersPage}
+              />
+              <Route exact path="/:restaurant/login" component={LoginPage} />
+            </Switch>
+          </Router>
+        </ThemeProvider>
+      </Suspense>
+    </div>
   )
 }
 
