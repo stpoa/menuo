@@ -1,0 +1,11 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "",
+    "deploy:staging": "aws s3 sync ./build s3://menuo.me",
+    "deploy:production": "aws s3 sync ./build s3://menuo.app"
+  }
+}
