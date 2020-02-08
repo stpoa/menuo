@@ -1,27 +1,37 @@
-import React from 'react'
-import { Switch, Route } from 'react-router-dom'
+import React, { Suspense } from 'react'
+import { Switch, Route, BrowserRouter as Router } from 'react-router-dom'
+import TagManager from 'react-gtm-module'
+import OrdersPage from './pages/Orders/Orders.page'
+import ProtectedRoute from './components/ProtectedRoute'
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
 import './App.css'
 
-import TagManager from 'react-gtm-module'
-import AppCustomer from './app-customer/AppCustomer'
-import AppWaiter from './app-waiter/AppWaiter'
+const LoginPage = React.lazy(() => import('./pages/Login/Login.page'))
+
+const theme = createMuiTheme({
+  palette: {
+    // primary: orange,
+    // secondary: green,
+  },
+})
 
 const App = () => {
   return (
-    <div id="app">
-      <Switch>
-        <Route
-          exact
-          path="/"
-          component={() => {
-            window.location.href = '/about'
-            return null
-          }}
-        />
-        <AppCustomer />
-        <AppWaiter />
-      </Switch>
-    </div>
+    <Suspense fallback={() => <span>Loading...</span>}>
+      <ThemeProvider theme={theme}>
+        <Router>
+          <Switch>
+            <ProtectedRoute
+              exact
+              path="/:restaurant/orders"
+              authenticationPath="login"
+              component={OrdersPage}
+            />
+            <Route exact path="/:restaurant/login" component={LoginPage} />
+          </Switch>
+        </Router>
+      </ThemeProvider>
+    </Suspense>
   )
 }
 

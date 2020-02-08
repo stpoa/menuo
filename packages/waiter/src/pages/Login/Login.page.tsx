@@ -12,7 +12,7 @@ import {
 } from '@material-ui/core'
 import { Face, Fingerprint } from '@material-ui/icons'
 import { login, isLoggedIn } from '../../auth/service'
-import { readSubscription } from '../../../notifications'
+import { readSubscription } from '../../notifications'
 
 export const LoginPage: FC<RouteComponentProps & WithStyles> = ({
   match,

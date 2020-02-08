@@ -1,8 +1,9 @@
-import { get, put, del, getStaticJSONData } from '../../../api'
+import { get, put, del, getStaticJSONData } from '../../api'
 import {
   ListRestaurantOrders,
   DeleteRestaurantOrder,
   DeleteRestaurantOrders,
+  UpdateRestaurantOrder,
 } from '@menuo/shared/interfaces/api'
 import { IOrdersTable, IOrder } from '@menuo/shared'
 
@@ -45,3 +46,12 @@ export const updateTablesMine = ({
   tables: string[]
   restaurant: string
 }) => put<any>(`/restaurants/${restaurant}/my-tables`, { tables })
+
+export const updateRestaurantOrder = (
+  { restaurant, order }: UpdateRestaurantOrder.Params,
+  updates: UpdateRestaurantOrder.Body,
+) =>
+  put<UpdateRestaurantOrder.Response, typeof updates>(
+    `/restaurants/${restaurant}/orders/${order}`,
+    updates,
+  )

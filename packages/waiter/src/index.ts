@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter as Router } from 'react-router-dom'
 import './index.css'
 import App from './App'
 import {
@@ -9,12 +8,8 @@ import {
   getSubscription,
   publicVapidKey,
 } from './utils'
-// import { apiSubscribe } from './api-old'
 
-ReactDOM.render(
-  React.createElement(Router, null, React.createElement(App, null)),
-  document.getElementById('root'),
-)
+ReactDOM.render(React.createElement(App, null), document.getElementById('root'))
 
 const run = async () => {
   try {

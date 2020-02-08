@@ -1,5 +1,5 @@
 import React, { useEffect, useState, FC } from 'react'
-import { Header } from '../../../components/Header'
+import { Header } from '../../components/Header'
 import { OrdersTable } from './components/Table/OrdersTable'
 
 import {
@@ -9,9 +9,10 @@ import {
   getTables,
   getTablesMine,
   updateTablesMine,
+  updateRestaurantOrder,
 } from './Orders.api'
 import { IOrdersTables, nestOrders, Table } from '@menuo/shared'
-import Loading from '../../../components/Loading'
+import Loading from '../../components/Loading'
 import { Fab, withStyles, createStyles, WithStyles } from '@material-ui/core'
 import {
   ExitToApp as ExitToAppIcon,
@@ -19,8 +20,7 @@ import {
 } from '@material-ui/icons'
 import { TablesSelectionDialog } from './components/TablesSelectionDialog'
 import { RouteChildrenProps } from 'react-router'
-import { updateRestaurantOrder } from '../../../app-customer/store/menu/api'
-import { readSubscription } from '../../../notifications'
+import { readSubscription } from '../../notifications'
 
 const ORDERS_REFETCH_INTERVAL = +(
   process.env.REACT_APP_ORDERS_REFETCH_INTERVAL || 24 * 60 * 60

@@ -16,5 +16,13 @@
     "skipDefaultLibCheck": true,
     "strict": true
   },
-  "include": ["src", "node_modules/@menuo/shared"]
+  "include": [
+    "src",
+    "node_modules/@menuo/shared",
+    "srccc/AppWaiter.tsx",
+    "srccc/utils",
+    "srccc/pages",
+    "srccc/components",
+    "srccc/auth"
+  ]
 }

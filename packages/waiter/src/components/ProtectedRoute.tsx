@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Redirect, Route, RouteProps } from 'react-router'
-import { isLoggedIn } from '../app-waiter/auth/service'
+import { isLoggedIn } from '../auth/service'
 
 export interface ProtectedRouteProps extends RouteProps {
   authenticationPath: string

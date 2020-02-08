@@ -1,4 +1,4 @@
-import { post } from '../../api'
+import { post } from '../api'
 
 export const readToken = () => localStorage.getItem('jwt')
 export const storeToken = ({ token }: { token: string }) =>
