@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware } from 'redux'
-import { createBrowserHistory } from 'history'
+import { createHashHistory } from 'history'
 import { createEpicMiddleware } from 'redux-observable'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import { StateType } from 'typesafe-actions'
@@ -8,7 +8,7 @@ import { routerMiddleware } from 'connected-react-router'
 import { createRootReducer } from './reducer'
 import { rootEpic } from './epic'
 
-export const history = createBrowserHistory()
+export const history = createHashHistory()
 const epicMiddleware = createEpicMiddleware<any>()
 
 export const store = createStore(
