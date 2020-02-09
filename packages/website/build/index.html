@@ -24,9 +24,40 @@
     <link rel="stylesheet" href="css/aos.css">
 
     <link rel="stylesheet" href="css/style.css">
-    
+	
+	<link rel="icon" href="images/favicon.ico">
+	
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  
+  <style>
+    #cookies-message{
+	  color: white; padding: 12px 10px; text-align: center; position: fixed; bottom:0px; left:0; right:0; background-color: rgba(0,0,0,0.6); z-index: 100000; box-shadow: 0 0 5px rgba(0,0,0,0.4); display: none;
+    }
+    #accept-cookies-checkbox{
+	  background-color: #007BFF; color: #FFF; border: solid 1px #007BFF; transition: all 0.5s; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-left: 10px; text-decoration: none; cursor: pointer
+    }
+    #accept-cookies-checkbox:hover{
+	  background-color: transparent; border-color: white;
+    }
+  </style>
+	
+  <div id="cookies-message-container"><div id="cookies-message">Ta strona używa ciasteczek (cookies), w celu ciągłego udoskonalania naszego serwisu<a href="javascript:WHCloseCookiesWindow();" id="accept-cookies-checkbox">Akceptuje</a></div></div>
+
+  <script>
+  function WHCheckCookies(){
+	if(!localStorage.cookies_accepted) {
+		var cookies_message = document.getElementById("cookies-message");
+		cookies_message.style.display="block"
+	} 
+  }
+  function WHCloseCookiesWindow(){
+	localStorage.cookies_accepted = true;
+	document.getElementById("cookies-message-container").removeChild(document.getElementById("cookies-message"));
+  }
+	
+  window.onload = WHCheckCookies;
+  </script>
   
 
   <div id="overlayer"></div>
