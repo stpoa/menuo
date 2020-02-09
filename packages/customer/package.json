@@ -42,14 +42,20 @@
     "@types/react-router": "^5.1.3",
     "@types/react-router-dom": "^5.1.3",
     "@types/react-router-hash-link": "^1.2.1",
-    "env-cmd": "^10.0.1"
+    "env-cmd": "^10.0.1",
+    "ip": "^1.1.5",
+    "qrcode-terminal": "^0.12.0"
   },
   "scripts": {
-    "start": "PORT=3001 react-scripts start",
+    "start": "env-cmd -f .env.local react-scripts start",
     "build:production": "env-cmd -f .env.production react-scripts build",
     "build:staging": "env-cmd -f .env.staging react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "qr": "yarn qr:local",
+    "qr:local": "env-cmd -f .env.local node scripts/generate-qr",
+    "qr:staging": "env-cmd -f .env.staging node scripts/generate-qr",
+    "qr:production": "env-cmd -f .env.production node scripts/generate-qr",
     "deploy:staging": "yarn build:staging && yarn upload:staging",
     "deploy:production": "yarn build:production && yarn upload:production",
     "upload:staging": "aws s3 sync ./build s3://menuo.me/menu",
