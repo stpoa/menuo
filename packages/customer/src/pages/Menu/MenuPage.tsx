@@ -18,12 +18,13 @@ import { readSubscription } from '../../notifications'
 import Loading from '../../components/Loading'
 import { Receipt as ReceiptIcon } from '@material-ui/icons'
 import { OrderedListDialog } from './components/OrderedListDialog'
-import { MenuBasketButton, BasketDialog } from './components/MenuBasket'
+import BasketDialog, { MenuBasketButton } from './components/MenuBasket'
 import { OrderConfirmationDialog } from './components/OrderConfirmationDialog'
 import * as actions from '../../store/actions'
 import { RootState } from '../../store/store'
-import { groupBy } from 'ramda'
 import { styles } from './MenuPage.styles'
+import { DialogType } from '../../store/ui/dialog/types'
+import { getOrderedEntries } from './data'
 
 type Basket = BasketEntry[]
 
@@ -44,6 +45,7 @@ interface MenuPageDispatchProps {
   getTable: () => void
   getRestaurant: () => void
   clearBasket: () => void
+  showBasketDialog: () => void
 }
 interface MenuPageOwnProps {}
 interface MenuPageProps
@@ -63,6 +65,7 @@ export const MenuPage: FC<MenuPageProps> = ({
   isLoading,
   basket,
   clearBasket,
+  showBasketDialog,
 }) => {
   const [loading, setLoading] = useState(false)
   const [ordered, setOrdered] = useState<[MenuEntry, number][]>([])
@@ -78,7 +81,6 @@ export const MenuPage: FC<MenuPageProps> = ({
   const [showSummonDialog, setShowSummonDialog] = useState(false)
   const [showOrderedInfo, setShowOrderedInfo] = useState(false)
   const [showOrderedList, setShowOrderedList] = useState(false)
-  const [showBasket, setShowBasket] = useState(false)
   const [showConfirmationDialog, setShowConfirmationDialog] = useState(false)
 
   if (!table.name) {
@@ -135,26 +137,19 @@ export const MenuPage: FC<MenuPageProps> = ({
     setShowSummonDialog(false)
   }
 
-  const handleOrderedClick = () => setShowOrderedList(true)
-  const handleBasketClick = () => setShowBasket(true)
-
-  // Variables
-  const basketItemCount = basket.length
-  const isBasketEmpty = !basketItemCount
-
   return (
     <div className={classes.root}>
       <Loading loading={loading || isLoading} />
       <Header>menuo</Header>
       <MenuBasketButton
         className={classes.basketButton}
-        count={basketItemCount}
-        disabled={!basketItemCount}
-        onClick={handleBasketClick}
+        count={basket.length}
+        disabled={!basket.length}
+        onClick={showBasketDialog}
       />
       <Fab
         disabled={ordered.length === 0}
-        onClick={handleOrderedClick}
+        onClick={() => setShowOrderedList(true)}
         color="primary"
         aria-label="logout"
         className={classes.orderedListFab}
@@ -179,7 +174,7 @@ export const MenuPage: FC<MenuPageProps> = ({
           Zawołaj kelnera
         </Button>
         <Button
-          disabled={isBasketEmpty || loading}
+          disabled={!basket.length || loading}
           className={classes.buttonRight}
           variant="contained"
           color="primary"
@@ -222,31 +217,9 @@ export const MenuPage: FC<MenuPageProps> = ({
         onConfirm={() => setShowOrderedList(false)}
         ordered={ordered}
       />
-      <BasketDialog
-        open={showBasket}
-        onClose={() => setShowBasket(false)}
-        onConfirm={() => setShowBasket(false)}
-        inBasket={getOrderedEntries(dishes, basket)}
-      />
+      <BasketDialog />
     </div>
   )
-}
-
-const getOrderedEntries = (menu: Menu, basket: Basket) => {
-  const byEntry = groupBy<BasketEntry>(
-    entry => `${entry.dish} | ${entry.variant}`,
-  )
-
-  const compare = (b: BasketEntry) => (e: MenuEntry) =>
-    e.dishName === b.dish &&
-    (e.dishVariantName === b.variant || (e.dishVariantName || '') === b.variant)
-
-  return Object.values(byEntry(basket))
-    .map(entries => ({ entry: entries[0], count: entries.length }))
-    .map(({ entry, count }) => {
-      const menuEntry = menu.find(compare(entry))!
-      return [menuEntry, count] as [MenuEntry, number]
-    })
 }
 
 const apiCreateOrder = ({
@@ -295,6 +268,7 @@ const connectComponent = connect<
     restaurant: state.restaurant,
   }),
   dispatch => ({
+    showBasketDialog: () => dispatch(actions.uiDialogShow(DialogType.BASKET)),
     getDishes: () => dispatch(actions.menuGetRequest()),
     clearBasket: () => dispatch(actions.basketClear()),
     getTable: () => dispatch(actions.tableGet()),

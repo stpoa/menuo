@@ -4,6 +4,11 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
 import { Dialog, DialogTitle, DialogContent, Button } from '@material-ui/core'
 import { MenuEntry } from '@menuo/shared'
 import { OrderedList } from './OrderList'
+import { connect } from 'react-redux'
+import { RootState } from '../../../store/store'
+import * as actions from '../../../store/actions'
+import { DialogType } from '../../../store/ui/dialog/types'
+import { getOrderedEntries } from '../data'
 
 const StyledBadge = withStyles((theme: Theme) =>
   createStyles({
@@ -36,12 +41,22 @@ export const MenuBasketButton: FC<MenuBasketIconProps> = ({
   </Fab>
 )
 
-interface BasketDialogProps {
+interface BasketDialogStateProps {
   open: boolean
-  onClose: any
-  onConfirm: any
   inBasket: [MenuEntry, number][]
 }
+
+interface BasketDialogOwnProps {}
+
+interface BasketDialogDispatchProps {
+  onClose: any
+  onConfirm: any
+}
+
+interface BasketDialogProps
+  extends BasketDialogStateProps,
+    BasketDialogDispatchProps,
+    BasketDialogOwnProps {}
 
 export const BasketDialog: FC<BasketDialogProps> = ({
   open,
@@ -59,3 +74,21 @@ export const BasketDialog: FC<BasketDialogProps> = ({
     </Button>
   </Dialog>
 )
+
+const connectComponent = connect<
+  BasketDialogStateProps,
+  BasketDialogDispatchProps,
+  BasketDialogOwnProps,
+  RootState
+>(
+  state => ({
+    open: state.ui.dialog === DialogType.BASKET,
+    inBasket: getOrderedEntries(state.menu.dishes, state.basket),
+  }),
+  dispatch => ({
+    onClose: () => dispatch(actions.uiDialogHide()),
+    onConfirm: () => dispatch(actions.uiDialogHide()),
+  }),
+)
+
+export default connectComponent(BasketDialog)
