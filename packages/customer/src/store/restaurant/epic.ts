@@ -13,7 +13,7 @@ export const restaurantSetEpic: Epic = (
     filter(isActionOf(actions.restaurantGet)),
     map(() => {
       const { pathname } = state$.value.router.location
-      const parsedPath = pathname.slice(1)
+      const parsedPath = pathname.split('/').join('')
 
       return actions.restaurantSet(parsedPath)
     }),
