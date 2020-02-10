@@ -140,7 +140,7 @@ export const MenuPage: FC<MenuPageProps> = ({
   return (
     <div className={classes.root}>
       <Loading loading={loading || isLoading} />
-      <Header>menuo</Header>
+      <Header>Menuo</Header>
       <MenuBasketButton
         className={classes.basketButton}
         count={basket.length}

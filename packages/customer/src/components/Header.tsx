@@ -15,8 +15,8 @@ export const HeaderRaw: React.FC<WithStyles> = ({ children, classes }) => {
 export const Header = withStyles(theme =>
   createStyles({
     root: {
-      paddingTop: '1rem',
-      paddingBottom: '1.35rem',
+      paddingTop: '0.4rem',
+      paddingBottom: '0.9rem',
       borderBottom: '1px solid #ccc',
       display: 'flex',
       flexDirection: 'column',
@@ -25,7 +25,9 @@ export const Header = withStyles(theme =>
     },
     content: {
       textAlign: 'center',
-      textTransform: 'uppercase',
+      fontFamily: "'Megrim', cursive",
+      color: '#777',
+      fontSize: '2rem',
     },
   }),
 )(HeaderRaw)
