@@ -57,7 +57,7 @@
     "dishName": "Pierogi - 10 szt.",
     "dishVariantPrice": 14,
     "dishVariantName": "z kapustą i grzybami"
-  }
+  },
   {
     "index": 6,
     "language": "pl",
@@ -67,5 +67,4 @@
     "dishVariantPrice": 14,
     "dishVariantName": "z mięsem"
   }
-
 ]
