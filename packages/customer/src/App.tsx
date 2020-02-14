@@ -17,23 +17,19 @@ const theme = createMuiTheme({
   },
 })
 
-const LazyMenuPage = (props: any) => (
-  <Suspense fallback={<div>Loading...</div>}>
-    <MenuPage {...props} />
-  </Suspense>
-)
-
 const App = () => {
   return (
     <div id="app">
       <Provider store={store}>
-        <ConnectedRouter history={history}>
-          <ThemeProvider theme={theme}>
-            <Switch>
-              <Route exact path="/:restaurant" component={LazyMenuPage} />
-            </Switch>
-          </ThemeProvider>
-        </ConnectedRouter>
+        <Suspense fallback={<div>Loading...</div>}>
+          <ConnectedRouter history={history}>
+            <ThemeProvider theme={theme}>
+              <Switch>
+                <Route exact path="/:restaurant" component={MenuPage} />
+              </Switch>
+            </ThemeProvider>
+          </ConnectedRouter>
+        </Suspense>
       </Provider>
     </div>
   )
