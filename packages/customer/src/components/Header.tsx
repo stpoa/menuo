@@ -25,7 +25,7 @@ export const Header = withStyles(theme =>
     },
     content: {
       textAlign: 'center',
-      fontFamily: "'Megrim', cursive",
+      fontFamily: "'Megrim', sans-serif",
       color: '#777',
       fontSize: '2rem',
     },
