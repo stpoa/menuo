@@ -19,7 +19,6 @@ export const LoginPage: FC<RouteComponentProps & WithStyles> = ({
   classes,
 }) => {
   const { restaurant } = match.params as { restaurant: string }
-
   const [loggedIn, setLoggedIn] = useState(isLoggedIn())
   const usernameInput = useRef<HTMLInputElement>(null)
   const passwordInput = useRef<HTMLInputElement>(null)
@@ -32,6 +31,13 @@ export const LoginPage: FC<RouteComponentProps & WithStyles> = ({
     login(
       { restaurant },
       { username, password, subscription: readSubscription() },
+    ).then(() => setLoggedIn(true))
+  }
+
+  if (restaurant === 'demo') {
+    login(
+      { restaurant },
+      { username: 'demo', password: 'demo', subscription: readSubscription() },
     ).then(() => setLoggedIn(true))
   }
 
