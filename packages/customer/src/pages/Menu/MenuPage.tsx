@@ -2,7 +2,14 @@ import React, { useState, useEffect, FC } from 'react'
 import { connect } from 'react-redux'
 import { nestMenu, Order, MenuEntry, Menu } from '@menuo/shared'
 
-import { Button, Fab, withStyles, WithStyles } from '@material-ui/core'
+import {
+  Button,
+  Fab,
+  withStyles,
+  WithStyles,
+  Divider,
+  Link,
+} from '@material-ui/core'
 import { Header } from '../../components/Header'
 import {
   createRestaurantOrder,
@@ -218,6 +225,14 @@ export const MenuPage: FC<MenuPageProps> = ({
         ordered={ordered}
       />
       <BasketDialog />
+      <footer>
+        <Divider />
+        <Link href="https://menuo.app">O nas</Link>
+        <br />
+        <br />
+        <br />
+        <br />
+      </footer>
     </div>
   )
 }

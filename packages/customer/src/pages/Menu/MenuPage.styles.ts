@@ -11,6 +11,7 @@ export const styles = () =>
     menuContent: {
       marginTop: '1rem',
       marginBottom: '1rem',
+      minHeight: '90vh',
     },
     buttons: {
       display: 'flex',
