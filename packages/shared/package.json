@@ -11,7 +11,6 @@
     "typescript": "^3.7.4"
   },
   "scripts": {
-    "start": "tsc --watch",
-    "preinstall": "tsc"
+    "start": "tsc --watch"
   }
 }
