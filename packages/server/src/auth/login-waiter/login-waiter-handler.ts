@@ -2,13 +2,14 @@ import { LoginWaiterUser } from '@menuo/shared/interfaces/api/auth'
 import 'source-map-support/register'
 
 import { response } from 'src/lib/http'
-import { withDB, getWaiterUser, updateWaiterUser } from 'src/db/db'
+import { withDB } from 'src/db/db'
 import { log } from 'src/logs/logs'
 
 import { isPasswordValid } from '../validation'
 import { signToken } from '../token'
 
 import { getValidParams, getValidBody } from './validation'
+import { getWaiterUser, updateWaiterUser } from 'src/db/users'
 
 export const handler = withDB(async (event, ctx, _cb) => {
   const secret = process.env.JWT_SECRET
@@ -33,15 +34,15 @@ export const handler = withDB(async (event, ctx, _cb) => {
     return response({ kind: 'UNAUTHORIZED' })
   }
 
-  await updateWaiterUser(ctx.dbClient)(
-    { _id: user._id },
-    { subscription: body.subscription },
-  )
-
   if (!(await isPasswordValid(body.password, user.password))) {
     console.log('Invalid password')
     return response({ kind: 'UNAUTHORIZED' })
   }
+
+  await updateWaiterUser(ctx.dbClient)(
+    { _id: user._id },
+    { subscription: body.subscription },
+  )
 
   const { _id, username, deviceId, roles } = user
   const token = signToken(secret)(user._id, { _id, username, deviceId, roles })
