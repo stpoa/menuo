@@ -14,6 +14,7 @@ export const nestOrders = (orders: Orders): IOrdersTables => {
   const allTables: Table[] = Object.values(ordersPerTable).map(e => {
     return e
       .map(o => o.table)
+      .reverse()
       .reduce<Table>(
         (acc, cur) => {
           return {
