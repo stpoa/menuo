@@ -6,7 +6,8 @@
     "start": "lerna run start --parallel",
     "deploy:staging": "lerna run deploy:staging",
     "deploy:production": "lerna run deploy:production",
-    "deploy:stgaging:customer": "lerna run deploy:staging --scope @menuo/customer"
+    "deploy:stgaging:customer": "lerna run deploy:staging --scope @menuo/customer",
+    "update": "yarn lernaupdate"
   },
   "workspaces": [
     "packages/*"
