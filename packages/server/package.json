@@ -1,6 +1,9 @@
 {
   "name": "@menuo/server",
   "version": "0.0.1",
+  "engines": {
+    "node": ">= 12"
+  },
   "scripts": {
     "start": "yarn start:server",
     "start:server": "node ./scripts/start-local.js",
