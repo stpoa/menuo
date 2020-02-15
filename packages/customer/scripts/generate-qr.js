@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const qrcode = require('qrcode-terminal')
 const ip = require('ip')
 

@@ -4,7 +4,11 @@
     "jsx": "react",
     "noEmit": true,
     "skipLibCheck": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "module": "esnext"
   },
-  "include": ["src", "node_modules/@menuo/shared"]
+  "include": [
+    "src",
+    "node_modules/@menuo/shared"
+  ]
 }
