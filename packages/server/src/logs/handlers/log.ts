@@ -2,7 +2,7 @@ import Logger from 'logdna'
 import zlib from 'zlib'
 import { promisify } from 'util'
 
-const parseEventGzipData = event => {
+const parseEventGzipData = (event: { awslogs: { data: string } }) => {
   return JSON.parse(
     zlib.unzipSync(Buffer.from(event.awslogs.data, 'base64')).toString(),
   )
@@ -23,8 +23,8 @@ const isValidJson = (message: string) => {
   return true;
 }
 
-const prepareLogs = eventData => {
-  return eventData.logEvents.map(event => {
+const prepareLogs = (eventData: { logEvents: any[]; messageType: any; logGroup: any; logStream: any; owner: any; subscriptionFilters: any }) => {
+  return eventData.logEvents.map((event: { message: string; id: any; timestamp: any }) => {
 
     
     const json = extractJson(event.message)
@@ -70,7 +70,7 @@ const prepareLogs = eventData => {
   })
 }
 
-const sendLine = (payload, callback) => {
+const sendLine = (payload: { map: (arg0: ({ line }: { line: any }) => any) => readonly [unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown, unknown] }, callback: (arg0: string | null) => any) => {
   if (!process.env.LOGDNA_KEY) return callback('Missing LogDNA Ingestion Key')
   const apiKey = process.env.LOGDNA_KEY
   const logger = Logger.setupDefaultLogger(apiKey, {})
@@ -81,6 +81,6 @@ const sendLine = (payload, callback) => {
   )
 }
 
-export const handler = (event, _context, callback) => {
-  return sendLine(prepareLogs(parseEventGzipData(event)), callback)
+export const handler = (event: { awslogs: { data: string } }, _context: any, callback: any) => {
+  return sendLine(prepareLogs(parseEventGzipData(event as any) as any) as any, callback)
 }

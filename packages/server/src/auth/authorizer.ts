@@ -20,7 +20,7 @@ const generateAWSPolicy = (
   context,
 })
 
-export const handler = async (event: any, context: any, cb: any) => {
+export const handler = async (event: any) => {
   try {
     const token = event.authorizationToken
     const secret = process.env.JWT_SECRET || ''

@@ -1,6 +1,6 @@
 import 'source-map-support/register'
 
-import { response, AGPHA } from 'src/lib/http'
+import { response } from 'src/lib/http'
 import { sendNotification } from '../notifications'
 
 export const handler = async (event: any) => {

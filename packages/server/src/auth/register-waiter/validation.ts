@@ -1,12 +1,19 @@
-import { UnknownObject, isString, isArray } from 'src/validation'
+import { UnknownObject, isString } from 'src/validation'
 import { RegisterWaiterUser } from '@menuo/shared/interfaces/api/auth'
+import { isArray } from 'util'
 
 export const getValidBody = (
   body: UnknownObject<RegisterWaiterUser.Body>,
 ): RegisterWaiterUser.Body | null => {
-  const { username, password, deviceId, subscription } = body
-  if (isString(username) && isString(password) && isString(deviceId)) {
-    return { username, password, deviceId, subscription }
+  const { username, password, deviceId, subscription, tables } = body
+  if (
+    isString(username) &&
+    isString(password) &&
+    isString(deviceId) &&
+    isArray(tables) &&
+    tables.every(isString)
+  ) {
+    return { username, password, deviceId, subscription, tables }
   }
   return null
 }

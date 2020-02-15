@@ -2,8 +2,9 @@ import 'source-map-support/register'
 import { RegisterWaiterUser } from '@menuo/shared/interfaces/api/auth'
 
 import { response } from 'src/lib/http'
-import { withDB, createWaiterUser, getWaiterUser } from 'src/db/db'
+import { withDB } from 'src/db/db'
 import { log } from 'src/logs/logs'
+import { getWaiterUser, createWaiterUser } from 'src/db/users'
 
 import bcrypt from 'bcryptjs'
 

@@ -1,8 +1,7 @@
-import { MongoClient, ObjectId } from 'mongodb'
+import { MongoClient } from 'mongodb'
 import { AGPHADB, WithDB } from 'src/lib/http'
 import { APIGatewayProxyEvent, APIGatewayProxyCallback } from 'aws-lambda'
 import { Context } from 'vm'
-import { WaiterUser } from '@menuo/shared/interfaces/users'
 
 const mongodbPassword = process.env.MONGODB_PASSWORD
 const mongodbUrl = process.env.MONGODB_URL
@@ -29,25 +28,3 @@ export const withDB = (f: AGPHADB) => (
   }
 }
 
-export const createWaiterUser = (client: MongoClient) => async ({
-  deviceId,
-  username,
-  password,
-  roles,
-  restaurant,
-  subscription,
-}: Omit<WaiterUser, '_id'>) => {
-  const collection = client
-    .db('menuo')
-    .collection<Omit<WaiterUser, '_id'>>('users')
-  const user = await collection.insertOne({
-    tables: [],
-    subscription,
-    restaurant,
-    username,
-    password,
-    deviceId,
-    roles,
-  })
-  return user.insertedId
-}

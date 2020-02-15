@@ -10,7 +10,13 @@ webPush.setVapidDetails(
   privateVapidKey!,
 )
 
-export const sendNotification = ({ title, body }) => async subscription => {
+export const sendNotification = ({
+  title,
+  body,
+}: {
+  title: string
+  body: string
+}) => async (subscription: any) => {
   return webPush
     .sendNotification(subscription, JSON.stringify({ title, body }))
     .catch(error => console.error(error))
