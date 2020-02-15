@@ -28,7 +28,7 @@ const ORDERS_REFETCH_INTERVAL = +(
 
 export const OrdersPage: FC<RouteChildrenProps<{ restaurant: string }> &
   WithStyles> = ({ match, history, classes }) => {
-  const { restaurant } = match!.params
+  const restaurant = match?.params?.restaurant || 'demo'
   const [refetch, setRefetch] = useState(0)
   const [loading, setLoading] = useState(true)
   const [showTablesDialog, setShowTablesDialog] = useState(false)
