@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware } from 'redux'
-import { persistStore, persistReducer } from 'redux-persist'
+import { persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 import { createHashHistory } from 'history'
 import { createEpicMiddleware } from 'redux-observable'

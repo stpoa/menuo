@@ -9,7 +9,7 @@ import {
   ListItemSecondaryAction,
   Card,
 } from '@material-ui/core'
-import { Check, DeleteForever, ArrowForwardIos } from '@material-ui/icons'
+import { Check, DeleteForever } from '@material-ui/icons'
 import { IOrder, IOrderItem } from '@menuo/shared'
 import { SelectInputProps } from '@material-ui/core/Select/SelectInput'
 

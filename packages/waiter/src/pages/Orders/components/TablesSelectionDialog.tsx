@@ -10,10 +10,7 @@ import {
   ListItemIcon,
   Checkbox,
   ListItemText,
-  ListItemSecondaryAction,
-  IconButton,
 } from '@material-ui/core'
-import { Comment } from '@material-ui/icons'
 
 interface OrderedListDialogProps {
   open: boolean

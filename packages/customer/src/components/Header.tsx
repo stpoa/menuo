@@ -12,7 +12,7 @@ export const HeaderRaw: React.FC<WithStyles> = ({ children, classes }) => {
   )
 }
 
-export const Header = withStyles(theme =>
+export const Header = withStyles(_ =>
   createStyles({
     root: {
       paddingTop: '0.4rem',

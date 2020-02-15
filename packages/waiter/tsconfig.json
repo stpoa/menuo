@@ -1,28 +1,10 @@
 {
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "es2019"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
     "jsx": "react",
-    "skipDefaultLibCheck": true,
-    "strict": true
+    "noEmit": true,
+    "skipLibCheck": true,
+    "isolatedModules": true
   },
-  "include": [
-    "src",
-    "node_modules/@menuo/shared",
-    "srccc/AppWaiter.tsx",
-    "srccc/utils",
-    "srccc/pages",
-    "srccc/components",
-    "srccc/auth"
-  ]
+  "include": ["src", "node_modules/@menuo/shared"]
 }

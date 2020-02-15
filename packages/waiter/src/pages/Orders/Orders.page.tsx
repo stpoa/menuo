@@ -233,8 +233,8 @@ export const OrdersPage: FC<RouteChildrenProps<{ restaurant: string }> &
           await updateTablesMine({
             restaurant,
             tables: Object.entries(checkedTables)
-              .filter(([k, v]) => v)
-              .map(([k, v]) => k),
+              .filter(([_, v]) => v)
+              .map(([k]) => k),
           })
           setShowTablesDialog(false)
           setRefetch(+new Date())
@@ -251,7 +251,7 @@ export const OrdersPage: FC<RouteChildrenProps<{ restaurant: string }> &
   )
 }
 
-export default withStyles(theme =>
+export default withStyles(_ =>
   createStyles({
     root: {
       flexDirection: 'column',

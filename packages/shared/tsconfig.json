@@ -1,11 +1,7 @@
 {
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "CommonJS",
-    "moduleResolution": "Node",
-    "lib": ["ESNext"],
     "outDir": "dist",
-    "skipLibCheck": true,
     "declaration": true
   },
   "exclude": ["node_modules", "dist"]

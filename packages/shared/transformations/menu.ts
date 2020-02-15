@@ -36,7 +36,7 @@ const menuEntryToVariant = (entry: MenuEntry): IVariant => ({
 
 const buildDishesGroup = (dishes: MenuEntry[]) =>
   toPairs(groupBy(d => d.dishName, dishes as MenuEntry[]))
-    .sort(([s1, e1], [s2, e2]) => e1[0].index - e2[0].index)
+    .sort(([_s1, e1], [_s2, e2]) => e1[0].index - e2[0].index)
     .map(([dishName, entries]) => ({
       name: dishName,
       description: entries[0].dishDescription,

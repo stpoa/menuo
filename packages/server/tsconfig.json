@@ -1,18 +1,8 @@
 {
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
-    "lib": ["es2019"],
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "removeComments": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "sourceMap": true,
-    "target": "es2017",
-    "outDir": "lib",
-    "strictNullChecks": true,
-    "esModuleInterop": true
+    "outDir": "lib"
   },
   "paths": {
     "*": ["node_modules/*", "src/types/*", "src/**/*", "src/*"]
