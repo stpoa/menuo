@@ -14,7 +14,7 @@ export const getFolderPath = (path: string) => {
   return paths.reverse().join('/')
 }
 
-export const createQrCode = (parameters) => async ({
+export const createQrCode = (parameters = {}) => async ({
   path,
   data,
 }: QRPathData) => {
@@ -26,7 +26,7 @@ export const createQrCode = (parameters) => async ({
     fs.mkdirSync(folderPath, { recursive: true })
   } catch (e) {}
 
-  const newConfig = JSON.stringify({ ...JSON.parse(defaultParams.config), ...parameters.config})
+  const newConfig = JSON.stringify(JSON.parse(defaultParams.config))
   const params = {
     ...defaultParams,
     file: path.split('.').reverse()[0],

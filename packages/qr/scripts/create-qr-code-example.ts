@@ -1,3 +1,3 @@
-import { createQrCodes } from '../src/qrcode-monkey'
+import { createQrCode } from '../src/qrcode-monkey'
 
-createQrCodes()([{ data: 'https://example.com', path: 'example.png' }])
+[{ data: 'https://example.com', path: 'example.png' }].map(createQrCode())
