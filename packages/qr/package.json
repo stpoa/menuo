@@ -9,9 +9,11 @@
   },
   "devDependencies": {
     "@types/node": "^13.7.1",
+    "ts-node": "^8.6.2",
     "typescript": "3.8.1-rc"
   },
   "scripts": {
-    "start": "tsc --watch"
+    "start": "tsc --watch",
+    "generate:example": "ts-node ./scripts/create-qr-code-example.ts"
   }
 }
