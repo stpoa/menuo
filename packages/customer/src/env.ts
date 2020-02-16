@@ -2,10 +2,11 @@ import evolve from 'ramda/es/evolve'
 import is from 'ramda/es/is'
 
 export const getConfig = (): Config => {
-  const { REACT_APP_API_URL } = process.env as Env
+  const { REACT_APP_API_URL, PUBLIC_URL } = process.env as Env
 
   const rawConfig: RawConfig = {
     apiUrl: REACT_APP_API_URL,
+    publicUrl: PUBLIC_URL,
   }
 
   return validateConfig(rawConfig)
@@ -17,10 +18,12 @@ type UnknownObject<O extends object> = {
 
 interface Env {
   REACT_APP_API_URL?: string
+  PUBLIC_URL?: string
 }
 
 interface Config {
   apiUrl: string
+  publicUrl: string
 }
 
 type RawConfig = UnknownObject<Config>
@@ -33,7 +36,7 @@ const validateConfig = (rawConfig: RawConfig): Config => {
     return Object.values(isPropValid).every(v => v)
   }
 
-  if (isValidObject({ apiUrl: is(String) })(rawConfig)) {
+  if (isValidObject({ apiUrl: is(String), publicUrl: is(String) })(rawConfig)) {
     return rawConfig as Config
   } else throw Error('ENV config error!')
 }

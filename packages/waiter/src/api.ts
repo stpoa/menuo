@@ -66,4 +66,4 @@ export function wrapPromise<T>(promise: Promise<T>) {
 }
 
 export const getStaticJSONData = (path: string) =>
-  fetch('/waiter/data/' + path).then(r => r.json())
+  fetch(getConfig().publicUrl + '/data/' + path).then(r => r.json())
