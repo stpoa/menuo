@@ -3,6 +3,7 @@
 import qrcode
 from qrcode.image.pure import PymagingImage
 import os
+import shutil
 import argparse
 import json
 
@@ -25,6 +26,8 @@ with open('tables.json') as f:
 	data = json.load(f)
 
 path = resturant_name + '_QR'
+if os.path.isdir(path):
+	shutil.rmtree(path)
 os.mkdir(path)
 
 for table in range (len(data)):
