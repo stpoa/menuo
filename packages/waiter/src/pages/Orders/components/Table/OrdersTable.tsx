@@ -72,10 +72,10 @@ export const OrdersTable = ({
       <List>
         {orders.map((order, key) => (
           <TableOrder
+            key={key}
             {...{
               loading,
               order,
-              key,
               handleCompleteOrderToggle,
               handlePriorityChange,
               handleAcceptOrder,

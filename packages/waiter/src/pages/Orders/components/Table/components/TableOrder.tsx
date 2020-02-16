@@ -75,7 +75,7 @@ export const TableOrder = ({
         </ListItemSecondaryAction>
       </ListItem>
       <List component="div" disablePadding>
-        {order.items.map((item: IOrderItem) => {
+        {order.items.map((item: IOrderItem, i) => {
           const priority: number = item.entry.priority || 1
           const variantText =
             `${item.dishName}` +
@@ -86,7 +86,7 @@ export const TableOrder = ({
 
           return (
             <ListItem
-              key={item.entry._id}
+              key={i}
               onClick={order.status === 'new' ? undefined : () => {}}
             >
               <PrioritySelect
