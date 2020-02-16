@@ -2,7 +2,7 @@
   "compilerOptions": {
     "module": "CommonJS",
     "target": "ES2019",
-    "lib": ["ES2019", "DOM"],
+    "lib": ["ES2019", "DOM", "DOM.Iterable"],
     "moduleResolution": "Node",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
