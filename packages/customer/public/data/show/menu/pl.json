@@ -2,7 +2,7 @@
   {
     "index": 0,
     "language": "pl",
-    "restaurant": "demo",
+    "restaurant": "show",
     "section": "PRZYSTAWKI",
     "dishName": "Tatar wołowy",
     "dishDescription": "Z cebulką, ogórkiem kiszonym, grzybkami i żółtkiem, podany z pieczywem",
@@ -12,7 +12,7 @@
   {
     "index": 1,
     "language": "pl",
-    "restaurant": "demo",
+    "restaurant": "show",
     "section": "PRZYSTAWKI",
     "dishName": "Nachosy po meksykańsku",
     "dishDescription": "Podane z duszoną wołowiną",
@@ -22,7 +22,7 @@
   {
     "index": 2,
     "language": "pl",
-    "restaurant": "demo",
+    "restaurant": "show",
     "section": "ZUPY",
     "dishName": "Flaki wołowe",
     "dishDescription": "Według rodzinnego przepisu",
@@ -32,7 +32,7 @@
   {
     "index": 3,
     "language": "pl",
-    "restaurant": "demo",
+    "restaurant": "show",
     "section": "ZUPY",
     "dishName": "Barszcz czerwony",
     "dishDescription": "Podany z mięsnym krokietem",
@@ -42,7 +42,7 @@
   {
     "index": 4,
     "language": "pl",
-    "restaurant": "demo",
+    "restaurant": "show",
     "section": "DANIA GŁÓWNE",
     "dishName": "Pstrąg z pieca",
     "dishDescription": "Podany z grillowanymi warzywami",
@@ -52,7 +52,7 @@
   {
     "index": 5,
     "language": "pl",
-    "restaurant": "demo",
+    "restaurant": "show",
     "section": "DANIA GŁÓWNE",
     "dishName": "Pierogi - 10 szt.",
     "dishVariantPrice": 14,
@@ -61,7 +61,7 @@
   {
     "index": 6,
     "language": "pl",
-    "restaurant": "demo",
+    "restaurant": "show",
     "section": "DANIA GŁÓWNE",
     "dishName": "Pierogi - 10 szt.",
     "dishVariantPrice": 14,
