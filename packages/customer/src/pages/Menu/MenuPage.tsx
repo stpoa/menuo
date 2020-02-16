@@ -83,7 +83,7 @@ export const MenuPage: FC<MenuPageProps> = ({
     getRestaurant()
     getTable()
     getDishes()
-  }, [])
+  }, [getRestaurant, getTable, getDishes])
 
   const [showSummonDialog, setShowSummonDialog] = useState(false)
   const [showOrderedInfo, setShowOrderedInfo] = useState(false)

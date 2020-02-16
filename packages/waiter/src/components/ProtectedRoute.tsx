@@ -14,7 +14,7 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ...props }) => {
     } else {
       setIsAuthenticated(false)
     }
-  })
+  }, [])
 
   let redirectPath = ''
   if (!isAuthenticated) {

@@ -44,14 +44,13 @@ export const OrdersPage: FC<RouteChildrenProps<{ restaurant: string }> &
     [key: string]: boolean
   }>({})
 
-  const getInitialCheckedTables = () =>
-    tablesMine.reduce(
-      (acc: { [key: string]: boolean }, t) => ({ ...acc, [t]: true }),
-      {},
-    )
-
   useEffect(() => {
-    setCheckedTables(getInitialCheckedTables())
+    setCheckedTables(() =>
+      tablesMine.reduce(
+        (acc: { [key: string]: boolean }, t) => ({ ...acc, [t]: true }),
+        {},
+      ),
+    )
   }, [tablesMine])
 
   useEffect(() => {
@@ -221,14 +220,8 @@ export const OrdersPage: FC<RouteChildrenProps<{ restaurant: string }> &
             [table]: !checked[table],
           }))
         }}
-        onClose={() => {
-          setShowTablesDialog(false)
-          setCheckedTables(getInitialCheckedTables())
-        }}
-        onReject={() => {
-          setShowTablesDialog(false)
-          setCheckedTables(getInitialCheckedTables())
-        }}
+        onClose={() => setShowTablesDialog(false)}
+        onReject={() => setShowTablesDialog(false)}
         onConfirm={async () => {
           await updateTablesMine({
             restaurant,
