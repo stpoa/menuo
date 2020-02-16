@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "lerna run start --parallel",
+    "build": "lerna run build",
     "deploy:staging": "lerna run deploy:staging",
     "deploy:production": "lerna run deploy:production",
     "deploy:stgaging:customer": "lerna run deploy:staging --scope @menuo/customer",

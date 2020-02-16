@@ -11,6 +11,7 @@
     "typescript": "3.8.1-rc"
   },
   "scripts": {
-    "start": "tsc --watch"
+    "start": "tsc --watch",
+    "build": "tsc"
   }
 }
