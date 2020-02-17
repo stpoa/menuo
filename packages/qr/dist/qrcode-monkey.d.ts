@@ -1,7 +1,6 @@
-interface QRPathData {
+export interface QRPathData {
     path: string;
     data: string;
 }
-export declare const createQrCode: (config?: any) => ({ path, data }: QRPathData) => void;
-export declare const createQrCodes: (config?: any) => (entries: QRPathData[]) => void[];
-export {};
+export declare const getFolderPath: (path: string) => string;
+export declare const createQrCode: (parameters?: {}) => ({ path, data, }: QRPathData) => Promise<void>;

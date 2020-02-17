@@ -17,23 +17,21 @@ const theme = createMuiTheme({
   },
 })
 
-const App = () => {
-  return (
-    <div id="app">
-      <Provider store={store}>
-        <Suspense fallback={<div>Loading...</div>}>
-          <ConnectedRouter history={history}>
-            <ThemeProvider theme={theme}>
-              <Switch>
-                <Route exact path="/:restaurant" component={MenuPage} />
-              </Switch>
-            </ThemeProvider>
-          </ConnectedRouter>
-        </Suspense>
-      </Provider>
-    </div>
-  )
-}
+const App = () => (
+  <div id="app">
+    <Provider store={store}>
+      <Suspense fallback={<div>Loading...</div>}>
+        <ConnectedRouter history={history}>
+          <ThemeProvider theme={theme}>
+            <Switch>
+              <Route exact path="/:restaurant" component={MenuPage} />
+            </Switch>
+          </ThemeProvider>
+        </ConnectedRouter>
+      </Suspense>
+    </Provider>
+  </div>
+)
 
 // Setup google tag manager
 const GTM_ID = process.env.REACT_APP_GTM_ID
