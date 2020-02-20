@@ -150,7 +150,7 @@ export const OrdersPage: FC<RouteChildrenProps<{ restaurant: string }> &
 
   const handleLogoutClick = () => {
     localStorage.setItem('jwt', '')
-    history.push(`/${restaurant}/orders`)
+    history.push(`/${restaurant}/login`)
   }
 
   const handleTablesFabClick = () => {
