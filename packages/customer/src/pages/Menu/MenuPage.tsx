@@ -9,6 +9,7 @@ import {
   WithStyles,
   Divider,
   Link,
+  InputBase,
 } from '@material-ui/core'
 import { Header } from '../../components/Header'
 import {
@@ -32,6 +33,8 @@ import { RootState } from '../../store/store'
 import { styles } from './MenuPage.styles'
 import { DialogType } from '../../store/ui/dialog/types'
 import { getOrderedEntries } from './data'
+
+import SearchIcon from '@material-ui/icons/Search'
 
 type Basket = BasketEntry[]
 
@@ -147,7 +150,23 @@ export const MenuPage: FC<MenuPageProps> = ({
   return (
     <div className={classes.root}>
       <Loading loading={loading || isLoading} />
-      <Header>Menuo</Header>
+      <Header>
+        Menuo
+        <div className={classes.search}>
+          <div className={classes.searchIcon}>
+            <SearchIcon />
+          </div>
+          <InputBase
+            placeholder="Szukaj"
+            classes={{
+              root: classes.inputRoot,
+              input: classes.inputInput,
+            }}
+            inputProps={{ 'aria-label': 'search' }}
+          />
+        </div>
+      </Header>
+
       <MenuBasketButton
         className={classes.basketButton}
         count={basket.length}

@@ -8,6 +8,11 @@ export const styles = () =>
       padding: '0.75rem 1rem',
       minHeight: '100vh',
     },
+    search: {
+      display: 'flex',
+      position: 'absolute',
+      top: '1.2rem',
+    },
     menuContent: {
       marginTop: '1rem',
       marginBottom: '1rem',
