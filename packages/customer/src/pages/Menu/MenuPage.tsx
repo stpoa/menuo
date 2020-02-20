@@ -44,11 +44,12 @@ export interface BasketEntry {
 }
 
 interface MenuPageStateProps {
-  dishes: any
+  dishes: MenuEntry[]
   table: Table
   restaurant: string
   isLoading: boolean
   basket: BasketEntry[]
+  query: string
 }
 interface MenuPageDispatchProps {
   getDishes: () => void
@@ -56,6 +57,7 @@ interface MenuPageDispatchProps {
   getRestaurant: () => void
   clearBasket: () => void
   showBasketDialog: () => void
+  filterDishes: (query: string) => void
 }
 interface MenuPageOwnProps {}
 interface MenuPageProps
@@ -76,11 +78,20 @@ export const MenuPage: FC<MenuPageProps> = ({
   basket,
   clearBasket,
   showBasketDialog,
+  filterDishes,
+  query,
 }) => {
   const [loading, setLoading] = useState(false)
   const [ordered, setOrdered] = useState<[MenuEntry, number][]>([])
 
-  const menu = nestMenu([...dishes])
+  const menu = nestMenu([
+    ...dishes.filter(
+      dish =>
+        dish.section.toLowerCase().includes(query.toLowerCase()) ||
+        dish.dishVariantName?.toLowerCase().includes(query.toLowerCase()) ||
+        dish.dishName.toLowerCase().includes(query.toLowerCase()),
+    ),
+  ])
 
   useEffect(() => {
     getRestaurant()
@@ -157,11 +168,9 @@ export const MenuPage: FC<MenuPageProps> = ({
             <SearchIcon />
           </div>
           <InputBase
-            placeholder="Szukaj"
-            classes={{
-              root: classes.inputRoot,
-              input: classes.inputInput,
-            }}
+            onChange={e => filterDishes(e.target.value)}
+            value={query}
+            placeholder=""
             inputProps={{ 'aria-label': 'search' }}
           />
         </div>
@@ -300,6 +309,7 @@ const connectComponent = connect<
     isLoading: state.menu.isFetching,
     basket: state.basket,
     restaurant: state.restaurant,
+    query: state.menu.query,
   }),
   dispatch => ({
     showBasketDialog: () => dispatch(actions.uiDialogShow(DialogType.BASKET)),
@@ -307,6 +317,7 @@ const connectComponent = connect<
     clearBasket: () => dispatch(actions.basketClear()),
     getTable: () => dispatch(actions.tableGet()),
     getRestaurant: () => dispatch(actions.restaurantGet()),
+    filterDishes: (query: string) => dispatch(actions.menuFilter(query)),
   }),
 )
 
