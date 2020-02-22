@@ -32,13 +32,25 @@ export const WaiterSummonDialog: FC<WaiterSummonDialogProps> = ({
       <DialogTitle>W jakim celu chcesz zawołać kelnera?</DialogTitle>
       <DialogContent></DialogContent>
       <div className={classes.dialogButtons}>
-        <Button {...{ disabled }} onClick={handlePayCashClick} color="primary">
+        <Button
+          {...{ disabled, 'data-cy': 'summon-waiter-pay-cash' }}
+          onClick={handlePayCashClick}
+          color="primary"
+        >
           Płatność gotówką
         </Button>
-        <Button {...{ disabled }} onClick={handlePayCardClick} color="primary">
+        <Button
+          {...{ disabled, 'data-cy': 'summon-waiter-pay-card' }}
+          onClick={handlePayCardClick}
+          color="primary"
+        >
           Płatność kartą
         </Button>
-        <Button {...{ disabled }} color="primary" onClick={handleSummonClick}>
+        <Button
+          {...{ disabled, 'data-cy': 'summon-waiter-other' }}
+          color="primary"
+          onClick={handleSummonClick}
+        >
           Inne
         </Button>
       </div>

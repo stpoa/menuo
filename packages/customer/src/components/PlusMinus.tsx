@@ -15,9 +15,13 @@ export const PlusMinus: FC<PlusMinusProps> = ({
 }) => {
   return (
     <div className={classes.root}>
-      <Button onClick={handleMinusClick}>-</Button>
+      <Button {...{ 'data-cy': 'minus-click' }} onClick={handleMinusClick}>
+        -
+      </Button>
       <div className={classes.count}>{count}</div>
-      <Button onClick={handlePlusClick}>+</Button>
+      <Button {...{ 'data-cy': 'plus-click' }} onClick={handlePlusClick}>
+        +
+      </Button>
     </div>
   )
 }

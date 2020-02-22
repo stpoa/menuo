@@ -69,7 +69,11 @@ export const BasketDialog: FC<BasketDialogProps> = ({
     <DialogContent>
       <OrderedList ordered={inBasket} />
     </DialogContent>
-    <Button color="primary" onClick={onConfirm}>
+    <Button
+      {...{ 'data-cy': 'basket-dialog-ok' }}
+      color="primary"
+      onClick={onConfirm}
+    >
       Ok
     </Button>
   </Dialog>
