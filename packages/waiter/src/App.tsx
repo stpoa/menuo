@@ -1,10 +1,14 @@
 import React, { Suspense } from 'react'
-import { Switch, Route, HashRouter as Router } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
+import { ConnectedRouter } from 'connected-react-router'
 import TagManager from 'react-gtm-module'
 import OrdersPage from './pages/Orders/Orders.page'
 import ProtectedRoute from './components/ProtectedRoute'
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
+import { Provider } from 'react-redux'
 import './App.css'
+
+import { store, history } from './store/store'
 
 const LoginPage = React.lazy(() => import('./pages/Login/Login.page'))
 
@@ -18,21 +22,23 @@ const theme = createMuiTheme({
 const App = () => {
   return (
     <div id="app">
-      <Suspense fallback={() => <span>Loading...</span>}>
-        <ThemeProvider theme={theme}>
-          <Router>
-            <Switch>
-              <ProtectedRoute
-                exact
-                path="/:restaurant/orders"
-                authenticationPath="login"
-                component={OrdersPage}
-              />
-              <Route exact path="/:restaurant/login" component={LoginPage} />
-            </Switch>
-          </Router>
-        </ThemeProvider>
-      </Suspense>
+      <Provider store={store}>
+        <Suspense fallback={() => <span>Loading...</span>}>
+          <ThemeProvider theme={theme}>
+            <ConnectedRouter history={history}>
+              <Switch>
+                <ProtectedRoute
+                  exact
+                  path="/:restaurant/orders"
+                  authenticationPath="login"
+                  component={OrdersPage}
+                />
+                <Route exact path="/:restaurant/login" component={LoginPage} />
+              </Switch>
+            </ConnectedRouter>
+          </ThemeProvider>
+        </Suspense>
+      </Provider>
     </div>
   )
 }

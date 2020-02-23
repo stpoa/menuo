@@ -6,7 +6,7 @@ import { StateType } from 'typesafe-actions'
 import { routerMiddleware } from 'connected-react-router'
 
 import { createRootReducer } from './reducer'
-import { rootEpic } from './epic'
+// import { rootEpic } from './epic'
 
 export const history = createHashHistory()
 const epicMiddleware = createEpicMiddleware<any>()
@@ -18,6 +18,6 @@ export const store = createStore(
   ),
 )
 
-epicMiddleware.run(rootEpic)
+// epicMiddleware.run(rootEpic)
 
 export type RootState = StateType<ReturnType<typeof createRootReducer>>

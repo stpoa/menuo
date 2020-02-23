@@ -33,10 +33,20 @@ export const OrderConfirmationDialog: FC<OrderConfirmationDialogProps> = ({
     </DialogContent>
 
     <DialogActions>
-      <Button disabled={disabled} color="primary" onClick={onReject}>
+      <Button
+        {...{ 'data-cy': 'close-order-confirmation-dialog' }}
+        disabled={disabled}
+        color="primary"
+        onClick={onReject}
+      >
         Powrót
       </Button>
-      <Button disabled={disabled} color="primary" onClick={onConfirm}>
+      <Button
+        {...{ 'data-cy': 'confirm-dish-order' }}
+        disabled={disabled}
+        color="primary"
+        onClick={onConfirm}
+      >
         Zamawiam
       </Button>
     </DialogActions>

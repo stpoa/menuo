@@ -200,6 +200,7 @@ export const MenuPage: FC<MenuPageProps> = ({
 
       <div className={classes.buttons}>
         <Button
+          {...{ 'data-cy': 'open-summon-waiter-modal' }}
           disabled={loading}
           className={classes.buttonLeft}
           variant="outlined"
@@ -209,6 +210,7 @@ export const MenuPage: FC<MenuPageProps> = ({
           Zawołaj kelnera
         </Button>
         <Button
+          {...{ 'data-cy': 'open-order-modal' }}
           disabled={!basket.length || loading}
           className={classes.buttonRight}
           variant="contained"

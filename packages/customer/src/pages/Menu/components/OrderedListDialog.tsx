@@ -21,7 +21,11 @@ export const OrderedListDialog: FC<OrderedListDialogProps> = ({
     <DialogContent>
       <OrderedList ordered={ordered} />
     </DialogContent>
-    <Button color="primary" onClick={onConfirm}>
+    <Button
+      {...{ 'data-cy': 'ordered-list-dialog-ok' }}
+      color="primary"
+      onClick={onConfirm}
+    >
       Ok
     </Button>
   </Dialog>
