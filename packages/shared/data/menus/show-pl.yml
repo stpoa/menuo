@@ -1,0 +1,37 @@
+- name: PRZYSTAWKI
+  dishes:
+    - name: Tatar wołowy
+      variants:
+        - name: ''
+          price: 25
+      description: Z cebulką, ogórkiem kiszonym, grzybkami i żółtkiem, podany z pieczywem
+    - name: Nachosy po meksykańsku
+      variants:
+        - name: ''
+          price: 12
+      description: Podane z duszoną wołowiną
+- name: ZUPY
+  dishes:
+    - name: Flaki wołowe
+      variants:
+        - name: ''
+          price: 13
+      description: Według rodzinnego przepisu
+    - name: Barszcz czerwony
+      variants:
+        - name: ''
+          price: 16
+      description: Podany z mięsnym krokietem
+- name: DANIA GŁÓWNE
+  dishes:
+    - name: Pstrąg z pieca
+      variants:
+        - name: ''
+          price: 35
+      description: Podany z grillowanymi warzywami
+    - name: Pierogi - 10 szt.
+      variants:
+        - name: z kapustą i grzybami
+          price: 14
+        - name: z mięsem
+          price: 14
