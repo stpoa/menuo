@@ -6,6 +6,7 @@ import { menuReducer } from './menu/reducer'
 import { basketReducer } from './basket/reducer'
 import { restaurantReducer } from './restaurant/reducer'
 import { uiReducer } from './ui/reducer'
+import { userReducer } from './user/reducer'
 
 export const createRootReducer = (history: any) =>
   combineReducers({
@@ -15,4 +16,5 @@ export const createRootReducer = (history: any) =>
     basket: basketReducer,
     restaurant: restaurantReducer,
     ui: uiReducer,
+    user: userReducer,
   })

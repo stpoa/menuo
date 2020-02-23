@@ -49,6 +49,7 @@ interface MenuPageStateProps {
   isLoading: boolean
   basket: BasketEntry[]
   query: string
+  language: string
 }
 interface MenuPageDispatchProps {
   getDishes: () => void
@@ -57,6 +58,7 @@ interface MenuPageDispatchProps {
   clearBasket: () => void
   showBasketDialog: () => void
   filterDishes: (query: string) => void
+  getLanguage: () => void
 }
 interface MenuPageOwnProps {}
 interface MenuPageProps
@@ -79,6 +81,8 @@ export const MenuPage: FC<MenuPageProps> = ({
   showBasketDialog,
   filterDishes,
   query,
+  // language,
+  getLanguage,
 }) => {
   const [loading, setLoading] = useState(false)
   const [ordered, setOrdered] = useState<[MenuEntry, number][]>([])
@@ -95,8 +99,9 @@ export const MenuPage: FC<MenuPageProps> = ({
   useEffect(() => {
     getRestaurant()
     getTable()
+    getLanguage()
     getDishes()
-  }, [getRestaurant, getTable, getDishes])
+  }, [getRestaurant, getTable, getDishes, getLanguage])
 
   const [showSummonDialog, setShowSummonDialog] = useState(false)
   const [showOrderedInfo, setShowOrderedInfo] = useState(false)
@@ -318,6 +323,7 @@ const connectComponent = connect<
     basket: state.basket,
     restaurant: state.restaurant,
     query: state.menu.query,
+    language: state.user.language,
   }),
   dispatch => ({
     showBasketDialog: () => dispatch(actions.uiDialogShow(DialogType.BASKET)),
@@ -326,6 +332,7 @@ const connectComponent = connect<
     getTable: () => dispatch(actions.tableGet()),
     getRestaurant: () => dispatch(actions.restaurantGet()),
     filterDishes: (query: string) => dispatch(actions.menuFilter(query)),
+    getLanguage: () => dispatch(actions.userLanguageGet()),
   }),
 )
 
