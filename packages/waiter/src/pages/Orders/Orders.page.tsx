@@ -160,7 +160,7 @@ export const OrdersPage: FC<RouteChildrenProps<{ restaurant: string }> &
   return (
     <div className={classes.root}>
       <Loading loading={loading} />
-      <Header>menuo</Header>
+      <Header>Menuo</Header>
       <Fab
         onClick={handleLogoutClick}
         color="primary"
