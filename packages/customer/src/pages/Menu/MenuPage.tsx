@@ -9,6 +9,7 @@ import {
   WithStyles,
   Divider,
   Link,
+  InputBase,
 } from '@material-ui/core'
 import { Header } from '../../components/Header'
 import {
@@ -26,6 +27,7 @@ import Loading from '../../components/Loading'
 import { Receipt as ReceiptIcon } from '@material-ui/icons'
 import { OrderedListDialog } from './components/OrderedListDialog'
 import BasketDialog, { MenuBasketButton } from './components/BasketDialog'
+import { SearchButton } from './components/SearchButton'
 import { OrderConfirmationDialog } from './components/OrderConfirmationDialog'
 import * as actions from '../../store/actions'
 import { RootState } from '../../store/store'
@@ -41,11 +43,12 @@ export interface BasketEntry {
 }
 
 interface MenuPageStateProps {
-  dishes: any
+  dishes: MenuEntry[]
   table: Table
   restaurant: string
   isLoading: boolean
   basket: BasketEntry[]
+  query: string
 }
 interface MenuPageDispatchProps {
   getDishes: () => void
@@ -53,6 +56,7 @@ interface MenuPageDispatchProps {
   getRestaurant: () => void
   clearBasket: () => void
   showBasketDialog: () => void
+  filterDishes: (query: string) => void
 }
 interface MenuPageOwnProps {}
 interface MenuPageProps
@@ -73,11 +77,20 @@ export const MenuPage: FC<MenuPageProps> = ({
   basket,
   clearBasket,
   showBasketDialog,
+  filterDishes,
+  query,
 }) => {
   const [loading, setLoading] = useState(false)
   const [ordered, setOrdered] = useState<[MenuEntry, number][]>([])
 
-  const menu = nestMenu([...dishes])
+  const menu = nestMenu([
+    ...dishes.filter(
+      dish =>
+        dish.section.toLowerCase().includes(query.toLowerCase()) ||
+        dish.dishVariantName?.toLowerCase().includes(query.toLowerCase()) ||
+        dish.dishName.toLowerCase().includes(query.toLowerCase()),
+    ),
+  ])
 
   useEffect(() => {
     getRestaurant()
@@ -89,6 +102,7 @@ export const MenuPage: FC<MenuPageProps> = ({
   const [showOrderedInfo, setShowOrderedInfo] = useState(false)
   const [showOrderedList, setShowOrderedList] = useState(false)
   const [showConfirmationDialog, setShowConfirmationDialog] = useState(false)
+  const [showSearchInput, setShowSearchInput] = useState(false)
 
   if (!table.name) {
     return (
@@ -147,7 +161,27 @@ export const MenuPage: FC<MenuPageProps> = ({
   return (
     <div className={classes.root}>
       <Loading loading={loading || isLoading} />
-      <Header>Menuo</Header>
+      <Header>
+        Menuo
+        <div className={classes.search}>
+          <SearchButton
+            onClick={() => setShowSearchInput(set => !set)}
+            className={classes.searchButton}
+          />
+        </div>
+      </Header>
+
+      {showSearchInput && (
+        <InputBase
+          autoFocus
+          className={classes.searchInput}
+          onChange={e => filterDishes(e.target.value)}
+          value={query}
+          placeholder="Wyszukaj danie lub kategorie"
+          inputProps={{ 'aria-label': 'search' }}
+        />
+      )}
+
       <MenuBasketButton
         className={classes.basketButton}
         count={basket.length}
@@ -283,6 +317,7 @@ const connectComponent = connect<
     isLoading: state.menu.isFetching,
     basket: state.basket,
     restaurant: state.restaurant,
+    query: state.menu.query,
   }),
   dispatch => ({
     showBasketDialog: () => dispatch(actions.uiDialogShow(DialogType.BASKET)),
@@ -290,6 +325,7 @@ const connectComponent = connect<
     clearBasket: () => dispatch(actions.basketClear()),
     getTable: () => dispatch(actions.tableGet()),
     getRestaurant: () => dispatch(actions.restaurantGet()),
+    filterDishes: (query: string) => dispatch(actions.menuFilter(query)),
   }),
 )
 

@@ -24,6 +24,7 @@ export const Header = withStyles(_ =>
       width: '100%',
     },
     content: {
+      width: '100%',
       textAlign: 'center',
       fontFamily: "'Megrim', sans-serif",
       color: '#777',

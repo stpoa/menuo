@@ -8,6 +8,11 @@ export const styles = () =>
       padding: '0.75rem 1rem',
       minHeight: '100vh',
     },
+    search: {
+      display: 'flex',
+      position: 'absolute',
+      top: '1rem',
+    },
     menuContent: {
       marginTop: '1rem',
       marginBottom: '1rem',
@@ -49,5 +54,13 @@ export const styles = () =>
       width: '40px',
       height: '40px',
       zIndex: 100,
+    },
+    searchButton: {
+      width: '40px',
+      height: '40px',
+    },
+    searchInput: {
+      width: '100%',
+      fontSize: '1rem',
     },
   })

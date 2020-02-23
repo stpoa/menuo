@@ -10,3 +10,5 @@ export const menuGetReceive = createStandardAction('MENU / GET_RECEIVE')<
 export const menuGetFailure = createStandardAction('MENU / GET_FAILIRE')<
   Error
 >()
+
+export const menuFilter = createStandardAction('MENU / FILTER')<string>()
