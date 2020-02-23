@@ -174,7 +174,7 @@ export const MenuPage: FC<MenuPageProps> = ({
       {showSearchInput && (
         <InputBase
           autoFocus
-          style={{ width: '100%', fontSize: '1rem' }}
+          className={classes.searchInput}
           onChange={e => filterDishes(e.target.value)}
           value={query}
           placeholder="Wyszukaj danie lub kategorie"

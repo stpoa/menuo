@@ -59,4 +59,8 @@ export const styles = () =>
       width: '40px',
       height: '40px',
     },
+    searchInput: {
+      width: '100%',
+      fontSize: '1rem',
+    },
   })
