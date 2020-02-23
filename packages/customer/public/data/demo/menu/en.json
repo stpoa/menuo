@@ -1,0 +1,70 @@
+[
+  {
+    "index": 0,
+    "language": "en",
+    "restaurant": "demo",
+    "section": "STARTERS",
+    "dishName": "Beef tartare",
+    "dishDescription": "With onion, pickled cucumber, mushrooms and yolk, served with bread",
+    "dishVariantPrice": 25,
+    "dishVariantName": ""
+  },
+  {
+    "index": 1,
+    "language": "en",
+    "restaurant": "demo",
+    "section": "STARTERS",
+    "dishName": "Mexican nachos",
+    "dishDescription": "Served with sultry beef",
+    "dishVariantPrice": 12,
+    "dishVariantName": ""
+  },
+  {
+    "index": 2,
+    "language": "en",
+    "restaurant": "demo",
+    "section": "SOUPS",
+    "dishName": "Beef guts",
+    "dishDescription": "According to a family recipe",
+    "dishVariantPrice": 13,
+    "dishVariantName": ""
+  },
+  {
+    "index": 3,
+    "language": "en",
+    "restaurant": "demo",
+    "section": "SOUPS",
+    "dishName": "Beetroot",
+    "dishDescription": "Served with a meat croquette",
+    "dishVariantPrice": 16,
+    "dishVariantName": ""
+  },
+  {
+    "index": 4,
+    "language": "en",
+    "restaurant": "demo",
+    "section": "MAIN DISHES",
+    "dishName": "Oven trout",
+    "dishDescription": "Served with grilled vegetables",
+    "dishVariantPrice": 35,
+    "dishVariantName": ""
+  },
+  {
+    "index": 5,
+    "language": "en",
+    "restaurant": "demo",
+    "section": "MAIN DISHES",
+    "dishName": "Dumplings - 10 pcs",
+    "dishVariantPrice": 14,
+    "dishVariantName": "with cabbage and mushrooms"
+  },
+  {
+    "index": 6,
+    "language": "en",
+    "restaurant": "demo",
+    "section": "MAIN DISHES",
+    "dishName": "Dumplings - 10 pcs",
+    "dishVariantPrice": 14,
+    "dishVariantName": "with meat"
+  }
+]
