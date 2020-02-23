@@ -27,14 +27,13 @@ import Loading from '../../components/Loading'
 import { Receipt as ReceiptIcon } from '@material-ui/icons'
 import { OrderedListDialog } from './components/OrderedListDialog'
 import BasketDialog, { MenuBasketButton } from './components/BasketDialog'
+import { SearchButton } from './components/SearchButton'
 import { OrderConfirmationDialog } from './components/OrderConfirmationDialog'
 import * as actions from '../../store/actions'
 import { RootState } from '../../store/store'
 import { styles } from './MenuPage.styles'
 import { DialogType } from '../../store/ui/dialog/types'
 import { getOrderedEntries } from './data'
-
-import SearchIcon from '@material-ui/icons/Search'
 
 type Basket = BasketEntry[]
 
@@ -103,6 +102,7 @@ export const MenuPage: FC<MenuPageProps> = ({
   const [showOrderedInfo, setShowOrderedInfo] = useState(false)
   const [showOrderedList, setShowOrderedList] = useState(false)
   const [showConfirmationDialog, setShowConfirmationDialog] = useState(false)
+  const [showSearchInput, setShowSearchInput] = useState(false)
 
   if (!table.name) {
     return (
@@ -164,17 +164,23 @@ export const MenuPage: FC<MenuPageProps> = ({
       <Header>
         Menuo
         <div className={classes.search}>
-          <div className={classes.searchIcon}>
-            <SearchIcon />
-          </div>
-          <InputBase
-            onChange={e => filterDishes(e.target.value)}
-            value={query}
-            placeholder=""
-            inputProps={{ 'aria-label': 'search' }}
+          <SearchButton
+            onClick={() => setShowSearchInput(set => !set)}
+            className={classes.searchButton}
           />
         </div>
       </Header>
+
+      {showSearchInput && (
+        <InputBase
+          autoFocus
+          style={{ width: '100%', fontSize: '1.2rem' }}
+          onChange={e => filterDishes(e.target.value)}
+          value={query}
+          placeholder="Wpisz tutaj szukaną frazę"
+          inputProps={{ 'aria-label': 'search' }}
+        />
+      )}
 
       <MenuBasketButton
         className={classes.basketButton}

@@ -11,7 +11,7 @@ export const styles = () =>
     search: {
       display: 'flex',
       position: 'absolute',
-      top: '1.2rem',
+      top: '1rem',
     },
     menuContent: {
       marginTop: '1rem',
@@ -54,5 +54,13 @@ export const styles = () =>
       width: '40px',
       height: '40px',
       zIndex: 100,
+    },
+    searchButton: {
+      // position: 'absolute',
+      // top: '1rem',
+      // left: '4rem',
+      width: '40px',
+      height: '40px',
+      // zIndex: 100,
     },
   })
