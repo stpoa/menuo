@@ -56,11 +56,7 @@ export const styles = () =>
       zIndex: 100,
     },
     searchButton: {
-      // position: 'absolute',
-      // top: '1rem',
-      // left: '4rem',
       width: '40px',
       height: '40px',
-      // zIndex: 100,
     },
   })

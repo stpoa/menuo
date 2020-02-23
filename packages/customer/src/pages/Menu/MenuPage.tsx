@@ -174,10 +174,10 @@ export const MenuPage: FC<MenuPageProps> = ({
       {showSearchInput && (
         <InputBase
           autoFocus
-          style={{ width: '100%', fontSize: '1.2rem' }}
+          style={{ width: '100%', fontSize: '1rem' }}
           onChange={e => filterDishes(e.target.value)}
           value={query}
-          placeholder="Wpisz tutaj szukaną frazę"
+          placeholder="Wyszukaj danie lub kategorie"
           inputProps={{ 'aria-label': 'search' }}
         />
       )}
