@@ -35,6 +35,7 @@ import { RootState } from '../../store/store'
 import { styles } from './MenuPage.styles'
 import { DialogType } from '../../store/ui/dialog/types'
 import { getOrderedEntries } from './data'
+import { Translate } from 'react-localize-redux'
 
 type Basket = BasketEntry[]
 
@@ -175,14 +176,21 @@ export const MenuPage: FC<MenuPageProps> = ({
       </Header>
 
       {showSearchInput && (
-        <InputBase
-          autoFocus
-          className={classes.searchInput}
-          onChange={e => filterDishes(e.target.value)}
-          value={query}
-          placeholder="Wyszukaj danie lub kategorie"
-          inputProps={{ 'aria-label': 'search' }}
-        />
+        <Translate>
+          {({ translate }) => (
+            <InputBase
+              autoFocus
+              className={classes.searchInput}
+              onChange={e => filterDishes(e.target.value)}
+              value={query}
+              placeholder={
+                translate('searchPlaceholderContent').toString() ||
+                'Search in dishes and descriptions'
+              }
+              inputProps={{ 'aria-label': 'search' }}
+            />
+          )}
+        </Translate>
       )}
 
       <MenuBasketButton
@@ -216,7 +224,7 @@ export const MenuPage: FC<MenuPageProps> = ({
           color="primary"
           onClick={handleSummonDialogClick}
         >
-          Zawołaj kelnera
+          <Translate id="callWaiter">Call a waiter</Translate>
         </Button>
         <Button
           {...{ 'data-cy': 'open-order-modal' }}
@@ -226,7 +234,7 @@ export const MenuPage: FC<MenuPageProps> = ({
           color="primary"
           onClick={() => setShowConfirmationDialog(true)}
         >
-          Zamów
+          <Translate id="order">Order</Translate>
         </Button>
       </div>
 
@@ -266,7 +274,13 @@ export const MenuPage: FC<MenuPageProps> = ({
       <BasketDialog />
       <footer>
         <Divider />
-        <Link href="https://menuo.app">O nas</Link>
+        <Translate>
+          {({ translate }) => (
+            <Link href={translate('homePageUrlContent') + ''}>
+              <Translate id="aboutUs">About us</Translate>
+            </Link>
+          )}
+        </Translate>
         <br />
         <br />
         <br />

@@ -15,6 +15,11 @@ export const localeSetActiveLanguageEpic: Epic = action$ =>
     mergeMap(() => [allActions.menuGetRequest()]),
   )
 
+enum AppLanguage {
+  pl = 'pl',
+  en = 'en',
+}
+
 export const localeInitEpic: Epic = action$ =>
   action$.pipe(
     filter(isActionOf(actions.localeInit)),
@@ -22,8 +27,17 @@ export const localeInitEpic: Epic = action$ =>
       const language = getLanguageFromBrowser()
       const defaultLanguage = language === 'pl' ? 'pl' : 'en'
 
+      const translation = {
+        callWaiter: [null, 'Zawołaj kelnera'],
+        order: [null, 'Zamów'],
+        searchPlaceholderContent: [null, 'Wyszukaj w daniach lub w opisach'],
+        homePageUrlContent: ['https://menuo.app/en', 'https://menuo.app'],
+        aboutUs: [null, 'O nas'],
+      }
+
       return initialize({
         languages: ['en', 'pl'],
+        translation,
         options: { defaultLanguage, renderToStaticMarkup },
       })
     }),
