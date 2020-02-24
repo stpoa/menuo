@@ -28,11 +28,14 @@ export const localeInitEpic: Epic = action$ =>
       const defaultLanguage = language === 'pl' ? 'pl' : 'en'
 
       const translation = {
-        callWaiter: [null, 'Zawołaj kelnera'],
-        order: [null, 'Zamów'],
-        searchPlaceholderContent: [null, 'Wyszukaj w daniach lub w opisach'],
+        callWaiter: ['Call a waiter', 'Zawołaj kelnera'],
+        order: ['Order', 'Zamów'],
+        searchPlaceholderContent: [
+          'Search in dishes and descriptions',
+          'Wyszukaj w daniach lub w opisach',
+        ],
         homePageUrlContent: ['https://menuo.app/en', 'https://menuo.app'],
-        aboutUs: [null, 'O nas'],
+        aboutUs: ['About us', 'O nas'],
       }
 
       return initialize({

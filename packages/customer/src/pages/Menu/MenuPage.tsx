@@ -183,10 +183,7 @@ export const MenuPage: FC<MenuPageProps> = ({
               className={classes.searchInput}
               onChange={e => filterDishes(e.target.value)}
               value={query}
-              placeholder={
-                translate('searchPlaceholderContent').toString() ||
-                'Search in dishes and descriptions'
-              }
+              placeholder={translate('searchPlaceholderContent') + ''}
               inputProps={{ 'aria-label': 'search' }}
             />
           )}

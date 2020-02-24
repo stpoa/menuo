@@ -26,9 +26,9 @@ export const LanguageToggle: FC<LanguageToggleProps> = ({
   setActiveLanguage,
   className,
 }) => {
-  const [activeLanguage, otherLanguage] = languages[0].active
+  const [_activeLanguage, otherLanguage] = languages[0].active
     ? languages
-    : languages.reverse()
+    : [...languages].reverse()
 
   return (
     <Fab
