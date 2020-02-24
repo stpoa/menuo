@@ -1,12 +1,6 @@
-import { createReducer } from 'typesafe-actions'
-import * as actions from './actions'
+import { combineReducers } from 'redux'
+import { localizeReducer } from 'react-localize-redux'
 
-const initialState = { language: 'en' }
-
-export const userReducer = createReducer(initialState).handleAction(
-  actions.userLanguageSet,
-  (state, action) => ({
-    ...state,
-    language: action.payload,
-  }),
-)
+export const userReducer = combineReducers({
+  locale: localizeReducer,
+})

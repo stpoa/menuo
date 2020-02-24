@@ -12,6 +12,7 @@ import {
   InputBase,
 } from '@material-ui/core'
 import { Header } from '../../components/Header'
+import LanguageToggle from './components/LanguageToggle'
 import {
   createRestaurantOrder,
   summonWaiter,
@@ -58,7 +59,6 @@ interface MenuPageDispatchProps {
   clearBasket: () => void
   showBasketDialog: () => void
   filterDishes: (query: string) => void
-  getLanguage: () => void
 }
 interface MenuPageOwnProps {}
 interface MenuPageProps
@@ -81,8 +81,6 @@ export const MenuPage: FC<MenuPageProps> = ({
   showBasketDialog,
   filterDishes,
   query,
-  // language,
-  getLanguage,
 }) => {
   const [loading, setLoading] = useState(false)
   const [ordered, setOrdered] = useState<[MenuEntry, number][]>([])
@@ -99,9 +97,8 @@ export const MenuPage: FC<MenuPageProps> = ({
   useEffect(() => {
     getRestaurant()
     getTable()
-    getLanguage()
     getDishes()
-  }, [getRestaurant, getTable, getDishes, getLanguage])
+  }, [getRestaurant, getTable, getDishes])
 
   const [showSummonDialog, setShowSummonDialog] = useState(false)
   const [showOrderedInfo, setShowOrderedInfo] = useState(false)
@@ -174,6 +171,7 @@ export const MenuPage: FC<MenuPageProps> = ({
             className={classes.searchButton}
           />
         </div>
+        <LanguageToggle />
       </Header>
 
       {showSearchInput && (
@@ -323,7 +321,7 @@ const connectComponent = connect<
     basket: state.basket,
     restaurant: state.restaurant,
     query: state.menu.query,
-    language: state.user.language,
+    language: state.user.locale.languages.find(l => l.active)?.code || 'en',
   }),
   dispatch => ({
     showBasketDialog: () => dispatch(actions.uiDialogShow(DialogType.BASKET)),
@@ -332,7 +330,6 @@ const connectComponent = connect<
     getTable: () => dispatch(actions.tableGet()),
     getRestaurant: () => dispatch(actions.restaurantGet()),
     filterDishes: (query: string) => dispatch(actions.menuFilter(query)),
-    getLanguage: () => dispatch(actions.userLanguageGet()),
   }),
 )
 

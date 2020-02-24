@@ -17,7 +17,9 @@ export const menuGetEpic: Epic = (
       from(
         getRestaurantDishes({
           restaurant: state$.value.restaurant,
-          language: state$.value.user.language,
+          language:
+            state$.value.user.locale.languages.find(l => l.active)?.code ||
+            'en',
         }),
       ).pipe(
         map(actions.menuGetReceive),
