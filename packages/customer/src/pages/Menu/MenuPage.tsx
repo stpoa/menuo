@@ -166,8 +166,8 @@ export const MenuPage: FC<MenuPageProps> = ({
       <Loading loading={loading || isLoading} />
       <Header>
         Menuo
-        <LanguageToggle />
         <div className={classes.search}>
+          <LanguageToggle className={classes.languageButton} />
           <SearchButton
             onClick={() => setShowSearchInput(set => !set)}
             className={classes.searchButton}

@@ -58,6 +58,11 @@ export const styles = () =>
     searchButton: {
       width: '40px',
       height: '40px',
+      marginLeft: '0.5rem',
+    },
+    languageButton: {
+      width: '40px',
+      height: '40px',
     },
     searchInput: {
       width: '100%',

@@ -2,10 +2,14 @@ import React, { FC } from 'react'
 import { Language, setActiveLanguage } from 'react-localize-redux'
 import { connect } from 'react-redux'
 import { RootState } from '../../../store/store'
+import { Fab } from '@material-ui/core'
+
+export interface LanguageToggleOwnProps {
+  className: string
+}
 
 export interface LanguageToggleStateProps {
-  languages: Language[]
-  activeLanguage: Language
+  languages: [Language, Language]
 }
 
 export interface LanguageToggleDispatchProps {
@@ -14,23 +18,27 @@ export interface LanguageToggleDispatchProps {
 
 export interface LanguageToggleProps
   extends LanguageToggleStateProps,
-    LanguageToggleDispatchProps {}
+    LanguageToggleDispatchProps,
+    LanguageToggleOwnProps {}
 
 export const LanguageToggle: FC<LanguageToggleProps> = ({
   languages,
-  activeLanguage,
   setActiveLanguage,
-}) => (
-  <div>
-    {languages.map(lang => (
-      <span key={lang.code}>
-        <button onClick={() => setActiveLanguage(lang.code)}>
-          {lang.code}
-        </button>
-      </span>
-    ))}
-  </div>
-)
+  className,
+}) => {
+  const [activeLanguage, otherLanguage] = languages[0].active
+    ? languages
+    : languages.reverse()
+
+  return (
+    <Fab
+      {...{ onClick: () => setActiveLanguage(otherLanguage.code), className }}
+      aria-label="cart"
+    >
+      {otherLanguage.code}
+    </Fab>
+  )
+}
 
 const connectComponent = connect<
   LanguageToggleStateProps,
@@ -39,8 +47,7 @@ const connectComponent = connect<
   RootState
 >(
   state => ({
-    languages: state.user.locale.languages,
-    activeLanguage: state.user.locale.languages.find(l => l.active)!,
+    languages: state.user.locale.languages as [Language, Language],
   }),
   dispatch => ({
     setActiveLanguage: lang => dispatch(setActiveLanguage(lang)),
