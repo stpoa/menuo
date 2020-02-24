@@ -21,16 +21,15 @@ export const LanguageToggle: FC<LanguageToggleProps> = ({
   activeLanguage,
   setActiveLanguage,
 }) => (
-  <ul className="selector">
+  <div>
     {languages.map(lang => (
-      <li key={lang.code}>
+      <span key={lang.code}>
         <button onClick={() => setActiveLanguage(lang.code)}>
-          {activeLanguage.code}
-          {lang.name}
+          {lang.code}
         </button>
-      </li>
+      </span>
     ))}
-  </ul>
+  </div>
 )
 
 const connectComponent = connect<

@@ -166,13 +166,13 @@ export const MenuPage: FC<MenuPageProps> = ({
       <Loading loading={loading || isLoading} />
       <Header>
         Menuo
+        <LanguageToggle />
         <div className={classes.search}>
           <SearchButton
             onClick={() => setShowSearchInput(set => !set)}
             className={classes.searchButton}
           />
         </div>
-        <LanguageToggle />
       </Header>
 
       {showSearchInput && (
