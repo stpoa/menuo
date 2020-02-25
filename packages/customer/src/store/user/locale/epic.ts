@@ -48,6 +48,7 @@ export const localeInitEpic: Epic = action$ =>
           'Remember that at any moment you can make another order or call a waiter. Already ordered dishes can be seen by clicking an icon in upper right screen corner.',
           'Pamiętaj, że w każdej chwili możesz złożyć kolejne zamówienie lub zawołać kelnera. Zamówione wcześniej dania możesz sprawdzić klikając ikonke w prawym, górnym rogu.',
         ],
+        currentlyInBasket: ['Currently in basket', 'Aktualnie w koszyku'],
       }
 
       return initialize({

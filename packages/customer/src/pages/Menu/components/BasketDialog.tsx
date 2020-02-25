@@ -9,6 +9,7 @@ import { RootState } from '../../../store/store'
 import * as actions from '../../../store/actions'
 import { DialogType } from '../../../store/ui/dialog/types'
 import { getOrderedEntries } from '../data'
+import { Translate } from 'react-localize-redux'
 
 const StyledBadge = withStyles((theme: Theme) =>
   createStyles({
@@ -65,7 +66,9 @@ export const BasketDialog: FC<BasketDialogProps> = ({
   inBasket,
 }: BasketDialogProps) => (
   <Dialog open={open} onClose={onClose}>
-    <DialogTitle>Aktualnie w koszyku</DialogTitle>
+    <DialogTitle>
+      <Translate id="currentlyInBasket" />
+    </DialogTitle>
     <DialogContent>
       <OrderedList ordered={inBasket} />
     </DialogContent>
