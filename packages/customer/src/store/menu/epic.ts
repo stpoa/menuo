@@ -14,7 +14,14 @@ export const menuGetEpic: Epic = (
   action$.pipe(
     filter(isActionOf(actions.menuGetRequest)),
     mergeMap(() =>
-      from(getRestaurantDishes({ restaurant: state$.value.restaurant })).pipe(
+      from(
+        getRestaurantDishes({
+          restaurant: state$.value.restaurant,
+          language:
+            state$.value.user.locale.languages.find(l => l.active)?.code ||
+            'en',
+        }),
+      ).pipe(
         map(actions.menuGetReceive),
         catchError((error: Error) => of(actions.menuGetFailure(error))),
       ),

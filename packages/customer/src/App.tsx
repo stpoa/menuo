@@ -4,9 +4,10 @@ import { Switch, Route } from 'react-router-dom'
 import { ConnectedRouter } from 'connected-react-router'
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
 
-import { store, history } from './store/store'
+import { store, history, RootState } from './store/store'
 import TagManager from 'react-gtm-module'
 import './App.css'
+import { LocalizeProvider } from 'react-localize-redux'
 
 const MenuPage = React.lazy(() => import('./pages/Menu/MenuPage'))
 
@@ -20,15 +21,20 @@ const theme = createMuiTheme({
 const App = () => (
   <div id="app">
     <Provider store={store}>
-      <Suspense fallback={<div>Loading...</div>}>
-        <ConnectedRouter history={history}>
-          <ThemeProvider theme={theme}>
-            <Switch>
-              <Route exact path="/:restaurant" component={MenuPage} />
-            </Switch>
-          </ThemeProvider>
-        </ConnectedRouter>
-      </Suspense>
+      <LocalizeProvider
+        store={store}
+        getState={(state: RootState) => state.user.locale}
+      >
+        <Suspense fallback={<div>Loading...</div>}>
+          <ConnectedRouter history={history}>
+            <ThemeProvider theme={theme}>
+              <Switch>
+                <Route exact path="/:restaurant" component={MenuPage} />
+              </Switch>
+            </ThemeProvider>
+          </ConnectedRouter>
+        </Suspense>
+      </LocalizeProvider>
     </Provider>
   </div>
 )

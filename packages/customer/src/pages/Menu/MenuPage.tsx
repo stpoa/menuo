@@ -1,7 +1,7 @@
 import React, { useState, useEffect, FC } from 'react'
 import { connect } from 'react-redux'
 import { nestMenu, Order, MenuEntry, Menu } from '@menuo/shared'
-
+import { Translate } from 'react-localize-redux'
 import {
   Button,
   Fab,
@@ -11,7 +11,9 @@ import {
   Link,
   InputBase,
 } from '@material-ui/core'
+
 import { Header } from '../../components/Header'
+import LanguageToggle from './components/LanguageToggle'
 import {
   createRestaurantOrder,
   summonWaiter,
@@ -49,6 +51,7 @@ interface MenuPageStateProps {
   isLoading: boolean
   basket: BasketEntry[]
   query: string
+  language: string
 }
 interface MenuPageDispatchProps {
   getDishes: () => void
@@ -164,6 +167,7 @@ export const MenuPage: FC<MenuPageProps> = ({
       <Header>
         Menuo
         <div className={classes.search}>
+          <LanguageToggle className={classes.languageButton} />
           <SearchButton
             onClick={() => setShowSearchInput(set => !set)}
             className={classes.searchButton}
@@ -172,14 +176,18 @@ export const MenuPage: FC<MenuPageProps> = ({
       </Header>
 
       {showSearchInput && (
-        <InputBase
-          autoFocus
-          className={classes.searchInput}
-          onChange={e => filterDishes(e.target.value)}
-          value={query}
-          placeholder="Wyszukaj danie lub kategorie"
-          inputProps={{ 'aria-label': 'search' }}
-        />
+        <Translate>
+          {({ translate }) => (
+            <InputBase
+              autoFocus
+              className={classes.searchInput}
+              onChange={e => filterDishes(e.target.value)}
+              value={query}
+              placeholder={translate('searchPlaceholderContent') + ''}
+              inputProps={{ 'aria-label': 'search' }}
+            />
+          )}
+        </Translate>
       )}
 
       <MenuBasketButton
@@ -213,7 +221,7 @@ export const MenuPage: FC<MenuPageProps> = ({
           color="primary"
           onClick={handleSummonDialogClick}
         >
-          Zawołaj kelnera
+          <Translate id="callWaiter">Call a waiter</Translate>
         </Button>
         <Button
           {...{ 'data-cy': 'open-order-modal' }}
@@ -223,7 +231,7 @@ export const MenuPage: FC<MenuPageProps> = ({
           color="primary"
           onClick={() => setShowConfirmationDialog(true)}
         >
-          Zamów
+          <Translate id="order">Order</Translate>
         </Button>
       </div>
 
@@ -263,7 +271,13 @@ export const MenuPage: FC<MenuPageProps> = ({
       <BasketDialog />
       <footer>
         <Divider />
-        <Link href="https://menuo.app">O nas</Link>
+        <Translate>
+          {({ translate }) => (
+            <Link href={translate('homePageUrlContent') + ''}>
+              <Translate id="aboutUs">About us</Translate>
+            </Link>
+          )}
+        </Translate>
         <br />
         <br />
         <br />
@@ -318,6 +332,7 @@ const connectComponent = connect<
     basket: state.basket,
     restaurant: state.restaurant,
     query: state.menu.query,
+    language: state.user.locale.languages.find(l => l.active)?.code || 'en',
   }),
   dispatch => ({
     showBasketDialog: () => dispatch(actions.uiDialogShow(DialogType.BASKET)),

@@ -7,6 +7,7 @@ import { routerMiddleware } from 'connected-react-router'
 
 import { createRootReducer } from './reducer'
 import { rootEpic } from './epic'
+import { init } from './actions'
 
 export const history = createHashHistory()
 const epicMiddleware = createEpicMiddleware<any>()
@@ -19,5 +20,6 @@ export const store = createStore(
 )
 
 epicMiddleware.run(rootEpic)
+store.dispatch(init())
 
 export type RootState = StateType<ReturnType<typeof createRootReducer>>
