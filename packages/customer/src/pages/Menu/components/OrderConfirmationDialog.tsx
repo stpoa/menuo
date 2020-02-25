@@ -8,6 +8,7 @@ import {
 } from '@material-ui/core'
 import { MenuEntry } from '@menuo/shared'
 import { OrderedList } from './OrderList'
+import { Translate } from 'react-localize-redux'
 
 interface OrderConfirmationDialogProps {
   open: boolean
@@ -27,7 +28,11 @@ export const OrderConfirmationDialog: FC<OrderConfirmationDialogProps> = ({
   inBasket,
 }) => (
   <Dialog open={open} onClose={onClose}>
-    <DialogTitle>Czy chcesz zamówić poniższe?</DialogTitle>
+    <DialogTitle>
+      <Translate id="orderConfirmContent">
+        Do you want to order entries below?
+      </Translate>
+    </DialogTitle>
     <DialogContent>
       <OrderedList ordered={inBasket} />
     </DialogContent>
@@ -39,7 +44,7 @@ export const OrderConfirmationDialog: FC<OrderConfirmationDialogProps> = ({
         color="primary"
         onClick={onReject}
       >
-        Powrót
+        <Translate id="back">Back</Translate>
       </Button>
       <Button
         {...{ 'data-cy': 'confirm-dish-order' }}
@@ -47,7 +52,7 @@ export const OrderConfirmationDialog: FC<OrderConfirmationDialogProps> = ({
         color="primary"
         onClick={onConfirm}
       >
-        Zamawiam
+        <Translate id="order">Order</Translate>
       </Button>
     </DialogActions>
   </Dialog>

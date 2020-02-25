@@ -1,7 +1,7 @@
 import React, { useState, useEffect, FC } from 'react'
 import { connect } from 'react-redux'
 import { nestMenu, Order, MenuEntry, Menu } from '@menuo/shared'
-
+import { Translate } from 'react-localize-redux'
 import {
   Button,
   Fab,
@@ -11,6 +11,7 @@ import {
   Link,
   InputBase,
 } from '@material-ui/core'
+
 import { Header } from '../../components/Header'
 import LanguageToggle from './components/LanguageToggle'
 import {
@@ -35,7 +36,6 @@ import { RootState } from '../../store/store'
 import { styles } from './MenuPage.styles'
 import { DialogType } from '../../store/ui/dialog/types'
 import { getOrderedEntries } from './data'
-import { Translate } from 'react-localize-redux'
 
 type Basket = BasketEntry[]
 

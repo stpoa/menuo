@@ -8,6 +8,7 @@ import {
   createStyles,
   WithStyles,
 } from '@material-ui/core'
+import { Translate } from 'react-localize-redux'
 
 interface WaiterSummonDialogProps extends WithStyles {
   open: boolean
@@ -37,21 +38,21 @@ export const WaiterSummonDialog: FC<WaiterSummonDialogProps> = ({
           onClick={handlePayCashClick}
           color="primary"
         >
-          Płatność gotówką
+          <Translate id="payByCash">Pay by cash</Translate>
         </Button>
         <Button
           {...{ disabled, 'data-cy': 'summon-waiter-pay-card' }}
           onClick={handlePayCardClick}
           color="primary"
         >
-          Płatność kartą
+          <Translate id="payByCard">Pay by card</Translate>
         </Button>
         <Button
           {...{ disabled, 'data-cy': 'summon-waiter-other' }}
           color="primary"
           onClick={handleSummonClick}
         >
-          Inne
+          <Translate id="other">Other</Translate>
         </Button>
       </div>
     </Dialog>
