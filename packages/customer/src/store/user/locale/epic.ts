@@ -1,7 +1,7 @@
 import { Epic } from 'redux-observable'
-import { filter, mergeMap, map } from 'rxjs/operators'
+import { filter, mergeMap, map, skip } from 'rxjs/operators'
 import { isOfType, isActionOf } from 'typesafe-actions'
-import { initialize } from 'react-localize-redux'
+import { initialize, setActiveLanguage } from 'react-localize-redux'
 import { renderToStaticMarkup } from 'react-dom/server'
 
 import * as actions from './actions'
@@ -12,15 +12,16 @@ import * as allActions from '../../actions'
 export const localeSetActiveLanguageEpic: Epic = action$ =>
   action$.pipe(
     filter(isOfType('@@localize/SET_ACTIVE_LANGUAGE')),
+    skip(1),
     mergeMap(() => [allActions.menuGetRequest()]),
   )
 
 export const localeInitEpic: Epic = action$ =>
   action$.pipe(
     filter(isActionOf(actions.localeInit)),
-    map(() => {
+    mergeMap(() => {
       const language = getLanguageFromBrowser()
-      const defaultLanguage = language === 'pl' ? 'pl' : 'en'
+      const activeLanguage = language === 'pl' ? 'pl' : 'en'
 
       const translation = {
         callWaiter: ['Call a waiter', 'Zawołaj kelnera'],
@@ -51,10 +52,13 @@ export const localeInitEpic: Epic = action$ =>
         currentlyInBasket: ['Currently in basket', 'Aktualnie w koszyku'],
       }
 
-      return initialize({
-        languages: ['en', 'pl'],
-        translation,
-        options: { defaultLanguage, renderToStaticMarkup },
-      })
+      return [
+        initialize({
+          languages: ['en', 'pl'],
+          translation,
+          options: { defaultLanguage: 'en', renderToStaticMarkup },
+        }),
+        setActiveLanguage(activeLanguage),
+      ]
     }),
   )
