@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "PORT=3002 react-scripts start",
+    "start": "env-cmd -f .env.local react-scripts start",
     "build:production": "env-cmd -f .env.production react-scripts build",
     "build:staging": "env-cmd -f .env.staging react-scripts build",
     "test": "react-scripts test",
