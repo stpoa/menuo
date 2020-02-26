@@ -30,7 +30,7 @@ export const WaiterSummonDialog: FC<WaiterSummonDialogProps> = ({
 }) => {
   return (
     <Dialog open={open} onClose={handleClose}>
-      <DialogTitle><Translate id="callWaiterAim">What you want to call the waiter for?</Translate></DialogTitle>
+      <DialogTitle><Translate id="callWaiterAim">What do You want to call the waiter for?</Translate></DialogTitle>
       <DialogContent></DialogContent>
       <div className={classes.dialogButtons}>
         <Button
