@@ -271,13 +271,15 @@ export const MenuPage: FC<MenuPageProps> = ({
       <BasketDialog />
       <footer>
         <Divider />
-        <Translate>
-          {({ translate }) => (
-            <Link href={translate('homePageUrlContent') + ''}>
-              <Translate id="aboutUs">About us</Translate>
-            </Link>
-          )}
-        </Translate>
+        {restaurant !== 'demo' ? (
+          <Translate>
+            {({ translate }) => (
+              <Link href={translate('homePageUrlContent') + ''}>
+                <Translate id="aboutUs">About us</Translate>
+              </Link>
+            )}
+          </Translate>
+        ) : null}
         <br />
         <br />
         <br />
