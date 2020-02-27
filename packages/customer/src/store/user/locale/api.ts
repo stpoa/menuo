@@ -24,6 +24,10 @@ export const getTranslations = () => ({
     'Do you want to order entries below?',
     'Czy chcesz zamówić poniższe?',
   ],
+  orderListContent: [
+	'List of Your orders:',
+	'Lista Twoich zamówień:',
+  ],
   back: ['back', 'powrót'],
   orderSentTitleContent: ['Order sent', 'Zamówienie wysłane!'],
   orderSentSubTitleContent: [

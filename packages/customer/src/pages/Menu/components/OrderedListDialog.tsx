@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 import { Dialog, DialogTitle, DialogContent, Button } from '@material-ui/core'
 import { MenuEntry } from '@menuo/shared'
 import { OrderedList } from './OrderList'
+import { Translate } from 'react-localize-redux'
 
 interface OrderedListDialogProps {
   open: boolean
@@ -17,7 +18,11 @@ export const OrderedListDialog: FC<OrderedListDialogProps> = ({
   ordered,
 }: OrderedListDialogProps) => (
   <Dialog open={open} onClose={onClose}>
-    <DialogTitle>Lista twoich zamówień</DialogTitle>
+    <DialogTitle>
+      <Translate id="orderListContent">
+        List of Your orders:
+      </Translate>
+	</DialogTitle>
     <DialogContent>
       <OrderedList ordered={ordered} />
     </DialogContent>
