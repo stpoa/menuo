@@ -52,7 +52,12 @@
       rel="stylesheet"
     />
 	<script>
+		var hasBeenCalled = false;
 		function preventScrolling (){
+			if(hasBeenCalled) {
+			   return;
+			} 
+			hasBeenCalled = true;
 			window.scrollTo(0, 0);
 		};
 	</script>
