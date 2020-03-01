@@ -6,6 +6,7 @@ import { Fab } from '@material-ui/core'
 
 export interface LanguageToggleOwnProps {
   className: string
+  disabled: boolean
 }
 
 export interface LanguageToggleStateProps {
@@ -25,6 +26,7 @@ export const LanguageToggle: FC<LanguageToggleProps> = ({
   languages,
   setActiveLanguage,
   className,
+  disabled,
 }) => {
   const [_activeLanguage, otherLanguage] = languages[0].active
     ? languages
@@ -32,7 +34,7 @@ export const LanguageToggle: FC<LanguageToggleProps> = ({
 
   return (
     <Fab
-      {...{ onClick: () => setActiveLanguage(otherLanguage.code), className }}
+      {...{ disabled, onClick: () => setActiveLanguage(otherLanguage.code), className }}
       aria-label="cart"
     >
       {otherLanguage.code}
