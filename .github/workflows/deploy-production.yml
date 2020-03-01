@@ -26,7 +26,7 @@ jobs:
         yarn install
     - name: Copy env files
       run: |
-        cp packages/customer/example.env.production packages/customer/.env.production && cp packages/waiter/example.env.production packages/waiter/.env.production
+        cp packages/customer/example.env.production packages/customer/.env.production && cp packages/waiter/example.env.production packages/waiter/.env.production && cp packages/server/example.env.production packages/server/.env.production
     - name: Production deploy
       run: |
         yarn deploy:production
