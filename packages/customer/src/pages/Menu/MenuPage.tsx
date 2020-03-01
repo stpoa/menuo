@@ -169,7 +169,7 @@ export const MenuPage: FC<MenuPageProps> = ({
         <div className={classes.search}>
           <LanguageToggle
             className={classes.languageButton}
-            disabled={Boolean(basket.length)}
+            disabled={!!basket.length}
           />
           <SearchButton
             onClick={() => setShowSearchInput(set => !set)}
