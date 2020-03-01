@@ -1,6 +1,6 @@
 {
   "name": "@menuo/customer",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "yarn data:menus:parse && env-cmd -f .env.local react-scripts start",

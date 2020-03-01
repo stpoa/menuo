@@ -1,6 +1,6 @@
 {
   "name": "@menuo/shared",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.ts",
   "dependencies": {
