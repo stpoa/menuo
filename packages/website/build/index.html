@@ -52,10 +52,14 @@
       rel="stylesheet"
     />
 	<script>
-		function preventScrolling() {
-			window.scrollTo(0, 0); 
+		var hasBeenCalled = false;
+		function preventScrolling (){
+			if(hasBeenCalled) {
+			   return;
+			} 
+			hasBeenCalled = true;
+			window.scrollTo(0, 0);
 		};
-		setTimeout(preventScrolling, 6000);
 	</script>
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -369,6 +373,7 @@
                 src="/waiter/#/demo/orders"
                 frameborder="1"
                 scrolling="yes"
+		onload="setTimeout(preventScrolling, 10);"
               >
               </iframe>
             </div>
