@@ -27,10 +27,11 @@ jobs:
     - name: Copy env files
       run: |
         cp packages/customer/example.env.production packages/customer/.env.production && cp packages/waiter/example.env.production packages/waiter/.env.production && cp packages/server/example.env.production packages/server/.env.production
+    - name: Env
+      run: serverless config credentials --provider aws --key AKIAIOSFODNN7EXAMPLE --secret wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
     - name: Production deploy
-      run: |
-        yarn deploy:production
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: ${{ secrets.AWS_REGION }}
+      run: yarn deploy:production
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: ${{ secrets.AWS_REGION }}
