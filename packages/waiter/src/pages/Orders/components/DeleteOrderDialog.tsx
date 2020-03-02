@@ -13,7 +13,7 @@ export const DeleteOrderDialog: FC<OrderSentDialogProps> = ({
   handleConfirm,
 }: any) => (
   <Dialog open={open} onClose={handleClose}>
-    <DialogTitle>Czy napewno chcesz usunąć zamówienie?</DialogTitle>
+    <DialogTitle>Czy na pewno chcesz usunąć zamówienie?</DialogTitle>
     <DialogActions>
       <Button color="primary" onClick={handleClose}>
         Anuluj
