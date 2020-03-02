@@ -24,7 +24,6 @@ export const handler = withDB(async (event, ctx, _cb) => {
   }
 
   try {
-    console.log(params)
     await deleteOrders(ctx.dbClient)({
       restaurant: params.restaurant,
       table: params.table,
