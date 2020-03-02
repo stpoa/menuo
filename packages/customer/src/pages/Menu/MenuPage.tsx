@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { nestMenu, Order, MenuEntry, Menu } from '@menuo/shared'
 import { Translate } from 'react-localize-redux'
 import {
-  AppBar,
   Button,
   Fab,
   withStyles,
@@ -165,57 +164,57 @@ export const MenuPage: FC<MenuPageProps> = ({
   return (
     <div className={classes.root}>
       <Loading loading={loading || isLoading} />
-        <AppBar color="default">
-	  <Header>
-            Menuo
-            <div className={classes.search}>
-              <LanguageToggle
-                className={classes.languageButton}
-                disabled={!!basket.length}
-              />
-              <SearchButton
-                onClick={() => setShowSearchInput(set => !set)}
-                className={classes.searchButton}
-              />
-	      <MenuBasketButton
-	        className={classes.basketButton}
-	        count={basket.length}
-	        disabled={!basket.length}
-	        onClick={showBasketDialog}
-	      />
-	      <Fab
-	        disabled={ordered.length === 0}
-	        onClick={() => setShowOrderedList(true)}
-	        color="primary"
-	        aria-label="logout"
-	        className={classes.orderedListFab}
-	      >
-	        <ReceiptIcon />
-	      </Fab>
-            </div>
-        </Header>
-	    {showSearchInput && (
-            <Translate>
-              {({ translate }) => (
-                <InputBase
-                  autoFocus
-                  className={classes.searchInput}
-                  onChange={e => filterDishes(e.target.value)}
-                  value={query}
-                  placeholder={translate('searchPlaceholderContent') + ''}
-                  inputProps={{ 'aria-label': 'search' }}
-                />
-              )}
-            </Translate>
+      <Header>
+        Menuo
+        <div className={classes.search}>
+          <LanguageToggle
+            className={classes.languageButton}
+            disabled={!!basket.length}
+          />
+          <SearchButton
+            onClick={() => setShowSearchInput(set => !set)}
+            className={classes.searchButton}
+          />
+        </div>
+      </Header>
+
+      {showSearchInput && (
+        <Translate>
+          {({ translate }) => (
+            <InputBase
+              autoFocus
+              className={classes.searchInput}
+              onChange={e => filterDishes(e.target.value)}
+              value={query}
+              placeholder={translate('searchPlaceholderContent') + ''}
+              inputProps={{ 'aria-label': 'search' }}
+            />
           )}
-	</AppBar>
-	  
+        </Translate>
+      )}
+
+      <MenuBasketButton
+        className={classes.basketButton}
+        count={basket.length}
+        disabled={!basket.length}
+        onClick={showBasketDialog}
+      />
+      <Fab
+        disabled={ordered.length === 0}
+        onClick={() => setShowOrderedList(true)}
+        color="primary"
+        aria-label="logout"
+        className={classes.orderedListFab}
+      >
+        <ReceiptIcon />
+      </Fab>
+
       <div className={classes.menuContent}>
         {menu.map((section, i) => (
           <MenuSection id={'section-' + i} section={section} key={i} />
         ))}
       </div>
-	  
+
       <div className={classes.buttons}>
         <Button
           {...{ 'data-cy': 'open-summon-waiter-modal' }}
