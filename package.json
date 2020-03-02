@@ -5,6 +5,7 @@
   "scripts": {
     "start": "lerna run start --parallel",
     "build": "lerna run build",
+    "format": "lerna run format",
     "deploy:staging": "lerna run deploy:staging",
     "deploy:production": "lerna run deploy:production",
     "deploy:stgaging:customer": "lerna run deploy:staging --scope @menuo/customer",
