@@ -27,4 +27,3 @@ export const withDB = (f: AGPHADB) => (
     })
   }
 }
-

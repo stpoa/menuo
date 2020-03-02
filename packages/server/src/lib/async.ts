@@ -3,10 +3,12 @@ export const wait = (ms: number) =>
     setTimeout(resolve, ms)
   })
 
-export const promiseSequence = async <T>(promises: Promise<T>[]): Promise<T[]> => {
+export const promiseSequence = async <T>(
+  promises: Promise<T>[],
+): Promise<T[]> => {
   const results: any = []
-  for(let i = 0; i < promises.length; ++i) {
-    results[i] = await promises[i];
+  for (let i = 0; i < promises.length; ++i) {
+    results[i] = await promises[i]
   }
   return results
-};
+}

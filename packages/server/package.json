@@ -11,7 +11,7 @@
     "deploy:staging": "sls deploy --stage dev --env staging",
     "deploy:production": "sls deploy --stage prod --env production",
     "format": "npm run format:prettier",
-    "format:prettier": "prettier './**/*.ts*' --write",
+    "format:prettier": "prettier 'src/**/*.ts*' --write",
     "test": "run-p test:types test:logic",
     "test:logic": "jest",
     "test:types": "tsc -p . --noEmit"
