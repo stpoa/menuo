@@ -14,8 +14,8 @@ export const styles = () =>
       top: '1rem',
     },
     menuContent: {
-      marginTop: '1rem',
-      marginBottom: '1rem',
+      marginTop: '2rem',
+      marginBottom: '2rem',
       minHeight: '90vh',
     },
     buttons: {
@@ -41,7 +41,7 @@ export const styles = () =>
     },
     orderedListFab: {
       position: 'fixed',
-      top: '1rem',
+      top: '0.5rem',
       right: '1rem',
       width: '40px',
       height: '40px',
@@ -49,23 +49,32 @@ export const styles = () =>
     },
     basketButton: {
       position: 'fixed',
-      top: '1rem',
+      top: '0.5rem',
       right: '4rem',
       width: '40px',
       height: '40px',
       zIndex: 100,
     },
     searchButton: {
+      position: 'fixed',
+      top: '0.5rem',
+      left: '4rem',
       width: '40px',
       height: '40px',
-      marginLeft: '0.5rem',
+      zIndex: 100,
     },
     languageButton: {
+      position: 'fixed',
+      top: '0.5rem',
+      left: '1rem',
       width: '40px',
       height: '40px',
+      zIndex: 100,
     },
     searchInput: {
       width: '100%',
       fontSize: '1rem',
+      marginLeft: '2rem',
+      marginRight: '2rem',
     },
   })
