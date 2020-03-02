@@ -34,7 +34,11 @@ export const LanguageToggle: FC<LanguageToggleProps> = ({
 
   return (
     <Fab
-      {...{ disabled, onClick: () => setActiveLanguage(otherLanguage.code), className }}
+      {...{
+        disabled,
+        onClick: () => setActiveLanguage(otherLanguage.code),
+        className,
+      }}
       aria-label="cart"
     >
       {otherLanguage.code}

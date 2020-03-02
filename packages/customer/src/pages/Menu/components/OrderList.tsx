@@ -11,7 +11,8 @@ export const OrderedList: FC<OrderedListProps> = ({ ordered }) => (
     {ordered.map(([entry, count]) => (
       <li key={entry.dishName}>
         {count} x {truncate(80)(entry.dishName)} -{' '}
-        {truncate(80)(entry.dishVariantName || '')} ({count} x {entry.dishVariantPrice}
+        {truncate(80)(entry.dishVariantName || '')} ({count} x{' '}
+        {entry.dishVariantPrice}
         zł)
       </li>
     ))}

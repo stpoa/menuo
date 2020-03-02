@@ -16,7 +16,10 @@ export const getTranslations = () => ({
   ],
   homePageUrlContent: ['https://menuo.app/en', 'https://menuo.app'],
   aboutUs: ['About us', 'O nas'],
-  callWaiterAim: ['What do You want to call the waiter for?', 'W jakim celu chcesz zawołać kelnera?'],
+  callWaiterAim: [
+    'What do You want to call the waiter for?',
+    'W jakim celu chcesz zawołać kelnera?',
+  ],
   payByCash: ['Pay by cash', 'Płatność gotówką'],
   payByCard: ['Pay by card', 'Płatność kartą'],
   other: ['Other', 'Inne'],
@@ -24,10 +27,7 @@ export const getTranslations = () => ({
     'Do you want to order entries below?',
     'Czy chcesz zamówić poniższe?',
   ],
-  orderListContent: [
-	'List of Your orders:',
-	'Lista Twoich zamówień:',
-  ],
+  orderListContent: ['List of Your orders:', 'Lista Twoich zamówień:'],
   back: ['back', 'powrót'],
   orderSentTitleContent: ['Order sent', 'Zamówienie wysłane!'],
   orderSentSubTitleContent: [

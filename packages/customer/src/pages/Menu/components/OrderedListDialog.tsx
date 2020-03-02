@@ -19,10 +19,8 @@ export const OrderedListDialog: FC<OrderedListDialogProps> = ({
 }: OrderedListDialogProps) => (
   <Dialog open={open} onClose={onClose}>
     <DialogTitle>
-      <Translate id="orderListContent">
-        List of Your orders:
-      </Translate>
-	</DialogTitle>
+      <Translate id="orderListContent">List of Your orders:</Translate>
+    </DialogTitle>
     <DialogContent>
       <OrderedList ordered={ordered} />
     </DialogContent>
