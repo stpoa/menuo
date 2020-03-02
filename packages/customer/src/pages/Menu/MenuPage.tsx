@@ -193,7 +193,7 @@ export const MenuPage: FC<MenuPageProps> = ({
 	        <ReceiptIcon />
 	      </Fab>
             </div>
-          </Header>
+        </Header>
 	    {showSearchInput && (
             <Translate>
               {({ translate }) => (

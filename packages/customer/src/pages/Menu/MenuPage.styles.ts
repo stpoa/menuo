@@ -74,5 +74,7 @@ export const styles = () =>
     searchInput: {
       width: '100%',
       fontSize: '1rem',
+      marginLeft: '2rem',
+      marginRight: '2rem',
     },
   })
