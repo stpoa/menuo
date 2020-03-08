@@ -33,7 +33,7 @@ export const OrdersTable = ({
   return (
     <div style={{ marginTop: '2rem' }}>
       <div style={{ position: 'relative' }}>
-        <H2> Stół {table.name} </H2>
+        <H2> Table {table.name} </H2>
         {table.status === 'summon-waiter' && (
           <Fab
             style={{ position: 'absolute', top: '0', right: '1rem' }}

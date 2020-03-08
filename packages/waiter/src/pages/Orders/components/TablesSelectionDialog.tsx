@@ -34,7 +34,7 @@ export const TablesSelectionDialog: FC<OrderedListDialogProps> = ({
 }: OrderedListDialogProps) => {
   return (
     <Dialog open={open} onClose={onClose}>
-      <DialogTitle>Lista wszystkich stolików</DialogTitle>
+      <DialogTitle>List of all tables</DialogTitle>
       <DialogContent>
         <List className={classes.root}>
           {tables.map(table => {
@@ -49,7 +49,7 @@ export const TablesSelectionDialog: FC<OrderedListDialogProps> = ({
                 <ListItemIcon>
                   <Checkbox edge="start" checked={isChecked} />
                 </ListItemIcon>
-                <ListItemText primary={`Stolik: ${table.name}`} />
+                <ListItemText primary={`Table: ${table.name}`} />
               </ListItem>
             )
           })}
@@ -58,10 +58,10 @@ export const TablesSelectionDialog: FC<OrderedListDialogProps> = ({
 
       <DialogActions>
         <Button color="primary" onClick={onReject}>
-          Powrót
+          Back
         </Button>
         <Button color="primary" onClick={onConfirm}>
-          Akceptuj
+          Accept
         </Button>
       </DialogActions>
     </Dialog>
