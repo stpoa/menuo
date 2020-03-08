@@ -3,16 +3,16 @@
   <head>
     <!-- Google Tag Manager -->
     <script>
-      (function(w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+      ;(function(w, d, s, l, i) {
+        w[l] = w[l] || []
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
         var f = d.getElementsByTagName(s)[0],
           j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-MG3XNKR");
+          dl = l != 'dataLayer' ? '&l=' + l : ''
+        j.async = true
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+        f.parentNode.insertBefore(j, f)
+      })(window, document, 'script', 'dataLayer', 'GTM-MG3XNKR')
     </script>
     <!-- End Google Tag Manager -->
 
@@ -51,16 +51,16 @@
       href="https://fonts.googleapis.com/css?family=Megrim&display=swap"
       rel="stylesheet"
     />
-	<script>
-		var hasBeenCalled = false;
-		function preventScrolling (){
-			if(hasBeenCalled) {
-			   return;
-			} 
-			hasBeenCalled = true;
-			window.scrollTo(0, 0);
-		};
-	</script>
+    <script>
+      var hasBeenCalled = false
+      function preventScrolling() {
+        if (hasBeenCalled) {
+          return
+        }
+        hasBeenCalled = true
+        window.scrollTo(0, 0)
+      }
+    </script>
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
     <!-- Google Tag Manager (noscript) -->
@@ -120,18 +120,18 @@
     <script>
       function WHCheckCookies() {
         if (!localStorage.cookies_accepted) {
-          var cookies_message = document.getElementById("cookies-message");
-          cookies_message.style.display = "block";
+          var cookies_message = document.getElementById('cookies-message')
+          cookies_message.style.display = 'block'
         }
       }
       function WHCloseCookiesWindow() {
-        localStorage.cookies_accepted = true;
+        localStorage.cookies_accepted = true
         document
-          .getElementById("cookies-message-container")
-          .removeChild(document.getElementById("cookies-message"));
+          .getElementById('cookies-message-container')
+          .removeChild(document.getElementById('cookies-message'))
       }
 
-      window.onload = WHCheckCookies;
+      window.onload = WHCheckCookies
     </script>
 
     <div id="overlayer"></div>
@@ -251,7 +251,8 @@
                   Gain an advantage over other restaurants
                 </h3>
                 <p>
-                  <b>Many restaurant customers are dissatisfied</b> with the long wait times for:
+                  <b>Many restaurant customers are dissatisfied</b> with the
+                  long wait times for:
                 </p>
               </div>
 
@@ -293,24 +294,35 @@
               <div class="mb-4">
                 <ul class="list-unstyled ul-check success">
                   <li>
-                    place a small stand with brief instructions and a QR code to scan on each table
+                    place a small stand with brief instructions and a QR code to
+                    scan on each table
                   </li>
                   <li>
-                    the customer scans the QR code and then opens the menu of your restaurant
-                    <b>without installing, logging in or providing any data</b> - then selects products and makes an order
+                    the customer holds the phone close to a stand or scans the
+                    QR code and then opens the menu of Your restaurant
+                    <b>
+                      without installing, logging in or providing any data
+                    </b>
+                    - then selects products and makes an order
                   </li>
                   <li>
-                    the waiter assigned to the table receives the order notification on his smartphone
+                    the waiter assigned to the table receives the order
+                    notification on his smartphone
                   </li>
                   <li>
-                    the customer may at any time use the application to call a waiter for any purpose or inform them about the willingness to pay
+                    the customer may at any time use the application to call a
+                    waiter for any purpose or inform them about the willingness
+                    to pay
                   </li>
                 </ul>
               </div>
               <div class="mb-4">
                 <h3 class="h3 mb-4 text-black">Sounds interesting?</h3>
                 <p>
-                  Contact us. For the first 100 customers this month <b>trial period free!</b>
+                  Contact us. For the first 100 customers this month
+                  <b>
+                    trial period free!
+                  </b>
                 </p>
               </div>
             </div>
@@ -345,10 +357,13 @@
             >
               <div class="mb-4">
                 <h3 class="h3 mb-4 text-black">
-                  After scanning the QR code by the customer...
+                  After holding the smartphone or scanning the QR code by the
+                  customer...
                 </h3>
                 <p>
-                  His smartphone will open an application containing your menu, which does not require installation, logging in or even providing any data. This allows him to do the following:
+                  His smartphone will open an application containing your menu,
+                  which does not require installation, logging in or even
+                  providing any data. This allows him to do the following:
                 </p>
               </div>
 
@@ -357,7 +372,10 @@
                   <li>browsing menu in the selected language</li>
                   <li>ordering at any time</li>
                   <li>preview list of already ordered products</li>
-                  <li>calling the waiter for various purposes (payment - card/cash, other)</li>
+                  <li>
+                    calling the waiter for various purposes (payment -
+                    card/cash, other)
+                  </li>
                 </ul>
               </div>
               <p>Try it Yourself!<b> Place Your order now.</b></p>
@@ -373,7 +391,7 @@
                 src="/waiter/#/demo/orders"
                 frameborder="1"
                 scrolling="yes"
-		onload="setTimeout(preventScrolling, 10);"
+                onload="setTimeout(preventScrolling, 10);"
               >
               </iframe>
             </div>
@@ -385,7 +403,9 @@
               <div class="mb-4">
                 <h3 class="h3 mb-4 text-black">And the waiters...</h3>
                 <p>
-                  Waiters who serve the selected table will receive an order notification with details of their order in their smartphone. What more does the application allow?
+                  Waiters who serve the selected table will receive an order
+                  notification with details of their order in their smartphone.
+                  What more does the application allow?
                 </p>
               </div>
 
@@ -393,8 +413,14 @@
                 <ul class="list-unstyled ul-check success">
                   <li>choice of tables they will serve</li>
                   <li>order notifications</li>
-                  <li>notifications of a customer's willingness to pay or other customer needs</li>
-                  <li>order acceptance, which the customer will see as a notification on his smartphone</li>
+                  <li>
+                    notifications of a customer's willingness to pay or other
+                    customer needs
+                  </li>
+                  <li>
+                    order acceptance, which the customer will see as a
+                    notification on his smartphone
+                  </li>
                   <li>the indication of the meals already served</li>
                   <li>setting the priority (sqquence) of dishes</li>
                   <li>deleting completed orders</li>
@@ -402,7 +428,8 @@
               </div>
               <p>Will your customers be <b>satisfied</b> with this solution?</p>
               <p>
-                Will the waiters be <b>more comfortable</b> working with this alternative to traditional service?
+                Will the waiters be <b>more comfortable</b> working with this
+                alternative to traditional service?
               </p>
               <p><b>See for yourself!</b></p>
             </div>
@@ -447,7 +474,7 @@
             <div class="col-md-12">
               Copyright &copy;
               <script>
-                document.write(new Date().getFullYear());
+                document.write(new Date().getFullYear())
               </script>
               All rights reserved | This template is made with
               <i class="icon-heart text-danger" aria-hidden="true"></i> by
