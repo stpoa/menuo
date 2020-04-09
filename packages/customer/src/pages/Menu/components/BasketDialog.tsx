@@ -3,7 +3,7 @@ import { withStyles, createStyles, Badge, Theme, Fab } from '@material-ui/core'
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
 import { Dialog, DialogTitle, DialogContent, Button } from '@material-ui/core'
 import { MenuEntry } from '@menuo/shared'
-import { OrderedList } from './OrderList'
+import OrderedList from './OrderList'
 import { connect } from 'react-redux'
 import { RootState } from '../../../store/store'
 import * as actions from '../../../store/actions'
@@ -88,11 +88,11 @@ const connectComponent = connect<
   BasketDialogOwnProps,
   RootState
 >(
-  state => ({
+  (state) => ({
     open: state.ui.dialog === DialogType.BASKET,
     inBasket: getOrderedEntries(state.menu.dishes, state.basket),
   }),
-  dispatch => ({
+  (dispatch) => ({
     onClose: () => dispatch(actions.uiDialogHide()),
     onConfirm: () => dispatch(actions.uiDialogHide()),
   }),

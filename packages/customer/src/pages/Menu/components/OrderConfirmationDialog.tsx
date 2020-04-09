@@ -7,7 +7,7 @@ import {
   DialogActions,
 } from '@material-ui/core'
 import { MenuEntry } from '@menuo/shared'
-import { OrderedList } from './OrderList'
+import OrderedList from './OrderList'
 import { Translate } from 'react-localize-redux'
 
 interface OrderConfirmationDialogProps {
