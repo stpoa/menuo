@@ -2,14 +2,11 @@ import { createStyles } from '@material-ui/core'
 
 export const styles = () =>
   createStyles({
-    root: {
+    content: {
       backgroundColor: '#f5f5f5',
       flexDirection: 'column',
       padding: '0.75rem 1rem',
       minHeight: '100vh',
-    },
-    search: {
-      display: 'flex',
     },
     menuContent: {
       marginTop: '1rem',
@@ -20,7 +17,6 @@ export const styles = () =>
       display: 'flex',
       position: 'fixed',
       bottom: '0',
-      marginLeft: '-1rem',
       width: '100%',
       flexDirection: 'row',
       justifyContent: 'center',
@@ -29,36 +25,14 @@ export const styles = () =>
       minWidth: '320px',
     },
     buttonLeft: {
-      width: '50%',
+      flex: 1,
       margin: '0 0.5rem 0 1rem',
       fontSize: '0.8rem',
       background: 'white',
     },
     buttonRight: {
-      width: '50%',
+      flex: 1,
       margin: '0 1rem 0 0.5rem',
       fontSize: '0.8rem',
-    },
-    orderedListFab: {
-      width: '40px',
-      height: '40px',
-      zIndex: 100,
-    },
-    basketButton: {
-      width: '40px',
-      height: '40px',
-      zIndex: 100,
-    },
-    searchButton: {
-      width: '40px',
-      height: '40px',
-    },
-    languageButton: {
-      width: '40px',
-      height: '40px',
-    },
-    searchInput: {
-      width: '100%',
-      fontSize: '1rem',
     },
   })

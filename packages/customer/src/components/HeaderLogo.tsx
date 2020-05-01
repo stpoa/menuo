@@ -2,7 +2,7 @@ import React from 'react'
 import { H1 } from './H1'
 import { withStyles, createStyles, WithStyles } from '@material-ui/core'
 
-export const HeaderRaw: React.FC<WithStyles> = ({ children, classes }) => {
+export const HeaderLogoRaw: React.FC<WithStyles> = ({ children, classes }) => {
   return (
     <div className={classes.root}>
       <div className={classes.content}>
@@ -12,11 +12,9 @@ export const HeaderRaw: React.FC<WithStyles> = ({ children, classes }) => {
   )
 }
 
-export const Header = withStyles((_) =>
+export const HeaderLogo = withStyles((_) =>
   createStyles({
     root: {
-      paddingTop: '0.4rem',
-      paddingBottom: '0.9rem',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
@@ -28,4 +26,4 @@ export const Header = withStyles((_) =>
       fontSize: '2rem',
     },
   }),
-)(HeaderRaw)
+)(HeaderLogoRaw)
