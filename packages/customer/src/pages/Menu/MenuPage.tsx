@@ -88,7 +88,7 @@ export const MenuPage: FC<MenuPageProps> = ({
 
   const menu = nestMenu([
     ...dishes.filter(
-      dish =>
+      (dish) =>
         dish.section.toLowerCase().includes(query.toLowerCase()) ||
         dish.dishVariantName?.toLowerCase().includes(query.toLowerCase()) ||
         dish.dishName.toLowerCase().includes(query.toLowerCase()),
@@ -137,7 +137,7 @@ export const MenuPage: FC<MenuPageProps> = ({
       restaurant,
     })
     setShowOrderedInfo(true)
-    setOrdered(o => [...o, ...getOrderedEntries(dishes, basket)])
+    setOrdered((o) => [...o, ...getOrderedEntries(dishes, basket)])
     clearBasket()
     setLoading(false)
   }
@@ -164,19 +164,64 @@ export const MenuPage: FC<MenuPageProps> = ({
   return (
     <div className={classes.root}>
       <Loading loading={loading || isLoading} />
-      <Header>
-        Menuo
-        <div className={classes.search}>
+
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          background: 'whitesmoke',
+          position: 'sticky',
+          top: 0,
+          zIndex: 1000,
+          borderBottom: '1px solid #ccc',
+        }}
+      >
+        <div
+          style={{
+            width: '88px',
+            display: 'flex',
+            justifyContent: 'space-between',
+          }}
+          className={classes.search}
+        >
           <LanguageToggle
             className={classes.languageButton}
             disabled={!!basket.length}
           />
           <SearchButton
-            onClick={() => setShowSearchInput(set => !set)}
+            onClick={() => setShowSearchInput((set) => !set)}
             className={classes.searchButton}
           />
         </div>
-      </Header>
+
+        <Header>Menuo</Header>
+
+        <div
+          style={{
+            width: '88px',
+            display: 'flex',
+            justifyContent: 'space-between',
+          }}
+          className={classes.search}
+        >
+          <MenuBasketButton
+            className={classes.basketButton}
+            count={basket.length}
+            disabled={!basket.length}
+            onClick={showBasketDialog}
+          />
+          <Fab
+            disabled={ordered.length === 0}
+            onClick={() => setShowOrderedList(true)}
+            color="primary"
+            aria-label="logout"
+            className={classes.orderedListFab}
+          >
+            <ReceiptIcon />
+          </Fab>
+        </div>
+      </div>
 
       {showSearchInput && (
         <Translate>
@@ -184,7 +229,7 @@ export const MenuPage: FC<MenuPageProps> = ({
             <InputBase
               autoFocus
               className={classes.searchInput}
-              onChange={e => filterDishes(e.target.value)}
+              onChange={(e) => filterDishes(e.target.value)}
               value={query}
               placeholder={translate('searchPlaceholderContent') + ''}
               inputProps={{ 'aria-label': 'search' }}
@@ -192,22 +237,6 @@ export const MenuPage: FC<MenuPageProps> = ({
           )}
         </Translate>
       )}
-
-      <MenuBasketButton
-        className={classes.basketButton}
-        count={basket.length}
-        disabled={!basket.length}
-        onClick={showBasketDialog}
-      />
-      <Fab
-        disabled={ordered.length === 0}
-        onClick={() => setShowOrderedList(true)}
-        color="primary"
-        aria-label="logout"
-        className={classes.orderedListFab}
-      >
-        <ReceiptIcon />
-      </Fab>
 
       <div className={classes.menuContent}>
         {menu.map((section, i) => (
@@ -330,16 +359,16 @@ const connectComponent = connect<
   MenuPageOwnProps,
   RootState
 >(
-  state => ({
+  (state) => ({
     dishes: state.menu.dishes,
     table: state.table,
     isLoading: state.menu.isFetching,
     basket: state.basket,
     restaurant: state.restaurant,
     query: state.menu.query,
-    language: state.user.locale.languages.find(l => l.active)?.code || 'en',
+    language: state.user.locale.languages.find((l) => l.active)?.code || 'en',
   }),
-  dispatch => ({
+  (dispatch) => ({
     showBasketDialog: () => dispatch(actions.uiDialogShow(DialogType.BASKET)),
     getDishes: () => dispatch(actions.menuGetRequest()),
     clearBasket: () => dispatch(actions.basketClear()),

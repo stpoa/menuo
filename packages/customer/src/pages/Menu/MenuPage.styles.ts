@@ -10,8 +10,6 @@ export const styles = () =>
     },
     search: {
       display: 'flex',
-      position: 'absolute',
-      top: '1rem',
     },
     menuContent: {
       marginTop: '1rem',
@@ -21,36 +19,32 @@ export const styles = () =>
     buttons: {
       display: 'flex',
       position: 'fixed',
-      bottom: '0.5rem',
-      left: '50%',
-      width: '96%',
-      marginLeft: '-48%',
+      bottom: '0',
+      marginLeft: '-1rem',
+      width: '100%',
       flexDirection: 'row',
       justifyContent: 'center',
+      background: 'whitesmoke',
+      maxWidth: '640px',
+      minWidth: '320px',
     },
     buttonLeft: {
       width: '50%',
-      marginRight: '0.5rem',
+      margin: '0 0.5rem 0 1rem',
       fontSize: '0.8rem',
       background: 'white',
     },
     buttonRight: {
       width: '50%',
-      marginLeft: '0.5rem',
+      margin: '0 1rem 0 0.5rem',
       fontSize: '0.8rem',
     },
     orderedListFab: {
-      position: 'fixed',
-      top: '1rem',
-      right: '1rem',
       width: '40px',
       height: '40px',
       zIndex: 100,
     },
     basketButton: {
-      position: 'fixed',
-      top: '1rem',
-      right: '4rem',
       width: '40px',
       height: '40px',
       zIndex: 100,
@@ -58,7 +52,6 @@ export const styles = () =>
     searchButton: {
       width: '40px',
       height: '40px',
-      marginLeft: '0.5rem',
     },
     languageButton: {
       width: '40px',

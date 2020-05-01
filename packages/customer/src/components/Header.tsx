@@ -12,19 +12,16 @@ export const HeaderRaw: React.FC<WithStyles> = ({ children, classes }) => {
   )
 }
 
-export const Header = withStyles(_ =>
+export const Header = withStyles((_) =>
   createStyles({
     root: {
       paddingTop: '0.4rem',
       paddingBottom: '0.9rem',
-      borderBottom: '1px solid #ccc',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
-      width: '100%',
     },
     content: {
-      width: '100%',
       textAlign: 'center',
       fontFamily: "'Megrim', sans-serif",
       color: '#777',
