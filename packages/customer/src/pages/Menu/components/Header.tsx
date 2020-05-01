@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { withStyles } from '@material-ui/core/styles'
 import LanguageToggle from './LanguageToggle'
 import { SearchButton } from './SearchButton'
@@ -46,12 +46,27 @@ const HeaderRaw = ({
   query,
 }: HeaderProps) => {
   const [showSearchInput, setShowSearchInput] = useState(false)
+  const [visible, setVisible] = useState(true)
+  const [scrollTop, setScrollTop] = useState(0)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset
+
+      setVisible(scrollTop > currentScrollPos)
+      setScrollTop(currentScrollPos)
+    }
+    window.addEventListener('scroll', handleScroll)
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  })
 
   return (
     <div
       style={{
         position: 'sticky',
-        top: 0,
+        top: visible ? 0 : '-80px',
+        transition: 'top 0.2s ease-in-out',
         zIndex: 1000,
         borderBottom: '1px solid #ccc',
         background: 'whitesmoke',

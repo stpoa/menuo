@@ -2,13 +2,7 @@ import React, { useState, useEffect, FC } from 'react'
 import { connect } from 'react-redux'
 import { nestMenu, Order, MenuEntry, Menu } from '@menuo/shared'
 import { Translate } from 'react-localize-redux'
-import {
-  Button,
-  withStyles,
-  WithStyles,
-  Divider,
-  Link,
-} from '@material-ui/core'
+import { Button, withStyles, WithStyles, Link } from '@material-ui/core'
 
 import {
   createRestaurantOrder,
