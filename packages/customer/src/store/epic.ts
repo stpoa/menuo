@@ -1,6 +1,6 @@
 import { combineEpics, Epic } from 'redux-observable'
 import { isActionOf } from 'typesafe-actions'
-import { map, filter, mergeMap } from 'rxjs/operators'
+import { filter, mergeMap } from 'rxjs/operators'
 
 import { menuGetEpic, menuRefetchEpic } from './menu/epic'
 import { tableSetEpic } from './table/epic'
