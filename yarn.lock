@@ -2198,13 +2198,13 @@
     react-is "^16.8.0"
 
 "@menuo/qr@link:packages/qr":
-  version "1.0.3"
+  version "1.0.0"
   dependencies:
     "@types/ramda" "^0.26.39"
     ramda "^0.26.1"
 
 "@menuo/shared@link:packages/shared":
-  version "1.0.3"
+  version "1.0.0"
   dependencies:
     "@types/ramda" "^0.26.39"
     ramda "^0.26.1"
@@ -2797,6 +2797,13 @@
   version "12.12.27"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.27.tgz#d7506f73160ad30fcebbcf5b8b7d2d976e649e42"
   integrity sha512-odQFl/+B9idbdS0e8IxDl2ia/LP8KZLXhV3BUeI98TrZp0uoIzQPhGd+5EtzHmT0SMOIaPd7jfz6pOHLWTtl7A==
+
+"@types/normalizr@^2.0.18":
+  version "2.0.18"
+  resolved "https://registry.yarnpkg.com/@types/normalizr/-/normalizr-2.0.18.tgz#a42fc1e33a036be3009d6285dd776d94fd88d60d"
+  integrity sha1-pC/B4zoDa+MAnWKF3XdtlP2I1g0=
+  dependencies:
+    normalizr "*"
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
@@ -11320,6 +11327,11 @@ normalize-url@^4.1.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-4.5.0.tgz#453354087e6ca96957bd8f5baf753f5982142129"
   integrity sha512-2s47yzUxdexf1OhyRi4Em83iQk0aPvwTddtFz4hnSSw9dCEsLEGf6SwIO8ss/19S9iBb5sJaOuTvTGDeZI00BQ==
+
+normalizr@*, normalizr@^3.6.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/normalizr/-/normalizr-3.6.0.tgz#b8bbc4546ffe43c1c2200503041642915fcd3e1c"
+  integrity sha512-25cd8DiDu+pL46KIaxtVVvvEPjGacJgv0yUg950evr62dQ/ks2JO1kf7+Vi5/rMFjaSTSTls7aCnmRlUSljtiA==
 
 npm-bundled@^1.0.1:
   version "1.1.1"
