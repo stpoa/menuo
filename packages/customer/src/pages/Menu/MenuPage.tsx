@@ -195,12 +195,16 @@ export const MenuPage: FC<MenuPageProps> = ({
         {restaurant !== 'demo' ? (
           <Translate>
             {({ translate }) => (
-              <Link href={translate('homePageUrlContent') + ''}>
-                <Translate id="aboutUs">About us</Translate>
-              </Link>
+              <div style={{ marginLeft: '1rem' }}>
+                <Link href={translate('homePageUrlContent') + ''}>
+                  <Translate id="aboutUs">About us</Translate>
+                </Link>
+              </div>
             )}
           </Translate>
         ) : null}
+        <br />
+        <br />
         <br />
         <br />
         <br />

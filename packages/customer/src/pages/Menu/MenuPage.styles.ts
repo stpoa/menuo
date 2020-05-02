@@ -23,6 +23,7 @@ export const styles = () =>
       background: 'whitesmoke',
       maxWidth: '640px',
       minWidth: '320px',
+      padding: '0.2rem 0',
     },
     buttonLeft: {
       flex: 1,
