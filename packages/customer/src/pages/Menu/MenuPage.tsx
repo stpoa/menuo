@@ -2,18 +2,8 @@ import React, { useState, useEffect, FC } from 'react'
 import { connect } from 'react-redux'
 import { nestMenu, Order, MenuEntry, Menu } from '@menuo/shared'
 import { Translate } from 'react-localize-redux'
-import {
-  Button,
-  Fab,
-  withStyles,
-  WithStyles,
-  Divider,
-  Link,
-  InputBase,
-} from '@material-ui/core'
+import { Button, withStyles, WithStyles, Link } from '@material-ui/core'
 
-import { Header } from '../../components/Header'
-import LanguageToggle from './components/LanguageToggle'
 import {
   createRestaurantOrder,
   summonWaiter,
@@ -26,16 +16,14 @@ import WaiterSummonDialog from './components/WaiterSummonDialog'
 import { Table } from '@menuo/shared/interfaces/tables'
 import { readSubscription } from '../../notifications'
 import Loading from '../../components/Loading'
-import { Receipt as ReceiptIcon } from '@material-ui/icons'
 import { OrderedListDialog } from './components/OrderedListDialog'
-import BasketDialog, { MenuBasketButton } from './components/BasketDialog'
-import { SearchButton } from './components/SearchButton'
+import BasketDialog from './components/BasketDialog'
 import { OrderConfirmationDialog } from './components/OrderConfirmationDialog'
 import * as actions from '../../store/actions'
 import { RootState } from '../../store/store'
 import { styles } from './MenuPage.styles'
-import { DialogType } from '../../store/ui/dialog/types'
 import { getOrderedEntries } from './data'
+import { Header } from './components/Header'
 
 type Basket = BasketEntry[]
 
@@ -58,7 +46,6 @@ interface MenuPageDispatchProps {
   getTable: () => void
   getRestaurant: () => void
   clearBasket: () => void
-  showBasketDialog: () => void
   filterDishes: (query: string) => void
 }
 interface MenuPageOwnProps {}
@@ -79,8 +66,6 @@ export const MenuPage: FC<MenuPageProps> = ({
   isLoading,
   basket,
   clearBasket,
-  showBasketDialog,
-  filterDishes,
   query,
 }) => {
   const [loading, setLoading] = useState(false)
@@ -88,7 +73,7 @@ export const MenuPage: FC<MenuPageProps> = ({
 
   const menu = nestMenu([
     ...dishes.filter(
-      dish =>
+      (dish) =>
         dish.section.toLowerCase().includes(query.toLowerCase()) ||
         dish.dishVariantName?.toLowerCase().includes(query.toLowerCase()) ||
         dish.dishName.toLowerCase().includes(query.toLowerCase()),
@@ -105,7 +90,6 @@ export const MenuPage: FC<MenuPageProps> = ({
   const [showOrderedInfo, setShowOrderedInfo] = useState(false)
   const [showOrderedList, setShowOrderedList] = useState(false)
   const [showConfirmationDialog, setShowConfirmationDialog] = useState(false)
-  const [showSearchInput, setShowSearchInput] = useState(false)
 
   if (!table.name) {
     return (
@@ -137,7 +121,7 @@ export const MenuPage: FC<MenuPageProps> = ({
       restaurant,
     })
     setShowOrderedInfo(true)
-    setOrdered(o => [...o, ...getOrderedEntries(dishes, basket)])
+    setOrdered((o) => [...o, ...getOrderedEntries(dishes, basket)])
     clearBasket()
     setLoading(false)
   }
@@ -164,78 +148,13 @@ export const MenuPage: FC<MenuPageProps> = ({
   return (
     <div className={classes.root}>
       <Loading loading={loading || isLoading} />
-      <Header>
-        Menuo
-        <div className={classes.search}>
-          <LanguageToggle
-            className={classes.languageButton}
-            disabled={!!basket.length}
-          />
-          <SearchButton
-            onClick={() => setShowSearchInput(set => !set)}
-            className={classes.searchButton}
-          />
-        </div>
-      </Header>
 
-      {showSearchInput && (
-        <Translate>
-          {({ translate }) => (
-            <InputBase
-              autoFocus
-              className={classes.searchInput}
-              onChange={e => filterDishes(e.target.value)}
-              value={query}
-              placeholder={translate('searchPlaceholderContent') + ''}
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          )}
-        </Translate>
-      )}
+      <Header ordered={ordered} setShowOrderedList={setShowOrderedList} />
 
-      <MenuBasketButton
-        className={classes.basketButton}
-        count={basket.length}
-        disabled={!basket.length}
-        onClick={showBasketDialog}
-      />
-      <Fab
-        disabled={ordered.length === 0}
-        onClick={() => setShowOrderedList(true)}
-        color="primary"
-        aria-label="logout"
-        className={classes.orderedListFab}
-      >
-        <ReceiptIcon />
-      </Fab>
-
-      <div className={classes.menuContent}>
+      <div className={[classes.content, classes.menuContent].join(' ')}>
         {menu.map((section, i) => (
           <MenuSection id={'section-' + i} section={section} key={i} />
         ))}
-      </div>
-
-      <div className={classes.buttons}>
-        <Button
-          {...{ 'data-cy': 'open-summon-waiter-modal' }}
-          disabled={loading}
-          className={classes.buttonLeft}
-          variant="outlined"
-          color="primary"
-          onClick={handleSummonDialogClick}
-        >
-          <Translate id="callWaiter">Call a waiter</Translate>
-        </Button>
-        <Button
-          {...{ 'data-cy': 'open-order-modal' }}
-          disabled={!basket.length || loading}
-          className={classes.buttonRight}
-          variant="contained"
-          color="primary"
-          onClick={() => setShowConfirmationDialog(true)}
-        >
-          <Translate id="order">Order</Translate>
-        </Button>
       </div>
 
       <WaiterSummonDialog
@@ -273,7 +192,6 @@ export const MenuPage: FC<MenuPageProps> = ({
       />
       <BasketDialog />
       <footer>
-        <Divider />
         {restaurant !== 'demo' ? (
           <Translate>
             {({ translate }) => (
@@ -287,6 +205,31 @@ export const MenuPage: FC<MenuPageProps> = ({
         <br />
         <br />
         <br />
+
+        <div>
+          <div className={classes.buttons}>
+            <Button
+              {...{ 'data-cy': 'open-summon-waiter-modal' }}
+              disabled={loading}
+              className={classes.buttonLeft}
+              variant="outlined"
+              color="primary"
+              onClick={handleSummonDialogClick}
+            >
+              <Translate id="callWaiter">Call a waiter</Translate>
+            </Button>
+            <Button
+              {...{ 'data-cy': 'open-order-modal' }}
+              disabled={!basket.length || loading}
+              className={classes.buttonRight}
+              variant="contained"
+              color="primary"
+              onClick={() => setShowConfirmationDialog(true)}
+            >
+              <Translate id="order">Order</Translate>
+            </Button>
+          </div>
+        </div>
       </footer>
     </div>
   )
@@ -330,17 +273,16 @@ const connectComponent = connect<
   MenuPageOwnProps,
   RootState
 >(
-  state => ({
+  (state) => ({
     dishes: state.menu.dishes,
     table: state.table,
     isLoading: state.menu.isFetching,
     basket: state.basket,
     restaurant: state.restaurant,
     query: state.menu.query,
-    language: state.user.locale.languages.find(l => l.active)?.code || 'en',
+    language: state.user.locale.languages.find((l) => l.active)?.code || 'en',
   }),
-  dispatch => ({
-    showBasketDialog: () => dispatch(actions.uiDialogShow(DialogType.BASKET)),
+  (dispatch) => ({
     getDishes: () => dispatch(actions.menuGetRequest()),
     clearBasket: () => dispatch(actions.basketClear()),
     getTable: () => dispatch(actions.tableGet()),

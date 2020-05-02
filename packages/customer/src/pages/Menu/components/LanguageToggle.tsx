@@ -28,6 +28,7 @@ export const LanguageToggle: FC<LanguageToggleProps> = ({
   className,
   disabled,
 }) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [_activeLanguage, otherLanguage] = languages[0].active
     ? languages
     : [...languages].reverse()
@@ -52,11 +53,11 @@ const connectComponent = connect<
   {},
   RootState
 >(
-  state => ({
+  (state) => ({
     languages: state.user.locale.languages as [Language, Language],
   }),
-  dispatch => ({
-    setActiveLanguage: lang => dispatch(setActiveLanguage(lang)),
+  (dispatch) => ({
+    setActiveLanguage: (lang) => dispatch(setActiveLanguage(lang)),
   }),
 )
 
