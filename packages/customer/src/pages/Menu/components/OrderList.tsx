@@ -11,11 +11,17 @@ import {
   WithStyles,
   Divider,
 } from '@material-ui/core'
-import { add } from 'ramda'
+import { pipe, map, sum } from 'ramda'
 
+type OrderEntry = [MenuEntry, number]
 interface OrderedListProps extends WithStyles {
-  ordered: [MenuEntry, number][]
+  ordered: OrderEntry[]
 }
+
+const calculateEntryPrice = ([entry, count]: OrderEntry) =>
+  count * entry.dishVariantPrice
+
+const calculateOrderedPrice = pipe(map(calculateEntryPrice), sum)
 
 export const OrderedList: FC<OrderedListProps> = ({ ordered, classes }) => (
   <List>
@@ -33,7 +39,7 @@ export const OrderedList: FC<OrderedListProps> = ({ ordered, classes }) => (
         </ListItemText>
 
         <ListItemIcon className={classes.itemIcon}>
-          <span>{count * entry.dishVariantPrice} zł</span>
+          <span>{calculateEntryPrice([entry, count])} zł</span>
         </ListItemIcon>
       </ListItem>
     ))}
@@ -47,12 +53,7 @@ export const OrderedList: FC<OrderedListProps> = ({ ordered, classes }) => (
       <ListItemText className={classes.itemText}></ListItemText>
 
       <ListItemIcon className={classes.itemIcon}>
-        <span>
-          {ordered
-            .map(([entry, count]) => entry.dishVariantPrice * count)
-            .reduce(add, 0)}{' '}
-          zł
-        </span>
+        <span>{calculateOrderedPrice(ordered)} zł</span>
       </ListItemIcon>
     </ListItem>
   </List>
