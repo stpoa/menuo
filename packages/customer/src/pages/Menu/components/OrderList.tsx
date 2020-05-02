@@ -44,18 +44,22 @@ export const OrderedList: FC<OrderedListProps> = ({ ordered, classes }) => (
       </ListItem>
     ))}
 
-    <Divider />
-    <ListItem dense disableGutters key="sum">
-      <ListItemIcon className={classes.itemIcon}>
-        <span>Σ</span>
-      </ListItemIcon>
+    {ordered[0] && (
+      <>
+        <Divider />
+        <ListItem dense disableGutters key="sum">
+          <ListItemIcon className={classes.itemIcon}>
+            <span>Σ</span>
+          </ListItemIcon>
 
-      <ListItemText className={classes.itemText}></ListItemText>
+          <ListItemText className={classes.itemText}></ListItemText>
 
-      <ListItemIcon className={classes.itemIcon}>
-        <span>{calculateOrderedPrice(ordered)} zł</span>
-      </ListItemIcon>
-    </ListItem>
+          <ListItemIcon className={classes.itemIcon}>
+            <span>{calculateOrderedPrice(ordered)} zł</span>
+          </ListItemIcon>
+        </ListItem>
+      </>
+    )}
   </List>
 )
 

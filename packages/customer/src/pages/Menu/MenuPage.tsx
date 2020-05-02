@@ -182,7 +182,7 @@ export const MenuPage: FC<MenuPageProps> = ({
           setShowOrderedInfo(false)
         }}
         showOrderedDialog={showOrderedInfo}
-        ordered={getOrderedEntries(dishes, basket)}
+        ordered={[]}
       />
       <OrderedListDialog
         open={showOrderedList}
