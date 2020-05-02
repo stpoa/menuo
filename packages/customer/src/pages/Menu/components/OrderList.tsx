@@ -11,11 +11,17 @@ import {
   WithStyles,
   Divider,
 } from '@material-ui/core'
-import { add } from 'ramda'
+import { pipe, map, sum } from 'ramda'
 
+type OrderEntry = [MenuEntry, number]
 interface OrderedListProps extends WithStyles {
-  ordered: [MenuEntry, number][]
+  ordered: OrderEntry[]
 }
+
+const calculateEntryPrice = ([entry, count]: OrderEntry) =>
+  count * entry.dishVariantPrice
+
+const calculateOrderedPrice = pipe(map(calculateEntryPrice), sum)
 
 export const OrderedList: FC<OrderedListProps> = ({ ordered, classes }) => (
   <List>
@@ -33,28 +39,27 @@ export const OrderedList: FC<OrderedListProps> = ({ ordered, classes }) => (
         </ListItemText>
 
         <ListItemIcon className={classes.itemIcon}>
-          <span>{count * entry.dishVariantPrice} zł</span>
+          <span>{calculateEntryPrice([entry, count])} zł</span>
         </ListItemIcon>
       </ListItem>
     ))}
 
-    <Divider />
-    <ListItem dense disableGutters key="sum">
-      <ListItemIcon className={classes.itemIcon}>
-        <span>Σ</span>
-      </ListItemIcon>
+    {ordered[0] && (
+      <>
+        <Divider />
+        <ListItem dense disableGutters key="sum">
+          <ListItemIcon className={classes.itemIcon}>
+            <span>Σ</span>
+          </ListItemIcon>
 
-      <ListItemText className={classes.itemText}></ListItemText>
+          <ListItemText className={classes.itemText}></ListItemText>
 
-      <ListItemIcon className={classes.itemIcon}>
-        <span>
-          {ordered
-            .map(([entry, count]) => entry.dishVariantPrice * count)
-            .reduce(add, 0)}{' '}
-          zł
-        </span>
-      </ListItemIcon>
-    </ListItem>
+          <ListItemIcon className={classes.itemIcon}>
+            <span>{calculateOrderedPrice(ordered)} zł</span>
+          </ListItemIcon>
+        </ListItem>
+      </>
+    )}
   </List>
 )
 
