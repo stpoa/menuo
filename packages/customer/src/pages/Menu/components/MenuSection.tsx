@@ -39,9 +39,9 @@ export interface MenuSectionDispatchProps {
 
 export interface MenuSectionProps
   extends MenuSectionOwnProps,
-    MenuSectionStateProps,
-    MenuSectionDispatchProps,
-    WithStyles {}
+  MenuSectionStateProps,
+  MenuSectionDispatchProps,
+  WithStyles { }
 
 const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1)
 
@@ -84,9 +84,9 @@ export const MenuSection: FC<MenuSectionProps> = ({
                   // const id = variant.entry._id
                   const count = basket.filter(
                     (entry: any) =>
-                      entry.dish === variant.entry.dishName &&
-                      (entry.variant === variant.entry.dishVariantName ||
-                        (!entry.variant && !variant.entry.dishVariantName)),
+                      entry.dish === dish.name &&
+                      (entry.variant === variant.name ||
+                        (!entry.variant && !variant.name)),
                   ).length
                   const variantText =
                     (variant.name ? variant.name + ' - ' : '') +

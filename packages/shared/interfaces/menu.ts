@@ -10,23 +10,26 @@ export interface IRestaurant {
 export type IMenu = ISection[]
 
 export interface ISection {
+  id: string
   name: string
   description?: string
   dishes: IDish[]
 }
 
 export interface IDish {
+  id: string
   name: string
   description?: string
   variants: IVariant[]
 }
 
 export interface IVariant {
-  _id: string
+  id: string
+  dishId: string
   price: number
   name?: string
   description?: string
-  entry: MenuEntry
+  entry?: MenuEntry
 }
 
 // DB
