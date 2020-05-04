@@ -13,6 +13,7 @@ import {
 import MenuSection from './components/MenuSection'
 import { OrderSentDialog } from './components/OrderSentDialog'
 import WaiterSummonDialog from './components/WaiterSummonDialog'
+import WaiterSummonConfirmation from './components/WaiterSummonConfirmation'
 import { Table } from '@menuo/shared/interfaces/tables'
 import { readSubscription } from '../../notifications'
 import Loading from '../../components/Loading'
@@ -73,7 +74,7 @@ export const MenuPage: FC<MenuPageProps> = ({
 
   const menu = nestMenu([
     ...dishes.filter(
-      (dish) =>
+      dish =>
         dish.section.toLowerCase().includes(query.toLowerCase()) ||
         dish.dishVariantName?.toLowerCase().includes(query.toLowerCase()) ||
         dish.dishName.toLowerCase().includes(query.toLowerCase()),
@@ -87,6 +88,7 @@ export const MenuPage: FC<MenuPageProps> = ({
   }, [getRestaurant, getTable, getDishes])
 
   const [showSummonDialog, setShowSummonDialog] = useState(false)
+  const [showSummonConfirmation, setShowSummonConfirmation] = useState(false)
   const [showOrderedInfo, setShowOrderedInfo] = useState(false)
   const [showOrderedList, setShowOrderedList] = useState(false)
   const [showConfirmationDialog, setShowConfirmationDialog] = useState(false)
@@ -121,7 +123,7 @@ export const MenuPage: FC<MenuPageProps> = ({
       restaurant,
     })
     setShowOrderedInfo(true)
-    setOrdered((o) => [...o, ...getOrderedEntries(dishes, basket)])
+    setOrdered(o => [...o, ...getOrderedEntries(dishes, basket)])
     clearBasket()
     setLoading(false)
   }
@@ -135,14 +137,21 @@ export const MenuPage: FC<MenuPageProps> = ({
     await summonWaiter(restaurant, table)
     setShowSummonDialog(false)
     setLoading(false)
+    setShowSummonConfirmation(true)
   }
   const handlePayCardClick = (table: Table) => async () => {
     await payByCard(restaurant, { ...table, status: 'pay-card' })
     setShowSummonDialog(false)
+    setShowSummonConfirmation(true)
   }
   const handlePayCashClick = (table: Table) => async () => {
     await payByCash(restaurant, { ...table, status: 'pay-cash' })
     setShowSummonDialog(false)
+    setShowSummonConfirmation(true)
+  }
+
+  const handleOkClick = () => {
+    setShowSummonConfirmation(false)
   }
 
   return (
@@ -164,6 +173,12 @@ export const MenuPage: FC<MenuPageProps> = ({
         handlePayCardClick={handlePayCardClick(table)}
         handlePayCashClick={handlePayCashClick(table)}
         handleSummonClick={handleSummonClick(table)}
+      />
+      <WaiterSummonConfirmation
+        disabled={loading}
+        open={showSummonConfirmation}
+        handleClose={() => setShowSummonConfirmation(false)}
+        handleOkClick={handleOkClick}
       />
       <OrderConfirmationDialog
         disabled={loading}
@@ -277,16 +292,16 @@ const connectComponent = connect<
   MenuPageOwnProps,
   RootState
 >(
-  (state) => ({
+  state => ({
     dishes: state.menu.dishes,
     table: state.table,
     isLoading: state.menu.isFetching,
     basket: state.basket,
     restaurant: state.restaurant,
     query: state.menu.query,
-    language: state.user.locale.languages.find((l) => l.active)?.code || 'en',
+    language: state.user.locale.languages.find(l => l.active)?.code || 'en',
   }),
-  (dispatch) => ({
+  dispatch => ({
     getDishes: () => dispatch(actions.menuGetRequest()),
     clearBasket: () => dispatch(actions.basketClear()),
     getTable: () => dispatch(actions.tableGet()),
