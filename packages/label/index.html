@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+    img {
+      display: block;
+      position: relative;
+    }
+    #plate {
+      background-image: url('./img/plate.png');
+      width: 210px;
+      height: 249px;
+    }
+    #qr {
+      background-image: url('./img/qr.png');
+      width: 160px;
+      height: 160px;
+    }
+    #bg {
+      background-image: url('./img/bg.png');
+      width: 210px;
+      height: 298px;
+    }
+    #bg,
+    #plate,
+    #qr {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-repeat: no-repeat;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      width: 210px;
+      height: 298px;
+    }
+  </style>
+  <body>
+    <div id="bg">
+      <div id="plate">
+        <div id="qr"></div>
+      </div>
+    </div>
+  </body>
+</html>
