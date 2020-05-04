@@ -1,33 +1,41 @@
 import { normalizeMenu } from './menu'
 import { IMenu } from '../interfaces'
+import { pipe, toLower } from 'ramda'
 
 describe('Menu', () => {
   const menu: IMenu = [
     {
+      id: '0',
       name: 'Zupy',
       dishes: [
         {
+          id: '0',
           name: 'Zalewajka',
           variants: [
             {
+              id: 'default-15',
               price: 15,
             },
           ],
           description: 'Barley soup Cracow style',
         },
         {
+          id: '1',
           name: 'Barszcz czerwony z pierogami z mięsem',
           variants: [
             {
+              id: 'default-15',
               price: 15,
             },
           ],
           description: 'Beetroot soup with dumplings with meat',
         },
         {
+          id: '2',
           name: 'Grzybowa',
           variants: [
             {
+              id: 'default-17',
               price: 17,
             },
           ],
@@ -36,13 +44,15 @@ describe('Menu', () => {
       ],
     },
     {
+      id: '1',
       name: 'Sałatki',
       dishes: [
         {
-          id: '4',
+          id: '0',
           name: 'Sałatka z watróbką',
           variants: [
             {
+              id: '0',
               price: 29,
             },
           ],
@@ -50,9 +60,11 @@ describe('Menu', () => {
             'Wątróbka drobiowa,maliny, ser feta i dresing balsamiczny Lettuce with stewed chicken liver, feta cheese and raspberries',
         },
         {
+          id: '0',
           name: 'Sałatka z kurczakiem, kozim serem i pieczona papryką',
           variants: [
             {
+              id: '0',
               price: 30,
             },
           ],

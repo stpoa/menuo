@@ -25,11 +25,9 @@ export interface IDish {
 
 export interface IVariant {
   id: string
-  dishId: string
   price: number
   name?: string
   description?: string
-  entry?: MenuEntry
 }
 
 // DB
