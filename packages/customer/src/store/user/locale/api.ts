@@ -39,4 +39,8 @@ export const getTranslations = () => ({
     'Pamiętaj, że w każdej chwili możesz złożyć kolejne zamówienie lub zawołać kelnera. Zamówione wcześniej dania możesz sprawdzić klikając ikonke w prawym, górnym rogu.',
   ],
   currentlyInBasket: ['Currently in basket', 'Aktualnie w koszyku'],
+  callWaiterConfirmation: [
+    'Waiter has been notified!',
+    'Kelner został powiadomiony!',
+  ],
 })
