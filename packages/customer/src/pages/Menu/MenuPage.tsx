@@ -150,10 +150,6 @@ export const MenuPage: FC<MenuPageProps> = ({
     setShowSummonConfirmation(true)
   }
 
-  const handleOkClick = () => {
-    setShowSummonConfirmation(false)
-  }
-
   return (
     <div className={classes.root}>
       <Loading loading={loading || isLoading} />
@@ -178,7 +174,7 @@ export const MenuPage: FC<MenuPageProps> = ({
         disabled={loading}
         open={showSummonConfirmation}
         handleClose={() => setShowSummonConfirmation(false)}
-        handleOkClick={handleOkClick}
+        handleOkClick={() => setShowSummonConfirmation(false)}
       />
       <OrderConfirmationDialog
         disabled={loading}
