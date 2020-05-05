@@ -14,6 +14,7 @@ import MenuSection from './components/MenuSection'
 import { OrderSentDialog } from './components/OrderSentDialog'
 import WaiterSummonDialog from './components/WaiterSummonDialog'
 import WaiterSummonConfirmation from './components/WaiterSummonConfirmation'
+import BlikPaymentInstruction from './components/BlikPaymentInstruction'
 import { Table } from '@menuo/shared/interfaces/tables'
 import { readSubscription } from '../../notifications'
 import Loading from '../../components/Loading'
@@ -93,6 +94,9 @@ export const MenuPage: FC<MenuPageProps> = ({
   const [showOrderedList, setShowOrderedList] = useState(false)
   const [showConfirmationDialog, setShowConfirmationDialog] = useState(false)
   const [reason, setReason] = useState('')
+  const [showBlikPaymentInstruction, setShowBlikPaymentInstruction] = useState(
+    false,
+  )
 
   if (!table.name) {
     return (
@@ -181,6 +185,12 @@ export const MenuPage: FC<MenuPageProps> = ({
         handleClose={() => setShowSummonConfirmation(false)}
         handleOkClick={() => setShowSummonConfirmation(false)}
       />
+      <BlikPaymentInstruction
+        disabled={loading}
+        open={showBlikPaymentInstruction}
+        handleClose={() => setShowBlikPaymentInstruction(false)}
+        handleOkClick={() => setShowBlikPaymentInstruction(false)}
+      />
       <OrderConfirmationDialog
         disabled={loading}
         open={showConfirmationDialog}
@@ -240,13 +250,23 @@ export const MenuPage: FC<MenuPageProps> = ({
             </Button>
             <Button
               {...{ 'data-cy': 'open-order-modal' }}
-              disabled={!basket.length || loading}
+              disabled={(!basket.length && !ordered.length) || loading}
               className={classes.buttonRight}
               variant="contained"
               color="primary"
-              onClick={() => setShowConfirmationDialog(true)}
+              onClick={() => {
+                if (!!basket.length) {
+                  setShowConfirmationDialog(true)
+                } else if (!basket.length && !!ordered.length) {
+                  setShowBlikPaymentInstruction(true)
+                }
+              }}
             >
-              <Translate id="order">Order</Translate>
+              <Translate
+                id={
+                  !basket.length && !!ordered.length ? 'blikPayment' : 'order'
+                }
+              ></Translate>
             </Button>
           </div>
         </div>

@@ -46,4 +46,9 @@ export const getTranslations = () => ({
   cashPayment: ['cash payment!', 'płatność gotówką!'],
   cardPayment: ['card payment!', 'płatność kartą!'],
   anotherNeed: ['another need!', 'inna potrzeba!'],
+  blikPayment: ['pay blik', 'zapłać blik'],
+  blikPaymentConfirmationTitle: [
+    'You can pay with BLIK or call the waiter!',
+    'Możesz zapłacić BLIKiem lub wezwać kelnera!',
+  ],
 })
