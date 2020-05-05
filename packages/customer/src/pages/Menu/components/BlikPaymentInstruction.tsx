@@ -1,4 +1,6 @@
 import React, { FC } from 'react'
+import { MenuEntry } from '@menuo/shared'
+import { truncate } from '../../../utils/text'
 import {
   DialogTitle,
   DialogContent,
@@ -30,17 +32,16 @@ export const BlikPaymentInstruction: FC<BlikPaymentInstructionProps> = ({
         <Translate id="blikPaymentConfirmationTitle"></Translate>
       </DialogTitle>
       <DialogContent>
-        Możesz zapłacić BLIKiem lub wezwać kelnera. Jeśli Twój bank obsługuje
-        płatności BLIK na numer telefonu wyślij kwotę xx PLN na numer 517 254
-        583 a następnie poinformuj o tym kelnera. Tytuł przelewu: "Stolik X".
-        Tylko i wyłącznie po potwierdzeniu kelnera możesz opuścić restauracje.
-        Lista banków obsługujących tego typu płatności w swojej aplikacji
-        mobilnej: Alior Bank, Bank Millennium, Santander Bank Polska, ING Bank
-        Śląski, Inteligo, mBank, PKO Bank Polski.
+        Jeśli Twój bank obsługuje płatności BLIK na numer telefonu wyślij kwotę
+        xx PLN na numer XXX XXX XXX a następnie poinformuj o tym kelnera. Tytuł
+        przelewu: "Stolik XX". Tylko i wyłącznie po potwierdzeniu kelnera możesz
+        opuścić restauracje. Lista banków obsługujących tego typu płatności w
+        swojej aplikacji mobilnej: Alior Bank, Bank Millennium, Santander Bank
+        Polska, ING Bank Śląski, Inteligo, mBank, PKO Bank Polski.
       </DialogContent>
       <div className={classes.dialogButtons}>
         <Button
-          {...{ disabled, 'data-cy': 'summon-waiter-confirmation' }}
+          {...{ disabled, 'data-cy': 'blik-payment-instruction' }}
           onClick={handleOkClick}
           color="primary"
         >
