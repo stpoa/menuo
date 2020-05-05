@@ -8,7 +8,7 @@ export const getLanguageFromBrowser = () => {
 }
 
 export const getTranslations = () => ({
-  callWaiter: ['Call a waiter', 'Zawołaj kelnera'],
+  callWaiter: ['Call a waiter', 'Przywołaj kelnera'],
   order: ['Order', 'Zamów'],
   searchPlaceholderContent: [
     'Search in dishes and descriptions',
