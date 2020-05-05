@@ -18,7 +18,7 @@ export const getTranslations = () => ({
   aboutUs: ['About us', 'O nas'],
   callWaiterAim: [
     'What do You want to call the waiter for?',
-    'W jakim celu chcesz zawołać kelnera?',
+    'W jakim celu chcesz przywołać kelnera?',
   ],
   payByCash: ['Pay by cash', 'Płatność gotówką'],
   payByCard: ['Pay by card', 'Płatność kartą'],
@@ -40,7 +40,10 @@ export const getTranslations = () => ({
   ],
   currentlyInBasket: ['Currently in basket', 'Aktualnie w koszyku'],
   callWaiterConfirmation: [
-    'Waiter has been notified!',
-    'Kelner został powiadomiony!',
+    'Waiter has been notified - ',
+    'Kelner został powiadomiony - ',
   ],
+  cashPayment: ['cash payment!', 'płatność gotówką!'],
+  cardPayment: ['card payment!', 'płatność kartą!'],
+  anotherNeed: ['another need!', 'inna potrzeba!'],
 })

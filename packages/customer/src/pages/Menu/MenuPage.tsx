@@ -92,6 +92,7 @@ export const MenuPage: FC<MenuPageProps> = ({
   const [showOrderedInfo, setShowOrderedInfo] = useState(false)
   const [showOrderedList, setShowOrderedList] = useState(false)
   const [showConfirmationDialog, setShowConfirmationDialog] = useState(false)
+  const [reason, setReason] = useState('')
 
   if (!table.name) {
     return (
@@ -132,22 +133,25 @@ export const MenuPage: FC<MenuPageProps> = ({
     setShowSummonDialog(true)
   }
 
-  const handleSummonClick = (table: Table) => async () => {
+  const handleSummonClick = (table: Table, reason: string) => async () => {
     setLoading(true)
     await summonWaiter(restaurant, table)
     setShowSummonDialog(false)
     setLoading(false)
     setShowSummonConfirmation(true)
+    setReason('anotherNeed')
   }
-  const handlePayCardClick = (table: Table) => async () => {
+  const handlePayCardClick = (table: Table, reason: string) => async () => {
     await payByCard(restaurant, { ...table, status: 'pay-card' })
     setShowSummonDialog(false)
     setShowSummonConfirmation(true)
+    setReason('cardPayment')
   }
-  const handlePayCashClick = (table: Table) => async () => {
+  const handlePayCashClick = (table: Table, reason: string) => async () => {
     await payByCash(restaurant, { ...table, status: 'pay-cash' })
     setShowSummonDialog(false)
     setShowSummonConfirmation(true)
+    setReason('cashPayment')
   }
 
   return (
@@ -166,13 +170,14 @@ export const MenuPage: FC<MenuPageProps> = ({
         disabled={loading}
         open={showSummonDialog}
         handleClose={() => setShowSummonDialog(false)}
-        handlePayCardClick={handlePayCardClick(table)}
-        handlePayCashClick={handlePayCashClick(table)}
-        handleSummonClick={handleSummonClick(table)}
+        handlePayCardClick={handlePayCardClick(table, 'cardPayment')}
+        handlePayCashClick={handlePayCashClick(table, 'cashPayment')}
+        handleSummonClick={handleSummonClick(table, 'anotherNeed')}
       />
       <WaiterSummonConfirmation
         disabled={loading}
         open={showSummonConfirmation}
+        reason={reason}
         handleClose={() => setShowSummonConfirmation(false)}
         handleOkClick={() => setShowSummonConfirmation(false)}
       />

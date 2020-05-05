@@ -13,6 +13,7 @@ import { Translate } from 'react-localize-redux'
 interface WaiterSummonConfirmationProps extends WithStyles {
   open: boolean
   disabled: boolean
+  reason: string
   handleClose: () => void
   handleOkClick: () => void
 }
@@ -20,6 +21,7 @@ interface WaiterSummonConfirmationProps extends WithStyles {
 export const WaiterSummonConfirmation: FC<WaiterSummonConfirmationProps> = ({
   open,
   disabled,
+  reason,
   handleClose,
   handleOkClick,
   classes,
@@ -27,9 +29,8 @@ export const WaiterSummonConfirmation: FC<WaiterSummonConfirmationProps> = ({
   return (
     <Dialog open={open} onClose={handleClose}>
       <DialogTitle>
-        <Translate id="callWaiterConfirmation">
-          Waiter has been notified!
-        </Translate>
+        <Translate id="callWaiterConfirmation"></Translate>
+        <Translate id={reason}></Translate>
       </DialogTitle>
       <DialogContent></DialogContent>
       <div className={classes.dialogButtons}>
