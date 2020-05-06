@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html>
   <style>
+    @import url('https://fonts.googleapis.com/css?family=Megrim:400');
     html,
     body {
       margin: 0;
       padding: 0;
       border: 0;
-    }
-    img {
-      display: block;
-      position: relative;
     }
     #plate {
       background-image: url('./img/plate.png');
@@ -44,12 +41,123 @@
       width: 210px;
       height: 298px;
     }
+
+    .menuoapp {
+      background-color: rgba(255, 255, 255, 0);
+      top: 36px;
+      height: auto;
+      width: auto;
+      position: fixed;
+      margin: 0;
+      left: 109px;
+      transform: rotate(0deg);
+      opacity: 1;
+      font-family: 'CambayDevanagari-Regular', Helvetica, Arial, serif;
+      font-size: 9px;
+      color: rgba(0, 0, 0, 1);
+      text-align: center;
+      line-height: 11px;
+    }
+
+    .menuo {
+      background-color: rgba(255, 255, 255, 0);
+      top: 9px;
+      height: auto;
+      width: auto;
+      position: fixed;
+      margin: 0;
+      left: 58px;
+      transform: rotate(0deg);
+      opacity: 1;
+      font-family: 'Megrim', Helvetica, Arial, serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 30px;
+      color: rgba(0, 0, 0, 1);
+      text-align: center;
+      line-height: 35px;
+    }
+
+    .zam363wszybkoiwygod {
+      background-color: rgba(255, 255, 255, 0);
+      top: 55px;
+      height: auto;
+      width: 137px;
+      position: absolute;
+      margin: 0;
+      left: 37px;
+      transform: rotate(0deg);
+      opacity: 1;
+      font-family: 'CambayDevanagari-Bold', Helvetica, Arial, serif;
+      font-size: 12px;
+      color: rgba(0, 0, 0, 1);
+      text-align: center;
+      line-height: 12px;
+    }
+    .zam363wszybkoiwygod .span1 {
+      line-height: 14px;
+    }
+    .zam363wszybkoiwygod .span2 {
+      font-family: 'CambayDevanagari-Regular', Helvetica, Arial, serif;
+      line-height: 15px;
+    }
+    .przyu0142363u017csw363jsmartfo {
+      background-color: rgba(255, 255, 255, 0);
+      top: 242px;
+      height: auto;
+      width: 152px;
+      position: absolute;
+      margin: 0;
+      left: 30px;
+      transform: rotate(0deg);
+      opacity: 1;
+      font-family: 'CambayDevanagari-Regular', Helvetica, Arial, serif;
+      font-size: 12px;
+      color: rgba(0, 0, 0, 1);
+      text-align: center;
+      line-height: 12px;
+    }
+    .aplikacjaniewymaga {
+      background-color: rgba(255, 255, 255, 0);
+      top: 284px;
+      height: auto;
+      width: 137px;
+      position: absolute;
+      margin: 0;
+      left: 37px;
+      transform: rotate(0deg);
+      opacity: 1;
+      font-family: 'CambayDevanagari-Regular', Helvetica, Arial, serif;
+      font-size: 7px;
+      color: rgba(0, 0, 0, 1);
+      text-align: center;
+      line-height: 8px;
+    }
   </style>
   <body>
-    <div id="bg">
-      <div id="plate">
-        <div id="qr"></div>
-      </div>
+    <img src="img/bg.png" id="bg" />
+    <div id="plate">
+      <div id="qr"></div>
+    </div>
+
+    <div class="menuo">
+      Menuo
+    </div>
+    <div class="menuoapp">
+      menuo.app
+    </div>
+
+    <div class="zam363wszybkoiwygod">
+      <span class="span1">Zamów szybko i wygodnie</span
+      ><span class="span2"><br />dzięki menuo</span>
+    </div>
+
+    <div class="przyu0142363u017csw363jsmartfo">
+      Przyłóż swój smartfon do „NFC”<br />lub<br />Zeskanuj kod QR
+    </div>
+
+    <div class="aplikacjaniewymaga">
+      Aplikacja nie wymaga instalacji ani danych osobowych
     </div>
   </body>
 </html>
