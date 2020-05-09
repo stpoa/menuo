@@ -17,6 +17,7 @@
   "scripts": {
     "start": "tsc --watch",
     "build": "tsc",
-    "generate:example": "ts-node ./scripts/create-qr-code-example.ts"
+    "generate:tables": "ts-node ./scripts/create-qr-code-tables.ts",
+    "generate:demonstration": "ts-node ./scripts/create-qr-code-demonstration.ts"
   }
 }
