@@ -49,4 +49,5 @@ for i in path:
 im1.close()
 back_im.close()
 
-shutil.rmtree("./data/QrGoodSize",ignore_errors=False, onerror=None)
+shutil.rmtree("./data/QrGoodSize", ignore_errors=False, onerror=None)
+shutil.rmtree("./data/QrTooarge", ignore_errors=False, onerror=None)
