@@ -46,5 +46,5 @@ export const createQrCode = (parameters = {}) => async ({
     console.log(d)
     throw new Error('To small file')
   }
-  fs.writeFileSync(path, d)
+  fs.writeFileSync('./data/QrTooLarge/' + path, d)
 }
