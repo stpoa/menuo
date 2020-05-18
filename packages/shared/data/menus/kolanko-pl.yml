@@ -18,16 +18,6 @@
       description: Informacje na temat aktualnej oferty można znaleźć w naszym menu lanczowym, na tablicy, na facebooku i u kelnera
 - name: PRZEKĄSKI
   dishes:
-    - name: Kofty wegetariańskie (4 szt.)
-      variants:
-        - name: ''
-          price: 12
-      description: Ziemniaczano - serowe krokieciki z marchewką i rodzynkami przyprawione w stylu indyjskim, podane z czatni z mango
-    - name: Tarta lotaryńska
-      variants:
-        - name: ''
-          price: 13
-      description: Tarta z boczkiem, serem Gruyère i śmietaną, podawana na ciepło z miksem sałat w sosie vinaigrette
     - name: Indonezyjski satay
       variants:
         - name: ''
@@ -61,14 +51,8 @@
           price: 25
         - name: Z grillowanym kurczakiem i bekonem, pomidorkami koktajlowymi, pieczoną papryką, sałatą, rzodkiewkami i ogórkiem, podana z sosem czosnkowo - ziołowym
           price: 25
-        - name: Z pieczoną w korzennych przyprawach dynią, komosą ryżową, ciecierzycą, granatem, prażonymi pestkami słonecznika, roszponką i rukolą, podana z sosem jogurtowym z dodatkiem miodu i kiszonej cytryny
-          price: 25
 - name: ZUPY
   dishes:
-    - name: Tom Kha - tajska zupa kokosowa z kurczakiem i warzywami
-      variants:
-        - name: ''
-          price: 17
     - name: Meksykańska zupa chili z mięsem i czerwoną fasolą z dodatkiem sera i kwaśnej śmietany
       variants:
         - name: ''
@@ -89,8 +73,6 @@
   dishes:
     - name: Kokosowe tajskie curry z
       variants:
-        - name: krewetkami
-          price: 29
         - name: kurczakiem
           price: 28
         - name: warzywami
@@ -154,21 +136,11 @@
         - name: ''
           price: 22
       description: Z dodatkiem czosnku, śmietanki i sera Grana Padano
-    - name: Naleśniki z brokułami i trzema serami
-      variants:
-        - name: ''
-          price: 22
-      description: Camembert, Ementaler, Rokpol
     - name: Naleśniki z duszonymi boczniakami
       variants:
         - name: ''
           price: 22
       description: Pomidorami i cebulką z dodatkiem wina, czosnku i śmietanki
-    - name: Naleśniki "ruskie"
-      variants:
-        - name: ''
-          price: 22
-      description: Z twarogiem, ziemniakami i cebulką
     - name: Sosy
       variants:
         - name: Czosnkowo-ziołowy
@@ -212,11 +184,6 @@
           price: 3
 - name: CIASTA
   dishes:
-    - name: Sernik
-      variants:
-        - name: ''
-          price: 14
-      description: Z domowym sosem czekoladowym, wiśniami i bitą śmietaną
     - name: Ciasto czekoladowe
       variants:
         - name: ''
@@ -266,22 +233,6 @@
       variants:
         - name: ''
           price: 13
-    - name: Kiwi, pomarańcza, bazylia, mięta
-      variants:
-        - name: ''
-          price: 11
-    - name: Mango, ananas, banan, jogurt (lub mleko sojowe)
-      variants:
-        - name: ''
-          price: 13
-    - name: Malina, brzoskwinia, goji, banan, jogurt (lub mleko sojowe)
-      variants:
-        - name: ''
-          price: 12
-    - name: Porzeczka, truskawka, banan
-      variants:
-        - name: ''
-          price: 11
 - name: HERBATY
   dishes:
     - name: Czarna Lipton
@@ -590,20 +541,12 @@
           price: 10
         - name: Jurajskie Bursztynowe 500ml
           price: 12
-        - name: Jurajskie Ciemne 300ml
-          price: 10
-        - name: Jurajskie Ciemne 500ml
-          price: 12
         - name: Tyskie Klasyczne 300ml
           price: 9.50
         - name: Tyskie Klasyczne 500ml
           price: 10.50
         - name: Tyskomat 5000ml
           price: 95
-        - name: Książęce Złote Pszeniczne 300ml
-          price: 10
-        - name: Książęce Złote Pszeniczne 500ml
-          price: 12
     - name: Piwa bezalkoholowe
       variants:
         - name: Łomża 0% 500ml
