@@ -12,6 +12,7 @@
   },
   "scripts": {
     "start": "tsc --watch",
+    "parse-menus": "ts-node scripts/migrations/menus.ts",
     "build": "tsc"
   }
 }
