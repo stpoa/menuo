@@ -1,7 +1,7 @@
 [
   {
     "index": 0,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "ŚNIADANIA",
     "sectionDescription": "codziennie od 8:00 do 12:00",
@@ -12,7 +12,7 @@
   },
   {
     "index": 1,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "DOMOWY OBIAD",
     "sectionDescription": "od poniedziałku do piątku od 12:00 do ostatniej porcji",
@@ -23,7 +23,7 @@
   },
   {
     "index": 2,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "DOMOWY OBIAD",
     "sectionDescription": "od poniedziałku do piątku od 12:00 do ostatniej porcji",
@@ -34,7 +34,7 @@
   },
   {
     "index": 3,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PRZEKĄSKI",
     "dishName": "Kofty wegetariańskie (4 szt.)",
@@ -44,7 +44,7 @@
   },
   {
     "index": 4,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PRZEKĄSKI",
     "dishName": "Tarta lotaryńska",
@@ -54,7 +54,7 @@
   },
   {
     "index": 5,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PRZEKĄSKI",
     "dishName": "Indonezyjski satay",
@@ -64,7 +64,7 @@
   },
   {
     "index": 6,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PRZEKĄSKI",
     "dishName": "Szakszuka - potrawa rodem z Tunezji",
@@ -74,7 +74,7 @@
   },
   {
     "index": 7,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PRZEKĄSKI",
     "dishName": "Grzanki (3 szt.)",
@@ -84,7 +84,7 @@
   },
   {
     "index": 8,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "GORACE KANAPKI Z CHRUPIACEJ CIABATTY",
     "dishName": "Gorąca ciabatta",
@@ -93,7 +93,7 @@
   },
   {
     "index": 9,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "GORACE KANAPKI Z CHRUPIACEJ CIABATTY",
     "dishName": "Gorąca ciabatta",
@@ -102,7 +102,7 @@
   },
   {
     "index": 10,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "GORACE KANAPKI Z CHRUPIACEJ CIABATTY",
     "dishName": "Gorąca ciabatta",
@@ -111,7 +111,7 @@
   },
   {
     "index": 11,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "SAŁATKI",
     "dishName": "Sałatka",
@@ -120,7 +120,7 @@
   },
   {
     "index": 12,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "SAŁATKI",
     "dishName": "Sałatka",
@@ -129,7 +129,7 @@
   },
   {
     "index": 13,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "SAŁATKI",
     "dishName": "Sałatka",
@@ -138,7 +138,7 @@
   },
   {
     "index": 14,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "ZUPY",
     "dishName": "Tom Kha - tajska zupa kokosowa z kurczakiem i warzywami",
@@ -147,7 +147,7 @@
   },
   {
     "index": 15,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "ZUPY",
     "dishName": "Meksykańska zupa chili z mięsem i czerwoną fasolą z dodatkiem sera i kwaśnej śmietany",
@@ -156,7 +156,7 @@
   },
   {
     "index": 16,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "ZUPY",
     "dishName": "Krem dyniowy z rozmarynem i nutką pomarańczy podawany z maślaną grzanką",
@@ -165,7 +165,7 @@
   },
   {
     "index": 17,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "ZUPY",
     "dishName": "Krem z pomidorów podawany z bagietką oraz bazyliowo-orzechowym pesto",
@@ -174,7 +174,7 @@
   },
   {
     "index": 18,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "ZUPY",
     "dishName": "Zupa dnia - od poniedziałku do piątku",
@@ -183,7 +183,7 @@
   },
   {
     "index": 19,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "DANIA GŁÓWNE",
     "dishName": "Kokosowe tajskie curry z",
@@ -193,7 +193,7 @@
   },
   {
     "index": 20,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "DANIA GŁÓWNE",
     "dishName": "Kokosowe tajskie curry z",
@@ -203,7 +203,7 @@
   },
   {
     "index": 21,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "DANIA GŁÓWNE",
     "dishName": "Kokosowe tajskie curry z",
@@ -213,7 +213,7 @@
   },
   {
     "index": 22,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "DANIA GŁÓWNE",
     "dishName": "Musaka",
@@ -223,7 +223,7 @@
   },
   {
     "index": 23,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "DANIA GŁÓWNE",
     "dishName": "Peposo",
@@ -233,7 +233,7 @@
   },
   {
     "index": 24,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "DANIA GŁÓWNE",
     "dishName": "Mesir Wat",
@@ -243,7 +243,7 @@
   },
   {
     "index": 25,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "DANIA GŁÓWNE",
     "dishName": "Murgh Makhani",
@@ -253,7 +253,7 @@
   },
   {
     "index": 26,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "DANIA GŁÓWNE",
     "dishName": "Żeberka wieprzowe",
@@ -263,7 +263,7 @@
   },
   {
     "index": 27,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NALEŚNIKI WYTRAWNE",
     "sectionDescription": "Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem",
@@ -274,7 +274,7 @@
   },
   {
     "index": 28,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NALEŚNIKI WYTRAWNE",
     "sectionDescription": "Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem",
@@ -285,7 +285,7 @@
   },
   {
     "index": 29,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NALEŚNIKI WYTRAWNE",
     "sectionDescription": "Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem",
@@ -296,7 +296,7 @@
   },
   {
     "index": 30,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NALEŚNIKI WYTRAWNE",
     "sectionDescription": "Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem",
@@ -307,7 +307,7 @@
   },
   {
     "index": 31,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NALEŚNIKI WYTRAWNE",
     "sectionDescription": "Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem",
@@ -318,7 +318,7 @@
   },
   {
     "index": 32,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NALEŚNIKI WYTRAWNE",
     "sectionDescription": "Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem",
@@ -329,7 +329,7 @@
   },
   {
     "index": 33,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NALEŚNIKI WYTRAWNE",
     "sectionDescription": "Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem",
@@ -340,7 +340,7 @@
   },
   {
     "index": 34,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NALEŚNIKI WYTRAWNE",
     "sectionDescription": "Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem",
@@ -351,7 +351,7 @@
   },
   {
     "index": 35,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NALEŚNIKI WYTRAWNE",
     "sectionDescription": "Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem",
@@ -362,7 +362,7 @@
   },
   {
     "index": 36,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NALEŚNIKI WYTRAWNE",
     "sectionDescription": "Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem",
@@ -372,7 +372,7 @@
   },
   {
     "index": 37,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NALEŚNIKI WYTRAWNE",
     "sectionDescription": "Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem",
@@ -382,7 +382,7 @@
   },
   {
     "index": 38,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NALEŚNIKI WYTRAWNE",
     "sectionDescription": "Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem",
@@ -392,7 +392,7 @@
   },
   {
     "index": 39,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NALEŚNIKI SŁODKIE",
     "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
@@ -402,7 +402,7 @@
   },
   {
     "index": 40,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NALEŚNIKI SŁODKIE",
     "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
@@ -412,7 +412,7 @@
   },
   {
     "index": 41,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NALEŚNIKI SŁODKIE",
     "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
@@ -422,7 +422,7 @@
   },
   {
     "index": 42,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NALEŚNIKI SŁODKIE",
     "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
@@ -432,7 +432,7 @@
   },
   {
     "index": 43,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NALEŚNIKI SŁODKIE",
     "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
@@ -442,7 +442,7 @@
   },
   {
     "index": 44,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NALEŚNIKI SŁODKIE",
     "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
@@ -452,7 +452,7 @@
   },
   {
     "index": 45,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NALEŚNIKI SŁODKIE",
     "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
@@ -462,7 +462,7 @@
   },
   {
     "index": 46,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NALEŚNIKI SŁODKIE",
     "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
@@ -472,7 +472,7 @@
   },
   {
     "index": 47,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NALEŚNIKI SŁODKIE",
     "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
@@ -482,7 +482,7 @@
   },
   {
     "index": 48,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NALEŚNIKI SŁODKIE",
     "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
@@ -492,7 +492,7 @@
   },
   {
     "index": 49,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NALEŚNIKI SŁODKIE",
     "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
@@ -502,7 +502,7 @@
   },
   {
     "index": 50,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NALEŚNIKI SŁODKIE",
     "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
@@ -512,7 +512,7 @@
   },
   {
     "index": 51,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NALEŚNIKI SŁODKIE",
     "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
@@ -522,7 +522,7 @@
   },
   {
     "index": 52,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "CIASTA",
     "dishName": "Sernik",
@@ -532,7 +532,7 @@
   },
   {
     "index": 53,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "CIASTA",
     "dishName": "Ciasto czekoladowe",
@@ -542,7 +542,7 @@
   },
   {
     "index": 54,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "CIASTA",
     "dishName": "Francuska tarta Tatin",
@@ -552,7 +552,7 @@
   },
   {
     "index": 55,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "CIASTA",
     "dishName": "Szarlotka",
@@ -562,7 +562,7 @@
   },
   {
     "index": 56,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "GORĄCE CZEKOLADY",
     "dishName": "Gorąca czekolada z bitą śmietaną",
@@ -571,7 +571,7 @@
   },
   {
     "index": 57,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "GORĄCE CZEKOLADY",
     "dishName": "Gorąca czekolada z bitą śmietaną",
@@ -580,7 +580,7 @@
   },
   {
     "index": 58,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "GORĄCE CZEKOLADY",
     "dishName": "Gorąca czekolada z bitą śmietaną",
@@ -589,7 +589,7 @@
   },
   {
     "index": 59,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "GORĄCE CZEKOLADY",
     "dishName": "Gorąca czekolada z bitą śmietaną",
@@ -598,7 +598,7 @@
   },
   {
     "index": 60,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "GORĄCE CZEKOLADY",
     "dishName": "Gorąca czekolada z bitą śmietaną",
@@ -607,7 +607,7 @@
   },
   {
     "index": 61,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "GORĄCE CZEKOLADY",
     "dishName": "Gorąca czekolada z bitą śmietaną",
@@ -616,7 +616,7 @@
   },
   {
     "index": 62,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "GORĄCE CZEKOLADY",
     "dishName": "Gorąca czekolada z bitą śmietaną",
@@ -625,7 +625,7 @@
   },
   {
     "index": 63,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "GORĄCE CZEKOLADY",
     "dishName": "Gorąca czekolada z bitą śmietaną",
@@ -634,7 +634,7 @@
   },
   {
     "index": 64,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "GORĄCE CZEKOLADY",
     "dishName": "Gorąca czekolada z bitą śmietaną",
@@ -643,7 +643,7 @@
   },
   {
     "index": 65,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "GORĄCE CZEKOLADY",
     "dishName": "Kakao z bitą śmietaną",
@@ -653,7 +653,7 @@
   },
   {
     "index": 66,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "SMOOTHIE",
     "sectionDescription": "Do niektórych smoothie dodajemy cukier",
@@ -663,7 +663,7 @@
   },
   {
     "index": 67,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "SMOOTHIE",
     "sectionDescription": "Do niektórych smoothie dodajemy cukier",
@@ -673,7 +673,7 @@
   },
   {
     "index": 68,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "SMOOTHIE",
     "sectionDescription": "Do niektórych smoothie dodajemy cukier",
@@ -683,7 +683,7 @@
   },
   {
     "index": 69,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "SMOOTHIE",
     "sectionDescription": "Do niektórych smoothie dodajemy cukier",
@@ -693,7 +693,7 @@
   },
   {
     "index": 70,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "SMOOTHIE",
     "sectionDescription": "Do niektórych smoothie dodajemy cukier",
@@ -703,7 +703,7 @@
   },
   {
     "index": 71,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "HERBATY",
     "dishName": "Czarna Lipton",
@@ -712,7 +712,7 @@
   },
   {
     "index": 72,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "HERBATY",
     "dishName": "Czarna Lipton",
@@ -721,7 +721,7 @@
   },
   {
     "index": 73,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "HERBATY",
     "dishName": "Czarna Lipton",
@@ -730,7 +730,7 @@
   },
   {
     "index": 74,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "HERBATY",
     "dishName": "Czarna Lipton",
@@ -739,7 +739,7 @@
   },
   {
     "index": 75,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "HERBATY",
     "dishName": "Czarna Lipton",
@@ -748,7 +748,7 @@
   },
   {
     "index": 76,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "HERBATY",
     "dishName": "Czarna Lipton",
@@ -757,7 +757,7 @@
   },
   {
     "index": 77,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "HERBATY",
     "dishName": "Czarna Lipton",
@@ -766,7 +766,7 @@
   },
   {
     "index": 78,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "HERBATY",
     "dishName": "Czarna Lipton",
@@ -775,7 +775,7 @@
   },
   {
     "index": 79,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "HERBATY",
     "dishName": "Zielona Lipton",
@@ -784,7 +784,7 @@
   },
   {
     "index": 80,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "HERBATY",
     "dishName": "Zielona Lipton",
@@ -793,7 +793,7 @@
   },
   {
     "index": 81,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "HERBATY",
     "dishName": "Zielona Lipton",
@@ -802,7 +802,7 @@
   },
   {
     "index": 82,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "HERBATY",
     "dishName": "Liściasta czarna",
@@ -811,7 +811,7 @@
   },
   {
     "index": 83,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "HERBATY",
     "dishName": "Liściasta czarna",
@@ -820,7 +820,7 @@
   },
   {
     "index": 84,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "HERBATY",
     "dishName": "Liściasta czarna",
@@ -829,7 +829,7 @@
   },
   {
     "index": 85,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "HERBATY",
     "dishName": "Liściasta czarna",
@@ -838,7 +838,7 @@
   },
   {
     "index": 86,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "HERBATY",
     "dishName": "Liściasta czarna",
@@ -847,7 +847,7 @@
   },
   {
     "index": 87,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "HERBATY",
     "dishName": "Liściasta czarna",
@@ -856,7 +856,7 @@
   },
   {
     "index": 88,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "HERBATY",
     "dishName": "Rooibos",
@@ -865,7 +865,7 @@
   },
   {
     "index": 89,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "HERBATY",
     "dishName": "Rooibos",
@@ -874,7 +874,7 @@
   },
   {
     "index": 90,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "HERBATY",
     "dishName": "Ziołowa",
@@ -883,7 +883,7 @@
   },
   {
     "index": 91,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "HERBATY",
     "dishName": "Ziołowa",
@@ -892,7 +892,7 @@
   },
   {
     "index": 92,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "HERBATY",
     "dishName": "Liściasta zielona",
@@ -901,7 +901,7 @@
   },
   {
     "index": 93,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "HERBATY",
     "dishName": "Liściasta zielona",
@@ -910,7 +910,7 @@
   },
   {
     "index": 94,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "HERBATY",
     "dishName": "Liściasta zielona",
@@ -919,7 +919,7 @@
   },
   {
     "index": 95,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "HERBATY",
     "dishName": "Liściasta zielona",
@@ -928,7 +928,7 @@
   },
   {
     "index": 96,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "HERBATY",
     "dishName": "Liściasta zielona",
@@ -937,7 +937,7 @@
   },
   {
     "index": 97,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "HERBATY",
     "dishName": "Mieszanka herbaty czarnej i zelonej",
@@ -947,7 +947,7 @@
   },
   {
     "index": 98,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "HERBATY",
     "dishName": "Herbaty owocowe",
@@ -956,7 +956,7 @@
   },
   {
     "index": 99,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "HERBATY",
     "dishName": "Herbaty owocowe",
@@ -965,7 +965,7 @@
   },
   {
     "index": 100,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "HERBATY",
     "dishName": "Herbaty owocowe",
@@ -974,7 +974,7 @@
   },
   {
     "index": 101,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "HERBATY",
     "dishName": "Herbaty PU-ERH",
@@ -983,7 +983,7 @@
   },
   {
     "index": 102,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "HERBATY",
     "dishName": "Herbaty PU-ERH",
@@ -992,7 +992,7 @@
   },
   {
     "index": 103,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "KAWY",
     "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
@@ -1002,7 +1002,7 @@
   },
   {
     "index": 104,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "KAWY",
     "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
@@ -1012,7 +1012,7 @@
   },
   {
     "index": 105,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "KAWY",
     "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
@@ -1022,7 +1022,7 @@
   },
   {
     "index": 106,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "KAWY",
     "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
@@ -1032,7 +1032,7 @@
   },
   {
     "index": 107,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "KAWY",
     "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
@@ -1042,7 +1042,7 @@
   },
   {
     "index": 108,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "KAWY",
     "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
@@ -1052,7 +1052,7 @@
   },
   {
     "index": 109,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "KAWY",
     "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
@@ -1062,7 +1062,7 @@
   },
   {
     "index": 110,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "KAWY",
     "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
@@ -1072,7 +1072,7 @@
   },
   {
     "index": 111,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "KAWY",
     "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
@@ -1082,7 +1082,7 @@
   },
   {
     "index": 112,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "KAWY",
     "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
@@ -1092,7 +1092,7 @@
   },
   {
     "index": 113,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "KAWY",
     "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
@@ -1102,7 +1102,7 @@
   },
   {
     "index": 114,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "KAWY",
     "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
@@ -1112,7 +1112,7 @@
   },
   {
     "index": 115,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "KAWY",
     "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
@@ -1122,7 +1122,7 @@
   },
   {
     "index": 116,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "KAWY",
     "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
@@ -1132,7 +1132,7 @@
   },
   {
     "index": 117,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "KAWY",
     "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
@@ -1142,7 +1142,7 @@
   },
   {
     "index": 118,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "KAWY",
     "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
@@ -1152,7 +1152,7 @@
   },
   {
     "index": 119,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "KAWY",
     "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
@@ -1162,7 +1162,7 @@
   },
   {
     "index": 120,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "KAWY",
     "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
@@ -1172,7 +1172,7 @@
   },
   {
     "index": 121,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "KAWY",
     "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
@@ -1182,7 +1182,7 @@
   },
   {
     "index": 122,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "KAWY",
     "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
@@ -1192,7 +1192,7 @@
   },
   {
     "index": 123,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "KAWY",
     "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
@@ -1202,7 +1202,7 @@
   },
   {
     "index": 124,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "KAWY",
     "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
@@ -1212,7 +1212,7 @@
   },
   {
     "index": 125,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "KAWY",
     "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
@@ -1222,7 +1222,7 @@
   },
   {
     "index": 126,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "KAWY",
     "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
@@ -1232,7 +1232,7 @@
   },
   {
     "index": 127,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "KAWA Z ALKOHOLEM",
     "dishName": "Irish Coffee",
@@ -1242,7 +1242,7 @@
   },
   {
     "index": 128,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "KAWA Z ALKOHOLEM",
     "dishName": "Kawa Cointreau",
@@ -1252,7 +1252,7 @@
   },
   {
     "index": 129,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "KAWA Z ALKOHOLEM",
     "dishName": "Malibu latte",
@@ -1261,7 +1261,7 @@
   },
   {
     "index": 130,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "KAWA Z ALKOHOLEM",
     "dishName": "Bailey's latte",
@@ -1270,7 +1270,7 @@
   },
   {
     "index": 131,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Świeżo wyciskany sok pomarańczowy",
@@ -1279,7 +1279,7 @@
   },
   {
     "index": 132,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Świeżo wyciskany sok pomarańczowy",
@@ -1288,7 +1288,7 @@
   },
   {
     "index": 133,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Domowa lemoniada ze świeżych cytryn",
@@ -1297,7 +1297,7 @@
   },
   {
     "index": 134,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Domowa lemoniada ze świeżych cytryn",
@@ -1306,7 +1306,7 @@
   },
   {
     "index": 135,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Domowa lemoniada ze świeżych pomarańczy",
@@ -1315,7 +1315,7 @@
   },
   {
     "index": 136,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Domowa lemoniada ze świeżych pomarańczy",
@@ -1324,7 +1324,7 @@
   },
   {
     "index": 137,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Domowa mrożona herbata z cytryną i miętą 300ml",
@@ -1333,7 +1333,7 @@
   },
   {
     "index": 138,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Woda mineralna podawana z cytryną lub miętą",
@@ -1342,7 +1342,7 @@
   },
   {
     "index": 139,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Woda mineralna podawana z cytryną lub miętą",
@@ -1351,7 +1351,7 @@
   },
   {
     "index": 140,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Sok",
@@ -1360,7 +1360,7 @@
   },
   {
     "index": 141,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Sok",
@@ -1369,7 +1369,7 @@
   },
   {
     "index": 142,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Sok",
@@ -1378,7 +1378,7 @@
   },
   {
     "index": 143,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Sok",
@@ -1387,7 +1387,7 @@
   },
   {
     "index": 144,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Sok",
@@ -1396,7 +1396,7 @@
   },
   {
     "index": 145,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Sok",
@@ -1405,7 +1405,7 @@
   },
   {
     "index": 146,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Sok",
@@ -1414,7 +1414,7 @@
   },
   {
     "index": 147,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Sok",
@@ -1423,7 +1423,7 @@
   },
   {
     "index": 148,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Sok",
@@ -1432,7 +1432,7 @@
   },
   {
     "index": 149,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Sok",
@@ -1441,7 +1441,7 @@
   },
   {
     "index": 150,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Naturalny kwas chlebowy 330ml",
@@ -1450,7 +1450,7 @@
   },
   {
     "index": 151,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Coca Cola 250ml",
@@ -1459,7 +1459,7 @@
   },
   {
     "index": 152,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Sprite 250ml",
@@ -1468,7 +1468,7 @@
   },
   {
     "index": 153,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "NAPOJE ZIMNE",
     "dishName": "Tonik Kinley 250ml",
@@ -1477,7 +1477,7 @@
   },
   {
     "index": 154,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwa z polskich browarów rzemieślniczych",
@@ -1486,7 +1486,7 @@
   },
   {
     "index": 155,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwa z polskich browarów rzemieślniczych",
@@ -1495,7 +1495,7 @@
   },
   {
     "index": 156,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwa z polskich browarów rzemieślniczych",
@@ -1504,7 +1504,7 @@
   },
   {
     "index": 157,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwa z polskich browarów rzemieślniczych",
@@ -1513,7 +1513,7 @@
   },
   {
     "index": 158,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwa z polskich browarów rzemieślniczych",
@@ -1522,7 +1522,7 @@
   },
   {
     "index": 159,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwa z polskich browarów rzemieślniczych",
@@ -1531,7 +1531,7 @@
   },
   {
     "index": 160,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Inne piwa butelkowe",
@@ -1540,7 +1540,7 @@
   },
   {
     "index": 161,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Inne piwa butelkowe",
@@ -1549,7 +1549,7 @@
   },
   {
     "index": 162,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Inne piwa butelkowe",
@@ -1558,7 +1558,7 @@
   },
   {
     "index": 163,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Inne piwa butelkowe",
@@ -1567,7 +1567,7 @@
   },
   {
     "index": 164,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Inne piwa butelkowe",
@@ -1576,7 +1576,7 @@
   },
   {
     "index": 165,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Inne piwa butelkowe",
@@ -1585,7 +1585,7 @@
   },
   {
     "index": 166,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Inne piwa butelkowe",
@@ -1594,7 +1594,7 @@
   },
   {
     "index": 167,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Inne piwa butelkowe",
@@ -1603,7 +1603,7 @@
   },
   {
     "index": 168,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Inne piwa butelkowe",
@@ -1612,7 +1612,7 @@
   },
   {
     "index": 169,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Inne piwa butelkowe",
@@ -1621,7 +1621,7 @@
   },
   {
     "index": 170,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Inne piwa butelkowe",
@@ -1630,7 +1630,7 @@
   },
   {
     "index": 171,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Inne piwa butelkowe",
@@ -1639,7 +1639,7 @@
   },
   {
     "index": 172,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Inne piwa butelkowe",
@@ -1648,7 +1648,7 @@
   },
   {
     "index": 173,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Inne piwa butelkowe",
@@ -1657,7 +1657,7 @@
   },
   {
     "index": 174,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Inne piwa butelkowe",
@@ -1666,7 +1666,7 @@
   },
   {
     "index": 175,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwo lane",
@@ -1675,7 +1675,7 @@
   },
   {
     "index": 176,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwo lane",
@@ -1684,7 +1684,7 @@
   },
   {
     "index": 177,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwo lane",
@@ -1693,7 +1693,7 @@
   },
   {
     "index": 178,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwo lane",
@@ -1702,7 +1702,7 @@
   },
   {
     "index": 179,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwo lane",
@@ -1711,7 +1711,7 @@
   },
   {
     "index": 180,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwo lane",
@@ -1720,7 +1720,7 @@
   },
   {
     "index": 181,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwo lane",
@@ -1729,7 +1729,7 @@
   },
   {
     "index": 182,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwo lane",
@@ -1738,7 +1738,7 @@
   },
   {
     "index": 183,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwo lane",
@@ -1747,7 +1747,7 @@
   },
   {
     "index": 184,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwa bezalkoholowe",
@@ -1756,7 +1756,7 @@
   },
   {
     "index": 185,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwa bezalkoholowe",
@@ -1765,7 +1765,7 @@
   },
   {
     "index": 186,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwa bezalkoholowe",
@@ -1774,7 +1774,7 @@
   },
   {
     "index": 187,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Piwa bezalkoholowe",
@@ -1783,7 +1783,7 @@
   },
   {
     "index": 188,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Cydr",
@@ -1792,7 +1792,7 @@
   },
   {
     "index": 189,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Cydr",
@@ -1801,7 +1801,7 @@
   },
   {
     "index": 190,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Cydr",
@@ -1810,7 +1810,7 @@
   },
   {
     "index": 191,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Drinki na bazie cydru",
@@ -1819,7 +1819,7 @@
   },
   {
     "index": 192,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Drinki na bazie cydru",
@@ -1828,7 +1828,7 @@
   },
   {
     "index": 193,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Drinki na bazie cydru",
@@ -1837,7 +1837,7 @@
   },
   {
     "index": 194,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "PIWA",
     "dishName": "Drinki na bazie cydru",
@@ -1846,7 +1846,7 @@
   },
   {
     "index": 195,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "WINA BIAŁE",
     "dishName": "Cantina Castelnuovo Del Garda Chardonnay IGT Veneto",
@@ -1856,7 +1856,7 @@
   },
   {
     "index": 196,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "WINA BIAŁE",
     "dishName": "Cantina Castelnuovo Del Garda Chardonnay IGT Veneto",
@@ -1866,7 +1866,7 @@
   },
   {
     "index": 197,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "WINA BIAŁE",
     "dishName": "Cantina Castelnuovo Del Garda Chardonnay IGT Veneto",
@@ -1876,7 +1876,7 @@
   },
   {
     "index": 198,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "WINA BIAŁE",
     "dishName": "Cantina Castelnuovo Del Garda Chardonnay IGT Veneto",
@@ -1886,7 +1886,7 @@
   },
   {
     "index": 199,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "WINA BIAŁE",
     "dishName": "Pinot Grigio Marchese della Torre IGT 750ml",
@@ -1896,7 +1896,7 @@
   },
   {
     "index": 200,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "WINA BIAŁE",
     "dishName": "Abadim Vinho Verde DOC 750ml",
@@ -1906,7 +1906,7 @@
   },
   {
     "index": 201,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "WINA BIAŁE",
     "dishName": "Sauvignon Blanc Vina Falernia 750ml",
@@ -1916,7 +1916,7 @@
   },
   {
     "index": 202,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "WINA BIAŁE",
     "dishName": "Sutter Home Moscato",
@@ -1926,7 +1926,7 @@
   },
   {
     "index": 203,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "WINA BIAŁE",
     "dishName": "Sutter Home Moscato",
@@ -1936,7 +1936,7 @@
   },
   {
     "index": 204,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "WINA BIAŁE",
     "dishName": "Cavas Hill-Cava 750ml",
@@ -1946,7 +1946,7 @@
   },
   {
     "index": 205,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "WINA BIAŁE",
     "dishName": "Gancia Prosecco D.O.C",
@@ -1956,7 +1956,7 @@
   },
   {
     "index": 206,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "WINA BIAŁE",
     "dishName": "Gancia Prosecco D.O.C",
@@ -1966,7 +1966,7 @@
   },
   {
     "index": 207,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "WINA CZERWONE",
     "dishName": "Cantina Castelnuovo Del Garda Merlot IGT Veneto",
@@ -1976,7 +1976,7 @@
   },
   {
     "index": 208,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "WINA CZERWONE",
     "dishName": "Cantina Castelnuovo Del Garda Merlot IGT Veneto",
@@ -1986,7 +1986,7 @@
   },
   {
     "index": 209,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "WINA CZERWONE",
     "dishName": "Cantina Castelnuovo Del Garda Merlot IGT Veneto",
@@ -1996,7 +1996,7 @@
   },
   {
     "index": 210,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "WINA CZERWONE",
     "dishName": "Cantina Castelnuovo Del Garda Merlot IGT Veneto",
@@ -2006,7 +2006,7 @@
   },
   {
     "index": 211,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "WINA CZERWONE",
     "dishName": "Syrah Vina Falernia 750ml",
@@ -2016,7 +2016,7 @@
   },
   {
     "index": 212,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "WINA CZERWONE",
     "dishName": "Riparosso Montepulciano D'Abruzzo DOC 750ml",
@@ -2026,7 +2026,7 @@
   },
   {
     "index": 213,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "WINA CZERWONE",
     "dishName": "Ser Dante Chianti 750ml",
@@ -2036,7 +2036,7 @@
   },
   {
     "index": 214,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "INNE",
     "dishName": "Rose Genuss Auer 750ml",
@@ -2046,7 +2046,7 @@
   },
   {
     "index": 215,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "INNE",
     "dishName": "Martini 100ml",
@@ -2055,7 +2055,7 @@
   },
   {
     "index": 216,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "INNE",
     "dishName": "Martini 100ml",
@@ -2064,7 +2064,7 @@
   },
   {
     "index": 217,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "INNE",
     "dishName": "Martini 100ml",
@@ -2073,7 +2073,7 @@
   },
   {
     "index": 218,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "INNE",
     "dishName": "Martini 100ml",
@@ -2082,7 +2082,7 @@
   },
   {
     "index": 219,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "GRZAŃCE",
     "dishName": "Piwo grzane z sokiem (malinowym lub imbirowym), pomarańczą i przyprawami korzennymi",
@@ -2091,7 +2091,7 @@
   },
   {
     "index": 220,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "GRZAŃCE",
     "dishName": "Piwo grzane z sokiem (malinowym lub imbirowym), pomarańczą i przyprawami korzennymi",
@@ -2100,7 +2100,7 @@
   },
   {
     "index": 221,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "GRZAŃCE",
     "dishName": "Grzaniec Galicyjski z pomarańczą, rodzynkami i korzeniami 150ml",
@@ -2109,7 +2109,7 @@
   },
   {
     "index": 222,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "GRZAŃCE",
     "dishName": "Biały Miś (Advocat, cynamon, mleko) 160ml",
@@ -2118,7 +2118,7 @@
   },
   {
     "index": 223,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "GRZAŃCE",
     "dishName": "Bury Miś (Advocat, czekolada, mleko) 160ml",
@@ -2127,7 +2127,7 @@
   },
   {
     "index": 224,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "GRZAŃCE",
     "dishName": "Bombardino (Advocat, likier kawowy Kahlua, bita śmietana) 100ml",
@@ -2136,7 +2136,7 @@
   },
   {
     "index": 225,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "GRZAŃCE",
     "dishName": "Grog na rumie (rum Havana, cytryna, miód, korzenie, woda) 200ml",
@@ -2145,7 +2145,7 @@
   },
   {
     "index": 226,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "GRZAŃCE",
     "dishName": "Grog na Krupniku (Krupnik, cytryna, miód, korzenie, woda) 200ml",
@@ -2154,7 +2154,7 @@
   },
   {
     "index": 227,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "GRZAŃCE",
     "dishName": "Grzany Cydr z naturalnym syropem korzennym 330ml",
@@ -2163,7 +2163,7 @@
   },
   {
     "index": 228,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "GRZAŃCE",
     "dishName": "Grzany kwas chlebowy z naturalnym syropem korzennym, pomarańczą i cytryną 330ml",
@@ -2172,7 +2172,7 @@
   },
   {
     "index": 229,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "DRINKI BEZALKOHOLOWE",
     "dishName": "Mojito Virgin z wodą gazowaną 300ml",
@@ -2181,7 +2181,7 @@
   },
   {
     "index": 230,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "DRINKI BEZALKOHOLOWE",
     "dishName": "Mojito Virgin z wodą gazowaną malinowe 300ml",
@@ -2190,7 +2190,7 @@
   },
   {
     "index": 231,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "DRINKI BEZALKOHOLOWE",
     "dishName": "Mojito Virgin ze Spritem 300ml",
@@ -2199,7 +2199,7 @@
   },
   {
     "index": 232,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "DRINKI BEZALKOHOLOWE",
     "dishName": "Mojito Virgin ze Spritem malinowe 300ml",
@@ -2208,7 +2208,7 @@
   },
   {
     "index": 233,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "DRINKI BEZALKOHOLOWE",
     "dishName": "Cabriolet 300ml",
@@ -2218,7 +2218,7 @@
   },
   {
     "index": 234,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "DRINKI BEZALKOHOLOWE",
     "dishName": "Piña Kolanko 250ml",
@@ -2228,7 +2228,7 @@
   },
   {
     "index": 235,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "DRINKI BEZALKOHOLOWE",
     "dishName": "Pomarańczowa Alternatywa 300ml",
@@ -2238,7 +2238,7 @@
   },
   {
     "index": 236,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "DRINKI BEZALKOHOLOWE",
     "dishName": "Rozważna i Romantyczna 250ml",
@@ -2248,7 +2248,7 @@
   },
   {
     "index": 237,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "DRINKI BEZALKOHOLOWE",
     "dishName": "Over The Rainbow 250ml",
@@ -2258,7 +2258,7 @@
   },
   {
     "index": 238,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "SHORT DRINKI",
     "dishName": "Black Russian 60ml",
@@ -2268,7 +2268,7 @@
   },
   {
     "index": 239,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "SHORT DRINKI",
     "dishName": "Blue Hawaiian 100ml",
@@ -2278,7 +2278,7 @@
   },
   {
     "index": 240,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "SHORT DRINKI",
     "dishName": "Blue Lagoon 120ml",
@@ -2288,7 +2288,7 @@
   },
   {
     "index": 241,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "SHORT DRINKI",
     "dishName": "Cosmopolitan 120ml",
@@ -2298,7 +2298,7 @@
   },
   {
     "index": 242,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "SHORT DRINKI",
     "dishName": "Kamikaze 6 x 25 ml (shot)",
@@ -2308,7 +2308,7 @@
   },
   {
     "index": 243,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "SHORT DRINKI",
     "dishName": "Margarita 80ml",
@@ -2318,7 +2318,7 @@
   },
   {
     "index": 244,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "SHORT DRINKI",
     "dishName": "Negroni 60ml",
@@ -2328,7 +2328,7 @@
   },
   {
     "index": 245,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "SHORT DRINKI",
     "dishName": "Orgazm 80ml",
@@ -2338,7 +2338,7 @@
   },
   {
     "index": 246,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "SHORT DRINKI",
     "dishName": "Piña Colada 120ml",
@@ -2348,7 +2348,7 @@
   },
   {
     "index": 247,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "SHORT DRINKI",
     "dishName": "White Russian 80ml",
@@ -2358,7 +2358,7 @@
   },
   {
     "index": 248,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "SHORT DRINKI",
     "dishName": "Wściekły Pies 50ml (shot)",
@@ -2368,7 +2368,7 @@
   },
   {
     "index": 249,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "008 250ml",
@@ -2378,7 +2378,7 @@
   },
   {
     "index": 250,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Aperol Spritz 200ml",
@@ -2388,7 +2388,7 @@
   },
   {
     "index": 251,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Campari Orange 250ml",
@@ -2398,7 +2398,7 @@
   },
   {
     "index": 252,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Campari Spritz 200ml",
@@ -2408,7 +2408,7 @@
   },
   {
     "index": 253,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Cuba Libra 250ml",
@@ -2418,7 +2418,7 @@
   },
   {
     "index": 254,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Cztery Róże dla Lucienne 300ml",
@@ -2428,7 +2428,7 @@
   },
   {
     "index": 255,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Exotic Russian 300ml",
@@ -2438,7 +2438,7 @@
   },
   {
     "index": 256,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Golden Eye 250ml",
@@ -2448,7 +2448,7 @@
   },
   {
     "index": 257,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Gorączka Sobotniej Nocy 300ml",
@@ -2458,7 +2458,7 @@
   },
   {
     "index": 258,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "John Lemon 250ml",
@@ -2468,7 +2468,7 @@
   },
   {
     "index": 259,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Long Island Ice Tea 300ml",
@@ -2478,7 +2478,7 @@
   },
   {
     "index": 260,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Long Island Ice Tea",
@@ -2488,7 +2488,7 @@
   },
   {
     "index": 261,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Malibu z mlekiem 200ml",
@@ -2498,7 +2498,7 @@
   },
   {
     "index": 262,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Mechaniczna Pomarańcza 300ml",
@@ -2508,7 +2508,7 @@
   },
   {
     "index": 263,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Mojito 300ml",
@@ -2518,7 +2518,7 @@
   },
   {
     "index": 264,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Mojito malinowe 300ml",
@@ -2528,7 +2528,7 @@
   },
   {
     "index": 265,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Mojito Passoa 300ml",
@@ -2538,7 +2538,7 @@
   },
   {
     "index": 266,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Monkey Business 270ml",
@@ -2548,7 +2548,7 @@
   },
   {
     "index": 267,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Orzechówka z mlekiem 200ml",
@@ -2558,7 +2558,7 @@
   },
   {
     "index": 268,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Pod Osłoną Nieba 150ml",
@@ -2568,7 +2568,7 @@
   },
   {
     "index": 269,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Po Drugiej Stronie Lustra 300ml",
@@ -2578,7 +2578,7 @@
   },
   {
     "index": 270,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Szprycer 250ml",
@@ -2588,7 +2588,7 @@
   },
   {
     "index": 271,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Tatanka 200ml",
@@ -2598,7 +2598,7 @@
   },
   {
     "index": 272,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Tatanka miętowa 200ml",
@@ -2608,7 +2608,7 @@
   },
   {
     "index": 273,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "LONG DRINKI",
     "dishName": "Tequila Sunrise 250ml",
@@ -2618,7 +2618,7 @@
   },
   {
     "index": 274,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "WÓDKI",
     "dishName": "Finlandia",
@@ -2627,7 +2627,7 @@
   },
   {
     "index": 275,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "WÓDKI",
     "dishName": "Finlandia",
@@ -2636,7 +2636,7 @@
   },
   {
     "index": 276,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "WÓDKI",
     "dishName": "Wyborowa",
@@ -2645,7 +2645,7 @@
   },
   {
     "index": 277,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "WÓDKI",
     "dishName": "Wyborowa",
@@ -2654,7 +2654,7 @@
   },
   {
     "index": 278,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "WÓDKI",
     "dishName": "Żołądkowa Gorzka",
@@ -2663,7 +2663,7 @@
   },
   {
     "index": 279,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "WÓDKI",
     "dishName": "Żołądkowa Gorzka",
@@ -2672,7 +2672,7 @@
   },
   {
     "index": 280,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "WÓDKI",
     "dishName": "Żołądkowa Gorzka 40ml",
@@ -2681,7 +2681,7 @@
   },
   {
     "index": 281,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "WÓDKI",
     "dishName": "Lubelska Cytrynowa 40ml",
@@ -2690,7 +2690,7 @@
   },
   {
     "index": 282,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "WÓDKI",
     "dishName": "Soplica Malinowa 40ml",
@@ -2699,7 +2699,7 @@
   },
   {
     "index": 283,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "WÓDKI",
     "dishName": "Soplica Orzechowa 40ml",
@@ -2708,7 +2708,7 @@
   },
   {
     "index": 284,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "WÓDKI",
     "dishName": "Soplica Pigwowa 40ml",
@@ -2717,7 +2717,7 @@
   },
   {
     "index": 285,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "WÓDKI",
     "dishName": "Soplica Śliwkowa 40ml",
@@ -2726,7 +2726,7 @@
   },
   {
     "index": 286,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "WÓDKI",
     "dishName": "Soplica Wiśniowa 40ml",
@@ -2735,7 +2735,7 @@
   },
   {
     "index": 287,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "LIKIERY",
     "dishName": "Advocat 40ml",
@@ -2744,7 +2744,7 @@
   },
   {
     "index": 288,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "LIKIERY",
     "dishName": "Amaretto 20ml",
@@ -2753,7 +2753,7 @@
   },
   {
     "index": 289,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "LIKIERY",
     "dishName": "Blue Curacao 20ml",
@@ -2762,7 +2762,7 @@
   },
   {
     "index": 290,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "LIKIERY",
     "dishName": "Baileys 40ml",
@@ -2771,7 +2771,7 @@
   },
   {
     "index": 291,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "LIKIERY",
     "dishName": "Cointreau 20ml",
@@ -2780,7 +2780,7 @@
   },
   {
     "index": 292,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "LIKIERY",
     "dishName": "Kahlua Coffee Liquer 20ml",
@@ -2789,7 +2789,7 @@
   },
   {
     "index": 293,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "INNE ALKOHOLE",
     "dishName": "Aperol 40ml",
@@ -2798,7 +2798,7 @@
   },
   {
     "index": 294,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "INNE ALKOHOLE",
     "dishName": "Campari 40ml",
@@ -2807,7 +2807,7 @@
   },
   {
     "index": 295,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "INNE ALKOHOLE",
     "dishName": "Gin Seagram's 40ml",
@@ -2816,7 +2816,7 @@
   },
   {
     "index": 296,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "INNE ALKOHOLE",
     "dishName": "Jagermeister 40ml",
@@ -2825,7 +2825,7 @@
   },
   {
     "index": 297,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "INNE ALKOHOLE",
     "dishName": "Krupnik 40ml",
@@ -2834,7 +2834,7 @@
   },
   {
     "index": 298,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "INNE ALKOHOLE",
     "dishName": "Passoa 40ml",
@@ -2843,7 +2843,7 @@
   },
   {
     "index": 299,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "INNE ALKOHOLE",
     "dishName": "Rum Havana Club 40ml",
@@ -2852,7 +2852,7 @@
   },
   {
     "index": 300,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "INNE ALKOHOLE",
     "dishName": "Rum Malibu 40ml",
@@ -2861,7 +2861,7 @@
   },
   {
     "index": 301,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "INNE ALKOHOLE",
     "dishName": "Stock Brandy 40ml",
@@ -2870,7 +2870,7 @@
   },
   {
     "index": 302,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "INNE ALKOHOLE",
     "dishName": "Tequila Olmeca Gold 40ml",
@@ -2879,7 +2879,7 @@
   },
   {
     "index": 303,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "INNE ALKOHOLE",
     "dishName": "Tequila Olmeca Silver 40ml",
@@ -2888,7 +2888,7 @@
   },
   {
     "index": 304,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "INNE ALKOHOLE",
     "dishName": "Whisky Ballantines 40ml",
@@ -2897,7 +2897,7 @@
   },
   {
     "index": 305,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "INNE ALKOHOLE",
     "dishName": "Whisky Jack Daniels 40ml",
@@ -2906,7 +2906,7 @@
   },
   {
     "index": 306,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "INNE ALKOHOLE",
     "dishName": "Whisky Jameson 40ml",
@@ -2915,7 +2915,7 @@
   },
   {
     "index": 307,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "INNE ALKOHOLE",
     "dishName": "Whisky Johnnie Walker 40ml",
@@ -2924,7 +2924,7 @@
   },
   {
     "index": 308,
-    "language": "pl",
+    "language": "en",
     "restaurant": "kolanko",
     "section": "INNE ALKOHOLE",
     "dishName": "Whisky Jim Beam 40ml",
