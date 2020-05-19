@@ -106,17 +106,17 @@
 - name: SAVOURY CREPES
   description: Each portion - 2 pieces You can choose two different fillings All crepes go with mini salad and chives
   dishes:
-    - name: "Chinese" crepes
+    - name: 'Chinese crepes'
       variants:
         - name: ''
           price: 22
       description: Crepes with Chinese style chicken, fried vegetables, oriental spices, sesame and pumpkin seeds
-    - name: "Mexican" crepes
+    - name: 'Mexican crepes'
       variants:
         - name: ''
           price: 22
       description: Mexican style crepes with minced meat, tomato sauce, sweetcorn, red beans and cheese
-    - name: "Indian crepes" with chicken and curry sauce
+    - name: 'Indian crepes with chicken and curry sauce'
       variants:
         - name: ''
           price: 22
