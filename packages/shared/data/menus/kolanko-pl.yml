@@ -150,7 +150,7 @@
         - name: Śmietana
           price: 2
 - name: NALEŚNIKI SŁODKIE
-  description: Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam
+  description: Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam
   dishes:
     - name: Nasze propozycje
       variants:
@@ -277,7 +277,7 @@
           price: 10
     - name: Rooibos
       variants:
-        - name: Letnie orzeźwienie- rooibos pomarańczowo - pigwowa z płatkami słonecznika, skórką pomarańczową i pigwą
+        - name: Letnie orzeźwienie - rooibos pomarańczowo - pigwowa z płatkami słonecznika, skórką pomarańczową i pigwą
           price: 10
         - name: Rooibos pomarańczowo-pistacjowa - ze skórką pomarańczy, pistacjami, płatkami migdałowymi i czerwonym pieprzem
           price: 10
@@ -299,7 +299,7 @@
           price: 10
         - name: Zielona jaśminowa
           price: 10
-    - name: Mieszanka herbaty czarnej i zelonej
+    - name: Mieszanka herbaty czarnej i zielonej
       variants:
         - name: ''
           price: 10
@@ -954,7 +954,11 @@
           price: 8
         - name: 700ml
           price: 95
-    - name: Żołądkowa Gorzka 40ml
+    - name: Żołądkowa Gorzka z miętą 40ml
+      variants:
+        - name: ''
+          price: 8
+    - name: Żubrówka 40ml
       variants:
         - name: ''
           price: 8

@@ -7,397 +7,397 @@
           price: 25
       description: 'In a  buffet - salads, meats, pate, cheese, eggs, bacon, vegetables, tarts. Home made muesli, milk, honey, jam, cakes and biscuits. Buffet goes with water, coffee and tea'
 - name: LUNCH
-  description: 'od poniedziałku do piątku od 12:00 do ostatniej porcji'
+  description: 'mon - fri from 12:00 noon'
   dishes:
-    - name: Obiad dnia
+    - name: Lunch of the day
       variants:
-        - name: Wersja mięsna
+        - name: Meat option
           price: 21
-        - name: Wersja bezmięsna
+        - name: Vege option
           price: 19
-      description: Informacje na temat aktualnej oferty można znaleźć w naszym menu lanczowym, na tablicy, na facebooku i u kelnera
+      description: 'For the lunch menu details ask the waiter or find us on facebook'
 - name: APETIZERS
   dishes:
     - name: Indonezyjski satay
       variants:
         - name: ''
           price: 16
-      description: Szaszłyki z kurczaka marynowanego z trawą cytrynową i tamaryndem podawane z sosem orzechowo - kokosowym i sałatką z ogórka
+      description: Chicken satay with oriental peanut & coconut milk sauce and cucumber salad
     - name: Szakszuka - potrawa rodem z Tunezji
       variants:
         - name: ''
           price: 13
-      description: Kawałki papryki duszone z pomidorami, przyprawione ostro, słodko i korzennie, zapieczone z żółtkiem, podawane z bagietką i odrobiną kwaśnej śmietany
-    - name: Grzanki (3 szt.)
+      description: Chakchouka - Tunisian dish made of red pepper, tomato and spices. Served with an egg yolk, bread and soured cream
+    - name: Grzanki (3 pcs.)
       variants:
         - name: ''
           price: 14
-      description: Grzanki z kozim serem, suszonymi pomidorami i rukolą
+      description: Chakchouka - Tunisian dish made of red pepper, tomato and spices. Served with an egg yolk, bread and soured cream
 - name: HOT CIABATTA SANDWICHES
   dishes:
-    - name: Gorąca ciabatta
+    - name: Hot ciabatta
       variants:
-        - name: Z grillowanym bekonem, pieczoną papryką, serem Grana Padano, czerwoną cebulą i francuską musztardą, podawana z sosem czosnkowym i sałatą
+        - name: With grilled bacon, baked pepper, red onion, Grana Padano cheese, French mustard, garlic sauce and lettuce
           price: 17
-        - name: Z grillowanym kurczakiem serem Camembert, suszonymi pomidorami, czerwoną cebulą, podawana z paprykowym majonezem i sałatą
+        - name: With grilled chicken, Camembert cheese, dried tomatoes, red onion, mayonnaise with red pepper, lettuce
           price: 17
-        - name: Z pieczoną papryką i cukinią, kozim serem , paprykowo-bakłażanową pastą ajvar, podawana z sosem ziołowym i sałatą
+        - name: With baked pepper and courgette, goat cheese, ajvar (pepper and eggplant paste), herb sauce, lettuce
           price: 17
 - name: SALADS
   dishes:
-    - name: Sałatka
+    - name: Salad
       variants:
-        - name: Z pieczonymi burakami, zapiekanym kozim serem, filetowaną pomarańczą, włoskimi orzechami, sałatą, rukolą oraz sosem miodowo - balsamicznym
+        - name: With baked beetroot and goat cheese, orange, walnuts,   lettuce, rocket and honey-balsamic vinaigrette
           price: 25
-        - name: Z grillowanym kurczakiem i bekonem, pomidorkami koktajlowymi, pieczoną papryką, sałatą, rzodkiewkami i ogórkiem, podana z sosem czosnkowo - ziołowym
+        - name: with grilled chicken and bacon, cherry tomatoes, baked pepper, lettuce, cucumber, radish, garlic & herb dressing
           price: 25
 - name: SOUPS
   dishes:
-    - name: Meksykańska zupa chili z mięsem i czerwoną fasolą z dodatkiem sera i kwaśnej śmietany
+    - name: Mexican style chili soup with meat and beans served with cheese and soured cream
       variants:
         - name: ''
           price: 10.50
-    - name: Krem dyniowy z rozmarynem i nutką pomarańczy podawany z maślaną grzanką
+    - name: Pumpkin cream soup with rosemary and orange served with toasted baguette
       variants:
         - name: ''
           price: 9.50
-    - name: Krem z pomidorów podawany z bagietką oraz bazyliowo-orzechowym pesto
+    - name: Tomato cream soup  served with basil & walnut pesto and baguette
       variants:
         - name: ''
           price: 9
-    - name: Zupa dnia - od poniedziałku do piątku
+    - name: Soup of the day served mon - fri
       variants:
         - name: ''
           price: 7.50
 - name: MAIN DISHES
   dishes:
-    - name: Kokosowe tajskie curry z
+    - name: Thai style coconut curry with
       variants:
-        - name: kurczakiem
+        - name: chicken
           price: 28
-        - name: warzywami
+        - name: vegetables
           price: 27
-      description: przyrządzane z mlekiem kokosowym z dodatkiem aromatycznych przypraw, warzyw i ananasa, podawane z ryżem basmati
+      description: made with vegetables and pineapple, served with basmati rice
     - name: Musaka
       variants:
         - name: ''
           price: 29
-      description: Grecka potrawa z zapiekanego pod beszamelem mielonego mięsa i bakłażana, podana z domowymi chlebkami pita oraz sałatką z pomidorów, ogórków, oliwek i cebuli
+      description: Greek moussaka with minced meat and eggplant, served with pita bread and tomato, cucumber, olives and onion salad
     - name: Peposo
       variants:
         - name: ''
           price: 31
-      description: Toskański gulasz wołowy, duszony z czerwonym winem, rozmarynem i pieprzem, do tego polenta z dodatkiem sera Grana Padano oraz szpinak z czosnkiem i śmietanką
+      description: Tuscan style beef stew, cooked with red wine, rosemary and black pepper, served with cheesy polenta and creamy garlic spinach
     - name: Mesir Wat
       variants:
         - name: ''
           price: 27
-      description: Wegetariańskie danie rodem z Etiopii - pyszna, pikantna czerwona soczewica duszona z cebulą, imbirem, pomidorami oraz mieszanką przypraw berbere, podawana z ogórkowym jogurtem oraz podpłomykiem
+      description: Ethiopian vegetarian dish - spicy red lentils with onion, ginger, tomatoe and berbere spice, served with cucumber yoghurt and flatbread
     - name: Murgh Makhani
       variants:
         - name: ''
           price: 28
-      description: Popularne danie kuchni indyjsko - brytyjskiej kawałki kurczaka w aromatycznym sosie z pomidorów, cebuli, nerkowców, z dodatkiem masła i śmietanki oraz indyjskich przypraw, podane z ryżem basmati
-    - name: Żeberka wieprzowe
+      description: Pieces of chicken served with aromatic sauce made of tomato, onion, cashew nuts, butter, cream and Indian spices served with basmati rice
+    - name: Pork ribs
       variants:
         - name: ''
           price: 29
-      description: Pieczone w pomidorach, miodzie i cebuli podawane z domowymi frytkami i surówką colesław
+      description: Baked with tomato, honey and onion served with home made fries and coleslaw salad
 - name: SAVOURY CREPES
-  description: Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem
+  description: Each portion - 2 pieces You can choose two different fillings All crepes go with mini salad and chives
   dishes:
-    - name: Naleśniki "chińskie"
+    - name: "Chinese" crepes
       variants:
         - name: ''
           price: 22
-      description: Z kurczakiem, krótko smażonymi warzywami, orientalnymi przyprawami, sezamem i pestkami dyni
-    - name: Naleśniki “meksykańskie"
+      description: Crepes with Chinese style chicken, fried vegetables, oriental spices, sesame and pumpkin seeds
+    - name: "Mexican" crepes
       variants:
         - name: ''
           price: 22
-      description: Z mięsem, pomidorami, kukurydzą i czerwoną fasolą, zapieczone z serem
-    - name: Naleśniki “indyjskie” z kurczakiem w sosie curry
+      description: Mexican style crepes with minced meat, tomato sauce, sweetcorn, red beans and cheese
+    - name: "Indian crepes" with chicken and curry sauce
       variants:
         - name: ''
           price: 22
-      description: Pierś kurczaka, ananas, szpinak, śmietana
-    - name: Naleśniki a'la Carbonara z cukinią
+      description: Crepes with Indian style curry chicken with pineapple, spinach and cream
+    - name: Crepes a'la Carbonara with courgette
       variants:
         - name: ''
           price: 22
-      description: Boczek, cebula, cukinia, śmietana, zielona pietruszka
-    - name: Naleśniki z duszonymi na maśle porami
+      description: Crepes a la Carbonara with bacon, onion, courgette, cream and green parsley
+    - name: Crepes with braised in butter leek
       variants:
         - name: ''
           price: 22
-      description: Marchewką i pieczarkami oraz włoskimi orzechami
-    - name: Naleśniki ze szpinakiem
+      description: Carrot, mushroom and walnut
+    - name: Crepes with spinach
       variants:
         - name: ''
           price: 22
-      description: Z dodatkiem czosnku, śmietanki i sera Grana Padano
-    - name: Naleśniki z duszonymi boczniakami
+      description: Garlic, cream and Grana Padano cheese
+    - name: Crepes with braised oyster mushroom
       variants:
         - name: ''
           price: 22
-      description: Pomidorami i cebulką z dodatkiem wina, czosnku i śmietanki
-    - name: Sosy
+      description: tomato, onion, wine, garlic and cream
+    - name: Sauces
       variants:
-        - name: Czosnkowo-ziołowy
+        - name: Garic and herb
           price: 2
-        - name: Majonezowo-paprykowy
+        - name: Mayonnaise and red pepper sauce
           price: 2
-        - name: Śmietana
+        - name: Saured cream
           price: 2
 - name: SWEET CREPES
-  description: Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam
+  description: Each  portion - 2 pieces. To each crepe you can choose three different fillings - vanilla custard, cinnamon apples, chocolate sauce, whipped cream, vanilla fromage, banana, toffee sauce, nuts and dried fruit, semolina pudding, cherries, raspberry mousse, roasted almond flakes, natural yoghurt, peach, mango mousse, roasted sunflower and pumpkin seeds, forrest fruit, coconut, sesame
   dishes:
-    - name: Nasze propozycje
+    - name: We recommend
       variants:
-        - name: Budyń / jabłka / sos czekoladowy
+        - name: Vanilla pudding / apples / chocolate sauce
           price: 18
-        - name: Jabłka / sos toffi / sezam
+        - name: Apples / toffee sauce /sesame
           price: 18
-        - name: Jogurt / brzoskwinia / mus mango
+        - name: Yoghurt / peach / mango mousse
           price: 18
-        - name: Banan / sos czekoladowy / słonecznik i dynia
+        - name: Banana / chocolate sauce / sunflower and pumpkin seeds
           price: 18
-        - name: Kaszka manna / wiśnie
+        - name: Semolina pudding / cherries
           price: 18
-        - name: Serek / owoce jagodowe
+        - name: Vanilla fromage / forest fruit
           price: 18
-        - name: Budyń / wiśnie / sos czekoladowy
+        - name: Vanilla pudding / cherries / chocolate sauce
           price: 18
-        - name: Kaszka / jabłka / bakalie
+        - name: Semolina pudding / apples / nuts and dried fruit
           price: 18
-        - name: Serek / mus malinowy / bita śmietana
+        - name: Vanilla fromage / raspberry mousse / whipped cream
           price: 18
-        - name: Banan / sos toffi / bakalie
+        - name: Banana / toffee sauce / nuts and dried fruit
           price: 18
-        - name: Budyń / owoce jagodowe / kokos
+        - name: Vanilla pudding / forest fruit / coconut
           price: 18
-        - name: Kaszka manna / mus mango / migdały
+        - name: Semolina pudding / mango mousse / almond flakes
           price: 18
-    - name: Gałka lodów waniliowych
+    - name: One scoop of ice cream
       variants:
         - name: ''
           price: 3
 - name: CAKES
   dishes:
-    - name: Ciasto czekoladowe
+    - name: Hot chocolate cake
       variants:
         - name: ''
           price: 14
-      description: Podawane na ciepło z sosem z malin, jagód i porzeczek
-    - name: Francuska tarta Tatin
+      description: With raspberry, blueberry and cranberry sauce
+    - name: Tarte Tatin
       variants:
         - name: ''
           price: 14
-      description: Ze śliwkami pieczonymi w karmelu i winie, podana z lodami waniliowymi
-    - name: Szarlotka
-      description: Na kruchym cieście podawana na ciepło z sosem angielskim i gałką lodów waniliowych
+      description: With plums, caramel and wine served with vanilla ice cream
+    - name: Hot apple pie
+      description: With creme anglaise and vanilla ice crea
       variants:
         - name: ''
           price: 14
 - name: HOT CHOCOLATES
   dishes:
-    - name: Gorąca czekolada z bitą śmietaną
+    - name: Hot chocolate with whipped cream
       variants:
-        - name: Zwykła
+        - name: Plain
           price: 9
-        - name: Z chili
+        - name: With chili
           price: 9.50
-        - name: Pomarańczowa
+        - name: Orange
           price: 9.50
-        - name: Migdałowa
+        - name: Almond
           price: 9.50
-        - name: Kokosowa
+        - name: Coconut
           price: 9.50
-        - name: Orzechowa
+        - name: Hazelnut
           price: 9.50
-        - name: Z advocatem
+        - name: With advcat
           price: 10
-        - name: Z whisky
+        - name: With whisky
           price: 12
-        - name: Z rumem
+        - name: With rum
           price: 12
-    - name: Kakao z bitą śmietaną
+    - name: Cocoa with whipped cream
       variants:
         - name: ''
           price: 8
-      description: Można również zamówić kakao na mleku bezlaktozowym lub sojowym
+      description: Also lactose free or soya milk cocoa
 - name: SMOOTHIE
-  description: Do niektórych smoothie dodajemy cukier
+  description: Some smoothies go with sugar
   dishes:
-    - name: Mango lassi - jogurt, puree z mango, kardamon
+    - name: Mango lassi - yoghurt, mango puree, cardamom
       variants:
         - name: ''
           price: 13
 - name: TEA
   dishes:
-    - name: Czarna Lipton
+    - name: Black Lipton
       variants:
         - name: Yellow Label
           price: 6
         - name: Earl Grey
           price: 6
-        - name: Cytrynowa
+        - name: Lemon
           price: 6
-        - name: Porzeczkowa
+        - name: Black currant
           price: 6
-        - name: Owoce leśne
+        - name: Fores fruit
           price: 6
-        - name: Miętowa
+        - name: Min
           price: 6
-        - name: Truskawkowa
+        - name: Strawberry
           price: 6
-        - name: Dzika róża
+        - name: Wild rose
           price: 6
-    - name: Zielona Lipton
+    - name: Green Lipton
       variants:
-        - name: Zwykła
+        - name: Plain
           price: 6
-        - name: Miętowa
+        - name: Mint
           price: 6
-        - name: Orientalna
+        - name: Orient
           price: 6
-    - name: Liściasta czarna
+    - name: Black leaf
       variants:
-        - name: Czarna Nilgiri
+        - name: Black Nilgiri
           price: 10
-        - name: Świąteczna - z jabłkami i cynamonem
+        - name: Apple and cinnamon black tea
           price: 10
-        - name: Earl Grey z płatkami róży i trawą cytrynową
+        - name: Earl Grey with rose and lemon grass
           price: 10
-        - name: Chai Masala - z cynamonem, kardamonem, goździkami, pieprzem (podajemy z mlekiem)
+        - name: With cinnamon, cardamon, cloves, pepper (with milk served on the side)
           price: 10
-        - name: Szwarcwald - czarna herbata z borówkami, czarnym bzem, wiśnią, różą i hibiskusem
+        - name: Black tea with cowberry, elder, cherries, rose and hibiscus
           price: 10
-        - name: Rainforest - czarna herbata z papają, mango, ananasem, mandarynką i hibiskusem
+        - name: Rainforest - with papaya, mango, mandarin, pineapple and hibiscus
           price: 10
     - name: Rooibos
       variants:
-        - name: Letnie orzeźwienie- rooibos pomarańczowo - pigwowa z płatkami słonecznika, skórką pomarańczową i pigwą
+        - name: Orange, sunflower, quinc
           price: 10
-        - name: Rooibos pomarańczowo-pistacjowa - ze skórką pomarańczy, pistacjami, płatkami migdałowymi i czerwonym pieprzem
+        - name: Rooibos with orange peel, pistachios, almond, red pepper
           price: 10
-    - name: Ziołowa
+    - name: Herbal
       variants:
-        - name: Mięta liściasta
+        - name: Mint tea
           price: 8
-        - name: Trawa cytrynowa
+        - name: Lemon grass
           price: 8
-    - name: Liściasta zielona
+    - name: Leaf green
       variants:
-        - name: Zielona Yunnan
+        - name: Green Yunnan
           price: 10
-        - name: Sencha Sakura - wiśniowo-marcepanowa z płatkami róży
+        - name: Sencha with cherry, marzipan and rose petals
           price: 10
-        - name: Sencha brzoskwiniowo - ananasowa z płatkami słonecznika
+        - name: Sencha with peach, pineapple and sunflower petals
           price: 10
-        - name: Gunpowder malinowo - porzeczkowa z płatkami bławatka i ostu
+        - name: Gunpowder raspberry and redcurrant gunpowder
           price: 10
-        - name: Zielona jaśminowa
+        - name: Jasmine green
           price: 10
-    - name: Mieszanka herbaty czarnej i zelonej
+    - name: Black and green leaf tea
       variants:
         - name: ''
           price: 10
-      description: Maharani - czarna i zielona herbata z papają, płatkami ostu i cytrusami
-    - name: Herbaty owocowe
+      description: Maharani - black and green tea with papaya, thistle petals, citrus
+    - name: Fruit tea
       variants:
-        - name: Kaledonia - rodzynki, czarny bez, czerwona porzeczka, wiśnie, borówki, hibiskus, płatki róży
+        - name: Kaledonia - raisins, elder, redcurrant, cherries, cowberry, hibiscus, rose
           price: 10
-        - name: Kalifornia - ananas, papaja, mango, rodzynki, róża, hibiskus
+        - name: Kalifornia - pineapple, papaya, mango, raisins, rose, hibiscus
           price: 10
-        - name: Bora-Bora - papaja, rodzynki, czarny bez, porzeczka, malina, truskawka, jabłko, hibiskus
+        - name: Bora-Bora - papaya, raisins, redcurrant, raspberry, strawberry, apple, hibiscus
           price: 10
-    - name: Herbaty PU-ERH
+    - name: PU-ERH tea
       variants:
-        - name: PU-ERH exotic - z papają, ananasem, mango, rodzynkami i hibiskusem
+        - name: PU-ERH exotic - with papaya, pineapple, mango, raisins and hibiscus
           price: 10
-        - name: PU-ERH exotic - z papają, ananasem, mango, rodzynkami i hibiskusem
+        - name: PU-ERH exotic - with candied cranberries and orange
           price: 10
 - name: COFFEE
-  description: Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe
+  description: We recommend decaffeinated coffee and lactose free or soya milk
   dishes:
     - name: Espresso 30ml
       variants:
         - name: ''
           price: 7
-    - name: Podwójne espresso 60ml
+    - name: Double espresso 60ml
       variants:
         - name: ''
           price: 9
-    - name: Espresso macchiato (espresso z mleczną pianką)
+    - name: Espresso with a little bit of milk foam
       variants:
         - name: ''
           price: 7
-    - name: Espresso con panna (espresso z bitą śmietaną)
+    - name: Espresso with whipped cream
       variants:
         - name: ''
           price: 9
-    - name: Espresso Romano (z odrobiną skórki cytrynowej)
+    - name: Espresso with lemon zest
       variants:
         - name: ''
           price: 7.50
-    - name: Kawa czarna 180ml
+    - name: Black coffee 180ml
       variants:
         - name: ''
           price: 9
-    - name: Kawa bała 180ml
+    - name: White coffee 180ml
       variants:
         - name: ''
           price: 9.50
-    - name: Kawa biała XL 320ml
+    - name: White coffee XL 320ml
       variants:
         - name: ''
           price: 10.50
     - name: Cappuccino
       variants:
-        - name: Małe 210ml
+        - name: Small 210ml
           price: 10
-        - name: Duże 340ml
+        - name: Large 340ml
           price: 11
-    - name: Kawa latte 260ml
+    - name: Latte 260ml
       variants:
         - name: ''
           price: 11
-    - name: Kawa latte z miodem
+    - name: Latte with honey
       variants:
         - name: 260ml
           price: 13
-    - name: Kawa latte macchiato 260ml
+    - name: Latte macchiato 260ml
       variants:
-        - name: Waniliowa
+        - name: Vanilla
           price: 13
-        - name: Karmelowa
+        - name: Caramel
           price: 13
-        - name: Kokosowa
+        - name: Coconut
           price: 13
-        - name: Migdałowa
+        - name: Almond
           price: 13
-        - name: Orzechowa
+        - name: Hazelnut
           price: 13
-    - name: Mocha (z mlekiem, czekoladą i bitą śmietaną) 260ml
-      variants:
-        - name: ''
-          price: 13
-    - name: Kawa mrożona z bitą śmietaną 330ml
+    - name: Mocha (coffee with milk, chocolate and whipped cream) 260ml
       variants:
         - name: ''
           price: 13
-    - name: Kawa mrożona z syropem i bitą śmietaną 330ml
+    - name: Ice coffee with whipped cream  330ml
       variants:
-        - name: Waniliowa
+        - name: ''
+          price: 13
+    - name: Ice coffee with whipped cream and sirup (vanilla, caramel, coconut, almond, hazelnut) 330ml
+      variants:
+        - name: Vanilla
           price: 14
-        - name: Karmelowa
+        - name: Caramel
           price: 14
-        - name: Kokosowa
+        - name: Coconut
           price: 14
-        - name: Migdałowa
+        - name: Almond
           price: 14
-        - name: Orzechowa
+        - name: Hazelnut
           price: 14
 - name: COFFEE WITH ALCOHOL
   dishes:
@@ -405,12 +405,12 @@
       variants:
         - name: 260 ml
           price: 17
-      description: czarna kawa z whisky i bitą śmietaną
-    - name: Kawa Cointreau
+      description: black coffee with whisky and whipped cream
+    - name: Cointreau Coffee
       variants:
         - name: 260 ml
           price: 17
-      description: czarna kawa z likierem pomarańczowym i bitą śmietaną
+      description: black coffee with orange liquer and whipped cream
     - name: Malibu latte
       variants:
         - name: 260 ml
@@ -421,57 +421,57 @@
           price: 16
 - name: COLD DRINKS
   dishes:
-    - name: Świeżo wyciskany sok pomarańczowy
+    - name: Freshly squeezed orange juice
       variants:
         - name: 200ml
           price: 10
         - name: 300ml
           price: 14
-    - name: Domowa lemoniada ze świeżych cytryn
+    - name: Homemade lemonade
       variants:
         - name: 300ml
           price: 10
         - name: 1000ml
           price: 22
-    - name: Domowa lemoniada ze świeżych pomarańczy
+    - name: Homemade lemonade with fresh oranges
       variants:
         - name: 300ml
           price: 10
         - name: 1000ml
           price: 22
-    - name: Domowa mrożona herbata z cytryną i miętą 300ml
+    - name: Homemade ice tea with lemon and mint 300ml
       variants:
         - name: ''
           price: 9
-    - name: Woda mineralna podawana z cytryną lub miętą
+    - name: Mineral water with lemon or mint
       variants:
         - name: 300ml
           price: 5
         - name: 1000ml
           price: 10
-    - name: Sok
+    - name: Juice
       variants:
-        - name: pomarańczowy 200ml
+        - name: orange 200ml
           price: 6
-        - name: pomarańczowy 1000ml
+        - name: orange 1000ml
           price: 15
-        - name: jabłkowy 200ml
+        - name: apple 200ml
           price: 6
-        - name: jabłkowy 1000ml
+        - name: apple 1000ml
           price: 15
-        - name: porzeczkowy 200ml
+        - name: blackcurrant 200ml
           price: 6
-        - name: porzeczkowy 1000ml
+        - name: blackcurrant 1000ml
           price: 15
-        - name: grejfrutowy 200ml
+        - name: grapefruit 200ml
           price: 6
-        - name: grejfrutowy 1000ml
+        - name: grapefruit 1000ml
           price: 15
-        - name: ananasowy 200ml
+        - name: pineapple 200ml
           price: 6
-        - name: ananasowy 1000ml
+        - name: pineapple 1000ml
           price: 15
-    - name: Naturalny kwas chlebowy 330ml
+    - name: Kvass 330ml
       variants:
         - name: ''
           price: 10
@@ -489,7 +489,7 @@
           price: 6
 - name: BEER
   dishes:
-    - name: Piwa z polskich browarów rzemieślniczych
+    - name: Beer City Brewery from Cracow
       variants:
         - name: Krak (English IPA) 500ml
           price: 16
@@ -503,43 +503,43 @@
           price: 17
         - name: Pan IPAni (Wheat IPA) 500ml
           price: 17
-    - name: Inne piwa butelkowe
+    - name: Other bottled beer
       variants:
-        - name: Piwo Żywe (niepasteryzowane) 500ml
+        - name: Piwo Żywe (unpasteurised) 500ml
           price: 12
-        - name: Pszeniczniak 500ml
+        - name: Pszeniczniak wheat beer (wheat beer) 500ml
           price: 13
-        - name: Miłosław Niefiltrowane 500ml
+        - name: Miłosław Niefiltrowane (unfiltered beer) 500ml
           price: 11
-        - name: Mirabelka - warzone z naturalnym sokiem śliwkowym 500ml
+        - name: Mirabelka - beer ageing with natural plum juice 500ml
           price: 13
-        - name: Klasztorne - ciemne, warzone w stylu piwa Trapistów 500ml
+        - name: Klasztorne - trappist type Ale 500ml
           price: 12
-        - name: Piwo Na Miodzie Gryczanym 500ml
+        - name: Dark beer with buckwheat honey 500ml
           price: 13
-        - name: Krzepkie 7,4% 500ml
+        - name: Krzepkie (strong beer) 7,4% 500ml
           price: 13
-        - name: Miodne - ciemne piwo z warmińskim miodem 500ml
+        - name: Miodne - dark beer with Polish honey 500ml
           price: 13
-        - name: Wiśnia w Piwie - warzone z naturalnym sokiem wiśniowym 500ml
+        - name: Wiśnia w Piwie - beer ageing with natural sour cherry juice 500ml
           price: 13
-        - name: BezGlutenNowe 500ml
+        - name: BezGlutenNowe (gluten free beer) 500ml
           price: 13
-        - name: Jurajskie Miodowe - jasny miodowy lager 500ml
+        - name: Jurajskie Miodowe - honey lager 500ml
           price: 13
-        - name: Cornelius Grapefruitowy (piwo pszeniczne z sokiem grapefruitowym) 400ml
+        - name: Cornelius Grapefruitowy (wheat beer with grapefruit juice) 400ml
           price: 11
-        - name: Paulaner (piwo pszeniczne) 500ml
+        - name: Paulaner (wheat beer) 500ml
           price: 15
-        - name: Svijany Maz (czeski niepasteryzowany pilsner) 500ml
+        - name: Svijany Maz (Czech unpasterised pilsner) 500ml
           price: 10.50
-        - name: Shandy - Piwo Tyskie, Sprite, cytryna, świeża mięta 500ml
+        - name: Shandy - Tyskie Beer, Sprite, lemon, fresh mint 500ml
           price: 14
-    - name: Piwo lane
+    - name: Piwo Draught beer
       variants:
-        - name: Jurajskie Bursztynowe 300ml
+        - name: Jurajskie Bursztynowe (Amber Ale) 300ml
           price: 10
-        - name: Jurajskie Bursztynowe 500ml
+        - name: Jurajskie Bursztynowe (Dark Ale) 500ml
           price: 12
         - name: Tyskie Klasyczne 300ml
           price: 9.50
@@ -547,33 +547,33 @@
           price: 10.50
         - name: Tyskomat 5000ml
           price: 95
-    - name: Piwa bezalkoholowe
+    - name: Alcohol free beer
       variants:
         - name: Łomża 0% 500ml
           price: 10
-        - name: Łomża Pszeniczne 0% 500ml
+        - name: Łomża Pszeniczne 0% (alcohol free wheat beer) 500ml
           price: 10
-        - name: Lech Free Pomelo i Grejpfrut 0% 500ml
+        - name: Lech Free 0% (pomelo & grapefruit alcohol free beer) 500ml
           price: 11
-        - name: Żywiec Sesyjne IPA 0% 500ml
+        - name: Żywiec Sesyjne IPA 0% (alcohol free IPA ) 500ml
           price: 12
-    - name: Cydr
+    - name: Cider
       variants:
-        - name: Cydr Miłosławski półwytrawny 500ml
+        - name: Semidry Polish cider 500ml
           price: 12
-        - name: Cydr Miłosławski półsłodki 500ml
+        - name: Semisweet Polish cide 500ml
           price: 12
-        - name: Cydr Ignaców 275ml
+        - name: Polish craft cider 275ml
           price: 16
-    - name: Drinki na bazie cydru
+    - name: Cider drinks
       variants:
-        - name: Sklepy Cynamonowe (cydr, sok jabłkowy, syrop Monin cynamonowy) 350ml
+        - name: Sklepy Cynamonowe (cider, apple juice, cinnamon sirup) 350ml
           price: 16
-        - name: Pod Papugami (cydr, wódka Wyborowa, sok ananasowy) 500ml
+        - name: Pod Papugami (cider, Wyborowa vodka, pineapple juice) 500ml
           price: 16
-        - name: Wyspy Szczęśliwe (cydr, sok pomarańczowy, syrop Monin kokosowy) 350ml
+        - name: Wyspy Szczęśliwe (cider, orange juice, coconut sirup) 350ml
           price: 15
-        - name: Semper Fidelis (cydr, wódka Żołądkowa Gorzka, cukier trzcinowy, limonka, mięta) 350ml
+        - name: Semper Fidelis (cider, Żołądkowa Gorzka vodka, cane sugar, lime, mint) 350ml
           price: 18
 - name: WHITE WINE
   dishes:
@@ -587,41 +587,41 @@
           price: 30
         - name: 1000ml
           price: 54
-      description: Włoskie, wytrawne
+      description: Italian, dry
     - name: Pinot Grigio Marchese della Torre IGT 750ml
       variants:
         - name: ''
           price: 58
-      description: Włoskie, wytrawne
+      description: Italian, dry
     - name: Abadim Vinho Verde DOC 750ml
       variants:
         - name: ''
           price: 58
-      description: Portugalskie, półwytrawne
+      description: Portuguese, semidry
     - name: Sauvignon Blanc Vina Falernia 750ml
       variants:
         - name: ''
           price: 68
-      description: Chilijskie, wytrawne
+      description: Chilean, dry
     - name: Sutter Home Moscato
       variants:
         - name: 100ml
           price: 9
         - name: 750ml
           price: 55
-      description: Kalifornijskie, deserowe
+      description: Californian, white
     - name: Cavas Hill-Cava 750ml
       variants:
         - name: ''
           price: 59
-      description: Białe, hiszpańskie, półwytrawne wino, wytwarzane metodą tradycyjną
+      description: White, Spanish, semidry wine, produced according to traditional method
     - name: Gancia Prosecco D.O.C
       variants:
         - name: 200ml
           price: 24
         - name: 750ml
           price: 70
-      description: Włoskie, półwytrawne
+      description: Italian, semidry
 - name: RED WINES
   dishes:
     - name: Cantina Castelnuovo Del Garda Merlot IGT Veneto
@@ -634,94 +634,94 @@
           price: 30
         - name: 1000ml
           price: 54
-      description: Włoskie, wytrawne
+      description: Italian, dry
     - name: Syrah Vina Falernia 750ml
       variants:
         - name: ''
           price: 63
-      description: Chilijskie, wytrawne
+      description: Chilean, dry
     - name: Riparosso Montepulciano D'Abruzzo DOC 750ml
       variants:
         - name: ''
           price: 68
-      description: Włoskie, wytrawne
+      description: Italian, dry
     - name: Ser Dante Chianti 750ml
       variants:
         - name: ''
           price: 73
-      description: Włoskie, wytrawne
+      description: Italian, dry
 - name: OTHERS
   dishes:
     - name: Rose Genuss Auer 750ml
       variants:
         - name: ''
           price: 63
-      description: Austriackie, półwytrawne
+      description: Austrian, semidry
     - name: Martini 100ml
       variants:
-        - name: Bianco - białe, słodkie
+        - name: Bianco - whhite, sweet
           price: 12
-        - name: Extra dry - białe, wytrawne
+        - name: Extra dry - white, dry
           price: 12
-        - name: Rosso - czerwone, półsłodkie
+        - name: Rosso - red, sweet
           price: 12
-        - name: Rose - różowe, półsłodkie
+        - name: Rose - rose, semisweet
           price: 12
-- name: MULLED DRINKS
+- name: MULLED DRINKS xxxxxxxxxxxxxxxxxxxxx
   dishes:
-    - name: Piwo grzane z sokiem (malinowym lub imbirowym), pomarańczą i przyprawami korzennymi
+    - name: Mulled beer
       variants:
         - name: 300ml
           price: 9
         - name: 500ml
           price: 11
-    - name: Grzaniec Galicyjski z pomarańczą, rodzynkami i korzeniami 150ml
+    - name: Mulled wine 150ml
       variants:
         - name: ''
           price: 9
-    - name: Biały Miś (Advocat, cynamon, mleko) 160ml
+    - name: Biały Miś (Advocat, cinnamon, milk) 160ml
       variants:
         - name: ''
           price: 9
-    - name: Bury Miś (Advocat, czekolada, mleko) 160ml
+    - name: Bury Miś (Advocat, chocolate, milk) 160ml
       variants:
         - name: ''
           price: 11
-    - name: Bombardino (Advocat, likier kawowy Kahlua, bita śmietana) 100ml
+    - name: Bombardino (Advocat, Kahlua, whipped cream) 100ml
       variants:
         - name: ''
           price: 8
-    - name: Grog na rumie (rum Havana, cytryna, miód, korzenie, woda) 200ml
+    - name: Grog na rumie (Havana rum, lemon, honey, spices, hot water) 200ml
       variants:
         - name: ''
           price: 16
-    - name: Grog na Krupniku (Krupnik, cytryna, miód, korzenie, woda) 200ml
+    - name: Grog na Krupniku (Krupnik, lemon, honey, spices, hot water) 200ml
       variants:
         - name: ''
           price: 11
-    - name: Grzany Cydr z naturalnym syropem korzennym 330ml
+    - name: Mulled cider 330ml
       variants:
         - name: ''
           price: 13
-    - name: Grzany kwas chlebowy z naturalnym syropem korzennym, pomarańczą i cytryną 330ml
+    - name: Mulled kvass 330ml
       variants:
         - name: ''
           price: 12
 - name: NON ALCOHOLIC DRINKS
   dishes:
-    - name: Mojito Virgin z wodą gazowaną 300ml
+    - name: Mojito Virgin with sparkling water 300ml
       variants:
         - name: ''
           price: 12
-    - name: Mojito Virgin z wodą gazowaną malinowe 300ml
+    - name: Mojito Virgin with sparkling water and raspberries 300ml
       variants:
         - name: ''
           price: 13
-    - name: Mojito Virgin ze Spritem 300ml
+    - name: Mojito Virgin with Sprite 300ml
       variants:
         - name: ''
           price: 14
-    - name: Mojito Virgin ze Spritem malinowe 300ml
+    - name: Mojito Virgin with Sprite and raspberries 300ml
       variants:
         - name: ''
           price: 15
@@ -729,59 +729,59 @@
       variants:
         - name: ''
           price: 13
-      description: Sok grejfrutowy, sok cytrynowy, tonik, syrop Monin Blue Curacao
+      description: grapefruit juice, lemon juice, tonic, Blue Curacao sirup
     - name: Piña Kolanko 250ml
       variants:
         - name: ''
           price: 10
-      description: Sok ananasowy, sok pomarańczowy, syrop Monin kokosowy, pomarańcza
+      description: Pineapple juice, orange juice, coconut sirup, orange
     - name: Pomarańczowa Alternatywa 300ml
       variants:
         - name: ''
           price: 13
-      description: Soki - pomarańczowy, grapefruitowy, ananasowy, syrop Monin truskawkowy, pomarańcza, limonka, świeża mięta, kruszony lód
+      description: Juices - orange, grapefruit, pineapple, strawberry sirup, orange, lime, mint, crushed ice
     - name: Rozważna i Romantyczna 250ml
       variants:
         - name: ''
           price: 11
-      description: Sok pomarańczowy, sok ananasowy, sok grejfrutowy, syrop Monin truskawkowy, mus malinowy
+      description: Orange juice, pineapple juice, grapefruit juice, strawberry sirup and raspberry mousse
     - name: Over The Rainbow 250ml
       variants:
         - name: ''
           price: 12
-      description: Sok pomarańczowy, sok cytrynowy, Grenadine, syrop Monin Blue Curacao
+      description: Orange juice, lemon juice, Grenadine, Blue Curacao sirup
 - name: SHORT DRINKS
   dishes:
     - name: Black Russian 60ml
       variants:
         - name: ''
           price: 14
-      description: Wódka Wyborowa, likier kawowy Kahlua
+      description: Vodka, coffee liquer
     - name: Blue Hawaiian 100ml
       variants:
         - name: ''
           price: 14
-      description: Likier Blue Curacao, Havana Rum, Malibu, sok ananasowy, śmietanka
+      description: Blue Curacao liqer, Havana Rum, Malibu, pineapple  juice, cream
     - name: Blue Lagoon 120ml
       variants:
         - name: ''
           price: 15
-      description: Wódka Wyborowa, syrop Monin Blue Curacao, Cointreau, sok ananasowy
+      description: Vodka, Monin Blue Curacao sirup, Cointreau, pineapple juice
     - name: Cosmopolitan 120ml
       variants:
         - name: ''
           price: 19
-      description: Cointreau, Wódka Wyborowa, sok z cytryny, sok porzeczkowy
+      description: Cointreau, vodka, lemon juice, blackcurrant juice
     - name: Kamikaze 6 x 25 ml (shot)
       variants:
         - name: ''
           price: 28
-      description: Wódka Wyborowa, Blue Curacao, sok cytrynowy
+      description: Vodka, Blue Curacao, lemon juice
     - name: Margarita 80ml
       variants:
         - name: ''
           price: 22
-      description: Tequila Silver, Cointreau, sok cytrynowy
+      description: Tequila Silver, Cointreau, lemon juice
     - name: Negroni 60ml
       variants:
         - name: ''
@@ -791,149 +791,149 @@
       variants:
         - name: ''
           price: 14
-      description: Likier kawowy Kahlua, Amaretto, Cointreau, Wódka Wyborowa, śmietanka
+      description: Kahlua coffee liquer, Amaretto, Cointreau, vodka, cream
     - name: Piña Colada 120ml
       variants:
         - name: ''
           price: 16
-      description: Rum Havana Club, Malibu, śmietanka, sok ananasowy
+      description: Rum Havana Club, Malibu, cream, pineapple juice
     - name: White Russian 80ml
       variants:
         - name: ''
           price: 13
-      description: Wódka Wyborowa, likier kawowy Kahlua, śmietanka
+      description: Wódka Wyborowa, Kahlua coffee liquer, cream
     - name: Wściekły Pies 50ml (shot)
       variants:
         - name: ''
           price: 7
-      description: Wódka Wyborowa, sok malinowy, tabasco
+      description: Vodka, raspberry juice, tabasco
 - name: LONG DRINKS
   dishes:
     - name: 008 250ml
       variants:
         - name: ''
           price: 12
-      description: Wódka Wyborowa, Martini Bianco, sok grejfrutowy
+      description: Vodka, Martini Bianco, grapefruit juice
     - name: Aperol Spritz 200ml
       variants:
         - name: ''
           price: 23
-      description: Prosecco, Aperol, woda gazowana, pomarańcza
+      description: Prosecco, Aperol, sparkling water, orange
     - name: Campari Orange 250ml
       variants:
         - name: ''
           price: 17
-      description: Prosecco, Campari, woda gazowana
+      description: Prosecco, Campari, sparkling water
     - name: Campari Spritz 200ml
       variants:
         - name: ''
           price: 25
-      description: Prosecco, Campari, woda gazowana, pomarańcza
+      description: Prosecco, Campari, sparkling water, orange
     - name: Cuba Libra 250ml
       variants:
         - name: ''
           price: 19
-      description: Rum Havana Club, coca cola, sok cytrynowy
+      description: Rum Havana Club, coca cola, lemon juice
     - name: Cztery Róże dla Lucienne 300ml
       variants:
         - name: ''
           price: 17
-      description: Wódka Wyborowa, syrop truskawkowy Monin, mus malinowy, sprite
+      description: Wódka Wyborowa, Monin strawberry sirup, raspberry mousse, sprite
     - name: Exotic Russian 300ml
       variants:
         - name: ''
           price: 19
-      description: Wódka Wyborowa, likier Passoa, Grenadina, sprite
+      description: Wódka Wyborowa, Passoa liquer, Grenadina, sprite
     - name: Golden Eye 250ml
       variants:
         - name: ''
           price: 15
-      description: Orzechówka, Gin Seagram’s, sok jabłkowy
+      description: Hazelnut vodka, Gin Seagram’s, apple juice
     - name: Gorączka Sobotniej Nocy 300ml
       variants:
         - name: ''
           price: 17
-      description: Wódka Wyborowa, Cointreau, sok pomarańczowy, sok ananasowy, Grenadyna
+      description: Vodka Cointreau, orange juice, pineapple juice, grenadine
     - name: John Lemon 250ml
       variants:
         - name: ''
           price: 16
-      description: Cytrynówka, syrop Monin limonkowy, woda gazowana, owoce cytrusowe
+      description: Lemonvodka, Monin lime sirup, sparking water, citrus fruit
     - name: Long Island Ice Tea 300ml
       variants:
         - name: ''
           price: 21
-      description: Wódka Wyborowa, gin Seagram’s, rum Havana Club, tequila Olmeca Silver, Cointreau, sok cytrynowy, coca cola
+      description: Vodka, gin Seagram’s, rum Havana Club, tequila Olmeca Silver, Cointreau, leomn juice, coca cola
     - name: Long Island Ice Tea
       variants:
         - name: ''
           price: 69
-      description: Dzbanek 4 porcje
-    - name: Malibu z mlekiem 200ml
+      description: 4 servings
+    - name: Malibu with milk 200ml
       variants:
         - name: ''
           price: 12
-      description: Malibu, mleko
+      description: Malibu, milk
     - name: Mechaniczna Pomarańcza 300ml
       variants:
         - name: ''
           price: 18
-      description: Malibu, świeżo wyciskany sok pomarańczowy, pomarańcza, mięta
+      description: Malibu, freshly squezzed orange juice, orange, mint
     - name: Mojito 300ml
       variants:
         - name: ''
           price: 20
-      description: Rum Havana, cukier trzcinowy, woda gazowana, mięta, limonka
-    - name: Mojito malinowe 300ml
+      description: Rum Havana, cane sugar, sparkling water, mint, lime
+    - name: Mojito raspberry 300ml
       variants:
         - name: ''
           price: 22
-      description: Rum Havana, cukier trzcinowy, woda gazowana, mięta, limonka, maliny
+      description: Rum Havana, cane sugar, sparkling water, mint, lime, raspberry
     - name: Mojito Passoa 300ml
       variants:
         - name: ''
           price: 19
-      description: Likier Passoa, Grenadina, cukier trzcinowy, woda gazowana, mięta, limonka
+      description: Passoa liquer, Grenadine, cane suger, cane sugar, mint, lime
     - name: Monkey Business 270ml
       variants:
         - name: ''
           price: 16.50
-      description: Wódka Wyborowa, Malibu, sok pomarańczowy, Grenadyna
-    - name: Orzechówka z mlekiem 200ml
+      description: Vodka, Malibu, orange juice, grenadine
+    - name: Hazelnut vodka witk milk 200ml
       variants:
         - name: ''
           price: 12
-      description: Wódka orzechowa, mleko
+      description: Hazelnut vodka, milk
     - name: Pod Osłoną Nieba 150ml
       variants:
         - name: ''
           price: 16
-      description: Białe wino, likier Passoa, Grenadina, limonka
+      description: White wine, Passoa liquer, grenadine, lime
     - name: Po Drugiej Stronie Lustra 300ml
       variants:
         - name: ''
           price: 15
-      description: Żołądkowa Gorzka, sok cytrynowy, sok ananasowy, sprite, plasterki ogórka
+      description: Digestive bitters, lemon juice, pineapple juice, sprite, cucumber slices
     - name: Szprycer 250ml
       variants:
         - name: ''
           price: 12
-      description: Białe wino wytrawne, woda gazowana, cytryna
+      description: White dry wine, sparkling water, lemon
     - name: Tatanka 200ml
       variants:
         - name: ''
           price: 12
-      description: Żubrówka, sok jabłkowy
+      description: Bison vodka, apple juice
     - name: Tatanka miętowa 200ml
       variants:
         - name: ''
           price: 13
-      description: Żubrówka, sok jabłkowy, mięta
+      description: Bison vodka, apple juice, mint
     - name: Tequila Sunrise 250ml
       variants:
         - name: ''
           price: 19
-      description: Tequila Olmeca Gold, sok pomarańczowy, Grenadina
+      description: Tequila Olmeca Gold, orange juice, grenadine
 - name: VODKA
   dishes:
     - name: Finlandia
@@ -948,37 +948,41 @@
           price: 8
         - name: 700ml
           price: 95
-    - name: Żołądkowa Gorzka
+    - name: Digestive bitters
       variants:
         - name: 40ml
           price: 8
         - name: 700ml
           price: 95
-    - name: Żołądkowa Gorzka 40ml
+    - name: Digestive bitters with mint 40ml
       variants:
         - name: ''
           price: 8
-    - name: Lubelska Cytrynowa 40ml
+    - name: Bison vodka 40ml
       variants:
         - name: ''
           price: 8
-    - name: Soplica Malinowa 40ml
+    - name: Lemon vodka 40ml
       variants:
         - name: ''
           price: 8
-    - name: Soplica Orzechowa 40ml
+    - name: Raspberry vodka 40ml
       variants:
         - name: ''
           price: 8
-    - name: Soplica Pigwowa 40ml
+    - name: Hazelnut vodka 40ml
       variants:
         - name: ''
           price: 8
-    - name: Soplica Śliwkowa 40ml
+    - name: Quince vodka 40ml
       variants:
         - name: ''
           price: 8
-    - name: Soplica Wiśniowa 40ml
+    - name: Plum vodka 40ml
+      variants:
+        - name: ''
+          price: 8
+    - name: Cherry vodka 40ml
       variants:
         - name: ''
           price: 8
