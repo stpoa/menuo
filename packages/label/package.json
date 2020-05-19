@@ -2,8 +2,5 @@
   "name": "label",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT",
-  "scripts": {
-    "start": "yarn http-server . -p 3003"
-  }
+  "license": "MIT"
 }
