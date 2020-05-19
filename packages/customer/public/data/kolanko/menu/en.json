@@ -15,22 +15,22 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "LUNCH",
-    "sectionDescription": "od poniedziałku do piątku od 12:00 do ostatniej porcji",
-    "dishName": "Obiad dnia",
-    "dishDescription": "Informacje na temat aktualnej oferty można znaleźć w naszym menu lanczowym, na tablicy, na facebooku i u kelnera",
+    "sectionDescription": "mon - fri from 12:00 noon",
+    "dishName": "Lunch of the day",
+    "dishDescription": "For the lunch menu details ask the waiter or find us on facebook",
     "dishVariantPrice": 21,
-    "dishVariantName": "Wersja mięsna"
+    "dishVariantName": "Meat option"
   },
   {
     "index": 2,
     "language": "en",
     "restaurant": "kolanko",
     "section": "LUNCH",
-    "sectionDescription": "od poniedziałku do piątku od 12:00 do ostatniej porcji",
-    "dishName": "Obiad dnia",
-    "dishDescription": "Informacje na temat aktualnej oferty można znaleźć w naszym menu lanczowym, na tablicy, na facebooku i u kelnera",
+    "sectionDescription": "mon - fri from 12:00 noon",
+    "dishName": "Lunch of the day",
+    "dishDescription": "For the lunch menu details ask the waiter or find us on facebook",
     "dishVariantPrice": 19,
-    "dishVariantName": "Wersja bezmięsna"
+    "dishVariantName": "Vege option"
   },
   {
     "index": 3,
@@ -38,7 +38,7 @@
     "restaurant": "kolanko",
     "section": "APETIZERS",
     "dishName": "Indonezyjski satay",
-    "dishDescription": "Szaszłyki z kurczaka marynowanego z trawą cytrynową i tamaryndem podawane z sosem orzechowo - kokosowym i sałatką z ogórka",
+    "dishDescription": "Chicken satay with oriental peanut & coconut milk sauce and cucumber salad",
     "dishVariantPrice": 16,
     "dishVariantName": ""
   },
@@ -48,7 +48,7 @@
     "restaurant": "kolanko",
     "section": "APETIZERS",
     "dishName": "Szakszuka - potrawa rodem z Tunezji",
-    "dishDescription": "Kawałki papryki duszone z pomidorami, przyprawione ostro, słodko i korzennie, zapieczone z żółtkiem, podawane z bagietką i odrobiną kwaśnej śmietany",
+    "dishDescription": "Chakchouka - Tunisian dish made of red pepper, tomato and spices. Served with an egg yolk, bread and soured cream",
     "dishVariantPrice": 13,
     "dishVariantName": ""
   },
@@ -57,8 +57,8 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "APETIZERS",
-    "dishName": "Grzanki (3 szt.)",
-    "dishDescription": "Grzanki z kozim serem, suszonymi pomidorami i rukolą",
+    "dishName": "Grzanki (3 pcs.)",
+    "dishDescription": "Chakchouka - Tunisian dish made of red pepper, tomato and spices. Served with an egg yolk, bread and soured cream",
     "dishVariantPrice": 14,
     "dishVariantName": ""
   },
@@ -67,52 +67,52 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "HOT CIABATTA SANDWICHES",
-    "dishName": "Gorąca ciabatta",
+    "dishName": "Hot ciabatta",
     "dishVariantPrice": 17,
-    "dishVariantName": "Z grillowanym bekonem, pieczoną papryką, serem Grana Padano, czerwoną cebulą i francuską musztardą, podawana z sosem czosnkowym i sałatą"
+    "dishVariantName": "With grilled bacon, baked pepper, red onion, Grana Padano cheese, French mustard, garlic sauce and lettuce"
   },
   {
     "index": 7,
     "language": "en",
     "restaurant": "kolanko",
     "section": "HOT CIABATTA SANDWICHES",
-    "dishName": "Gorąca ciabatta",
+    "dishName": "Hot ciabatta",
     "dishVariantPrice": 17,
-    "dishVariantName": "Z grillowanym kurczakiem serem Camembert, suszonymi pomidorami, czerwoną cebulą, podawana z paprykowym majonezem i sałatą"
+    "dishVariantName": "With grilled chicken, Camembert cheese, dried tomatoes, red onion, mayonnaise with red pepper, lettuce"
   },
   {
     "index": 8,
     "language": "en",
     "restaurant": "kolanko",
     "section": "HOT CIABATTA SANDWICHES",
-    "dishName": "Gorąca ciabatta",
+    "dishName": "Hot ciabatta",
     "dishVariantPrice": 17,
-    "dishVariantName": "Z pieczoną papryką i cukinią, kozim serem , paprykowo-bakłażanową pastą ajvar, podawana z sosem ziołowym i sałatą"
+    "dishVariantName": "With baked pepper and courgette, goat cheese, ajvar (pepper and eggplant paste), herb sauce, lettuce"
   },
   {
     "index": 9,
     "language": "en",
     "restaurant": "kolanko",
     "section": "SALADS",
-    "dishName": "Sałatka",
+    "dishName": "Salad",
     "dishVariantPrice": 25,
-    "dishVariantName": "Z pieczonymi burakami, zapiekanym kozim serem, filetowaną pomarańczą, włoskimi orzechami, sałatą, rukolą oraz sosem miodowo - balsamicznym"
+    "dishVariantName": "With baked beetroot and goat cheese, orange, walnuts,   lettuce, rocket and honey-balsamic vinaigrette"
   },
   {
     "index": 10,
     "language": "en",
     "restaurant": "kolanko",
     "section": "SALADS",
-    "dishName": "Sałatka",
+    "dishName": "Salad",
     "dishVariantPrice": 25,
-    "dishVariantName": "Z grillowanym kurczakiem i bekonem, pomidorkami koktajlowymi, pieczoną papryką, sałatą, rzodkiewkami i ogórkiem, podana z sosem czosnkowo - ziołowym"
+    "dishVariantName": "with grilled chicken and bacon, cherry tomatoes, baked pepper, lettuce, cucumber, radish, garlic & herb dressing"
   },
   {
     "index": 11,
     "language": "en",
     "restaurant": "kolanko",
     "section": "SOUPS",
-    "dishName": "Meksykańska zupa chili z mięsem i czerwoną fasolą z dodatkiem sera i kwaśnej śmietany",
+    "dishName": "Mexican style chili soup with meat and beans served with cheese and soured cream",
     "dishVariantPrice": 10.5,
     "dishVariantName": ""
   },
@@ -121,7 +121,7 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "SOUPS",
-    "dishName": "Krem dyniowy z rozmarynem i nutką pomarańczy podawany z maślaną grzanką",
+    "dishName": "Pumpkin cream soup with rosemary and orange served with toasted baguette",
     "dishVariantPrice": 9.5,
     "dishVariantName": ""
   },
@@ -130,7 +130,7 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "SOUPS",
-    "dishName": "Krem z pomidorów podawany z bagietką oraz bazyliowo-orzechowym pesto",
+    "dishName": "Tomato cream soup  served with basil & walnut pesto and baguette",
     "dishVariantPrice": 9,
     "dishVariantName": ""
   },
@@ -139,7 +139,7 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "SOUPS",
-    "dishName": "Zupa dnia - od poniedziałku do piątku",
+    "dishName": "Soup of the day served mon - fri",
     "dishVariantPrice": 7.5,
     "dishVariantName": ""
   },
@@ -148,20 +148,20 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "MAIN DISHES",
-    "dishName": "Kokosowe tajskie curry z",
-    "dishDescription": "przyrządzane z mlekiem kokosowym z dodatkiem aromatycznych przypraw, warzyw i ananasa, podawane z ryżem basmati",
+    "dishName": "Thai style coconut curry with",
+    "dishDescription": "made with vegetables and pineapple, served with basmati rice",
     "dishVariantPrice": 28,
-    "dishVariantName": "kurczakiem"
+    "dishVariantName": "chicken"
   },
   {
     "index": 16,
     "language": "en",
     "restaurant": "kolanko",
     "section": "MAIN DISHES",
-    "dishName": "Kokosowe tajskie curry z",
-    "dishDescription": "przyrządzane z mlekiem kokosowym z dodatkiem aromatycznych przypraw, warzyw i ananasa, podawane z ryżem basmati",
+    "dishName": "Thai style coconut curry with",
+    "dishDescription": "made with vegetables and pineapple, served with basmati rice",
     "dishVariantPrice": 27,
-    "dishVariantName": "warzywami"
+    "dishVariantName": "vegetables"
   },
   {
     "index": 17,
@@ -169,7 +169,7 @@
     "restaurant": "kolanko",
     "section": "MAIN DISHES",
     "dishName": "Musaka",
-    "dishDescription": "Grecka potrawa z zapiekanego pod beszamelem mielonego mięsa i bakłażana, podana z domowymi chlebkami pita oraz sałatką z pomidorów, ogórków, oliwek i cebuli",
+    "dishDescription": "Greek moussaka with minced meat and eggplant, served with pita bread and tomato, cucumber, olives and onion salad",
     "dishVariantPrice": 29,
     "dishVariantName": ""
   },
@@ -179,7 +179,7 @@
     "restaurant": "kolanko",
     "section": "MAIN DISHES",
     "dishName": "Peposo",
-    "dishDescription": "Toskański gulasz wołowy, duszony z czerwonym winem, rozmarynem i pieprzem, do tego polenta z dodatkiem sera Grana Padano oraz szpinak z czosnkiem i śmietanką",
+    "dishDescription": "Tuscan style beef stew, cooked with red wine, rosemary and black pepper, served with cheesy polenta and creamy garlic spinach",
     "dishVariantPrice": 31,
     "dishVariantName": ""
   },
@@ -189,7 +189,7 @@
     "restaurant": "kolanko",
     "section": "MAIN DISHES",
     "dishName": "Mesir Wat",
-    "dishDescription": "Wegetariańskie danie rodem z Etiopii - pyszna, pikantna czerwona soczewica duszona z cebulą, imbirem, pomidorami oraz mieszanką przypraw berbere, podawana z ogórkowym jogurtem oraz podpłomykiem",
+    "dishDescription": "Ethiopian vegetarian dish - spicy red lentils with onion, ginger, tomatoe and berbere spice, served with cucumber yoghurt and flatbread",
     "dishVariantPrice": 27,
     "dishVariantName": ""
   },
@@ -199,7 +199,7 @@
     "restaurant": "kolanko",
     "section": "MAIN DISHES",
     "dishName": "Murgh Makhani",
-    "dishDescription": "Popularne danie kuchni indyjsko - brytyjskiej kawałki kurczaka w aromatycznym sosie z pomidorów, cebuli, nerkowców, z dodatkiem masła i śmietanki oraz indyjskich przypraw, podane z ryżem basmati",
+    "dishDescription": "Pieces of chicken served with aromatic sauce made of tomato, onion, cashew nuts, butter, cream and Indian spices served with basmati rice",
     "dishVariantPrice": 28,
     "dishVariantName": ""
   },
@@ -208,8 +208,8 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "MAIN DISHES",
-    "dishName": "Żeberka wieprzowe",
-    "dishDescription": "Pieczone w pomidorach, miodzie i cebuli podawane z domowymi frytkami i surówką colesław",
+    "dishName": "Pork ribs",
+    "dishDescription": "Baked with tomato, honey and onion served with home made fries and coleslaw salad",
     "dishVariantPrice": 29,
     "dishVariantName": ""
   },
@@ -218,9 +218,9 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "SAVOURY CREPES",
-    "sectionDescription": "Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem",
-    "dishName": "Naleśniki \"chińskie\"",
-    "dishDescription": "Z kurczakiem, krótko smażonymi warzywami, orientalnymi przyprawami, sezamem i pestkami dyni",
+    "sectionDescription": "Each portion - 2 pieces You can choose two different fillings All crepes go with mini salad and chives",
+    "dishName": "Chinese crepes",
+    "dishDescription": "Crepes with Chinese style chicken, fried vegetables, oriental spices, sesame and pumpkin seeds",
     "dishVariantPrice": 22,
     "dishVariantName": ""
   },
@@ -229,9 +229,9 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "SAVOURY CREPES",
-    "sectionDescription": "Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem",
-    "dishName": "Naleśniki “meksykańskie\"",
-    "dishDescription": "Z mięsem, pomidorami, kukurydzą i czerwoną fasolą, zapieczone z serem",
+    "sectionDescription": "Each portion - 2 pieces You can choose two different fillings All crepes go with mini salad and chives",
+    "dishName": "Mexican crepes",
+    "dishDescription": "Mexican style crepes with minced meat, tomato sauce, sweetcorn, red beans and cheese",
     "dishVariantPrice": 22,
     "dishVariantName": ""
   },
@@ -240,9 +240,9 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "SAVOURY CREPES",
-    "sectionDescription": "Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem",
-    "dishName": "Naleśniki “indyjskie” z kurczakiem w sosie curry",
-    "dishDescription": "Pierś kurczaka, ananas, szpinak, śmietana",
+    "sectionDescription": "Each portion - 2 pieces You can choose two different fillings All crepes go with mini salad and chives",
+    "dishName": "Indian crepes with chicken and curry sauce",
+    "dishDescription": "Crepes with Indian style curry chicken with pineapple, spinach and cream",
     "dishVariantPrice": 22,
     "dishVariantName": ""
   },
@@ -251,9 +251,9 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "SAVOURY CREPES",
-    "sectionDescription": "Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem",
-    "dishName": "Naleśniki a'la Carbonara z cukinią",
-    "dishDescription": "Boczek, cebula, cukinia, śmietana, zielona pietruszka",
+    "sectionDescription": "Each portion - 2 pieces You can choose two different fillings All crepes go with mini salad and chives",
+    "dishName": "Crepes a'la Carbonara with courgette",
+    "dishDescription": "Crepes a la Carbonara with bacon, onion, courgette, cream and green parsley",
     "dishVariantPrice": 22,
     "dishVariantName": ""
   },
@@ -262,9 +262,9 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "SAVOURY CREPES",
-    "sectionDescription": "Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem",
-    "dishName": "Naleśniki z duszonymi na maśle porami",
-    "dishDescription": "Marchewką i pieczarkami oraz włoskimi orzechami",
+    "sectionDescription": "Each portion - 2 pieces You can choose two different fillings All crepes go with mini salad and chives",
+    "dishName": "Crepes with braised in butter leek",
+    "dishDescription": "Carrot, mushroom and walnut",
     "dishVariantPrice": 22,
     "dishVariantName": ""
   },
@@ -273,9 +273,9 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "SAVOURY CREPES",
-    "sectionDescription": "Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem",
-    "dishName": "Naleśniki ze szpinakiem",
-    "dishDescription": "Z dodatkiem czosnku, śmietanki i sera Grana Padano",
+    "sectionDescription": "Each portion - 2 pieces You can choose two different fillings All crepes go with mini salad and chives",
+    "dishName": "Crepes with spinach",
+    "dishDescription": "Garlic, cream and Grana Padano cheese",
     "dishVariantPrice": 22,
     "dishVariantName": ""
   },
@@ -284,9 +284,9 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "SAVOURY CREPES",
-    "sectionDescription": "Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem",
-    "dishName": "Naleśniki z duszonymi boczniakami",
-    "dishDescription": "Pomidorami i cebulką z dodatkiem wina, czosnku i śmietanki",
+    "sectionDescription": "Each portion - 2 pieces You can choose two different fillings All crepes go with mini salad and chives",
+    "dishName": "Crepes with braised oyster mushroom",
+    "dishDescription": "tomato, onion, wine, garlic and cream",
     "dishVariantPrice": 22,
     "dishVariantName": ""
   },
@@ -295,158 +295,158 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "SAVOURY CREPES",
-    "sectionDescription": "Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem",
-    "dishName": "Sosy",
+    "sectionDescription": "Each portion - 2 pieces You can choose two different fillings All crepes go with mini salad and chives",
+    "dishName": "Sauces",
     "dishVariantPrice": 2,
-    "dishVariantName": "Czosnkowo-ziołowy"
+    "dishVariantName": "Garic and herb"
   },
   {
     "index": 30,
     "language": "en",
     "restaurant": "kolanko",
     "section": "SAVOURY CREPES",
-    "sectionDescription": "Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem",
-    "dishName": "Sosy",
+    "sectionDescription": "Each portion - 2 pieces You can choose two different fillings All crepes go with mini salad and chives",
+    "dishName": "Sauces",
     "dishVariantPrice": 2,
-    "dishVariantName": "Majonezowo-paprykowy"
+    "dishVariantName": "Mayonnaise and red pepper sauce"
   },
   {
     "index": 31,
     "language": "en",
     "restaurant": "kolanko",
     "section": "SAVOURY CREPES",
-    "sectionDescription": "Każda porcja naleśników to 2 sztuki (Można wybrać dwa różne nadzienia). Naleśniki podajemy z mini sałatką i szczypiorkiem",
-    "dishName": "Sosy",
+    "sectionDescription": "Each portion - 2 pieces You can choose two different fillings All crepes go with mini salad and chives",
+    "dishName": "Sauces",
     "dishVariantPrice": 2,
-    "dishVariantName": "Śmietana"
+    "dishVariantName": "Saured cream"
   },
   {
     "index": 32,
     "language": "en",
     "restaurant": "kolanko",
     "section": "SWEET CREPES",
-    "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
-    "dishName": "Nasze propozycje",
+    "sectionDescription": "Each  portion - 2 pieces. To each crepe you can choose three different fillings - vanilla custard, cinnamon apples, chocolate sauce, whipped cream, vanilla fromage, banana, toffee sauce, nuts and dried fruit, semolina pudding, cherries, raspberry mousse, roasted almond flakes, natural yoghurt, peach, mango mousse, roasted sunflower and pumpkin seeds, forrest fruit, coconut, sesame",
+    "dishName": "We recommend",
     "dishVariantPrice": 18,
-    "dishVariantName": "Budyń / jabłka / sos czekoladowy"
+    "dishVariantName": "Vanilla pudding / apples / chocolate sauce"
   },
   {
     "index": 33,
     "language": "en",
     "restaurant": "kolanko",
     "section": "SWEET CREPES",
-    "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
-    "dishName": "Nasze propozycje",
+    "sectionDescription": "Each  portion - 2 pieces. To each crepe you can choose three different fillings - vanilla custard, cinnamon apples, chocolate sauce, whipped cream, vanilla fromage, banana, toffee sauce, nuts and dried fruit, semolina pudding, cherries, raspberry mousse, roasted almond flakes, natural yoghurt, peach, mango mousse, roasted sunflower and pumpkin seeds, forrest fruit, coconut, sesame",
+    "dishName": "We recommend",
     "dishVariantPrice": 18,
-    "dishVariantName": "Jabłka / sos toffi / sezam"
+    "dishVariantName": "Apples / toffee sauce /sesame"
   },
   {
     "index": 34,
     "language": "en",
     "restaurant": "kolanko",
     "section": "SWEET CREPES",
-    "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
-    "dishName": "Nasze propozycje",
+    "sectionDescription": "Each  portion - 2 pieces. To each crepe you can choose three different fillings - vanilla custard, cinnamon apples, chocolate sauce, whipped cream, vanilla fromage, banana, toffee sauce, nuts and dried fruit, semolina pudding, cherries, raspberry mousse, roasted almond flakes, natural yoghurt, peach, mango mousse, roasted sunflower and pumpkin seeds, forrest fruit, coconut, sesame",
+    "dishName": "We recommend",
     "dishVariantPrice": 18,
-    "dishVariantName": "Jogurt / brzoskwinia / mus mango"
+    "dishVariantName": "Yoghurt / peach / mango mousse"
   },
   {
     "index": 35,
     "language": "en",
     "restaurant": "kolanko",
     "section": "SWEET CREPES",
-    "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
-    "dishName": "Nasze propozycje",
+    "sectionDescription": "Each  portion - 2 pieces. To each crepe you can choose three different fillings - vanilla custard, cinnamon apples, chocolate sauce, whipped cream, vanilla fromage, banana, toffee sauce, nuts and dried fruit, semolina pudding, cherries, raspberry mousse, roasted almond flakes, natural yoghurt, peach, mango mousse, roasted sunflower and pumpkin seeds, forrest fruit, coconut, sesame",
+    "dishName": "We recommend",
     "dishVariantPrice": 18,
-    "dishVariantName": "Banan / sos czekoladowy / słonecznik i dynia"
+    "dishVariantName": "Banana / chocolate sauce / sunflower and pumpkin seeds"
   },
   {
     "index": 36,
     "language": "en",
     "restaurant": "kolanko",
     "section": "SWEET CREPES",
-    "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
-    "dishName": "Nasze propozycje",
+    "sectionDescription": "Each  portion - 2 pieces. To each crepe you can choose three different fillings - vanilla custard, cinnamon apples, chocolate sauce, whipped cream, vanilla fromage, banana, toffee sauce, nuts and dried fruit, semolina pudding, cherries, raspberry mousse, roasted almond flakes, natural yoghurt, peach, mango mousse, roasted sunflower and pumpkin seeds, forrest fruit, coconut, sesame",
+    "dishName": "We recommend",
     "dishVariantPrice": 18,
-    "dishVariantName": "Kaszka manna / wiśnie"
+    "dishVariantName": "Semolina pudding / cherries"
   },
   {
     "index": 37,
     "language": "en",
     "restaurant": "kolanko",
     "section": "SWEET CREPES",
-    "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
-    "dishName": "Nasze propozycje",
+    "sectionDescription": "Each  portion - 2 pieces. To each crepe you can choose three different fillings - vanilla custard, cinnamon apples, chocolate sauce, whipped cream, vanilla fromage, banana, toffee sauce, nuts and dried fruit, semolina pudding, cherries, raspberry mousse, roasted almond flakes, natural yoghurt, peach, mango mousse, roasted sunflower and pumpkin seeds, forrest fruit, coconut, sesame",
+    "dishName": "We recommend",
     "dishVariantPrice": 18,
-    "dishVariantName": "Serek / owoce jagodowe"
+    "dishVariantName": "Vanilla fromage / forest fruit"
   },
   {
     "index": 38,
     "language": "en",
     "restaurant": "kolanko",
     "section": "SWEET CREPES",
-    "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
-    "dishName": "Nasze propozycje",
+    "sectionDescription": "Each  portion - 2 pieces. To each crepe you can choose three different fillings - vanilla custard, cinnamon apples, chocolate sauce, whipped cream, vanilla fromage, banana, toffee sauce, nuts and dried fruit, semolina pudding, cherries, raspberry mousse, roasted almond flakes, natural yoghurt, peach, mango mousse, roasted sunflower and pumpkin seeds, forrest fruit, coconut, sesame",
+    "dishName": "We recommend",
     "dishVariantPrice": 18,
-    "dishVariantName": "Budyń / wiśnie / sos czekoladowy"
+    "dishVariantName": "Vanilla pudding / cherries / chocolate sauce"
   },
   {
     "index": 39,
     "language": "en",
     "restaurant": "kolanko",
     "section": "SWEET CREPES",
-    "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
-    "dishName": "Nasze propozycje",
+    "sectionDescription": "Each  portion - 2 pieces. To each crepe you can choose three different fillings - vanilla custard, cinnamon apples, chocolate sauce, whipped cream, vanilla fromage, banana, toffee sauce, nuts and dried fruit, semolina pudding, cherries, raspberry mousse, roasted almond flakes, natural yoghurt, peach, mango mousse, roasted sunflower and pumpkin seeds, forrest fruit, coconut, sesame",
+    "dishName": "We recommend",
     "dishVariantPrice": 18,
-    "dishVariantName": "Kaszka / jabłka / bakalie"
+    "dishVariantName": "Semolina pudding / apples / nuts and dried fruit"
   },
   {
     "index": 40,
     "language": "en",
     "restaurant": "kolanko",
     "section": "SWEET CREPES",
-    "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
-    "dishName": "Nasze propozycje",
+    "sectionDescription": "Each  portion - 2 pieces. To each crepe you can choose three different fillings - vanilla custard, cinnamon apples, chocolate sauce, whipped cream, vanilla fromage, banana, toffee sauce, nuts and dried fruit, semolina pudding, cherries, raspberry mousse, roasted almond flakes, natural yoghurt, peach, mango mousse, roasted sunflower and pumpkin seeds, forrest fruit, coconut, sesame",
+    "dishName": "We recommend",
     "dishVariantPrice": 18,
-    "dishVariantName": "Serek / mus malinowy / bita śmietana"
+    "dishVariantName": "Vanilla fromage / raspberry mousse / whipped cream"
   },
   {
     "index": 41,
     "language": "en",
     "restaurant": "kolanko",
     "section": "SWEET CREPES",
-    "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
-    "dishName": "Nasze propozycje",
+    "sectionDescription": "Each  portion - 2 pieces. To each crepe you can choose three different fillings - vanilla custard, cinnamon apples, chocolate sauce, whipped cream, vanilla fromage, banana, toffee sauce, nuts and dried fruit, semolina pudding, cherries, raspberry mousse, roasted almond flakes, natural yoghurt, peach, mango mousse, roasted sunflower and pumpkin seeds, forrest fruit, coconut, sesame",
+    "dishName": "We recommend",
     "dishVariantPrice": 18,
-    "dishVariantName": "Banan / sos toffi / bakalie"
+    "dishVariantName": "Banana / toffee sauce / nuts and dried fruit"
   },
   {
     "index": 42,
     "language": "en",
     "restaurant": "kolanko",
     "section": "SWEET CREPES",
-    "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
-    "dishName": "Nasze propozycje",
+    "sectionDescription": "Each  portion - 2 pieces. To each crepe you can choose three different fillings - vanilla custard, cinnamon apples, chocolate sauce, whipped cream, vanilla fromage, banana, toffee sauce, nuts and dried fruit, semolina pudding, cherries, raspberry mousse, roasted almond flakes, natural yoghurt, peach, mango mousse, roasted sunflower and pumpkin seeds, forrest fruit, coconut, sesame",
+    "dishName": "We recommend",
     "dishVariantPrice": 18,
-    "dishVariantName": "Budyń / owoce jagodowe / kokos"
+    "dishVariantName": "Vanilla pudding / forest fruit / coconut"
   },
   {
     "index": 43,
     "language": "en",
     "restaurant": "kolanko",
     "section": "SWEET CREPES",
-    "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
-    "dishName": "Nasze propozycje",
+    "sectionDescription": "Each  portion - 2 pieces. To each crepe you can choose three different fillings - vanilla custard, cinnamon apples, chocolate sauce, whipped cream, vanilla fromage, banana, toffee sauce, nuts and dried fruit, semolina pudding, cherries, raspberry mousse, roasted almond flakes, natural yoghurt, peach, mango mousse, roasted sunflower and pumpkin seeds, forrest fruit, coconut, sesame",
+    "dishName": "We recommend",
     "dishVariantPrice": 18,
-    "dishVariantName": "Kaszka manna / mus mango / migdały"
+    "dishVariantName": "Semolina pudding / mango mousse / almond flakes"
   },
   {
     "index": 44,
     "language": "en",
     "restaurant": "kolanko",
     "section": "SWEET CREPES",
-    "sectionDescription": "Każda porcja naleśników to 2 sztuki. Zachęcamy do samodzielnego komponowania dodatków. Do każdego naleśnika można wybrać 3 różne dodatki - budyń waniliowy, jabłka z cynamonem, sos czekoladowy, bita śmietana, serek waniliowy, banan, sos, toffi, bakalie (orzechy, rodzynki, daktyle), kaszka manna, wiśnie, mus malinowy, prażone płatki migdałów, jogurt naturalny, brzoskwinia, mus mango, prażone nasiona słonecznika i dyni, owoce jagodowe, kokos, sezam",
-    "dishName": "Gałka lodów waniliowych",
+    "sectionDescription": "Each  portion - 2 pieces. To each crepe you can choose three different fillings - vanilla custard, cinnamon apples, chocolate sauce, whipped cream, vanilla fromage, banana, toffee sauce, nuts and dried fruit, semolina pudding, cherries, raspberry mousse, roasted almond flakes, natural yoghurt, peach, mango mousse, roasted sunflower and pumpkin seeds, forrest fruit, coconut, sesame",
+    "dishName": "One scoop of ice cream",
     "dishVariantPrice": 3,
     "dishVariantName": ""
   },
@@ -455,8 +455,8 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "CAKES",
-    "dishName": "Ciasto czekoladowe",
-    "dishDescription": "Podawane na ciepło z sosem z malin, jagód i porzeczek",
+    "dishName": "Hot chocolate cake",
+    "dishDescription": "With raspberry, blueberry and cranberry sauce",
     "dishVariantPrice": 14,
     "dishVariantName": ""
   },
@@ -465,8 +465,8 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "CAKES",
-    "dishName": "Francuska tarta Tatin",
-    "dishDescription": "Ze śliwkami pieczonymi w karmelu i winie, podana z lodami waniliowymi",
+    "dishName": "Tarte Tatin",
+    "dishDescription": "With plums, caramel and wine served with vanilla ice cream",
     "dishVariantPrice": 14,
     "dishVariantName": ""
   },
@@ -475,8 +475,8 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "CAKES",
-    "dishName": "Szarlotka",
-    "dishDescription": "Na kruchym cieście podawana na ciepło z sosem angielskim i gałką lodów waniliowych",
+    "dishName": "Hot apple pie",
+    "dishDescription": "With creme anglaise and vanilla ice crea",
     "dishVariantPrice": 14,
     "dishVariantName": ""
   },
@@ -485,89 +485,89 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "HOT CHOCOLATES",
-    "dishName": "Gorąca czekolada z bitą śmietaną",
+    "dishName": "Hot chocolate with whipped cream",
     "dishVariantPrice": 9,
-    "dishVariantName": "Zwykła"
+    "dishVariantName": "Plain"
   },
   {
     "index": 49,
     "language": "en",
     "restaurant": "kolanko",
     "section": "HOT CHOCOLATES",
-    "dishName": "Gorąca czekolada z bitą śmietaną",
+    "dishName": "Hot chocolate with whipped cream",
     "dishVariantPrice": 9.5,
-    "dishVariantName": "Z chili"
+    "dishVariantName": "With chili"
   },
   {
     "index": 50,
     "language": "en",
     "restaurant": "kolanko",
     "section": "HOT CHOCOLATES",
-    "dishName": "Gorąca czekolada z bitą śmietaną",
+    "dishName": "Hot chocolate with whipped cream",
     "dishVariantPrice": 9.5,
-    "dishVariantName": "Pomarańczowa"
+    "dishVariantName": "Orange"
   },
   {
     "index": 51,
     "language": "en",
     "restaurant": "kolanko",
     "section": "HOT CHOCOLATES",
-    "dishName": "Gorąca czekolada z bitą śmietaną",
+    "dishName": "Hot chocolate with whipped cream",
     "dishVariantPrice": 9.5,
-    "dishVariantName": "Migdałowa"
+    "dishVariantName": "Almond"
   },
   {
     "index": 52,
     "language": "en",
     "restaurant": "kolanko",
     "section": "HOT CHOCOLATES",
-    "dishName": "Gorąca czekolada z bitą śmietaną",
+    "dishName": "Hot chocolate with whipped cream",
     "dishVariantPrice": 9.5,
-    "dishVariantName": "Kokosowa"
+    "dishVariantName": "Coconut"
   },
   {
     "index": 53,
     "language": "en",
     "restaurant": "kolanko",
     "section": "HOT CHOCOLATES",
-    "dishName": "Gorąca czekolada z bitą śmietaną",
+    "dishName": "Hot chocolate with whipped cream",
     "dishVariantPrice": 9.5,
-    "dishVariantName": "Orzechowa"
+    "dishVariantName": "Hazelnut"
   },
   {
     "index": 54,
     "language": "en",
     "restaurant": "kolanko",
     "section": "HOT CHOCOLATES",
-    "dishName": "Gorąca czekolada z bitą śmietaną",
+    "dishName": "Hot chocolate with whipped cream",
     "dishVariantPrice": 10,
-    "dishVariantName": "Z advocatem"
+    "dishVariantName": "With advcat"
   },
   {
     "index": 55,
     "language": "en",
     "restaurant": "kolanko",
     "section": "HOT CHOCOLATES",
-    "dishName": "Gorąca czekolada z bitą śmietaną",
+    "dishName": "Hot chocolate with whipped cream",
     "dishVariantPrice": 12,
-    "dishVariantName": "Z whisky"
+    "dishVariantName": "With whisky"
   },
   {
     "index": 56,
     "language": "en",
     "restaurant": "kolanko",
     "section": "HOT CHOCOLATES",
-    "dishName": "Gorąca czekolada z bitą śmietaną",
+    "dishName": "Hot chocolate with whipped cream",
     "dishVariantPrice": 12,
-    "dishVariantName": "Z rumem"
+    "dishVariantName": "With rum"
   },
   {
     "index": 57,
     "language": "en",
     "restaurant": "kolanko",
     "section": "HOT CHOCOLATES",
-    "dishName": "Kakao z bitą śmietaną",
-    "dishDescription": "Można również zamówić kakao na mleku bezlaktozowym lub sojowym",
+    "dishName": "Cocoa with whipped cream",
+    "dishDescription": "Also lactose free or soya milk cocoa",
     "dishVariantPrice": 8,
     "dishVariantName": ""
   },
@@ -576,8 +576,8 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "SMOOTHIE",
-    "sectionDescription": "Do niektórych smoothie dodajemy cukier",
-    "dishName": "Mango lassi - jogurt, puree z mango, kardamon",
+    "sectionDescription": "Some smoothies go with sugar",
+    "dishName": "Mango lassi - yoghurt, mango puree, cardamom",
     "dishVariantPrice": 13,
     "dishVariantName": ""
   },
@@ -586,7 +586,7 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "TEA",
-    "dishName": "Czarna Lipton",
+    "dishName": "Black Lipton",
     "dishVariantPrice": 6,
     "dishVariantName": "Yellow Label"
   },
@@ -595,7 +595,7 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "TEA",
-    "dishName": "Czarna Lipton",
+    "dishName": "Black Lipton",
     "dishVariantPrice": 6,
     "dishVariantName": "Earl Grey"
   },
@@ -604,135 +604,135 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "TEA",
-    "dishName": "Czarna Lipton",
+    "dishName": "Black Lipton",
     "dishVariantPrice": 6,
-    "dishVariantName": "Cytrynowa"
+    "dishVariantName": "Lemon"
   },
   {
     "index": 62,
     "language": "en",
     "restaurant": "kolanko",
     "section": "TEA",
-    "dishName": "Czarna Lipton",
+    "dishName": "Black Lipton",
     "dishVariantPrice": 6,
-    "dishVariantName": "Porzeczkowa"
+    "dishVariantName": "Black currant"
   },
   {
     "index": 63,
     "language": "en",
     "restaurant": "kolanko",
     "section": "TEA",
-    "dishName": "Czarna Lipton",
+    "dishName": "Black Lipton",
     "dishVariantPrice": 6,
-    "dishVariantName": "Owoce leśne"
+    "dishVariantName": "Fores fruit"
   },
   {
     "index": 64,
     "language": "en",
     "restaurant": "kolanko",
     "section": "TEA",
-    "dishName": "Czarna Lipton",
+    "dishName": "Black Lipton",
     "dishVariantPrice": 6,
-    "dishVariantName": "Miętowa"
+    "dishVariantName": "Min"
   },
   {
     "index": 65,
     "language": "en",
     "restaurant": "kolanko",
     "section": "TEA",
-    "dishName": "Czarna Lipton",
+    "dishName": "Black Lipton",
     "dishVariantPrice": 6,
-    "dishVariantName": "Truskawkowa"
+    "dishVariantName": "Strawberry"
   },
   {
     "index": 66,
     "language": "en",
     "restaurant": "kolanko",
     "section": "TEA",
-    "dishName": "Czarna Lipton",
+    "dishName": "Black Lipton",
     "dishVariantPrice": 6,
-    "dishVariantName": "Dzika róża"
+    "dishVariantName": "Wild rose"
   },
   {
     "index": 67,
     "language": "en",
     "restaurant": "kolanko",
     "section": "TEA",
-    "dishName": "Zielona Lipton",
+    "dishName": "Green Lipton",
     "dishVariantPrice": 6,
-    "dishVariantName": "Zwykła"
+    "dishVariantName": "Plain"
   },
   {
     "index": 68,
     "language": "en",
     "restaurant": "kolanko",
     "section": "TEA",
-    "dishName": "Zielona Lipton",
+    "dishName": "Green Lipton",
     "dishVariantPrice": 6,
-    "dishVariantName": "Miętowa"
+    "dishVariantName": "Mint"
   },
   {
     "index": 69,
     "language": "en",
     "restaurant": "kolanko",
     "section": "TEA",
-    "dishName": "Zielona Lipton",
+    "dishName": "Green Lipton",
     "dishVariantPrice": 6,
-    "dishVariantName": "Orientalna"
+    "dishVariantName": "Orient"
   },
   {
     "index": 70,
     "language": "en",
     "restaurant": "kolanko",
     "section": "TEA",
-    "dishName": "Liściasta czarna",
+    "dishName": "Black leaf",
     "dishVariantPrice": 10,
-    "dishVariantName": "Czarna Nilgiri"
+    "dishVariantName": "Black Nilgiri"
   },
   {
     "index": 71,
     "language": "en",
     "restaurant": "kolanko",
     "section": "TEA",
-    "dishName": "Liściasta czarna",
+    "dishName": "Black leaf",
     "dishVariantPrice": 10,
-    "dishVariantName": "Świąteczna - z jabłkami i cynamonem"
+    "dishVariantName": "Apple and cinnamon black tea"
   },
   {
     "index": 72,
     "language": "en",
     "restaurant": "kolanko",
     "section": "TEA",
-    "dishName": "Liściasta czarna",
+    "dishName": "Black leaf",
     "dishVariantPrice": 10,
-    "dishVariantName": "Earl Grey z płatkami róży i trawą cytrynową"
+    "dishVariantName": "Earl Grey with rose and lemon grass"
   },
   {
     "index": 73,
     "language": "en",
     "restaurant": "kolanko",
     "section": "TEA",
-    "dishName": "Liściasta czarna",
+    "dishName": "Black leaf",
     "dishVariantPrice": 10,
-    "dishVariantName": "Chai Masala - z cynamonem, kardamonem, goździkami, pieprzem (podajemy z mlekiem)"
+    "dishVariantName": "With cinnamon, cardamon, cloves, pepper (with milk served on the side)"
   },
   {
     "index": 74,
     "language": "en",
     "restaurant": "kolanko",
     "section": "TEA",
-    "dishName": "Liściasta czarna",
+    "dishName": "Black leaf",
     "dishVariantPrice": 10,
-    "dishVariantName": "Szwarcwald - czarna herbata z borówkami, czarnym bzem, wiśnią, różą i hibiskusem"
+    "dishVariantName": "Black tea with cowberry, elder, cherries, rose and hibiscus"
   },
   {
     "index": 75,
     "language": "en",
     "restaurant": "kolanko",
     "section": "TEA",
-    "dishName": "Liściasta czarna",
+    "dishName": "Black leaf",
     "dishVariantPrice": 10,
-    "dishVariantName": "Rainforest - czarna herbata z papają, mango, ananasem, mandarynką i hibiskusem"
+    "dishVariantName": "Rainforest - with papaya, mango, mandarin, pineapple and hibiscus"
   },
   {
     "index": 76,
@@ -741,7 +741,7 @@
     "section": "TEA",
     "dishName": "Rooibos",
     "dishVariantPrice": 10,
-    "dishVariantName": "Letnie orzeźwienie- rooibos pomarańczowo - pigwowa z płatkami słonecznika, skórką pomarańczową i pigwą"
+    "dishVariantName": "Orange, sunflower, quinc"
   },
   {
     "index": 77,
@@ -750,78 +750,78 @@
     "section": "TEA",
     "dishName": "Rooibos",
     "dishVariantPrice": 10,
-    "dishVariantName": "Rooibos pomarańczowo-pistacjowa - ze skórką pomarańczy, pistacjami, płatkami migdałowymi i czerwonym pieprzem"
+    "dishVariantName": "Rooibos with orange peel, pistachios, almond, red pepper"
   },
   {
     "index": 78,
     "language": "en",
     "restaurant": "kolanko",
     "section": "TEA",
-    "dishName": "Ziołowa",
+    "dishName": "Herbal",
     "dishVariantPrice": 8,
-    "dishVariantName": "Mięta liściasta"
+    "dishVariantName": "Mint tea"
   },
   {
     "index": 79,
     "language": "en",
     "restaurant": "kolanko",
     "section": "TEA",
-    "dishName": "Ziołowa",
+    "dishName": "Herbal",
     "dishVariantPrice": 8,
-    "dishVariantName": "Trawa cytrynowa"
+    "dishVariantName": "Lemon grass"
   },
   {
     "index": 80,
     "language": "en",
     "restaurant": "kolanko",
     "section": "TEA",
-    "dishName": "Liściasta zielona",
+    "dishName": "Leaf green",
     "dishVariantPrice": 10,
-    "dishVariantName": "Zielona Yunnan"
+    "dishVariantName": "Green Yunnan"
   },
   {
     "index": 81,
     "language": "en",
     "restaurant": "kolanko",
     "section": "TEA",
-    "dishName": "Liściasta zielona",
+    "dishName": "Leaf green",
     "dishVariantPrice": 10,
-    "dishVariantName": "Sencha Sakura - wiśniowo-marcepanowa z płatkami róży"
+    "dishVariantName": "Sencha with cherry, marzipan and rose petals"
   },
   {
     "index": 82,
     "language": "en",
     "restaurant": "kolanko",
     "section": "TEA",
-    "dishName": "Liściasta zielona",
+    "dishName": "Leaf green",
     "dishVariantPrice": 10,
-    "dishVariantName": "Sencha brzoskwiniowo - ananasowa z płatkami słonecznika"
+    "dishVariantName": "Sencha with peach, pineapple and sunflower petals"
   },
   {
     "index": 83,
     "language": "en",
     "restaurant": "kolanko",
     "section": "TEA",
-    "dishName": "Liściasta zielona",
+    "dishName": "Leaf green",
     "dishVariantPrice": 10,
-    "dishVariantName": "Gunpowder malinowo - porzeczkowa z płatkami bławatka i ostu"
+    "dishVariantName": "Gunpowder raspberry and redcurrant gunpowder"
   },
   {
     "index": 84,
     "language": "en",
     "restaurant": "kolanko",
     "section": "TEA",
-    "dishName": "Liściasta zielona",
+    "dishName": "Leaf green",
     "dishVariantPrice": 10,
-    "dishVariantName": "Zielona jaśminowa"
+    "dishVariantName": "Jasmine green"
   },
   {
     "index": 85,
     "language": "en",
     "restaurant": "kolanko",
     "section": "TEA",
-    "dishName": "Mieszanka herbaty czarnej i zelonej",
-    "dishDescription": "Maharani - czarna i zielona herbata z papają, płatkami ostu i cytrusami",
+    "dishName": "Black and green leaf tea",
+    "dishDescription": "Maharani - black and green tea with papaya, thistle petals, citrus",
     "dishVariantPrice": 10,
     "dishVariantName": ""
   },
@@ -830,52 +830,52 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "TEA",
-    "dishName": "Herbaty owocowe",
+    "dishName": "Fruit tea",
     "dishVariantPrice": 10,
-    "dishVariantName": "Kaledonia - rodzynki, czarny bez, czerwona porzeczka, wiśnie, borówki, hibiskus, płatki róży"
+    "dishVariantName": "Kaledonia - raisins, elder, redcurrant, cherries, cowberry, hibiscus, rose"
   },
   {
     "index": 87,
     "language": "en",
     "restaurant": "kolanko",
     "section": "TEA",
-    "dishName": "Herbaty owocowe",
+    "dishName": "Fruit tea",
     "dishVariantPrice": 10,
-    "dishVariantName": "Kalifornia - ananas, papaja, mango, rodzynki, róża, hibiskus"
+    "dishVariantName": "Kalifornia - pineapple, papaya, mango, raisins, rose, hibiscus"
   },
   {
     "index": 88,
     "language": "en",
     "restaurant": "kolanko",
     "section": "TEA",
-    "dishName": "Herbaty owocowe",
+    "dishName": "Fruit tea",
     "dishVariantPrice": 10,
-    "dishVariantName": "Bora-Bora - papaja, rodzynki, czarny bez, porzeczka, malina, truskawka, jabłko, hibiskus"
+    "dishVariantName": "Bora-Bora - papaya, raisins, redcurrant, raspberry, strawberry, apple, hibiscus"
   },
   {
     "index": 89,
     "language": "en",
     "restaurant": "kolanko",
     "section": "TEA",
-    "dishName": "Herbaty PU-ERH",
+    "dishName": "PU-ERH tea",
     "dishVariantPrice": 10,
-    "dishVariantName": "PU-ERH exotic - z papają, ananasem, mango, rodzynkami i hibiskusem"
+    "dishVariantName": "PU-ERH exotic - with papaya, pineapple, mango, raisins and hibiscus"
   },
   {
     "index": 90,
     "language": "en",
     "restaurant": "kolanko",
     "section": "TEA",
-    "dishName": "Herbaty PU-ERH",
+    "dishName": "PU-ERH tea",
     "dishVariantPrice": 10,
-    "dishVariantName": "PU-ERH exotic - z papają, ananasem, mango, rodzynkami i hibiskusem"
+    "dishVariantName": "PU-ERH exotic - with candied cranberries and orange"
   },
   {
     "index": 91,
     "language": "en",
     "restaurant": "kolanko",
     "section": "COFFEE",
-    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
+    "sectionDescription": "We recommend decaffeinated coffee and lactose free or soya milk",
     "dishName": "Espresso 30ml",
     "dishVariantPrice": 7,
     "dishVariantName": ""
@@ -885,8 +885,8 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "COFFEE",
-    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
-    "dishName": "Podwójne espresso 60ml",
+    "sectionDescription": "We recommend decaffeinated coffee and lactose free or soya milk",
+    "dishName": "Double espresso 60ml",
     "dishVariantPrice": 9,
     "dishVariantName": ""
   },
@@ -895,8 +895,8 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "COFFEE",
-    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
-    "dishName": "Espresso macchiato (espresso z mleczną pianką)",
+    "sectionDescription": "We recommend decaffeinated coffee and lactose free or soya milk",
+    "dishName": "Espresso with a little bit of milk foam",
     "dishVariantPrice": 7,
     "dishVariantName": ""
   },
@@ -905,8 +905,8 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "COFFEE",
-    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
-    "dishName": "Espresso con panna (espresso z bitą śmietaną)",
+    "sectionDescription": "We recommend decaffeinated coffee and lactose free or soya milk",
+    "dishName": "Espresso with whipped cream",
     "dishVariantPrice": 9,
     "dishVariantName": ""
   },
@@ -915,8 +915,8 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "COFFEE",
-    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
-    "dishName": "Espresso Romano (z odrobiną skórki cytrynowej)",
+    "sectionDescription": "We recommend decaffeinated coffee and lactose free or soya milk",
+    "dishName": "Espresso with lemon zest",
     "dishVariantPrice": 7.5,
     "dishVariantName": ""
   },
@@ -925,8 +925,8 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "COFFEE",
-    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
-    "dishName": "Kawa czarna 180ml",
+    "sectionDescription": "We recommend decaffeinated coffee and lactose free or soya milk",
+    "dishName": "Black coffee 180ml",
     "dishVariantPrice": 9,
     "dishVariantName": ""
   },
@@ -935,8 +935,8 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "COFFEE",
-    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
-    "dishName": "Kawa bała 180ml",
+    "sectionDescription": "We recommend decaffeinated coffee and lactose free or soya milk",
+    "dishName": "White coffee 180ml",
     "dishVariantPrice": 9.5,
     "dishVariantName": ""
   },
@@ -945,8 +945,8 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "COFFEE",
-    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
-    "dishName": "Kawa biała XL 320ml",
+    "sectionDescription": "We recommend decaffeinated coffee and lactose free or soya milk",
+    "dishName": "White coffee XL 320ml",
     "dishVariantPrice": 10.5,
     "dishVariantName": ""
   },
@@ -955,28 +955,28 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "COFFEE",
-    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
+    "sectionDescription": "We recommend decaffeinated coffee and lactose free or soya milk",
     "dishName": "Cappuccino",
     "dishVariantPrice": 10,
-    "dishVariantName": "Małe 210ml"
+    "dishVariantName": "Small 210ml"
   },
   {
     "index": 100,
     "language": "en",
     "restaurant": "kolanko",
     "section": "COFFEE",
-    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
+    "sectionDescription": "We recommend decaffeinated coffee and lactose free or soya milk",
     "dishName": "Cappuccino",
     "dishVariantPrice": 11,
-    "dishVariantName": "Duże 340ml"
+    "dishVariantName": "Large 340ml"
   },
   {
     "index": 101,
     "language": "en",
     "restaurant": "kolanko",
     "section": "COFFEE",
-    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
-    "dishName": "Kawa latte 260ml",
+    "sectionDescription": "We recommend decaffeinated coffee and lactose free or soya milk",
+    "dishName": "Latte 260ml",
     "dishVariantPrice": 11,
     "dishVariantName": ""
   },
@@ -985,8 +985,8 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "COFFEE",
-    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
-    "dishName": "Kawa latte z miodem",
+    "sectionDescription": "We recommend decaffeinated coffee and lactose free or soya milk",
+    "dishName": "Latte with honey",
     "dishVariantPrice": 13,
     "dishVariantName": "260ml"
   },
@@ -995,58 +995,58 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "COFFEE",
-    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
-    "dishName": "Kawa latte macchiato 260ml",
+    "sectionDescription": "We recommend decaffeinated coffee and lactose free or soya milk",
+    "dishName": "Latte macchiato 260ml",
     "dishVariantPrice": 13,
-    "dishVariantName": "Waniliowa"
+    "dishVariantName": "Vanilla"
   },
   {
     "index": 104,
     "language": "en",
     "restaurant": "kolanko",
     "section": "COFFEE",
-    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
-    "dishName": "Kawa latte macchiato 260ml",
+    "sectionDescription": "We recommend decaffeinated coffee and lactose free or soya milk",
+    "dishName": "Latte macchiato 260ml",
     "dishVariantPrice": 13,
-    "dishVariantName": "Karmelowa"
+    "dishVariantName": "Caramel"
   },
   {
     "index": 105,
     "language": "en",
     "restaurant": "kolanko",
     "section": "COFFEE",
-    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
-    "dishName": "Kawa latte macchiato 260ml",
+    "sectionDescription": "We recommend decaffeinated coffee and lactose free or soya milk",
+    "dishName": "Latte macchiato 260ml",
     "dishVariantPrice": 13,
-    "dishVariantName": "Kokosowa"
+    "dishVariantName": "Coconut"
   },
   {
     "index": 106,
     "language": "en",
     "restaurant": "kolanko",
     "section": "COFFEE",
-    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
-    "dishName": "Kawa latte macchiato 260ml",
+    "sectionDescription": "We recommend decaffeinated coffee and lactose free or soya milk",
+    "dishName": "Latte macchiato 260ml",
     "dishVariantPrice": 13,
-    "dishVariantName": "Migdałowa"
+    "dishVariantName": "Almond"
   },
   {
     "index": 107,
     "language": "en",
     "restaurant": "kolanko",
     "section": "COFFEE",
-    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
-    "dishName": "Kawa latte macchiato 260ml",
+    "sectionDescription": "We recommend decaffeinated coffee and lactose free or soya milk",
+    "dishName": "Latte macchiato 260ml",
     "dishVariantPrice": 13,
-    "dishVariantName": "Orzechowa"
+    "dishVariantName": "Hazelnut"
   },
   {
     "index": 108,
     "language": "en",
     "restaurant": "kolanko",
     "section": "COFFEE",
-    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
-    "dishName": "Mocha (z mlekiem, czekoladą i bitą śmietaną) 260ml",
+    "sectionDescription": "We recommend decaffeinated coffee and lactose free or soya milk",
+    "dishName": "Mocha (coffee with milk, chocolate and whipped cream) 260ml",
     "dishVariantPrice": 13,
     "dishVariantName": ""
   },
@@ -1055,8 +1055,8 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "COFFEE",
-    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
-    "dishName": "Kawa mrożona z bitą śmietaną 330ml",
+    "sectionDescription": "We recommend decaffeinated coffee and lactose free or soya milk",
+    "dishName": "Ice coffee with whipped cream  330ml",
     "dishVariantPrice": 13,
     "dishVariantName": ""
   },
@@ -1065,50 +1065,50 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "COFFEE",
-    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
-    "dishName": "Kawa mrożona z syropem i bitą śmietaną 330ml",
+    "sectionDescription": "We recommend decaffeinated coffee and lactose free or soya milk",
+    "dishName": "Ice coffee with whipped cream and sirup (vanilla, caramel, coconut, almond, hazelnut) 330ml",
     "dishVariantPrice": 14,
-    "dishVariantName": "Waniliowa"
+    "dishVariantName": "Vanilla"
   },
   {
     "index": 111,
     "language": "en",
     "restaurant": "kolanko",
     "section": "COFFEE",
-    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
-    "dishName": "Kawa mrożona z syropem i bitą śmietaną 330ml",
+    "sectionDescription": "We recommend decaffeinated coffee and lactose free or soya milk",
+    "dishName": "Ice coffee with whipped cream and sirup (vanilla, caramel, coconut, almond, hazelnut) 330ml",
     "dishVariantPrice": 14,
-    "dishVariantName": "Karmelowa"
+    "dishVariantName": "Caramel"
   },
   {
     "index": 112,
     "language": "en",
     "restaurant": "kolanko",
     "section": "COFFEE",
-    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
-    "dishName": "Kawa mrożona z syropem i bitą śmietaną 330ml",
+    "sectionDescription": "We recommend decaffeinated coffee and lactose free or soya milk",
+    "dishName": "Ice coffee with whipped cream and sirup (vanilla, caramel, coconut, almond, hazelnut) 330ml",
     "dishVariantPrice": 14,
-    "dishVariantName": "Kokosowa"
+    "dishVariantName": "Coconut"
   },
   {
     "index": 113,
     "language": "en",
     "restaurant": "kolanko",
     "section": "COFFEE",
-    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
-    "dishName": "Kawa mrożona z syropem i bitą śmietaną 330ml",
+    "sectionDescription": "We recommend decaffeinated coffee and lactose free or soya milk",
+    "dishName": "Ice coffee with whipped cream and sirup (vanilla, caramel, coconut, almond, hazelnut) 330ml",
     "dishVariantPrice": 14,
-    "dishVariantName": "Migdałowa"
+    "dishVariantName": "Almond"
   },
   {
     "index": 114,
     "language": "en",
     "restaurant": "kolanko",
     "section": "COFFEE",
-    "sectionDescription": "Każdą kawę można zamówić w wersji bezkofeinowej, a zamiast zwykłego mleka krowiego mleko bezlaktozowe lub mleko sojowe",
-    "dishName": "Kawa mrożona z syropem i bitą śmietaną 330ml",
+    "sectionDescription": "We recommend decaffeinated coffee and lactose free or soya milk",
+    "dishName": "Ice coffee with whipped cream and sirup (vanilla, caramel, coconut, almond, hazelnut) 330ml",
     "dishVariantPrice": 14,
-    "dishVariantName": "Orzechowa"
+    "dishVariantName": "Hazelnut"
   },
   {
     "index": 115,
@@ -1116,7 +1116,7 @@
     "restaurant": "kolanko",
     "section": "COFFEE WITH ALCOHOL",
     "dishName": "Irish Coffee",
-    "dishDescription": "czarna kawa z whisky i bitą śmietaną",
+    "dishDescription": "black coffee with whisky and whipped cream",
     "dishVariantPrice": 17,
     "dishVariantName": "260 ml"
   },
@@ -1125,8 +1125,8 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "COFFEE WITH ALCOHOL",
-    "dishName": "Kawa Cointreau",
-    "dishDescription": "czarna kawa z likierem pomarańczowym i bitą śmietaną",
+    "dishName": "Cointreau Coffee",
+    "dishDescription": "black coffee with orange liquer and whipped cream",
     "dishVariantPrice": 17,
     "dishVariantName": "260 ml"
   },
@@ -1153,7 +1153,7 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "COLD DRINKS",
-    "dishName": "Świeżo wyciskany sok pomarańczowy",
+    "dishName": "Freshly squeezed orange juice",
     "dishVariantPrice": 10,
     "dishVariantName": "200ml"
   },
@@ -1162,7 +1162,7 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "COLD DRINKS",
-    "dishName": "Świeżo wyciskany sok pomarańczowy",
+    "dishName": "Freshly squeezed orange juice",
     "dishVariantPrice": 14,
     "dishVariantName": "300ml"
   },
@@ -1171,7 +1171,7 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "COLD DRINKS",
-    "dishName": "Domowa lemoniada ze świeżych cytryn",
+    "dishName": "Homemade lemonade",
     "dishVariantPrice": 10,
     "dishVariantName": "300ml"
   },
@@ -1180,7 +1180,7 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "COLD DRINKS",
-    "dishName": "Domowa lemoniada ze świeżych cytryn",
+    "dishName": "Homemade lemonade",
     "dishVariantPrice": 22,
     "dishVariantName": "1000ml"
   },
@@ -1189,7 +1189,7 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "COLD DRINKS",
-    "dishName": "Domowa lemoniada ze świeżych pomarańczy",
+    "dishName": "Homemade lemonade with fresh oranges",
     "dishVariantPrice": 10,
     "dishVariantName": "300ml"
   },
@@ -1198,7 +1198,7 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "COLD DRINKS",
-    "dishName": "Domowa lemoniada ze świeżych pomarańczy",
+    "dishName": "Homemade lemonade with fresh oranges",
     "dishVariantPrice": 22,
     "dishVariantName": "1000ml"
   },
@@ -1207,7 +1207,7 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "COLD DRINKS",
-    "dishName": "Domowa mrożona herbata z cytryną i miętą 300ml",
+    "dishName": "Homemade ice tea with lemon and mint 300ml",
     "dishVariantPrice": 9,
     "dishVariantName": ""
   },
@@ -1216,7 +1216,7 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "COLD DRINKS",
-    "dishName": "Woda mineralna podawana z cytryną lub miętą",
+    "dishName": "Mineral water with lemon or mint",
     "dishVariantPrice": 5,
     "dishVariantName": "300ml"
   },
@@ -1225,7 +1225,7 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "COLD DRINKS",
-    "dishName": "Woda mineralna podawana z cytryną lub miętą",
+    "dishName": "Mineral water with lemon or mint",
     "dishVariantPrice": 10,
     "dishVariantName": "1000ml"
   },
@@ -1234,97 +1234,97 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "COLD DRINKS",
-    "dishName": "Sok",
+    "dishName": "Juice",
     "dishVariantPrice": 6,
-    "dishVariantName": "pomarańczowy 200ml"
+    "dishVariantName": "orange 200ml"
   },
   {
     "index": 129,
     "language": "en",
     "restaurant": "kolanko",
     "section": "COLD DRINKS",
-    "dishName": "Sok",
+    "dishName": "Juice",
     "dishVariantPrice": 15,
-    "dishVariantName": "pomarańczowy 1000ml"
+    "dishVariantName": "orange 1000ml"
   },
   {
     "index": 130,
     "language": "en",
     "restaurant": "kolanko",
     "section": "COLD DRINKS",
-    "dishName": "Sok",
+    "dishName": "Juice",
     "dishVariantPrice": 6,
-    "dishVariantName": "jabłkowy 200ml"
+    "dishVariantName": "apple 200ml"
   },
   {
     "index": 131,
     "language": "en",
     "restaurant": "kolanko",
     "section": "COLD DRINKS",
-    "dishName": "Sok",
+    "dishName": "Juice",
     "dishVariantPrice": 15,
-    "dishVariantName": "jabłkowy 1000ml"
+    "dishVariantName": "apple 1000ml"
   },
   {
     "index": 132,
     "language": "en",
     "restaurant": "kolanko",
     "section": "COLD DRINKS",
-    "dishName": "Sok",
+    "dishName": "Juice",
     "dishVariantPrice": 6,
-    "dishVariantName": "porzeczkowy 200ml"
+    "dishVariantName": "blackcurrant 200ml"
   },
   {
     "index": 133,
     "language": "en",
     "restaurant": "kolanko",
     "section": "COLD DRINKS",
-    "dishName": "Sok",
+    "dishName": "Juice",
     "dishVariantPrice": 15,
-    "dishVariantName": "porzeczkowy 1000ml"
+    "dishVariantName": "blackcurrant 1000ml"
   },
   {
     "index": 134,
     "language": "en",
     "restaurant": "kolanko",
     "section": "COLD DRINKS",
-    "dishName": "Sok",
+    "dishName": "Juice",
     "dishVariantPrice": 6,
-    "dishVariantName": "grejfrutowy 200ml"
+    "dishVariantName": "grapefruit 200ml"
   },
   {
     "index": 135,
     "language": "en",
     "restaurant": "kolanko",
     "section": "COLD DRINKS",
-    "dishName": "Sok",
+    "dishName": "Juice",
     "dishVariantPrice": 15,
-    "dishVariantName": "grejfrutowy 1000ml"
+    "dishVariantName": "grapefruit 1000ml"
   },
   {
     "index": 136,
     "language": "en",
     "restaurant": "kolanko",
     "section": "COLD DRINKS",
-    "dishName": "Sok",
+    "dishName": "Juice",
     "dishVariantPrice": 6,
-    "dishVariantName": "ananasowy 200ml"
+    "dishVariantName": "pineapple 200ml"
   },
   {
     "index": 137,
     "language": "en",
     "restaurant": "kolanko",
     "section": "COLD DRINKS",
-    "dishName": "Sok",
+    "dishName": "Juice",
     "dishVariantPrice": 15,
-    "dishVariantName": "ananasowy 1000ml"
+    "dishVariantName": "pineapple 1000ml"
   },
   {
     "index": 138,
     "language": "en",
     "restaurant": "kolanko",
     "section": "COLD DRINKS",
-    "dishName": "Naturalny kwas chlebowy 330ml",
+    "dishName": "Kvass 330ml",
     "dishVariantPrice": 10,
     "dishVariantName": ""
   },
@@ -1360,7 +1360,7 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Piwa z polskich browarów rzemieślniczych",
+    "dishName": "Beer City Brewery from Cracow",
     "dishVariantPrice": 16,
     "dishVariantName": "Krak (English IPA) 500ml"
   },
@@ -1369,7 +1369,7 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Piwa z polskich browarów rzemieślniczych",
+    "dishName": "Beer City Brewery from Cracow",
     "dishVariantPrice": 16,
     "dishVariantName": "Kacper Ryx (Polish IPA) 500ml"
   },
@@ -1378,7 +1378,7 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Piwa z polskich browarów rzemieślniczych",
+    "dishName": "Beer City Brewery from Cracow",
     "dishVariantPrice": 17,
     "dishVariantName": "PSZEkulturalna (Citrus Weizen) 500ml"
   },
@@ -1387,7 +1387,7 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Piwa z polskich browarów rzemieślniczych",
+    "dishName": "Beer City Brewery from Cracow",
     "dishVariantPrice": 17,
     "dishVariantName": "PoraNaNas (Pineapple IPA) 500ml"
   },
@@ -1396,7 +1396,7 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Piwa z polskich browarów rzemieślniczych",
+    "dishName": "Beer City Brewery from Cracow",
     "dishVariantPrice": 17,
     "dishVariantName": "Atak Chmielu AIPA (Polish AIPA) 500ml"
   },
@@ -1405,7 +1405,7 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Piwa z polskich browarów rzemieślniczych",
+    "dishName": "Beer City Brewery from Cracow",
     "dishVariantPrice": 17,
     "dishVariantName": "Pan IPAni (Wheat IPA) 500ml"
   },
@@ -1414,160 +1414,160 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Inne piwa butelkowe",
+    "dishName": "Other bottled beer",
     "dishVariantPrice": 12,
-    "dishVariantName": "Piwo Żywe (niepasteryzowane) 500ml"
+    "dishVariantName": "Piwo Żywe (unpasteurised) 500ml"
   },
   {
     "index": 149,
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Inne piwa butelkowe",
+    "dishName": "Other bottled beer",
     "dishVariantPrice": 13,
-    "dishVariantName": "Pszeniczniak 500ml"
+    "dishVariantName": "Pszeniczniak wheat beer (wheat beer) 500ml"
   },
   {
     "index": 150,
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Inne piwa butelkowe",
+    "dishName": "Other bottled beer",
     "dishVariantPrice": 11,
-    "dishVariantName": "Miłosław Niefiltrowane 500ml"
+    "dishVariantName": "Miłosław Niefiltrowane (unfiltered beer) 500ml"
   },
   {
     "index": 151,
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Inne piwa butelkowe",
+    "dishName": "Other bottled beer",
     "dishVariantPrice": 13,
-    "dishVariantName": "Mirabelka - warzone z naturalnym sokiem śliwkowym 500ml"
+    "dishVariantName": "Mirabelka - beer ageing with natural plum juice 500ml"
   },
   {
     "index": 152,
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Inne piwa butelkowe",
+    "dishName": "Other bottled beer",
     "dishVariantPrice": 12,
-    "dishVariantName": "Klasztorne - ciemne, warzone w stylu piwa Trapistów 500ml"
+    "dishVariantName": "Klasztorne - trappist type Ale 500ml"
   },
   {
     "index": 153,
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Inne piwa butelkowe",
+    "dishName": "Other bottled beer",
     "dishVariantPrice": 13,
-    "dishVariantName": "Piwo Na Miodzie Gryczanym 500ml"
+    "dishVariantName": "Dark beer with buckwheat honey 500ml"
   },
   {
     "index": 154,
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Inne piwa butelkowe",
+    "dishName": "Other bottled beer",
     "dishVariantPrice": 13,
-    "dishVariantName": "Krzepkie 7,4% 500ml"
+    "dishVariantName": "Krzepkie (strong beer) 7,4% 500ml"
   },
   {
     "index": 155,
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Inne piwa butelkowe",
+    "dishName": "Other bottled beer",
     "dishVariantPrice": 13,
-    "dishVariantName": "Miodne - ciemne piwo z warmińskim miodem 500ml"
+    "dishVariantName": "Miodne - dark beer with Polish honey 500ml"
   },
   {
     "index": 156,
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Inne piwa butelkowe",
+    "dishName": "Other bottled beer",
     "dishVariantPrice": 13,
-    "dishVariantName": "Wiśnia w Piwie - warzone z naturalnym sokiem wiśniowym 500ml"
+    "dishVariantName": "Wiśnia w Piwie - beer ageing with natural sour cherry juice 500ml"
   },
   {
     "index": 157,
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Inne piwa butelkowe",
+    "dishName": "Other bottled beer",
     "dishVariantPrice": 13,
-    "dishVariantName": "BezGlutenNowe 500ml"
+    "dishVariantName": "BezGlutenNowe (gluten free beer) 500ml"
   },
   {
     "index": 158,
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Inne piwa butelkowe",
+    "dishName": "Other bottled beer",
     "dishVariantPrice": 13,
-    "dishVariantName": "Jurajskie Miodowe - jasny miodowy lager 500ml"
+    "dishVariantName": "Jurajskie Miodowe - honey lager 500ml"
   },
   {
     "index": 159,
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Inne piwa butelkowe",
+    "dishName": "Other bottled beer",
     "dishVariantPrice": 11,
-    "dishVariantName": "Cornelius Grapefruitowy (piwo pszeniczne z sokiem grapefruitowym) 400ml"
+    "dishVariantName": "Cornelius Grapefruitowy (wheat beer with grapefruit juice) 400ml"
   },
   {
     "index": 160,
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Inne piwa butelkowe",
+    "dishName": "Other bottled beer",
     "dishVariantPrice": 15,
-    "dishVariantName": "Paulaner (piwo pszeniczne) 500ml"
+    "dishVariantName": "Paulaner (wheat beer) 500ml"
   },
   {
     "index": 161,
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Inne piwa butelkowe",
+    "dishName": "Other bottled beer",
     "dishVariantPrice": 10.5,
-    "dishVariantName": "Svijany Maz (czeski niepasteryzowany pilsner) 500ml"
+    "dishVariantName": "Svijany Maz (Czech unpasterised pilsner) 500ml"
   },
   {
     "index": 162,
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Inne piwa butelkowe",
+    "dishName": "Other bottled beer",
     "dishVariantPrice": 14,
-    "dishVariantName": "Shandy - Piwo Tyskie, Sprite, cytryna, świeża mięta 500ml"
+    "dishVariantName": "Shandy - Tyskie Beer, Sprite, lemon, fresh mint 500ml"
   },
   {
     "index": 163,
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Piwo lane",
+    "dishName": "Piwo Draught beer",
     "dishVariantPrice": 10,
-    "dishVariantName": "Jurajskie Bursztynowe 300ml"
+    "dishVariantName": "Jurajskie Bursztynowe (Amber Ale) 300ml"
   },
   {
     "index": 164,
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Piwo lane",
+    "dishName": "Piwo Draught beer",
     "dishVariantPrice": 12,
-    "dishVariantName": "Jurajskie Bursztynowe 500ml"
+    "dishVariantName": "Jurajskie Bursztynowe (Dark Ale) 500ml"
   },
   {
     "index": 165,
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Piwo lane",
+    "dishName": "Piwo Draught beer",
     "dishVariantPrice": 9.5,
     "dishVariantName": "Tyskie Klasyczne 300ml"
   },
@@ -1576,7 +1576,7 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Piwo lane",
+    "dishName": "Piwo Draught beer",
     "dishVariantPrice": 10.5,
     "dishVariantName": "Tyskie Klasyczne 500ml"
   },
@@ -1585,7 +1585,7 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Piwo lane",
+    "dishName": "Piwo Draught beer",
     "dishVariantPrice": 95,
     "dishVariantName": "Tyskomat 5000ml"
   },
@@ -1594,7 +1594,7 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Piwa bezalkoholowe",
+    "dishName": "Alcohol free beer",
     "dishVariantPrice": 10,
     "dishVariantName": "Łomża 0% 500ml"
   },
@@ -1603,90 +1603,90 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Piwa bezalkoholowe",
+    "dishName": "Alcohol free beer",
     "dishVariantPrice": 10,
-    "dishVariantName": "Łomża Pszeniczne 0% 500ml"
+    "dishVariantName": "Łomża Pszeniczne 0% (alcohol free wheat beer) 500ml"
   },
   {
     "index": 170,
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Piwa bezalkoholowe",
+    "dishName": "Alcohol free beer",
     "dishVariantPrice": 11,
-    "dishVariantName": "Lech Free Pomelo i Grejpfrut 0% 500ml"
+    "dishVariantName": "Lech Free 0% (pomelo & grapefruit alcohol free beer) 500ml"
   },
   {
     "index": 171,
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Piwa bezalkoholowe",
+    "dishName": "Alcohol free beer",
     "dishVariantPrice": 12,
-    "dishVariantName": "Żywiec Sesyjne IPA 0% 500ml"
+    "dishVariantName": "Żywiec Sesyjne IPA 0% (alcohol free IPA ) 500ml"
   },
   {
     "index": 172,
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Cydr",
+    "dishName": "Cider",
     "dishVariantPrice": 12,
-    "dishVariantName": "Cydr Miłosławski półwytrawny 500ml"
+    "dishVariantName": "Semidry Polish cider 500ml"
   },
   {
     "index": 173,
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Cydr",
+    "dishName": "Cider",
     "dishVariantPrice": 12,
-    "dishVariantName": "Cydr Miłosławski półsłodki 500ml"
+    "dishVariantName": "Semisweet Polish cide 500ml"
   },
   {
     "index": 174,
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Cydr",
+    "dishName": "Cider",
     "dishVariantPrice": 16,
-    "dishVariantName": "Cydr Ignaców 275ml"
+    "dishVariantName": "Polish craft cider 275ml"
   },
   {
     "index": 175,
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Drinki na bazie cydru",
+    "dishName": "Cider drinks",
     "dishVariantPrice": 16,
-    "dishVariantName": "Sklepy Cynamonowe (cydr, sok jabłkowy, syrop Monin cynamonowy) 350ml"
+    "dishVariantName": "Sklepy Cynamonowe (cider, apple juice, cinnamon sirup) 350ml"
   },
   {
     "index": 176,
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Drinki na bazie cydru",
+    "dishName": "Cider drinks",
     "dishVariantPrice": 16,
-    "dishVariantName": "Pod Papugami (cydr, wódka Wyborowa, sok ananasowy) 500ml"
+    "dishVariantName": "Pod Papugami (cider, Wyborowa vodka, pineapple juice) 500ml"
   },
   {
     "index": 177,
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Drinki na bazie cydru",
+    "dishName": "Cider drinks",
     "dishVariantPrice": 15,
-    "dishVariantName": "Wyspy Szczęśliwe (cydr, sok pomarańczowy, syrop Monin kokosowy) 350ml"
+    "dishVariantName": "Wyspy Szczęśliwe (cider, orange juice, coconut sirup) 350ml"
   },
   {
     "index": 178,
     "language": "en",
     "restaurant": "kolanko",
     "section": "BEER",
-    "dishName": "Drinki na bazie cydru",
+    "dishName": "Cider drinks",
     "dishVariantPrice": 18,
-    "dishVariantName": "Semper Fidelis (cydr, wódka Żołądkowa Gorzka, cukier trzcinowy, limonka, mięta) 350ml"
+    "dishVariantName": "Semper Fidelis (cider, Żołądkowa Gorzka vodka, cane sugar, lime, mint) 350ml"
   },
   {
     "index": 179,
@@ -1694,7 +1694,7 @@
     "restaurant": "kolanko",
     "section": "WHITE WINE",
     "dishName": "Cantina Castelnuovo Del Garda Chardonnay IGT Veneto",
-    "dishDescription": "Włoskie, wytrawne",
+    "dishDescription": "Italian, dry",
     "dishVariantPrice": 9,
     "dishVariantName": "100ml"
   },
@@ -1704,7 +1704,7 @@
     "restaurant": "kolanko",
     "section": "WHITE WINE",
     "dishName": "Cantina Castelnuovo Del Garda Chardonnay IGT Veneto",
-    "dishDescription": "Włoskie, wytrawne",
+    "dishDescription": "Italian, dry",
     "dishVariantPrice": 17,
     "dishVariantName": "250ml"
   },
@@ -1714,7 +1714,7 @@
     "restaurant": "kolanko",
     "section": "WHITE WINE",
     "dishName": "Cantina Castelnuovo Del Garda Chardonnay IGT Veneto",
-    "dishDescription": "Włoskie, wytrawne",
+    "dishDescription": "Italian, dry",
     "dishVariantPrice": 30,
     "dishVariantName": "500ml"
   },
@@ -1724,7 +1724,7 @@
     "restaurant": "kolanko",
     "section": "WHITE WINE",
     "dishName": "Cantina Castelnuovo Del Garda Chardonnay IGT Veneto",
-    "dishDescription": "Włoskie, wytrawne",
+    "dishDescription": "Italian, dry",
     "dishVariantPrice": 54,
     "dishVariantName": "1000ml"
   },
@@ -1734,7 +1734,7 @@
     "restaurant": "kolanko",
     "section": "WHITE WINE",
     "dishName": "Pinot Grigio Marchese della Torre IGT 750ml",
-    "dishDescription": "Włoskie, wytrawne",
+    "dishDescription": "Italian, dry",
     "dishVariantPrice": 58,
     "dishVariantName": ""
   },
@@ -1744,7 +1744,7 @@
     "restaurant": "kolanko",
     "section": "WHITE WINE",
     "dishName": "Abadim Vinho Verde DOC 750ml",
-    "dishDescription": "Portugalskie, półwytrawne",
+    "dishDescription": "Portuguese, semidry",
     "dishVariantPrice": 58,
     "dishVariantName": ""
   },
@@ -1754,7 +1754,7 @@
     "restaurant": "kolanko",
     "section": "WHITE WINE",
     "dishName": "Sauvignon Blanc Vina Falernia 750ml",
-    "dishDescription": "Chilijskie, wytrawne",
+    "dishDescription": "Chilean, dry",
     "dishVariantPrice": 68,
     "dishVariantName": ""
   },
@@ -1764,7 +1764,7 @@
     "restaurant": "kolanko",
     "section": "WHITE WINE",
     "dishName": "Sutter Home Moscato",
-    "dishDescription": "Kalifornijskie, deserowe",
+    "dishDescription": "Californian, white",
     "dishVariantPrice": 9,
     "dishVariantName": "100ml"
   },
@@ -1774,7 +1774,7 @@
     "restaurant": "kolanko",
     "section": "WHITE WINE",
     "dishName": "Sutter Home Moscato",
-    "dishDescription": "Kalifornijskie, deserowe",
+    "dishDescription": "Californian, white",
     "dishVariantPrice": 55,
     "dishVariantName": "750ml"
   },
@@ -1784,7 +1784,7 @@
     "restaurant": "kolanko",
     "section": "WHITE WINE",
     "dishName": "Cavas Hill-Cava 750ml",
-    "dishDescription": "Białe, hiszpańskie, półwytrawne wino, wytwarzane metodą tradycyjną",
+    "dishDescription": "White, Spanish, semidry wine, produced according to traditional method",
     "dishVariantPrice": 59,
     "dishVariantName": ""
   },
@@ -1794,7 +1794,7 @@
     "restaurant": "kolanko",
     "section": "WHITE WINE",
     "dishName": "Gancia Prosecco D.O.C",
-    "dishDescription": "Włoskie, półwytrawne",
+    "dishDescription": "Italian, semidry",
     "dishVariantPrice": 24,
     "dishVariantName": "200ml"
   },
@@ -1804,7 +1804,7 @@
     "restaurant": "kolanko",
     "section": "WHITE WINE",
     "dishName": "Gancia Prosecco D.O.C",
-    "dishDescription": "Włoskie, półwytrawne",
+    "dishDescription": "Italian, semidry",
     "dishVariantPrice": 70,
     "dishVariantName": "750ml"
   },
@@ -1814,7 +1814,7 @@
     "restaurant": "kolanko",
     "section": "RED WINES",
     "dishName": "Cantina Castelnuovo Del Garda Merlot IGT Veneto",
-    "dishDescription": "Włoskie, wytrawne",
+    "dishDescription": "Italian, dry",
     "dishVariantPrice": 9,
     "dishVariantName": "100ml"
   },
@@ -1824,7 +1824,7 @@
     "restaurant": "kolanko",
     "section": "RED WINES",
     "dishName": "Cantina Castelnuovo Del Garda Merlot IGT Veneto",
-    "dishDescription": "Włoskie, wytrawne",
+    "dishDescription": "Italian, dry",
     "dishVariantPrice": 17,
     "dishVariantName": "250ml"
   },
@@ -1834,7 +1834,7 @@
     "restaurant": "kolanko",
     "section": "RED WINES",
     "dishName": "Cantina Castelnuovo Del Garda Merlot IGT Veneto",
-    "dishDescription": "Włoskie, wytrawne",
+    "dishDescription": "Italian, dry",
     "dishVariantPrice": 30,
     "dishVariantName": "500ml"
   },
@@ -1844,7 +1844,7 @@
     "restaurant": "kolanko",
     "section": "RED WINES",
     "dishName": "Cantina Castelnuovo Del Garda Merlot IGT Veneto",
-    "dishDescription": "Włoskie, wytrawne",
+    "dishDescription": "Italian, dry",
     "dishVariantPrice": 54,
     "dishVariantName": "1000ml"
   },
@@ -1854,7 +1854,7 @@
     "restaurant": "kolanko",
     "section": "RED WINES",
     "dishName": "Syrah Vina Falernia 750ml",
-    "dishDescription": "Chilijskie, wytrawne",
+    "dishDescription": "Chilean, dry",
     "dishVariantPrice": 63,
     "dishVariantName": ""
   },
@@ -1864,7 +1864,7 @@
     "restaurant": "kolanko",
     "section": "RED WINES",
     "dishName": "Riparosso Montepulciano D'Abruzzo DOC 750ml",
-    "dishDescription": "Włoskie, wytrawne",
+    "dishDescription": "Italian, dry",
     "dishVariantPrice": 68,
     "dishVariantName": ""
   },
@@ -1874,7 +1874,7 @@
     "restaurant": "kolanko",
     "section": "RED WINES",
     "dishName": "Ser Dante Chianti 750ml",
-    "dishDescription": "Włoskie, wytrawne",
+    "dishDescription": "Italian, dry",
     "dishVariantPrice": 73,
     "dishVariantName": ""
   },
@@ -1884,7 +1884,7 @@
     "restaurant": "kolanko",
     "section": "OTHERS",
     "dishName": "Rose Genuss Auer 750ml",
-    "dishDescription": "Austriackie, półwytrawne",
+    "dishDescription": "Austrian, semidry",
     "dishVariantPrice": 63,
     "dishVariantName": ""
   },
@@ -1895,7 +1895,7 @@
     "section": "OTHERS",
     "dishName": "Martini 100ml",
     "dishVariantPrice": 12,
-    "dishVariantName": "Bianco - białe, słodkie"
+    "dishVariantName": "Bianco - whhite, sweet"
   },
   {
     "index": 200,
@@ -1904,7 +1904,7 @@
     "section": "OTHERS",
     "dishName": "Martini 100ml",
     "dishVariantPrice": 12,
-    "dishVariantName": "Extra dry - białe, wytrawne"
+    "dishVariantName": "Extra dry - white, dry"
   },
   {
     "index": 201,
@@ -1913,7 +1913,7 @@
     "section": "OTHERS",
     "dishName": "Martini 100ml",
     "dishVariantPrice": 12,
-    "dishVariantName": "Rosso - czerwone, półsłodkie"
+    "dishVariantName": "Rosso - red, sweet"
   },
   {
     "index": 202,
@@ -1922,14 +1922,14 @@
     "section": "OTHERS",
     "dishName": "Martini 100ml",
     "dishVariantPrice": 12,
-    "dishVariantName": "Rose - różowe, półsłodkie"
+    "dishVariantName": "Rose - rose, semisweet"
   },
   {
     "index": 203,
     "language": "en",
     "restaurant": "kolanko",
-    "section": "MULLED DRINKS",
-    "dishName": "Piwo grzane z sokiem (malinowym lub imbirowym), pomarańczą i przyprawami korzennymi",
+    "section": "MULLED DRINKS xxxxxxxxxxxxxxxxxxxxx",
+    "dishName": "Mulled beer",
     "dishVariantPrice": 9,
     "dishVariantName": "300ml"
   },
@@ -1937,8 +1937,8 @@
     "index": 204,
     "language": "en",
     "restaurant": "kolanko",
-    "section": "MULLED DRINKS",
-    "dishName": "Piwo grzane z sokiem (malinowym lub imbirowym), pomarańczą i przyprawami korzennymi",
+    "section": "MULLED DRINKS xxxxxxxxxxxxxxxxxxxxx",
+    "dishName": "Mulled beer",
     "dishVariantPrice": 11,
     "dishVariantName": "500ml"
   },
@@ -1946,8 +1946,8 @@
     "index": 205,
     "language": "en",
     "restaurant": "kolanko",
-    "section": "MULLED DRINKS",
-    "dishName": "Grzaniec Galicyjski z pomarańczą, rodzynkami i korzeniami 150ml",
+    "section": "MULLED DRINKS xxxxxxxxxxxxxxxxxxxxx",
+    "dishName": "Mulled wine 150ml",
     "dishVariantPrice": 9,
     "dishVariantName": ""
   },
@@ -1955,8 +1955,8 @@
     "index": 206,
     "language": "en",
     "restaurant": "kolanko",
-    "section": "MULLED DRINKS",
-    "dishName": "Biały Miś (Advocat, cynamon, mleko) 160ml",
+    "section": "MULLED DRINKS xxxxxxxxxxxxxxxxxxxxx",
+    "dishName": "Biały Miś (Advocat, cinnamon, milk) 160ml",
     "dishVariantPrice": 9,
     "dishVariantName": ""
   },
@@ -1964,8 +1964,8 @@
     "index": 207,
     "language": "en",
     "restaurant": "kolanko",
-    "section": "MULLED DRINKS",
-    "dishName": "Bury Miś (Advocat, czekolada, mleko) 160ml",
+    "section": "MULLED DRINKS xxxxxxxxxxxxxxxxxxxxx",
+    "dishName": "Bury Miś (Advocat, chocolate, milk) 160ml",
     "dishVariantPrice": 11,
     "dishVariantName": ""
   },
@@ -1973,8 +1973,8 @@
     "index": 208,
     "language": "en",
     "restaurant": "kolanko",
-    "section": "MULLED DRINKS",
-    "dishName": "Bombardino (Advocat, likier kawowy Kahlua, bita śmietana) 100ml",
+    "section": "MULLED DRINKS xxxxxxxxxxxxxxxxxxxxx",
+    "dishName": "Bombardino (Advocat, Kahlua, whipped cream) 100ml",
     "dishVariantPrice": 8,
     "dishVariantName": ""
   },
@@ -1982,8 +1982,8 @@
     "index": 209,
     "language": "en",
     "restaurant": "kolanko",
-    "section": "MULLED DRINKS",
-    "dishName": "Grog na rumie (rum Havana, cytryna, miód, korzenie, woda) 200ml",
+    "section": "MULLED DRINKS xxxxxxxxxxxxxxxxxxxxx",
+    "dishName": "Grog na rumie (Havana rum, lemon, honey, spices, hot water) 200ml",
     "dishVariantPrice": 16,
     "dishVariantName": ""
   },
@@ -1991,8 +1991,8 @@
     "index": 210,
     "language": "en",
     "restaurant": "kolanko",
-    "section": "MULLED DRINKS",
-    "dishName": "Grog na Krupniku (Krupnik, cytryna, miód, korzenie, woda) 200ml",
+    "section": "MULLED DRINKS xxxxxxxxxxxxxxxxxxxxx",
+    "dishName": "Grog na Krupniku (Krupnik, lemon, honey, spices, hot water) 200ml",
     "dishVariantPrice": 11,
     "dishVariantName": ""
   },
@@ -2000,8 +2000,8 @@
     "index": 211,
     "language": "en",
     "restaurant": "kolanko",
-    "section": "MULLED DRINKS",
-    "dishName": "Grzany Cydr z naturalnym syropem korzennym 330ml",
+    "section": "MULLED DRINKS xxxxxxxxxxxxxxxxxxxxx",
+    "dishName": "Mulled cider 330ml",
     "dishVariantPrice": 13,
     "dishVariantName": ""
   },
@@ -2009,8 +2009,8 @@
     "index": 212,
     "language": "en",
     "restaurant": "kolanko",
-    "section": "MULLED DRINKS",
-    "dishName": "Grzany kwas chlebowy z naturalnym syropem korzennym, pomarańczą i cytryną 330ml",
+    "section": "MULLED DRINKS xxxxxxxxxxxxxxxxxxxxx",
+    "dishName": "Mulled kvass 330ml",
     "dishVariantPrice": 12,
     "dishVariantName": ""
   },
@@ -2019,7 +2019,7 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "NON ALCOHOLIC DRINKS",
-    "dishName": "Mojito Virgin z wodą gazowaną 300ml",
+    "dishName": "Mojito Virgin with sparkling water 300ml",
     "dishVariantPrice": 12,
     "dishVariantName": ""
   },
@@ -2028,7 +2028,7 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "NON ALCOHOLIC DRINKS",
-    "dishName": "Mojito Virgin z wodą gazowaną malinowe 300ml",
+    "dishName": "Mojito Virgin with sparkling water and raspberries 300ml",
     "dishVariantPrice": 13,
     "dishVariantName": ""
   },
@@ -2037,7 +2037,7 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "NON ALCOHOLIC DRINKS",
-    "dishName": "Mojito Virgin ze Spritem 300ml",
+    "dishName": "Mojito Virgin with Sprite 300ml",
     "dishVariantPrice": 14,
     "dishVariantName": ""
   },
@@ -2046,7 +2046,7 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "NON ALCOHOLIC DRINKS",
-    "dishName": "Mojito Virgin ze Spritem malinowe 300ml",
+    "dishName": "Mojito Virgin with Sprite and raspberries 300ml",
     "dishVariantPrice": 15,
     "dishVariantName": ""
   },
@@ -2056,7 +2056,7 @@
     "restaurant": "kolanko",
     "section": "NON ALCOHOLIC DRINKS",
     "dishName": "Cabriolet 300ml",
-    "dishDescription": "Sok grejfrutowy, sok cytrynowy, tonik, syrop Monin Blue Curacao",
+    "dishDescription": "grapefruit juice, lemon juice, tonic, Blue Curacao sirup",
     "dishVariantPrice": 13,
     "dishVariantName": ""
   },
@@ -2066,7 +2066,7 @@
     "restaurant": "kolanko",
     "section": "NON ALCOHOLIC DRINKS",
     "dishName": "Piña Kolanko 250ml",
-    "dishDescription": "Sok ananasowy, sok pomarańczowy, syrop Monin kokosowy, pomarańcza",
+    "dishDescription": "Pineapple juice, orange juice, coconut sirup, orange",
     "dishVariantPrice": 10,
     "dishVariantName": ""
   },
@@ -2076,7 +2076,7 @@
     "restaurant": "kolanko",
     "section": "NON ALCOHOLIC DRINKS",
     "dishName": "Pomarańczowa Alternatywa 300ml",
-    "dishDescription": "Soki - pomarańczowy, grapefruitowy, ananasowy, syrop Monin truskawkowy, pomarańcza, limonka, świeża mięta, kruszony lód",
+    "dishDescription": "Juices - orange, grapefruit, pineapple, strawberry sirup, orange, lime, mint, crushed ice",
     "dishVariantPrice": 13,
     "dishVariantName": ""
   },
@@ -2086,7 +2086,7 @@
     "restaurant": "kolanko",
     "section": "NON ALCOHOLIC DRINKS",
     "dishName": "Rozważna i Romantyczna 250ml",
-    "dishDescription": "Sok pomarańczowy, sok ananasowy, sok grejfrutowy, syrop Monin truskawkowy, mus malinowy",
+    "dishDescription": "Orange juice, pineapple juice, grapefruit juice, strawberry sirup and raspberry mousse",
     "dishVariantPrice": 11,
     "dishVariantName": ""
   },
@@ -2096,7 +2096,7 @@
     "restaurant": "kolanko",
     "section": "NON ALCOHOLIC DRINKS",
     "dishName": "Over The Rainbow 250ml",
-    "dishDescription": "Sok pomarańczowy, sok cytrynowy, Grenadine, syrop Monin Blue Curacao",
+    "dishDescription": "Orange juice, lemon juice, Grenadine, Blue Curacao sirup",
     "dishVariantPrice": 12,
     "dishVariantName": ""
   },
@@ -2106,7 +2106,7 @@
     "restaurant": "kolanko",
     "section": "SHORT DRINKS",
     "dishName": "Black Russian 60ml",
-    "dishDescription": "Wódka Wyborowa, likier kawowy Kahlua",
+    "dishDescription": "Vodka, coffee liquer",
     "dishVariantPrice": 14,
     "dishVariantName": ""
   },
@@ -2116,7 +2116,7 @@
     "restaurant": "kolanko",
     "section": "SHORT DRINKS",
     "dishName": "Blue Hawaiian 100ml",
-    "dishDescription": "Likier Blue Curacao, Havana Rum, Malibu, sok ananasowy, śmietanka",
+    "dishDescription": "Blue Curacao liqer, Havana Rum, Malibu, pineapple  juice, cream",
     "dishVariantPrice": 14,
     "dishVariantName": ""
   },
@@ -2126,7 +2126,7 @@
     "restaurant": "kolanko",
     "section": "SHORT DRINKS",
     "dishName": "Blue Lagoon 120ml",
-    "dishDescription": "Wódka Wyborowa, syrop Monin Blue Curacao, Cointreau, sok ananasowy",
+    "dishDescription": "Vodka, Monin Blue Curacao sirup, Cointreau, pineapple juice",
     "dishVariantPrice": 15,
     "dishVariantName": ""
   },
@@ -2136,7 +2136,7 @@
     "restaurant": "kolanko",
     "section": "SHORT DRINKS",
     "dishName": "Cosmopolitan 120ml",
-    "dishDescription": "Cointreau, Wódka Wyborowa, sok z cytryny, sok porzeczkowy",
+    "dishDescription": "Cointreau, vodka, lemon juice, blackcurrant juice",
     "dishVariantPrice": 19,
     "dishVariantName": ""
   },
@@ -2146,7 +2146,7 @@
     "restaurant": "kolanko",
     "section": "SHORT DRINKS",
     "dishName": "Kamikaze 6 x 25 ml (shot)",
-    "dishDescription": "Wódka Wyborowa, Blue Curacao, sok cytrynowy",
+    "dishDescription": "Vodka, Blue Curacao, lemon juice",
     "dishVariantPrice": 28,
     "dishVariantName": ""
   },
@@ -2156,7 +2156,7 @@
     "restaurant": "kolanko",
     "section": "SHORT DRINKS",
     "dishName": "Margarita 80ml",
-    "dishDescription": "Tequila Silver, Cointreau, sok cytrynowy",
+    "dishDescription": "Tequila Silver, Cointreau, lemon juice",
     "dishVariantPrice": 22,
     "dishVariantName": ""
   },
@@ -2176,7 +2176,7 @@
     "restaurant": "kolanko",
     "section": "SHORT DRINKS",
     "dishName": "Orgazm 80ml",
-    "dishDescription": "Likier kawowy Kahlua, Amaretto, Cointreau, Wódka Wyborowa, śmietanka",
+    "dishDescription": "Kahlua coffee liquer, Amaretto, Cointreau, vodka, cream",
     "dishVariantPrice": 14,
     "dishVariantName": ""
   },
@@ -2186,7 +2186,7 @@
     "restaurant": "kolanko",
     "section": "SHORT DRINKS",
     "dishName": "Piña Colada 120ml",
-    "dishDescription": "Rum Havana Club, Malibu, śmietanka, sok ananasowy",
+    "dishDescription": "Rum Havana Club, Malibu, cream, pineapple juice",
     "dishVariantPrice": 16,
     "dishVariantName": ""
   },
@@ -2196,7 +2196,7 @@
     "restaurant": "kolanko",
     "section": "SHORT DRINKS",
     "dishName": "White Russian 80ml",
-    "dishDescription": "Wódka Wyborowa, likier kawowy Kahlua, śmietanka",
+    "dishDescription": "Wódka Wyborowa, Kahlua coffee liquer, cream",
     "dishVariantPrice": 13,
     "dishVariantName": ""
   },
@@ -2206,7 +2206,7 @@
     "restaurant": "kolanko",
     "section": "SHORT DRINKS",
     "dishName": "Wściekły Pies 50ml (shot)",
-    "dishDescription": "Wódka Wyborowa, sok malinowy, tabasco",
+    "dishDescription": "Vodka, raspberry juice, tabasco",
     "dishVariantPrice": 7,
     "dishVariantName": ""
   },
@@ -2216,7 +2216,7 @@
     "restaurant": "kolanko",
     "section": "LONG DRINKS",
     "dishName": "008 250ml",
-    "dishDescription": "Wódka Wyborowa, Martini Bianco, sok grejfrutowy",
+    "dishDescription": "Vodka, Martini Bianco, grapefruit juice",
     "dishVariantPrice": 12,
     "dishVariantName": ""
   },
@@ -2226,7 +2226,7 @@
     "restaurant": "kolanko",
     "section": "LONG DRINKS",
     "dishName": "Aperol Spritz 200ml",
-    "dishDescription": "Prosecco, Aperol, woda gazowana, pomarańcza",
+    "dishDescription": "Prosecco, Aperol, sparkling water, orange",
     "dishVariantPrice": 23,
     "dishVariantName": ""
   },
@@ -2236,7 +2236,7 @@
     "restaurant": "kolanko",
     "section": "LONG DRINKS",
     "dishName": "Campari Orange 250ml",
-    "dishDescription": "Prosecco, Campari, woda gazowana",
+    "dishDescription": "Prosecco, Campari, sparkling water",
     "dishVariantPrice": 17,
     "dishVariantName": ""
   },
@@ -2246,7 +2246,7 @@
     "restaurant": "kolanko",
     "section": "LONG DRINKS",
     "dishName": "Campari Spritz 200ml",
-    "dishDescription": "Prosecco, Campari, woda gazowana, pomarańcza",
+    "dishDescription": "Prosecco, Campari, sparkling water, orange",
     "dishVariantPrice": 25,
     "dishVariantName": ""
   },
@@ -2256,7 +2256,7 @@
     "restaurant": "kolanko",
     "section": "LONG DRINKS",
     "dishName": "Cuba Libra 250ml",
-    "dishDescription": "Rum Havana Club, coca cola, sok cytrynowy",
+    "dishDescription": "Rum Havana Club, coca cola, lemon juice",
     "dishVariantPrice": 19,
     "dishVariantName": ""
   },
@@ -2266,7 +2266,7 @@
     "restaurant": "kolanko",
     "section": "LONG DRINKS",
     "dishName": "Cztery Róże dla Lucienne 300ml",
-    "dishDescription": "Wódka Wyborowa, syrop truskawkowy Monin, mus malinowy, sprite",
+    "dishDescription": "Wódka Wyborowa, Monin strawberry sirup, raspberry mousse, sprite",
     "dishVariantPrice": 17,
     "dishVariantName": ""
   },
@@ -2276,7 +2276,7 @@
     "restaurant": "kolanko",
     "section": "LONG DRINKS",
     "dishName": "Exotic Russian 300ml",
-    "dishDescription": "Wódka Wyborowa, likier Passoa, Grenadina, sprite",
+    "dishDescription": "Wódka Wyborowa, Passoa liquer, Grenadina, sprite",
     "dishVariantPrice": 19,
     "dishVariantName": ""
   },
@@ -2286,7 +2286,7 @@
     "restaurant": "kolanko",
     "section": "LONG DRINKS",
     "dishName": "Golden Eye 250ml",
-    "dishDescription": "Orzechówka, Gin Seagram’s, sok jabłkowy",
+    "dishDescription": "Hazelnut vodka, Gin Seagram’s, apple juice",
     "dishVariantPrice": 15,
     "dishVariantName": ""
   },
@@ -2296,7 +2296,7 @@
     "restaurant": "kolanko",
     "section": "LONG DRINKS",
     "dishName": "Gorączka Sobotniej Nocy 300ml",
-    "dishDescription": "Wódka Wyborowa, Cointreau, sok pomarańczowy, sok ananasowy, Grenadyna",
+    "dishDescription": "Vodka Cointreau, orange juice, pineapple juice, grenadine",
     "dishVariantPrice": 17,
     "dishVariantName": ""
   },
@@ -2306,7 +2306,7 @@
     "restaurant": "kolanko",
     "section": "LONG DRINKS",
     "dishName": "John Lemon 250ml",
-    "dishDescription": "Cytrynówka, syrop Monin limonkowy, woda gazowana, owoce cytrusowe",
+    "dishDescription": "Lemonvodka, Monin lime sirup, sparking water, citrus fruit",
     "dishVariantPrice": 16,
     "dishVariantName": ""
   },
@@ -2316,7 +2316,7 @@
     "restaurant": "kolanko",
     "section": "LONG DRINKS",
     "dishName": "Long Island Ice Tea 300ml",
-    "dishDescription": "Wódka Wyborowa, gin Seagram’s, rum Havana Club, tequila Olmeca Silver, Cointreau, sok cytrynowy, coca cola",
+    "dishDescription": "Vodka, gin Seagram’s, rum Havana Club, tequila Olmeca Silver, Cointreau, leomn juice, coca cola",
     "dishVariantPrice": 21,
     "dishVariantName": ""
   },
@@ -2326,7 +2326,7 @@
     "restaurant": "kolanko",
     "section": "LONG DRINKS",
     "dishName": "Long Island Ice Tea",
-    "dishDescription": "Dzbanek 4 porcje",
+    "dishDescription": "4 servings",
     "dishVariantPrice": 69,
     "dishVariantName": ""
   },
@@ -2335,8 +2335,8 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "LONG DRINKS",
-    "dishName": "Malibu z mlekiem 200ml",
-    "dishDescription": "Malibu, mleko",
+    "dishName": "Malibu with milk 200ml",
+    "dishDescription": "Malibu, milk",
     "dishVariantPrice": 12,
     "dishVariantName": ""
   },
@@ -2346,7 +2346,7 @@
     "restaurant": "kolanko",
     "section": "LONG DRINKS",
     "dishName": "Mechaniczna Pomarańcza 300ml",
-    "dishDescription": "Malibu, świeżo wyciskany sok pomarańczowy, pomarańcza, mięta",
+    "dishDescription": "Malibu, freshly squezzed orange juice, orange, mint",
     "dishVariantPrice": 18,
     "dishVariantName": ""
   },
@@ -2356,7 +2356,7 @@
     "restaurant": "kolanko",
     "section": "LONG DRINKS",
     "dishName": "Mojito 300ml",
-    "dishDescription": "Rum Havana, cukier trzcinowy, woda gazowana, mięta, limonka",
+    "dishDescription": "Rum Havana, cane sugar, sparkling water, mint, lime",
     "dishVariantPrice": 20,
     "dishVariantName": ""
   },
@@ -2365,8 +2365,8 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "LONG DRINKS",
-    "dishName": "Mojito malinowe 300ml",
-    "dishDescription": "Rum Havana, cukier trzcinowy, woda gazowana, mięta, limonka, maliny",
+    "dishName": "Mojito raspberry 300ml",
+    "dishDescription": "Rum Havana, cane sugar, sparkling water, mint, lime, raspberry",
     "dishVariantPrice": 22,
     "dishVariantName": ""
   },
@@ -2376,7 +2376,7 @@
     "restaurant": "kolanko",
     "section": "LONG DRINKS",
     "dishName": "Mojito Passoa 300ml",
-    "dishDescription": "Likier Passoa, Grenadina, cukier trzcinowy, woda gazowana, mięta, limonka",
+    "dishDescription": "Passoa liquer, Grenadine, cane suger, cane sugar, mint, lime",
     "dishVariantPrice": 19,
     "dishVariantName": ""
   },
@@ -2386,7 +2386,7 @@
     "restaurant": "kolanko",
     "section": "LONG DRINKS",
     "dishName": "Monkey Business 270ml",
-    "dishDescription": "Wódka Wyborowa, Malibu, sok pomarańczowy, Grenadyna",
+    "dishDescription": "Vodka, Malibu, orange juice, grenadine",
     "dishVariantPrice": 16.5,
     "dishVariantName": ""
   },
@@ -2395,8 +2395,8 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "LONG DRINKS",
-    "dishName": "Orzechówka z mlekiem 200ml",
-    "dishDescription": "Wódka orzechowa, mleko",
+    "dishName": "Hazelnut vodka witk milk 200ml",
+    "dishDescription": "Hazelnut vodka, milk",
     "dishVariantPrice": 12,
     "dishVariantName": ""
   },
@@ -2406,7 +2406,7 @@
     "restaurant": "kolanko",
     "section": "LONG DRINKS",
     "dishName": "Pod Osłoną Nieba 150ml",
-    "dishDescription": "Białe wino, likier Passoa, Grenadina, limonka",
+    "dishDescription": "White wine, Passoa liquer, grenadine, lime",
     "dishVariantPrice": 16,
     "dishVariantName": ""
   },
@@ -2416,7 +2416,7 @@
     "restaurant": "kolanko",
     "section": "LONG DRINKS",
     "dishName": "Po Drugiej Stronie Lustra 300ml",
-    "dishDescription": "Żołądkowa Gorzka, sok cytrynowy, sok ananasowy, sprite, plasterki ogórka",
+    "dishDescription": "Digestive bitters, lemon juice, pineapple juice, sprite, cucumber slices",
     "dishVariantPrice": 15,
     "dishVariantName": ""
   },
@@ -2426,7 +2426,7 @@
     "restaurant": "kolanko",
     "section": "LONG DRINKS",
     "dishName": "Szprycer 250ml",
-    "dishDescription": "Białe wino wytrawne, woda gazowana, cytryna",
+    "dishDescription": "White dry wine, sparkling water, lemon",
     "dishVariantPrice": 12,
     "dishVariantName": ""
   },
@@ -2436,7 +2436,7 @@
     "restaurant": "kolanko",
     "section": "LONG DRINKS",
     "dishName": "Tatanka 200ml",
-    "dishDescription": "Żubrówka, sok jabłkowy",
+    "dishDescription": "Bison vodka, apple juice",
     "dishVariantPrice": 12,
     "dishVariantName": ""
   },
@@ -2446,7 +2446,7 @@
     "restaurant": "kolanko",
     "section": "LONG DRINKS",
     "dishName": "Tatanka miętowa 200ml",
-    "dishDescription": "Żubrówka, sok jabłkowy, mięta",
+    "dishDescription": "Bison vodka, apple juice, mint",
     "dishVariantPrice": 13,
     "dishVariantName": ""
   },
@@ -2456,7 +2456,7 @@
     "restaurant": "kolanko",
     "section": "LONG DRINKS",
     "dishName": "Tequila Sunrise 250ml",
-    "dishDescription": "Tequila Olmeca Gold, sok pomarańczowy, Grenadina",
+    "dishDescription": "Tequila Olmeca Gold, orange juice, grenadine",
     "dishVariantPrice": 19,
     "dishVariantName": ""
   },
@@ -2501,7 +2501,7 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "VODKA",
-    "dishName": "Żołądkowa Gorzka",
+    "dishName": "Digestive bitters",
     "dishVariantPrice": 8,
     "dishVariantName": "40ml"
   },
@@ -2510,7 +2510,7 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "VODKA",
-    "dishName": "Żołądkowa Gorzka",
+    "dishName": "Digestive bitters",
     "dishVariantPrice": 95,
     "dishVariantName": "700ml"
   },
@@ -2519,7 +2519,7 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "VODKA",
-    "dishName": "Żołądkowa Gorzka 40ml",
+    "dishName": "Digestive bitters with mint 40ml",
     "dishVariantPrice": 8,
     "dishVariantName": ""
   },
@@ -2528,7 +2528,7 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "VODKA",
-    "dishName": "Lubelska Cytrynowa 40ml",
+    "dishName": "Bison vodka 40ml",
     "dishVariantPrice": 8,
     "dishVariantName": ""
   },
@@ -2537,7 +2537,7 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "VODKA",
-    "dishName": "Soplica Malinowa 40ml",
+    "dishName": "Lemon vodka 40ml",
     "dishVariantPrice": 8,
     "dishVariantName": ""
   },
@@ -2546,7 +2546,7 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "VODKA",
-    "dishName": "Soplica Orzechowa 40ml",
+    "dishName": "Raspberry vodka 40ml",
     "dishVariantPrice": 8,
     "dishVariantName": ""
   },
@@ -2555,7 +2555,7 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "VODKA",
-    "dishName": "Soplica Pigwowa 40ml",
+    "dishName": "Hazelnut vodka 40ml",
     "dishVariantPrice": 8,
     "dishVariantName": ""
   },
@@ -2564,7 +2564,7 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "VODKA",
-    "dishName": "Soplica Śliwkowa 40ml",
+    "dishName": "Quince vodka 40ml",
     "dishVariantPrice": 8,
     "dishVariantName": ""
   },
@@ -2573,12 +2573,21 @@
     "language": "en",
     "restaurant": "kolanko",
     "section": "VODKA",
-    "dishName": "Soplica Wiśniowa 40ml",
+    "dishName": "Plum vodka 40ml",
     "dishVariantPrice": 8,
     "dishVariantName": ""
   },
   {
     "index": 271,
+    "language": "en",
+    "restaurant": "kolanko",
+    "section": "VODKA",
+    "dishName": "Cherry vodka 40ml",
+    "dishVariantPrice": 8,
+    "dishVariantName": ""
+  },
+  {
+    "index": 272,
     "language": "en",
     "restaurant": "kolanko",
     "section": "LIQUERS",
@@ -2587,7 +2596,7 @@
     "dishVariantName": ""
   },
   {
-    "index": 272,
+    "index": 273,
     "language": "en",
     "restaurant": "kolanko",
     "section": "LIQUERS",
@@ -2596,7 +2605,7 @@
     "dishVariantName": ""
   },
   {
-    "index": 273,
+    "index": 274,
     "language": "en",
     "restaurant": "kolanko",
     "section": "LIQUERS",
@@ -2605,7 +2614,7 @@
     "dishVariantName": ""
   },
   {
-    "index": 274,
+    "index": 275,
     "language": "en",
     "restaurant": "kolanko",
     "section": "LIQUERS",
@@ -2614,7 +2623,7 @@
     "dishVariantName": ""
   },
   {
-    "index": 275,
+    "index": 276,
     "language": "en",
     "restaurant": "kolanko",
     "section": "LIQUERS",
@@ -2623,7 +2632,7 @@
     "dishVariantName": ""
   },
   {
-    "index": 276,
+    "index": 277,
     "language": "en",
     "restaurant": "kolanko",
     "section": "LIQUERS",
@@ -2632,7 +2641,7 @@
     "dishVariantName": ""
   },
   {
-    "index": 277,
+    "index": 278,
     "language": "en",
     "restaurant": "kolanko",
     "section": "OTHER SPIRITS",
@@ -2641,7 +2650,7 @@
     "dishVariantName": ""
   },
   {
-    "index": 278,
+    "index": 279,
     "language": "en",
     "restaurant": "kolanko",
     "section": "OTHER SPIRITS",
@@ -2650,7 +2659,7 @@
     "dishVariantName": ""
   },
   {
-    "index": 279,
+    "index": 280,
     "language": "en",
     "restaurant": "kolanko",
     "section": "OTHER SPIRITS",
@@ -2659,7 +2668,7 @@
     "dishVariantName": ""
   },
   {
-    "index": 280,
+    "index": 281,
     "language": "en",
     "restaurant": "kolanko",
     "section": "OTHER SPIRITS",
@@ -2668,7 +2677,7 @@
     "dishVariantName": ""
   },
   {
-    "index": 281,
+    "index": 282,
     "language": "en",
     "restaurant": "kolanko",
     "section": "OTHER SPIRITS",
@@ -2677,7 +2686,7 @@
     "dishVariantName": ""
   },
   {
-    "index": 282,
+    "index": 283,
     "language": "en",
     "restaurant": "kolanko",
     "section": "OTHER SPIRITS",
@@ -2686,7 +2695,7 @@
     "dishVariantName": ""
   },
   {
-    "index": 283,
+    "index": 284,
     "language": "en",
     "restaurant": "kolanko",
     "section": "OTHER SPIRITS",
@@ -2695,7 +2704,7 @@
     "dishVariantName": ""
   },
   {
-    "index": 284,
+    "index": 285,
     "language": "en",
     "restaurant": "kolanko",
     "section": "OTHER SPIRITS",
@@ -2704,7 +2713,7 @@
     "dishVariantName": ""
   },
   {
-    "index": 285,
+    "index": 286,
     "language": "en",
     "restaurant": "kolanko",
     "section": "OTHER SPIRITS",
@@ -2713,7 +2722,7 @@
     "dishVariantName": ""
   },
   {
-    "index": 286,
+    "index": 287,
     "language": "en",
     "restaurant": "kolanko",
     "section": "OTHER SPIRITS",
@@ -2722,7 +2731,7 @@
     "dishVariantName": ""
   },
   {
-    "index": 287,
+    "index": 288,
     "language": "en",
     "restaurant": "kolanko",
     "section": "OTHER SPIRITS",
@@ -2731,7 +2740,7 @@
     "dishVariantName": ""
   },
   {
-    "index": 288,
+    "index": 289,
     "language": "en",
     "restaurant": "kolanko",
     "section": "OTHER SPIRITS",
@@ -2740,7 +2749,7 @@
     "dishVariantName": ""
   },
   {
-    "index": 289,
+    "index": 290,
     "language": "en",
     "restaurant": "kolanko",
     "section": "OTHER SPIRITS",
@@ -2749,7 +2758,7 @@
     "dishVariantName": ""
   },
   {
-    "index": 290,
+    "index": 291,
     "language": "en",
     "restaurant": "kolanko",
     "section": "OTHER SPIRITS",
@@ -2758,7 +2767,7 @@
     "dishVariantName": ""
   },
   {
-    "index": 291,
+    "index": 292,
     "language": "en",
     "restaurant": "kolanko",
     "section": "OTHER SPIRITS",
@@ -2767,7 +2776,7 @@
     "dishVariantName": ""
   },
   {
-    "index": 292,
+    "index": 293,
     "language": "en",
     "restaurant": "kolanko",
     "section": "OTHER SPIRITS",
