@@ -1,4 +1,4 @@
-# to run use script "python QrCodeGenarator.py restaurant_name" and put at the same folder file restaurant_name.txt with each table number on subsequent lines
+# to run use script "python from_txt.py restaurant_name" and put at the same folder file restaurant_name.txt with each table number on subsequent lines
 # works only when table ID is just number without letters
 
 import qrcode

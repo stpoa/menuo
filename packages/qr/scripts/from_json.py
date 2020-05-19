@@ -1,4 +1,4 @@
-# to run use script "python QrCodeGenarator.py restaurant_name" and put at the same folder file tables.json
+# to run use script "python from_json.py restaurant_name" and put at the same folder file tables.json
 
 import qrcode
 from qrcode.image.pure import PymagingImage
