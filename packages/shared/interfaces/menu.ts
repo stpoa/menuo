@@ -22,11 +22,11 @@ export interface IDish {
 }
 
 export interface IVariant {
-  _id: string
+  _id?: string
   price: number
   name?: string
   description?: string
-  entry: MenuEntry
+  entry?: MenuEntry
 }
 
 // DB

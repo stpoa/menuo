@@ -39,7 +39,6 @@ describe('Menu', () => {
       name: 'Sałatki',
       dishes: [
         {
-          id: '4',
           name: 'Sałatka z watróbką',
           variants: [
             {
@@ -200,7 +199,6 @@ describe('Menu', () => {
           description: 'Chips',
         },
         {
-          id: '19',
           name: 'Kapusta zasmażana',
           variants: [
             {
@@ -210,7 +208,6 @@ describe('Menu', () => {
           description: 'Fried cabbage',
         },
         {
-          id: '20',
           name: 'Ziemniaki',
           variants: [
             {
@@ -220,7 +217,6 @@ describe('Menu', () => {
           description: 'Potatoes',
         },
         {
-          id: '21',
           name: 'Mix sałat z pomidorkami',
           variants: [
             {
@@ -230,7 +226,6 @@ describe('Menu', () => {
           description: 'Lettuce with cherry tomatoes',
         },
         {
-          id: '22',
           name: 'Grillowany ziemniak z dipem',
           variants: [
             {
@@ -240,7 +235,6 @@ describe('Menu', () => {
           description: 'Grilled potato with tzatziki dip',
         },
         {
-          id: '23',
           name: 'Grillowane warzywa',
           variants: [
             {
@@ -255,7 +249,6 @@ describe('Menu', () => {
       name: 'Desery',
       dishes: [
         {
-          id: '24',
           name: 'Racuchy z jabłkami',
           variants: [
             {
@@ -265,7 +258,6 @@ describe('Menu', () => {
           description: 'Polish apple pancakes with powdered sugar',
         },
         {
-          id: '25',
           name: 'Suflet czekoladowy podawany z lodami waniliowymi',
           variants: [
             {
@@ -280,7 +272,6 @@ describe('Menu', () => {
       name: 'Napoje',
       dishes: [
         {
-          id: '25',
           name: 'Herbata / Tea',
           variants: [
             {
@@ -289,7 +280,6 @@ describe('Menu', () => {
           ],
         },
         {
-          id: '26',
           name: 'Espresso',
           variants: [
             {
@@ -298,7 +288,6 @@ describe('Menu', () => {
           ],
         },
         {
-          id: '27',
           name: 'Kawa czarna / Black coffee',
           variants: [
             {
@@ -307,7 +296,6 @@ describe('Menu', () => {
           ],
         },
         {
-          id: '28',
           name: 'Kawa biała / Coffee with milk',
           variants: [
             {
@@ -316,7 +304,6 @@ describe('Menu', () => {
           ],
         },
         {
-          id: '29',
           name: 'Capuccino',
           variants: [
             {
@@ -325,7 +312,6 @@ describe('Menu', () => {
           ],
         },
         {
-          id: '30',
           name: 'Latte',
           variants: [
             {
@@ -334,7 +320,6 @@ describe('Menu', () => {
           ],
         },
         {
-          id: '31',
           name: 'Pepsi',
           variants: [
             {
@@ -344,7 +329,6 @@ describe('Menu', () => {
           ],
         },
         {
-          id: '32',
           name: '7 Up',
           variants: [
             {
@@ -354,7 +338,6 @@ describe('Menu', () => {
           ],
         },
         {
-          id: '33',
           name: 'Mirinda',
           variants: [
             {
@@ -364,7 +347,6 @@ describe('Menu', () => {
           ],
         },
         {
-          id: '34',
           name: 'Soki owocowe',
           variants: [
             {
@@ -374,7 +356,6 @@ describe('Menu', () => {
           ],
         },
         {
-          id: '35',
           name: 'Cisowianka Perlage lekko gazowana',
           variants: [
             {
@@ -389,7 +370,6 @@ describe('Menu', () => {
           description: 'Sparkling water',
         },
         {
-          id: '36',
           name: 'Kwas chlebowy',
           variants: [
             {
@@ -398,7 +378,6 @@ describe('Menu', () => {
           ],
         },
         {
-          id: '37',
           name: 'Cydr lubelski',
           variants: [
             {
@@ -407,7 +386,6 @@ describe('Menu', () => {
           ],
         },
         {
-          id: '38',
           name: 'Sok ze świeżych owoców',
           variants: [
             {
@@ -417,7 +395,6 @@ describe('Menu', () => {
           ],
         },
         {
-          id: '39',
           name: 'Cisowianka niegazowana',
           variants: [
             {
@@ -437,7 +414,6 @@ describe('Menu', () => {
       name: 'Przystawki',
       dishes: [
         {
-          id: '40',
           name: 'Gołąbek podawany z sosem pomidorowym lub borowikowym',
           variants: [
             {
@@ -448,7 +424,6 @@ describe('Menu', () => {
             'Stuffed cabbage leave with rice and meat served with tomato sauce or porcini mushroom sauce',
         },
         {
-          id: '41',
           name: 'Tatar z polędwicy wołowej',
           variants: [
             {
@@ -458,7 +433,6 @@ describe('Menu', () => {
           description: 'Beef tenderloin tartare',
         },
         {
-          id: '42',
           name: 'Śledź po Krakowsku',
           variants: [
             {
@@ -468,7 +442,6 @@ describe('Menu', () => {
           description: 'Herring Cracow style',
         },
         {
-          id: '43',
           name:
             'Kiełbaska jagnięco-cielęce z grilla podawane z konfiturą z czerwonej cebuli',
           variants: [
@@ -485,7 +458,6 @@ describe('Menu', () => {
       name: 'Piwa',
       dishes: [
         {
-          id: '44',
           name: 'Piwo lane Miłosław Pilzner',
           variants: [
             {
@@ -499,7 +471,6 @@ describe('Menu', () => {
           ],
         },
         {
-          id: '45',
           name: 'Regionalne piwa z browaru Trzy Korony',
           variants: [
             {
@@ -514,7 +485,6 @@ describe('Menu', () => {
       name: 'Wina',
       dishes: [
         {
-          id: '46',
           name: 'Trebbiano, Rocca Estate',
           variants: [
             {
@@ -529,7 +499,6 @@ describe('Menu', () => {
           description: 'ITG Puglia, Italy',
         },
         {
-          id: '47',
           name: 'Kaiken Malbec Reserva 2013',
           variants: [
             {
@@ -540,7 +509,6 @@ describe('Menu', () => {
           description: 'Kaiken Mendoza Argentina',
         },
         {
-          id: '48',
           name: 'Sangiovese, Rocca Estate',
           variants: [
             {
@@ -555,7 +523,6 @@ describe('Menu', () => {
           description: 'ITG Puglia, Italy',
         },
         {
-          id: '49',
           name: 'Ripasso Valpolicella 2014',
           variants: [
             {
@@ -566,7 +533,6 @@ describe('Menu', () => {
           description: 'D.O.C, Italy',
         },
         {
-          id: '50',
           name: 'Picton Bay Sauvignon Blanc',
           variants: [
             {
@@ -577,7 +543,6 @@ describe('Menu', () => {
           description: 'Marlborough, New Zealand',
         },
         {
-          id: '51',
           name: 'Prosseco Sartori Brut',
           variants: [
             {
@@ -588,7 +553,6 @@ describe('Menu', () => {
           description: 'Veneto, Italy',
         },
         {
-          id: '52',
           name: 'Bodegas Centenarias Reservado Cabernet Sauvignon',
           variants: [
             {
@@ -599,7 +563,6 @@ describe('Menu', () => {
           description: 'Chile',
         },
         {
-          id: '53',
           name: 'Bodegas Centanarias Reservado Chardonnay',
           variants: [
             {
@@ -615,7 +578,6 @@ describe('Menu', () => {
       name: 'Alkohle',
       dishes: [
         {
-          id: '54',
           name: 'Wyborowa',
           variants: [
             {
@@ -625,7 +587,6 @@ describe('Menu', () => {
           ],
         },
         {
-          id: '55',
           name: 'Finlandia',
           variants: [
             {
@@ -635,7 +596,6 @@ describe('Menu', () => {
           ],
         },
         {
-          id: '56',
           name: 'Chopin',
           variants: [
             {
@@ -645,7 +605,6 @@ describe('Menu', () => {
           ],
         },
         {
-          id: '57',
           name: 'Żołądkowa gorzka',
           variants: [
             {
@@ -655,7 +614,6 @@ describe('Menu', () => {
           ],
         },
         {
-          id: '58',
           name: 'Wiśniówka',
           variants: [
             {
@@ -665,7 +623,6 @@ describe('Menu', () => {
           ],
         },
         {
-          id: '59',
           name: 'Żubrówka',
           variants: [
             {
@@ -675,7 +632,6 @@ describe('Menu', () => {
           ],
         },
         {
-          id: '60',
           name: "Jack Daniel's",
           variants: [
             {
@@ -685,7 +641,6 @@ describe('Menu', () => {
           ],
         },
         {
-          id: '61',
           name: "Ballantine's Fnest",
           variants: [
             {
@@ -695,7 +650,6 @@ describe('Menu', () => {
           ],
         },
         {
-          id: '62',
           name: 'Glenvlivet 12YO',
           variants: [
             {
@@ -705,7 +659,6 @@ describe('Menu', () => {
           ],
         },
         {
-          id: '63',
           name: 'Hennesy VS',
           variants: [
             {
@@ -715,7 +668,6 @@ describe('Menu', () => {
           ],
         },
         {
-          id: '64',
           name: 'Hannesy Fine de Cognac',
           variants: [
             {
@@ -725,7 +677,6 @@ describe('Menu', () => {
           ],
         },
         {
-          id: '65',
           name: 'Lagavulin 16YO',
           variants: [
             {
