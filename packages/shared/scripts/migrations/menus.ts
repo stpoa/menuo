@@ -1,7 +1,8 @@
 import { readdirSync, readFileSync, writeFileSync } from 'fs'
 import yaml from 'js-yaml'
-import { IRestaurant, unnestMenu, Lanuage } from '../..'
 import { last } from 'ramda'
+import { IRestaurant, Lanuage } from '../../interfaces/menu'
+import { unnestMenu } from '../../transformations/menu'
 
 export const readMenus = (menusDir = './data/menus'): IRestaurant[] =>
   readdirSync(menusDir)
@@ -33,7 +34,9 @@ export const parseMenus = () => {
   const menusParsedDir = './data/menus-parsed'
 
   const nestedMenus = readMenus(menusDir)
+  console.log({ nestedMenus })
   const flatMenus = nestedMenus.map(unnestMenu)
+  console.log({ flatMenus })
 
   flatMenus.forEach((m) =>
     writeFileSync(
