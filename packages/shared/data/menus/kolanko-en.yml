@@ -667,7 +667,7 @@
           price: 12
         - name: Rose - rose, semisweet
           price: 12
-- name: MULLED DRINKS xxxxxxxxxxxxxxxxxxxxx
+- name: MULLED DRINKS
   dishes:
     - name: Mulled beer
       variants:
