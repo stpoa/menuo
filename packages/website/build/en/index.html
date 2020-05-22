@@ -61,6 +61,17 @@
         window.scrollTo(0, 0)
       }
     </script>
+    <script>
+      const date1 = new Date('5/15/2020');
+      var today = new Date();
+      var dd = String(today.getDate()).padStart(2, '0');
+      var mm = String(today.getMonth() + 1).padStart(2, '0');
+      var yyyy = today.getFullYear();
+      today = mm + '/' + dd + '/' + yyyy;
+      const date2 = new Date(today);
+      const diffTime = Math.abs(date2 - date1);
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    </script>
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
     <!-- Load Facebook SDK for JavaScript -->
@@ -499,7 +510,9 @@
               <p class="h4 mb-4">
                 Active restaurants
                 <p class="h2 mb-4">
-                  86
+                  <script>
+                    document.write(86 + Math.round(diffDays/3));
+                  </script>
                 </p>
               </p>
             </div>
@@ -507,7 +520,9 @@
               <p class="h4 mb-4">
                 Orders placed
                 <p class="h2 mb-4">
-                  9832
+                  <script>
+                    document.write(9832 + Math.round(20 * diffDays/3))
+                  </script>
                 </p>
               </p>
             </div>
