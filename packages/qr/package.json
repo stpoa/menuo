@@ -17,8 +17,10 @@
   "scripts": {
     "start": "tsc --watch",
     "build": "tsc",
-    "generate:tables": "ts-node ./scripts/create-qr-code-tables.ts",
-    "generate:demonstration": "ts-node ./scripts/create-qr-code-demonstration.ts",
+    "generate:links-from-json-demonstration": "python ./scripts/tables-to-json-demnstration.py",
+    "generate:links-from-json-restaurant": "python ./scripts/tables-to-json-restaurant.py",
+    "generate:qr-from-links-restaurant": "ts-node ./scripts/create-qr-code-restaurant.ts",
+    "generate:qr-from-links-demonstration": "ts-node ./scripts/create-qr-code-demonstration.ts",
     "generate:labels": "python ./scripts/create-labels.py"
   }
 }
