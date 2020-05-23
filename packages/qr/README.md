@@ -1,11 +1,13 @@
 ## Label generating
 
 
-1. Put links into ./scripts/create-qr-code-tables.ts OR ./scripts/create-qr-code-demonstration.ts
+1. Put tables id into './data/restaurant.json' OR into './data/demonsration.json'
 
-2. yarn generate:tables OR yarn generate:demonstration
+2. yarn generate:links-from-json-restaurant OR yarn generate:links-from-json-demonstration
 
-3. yarn generate:labels
+3. yarn generate:qr-from-links-restaurant OR yarn generate:qr-from-links-demonstration
+
+4. yarn generate:labels
 
 
-Labels PL and EN are present in ./data. Resizing to print is not automated yet.
+Labels PL and EN are present in ./data. Resizing to print IS NOT AUTOMATED YET.
