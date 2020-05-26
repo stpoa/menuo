@@ -77,6 +77,8 @@
           price: 28
         - name: vegetables
           price: 27
+        - name: shrimps
+          price: 29
       description: made with vegetables and pineapple, served with basmati rice
     - name: Musaka
       variants:
@@ -261,63 +263,63 @@
           price: 6
         - name: Orient
           price: 6
-    - name: Black leaf
+    - name: Black leaf in the jug
       variants:
         - name: Black Nilgiri
-          price: 10
+          price: 12
         - name: Apple and cinnamon black tea
-          price: 10
+          price: 12
         - name: Earl Grey with rose and lemon grass
-          price: 10
+          price: 12
         - name: With cinnamon, cardamon, cloves, pepper (with milk served on the side)
-          price: 10
+          price: 12
         - name: Black tea with cowberry, elder, cherries, rose and hibiscus
-          price: 10
+          price: 12
         - name: Rainforest - with papaya, mango, mandarin, pineapple and hibiscus
-          price: 10
-    - name: Rooibos
+          price: 12
+    - name: Rooibos in the jug
       variants:
-        - name: Orange, sunflower, quinc
-          price: 10
+        - name: Orange-chocolate rooibos with orange, chocolate, rose petals, cornflower and sunflower
+          price: 12
         - name: Rooibos with orange peel, pistachios, almond, red pepper
-          price: 10
-    - name: Herbal
+          price: 12
+    - name: Herbal in the jug
       variants:
         - name: Mint tea
-          price: 8
+          price: 12
         - name: Lemon grass
-          price: 8
-    - name: Leaf green
+          price: 12
+    - name: Leaf green in the jug
       variants:
         - name: Green Yunnan
-          price: 10
+          price: 12
         - name: Sencha with cherry, marzipan and rose petals
-          price: 10
+          price: 12
         - name: Sencha with peach, pineapple and sunflower petals
-          price: 10
+          price: 12
         - name: Gunpowder raspberry and redcurrant gunpowder
-          price: 10
+          price: 12
         - name: Jasmine green
-          price: 10
-    - name: Black and green leaf tea
+          price: 12
+    - name: Black and green leaf tea in the jug
       variants:
         - name: ''
-          price: 10
+          price: 12
       description: Maharani - black and green tea with papaya, thistle petals, citrus
-    - name: Fruit tea
+    - name: Fruit tea in the jug
       variants:
         - name: Kaledonia - raisins, elder, redcurrant, cherries, cowberry, hibiscus, rose
-          price: 10
+          price: 12
         - name: Kalifornia - pineapple, papaya, mango, raisins, rose, hibiscus
-          price: 10
+          price: 12
         - name: Bora-Bora - papaya, raisins, redcurrant, raspberry, strawberry, apple, hibiscus
-          price: 10
-    - name: PU-ERH tea
+          price: 12
+    - name: PU-ERH tea in the jug
       variants:
         - name: PU-ERH exotic - with papaya, pineapple, mango, raisins and hibiscus
-          price: 10
+          price: 12
         - name: PU-ERH exotic - with candied cranberries and orange
-          price: 10
+          price: 12
 - name: COFFEE
   description: We recommend decaffeinated coffee and lactose free or soya milk
   dishes:
@@ -424,80 +426,76 @@
     - name: Freshly squeezed orange juice
       variants:
         - name: 200ml
-          price: 10
+          price: 12
         - name: 300ml
-          price: 14
+          price: 17
     - name: Homemade lemonade
       variants:
         - name: 300ml
-          price: 10
+          price: 12
         - name: 1000ml
-          price: 22
+          price: 25
     - name: Homemade lemonade with fresh oranges
       variants:
         - name: 300ml
-          price: 10
+          price: 13
         - name: 1000ml
-          price: 22
+          price: 26
     - name: Homemade ice tea with lemon and mint 300ml
       variants:
         - name: ''
-          price: 9
+          price: 10
     - name: Mineral water with lemon or mint
       variants:
         - name: 300ml
-          price: 5
+          price: 6
         - name: 1000ml
           price: 10
     - name: Juice
       variants:
         - name: orange 200ml
-          price: 6
+          price: 7
         - name: orange 1000ml
-          price: 15
+          price: 17
         - name: apple 200ml
-          price: 6
+          price: 7
         - name: apple 1000ml
-          price: 15
+          price: 17
         - name: blackcurrant 200ml
-          price: 6
+          price: 7
         - name: blackcurrant 1000ml
-          price: 15
+          price: 17
         - name: grapefruit 200ml
-          price: 6
+          price: 7
         - name: grapefruit 1000ml
-          price: 15
+          price: 17
         - name: pineapple 200ml
-          price: 6
+          price: 7
         - name: pineapple 1000ml
-          price: 15
+          price: 17
     - name: Kvass 330ml
       variants:
         - name: ''
-          price: 10
+          price: 12
     - name: Coca Cola 250ml
       variants:
         - name: ''
-          price: 6
+          price: 7
     - name: Sprite 250ml
       variants:
         - name: ''
-          price: 6
+          price: 7
     - name: Tonik Kinley 250ml
       variants:
         - name: ''
-          price: 6
+          price: 7
 - name: BEER
   dishes:
     - name: Beer City Brewery from Cracow
       variants:
         - name: Krak (English IPA) 500ml
-          price: 16
-        - name: Kacper Ryx (Polish IPA) 500ml
-          price: 16
-        - name: PSZEkulturalna (Citrus Weizen) 500ml
           price: 17
-        - name: PoraNaNas (Pineapple IPA) 500ml
+        - name: Kacper Ryx (Polish IPA) 500ml
           price: 17
         - name: Atak Chmielu AIPA (Polish AIPA) 500ml
           price: 17
@@ -506,33 +504,31 @@
     - name: Other bottled beer
       variants:
         - name: Piwo Żywe (unpasteurised) 500ml
-          price: 12
+          price: 13
         - name: Pszeniczniak wheat beer (wheat beer) 500ml
-          price: 13
+          price: 14
         - name: Miłosław Niefiltrowane (unfiltered beer) 500ml
-          price: 11
+          price: 13
         - name: Mirabelka - beer ageing with natural plum juice 500ml
-          price: 13
+          price: 14
         - name: Klasztorne - trappist type Ale 500ml
-          price: 12
+          price: 13
         - name: Dark beer with buckwheat honey 500ml
-          price: 13
+          price: 14
         - name: Krzepkie (strong beer) 7,4% 500ml
-          price: 13
+          price: 14
         - name: Miodne - dark beer with Polish honey 500ml
-          price: 13
+          price: 14
         - name: Wiśnia w Piwie - beer ageing with natural sour cherry juice 500ml
-          price: 13
-        - name: BezGlutenNowe (gluten free beer) 500ml
-          price: 13
+          price: 14
         - name: Jurajskie Miodowe - honey lager 500ml
-          price: 13
+          price: 14
         - name: Cornelius Grapefruitowy (wheat beer with grapefruit juice) 400ml
-          price: 11
+          price: 13
         - name: Paulaner (wheat beer) 500ml
-          price: 15
+          price: 17
         - name: Svijany Maz (Czech unpasterised pilsner) 500ml
-          price: 10.50
+          price: 12
         - name: Shandy - Tyskie Beer, Sprite, lemon, fresh mint 500ml
           price: 14
     - name: Piwo Draught beer
@@ -540,11 +536,11 @@
         - name: Jurajskie Bursztynowe (Amber Ale) 300ml
           price: 10
         - name: Jurajskie Bursztynowe (Dark Ale) 500ml
-          price: 12
+          price: 13
         - name: Tyskie Klasyczne 300ml
           price: 9.50
         - name: Tyskie Klasyczne 500ml
-          price: 10.50
+          price: 11
         - name: Tyskomat 5000ml
           price: 95
     - name: Alcohol free beer
@@ -556,37 +552,37 @@
         - name: Lech Free 0% (pomelo & grapefruit alcohol free beer) 500ml
           price: 11
         - name: Żywiec Sesyjne IPA 0% (alcohol free IPA ) 500ml
-          price: 12
+          price: 14
     - name: Cider
       variants:
         - name: Semidry Polish cider 500ml
-          price: 12
+          price: 13
         - name: Semisweet Polish cide 500ml
-          price: 12
+          price: 13
         - name: Polish craft cider 275ml
           price: 16
     - name: Cider drinks
       variants:
         - name: Sklepy Cynamonowe (cider, apple juice, cinnamon sirup) 350ml
-          price: 16
-        - name: Pod Papugami (cider, Wyborowa vodka, pineapple juice) 500ml
-          price: 16
-        - name: Wyspy Szczęśliwe (cider, orange juice, coconut sirup) 350ml
-          price: 15
-        - name: Semper Fidelis (cider, Żołądkowa Gorzka vodka, cane sugar, lime, mint) 350ml
           price: 18
+        - name: Pod Papugami (cider, vodka, pineapple juice) 500ml
+          price: 21
+        - name: Wyspy Szczęśliwe (cider, orange juice, coconut sirup) 350ml
+          price: 17
+        - name: Semper Fidelis (cider, Żołądkowa Gorzka vodka, cane sugar, lime, mint) 350ml
+          price: 21
 - name: WHITE WINE
   dishes:
     - name: Cantina Castelnuovo Del Garda Chardonnay IGT Veneto
       variants:
         - name: 100ml
-          price: 9
+          price: 10
         - name: 250ml
-          price: 17
+          price: 19
         - name: 500ml
-          price: 30
+          price: 32
         - name: 1000ml
-          price: 54
+          price: 56
       description: Italian, dry
     - name: Pinot Grigio Marchese della Torre IGT 750ml
       variants:
@@ -606,34 +602,34 @@
     - name: Sutter Home Moscato
       variants:
         - name: 100ml
-          price: 9
+          price: 10
         - name: 750ml
-          price: 55
+          price: 59
       description: Californian, white
     - name: Cavas Hill-Cava 750ml
       variants:
         - name: ''
-          price: 59
+          price: 63
       description: White, Spanish, semidry wine, produced according to traditional method
     - name: Gancia Prosecco D.O.C
       variants:
         - name: 200ml
-          price: 24
+          price: 25
         - name: 750ml
-          price: 70
+          price: 75
       description: Italian, semidry
 - name: RED WINES
   dishes:
     - name: Cantina Castelnuovo Del Garda Merlot IGT Veneto
       variants:
         - name: 100ml
-          price: 9
+          price: 10
         - name: 250ml
-          price: 17
+          price: 19
         - name: 500ml
-          price: 30
+          price: 32
         - name: 1000ml
-          price: 54
+          price: 56
       description: Italian, dry
     - name: Syrah Vina Falernia 750ml
       variants:
@@ -672,106 +668,101 @@
     - name: Mulled beer
       variants:
         - name: 300ml
-          price: 9
-        - name: 500ml
           price: 11
+        - name: 500ml
+          price: 13
     - name: Mulled wine 150ml
       variants:
         - name: ''
-          price: 9
+          price: 11
     - name: Biały Miś (Advocat, cinnamon, milk) 160ml
       variants:
         - name: ''
-          price: 9
+          price: 11
     - name: Bury Miś (Advocat, chocolate, milk) 160ml
       variants:
         - name: ''
-          price: 11
+          price: 13
     - name: Bombardino (Advocat, Kahlua, whipped cream) 100ml
       variants:
         - name: ''
-          price: 8
+          price: 10
     - name: Grog na rumie (Havana rum, lemon, honey, spices, hot water) 200ml
       variants:
         - name: ''
-          price: 16
+          price: 17
     - name: Grog na Krupniku (Krupnik, lemon, honey, spices, hot water) 200ml
       variants:
         - name: ''
-          price: 11
+          price: 13
     - name: Mulled cider 330ml
       variants:
         - name: ''
-          price: 13
+          price: 14
     - name: Mulled kvass 330ml
       variants:
         - name: ''
-          price: 12
+          price: 13
 - name: NON ALCOHOLIC DRINKS
   dishes:
     - name: Mojito Virgin with sparkling water 300ml
       variants:
         - name: ''
-          price: 12
+          price: 13
     - name: Mojito Virgin with sparkling water and raspberries 300ml
       variants:
         - name: ''
-          price: 13
+          price: 14
     - name: Mojito Virgin with Sprite 300ml
       variants:
         - name: ''
-          price: 14
+          price: 15
     - name: Mojito Virgin with Sprite and raspberries 300ml
       variants:
         - name: ''
-          price: 15
-    - name: Cabriolet 300ml
+          price: 16
+    - name: Mango Spritz 250ml
       variants:
         - name: ''
-          price: 13
-      description: grapefruit juice, lemon juice, tonic, Blue Curacao sirup
+          price: 15
+      description: Mango puree, grapefruit juice, lime syrup, sparkling water, lime
+    - name: Monsoon Wedding 200ml
+      variants:
+        - name: ''
+          price: 14
+      description: Mango puree, passion fruit puree, orange and grapefruit juice
     - name: Piña Kolanko 250ml
       variants:
         - name: ''
-          price: 10
+          price: 12
       description: Pineapple juice, orange juice, coconut sirup, orange
     - name: Pomarańczowa Alternatywa 300ml
       variants:
         - name: ''
-          price: 13
+          price: 14
       description: Juices - orange, grapefruit, pineapple, strawberry sirup, orange, lime, mint, crushed ice
     - name: Rozważna i Romantyczna 250ml
       variants:
         - name: ''
-          price: 11
+          price: 13
       description: Orange juice, pineapple juice, grapefruit juice, strawberry sirup and raspberry mousse
-    - name: Over The Rainbow 250ml
-      variants:
-        - name: ''
-          price: 12
-      description: Orange juice, lemon juice, Grenadine, Blue Curacao sirup
 - name: SHORT DRINKS
   dishes:
     - name: Black Russian 60ml
       variants:
         - name: ''
-          price: 14
-      description: Vodka, coffee liquer
-    - name: Blue Hawaiian 100ml
-      variants:
-        - name: ''
-          price: 14
-      description: Blue Curacao liqer, Havana Rum, Malibu, pineapple  juice, cream
-    - name: Blue Lagoon 120ml
-      variants:
-        - name: ''
           price: 15
-      description: Vodka, Monin Blue Curacao sirup, Cointreau, pineapple juice
+      description: Vodka, coffee liquer
     - name: Cosmopolitan 120ml
       variants:
         - name: ''
-          price: 19
+          price: 21
       description: Cointreau, vodka, lemon juice, blackcurrant juice
+    - name: Espresso Martini 100ml
+      variants:
+        - name: ''
+          price: 19
+      description: Vodka, coffee liquer, sugar syrup
     - name: Kamikaze 6 x 25 ml (shot)
       variants:
         - name: ''
@@ -780,238 +771,247 @@
     - name: Margarita 80ml
       variants:
         - name: ''
-          price: 22
+          price: 24
       description: Tequila Silver, Cointreau, lemon juice
     - name: Negroni 60ml
       variants:
         - name: ''
-          price: 14
+          price: 15
       description: Seagram's Gin, Campari, Martini Rosso
-    - name: Orgazm 80ml
-      variants:
-        - name: ''
-          price: 14
-      description: Kahlua coffee liquer, Amaretto, Cointreau, vodka, cream
     - name: Piña Colada 120ml
       variants:
         - name: ''
-          price: 16
+          price: 18
       description: Rum Havana Club, Malibu, cream, pineapple juice
+    - name: Passion Fruit Margarita 100ml
+      variants:
+        - name: ''
+          price: 27
+      description: Tequila, Cointreau, passion fruit puree, lemon juice
+    - name: Whisky Sour 80ml
+      variants:
+        - name: ''
+          price: 21
+      description: Jack Daniels, sugar syrup, lemon juice
     - name: White Russian 80ml
       variants:
         - name: ''
-          price: 13
-      description: Wódka Wyborowa, Kahlua coffee liquer, cream
+          price: 14
+      description: Vodka, Kahlua coffee liquer, cream
     - name: Wściekły Pies 50ml (shot)
       variants:
         - name: ''
-          price: 7
+          price: 8
       description: Vodka, raspberry juice, tabasco
 - name: LONG DRINKS
   dishes:
     - name: 008 250ml
       variants:
         - name: ''
-          price: 12
+          price: 14
       description: Vodka, Martini Bianco, grapefruit juice
+    - name: Amarelo Manga 200ml
+      variants:
+        - name: ''
+          price: 21
+      description: Vodka, mango puree, peach liqueur, grapefruit juice, lime syrup, sparkling water, lime
     - name: Aperol Spritz 200ml
       variants:
         - name: ''
-          price: 23
+          price: 24
       description: Prosecco, Aperol, sparkling water, orange
     - name: Campari Orange 250ml
       variants:
         - name: ''
-          price: 17
+          price: 19
       description: Prosecco, Campari, sparkling water
-    - name: Campari Spritz 200ml
-      variants:
-        - name: ''
-          price: 25
-      description: Prosecco, Campari, sparkling water, orange
     - name: Cuba Libra 250ml
       variants:
         - name: ''
-          price: 19
+          price: 20
       description: Rum Havana Club, coca cola, lemon juice
     - name: Cztery Róże dla Lucienne 300ml
       variants:
         - name: ''
-          price: 17
-      description: Wódka Wyborowa, Monin strawberry sirup, raspberry mousse, sprite
+          price: 18
+      description: Vodka, Monin strawberry sirup, raspberry mousse, sprite
     - name: Exotic Russian 300ml
       variants:
         - name: ''
           price: 19
-      description: Wódka Wyborowa, Passoa liquer, Grenadina, sprite
+      description: Vodka, Passoa liquer, Grenadina, sprite
+    - name: Gin & Tonic
+      variants:
+        - name: ''
+          price: 17
+      description: Sseagram's Gin, tonic, lime
     - name: Golden Eye 250ml
       variants:
         - name: ''
-          price: 15
+          price: 16
       description: Hazelnut vodka, Gin Seagram’s, apple juice
     - name: Gorączka Sobotniej Nocy 300ml
       variants:
         - name: ''
-          price: 17
+          price: 18
       description: Vodka Cointreau, orange juice, pineapple juice, grenadine
     - name: John Lemon 250ml
       variants:
         - name: ''
-          price: 16
-      description: Lemonvodka, Monin lime sirup, sparking water, citrus fruit
+          price: 17
+      description: Lemon vodka, Monin lime sirup, sparking water, citrus fruit
+    - name: Coffee ... 200ml
+      variants:
+        - name: ''
+          price: 19
+      description: Espresso, Baileys, caramel syrup, cold milk
     - name: Long Island Ice Tea 300ml
       variants:
         - name: ''
-          price: 21
+          price: 23
       description: Vodka, gin Seagram’s, rum Havana Club, tequila Olmeca Silver, Cointreau, leomn juice, coca cola
     - name: Long Island Ice Tea
       variants:
         - name: ''
-          price: 69
+          price: 79
       description: 4 servings
-    - name: Malibu with milk 200ml
-      variants:
-        - name: ''
-          price: 12
-      description: Malibu, milk
     - name: Mechaniczna Pomarańcza 300ml
       variants:
         - name: ''
-          price: 18
+          price: 20
       description: Malibu, freshly squezzed orange juice, orange, mint
     - name: Mojito 300ml
       variants:
         - name: ''
-          price: 20
+          price: 22
       description: Rum Havana, cane sugar, sparkling water, mint, lime
     - name: Mojito raspberry 300ml
       variants:
         - name: ''
-          price: 22
+          price: 24
       description: Rum Havana, cane sugar, sparkling water, mint, lime, raspberry
     - name: Mojito Passoa 300ml
       variants:
         - name: ''
-          price: 19
+          price: 21
       description: Passoa liquer, Grenadine, cane suger, cane sugar, mint, lime
     - name: Monkey Business 270ml
       variants:
         - name: ''
-          price: 16.50
+          price: 18
       description: Vodka, Malibu, orange juice, grenadine
-    - name: Hazelnut vodka witk milk 200ml
-      variants:
-        - name: ''
-          price: 12
-      description: Hazelnut vodka, milk
-    - name: Pod Osłoną Nieba 150ml
-      variants:
-        - name: ''
-          price: 16
-      description: White wine, Passoa liquer, grenadine, lime
     - name: Po Drugiej Stronie Lustra 300ml
       variants:
         - name: ''
-          price: 15
+          price: 16
       description: Digestive bitters, lemon juice, pineapple juice, sprite, cucumber slices
+    - name: Powrót Różowej Pantery
+      variants:
+        - name: ''
+          price: 23
+      description: Peach liqueur, vodka, orange juice, pineapple juice, grenadine
     - name: Szprycer 250ml
       variants:
         - name: ''
-          price: 12
+          price: 14
       description: White dry wine, sparkling water, lemon
     - name: Tatanka 200ml
       variants:
         - name: ''
-          price: 12
+          price: 14
       description: Bison vodka, apple juice
-    - name: Tatanka miętowa 200ml
-      variants:
-        - name: ''
-          price: 13
-      description: Bison vodka, apple juice, mint
     - name: Tequila Sunrise 250ml
       variants:
         - name: ''
-          price: 19
+          price: 21
       description: Tequila Olmeca Gold, orange juice, grenadine
+    - name: Tom Collins 250ml
+      variants:
+        - name: ''
+          price: 19
+      description: Seagram's Gin, lemon juice, sugar sirup, sparkling water
 - name: VODKA
   dishes:
     - name: Finlandia
       variants:
         - name: 40ml
-          price: 9
+          price: 10
         - name: 700ml
           price: 140
     - name: Wyborowa
       variants:
         - name: 40ml
-          price: 8
+          price: 9
         - name: 700ml
           price: 95
     - name: Digestive bitters
       variants:
         - name: 40ml
-          price: 8
+          price: 9
         - name: 700ml
           price: 95
     - name: Digestive bitters with mint 40ml
       variants:
         - name: ''
-          price: 8
+          price: 9
     - name: Bison vodka 40ml
       variants:
         - name: ''
-          price: 8
+          price: 9
     - name: Lemon vodka 40ml
       variants:
         - name: ''
-          price: 8
+          price: 9
     - name: Raspberry vodka 40ml
       variants:
         - name: ''
-          price: 8
+          price: 9
     - name: Hazelnut vodka 40ml
       variants:
         - name: ''
-          price: 8
+          price: 9
     - name: Quince vodka 40ml
       variants:
         - name: ''
-          price: 8
+          price: 9
     - name: Plum vodka 40ml
       variants:
         - name: ''
-          price: 8
+          price: 9
     - name: Cherry vodka 40ml
       variants:
         - name: ''
-          price: 8
+          price: 9
 - name: LIQUERS
   dishes:
     - name: Advocat 40ml
       variants:
         - name: ''
-          price: 7
+          price: 8
     - name: Amaretto 20ml
       variants:
         - name: ''
           price: 6
-    - name: Blue Curacao 20ml
+    - name: Archers 40ml
       variants:
         - name: ''
-          price: 6
+          price: 13
+    - name: Blue Curacao 40ml
+      variants:
+        - name: ''
+          price: 16
     - name: Baileys 40ml
       variants:
         - name: ''
           price: 12
-    - name: Cointreau 20ml
+    - name: Cointreau 40ml
       variants:
         - name: ''
-          price: 7
-    - name: Kahlua Coffee Liquer 20ml
+          price: 16
+    - name: Kahlua Coffee Liquer 40ml
       variants:
         - name: ''
-          price: 6
+          price: 16
 - name: OTHER SPIRITS
   dishes:
     - name: Aperol 40ml
@@ -1025,19 +1025,19 @@
     - name: Gin Seagram's 40ml
       variants:
         - name: ''
-          price: 8
+          price: 10
     - name: Jagermeister 40ml
       variants:
         - name: ''
-          price: 10
+          price: 12
     - name: Krupnik 40ml
       variants:
         - name: ''
-          price: 7
+          price: 10
     - name: Passoa 40ml
       variants:
         - name: ''
-          price: 9
+          price: 11
     - name: Rum Havana Club 40ml
       variants:
         - name: ''
@@ -1045,36 +1045,36 @@
     - name: Rum Malibu 40ml
       variants:
         - name: ''
-          price: 10
+          price: 12
     - name: Stock Brandy 40ml
       variants:
         - name: ''
-          price: 10
+          price: 12
     - name: Tequila Olmeca Gold 40ml
       variants:
         - name: ''
-          price: 15
+          price: 16
     - name: Tequila Olmeca Silver 40ml
       variants:
         - name: ''
-          price: 15
+          price: 16
     - name: Whisky Ballantines 40ml
       variants:
         - name: ''
-          price: 15
+          price: 16
     - name: Whisky Jack Daniels 40ml
       variants:
         - name: ''
-          price: 15
+          price: 17
     - name: Whisky Jameson 40ml
       variants:
         - name: ''
-          price: 15
+          price: 16
     - name: Whisky Johnnie Walker 40ml
       variants:
         - name: ''
-          price: 15
+          price: 16
     - name: Whisky Jim Beam 40ml
       variants:
         - name: ''
-          price: 15
+          price: 16
