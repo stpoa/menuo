@@ -5,9 +5,6 @@ import shutil
 
 mywidth = 316
 
-if (os.path.exists("../data/QrGoodSize") == False):
-	os.mkdir("../data/QrGoodSize")
-
 path = os.listdir("../data/QrTooLarge")
 
 if (os.path.exists("../data/Stickers") == False):
@@ -24,6 +21,9 @@ for i in path:
 	back_im.save(pathToSave, quality=100)
 im1.close()
 back_im.close()
+
+if (os.path.exists("../data/QrGoodSize") == False):
+	os.mkdir("../data/QrGoodSize")
 
 for i in path:
 	pathToOpen = "../data/QrTooLarge/" + i
