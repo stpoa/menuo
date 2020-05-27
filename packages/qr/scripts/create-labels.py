@@ -10,6 +10,21 @@ if (os.path.exists("../data/QrGoodSize") == False):
 
 path = os.listdir("../data/QrTooLarge")
 
+if (os.path.exists("../data/Stickers") == False):
+	os.mkdir("../data/Stickers")
+
+im1 = Image.open('../data/Sticker.png')
+path = os.listdir("../data/Stickers")
+for i in path:
+	pathToOpen = "../data/Stickers/" + i
+	im2 = Image.open(pathToOpen)
+	back_im = im1.copy()
+	back_im.paste(im2, (8,100))
+	pathToSave = "../data/Stickers/Sticker" + i
+	back_im.save(pathToSave, quality=100)
+im1.close()
+back_im.close()
+
 for i in path:
 	pathToOpen = "../data/QrTooLarge/" + i
 	img = Image.open(pathToOpen)
