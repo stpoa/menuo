@@ -5,13 +5,11 @@ import shutil
 
 mywidth = 316
 
-path = os.listdir("../data/QrTooLarge")
-
 if (os.path.exists("../data/Stickers") == False):
 	os.mkdir("../data/Stickers")
 
 im1 = Image.open('../data/Sticker.png')
-path = os.listdir("../data/Stickers")
+path = os.listdir("../data/QrTooLarge")
 for i in path:
 	pathToOpen = "../data/Stickers/" + i
 	im2 = Image.open(pathToOpen)
