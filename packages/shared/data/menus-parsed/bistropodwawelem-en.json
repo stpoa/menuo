@@ -3,68 +3,1112 @@
     "index": 0,
     "language": "en",
     "restaurant": "bistropodwawelem",
-    "section": "STARTERS",
-    "dishName": "Beef tartare",
-    "dishDescription": "With onion, pickled cucumber, mushrooms and yolk, served with bread",
-    "dishVariantPrice": 25,
-    "dishVariantName": ""
+    "section": "APETIZERS",
+    "dishName": "Śledź",
+    "dishVariantPrice": 13,
+    "dishVariantName": "w śmietanie"
   },
   {
     "index": 1,
     "language": "en",
     "restaurant": "bistropodwawelem",
-    "section": "STARTERS",
-    "dishName": "Mexican nachos",
-    "dishDescription": "Served with sultry beef",
-    "dishVariantPrice": 12,
-    "dishVariantName": ""
+    "section": "APETIZERS",
+    "dishName": "Śledź",
+    "dishVariantPrice": 13,
+    "dishVariantName": "w oleju"
   },
   {
     "index": 2,
     "language": "en",
     "restaurant": "bistropodwawelem",
-    "section": "SOUPS",
-    "dishName": "Beef guts",
-    "dishDescription": "According to a family recipe",
-    "dishVariantPrice": 13,
+    "section": "APETIZERS",
+    "dishName": "Barszcz z krokietem",
+    "dishVariantPrice": 14,
     "dishVariantName": ""
   },
   {
     "index": 3,
     "language": "en",
     "restaurant": "bistropodwawelem",
-    "section": "SOUPS",
-    "dishName": "Beetroot",
-    "dishDescription": "Served with a meat croquette",
-    "dishVariantPrice": 16,
+    "section": "APETIZERS",
+    "dishName": "Kiełbasa z rusztu z cebulką",
+    "dishVariantPrice": 15,
     "dishVariantName": ""
   },
   {
     "index": 4,
     "language": "en",
     "restaurant": "bistropodwawelem",
-    "section": "MAIN DISHES",
-    "dishName": "Oven trout",
-    "dishDescription": "Served with grilled vegetables",
-    "dishVariantPrice": 35,
+    "section": "APETIZERS",
+    "dishName": "Sałatka koktaljowa z kurczakiem",
+    "dishVariantPrice": 26,
     "dishVariantName": ""
   },
   {
     "index": 5,
     "language": "en",
     "restaurant": "bistropodwawelem",
-    "section": "MAIN DISHES",
-    "dishName": "Dumplings - 10 pcs",
-    "dishVariantPrice": 14,
-    "dishVariantName": "with cabbage and mushrooms"
+    "section": "SOUPS",
+    "dishName": "Rosół z makaronem",
+    "dishVariantPrice": 11,
+    "dishVariantName": ""
   },
   {
     "index": 6,
     "language": "en",
     "restaurant": "bistropodwawelem",
-    "section": "MAIN DISHES",
-    "dishName": "Dumplings - 10 pcs",
+    "section": "SOUPS",
+    "dishName": "Pomidorowa z makaronem",
+    "dishVariantPrice": 11,
+    "dishVariantName": ""
+  },
+  {
+    "index": 7,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "SOUPS",
+    "dishName": "Barszcz z uszkami",
     "dishVariantPrice": 14,
-    "dishVariantName": "with meat"
+    "dishVariantName": ""
+  },
+  {
+    "index": 8,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "SOUPS",
+    "dishName": "Żure saropolski z kiełbasą",
+    "dishVariantPrice": 14,
+    "dishVariantName": ""
+  },
+  {
+    "index": 9,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "SOUPS",
+    "dishName": "Flaki wołowe po hetmańsku",
+    "dishVariantPrice": 19,
+    "dishVariantName": ""
+  },
+  {
+    "index": 10,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "POLISH SPECIALS",
+    "dishName": "Żur w chlebie",
+    "dishVariantPrice": 19,
+    "dishVariantName": ""
+  },
+  {
+    "index": 11,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "POLISH SPECIALS",
+    "dishName": "Bigos staropolski",
+    "dishVariantPrice": 19,
+    "dishVariantName": ""
+  },
+  {
+    "index": 12,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "POLISH SPECIALS",
+    "dishName": "Pieczeń po kasztelańsku",
+    "dishDescription": "frytki / ziemniaki / ryż + zestaw surówek",
+    "dishVariantPrice": 31,
+    "dishVariantName": ""
+  },
+  {
+    "index": 13,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "POLISH SPECIALS",
+    "dishName": "Placek po węgiersku + zestaw surówek",
+    "dishVariantPrice": 31,
+    "dishVariantName": ""
+  },
+  {
+    "index": 14,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "POLISH SPECIALS",
+    "dishName": "Golonka po bawarsku",
+    "dishDescription": "frytki / ziemniaki / ryż + zestaw surówek",
+    "dishVariantPrice": 34,
+    "dishVariantName": ""
+  },
+  {
+    "index": 15,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "POLISH SPECIALS",
+    "dishName": "Półmisek \"Smoka Wawelskiego\"",
+    "dishDescription": "trzy rodzaje mięs: polędwica wołowa, stek wieprzowy, filet z kurczaka + frytki, ziemniaki, ryż + zestaw surówek",
+    "dishVariantPrice": 69,
+    "dishVariantName": ""
+  },
+  {
+    "index": 16,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "PORK DISHES",
+    "dishName": "Kotlet schabowy",
+    "dishDescription": "frytki / ziemniaki / ryż + zestaw surówek",
+    "dishVariantPrice": 29.5,
+    "dishVariantName": ""
+  },
+  {
+    "index": 17,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "PORK DISHES",
+    "dishName": "Stek wieprzowy z cebulką",
+    "dishDescription": "frytki / ziemniaki / ryż + zestaw surówek",
+    "dishVariantPrice": 31,
+    "dishVariantName": ""
+  },
+  {
+    "index": 18,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "PORK DISHES",
+    "dishName": "Kotlet sauté z pieczarkami",
+    "dishDescription": "frytki / ziemniaki / ryż + zestaw surówek",
+    "dishVariantPrice": 32,
+    "dishVariantName": ""
+  },
+  {
+    "index": 19,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "PORK DISHES",
+    "dishName": "Żeberko po chłopsku",
+    "dishDescription": "frytki / ziemniaki / ryż + zestaw surówek",
+    "dishVariantPrice": 32,
+    "dishVariantName": ""
+  },
+  {
+    "index": 20,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "PORK DISHES",
+    "dishName": "Eskalop \"Genius\"",
+    "dishDescription": "frytki / ziemniaki / ryż + zestaw surówek",
+    "dishVariantPrice": 39,
+    "dishVariantName": ""
+  },
+  {
+    "index": 21,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "POULTRY DISHES",
+    "dishName": "Kotlet \"De Volaille\"",
+    "dishDescription": "frytki / ziemniaki / ryż + zestaw surówek",
+    "dishVariantPrice": 28,
+    "dishVariantName": ""
+  },
+  {
+    "index": 22,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "POULTRY DISHES",
+    "dishName": "Filet z kurczaka panierowany",
+    "dishDescription": "frytki / ziemniaki / ryż + zestaw surówek",
+    "dishVariantPrice": 29,
+    "dishVariantName": ""
+  },
+  {
+    "index": 23,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "POULTRY DISHES",
+    "dishName": "Filet sauté z pieczarkami",
+    "dishDescription": "frytki / ziemniaki / ryż + zestaw surówek",
+    "dishVariantPrice": 29.5,
+    "dishVariantName": ""
+  },
+  {
+    "index": 24,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "POULTRY DISHES",
+    "dishName": "Szaszłyk \"Słowiański\"",
+    "dishDescription": "frytki / ziemniaki / ryż + zestaw surówek",
+    "dishVariantPrice": 32,
+    "dishVariantName": ""
+  },
+  {
+    "index": 25,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "POULTRY DISHES",
+    "dishName": "Brizol z ananasem",
+    "dishDescription": "frytki / ziemniaki / ryż + zestaw surówek",
+    "dishVariantPrice": 31,
+    "dishVariantName": ""
+  },
+  {
+    "index": 26,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "BEEF DISHES",
+    "dishName": "Pierogi z mięsem",
+    "dishVariantPrice": 20,
+    "dishVariantName": ""
+  },
+  {
+    "index": 27,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "BEEF DISHES",
+    "dishName": "Gulasz \"Cygański\"",
+    "dishVariantPrice": 22,
+    "dishVariantName": ""
+  },
+  {
+    "index": 28,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "BEEF DISHES",
+    "dishName": "Rumsztyk z cebulką",
+    "dishDescription": "frytki / ziemniaki / ryż + zestaw surówek",
+    "dishVariantPrice": 31,
+    "dishVariantName": ""
+  },
+  {
+    "index": 29,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "BEEF DISHES",
+    "dishName": "Brizol z pieczarkami",
+    "dishDescription": "frytki / ziemniaki / ryż + zestaw surówek",
+    "dishVariantPrice": 32,
+    "dishVariantName": ""
+  },
+  {
+    "index": 30,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "BEEF DISHES",
+    "dishName": "\"Chateaubriand\" z polędwicy",
+    "dishDescription": "frytki / ziemniaki / ryż + zestaw surówek",
+    "dishVariantPrice": 64,
+    "dishVariantName": ""
+  },
+  {
+    "index": 31,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "FISH DISHES",
+    "dishName": "Mintaj panierowany",
+    "dishDescription": "frytki / ziemniaki / ryż + zestaw surówek",
+    "dishVariantPrice": 29.5,
+    "dishVariantName": ""
+  },
+  {
+    "index": 32,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "FISH DISHES",
+    "dishName": "Pstrąg saute",
+    "dishDescription": "frytki / ziemniaki / ryż + zestaw surówek",
+    "dishVariantPrice": 37,
+    "dishVariantName": ""
+  },
+  {
+    "index": 33,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "FISH DISHES",
+    "dishName": "Łosoś po wiedeńsku",
+    "dishDescription": "frytki / ziemniaki / ryż + zestaw surówek",
+    "dishVariantPrice": 39,
+    "dishVariantName": ""
+  },
+  {
+    "index": 34,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "VEGETARIAN DISHES",
+    "dishName": "Pierogi ruskie",
+    "dishVariantPrice": 17,
+    "dishVariantName": ""
+  },
+  {
+    "index": 35,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "VEGETARIAN DISHES",
+    "dishName": "Placki ziemniaczane + zestaw surówek",
+    "dishVariantPrice": 19,
+    "dishVariantName": ""
+  },
+  {
+    "index": 36,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "VEGETARIAN DISHES",
+    "dishName": "Pierogi z kapustą i grzybami",
+    "dishVariantPrice": 20,
+    "dishVariantName": ""
+  },
+  {
+    "index": 37,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "VEGETARIAN DISHES",
+    "dishName": "Naleśniki ze szpinakiem",
+    "dishVariantPrice": 21,
+    "dishVariantName": ""
+  },
+  {
+    "index": 38,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "VEGETARIAN DISHES",
+    "dishName": "Pierogowa micha (ruskie + z kapustą i grzybami)",
+    "dishVariantPrice": 26,
+    "dishVariantName": ""
+  },
+  {
+    "index": 39,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "DESSERTS",
+    "dishName": "Puchar lodowy z bitą śmietaną",
+    "dishVariantPrice": 12,
+    "dishVariantName": ""
+  },
+  {
+    "index": 40,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "DESSERTS",
+    "dishName": "Szarlotka na ciepło z musem i bitą śmietaną",
+    "dishVariantPrice": 12,
+    "dishVariantName": ""
+  },
+  {
+    "index": 41,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "DESSERTS",
+    "dishName": "Sernik wiedeński",
+    "dishVariantPrice": 12,
+    "dishVariantName": ""
+  },
+  {
+    "index": 42,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "DESSERTS",
+    "dishName": "Naleśniki z serem, owocami i bitą śmietaną",
+    "dishVariantPrice": 21,
+    "dishVariantName": ""
+  },
+  {
+    "index": 43,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "SIDES",
+    "dishName": "Frytki",
+    "dishVariantPrice": 8,
+    "dishVariantName": ""
+  },
+  {
+    "index": 44,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "SIDES",
+    "dishName": "Ziemniaki",
+    "dishVariantPrice": 5,
+    "dishVariantName": ""
+  },
+  {
+    "index": 45,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "SIDES",
+    "dishName": "Ryż",
+    "dishVariantPrice": 4,
+    "dishVariantName": ""
+  },
+  {
+    "index": 46,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "SIDES",
+    "dishName": "Zestaw surówek",
+    "dishVariantPrice": 7,
+    "dishVariantName": ""
+  },
+  {
+    "index": 47,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "SIDES",
+    "dishName": "Kapusta zasmażana",
+    "dishVariantPrice": 5,
+    "dishVariantName": ""
+  },
+  {
+    "index": 48,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "SIDES",
+    "dishName": "Pieczywo",
+    "dishVariantPrice": 4,
+    "dishVariantName": ""
+  },
+  {
+    "index": 49,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "SIDES",
+    "dishName": "Sok do piwa",
+    "dishVariantPrice": 1,
+    "dishVariantName": ""
+  },
+  {
+    "index": 50,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "SIDES",
+    "dishName": "Orzeszki",
+    "dishVariantPrice": 5,
+    "dishVariantName": ""
+  },
+  {
+    "index": 51,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "HOT DRINKS",
+    "dishName": "Herbata z cytryną",
+    "dishVariantPrice": 7,
+    "dishVariantName": ""
+  },
+  {
+    "index": 52,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "HOT DRINKS",
+    "dishName": "Espresso",
+    "dishVariantPrice": 8,
+    "dishVariantName": ""
+  },
+  {
+    "index": 53,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "HOT DRINKS",
+    "dishName": "Kawa Cappucino",
+    "dishVariantPrice": 9,
+    "dishVariantName": ""
+  },
+  {
+    "index": 54,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "HOT DRINKS",
+    "dishName": "Kawa Latte",
+    "dishVariantPrice": 12,
+    "dishVariantName": ""
+  },
+  {
+    "index": 55,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "HOT DRINKS",
+    "dishName": "Kawa rozpuszczalna",
+    "dishVariantPrice": 8,
+    "dishVariantName": ""
+  },
+  {
+    "index": 56,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "HOT DRINKS",
+    "dishName": "Kawa parzona",
+    "dishVariantPrice": 8,
+    "dishVariantName": ""
+  },
+  {
+    "index": 57,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "HOT DRINKS",
+    "dishName": "Gorąca czekolada",
+    "dishVariantPrice": 9,
+    "dishVariantName": ""
+  },
+  {
+    "index": 58,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "COLD DRINKS",
+    "dishName": "Woda 500ml",
+    "dishVariantPrice": 5,
+    "dishVariantName": "gazowana"
+  },
+  {
+    "index": 59,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "COLD DRINKS",
+    "dishName": "Woda 500ml",
+    "dishVariantPrice": 5,
+    "dishVariantName": "niegazowana"
+  },
+  {
+    "index": 60,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "COLD DRINKS",
+    "dishName": "Sok 330ml",
+    "dishVariantPrice": 8,
+    "dishVariantName": "pomarańczowy"
+  },
+  {
+    "index": 61,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "COLD DRINKS",
+    "dishName": "Sok 330ml",
+    "dishVariantPrice": 8,
+    "dishVariantName": "jabłkowy"
+  },
+  {
+    "index": 62,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "COLD DRINKS",
+    "dishName": "Sok 330ml",
+    "dishVariantPrice": 8,
+    "dishVariantName": "czarna porzeczka"
+  },
+  {
+    "index": 63,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "COLD DRINKS",
+    "dishName": "Pepsi 500ml",
+    "dishVariantPrice": 8,
+    "dishVariantName": ""
+  },
+  {
+    "index": 64,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "COLD DRINKS",
+    "dishName": "Mirinda 500ml",
+    "dishVariantPrice": 8,
+    "dishVariantName": ""
+  },
+  {
+    "index": 65,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "COLD DRINKS",
+    "dishName": "7up 500ml",
+    "dishVariantPrice": 8,
+    "dishVariantName": ""
+  },
+  {
+    "index": 66,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "COLD DRINKS",
+    "dishName": "Ice Tea 500ml",
+    "dishVariantPrice": 8,
+    "dishVariantName": ""
+  },
+  {
+    "index": 67,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "COLD DRINKS",
+    "dishName": "Schweppes 500ml",
+    "dishVariantPrice": 8,
+    "dishVariantName": ""
+  },
+  {
+    "index": 68,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "COLD DRINKS",
+    "dishName": "Sok z gór (tłoczony) 330ml",
+    "dishVariantPrice": 9,
+    "dishVariantName": ""
+  },
+  {
+    "index": 69,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "WINE",
+    "dishName": "Virto",
+    "dishVariantPrice": 12,
+    "dishVariantName": "białe 150ml"
+  },
+  {
+    "index": 70,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "WINE",
+    "dishName": "Virto",
+    "dishVariantPrice": 60,
+    "dishVariantName": "białe 750ml"
+  },
+  {
+    "index": 71,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "WINE",
+    "dishName": "Virto",
+    "dishVariantPrice": 12,
+    "dishVariantName": "czerwone (wytrawne) 150ml"
+  },
+  {
+    "index": 72,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "WINE",
+    "dishName": "Virto",
+    "dishVariantPrice": 60,
+    "dishVariantName": "czerwon (wytrawne) 750ml"
+  },
+  {
+    "index": 73,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "WINE",
+    "dishName": "Gato Negro",
+    "dishVariantPrice": 12,
+    "dishVariantName": "białe 150ml"
+  },
+  {
+    "index": 74,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "WINE",
+    "dishName": "Gato Negro",
+    "dishVariantPrice": 70,
+    "dishVariantName": "białe 750ml"
+  },
+  {
+    "index": 75,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "WINE",
+    "dishName": "Gato Negro",
+    "dishVariantPrice": 12,
+    "dishVariantName": "czerwone (półwytrawne) 150ml"
+  },
+  {
+    "index": 76,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "WINE",
+    "dishName": "Gato Negro",
+    "dishVariantPrice": 70,
+    "dishVariantName": "czerwone (półwytrawne) 750ml"
+  },
+  {
+    "index": 77,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "WINE",
+    "dishName": "Gato Negro",
+    "dishVariantPrice": 12,
+    "dishVariantName": "czerwone (półsłodkie) 150ml"
+  },
+  {
+    "index": 78,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "WINE",
+    "dishName": "Gato Negro",
+    "dishVariantPrice": 70,
+    "dishVariantName": "czerwone (półsłodkie) 750ml"
+  },
+  {
+    "index": 79,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "WINE",
+    "dishName": "Carlo Rossi",
+    "dishVariantPrice": 14,
+    "dishVariantName": "białe 150ml"
+  },
+  {
+    "index": 80,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "WINE",
+    "dishName": "Carlo Rossi",
+    "dishVariantPrice": 70,
+    "dishVariantName": "białe 750ml"
+  },
+  {
+    "index": 81,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "WINE",
+    "dishName": "Carlo Rossi",
+    "dishVariantPrice": 14,
+    "dishVariantName": "czerwone (wytrawne) 150ml"
+  },
+  {
+    "index": 82,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "WINE",
+    "dishName": "Carlo Rossi",
+    "dishVariantPrice": 70,
+    "dishVariantName": "czerwone (wytrawne) 750ml"
+  },
+  {
+    "index": 83,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "WINE",
+    "dishName": "Carlo Rossi",
+    "dishVariantPrice": 14,
+    "dishVariantName": "czerwone (słodkie) 150ml"
+  },
+  {
+    "index": 84,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "WINE",
+    "dishName": "Carlo Rossi",
+    "dishVariantPrice": 70,
+    "dishVariantName": "czerwone (słodkie) 750ml"
+  },
+  {
+    "index": 85,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "WINE",
+    "dishName": "Tokaj Furmint",
+    "dishVariantPrice": 14,
+    "dishVariantName": "białe półsłodkie 150ml"
+  },
+  {
+    "index": 86,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "WINE",
+    "dishName": "Tokaj Furmint",
+    "dishVariantPrice": 70,
+    "dishVariantName": "białe półsłodkie 750ml"
+  },
+  {
+    "index": 87,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "WINE",
+    "dishName": "Riesling Trocken",
+    "dishVariantPrice": 18,
+    "dishVariantName": "białe półwytrawne 150ml"
+  },
+  {
+    "index": 88,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "WINE",
+    "dishName": "Riesling Trocken",
+    "dishVariantPrice": 90,
+    "dishVariantName": "białe półwytrawne 1000ml"
+  },
+  {
+    "index": 89,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "WINE",
+    "dishName": "Martini",
+    "dishVariantPrice": 14,
+    "dishVariantName": "białe 150ml"
+  },
+  {
+    "index": 90,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "WINE",
+    "dishName": "Martini",
+    "dishVariantPrice": 98,
+    "dishVariantName": "białe 1000ml"
+  },
+  {
+    "index": 91,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "WINE",
+    "dishName": "Martini",
+    "dishVariantPrice": 14,
+    "dishVariantName": "czerwone 150ml"
+  },
+  {
+    "index": 92,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "WINE",
+    "dishName": "Martini",
+    "dishVariantPrice": 98,
+    "dishVariantName": "czerwone 1000ml"
+  },
+  {
+    "index": 93,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "WINE",
+    "dishName": "Cin cin",
+    "dishVariantPrice": 12,
+    "dishVariantName": "białe (słodkie) 150ml"
+  },
+  {
+    "index": 94,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "WINE",
+    "dishName": "Cin cin",
+    "dishVariantPrice": 60,
+    "dishVariantName": "białe (słodkie) 1000ml"
+  },
+  {
+    "index": 95,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "STRONG ALCOHOL",
+    "sectionDescription": "Cena za 50ml",
+    "dishName": "Soplica",
+    "dishVariantPrice": 8,
+    "dishVariantName": "wiśniowa"
+  },
+  {
+    "index": 96,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "STRONG ALCOHOL",
+    "sectionDescription": "Cena za 50ml",
+    "dishName": "Soplica",
+    "dishVariantPrice": 8,
+    "dishVariantName": "orzechowa"
+  },
+  {
+    "index": 97,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "STRONG ALCOHOL",
+    "sectionDescription": "Cena za 50ml",
+    "dishName": "Soplica",
+    "dishVariantPrice": 8,
+    "dishVariantName": "cytrynowa"
+  },
+  {
+    "index": 98,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "STRONG ALCOHOL",
+    "sectionDescription": "Cena za 50ml",
+    "dishName": "Soplica",
+    "dishVariantPrice": 8,
+    "dishVariantName": "brzoskwiniowa"
+  },
+  {
+    "index": 99,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "STRONG ALCOHOL",
+    "sectionDescription": "Cena za 50ml",
+    "dishName": "Soplica",
+    "dishVariantPrice": 8,
+    "dishVariantName": "jabłkowa"
+  },
+  {
+    "index": 100,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "STRONG ALCOHOL",
+    "sectionDescription": "Cena za 50ml",
+    "dishName": "Żubrówka",
+    "dishVariantPrice": 8,
+    "dishVariantName": ""
+  },
+  {
+    "index": 101,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "STRONG ALCOHOL",
+    "sectionDescription": "Cena za 50ml",
+    "dishName": "Wyborowa",
+    "dishVariantPrice": 8,
+    "dishVariantName": ""
+  },
+  {
+    "index": 102,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "STRONG ALCOHOL",
+    "sectionDescription": "Cena za 50ml",
+    "dishName": "Finlandia",
+    "dishVariantPrice": 9,
+    "dishVariantName": ""
+  },
+  {
+    "index": 103,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "STRONG ALCOHOL",
+    "sectionDescription": "Cena za 50ml",
+    "dishName": "Gin Lubuski",
+    "dishVariantPrice": 8,
+    "dishVariantName": ""
+  },
+  {
+    "index": 104,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "STRONG ALCOHOL",
+    "sectionDescription": "Cena za 50ml",
+    "dishName": "Brendy Pliska",
+    "dishVariantPrice": 8,
+    "dishVariantName": ""
+  },
+  {
+    "index": 105,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "STRONG ALCOHOL",
+    "sectionDescription": "Cena za 50ml",
+    "dishName": "Advocat",
+    "dishVariantPrice": 8,
+    "dishVariantName": ""
+  },
+  {
+    "index": 106,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "STRONG ALCOHOL",
+    "sectionDescription": "Cena za 50ml",
+    "dishName": "Golden Rum",
+    "dishVariantPrice": 8,
+    "dishVariantName": ""
+  },
+  {
+    "index": 107,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "STRONG ALCOHOL",
+    "sectionDescription": "Cena za 50ml",
+    "dishName": "Johnnie Walker",
+    "dishVariantPrice": 15,
+    "dishVariantName": ""
+  },
+  {
+    "index": 108,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "BEER",
+    "dishName": "Żywiec lany",
+    "dishVariantPrice": 9,
+    "dishVariantName": "300ml"
+  },
+  {
+    "index": 109,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "BEER",
+    "dishName": "Żywiec lany",
+    "dishVariantPrice": 11,
+    "dishVariantName": "500ml"
+  },
+  {
+    "index": 110,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "BEER",
+    "dishName": "Leżajsk lany",
+    "dishVariantPrice": 9,
+    "dishVariantName": "300ml"
+  },
+  {
+    "index": 111,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "BEER",
+    "dishName": "Leżajsk lany",
+    "dishVariantPrice": 11,
+    "dishVariantName": "500ml"
+  },
+  {
+    "index": 112,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "BEER",
+    "dishName": "Warka 500ml",
+    "dishVariantPrice": 11,
+    "dishVariantName": ""
+  },
+  {
+    "index": 113,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "BEER",
+    "dishName": "Warka Strong 500ml",
+    "dishVariantPrice": 11,
+    "dishVariantName": ""
+  },
+  {
+    "index": 114,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "BEER",
+    "dishName": "Tatra 500ml",
+    "dishVariantPrice": 11,
+    "dishVariantName": ""
+  },
+  {
+    "index": 115,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "BEER",
+    "dishName": "Desperados 400ml",
+    "dishVariantPrice": 11,
+    "dishVariantName": ""
+  },
+  {
+    "index": 116,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "BEER",
+    "dishName": "Heineken 330ml",
+    "dishVariantPrice": 11,
+    "dishVariantName": ""
+  },
+  {
+    "index": 117,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "BEER",
+    "dishName": "Cydr 440ml",
+    "dishVariantPrice": 11,
+    "dishVariantName": ""
+  },
+  {
+    "index": 118,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "BEER",
+    "dishName": "Piwo bezalkoholowe",
+    "dishVariantPrice": 9,
+    "dishVariantName": "330ml"
+  },
+  {
+    "index": 119,
+    "language": "en",
+    "restaurant": "bistropodwawelem",
+    "section": "BEER",
+    "dishName": "Piwo bezalkoholowe",
+    "dishVariantPrice": 11,
+    "dishVariantName": "500ml"
   }
 ]

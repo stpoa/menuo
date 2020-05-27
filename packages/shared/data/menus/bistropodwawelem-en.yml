@@ -1,8 +1,10 @@
 - name: 'APETIZERS'
   dishes:
-    - name: 'Śledź w śmietanie / oleju'
+    - name: 'Śledź'
       variants:
-        - name: ''
+        - name: 'w śmietanie'
+          price: 13
+        - name: 'w oleju'
           price: 13
     - name: 'Barszcz z krokietem'
       variants:
@@ -17,6 +19,7 @@
         - name: ''
           price: 26
 - name: 'SOUPS'
+  dishes:
     - name: 'Rosół z makaronem'
       variants:
         - name: ''
@@ -360,13 +363,13 @@
           price: 90
     - name: 'Martini'
       variants:
-        - name: 'białe'
+        - name: 'białe 150ml'
           price: 14
-        - name: 'białe'
+        - name: 'białe 1000ml'
           price: 98
-        - name: 'czerwone'
+        - name: 'czerwone 150ml'
           price: 14
-        - name: 'czerwone'
+        - name: 'czerwone 1000ml'
           price: 98
     - name: 'Cin cin'
       variants:
