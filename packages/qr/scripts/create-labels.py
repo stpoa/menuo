@@ -8,7 +8,7 @@ mywidth = 316
 if (os.path.exists("../data/Stickers") == False):
 	os.mkdir("../data/Stickers")
 
-im1 = Image.open('../data/Sticker.png')
+im1 = Image.open("../data/Sticker.png")
 path = os.listdir("../data/QrTooLarge")
 for i in path:
 	pathToOpen = "../data/Stickers/" + i
@@ -35,7 +35,7 @@ for i in path:
 if (os.path.exists("../data/EnReplacedQr") == False):
 	os.mkdir("../data/EnReplacedQr")
 
-im1 = Image.open('../data/EN.png')
+im1 = Image.open("../data/EN.png")
 path = os.listdir("../data/QrGoodSize")
 for i in path:
 	pathToOpen = "../data/QrGoodSize/" + i
