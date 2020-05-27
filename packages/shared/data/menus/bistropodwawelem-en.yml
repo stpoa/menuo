@@ -1,37 +1,467 @@
-- name: STARTERS
+- name: 'APETIZERS'
   dishes:
-    - name: Beef tartare
-      variants:
-        - name: ''
-          price: 25
-      description: With onion, pickled cucumber, mushrooms and yolk, served with bread
-    - name: Mexican nachos
-      variants:
-        - name: ''
-          price: 12
-      description: Served with sultry beef
-- name: SOUPS
-  dishes:
-    - name: Beef guts
+    - name: 'Śledź w śmietanie / oleju'
       variants:
         - name: ''
           price: 13
-      description: According to a family recipe
-    - name: Beetroot
+    - name: 'Barszcz z krokietem'
       variants:
         - name: ''
-          price: 16
-      description: Served with a meat croquette
-- name: MAIN DISHES
+          price: 14
+    - name: 'Kiełbasa z rusztu z cebulką'
+      variants:
+        - name: ''
+          price: 15
+    - name: 'Sałatka koktaljowa z kurczakiem'
+      variants:
+        - name: ''
+          price: 26
+- name: 'SOUPS'
+    - name: 'Rosół z makaronem'
+      variants:
+        - name: ''
+          price: 11
+    - name: 'Pomidorowa z makaronem'
+      variants:
+        - name: ''
+          price: 11
+    - name: 'Barszcz z uszkami'
+      variants:
+        - name: ''
+          price: 14
+    - name: 'Żure saropolski z kiełbasą'
+      variants:
+        - name: ''
+          price: 14
+    - name: 'Flaki wołowe po hetmańsku'
+      variants:
+        - name: ''
+          price: 19
+- name: 'POLISH SPECIALS'
   dishes:
-    - name: Oven trout
+    - name: 'Żur w chlebie'
       variants:
         - name: ''
-          price: 35
-      description: Served with grilled vegetables
-    - name: Dumplings - 10 pcs
+          price: 19
+    - name: 'Bigos staropolski'
       variants:
-        - name: with cabbage and mushrooms
+        - name: ''
+          price: 19
+    - name: 'Pieczeń po kasztelańsku'
+      variants:
+        - name: ''
+          price: 31
+      description: 'frytki / ziemniaki / ryż + zestaw surówek'
+    - name: 'Placek po węgiersku + zestaw surówek'
+      variants:
+        - name: ''
+          price: 31
+    - name: 'Golonka po bawarsku'
+      variants:
+        - name: ''
+          price: 34
+      description: 'frytki / ziemniaki / ryż + zestaw surówek'
+    - name: 'Półmisek "Smoka Wawelskiego"'
+      variants:
+        - name: ''
+          price: 69
+      description: 'trzy rodzaje mięs: polędwica wołowa, stek wieprzowy, filet z kurczaka + frytki, ziemniaki, ryż + zestaw surówek'
+- name: 'PORK DISHES'
+  dishes:
+    - name: 'Kotlet schabowy'
+      variants:
+        - name: ''
+          price: 29.5
+      description: 'frytki / ziemniaki / ryż + zestaw surówek'
+    - name: 'Stek wieprzowy z cebulką'
+      variants:
+        - name: ''
+          price: 31
+      description: 'frytki / ziemniaki / ryż + zestaw surówek'
+    - name: 'Kotlet sauté z pieczarkami'
+      variants:
+        - name: ''
+          price: 32
+      description: 'frytki / ziemniaki / ryż + zestaw surówek'
+    - name: 'Żeberko po chłopsku'
+      variants:
+        - name: ''
+          price: 32
+      description: 'frytki / ziemniaki / ryż + zestaw surówek'
+    - name: 'Eskalop "Genius"'
+      variants:
+        - name: ''
+          price: 39
+      description: 'frytki / ziemniaki / ryż + zestaw surówek'
+- name: 'POULTRY DISHES'
+  dishes:
+    - name: 'Kotlet "De Volaille"'
+      variants:
+        - name: ''
+          price: 28
+      description: 'frytki / ziemniaki / ryż + zestaw surówek'
+    - name: 'Filet z kurczaka panierowany'
+      variants:
+        - name: ''
+          price: 29
+      description: 'frytki / ziemniaki / ryż + zestaw surówek'
+    - name: 'Filet sauté z pieczarkami'
+      variants:
+        - name: ''
+          price: 29.5
+      description: 'frytki / ziemniaki / ryż + zestaw surówek'
+    - name: 'Szaszłyk "Słowiański"'
+      variants:
+        - name: ''
+          price: 32
+      description: 'frytki / ziemniaki / ryż + zestaw surówek'
+    - name: 'Brizol z ananasem'
+      variants:
+        - name: ''
+          price: 31
+      description: 'frytki / ziemniaki / ryż + zestaw surówek'
+- name: 'BEEF DISHES'
+  dishes:
+    - name: 'Pierogi z mięsem'
+      variants:
+        - name: ''
+          price: 20
+    - name: 'Gulasz "Cygański"'
+      variants:
+        - name: ''
+          price: 22
+    - name: 'Rumsztyk z cebulką'
+      variants:
+        - name: ''
+          price: 31
+      description: 'frytki / ziemniaki / ryż + zestaw surówek'
+    - name: 'Brizol z pieczarkami'
+      variants:
+        - name: ''
+          price: 32
+      description: 'frytki / ziemniaki / ryż + zestaw surówek'
+    - name: '"Chateaubriand" z polędwicy'
+      variants:
+        - name: ''
+          price: 64
+      description: 'frytki / ziemniaki / ryż + zestaw surówek'
+- name: 'FISH DISHES'
+  dishes:
+    - name: 'Mintaj panierowany'
+      variants:
+        - name: ''
+          price: 29.5
+      description: 'frytki / ziemniaki / ryż + zestaw surówek'
+    - name: 'Pstrąg saute'
+      variants:
+        - name: ''
+          price: 37
+      description: 'frytki / ziemniaki / ryż + zestaw surówek'
+    - name: 'Łosoś po wiedeńsku'
+      variants:
+        - name: ''
+          price: 39
+      description: 'frytki / ziemniaki / ryż + zestaw surówek'
+- name: 'VEGETARIAN DISHES'
+  dishes:
+    - name: 'Pierogi ruskie'
+      variants:
+        - name: ''
+          price: 17
+    - name: 'Placki ziemniaczane + zestaw surówek'
+      variants:
+        - name: ''
+          price: 19
+    - name: 'Pierogi z kapustą i grzybami'
+      variants:
+        - name: ''
+          price: 20
+    - name: 'Naleśniki ze szpinakiem'
+      variants:
+        - name: ''
+          price: 21
+    - name: 'Pierogowa micha (ruskie + z kapustą i grzybami)'
+      variants:
+        - name: ''
+          price: 26
+- name: 'DESSERTS'
+  dishes:
+    - name: 'Puchar lodowy z bitą śmietaną'
+      variants:
+        - name: ''
+          price: 12
+    - name: 'Szarlotka na ciepło z musem i bitą śmietaną'
+      variants:
+        - name: ''
+          price: 12
+    - name: 'Sernik wiedeński'
+      variants:
+        - name: ''
+          price: 12
+    - name: 'Naleśniki z serem, owocami i bitą śmietaną'
+      variants:
+        - name: ''
+          price: 21
+- name: 'SIDES'
+  dishes:
+    - name: 'Frytki'
+      variants:
+        - name: ''
+          price: 8
+    - name: 'Ziemniaki'
+      variants:
+        - name: ''
+          price: 5
+    - name: 'Ryż'
+      variants:
+        - name: ''
+          price: 4
+    - name: 'Zestaw surówek'
+      variants:
+        - name: ''
+          price: 7
+    - name: 'Kapusta zasmażana'
+      variants:
+        - name: ''
+          price: 5
+    - name: 'Pieczywo'
+      variants:
+        - name: ''
+          price: 4
+    - name: 'Sok do piwa'
+      variants:
+        - name: ''
+          price: 1
+    - name: 'Orzeszki'
+      variants:
+        - name: ''
+          price: 5
+- name: 'HOT DRINKS'
+  dishes:
+    - name: 'Herbata z cytryną'
+      variants:
+        - name: ''
+          price: 7
+    - name: 'Espresso'
+      variants:
+        - name: ''
+          price: 8
+    - name: 'Kawa Cappucino'
+      variants:
+        - name: ''
+          price: 9
+    - name: 'Kawa Latte'
+      variants:
+        - name: ''
+          price: 12
+    - name: 'Kawa rozpuszczalna'
+      variants:
+        - name: ''
+          price: 8
+    - name: 'Kawa parzona'
+      variants:
+        - name: ''
+          price: 8
+    - name: 'Gorąca czekolada'
+      variants:
+        - name: ''
+          price: 9
+- name: 'COLD DRINKS'
+  dishes:
+    - name: 'Woda 500ml'
+      variants:
+        - name: 'gazowana'
+          price: 5
+        - name: 'niegazowana'
+          price: 5
+    - name: 'Sok 330ml'
+      variants:
+        - name: 'pomarańczowy'
+          price: 8
+        - name: 'jabłkowy'
+          price: 8
+        - name: 'czarna porzeczka'
+          price: 8
+    - name: 'Pepsi 500ml'
+      variants:
+        - name: ''
+          price: 8
+    - name: 'Mirinda 500ml'
+      variants:
+        - name: ''
+          price: 8
+    - name: '7up 500ml'
+      variants:
+        - name: ''
+          price: 8
+    - name: 'Ice Tea 500ml'
+      variants:
+        - name: ''
+          price: 8
+    - name: 'Schweppes 500ml'
+      variants:
+        - name: ''
+          price: 8
+    - name: 'Sok z gór (tłoczony) 330ml'
+      variants:
+        - name: ''
+          price: 9
+- name: 'WINE'
+  dishes:
+    - name: 'Virto'
+      variants:
+        - name: 'białe 150ml'
+          price: 12
+        - name: 'białe 750ml'
+          price: 60
+        - name: 'czerwone (wytrawne) 150ml'
+          price: 12
+        - name: 'czerwon (wytrawne) 750ml'
+          price: 60
+    - name: 'Gato Negro'
+      variants:
+        - name: 'białe 150ml'
+          price: 12
+        - name: 'białe 750ml'
+          price: 70
+        - name: 'czerwone (półwytrawne) 150ml'
+          price: 12
+        - name: 'czerwone (półwytrawne) 750ml'
+          price: 70
+        - name: 'czerwone (półsłodkie) 150ml'
+          price: 12
+        - name: 'czerwone (półsłodkie) 750ml'
+          price: 70
+    - name: 'Carlo Rossi'
+      variants:
+        - name: 'białe 150ml'
           price: 14
-        - name: with meat
+        - name: 'białe 750ml'
+          price: 70
+        - name: 'czerwone (wytrawne) 150ml'
           price: 14
+        - name: 'czerwone (wytrawne) 750ml'
+          price: 70
+        - name: 'czerwone (słodkie) 150ml'
+          price: 14
+        - name: 'czerwone (słodkie) 750ml'
+          price: 70
+    - name: 'Tokaj Furmint'
+      variants:
+        - name: 'białe półsłodkie 150ml'
+          price: 14
+        - name: 'białe półsłodkie 750ml'
+          price: 70
+    - name: 'Riesling Trocken'
+      variants:
+        - name: 'białe półwytrawne 150ml'
+          price: 18
+        - name: 'białe półwytrawne 1000ml'
+          price: 90
+    - name: 'Martini'
+      variants:
+        - name: 'białe'
+          price: 14
+        - name: 'białe'
+          price: 98
+        - name: 'czerwone'
+          price: 14
+        - name: 'czerwone'
+          price: 98
+    - name: 'Cin cin'
+      variants:
+        - name: 'białe (słodkie) 150ml'
+          price: 12
+        - name: 'białe (słodkie) 1000ml'
+          price: 60
+- name: 'STRONG ALCOHOL'
+  description: 'Cena za 50ml'
+  dishes:
+    - name: 'Soplica'
+      variants:
+        - name: 'wiśniowa'
+          price: 8
+        - name: 'orzechowa'
+          price: 8
+        - name: 'cytrynowa'
+          price: 8
+        - name: 'brzoskwiniowa'
+          price: 8
+        - name: 'jabłkowa'
+          price: 8
+    - name: 'Żubrówka'
+      variants:
+        - name: ''
+          price: 8
+    - name: 'Wyborowa'
+      variants:
+        - name: ''
+          price: 8
+    - name: 'Finlandia'
+      variants:
+        - name: ''
+          price: 9
+    - name: 'Gin Lubuski'
+      variants:
+        - name: ''
+          price: 8
+    - name: 'Brendy Pliska'
+      variants:
+        - name: ''
+          price: 8
+    - name: 'Advocat'
+      variants:
+        - name: ''
+          price: 8
+    - name: 'Golden Rum'
+      variants:
+        - name: ''
+          price: 8
+    - name: 'Johnnie Walker'
+      variants:
+        - name: ''
+          price: 15
+- name: 'BEER'
+  dishes:
+    - name: 'Żywiec lany'
+      variants:
+        - name: '300ml'
+          price: 9
+        - name: '500ml'
+          price: 11
+    - name: 'Leżajsk lany'
+      variants:
+        - name: '300ml'
+          price: 9
+        - name: '500ml'
+          price: 11
+    - name: 'Warka 500ml'
+      variants:
+        - name: ''
+          price: 11
+    - name: 'Warka Strong 500ml'
+      variants:
+        - name: ''
+          price: 11
+    - name: 'Tatra 500ml'
+      variants:
+        - name: ''
+          price: 11
+    - name: 'Desperados 400ml'
+      variants:
+        - name: ''
+          price: 11
+    - name: 'Heineken 330ml'
+      variants:
+        - name: ''
+          price: 11
+    - name: 'Cydr 440ml'
+      variants:
+        - name: ''
+          price: 11
+    - name: 'Piwo bezalkoholowe'
+      variants:
+        - name: '330ml'
+          price: 9
+        - name: '500ml'
+          price: 11
