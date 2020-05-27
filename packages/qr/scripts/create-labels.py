@@ -5,62 +5,65 @@ import shutil
 
 mywidth = 316
 
-if (os.path.exists("../data/Stickers") == False):
-	os.mkdir("../data/Stickers")
+parentDir = os.path.dirname(os.getcwd())
 
-im1 = Image.open("../data/Sticker.png")
-path = os.listdir("../data/QrTooLarge")
+if (os.path.exists(parentDir + "/qr/data/Stickers") == False):
+	os.mkdir(parentDir + "/qr/data/Stickers")
+
+im1 = Image.open(parentDir + "/qr/data/Sticker.png")
+path = os.listdir(parentDir + "/qr/data/QrTooLarge")
 for i in path:
-	pathToOpen = "../data/Stickers/" + i
+	pathToOpen = parentDir + "/qr/data/QrTooLarge/" + i
 	im2 = Image.open(pathToOpen)
 	back_im = im1.copy()
 	back_im.paste(im2, (8,100))
-	pathToSave = "../data/Stickers/Sticker" + i
+	pathToSave = parentDir + "/qr/data/Stickers/Sticker" + i
 	back_im.save(pathToSave, quality=100)
 im1.close()
 back_im.close()
 
-if (os.path.exists("../data/QrGoodSize") == False):
-	os.mkdir("../data/QrGoodSize")
+if (os.path.exists(parentDir + "/qr/data/QrGoodSize") == False):
+	os.mkdir(parentDir + "/qr/data/QrGoodSize")
 
 for i in path:
-	pathToOpen = "../data/QrTooLarge/" + i
+	pathToOpen = parentDir + "/qr/data/QrTooLarge/" + i
 	img = Image.open(pathToOpen)
 	wpercent = (mywidth/float(img.size[0]))
 	hsize = int((float(img.size[1])*float(wpercent)))
-	img = img.resize((mywidth,hsize), PIL.Image.ANTIALIAS)
-	pathToSave = "../data/QrGoodsize/" + i
-	img.save(pathToSave)
+	img2 = img.copy()
+	img2 = img.resize((mywidth,hsize), PIL.Image.ANTIALIAS)
+	pathToSave = parentDir + "/qr/data/QrGoodSize/" + i
+	img2.save(pathToSave)
 
-if (os.path.exists("../data/EnReplacedQr") == False):
-	os.mkdir("../data/EnReplacedQr")
+if (os.path.exists(parentDir + "/qr/data/EnReplacedQr") == False):
+	os.mkdir(parentDir + "/qr/data/EnReplacedQr")
 
-im1 = Image.open("../data/EN.png")
-path = os.listdir("../data/QrGoodSize")
+im1 = Image.open(parentDir + "/qr/data/EN.png")
+path = os.listdir(parentDir + "/qr/data/QrGoodSize")
 for i in path:
-	pathToOpen = "../data/QrGoodSize/" + i
+	pathToOpen = parentDir + "/qr/data/QrGoodSize/" + i
 	im2 = Image.open(pathToOpen)
 	back_im = im1.copy()
 	back_im.paste(im2, (62,180))
-	pathToSave = "../data/EnReplacedQr/LabelEn" + i
+	pathToSave = parentDir + "/qr/data/EnReplacedQr/LabelEn" + i
 	back_im.save(pathToSave, quality=100)
 im1.close()
 back_im.close()
 
-if (os.path.exists("../data/PlReplacedQr") == False):
-	os.mkdir("../data/PlReplacedQr")
+if (os.path.exists(parentDir + "/qr/data/PlReplacedQr") == False):
+	os.mkdir(parentDir + "/qr/data/PlReplacedQr")
 
-im1 = Image.open("../data/PL.png")
-path = os.listdir("../data/QrGoodSize")
+im1 = Image.open(parentDir + "/qr/data/PL.png")
+path = os.listdir(parentDir + "/qr/data/QrGoodSize")
 for i in path:
-	pathToOpen = "../data/QrGoodSize/" + i
+	pathToOpen = parentDir + "/qr/data/QrGoodSize/" + i
 	im2 = Image.open(pathToOpen)
 	back_im = im1.copy()
 	back_im.paste(im2, (62,180))
-	pathToSave = "../data/PlReplacedQr/LabelPl" + i
+	pathToSave = parentDir + "/qr/data/PlReplacedQr/LabelPl" + i
 	back_im.save(pathToSave, quality=100)
 im1.close()
 back_im.close()
 
-shutil.rmtree("../data/QrGoodSize", ignore_errors=False, onerror=None)
-shutil.rmtree("../data/QrTooLarge", ignore_errors=False, onerror=None)
+shutil.rmtree(parentDir + "/qr/data/QrGoodSize", ignore_errors=False, onerror=None)
+shutil.rmtree(parentDir + "/qr/data/QrTooLarge", ignore_errors=False, onerror=None)
