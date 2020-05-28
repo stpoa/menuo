@@ -76,7 +76,7 @@
     "language": "pl",
     "restaurant": "bistropodwawelem",
     "section": "ZUPY",
-    "dishName": "Żure saropolski z kiełbasą",
+    "dishName": "Żurek saropolski z kiełbasą",
     "dishVariantPrice": 14,
     "dishVariantName": ""
   },
@@ -673,7 +673,7 @@
     "section": "WINA",
     "dishName": "Virto",
     "dishVariantPrice": 60,
-    "dishVariantName": "czerwon (wytrawne) 750ml"
+    "dishVariantName": "czerwone (wytrawne) 750ml"
   },
   {
     "index": 73,
@@ -929,7 +929,7 @@
     "restaurant": "bistropodwawelem",
     "section": "ALKOHOLE MOCNE",
     "sectionDescription": "Cena za 50ml",
-    "dishName": "Żubrówka",
+    "dishName": "Żubrówka biała",
     "dishVariantPrice": 8,
     "dishVariantName": ""
   },
