@@ -32,7 +32,7 @@
       variants:
         - name: ''
           price: 14
-    - name: 'Żure saropolski z kiełbasą'
+    - name: 'Żurek saropolski z kiełbasą'
       variants:
         - name: ''
           price: 14
@@ -319,7 +319,7 @@
           price: 60
         - name: 'czerwone (wytrawne) 150ml'
           price: 12
-        - name: 'czerwon (wytrawne) 750ml'
+        - name: 'czerwone (wytrawne) 750ml'
           price: 60
     - name: 'Gato Negro'
       variants:
@@ -392,7 +392,7 @@
           price: 8
         - name: 'jabłkowa'
           price: 8
-    - name: 'Żubrówka'
+    - name: 'Żubrówka biała'
       variants:
         - name: ''
           price: 8
