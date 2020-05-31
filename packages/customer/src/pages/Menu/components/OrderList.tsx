@@ -39,7 +39,7 @@ export const OrderedList: FC<OrderedListProps> = ({ ordered, classes }) => (
         </ListItemText>
 
         <ListItemIcon className={classes.itemIcon}>
-          <span>{calculateEntryPrice([entry, count])} zł</span>
+          <span>{calculateEntryPrice([entry, count])} PLN</span>
         </ListItemIcon>
       </ListItem>
     ))}
@@ -55,7 +55,7 @@ export const OrderedList: FC<OrderedListProps> = ({ ordered, classes }) => (
           <ListItemText className={classes.itemText}></ListItemText>
 
           <ListItemIcon className={classes.itemIcon}>
-            <span>{calculateOrderedPrice(ordered)} zł</span>
+            <span>{calculateOrderedPrice(ordered)} PLN</span>
           </ListItemIcon>
         </ListItem>
       </>

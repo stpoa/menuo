@@ -91,7 +91,7 @@ export const MenuSection: FC<MenuSectionProps> = ({
                   const variantText =
                     (variant.name ? variant.name + ' - ' : '') +
                     variant.price +
-                    'zł'
+                    ' PLN'
                   const basketEntry = {
                     dish: dish.name,
                     variant: variant.name || '',
