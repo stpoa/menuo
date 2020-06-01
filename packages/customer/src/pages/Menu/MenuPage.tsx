@@ -1,8 +1,10 @@
 import React, { useState, useEffect, FC } from 'react'
 import { connect } from 'react-redux'
-import { nestMenu, Order, MenuEntry, Menu } from '@menuo/shared'
 import { Translate } from 'react-localize-redux'
 import { Button, withStyles, WithStyles, Link } from '@material-ui/core'
+
+import { nestMenu, Order, MenuEntry, Menu, Loading } from '@menuo/shared'
+import { Table } from '@menuo/shared/interfaces/tables'
 
 import {
   createRestaurantOrder,
@@ -14,9 +16,7 @@ import MenuSection from './components/MenuSection'
 import { OrderSentDialog } from './components/OrderSentDialog'
 import WaiterSummonDialog from './components/WaiterSummonDialog'
 import WaiterSummonConfirmation from './components/WaiterSummonConfirmation'
-import { Table } from '@menuo/shared/interfaces/tables'
 import { readSubscription } from '../../notifications'
-import Loading from '../../components/Loading'
 import { OrderedListDialog } from './components/OrderedListDialog'
 import BasketDialog from './components/BasketDialog'
 import { OrderConfirmationDialog } from './components/OrderConfirmationDialog'
@@ -74,7 +74,7 @@ export const MenuPage: FC<MenuPageProps> = ({
 
   const menu = nestMenu([
     ...dishes.filter(
-      dish =>
+      (dish) =>
         dish.section.toLowerCase().includes(query.toLowerCase()) ||
         dish.dishVariantName?.toLowerCase().includes(query.toLowerCase()) ||
         dish.dishName.toLowerCase().includes(query.toLowerCase()),
@@ -124,7 +124,7 @@ export const MenuPage: FC<MenuPageProps> = ({
       restaurant,
     })
     setShowOrderedInfo(true)
-    setOrdered(o => [...o, ...getOrderedEntries(dishes, basket)])
+    setOrdered((o) => [...o, ...getOrderedEntries(dishes, basket)])
     clearBasket()
     setLoading(false)
   }
@@ -293,16 +293,16 @@ const connectComponent = connect<
   MenuPageOwnProps,
   RootState
 >(
-  state => ({
+  (state) => ({
     dishes: state.menu.dishes,
     table: state.table,
     isLoading: state.menu.isFetching,
     basket: state.basket,
     restaurant: state.restaurant,
     query: state.menu.query,
-    language: state.user.locale.languages.find(l => l.active)?.code || 'en',
+    language: state.user.locale.languages.find((l) => l.active)?.code || 'en',
   }),
-  dispatch => ({
+  (dispatch) => ({
     getDishes: () => dispatch(actions.menuGetRequest()),
     clearBasket: () => dispatch(actions.basketClear()),
     getTable: () => dispatch(actions.tableGet()),

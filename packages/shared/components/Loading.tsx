@@ -6,7 +6,7 @@ import {
   withStyles,
 } from '@material-ui/core'
 
-export const Loading: FC<LoadingProps & WithStyles> = ({
+export const LoadingRaw: FC<LoadingProps & WithStyles> = ({
   loading,
   classes,
 }) => {
@@ -23,7 +23,7 @@ export const Loading: FC<LoadingProps & WithStyles> = ({
   ) : null
 }
 
-export default withStyles(_ =>
+export const Loading = withStyles((_) =>
   createStyles({
     progress: {
       position: 'fixed',
@@ -32,7 +32,7 @@ export default withStyles(_ =>
       width: '100vw',
     },
   }),
-)(Loading)
+)(LoadingRaw)
 
 interface LoadingProps {
   loading: boolean
