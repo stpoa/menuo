@@ -20,6 +20,11 @@ export const getTranslations = () => ({
     'What do You want to call the waiter for?',
     'W jakim celu chcesz przywołać kelnera?',
   ],
+  readOnlyMenuDialogTitle: ['Read only menu', 'Menu tylko w trybie podglądu'],
+  readOnlyMenuDialogContent: [
+    'This menu works only in preview mode. You cannot make orders, but this only applies to this restaurant, because of plan it uses. You can try ordering with menuo in other restaurants',
+    'To menu działa aktualnie tylko w trybie odczytu. Nie możesz za jego pomocą składać zamówień, ograniczenie to wynika z planu z którego korzysta restauracja.',
+  ],
   payByCash: ['Pay by cash', 'Płatność gotówką'],
   payByCard: ['Pay by card', 'Płatność kartą'],
   other: ['Other', 'Inne'],

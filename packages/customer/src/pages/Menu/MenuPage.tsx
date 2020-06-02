@@ -32,6 +32,7 @@ import { RootState } from '../../store/store'
 import { styles } from './MenuPage.styles'
 import { getOrderedEntries } from './data'
 import { Header } from './components/Header'
+import { ReadOnlyMenuInfoDialog } from './components/ReadOnlyMenuInfoDialog'
 
 type Basket = BasketEntry[]
 
@@ -103,6 +104,7 @@ export const MenuPage: FC<MenuPageProps> = ({
   const [showSummonConfirmation, setShowSummonConfirmation] = useState(false)
   const [showOrderedInfo, setShowOrderedInfo] = useState(false)
   const [showOrderedList, setShowOrderedList] = useState(false)
+  const [showReadOnlyDialog, setShowReadOnlyDialog] = useState(true)
   const [showConfirmationDialog, setShowConfirmationDialog] = useState(false)
   const [reason, setReason] = useState('')
 
@@ -180,6 +182,11 @@ export const MenuPage: FC<MenuPageProps> = ({
         ))}
       </div>
 
+      <ReadOnlyMenuInfoDialog
+        open={isMenuReadOnly && showReadOnlyDialog}
+        onClose={() => setShowReadOnlyDialog(false)}
+        onConfirm={() => setShowReadOnlyDialog(false)}
+      />
       <WaiterSummonDialog
         disabled={loading}
         open={showSummonDialog}
