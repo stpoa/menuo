@@ -100,11 +100,19 @@ export const MenuPage: FC<MenuPageProps> = ({
     getDishes()
   }, [getRestaurant, getTable, getDishes, getConfig])
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowReadOnlyDialog(true)
+      console.log('This will run after 1 second!')
+    }, 1000)
+    return () => clearTimeout(timer)
+  }, [])
+
   const [showSummonDialog, setShowSummonDialog] = useState(false)
   const [showSummonConfirmation, setShowSummonConfirmation] = useState(false)
   const [showOrderedInfo, setShowOrderedInfo] = useState(false)
   const [showOrderedList, setShowOrderedList] = useState(false)
-  const [showReadOnlyDialog, setShowReadOnlyDialog] = useState(true)
+  const [showReadOnlyDialog, setShowReadOnlyDialog] = useState(false)
   const [showConfirmationDialog, setShowConfirmationDialog] = useState(false)
   const [reason, setReason] = useState('')
 
