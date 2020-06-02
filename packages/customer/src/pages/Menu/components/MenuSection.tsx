@@ -26,6 +26,7 @@ export interface MenuSectionOwnProps {
 
 export interface MenuSectionStateProps {
   basket: BasketEntry[]
+  isMenuReadOnly: boolean
 }
 
 export interface MenuSectionDispatchProps {
@@ -47,6 +48,7 @@ export const MenuSection: FC<MenuSectionProps> = ({
   id,
   section,
   basket,
+  isMenuReadOnly,
   toggleBasketDish,
   toggleBasketVariant,
   subFromBasket,
@@ -70,6 +72,7 @@ export const MenuSection: FC<MenuSectionProps> = ({
             <Card className={classes.dish} key={i}>
               <ListItem
                 button
+                disabled={isMenuReadOnly}
                 onClick={() => toggleBasketDish(firstEntryInSection)}
               >
                 <ListItemText
@@ -99,6 +102,7 @@ export const MenuSection: FC<MenuSectionProps> = ({
                       className={classes.dishVariant}
                       key={variantId}
                       button={!count as true}
+                      disabled={isMenuReadOnly}
                       onClick={
                         !count
                           ? () => toggleBasketVariant(basketEntry)
@@ -171,6 +175,7 @@ const connectComponent = connect<
 >(
   (state) => ({
     basket: state.basket,
+    isMenuReadOnly: state.config.config.MENU_READ_ONLY,
   }),
   (dispatch) =>
     bindActionCreators(
