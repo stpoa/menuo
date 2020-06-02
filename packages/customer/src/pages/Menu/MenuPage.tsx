@@ -3,7 +3,14 @@ import { connect } from 'react-redux'
 import { Translate } from 'react-localize-redux'
 import { Button, withStyles, WithStyles, Link } from '@material-ui/core'
 
-import { nestMenu, Order, MenuEntry, Menu, Loading } from '@menuo/shared'
+import {
+  nestMenu,
+  Order,
+  MenuEntry,
+  Menu,
+  Loading,
+  RestaurantConfig,
+} from '@menuo/shared'
 import { Table } from '@menuo/shared/interfaces/tables'
 
 import {
@@ -35,6 +42,7 @@ export interface BasketEntry {
 
 interface MenuPageStateProps {
   dishes: MenuEntry[]
+  config: RestaurantConfig
   table: Table
   restaurant: string
   isLoading: boolean
@@ -44,6 +52,7 @@ interface MenuPageStateProps {
 }
 interface MenuPageDispatchProps {
   getDishes: () => void
+  getConfig: () => void
   getTable: () => void
   getRestaurant: () => void
   clearBasket: () => void
@@ -60,6 +69,7 @@ export const MenuPage: FC<MenuPageProps> = ({
   classes,
   dishes,
   getDishes,
+  getConfig,
   table,
   getTable,
   restaurant,
@@ -68,6 +78,7 @@ export const MenuPage: FC<MenuPageProps> = ({
   basket,
   clearBasket,
   query,
+  config,
 }) => {
   const [loading, setLoading] = useState(false)
   const [ordered, setOrdered] = useState<[MenuEntry, number][]>([])
@@ -84,8 +95,9 @@ export const MenuPage: FC<MenuPageProps> = ({
   useEffect(() => {
     getRestaurant()
     getTable()
+    getConfig()
     getDishes()
-  }, [getRestaurant, getTable, getDishes])
+  }, [getRestaurant, getTable, getDishes, getConfig])
 
   const [showSummonDialog, setShowSummonDialog] = useState(false)
   const [showSummonConfirmation, setShowSummonConfirmation] = useState(false)
@@ -153,6 +165,8 @@ export const MenuPage: FC<MenuPageProps> = ({
     setShowSummonConfirmation(true)
     setReason('cashPayment')
   }
+
+  const isMenuReadOnly = config.MENU_READ_ONLY !== false
 
   return (
     <div className={classes.root}>
@@ -226,30 +240,32 @@ export const MenuPage: FC<MenuPageProps> = ({
         <br />
         <br />
 
-        <div>
-          <div className={classes.buttons}>
-            <Button
-              {...{ 'data-cy': 'open-summon-waiter-modal' }}
-              disabled={loading}
-              className={classes.buttonLeft}
-              variant="outlined"
-              color="primary"
-              onClick={handleSummonDialogClick}
-            >
-              <Translate id="callWaiter">Call a waiter</Translate>
-            </Button>
-            <Button
-              {...{ 'data-cy': 'open-order-modal' }}
-              disabled={!basket.length || loading}
-              className={classes.buttonRight}
-              variant="contained"
-              color="primary"
-              onClick={() => setShowConfirmationDialog(true)}
-            >
-              <Translate id="order">Order</Translate>
-            </Button>
+        {isMenuReadOnly ? null : (
+          <div>
+            <div className={classes.buttons}>
+              <Button
+                {...{ 'data-cy': 'open-summon-waiter-modal' }}
+                disabled={loading}
+                className={classes.buttonLeft}
+                variant="outlined"
+                color="primary"
+                onClick={handleSummonDialogClick}
+              >
+                <Translate id="callWaiter">Call a waiter</Translate>
+              </Button>
+              <Button
+                {...{ 'data-cy': 'open-order-modal' }}
+                disabled={!basket.length || loading}
+                className={classes.buttonRight}
+                variant="contained"
+                color="primary"
+                onClick={() => setShowConfirmationDialog(true)}
+              >
+                <Translate id="order">Order</Translate>
+              </Button>
+            </div>
           </div>
-        </div>
+        )}
       </footer>
     </div>
   )
@@ -301,9 +317,11 @@ const connectComponent = connect<
     restaurant: state.restaurant,
     query: state.menu.query,
     language: state.user.locale.languages.find((l) => l.active)?.code || 'en',
+    config: state.config.config,
   }),
   (dispatch) => ({
     getDishes: () => dispatch(actions.menuGetRequest()),
+    getConfig: () => dispatch(actions.configGetRequest()),
     clearBasket: () => dispatch(actions.basketClear()),
     getTable: () => dispatch(actions.tableGet()),
     getRestaurant: () => dispatch(actions.restaurantGet()),
