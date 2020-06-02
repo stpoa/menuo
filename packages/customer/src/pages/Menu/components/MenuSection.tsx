@@ -26,6 +26,7 @@ export interface MenuSectionOwnProps {
 
 export interface MenuSectionStateProps {
   basket: BasketEntry[]
+  isMenuReadOnly: boolean
 }
 
 export interface MenuSectionDispatchProps {
@@ -47,6 +48,7 @@ export const MenuSection: FC<MenuSectionProps> = ({
   id,
   section,
   basket,
+  isMenuReadOnly,
   toggleBasketDish,
   toggleBasketVariant,
   subFromBasket,
@@ -68,15 +70,25 @@ export const MenuSection: FC<MenuSectionProps> = ({
 
           return (
             <Card className={classes.dish} key={i}>
-              <ListItem
-                button
-                onClick={() => toggleBasketDish(firstEntryInSection)}
-              >
-                <ListItemText
-                  primary={dish.name}
-                  secondary={dish.description}
-                />
-              </ListItem>
+              {isMenuReadOnly ? (
+                <ListItem>
+                  <ListItemText
+                    primary={dish.name}
+                    secondary={dish.description}
+                  />
+                </ListItem>
+              ) : (
+                <ListItem
+                  button
+                  disabled={isMenuReadOnly}
+                  onClick={() => toggleBasketDish(firstEntryInSection)}
+                >
+                  <ListItemText
+                    primary={dish.name}
+                    secondary={dish.description}
+                  />
+                </ListItem>
+              )}
               <List component="div" disablePadding>
                 {dish.variants.map((variant, variantId) => {
                   // const id = variant.entry._id
@@ -99,6 +111,7 @@ export const MenuSection: FC<MenuSectionProps> = ({
                       className={classes.dishVariant}
                       key={variantId}
                       button={!count as true}
+                      disabled={isMenuReadOnly}
                       onClick={
                         !count
                           ? () => toggleBasketVariant(basketEntry)
@@ -171,6 +184,7 @@ const connectComponent = connect<
 >(
   (state) => ({
     basket: state.basket,
+    isMenuReadOnly: state.config.config.MENU_READ_ONLY,
   }),
   (dispatch) =>
     bindActionCreators(
