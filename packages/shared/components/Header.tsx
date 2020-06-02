@@ -1,5 +1,5 @@
 import React from 'react'
-import { H1 } from './H1'
+import { H1 } from '@menuo/shared'
 import { withStyles, createStyles, WithStyles } from '@material-ui/core'
 
 export const HeaderRaw: React.FC<WithStyles> = ({ children, classes }) => {
@@ -12,7 +12,7 @@ export const HeaderRaw: React.FC<WithStyles> = ({ children, classes }) => {
   )
 }
 
-export const Header = withStyles(_ =>
+export const Header = withStyles((_) =>
   createStyles({
     root: {
       paddingTop: '0.4rem',

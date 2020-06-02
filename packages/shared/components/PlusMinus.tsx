@@ -7,7 +7,7 @@ interface PlusMinusProps extends WithStyles {
   handlePlusClick: () => void
 }
 
-export const PlusMinus: FC<PlusMinusProps> = ({
+export const PlusMinusRaw: FC<PlusMinusProps> = ({
   count,
   handleMinusClick,
   handlePlusClick,
@@ -26,7 +26,7 @@ export const PlusMinus: FC<PlusMinusProps> = ({
   )
 }
 
-export default withStyles(_ =>
+export const PlusMinus = withStyles((_) =>
   createStyles({
     root: {
       display: 'flex',
@@ -38,4 +38,4 @@ export default withStyles(_ =>
       justifyContent: 'center',
     },
   }),
-)(PlusMinus)
+)(PlusMinusRaw)

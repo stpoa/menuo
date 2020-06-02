@@ -1,5 +1,5 @@
 import React, { useEffect, useState, FC } from 'react'
-import { Header } from '../../components/Header'
+import { Header } from '@menuo/shared'
 import { OrdersTable } from './components/Table/OrdersTable'
 
 import {
@@ -11,8 +11,7 @@ import {
   updateTablesMine,
   updateRestaurantOrder,
 } from './Orders.api'
-import { IOrdersTables, nestOrders, Table } from '@menuo/shared'
-import Loading from '../../components/Loading'
+import { IOrdersTables, nestOrders, Table, Loading } from '@menuo/shared'
 import { Fab, withStyles, createStyles, WithStyles } from '@material-ui/core'
 import {
   ExitToApp as ExitToAppIcon,
@@ -26,8 +25,9 @@ const ORDERS_REFETCH_INTERVAL = +(
   process.env.REACT_APP_ORDERS_REFETCH_INTERVAL || 24 * 60 * 60
 )
 
-export const OrdersPage: FC<RouteChildrenProps<{ restaurant: string }> &
-  WithStyles> = ({ match, history, classes }) => {
+export const OrdersPage: FC<
+  RouteChildrenProps<{ restaurant: string }> & WithStyles
+> = ({ match, history, classes }) => {
   const restaurant = match?.params?.restaurant || 'demo'
   const [refetch, setRefetch] = useState(0)
   const [loading, setLoading] = useState(true)
@@ -67,7 +67,7 @@ export const OrdersPage: FC<RouteChildrenProps<{ restaurant: string }> &
     const doEffect = async () => {
       const tables = await getTables({ restaurant })
       setTables(
-        tables.every(v => Number(v) >= 0)
+        tables.every((v) => Number(v) >= 0)
           ? tables.sort((a, b) => +a - +b)
           : tables.sort(),
       )
@@ -85,7 +85,7 @@ export const OrdersPage: FC<RouteChildrenProps<{ restaurant: string }> &
 
   useEffect(() => {
     try {
-      navigator.serviceWorker.addEventListener('message', event => {
+      navigator.serviceWorker.addEventListener('message', (event) => {
         setRefetch(event.data.refetch)
       })
     } catch (e) {
@@ -178,7 +178,7 @@ export const OrdersPage: FC<RouteChildrenProps<{ restaurant: string }> &
         <ListIcon />
       </Fab>
       {orders.tables
-        .filter(t => tablesMine.includes(t.table.name))
+        .filter((t) => tablesMine.includes(t.table.name))
         .map(({ orders, table }) => (
           <OrdersTable
             {...{
@@ -190,11 +190,11 @@ export const OrdersPage: FC<RouteChildrenProps<{ restaurant: string }> &
               handleDeleteOrder: handleDeleteOrder(restaurant),
               handleCompleteOrderToggle: handleCompleteOrderToggle(restaurant),
               handleCompleteAction: handleCompleteAction(restaurant)(table),
-              handlePriorityChange: order => orderEntry => async e => {
+              handlePriorityChange: (order) => (orderEntry) => async (e) => {
                 await updateRestaurantOrder(
                   { restaurant, order: order._id },
                   {
-                    entries: order.items.map(i => {
+                    entries: order.items.map((i) => {
                       const priority =
                         (i.entry.dishVariantName || '') ===
                           (orderEntry.entry.dishVariantName || '') &&
@@ -215,7 +215,7 @@ export const OrdersPage: FC<RouteChildrenProps<{ restaurant: string }> &
       <TablesSelectionDialog
         open={showTablesDialog}
         onCheck={(table: string) => () => {
-          setCheckedTables(checked => ({
+          setCheckedTables((checked) => ({
             ...checked,
             [table]: !checked[table],
           }))
@@ -232,7 +232,7 @@ export const OrdersPage: FC<RouteChildrenProps<{ restaurant: string }> &
           setShowTablesDialog(false)
           setRefetch(+new Date())
         }}
-        tables={tables.map(name => {
+        tables={tables.map((name) => {
           return {
             name,
             isMine: tablesMine.includes(name),
@@ -244,7 +244,7 @@ export const OrdersPage: FC<RouteChildrenProps<{ restaurant: string }> &
   )
 }
 
-export default withStyles(_ =>
+export default withStyles((_) =>
   createStyles({
     root: {
       flexDirection: 'column',

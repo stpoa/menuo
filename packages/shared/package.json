@@ -5,6 +5,7 @@
   "types": "dist/index.ts",
   "dependencies": {
     "@types/ramda": "^0.26.39",
+    "react": "^16.12.0",
     "ramda": "^0.26.1"
   },
   "devDependencies": {

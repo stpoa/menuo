@@ -12,9 +12,7 @@ import {
   WithStyles,
 } from '@material-ui/core'
 
-import { ISection, IDish } from '@menuo/shared'
-import { H2 } from '../../../components/H2'
-import PlusMinus from '../../../components/PlusMinus'
+import { ISection, IDish, H2, PlusMinus } from '@menuo/shared'
 import { BasketEntry } from '../MenuPage'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
@@ -171,10 +169,10 @@ const connectComponent = connect<
   MenuSectionOwnProps,
   RootState
 >(
-  state => ({
+  (state) => ({
     basket: state.basket,
   }),
-  dispatch =>
+  (dispatch) =>
     bindActionCreators(
       {
         toggleBasketDish: actions.basketToggleDish,
