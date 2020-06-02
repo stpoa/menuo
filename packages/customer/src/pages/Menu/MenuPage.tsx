@@ -103,7 +103,6 @@ export const MenuPage: FC<MenuPageProps> = ({
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowReadOnlyDialog(true)
-      console.log('This will run after 1 second!')
     }, 1000)
     return () => clearTimeout(timer)
   }, [])
