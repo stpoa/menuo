@@ -70,16 +70,25 @@ export const MenuSection: FC<MenuSectionProps> = ({
 
           return (
             <Card className={classes.dish} key={i}>
-              <ListItem
-                button
-                disabled={isMenuReadOnly}
-                onClick={() => toggleBasketDish(firstEntryInSection)}
-              >
-                <ListItemText
-                  primary={dish.name}
-                  secondary={dish.description}
-                />
-              </ListItem>
+              {isMenuReadOnly ? (
+                <ListItem>
+                  <ListItemText
+                    primary={dish.name}
+                    secondary={dish.description}
+                  />
+                </ListItem>
+              ) : (
+                <ListItem
+                  button
+                  disabled={isMenuReadOnly}
+                  onClick={() => toggleBasketDish(firstEntryInSection)}
+                >
+                  <ListItemText
+                    primary={dish.name}
+                    secondary={dish.description}
+                  />
+                </ListItem>
+              )}
               <List component="div" disablePadding>
                 {dish.variants.map((variant, variantId) => {
                   // const id = variant.entry._id
