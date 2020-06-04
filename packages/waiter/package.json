@@ -8,6 +8,8 @@
     "build:staging": "env-cmd -f .env.staging react-scripts build",
     "test": "react-scripts test",
     "qr:staging": "env-cmd -f .env.staging scripts/qr-image.js",
+    "create:waiters:staging": "env-cmd -f .env.staging ts-node scripts/create-waiter",
+    "create:waiters:production": "env-cmd -f .env.production ts-node scripts/create-waiter",
     "qr:production": "env-cmd -f .env.production scripts/qr-image.js",
     "eject": "react-scripts eject",
     "deploy:staging": "yarn build:staging && yarn upload:staging",
