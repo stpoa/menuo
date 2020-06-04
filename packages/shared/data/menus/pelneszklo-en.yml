@@ -1,0 +1,37 @@
+- name: STARTERS
+  dishes:
+    - name: Beef tartare
+      variants:
+        - name: ''
+          price: 25
+      description: With onion, pickled cucumber, mushrooms and yolk, served with bread
+    - name: Mexican nachos
+      variants:
+        - name: ''
+          price: 12
+      description: Served with sultry beef
+- name: SOUPS
+  dishes:
+    - name: Beef guts
+      variants:
+        - name: ''
+          price: 13
+      description: According to a family recipe
+    - name: Beetroot
+      variants:
+        - name: ''
+          price: 16
+      description: Served with a meat croquette
+- name: MAIN DISHES
+  dishes:
+    - name: Oven trout
+      variants:
+        - name: ''
+          price: 35
+      description: Served with grilled vegetables
+    - name: Dumplings - 10 pcs
+      variants:
+        - name: with cabbage and mushrooms
+          price: 14
+        - name: with meat
+          price: 14
