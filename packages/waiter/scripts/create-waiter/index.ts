@@ -1,5 +1,22 @@
 var request = require('request')
 
+console.log(process.argv)
+
+const getArg = (args: string[], parameter: string) =>
+  args[[...args].findIndex((v) => v === '--' + parameter) + 1]
+
+const restaurant = getArg(process.argv, 'restaurant')
+const count = +getArg(process.argv, 'count')
+
+const generateWaiters = (restaurant: string, count: number) =>
+  [...Array(count)].map((_, i) => ({
+    username: restaurant + '-kelner-' + (i + 1),
+    password: Math.random().toString(36).slice(-8),
+    restaurant,
+  }))
+
+console.log({ restaurant, count })
+
 interface Waiter {
   username: string
   password: string
@@ -8,6 +25,8 @@ interface Waiter {
 
 const createWaiter = (waiter: Waiter) => {
   const { restaurant, ...waiterBody } = waiter
+  const { username, password } = waiter
+
   const tables = require('../../public/data/' + restaurant + '/tables.json')
   const apiUrl = process.env.REACT_APP_API_URL
   console.log('Api url: ', apiUrl)
@@ -21,7 +40,7 @@ const createWaiter = (waiter: Waiter) => {
     body: JSON.stringify({
       ...waiterBody,
       tables,
-      deviceId: '-',
+      deviceId: '000',
       roles: ['waiter'],
     }),
   }
@@ -30,9 +49,9 @@ const createWaiter = (waiter: Waiter) => {
 
   request(options, function (error: string, response: { body: any }) {
     if (error) throw new Error(error)
+    console.log({ username, password })
     console.log(response.body)
   })
 }
 
-const waiters = require('./waiters.json')
-waiters.forEach(createWaiter)
+generateWaiters(restaurant, count).forEach(createWaiter)
