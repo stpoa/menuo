@@ -75,7 +75,7 @@
     "restaurant": "pelneszklo",
     "section": "NA POCZĄTEK",
     "dishName": "Kiszonki",
-    "dishDescription": "Kaafior, biała rzepa, marchew, burak",
+    "dishDescription": "Kalafior, biała rzepa, marchew, burak",
     "dishVariantPrice": 8,
     "dishVariantName": ""
   },
@@ -102,26 +102,6 @@
     "index": 10,
     "language": "pl",
     "restaurant": "pelneszklo",
-    "section": "SAŁATKI",
-    "dishName": "Sałatka z grillowanym serem halloumi",
-    "dishDescription": "Kuskus perłowy. sałata rzymska, mini, papryka, czerwona cebula, ogórek, mięta, ziołowy winegret",
-    "dishVariantPrice": 29,
-    "dishVariantName": ""
-  },
-  {
-    "index": 11,
-    "language": "pl",
-    "restaurant": "pelneszklo",
-    "section": "SAŁATKI",
-    "dishName": "Sałatka z pieczonymi grzybami",
-    "dishDescription": "Szpinak, jarmuż, czerwona cebula, mięta, płatki migdałów, koper, płatki chili, dressing balsamiczny z czerwonym winem",
-    "dishVariantPrice": 28,
-    "dishVariantName": ""
-  },
-  {
-    "index": 12,
-    "language": "pl",
-    "restaurant": "pelneszklo",
     "section": "ZUPY",
     "dishName": "Krem z kalafiora",
     "dishDescription": "Z oliwą truflową, smażone kapary",
@@ -129,13 +109,33 @@
     "dishVariantName": ""
   },
   {
-    "index": 13,
+    "index": 11,
     "language": "pl",
     "restaurant": "pelneszklo",
     "section": "ZUPY",
     "dishName": "Wegańska botwinka",
     "dishDescription": "Mleko kokosowe, ziemniaki, imbir, kolendra",
     "dishVariantPrice": 14,
+    "dishVariantName": ""
+  },
+  {
+    "index": 12,
+    "language": "pl",
+    "restaurant": "pelneszklo",
+    "section": "SAŁATKI",
+    "dishName": "Sałatka z grillowanym serem halloumi",
+    "dishDescription": "Kuskus perłowy. sałata rzymska, mini, papryka, czerwona cebula, ogórek, mięta, ziołowy winegret",
+    "dishVariantPrice": 29,
+    "dishVariantName": ""
+  },
+  {
+    "index": 13,
+    "language": "pl",
+    "restaurant": "pelneszklo",
+    "section": "SAŁATKI",
+    "dishName": "Sałatka z pieczonymi grzybami",
+    "dishDescription": "Szpinak, jarmuż, czerwona cebula, mięta, płatki migdałów, koper, płatki chili, dressing balsamiczny z czerwonym winem",
+    "dishVariantPrice": 28,
     "dishVariantName": ""
   },
   {

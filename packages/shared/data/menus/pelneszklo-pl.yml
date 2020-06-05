@@ -39,7 +39,7 @@
       variants:
         - name: ''
           price: 8
-      description: 'Kaafior, biała rzepa, marchew, burak'
+      description: 'Kalafior, biała rzepa, marchew, burak'
     - name: 'Słupki warzywne'
       variants:
         - name: ''
@@ -49,18 +49,6 @@
       variants:
         - name: ''
           price: 3
-- name: 'SAŁATKI'
-  dishes:
-    - name: 'Sałatka z grillowanym serem halloumi'
-      variants:
-        - name: ''
-          price: 29
-      description: 'Kuskus perłowy. sałata rzymska, mini, papryka, czerwona cebula, ogórek, mięta, ziołowy winegret'
-    - name: 'Sałatka z pieczonymi grzybami'
-      variants:
-        - name: ''
-          price: 28
-      description: 'Szpinak, jarmuż, czerwona cebula, mięta, płatki migdałów, koper, płatki chili, dressing balsamiczny z czerwonym winem'
 - name: 'ZUPY'
   dishes:
     - name: 'Krem z kalafiora'
@@ -73,6 +61,18 @@
         - name: ''
           price: 14
       description: 'Mleko kokosowe, ziemniaki, imbir, kolendra'
+- name: 'SAŁATKI'
+  dishes:
+    - name: 'Sałatka z grillowanym serem halloumi'
+      variants:
+        - name: ''
+          price: 29
+      description: 'Kuskus perłowy. sałata rzymska, mini, papryka, czerwona cebula, ogórek, mięta, ziołowy winegret'
+    - name: 'Sałatka z pieczonymi grzybami'
+      variants:
+        - name: ''
+          price: 28
+      description: 'Szpinak, jarmuż, czerwona cebula, mięta, płatki migdałów, koper, płatki chili, dressing balsamiczny z czerwonym winem'
 - name: 'DANIA GŁÓWNE'
   dishes:
     - name: 'Kotleciki z boczniaka na ziołowym puree ziemniaczanym'

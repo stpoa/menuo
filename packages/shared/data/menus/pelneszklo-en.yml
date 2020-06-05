@@ -1,55 +1,67 @@
-- name: 'NA POCZĄTEK'
+- name: 'TO BEGIN WITH'
   dishes:
-    - name: 'Chrupiące boczniaki'
+    - name: 'Crispy oyster mushrooms'
       variants:
         - name: ''
           price: 15
-      description: 'Sos nam chim'
-    - name: 'Pasta z bobu i oregano'
+      description: 'Nam chim dip'
+    - name: 'Borad bean and oregano spread'
       variants:
         - name: ''
           price: 13
-      description: 'Ricotta, cebula, grzanka ziołowa'
-    - name: 'Hummus z suszonymi pomidorami'
+      description: 'Ricotta, onion, home-made focaccia'
+    - name: 'Hummus with sundried tomatoes'
       variants:
         - name: ''
           price: 10
-      description: 'Ciecierzyca, zatar, suszone pomidory, pita, słupki warzywne'
-    - name: 'Baba Gnoush'
+      description: 'Chickpeas, zatar, sundried tomatoes, pita bread, vegie sticks'
+    - name: 'Baba Ganoush'
       variants:
         - name: ''
           price: 15
-      description: 'Pasta z pieczonego bakłażana'
-    - name: 'Tarta wytrawna'
+      description: 'Baked aubergine spread, pomegranate, mint, pita bread'
+    - name: 'Savoury tart'
       variants:
         - name: ''
           price: 15
-      description: 'Sałatka ześwieżych warzyw z dressigniem'
-    - name: 'Frytki z ziołowej polenty'
+      description: 'Fresh vegetable salad with dressing'
+    - name: 'Herbal polenta fries'
       variants:
         - name: ''
           price: 12
-      description: 'Sos czosnkowy'
-    - name: 'Frytki z batata'
+      description: 'Garlic dip'
+    - name: 'Sweet potato fries'
       variants:
         - name: ''
           price: 17
-      description: 'Sos meksykański'
-    - name: 'Kiszonki'
+      description: 'Mexican dip'
+    - name: 'Pickled vegetables'
       variants:
         - name: ''
           price: 8
-      description: 'Kaafior, biała rzepa, marchew, burak'
-    - name: 'Słupki warzywne'
+      description: 'Cauliflower, white turnip, carrot, beetroot'
+    - name: 'Crunchy vegie sticks'
       variants:
         - name: ''
           price: 5
-      description: 'Marchew, seler, nać, ogórek'
-    - name: 'Pieczywo'
+      description: 'Carrot, celery, cucumber'
+    - name: 'Bread'
       variants:
         - name: ''
           price: 3
-- name: 'SAŁATKI'
+- name: 'SOUPS'
+  dishes:
+    - name: 'Asparagus cappuccino with aquafaba mousse'
+      variants:
+        - name: ''
+          price: 15
+      description: 'Green asparagus, aquafaba'
+    - name: 'Wegańska botwinka'
+      variants:
+        - name: ''
+          price: 14
+      description: 'Mleko kokosowe, ziemniaki, imbir, kolendra'
+- name: 'SALADS'
   dishes:
     - name: 'Sałatka z grillowanym serem halloumi'
       variants:
@@ -61,19 +73,7 @@
         - name: ''
           price: 28
       description: 'Szpinak, jarmuż, czerwona cebula, mięta, płatki migdałów, koper, płatki chili, dressing balsamiczny z czerwonym winem'
-- name: 'ZUPY'
-  dishes:
-    - name: 'Krem z kalafiora'
-      variants:
-        - name: ''
-          price: 15
-      description: 'Z oliwą truflową, smażone kapary'
-    - name: 'Wegańska botwinka'
-      variants:
-        - name: ''
-          price: 14
-      description: 'Mleko kokosowe, ziemniaki, imbir, kolendra'
-- name: 'DANIA GŁÓWNE'
+- name: 'MAIN COURSES'
   dishes:
     - name: 'Kotleciki z boczniaka na ziołowym puree ziemniaczanym'
       variants:
@@ -130,42 +130,42 @@
         - name: ''
           price: 29
       description: 'Tofu wędzone, cukinia, pomidory suszone, sos grzybowy z jarmużem i śmietaną wegańską, ziemniaki pieczone w soli "jak z ogniska"'
-- name: 'BURGERY'
+- name: 'BURGERS'
   dishes:
-    - name: 'Burger z fasoli z suszonymi pomidorami i bazylią'
+    - name: 'Burger with beans, sundried tomatoes and basil'
       variants:
         - name: ''
           price: 27
-      description: 'Sos czosnkowy, pomidor, cebula, sałatka, frytki z batata'
-    - name: 'Burger z grillowanym serem halloumi'
+      description: 'Garlic sauce, tomato, onion, lettuce, sweet potato fries '
+    - name: 'Grilled halloumi cheeseburger'
       variants:
         - name: ''
           price: 29
-      description: 'Sos ziołowy, konfitura z czerwonej cebuli, sałata, pikle, colesław'
-    - name: 'Burger z jackfruitem w marynacie BBQ'
+      description: 'Herbal sauce, hummus with baked red pepper, grilled pineapple, salad, cucumber, coleslaw'
+    - name: 'Burger with jackfruit in marinade BBQ'
       variants:
         - name: ''
           price: 31
-      description: 'Orientalna sałatka z kapusty pekińskiej z rzodkiewką, frytki'
-- name: 'DESERY'
+      description: 'Oriental salad with chinese cabbage and radish, french fries '
+- name: 'DESSERTS'
   dishes:
-    - name: 'Fondant z pieczonym burakiem'
+    - name: 'Chocolate fondant with beetroot'
       variants:
         - name: ''
           price: 18
-      description: 'Sorbet malinowy, andrut kaliski'
-    - name: 'Semifreddo pietruszkowo-bazyliowe'
+      description: 'Raspberry sorbet'
+    - name: 'Coconut Semifreddo'
       variants:
         - name: ''
           price: 19
-      description: 'Kruszonka czekoladowa, mus malinowy, marchew karmelizowana w syropie pomarańczowym'
+      description: 'Pistachio, strawberry mousse'
     - name: 'Tiramisu'
       variants:
         - name: ''
           price: 18
       description: 'Rum, mascarpone, marsala'
-    - name: 'Ciasta domowe (od 14 PLN)'
+    - name: 'Homemade cakes (from 14 PLN)'
       variants:
         - name: ''
           price: 14
-      description: 'Wegańskie, bezglutenowe, pieczne na miejscu, codziennie inny wybór ciast - zapraszamy do witryny z ciastami'
+      description: 'Vegan, gluten-free'
