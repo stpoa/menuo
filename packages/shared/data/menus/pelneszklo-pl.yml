@@ -1,37 +1,171 @@
-- name: PRZYSTAWKI
+- name: 'NA POCZĄTEK'
   dishes:
-    - name: Tatar wołowy
+    - name: 'Chrupiące boczniaki'
       variants:
         - name: ''
-          price: 25
-      description: Z cebulką, ogórkiem kiszonym, grzybkami i żółtkiem, podany z pieczywem
-    - name: Nachosy po meksykańsku
-      variants:
-        - name: ''
-          price: 12
-      description: Podane z duszoną wołowiną
-- name: ZUPY
-  dishes:
-    - name: Flaki wołowe
+          price: 15
+      description: 'Sos nam chim'
+    - name: 'Pasta z bobu i oregano'
       variants:
         - name: ''
           price: 13
-      description: Według rodzinnego przepisu
-    - name: Barszcz czerwony
+      description: 'Ricotta, cebula, grzanka ziołowa'
+    - name: 'Hummus z suszonymi pomidorami'
       variants:
         - name: ''
-          price: 16
-      description: Podany z mięsnym krokietem
-- name: DANIA GŁÓWNE
+          price: 10
+      description: 'Ciecierzyca, zatar, suszone pomidory, pita, słupki warzywne'
+    - name: 'Baba Gnoush'
+      variants:
+        - name: ''
+          price: 15
+      description: 'Pasta z pieczonego bakłażana'
+    - name: 'Tarta wytrawna'
+      variants:
+        - name: ''
+          price: 15
+      description: 'Sałatka ześwieżych warzyw z dressigniem'
+    - name: 'Frytki z ziołowej polenty'
+      variants:
+        - name: ''
+          price: 12
+      description: 'Sos czosnkowy'
+    - name: 'Frytki z batata'
+      variants:
+        - name: ''
+          price: 17
+      description: 'Sos meksykański'
+    - name: 'Kiszonki'
+      variants:
+        - name: ''
+          price: 8
+      description: 'Kaafior, biała rzepa, marchew, burak'
+    - name: 'Słupki warzywne'
+      variants:
+        - name: ''
+          price: 5
+      description: 'Marchew, seler, nać, ogórek'
+    - name: 'Pieczywo'
+      variants:
+        - name: ''
+          price: 3
+- name: 'SAŁATKI'
   dishes:
-    - name: Pstrąg z pieca
+    - name: 'Sałatka z grillowanym serem halloumi'
       variants:
         - name: ''
-          price: 35
-      description: Podany z grillowanymi warzywami
-    - name: Pierogi - 10 szt.
+          price: 29
+      description: 'Kuskus perłowy. sałata rzymska, mini, papryka, czerwona cebula, ogórek, mięta, ziołowy winegret'
+    - name: 'Sałatka z pieczonymi grzybami'
       variants:
-        - name: z kapustą i grzybami
+        - name: ''
+          price: 28
+      description: 'Szpinak, jarmuż, czerwona cebula, mięta, płatki migdałów, koper, płatki chili, dressing balsamiczny z czerwonym winem'
+- name: 'ZUPY'
+  dishes:
+    - name: 'Krem z kalafiora'
+      variants:
+        - name: ''
+          price: 15
+      description: 'Z oliwą truflową, smażone kapary'
+    - name: 'Wegańska botwinka'
+      variants:
+        - name: ''
           price: 14
-        - name: z mięsem
+      description: 'Mleko kokosowe, ziemniaki, imbir, kolendra'
+- name: 'DANIA GŁÓWNE'
+  dishes:
+    - name: 'Kotleciki z boczniaka na ziołowym puree ziemniaczanym'
+      variants:
+        - name: ''
+          price: 34
+      description: 'Włoska kapusta pieczona w demi glace, pieczone pomidorki koktajlowe'
+    - name: 'Stek z pieczonego kalafiora w sosie teriyaki'
+      variants:
+        - name: ''
+          price: 32
+      description: 'Puree z marchwi, pomarańczy i imbiru, salatka z kalarepy, rzodkiewki, ogórka, kopru włoskiego i czarnego sezamu'
+    - name: 'Lasagne z cukinią i pieczoną dynią'
+      variants:
+        - name: ''
+          price: 25
+      description: 'Sos pomidorowy, rukola, parmezan wegański, bazylia'
+    - name: 'Wędzony tempeh z dzikim brokułem'
+      variants:
+        - name: ''
+          price: 39
+      description: 'Młode opiekane ziemniaki, sos vierge'
+    - name: 'Butter paneer'
+      variants:
+        - name: ''
+          price: 27
+      description: 'Szpinak, garam masala, kardamon, pomidor, chili, ryż jaśminowy, chapati'
+    - name: 'Risotto primavera'
+      variants:
+        - name: ''
+          price: 29
+      description: 'Szparagi, pomidory koktajlowe, młode ziemniaki, bób groszek, marchewka, mieszanka ziół'
+    - name: 'Spaghetti gryczane z awokado'
+      variants:
+        - name: ''
+          price: 26
+      description: 'Pesto bazyliowe, rukola, orzechy, parmezan wegański'
+    - name: 'Gnocchi z pesto jarmużowym'
+      variants:
+        - name: ''
+          price: 26
+      description: 'Śmietana z nerkowców, suszone pomidory, pieczona czerwona cebula, rukola, wegański parmezan'
+    - name: 'Pierogi ruskie'
+      variants:
+        - name: ''
+          price: 24
+      description: 'Chips z batata, kwaśna śmietana wegańska, dymka'
+    - name: 'Ziołowe pierogi z bobem w sosi aglio olio'
+      variants:
+        - name: ''
+          price: 27
+      description: 'Papryczka chili, czosnek, natka, oliwa, wegański parmezan, rukola'
+    - name: 'Gołąbek z włoskiej kapusty z czarnym ryżem'
+      variants:
+        - name: ''
+          price: 29
+      description: 'Tofu wędzone, cukinia, pomidory suszone, sos grzybowy z jarmużem i śmietaną wegańską, ziemniaki pieczone w soli "jak z ogniska"'
+- name: 'BURGERY'
+  dishes:
+    - name: 'Burger z fasoli z suszonymi pomidorami i bazylią'
+      variants:
+        - name: ''
+          price: 27
+      description: 'Sos czosnkowy, pomidor, cebula, sałatka, frytki z batata'
+    - name: 'Burger z grillowanym serem halloumi'
+      variants:
+        - name: ''
+          price: 29
+      description: 'Sos ziołowy, konfitura z czerwonej cebuli, sałata, pikle, colesław'
+    - name: 'Burger z jackfruitem w marynacie BBQ'
+      variants:
+        - name: ''
+          price: 31
+      description: 'Orientalna sałatka z kapusty pekińskiej z rzodkiewką, frytki'
+- name: 'DESERY'
+  dishes:
+    - name: 'Fondant z pieczonym burakiem'
+      variants:
+        - name: ''
+          price: 18
+      description: 'Sorbet malinowy, andrut kaliski'
+    - name: 'Semifreddo pietruszkowo-bazyliowe'
+      variants:
+        - name: ''
+          price: 19
+      description: 'Kruszonka czekoladowa, mus malinowy, marchew karmelizowana w syropie pomarańczowym'
+    - name: 'Tiramisu'
+      variants:
+        - name: ''
+          price: 18
+      description: 'Rum, mascarpone, marsala'
+    - name: 'Ciasta domowe (od 14 PLN)'
+      variants:
+        - name: ''
           price: 14
+      description: 'Wegańskie, bezglutenowe, pieczne na miejscu, codziennie inny wybór ciast - zapraszamy do witryny z ciastami'
