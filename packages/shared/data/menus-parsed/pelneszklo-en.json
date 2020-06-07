@@ -103,9 +103,9 @@
     "language": "en",
     "restaurant": "pelneszklo",
     "section": "SOUPS",
-    "dishName": "Asparagus cappuccino with aquafaba mousse",
-    "dishDescription": "Green asparagus, aquafaba",
-    "dishVariantPrice": 15,
+    "dishName": "Cauliflower cream",
+    "dishDescription": "With truffle oil and fried capers",
+    "dishVariantPrice": 18,
     "dishVariantName": ""
   },
   {
@@ -113,8 +113,8 @@
     "language": "en",
     "restaurant": "pelneszklo",
     "section": "SOUPS",
-    "dishName": "Wegańska botwinka",
-    "dishDescription": "Mleko kokosowe, ziemniaki, imbir, kolendra",
+    "dishName": "Vegan beetroot leaf soup",
+    "dishDescription": "Coconut milk, ginger, coriander",
     "dishVariantPrice": 14,
     "dishVariantName": ""
   },
@@ -123,8 +123,8 @@
     "language": "en",
     "restaurant": "pelneszklo",
     "section": "SALADS",
-    "dishName": "Sałatka z grillowanym serem halloumi",
-    "dishDescription": "Kuskus perłowy. sałata rzymska, mini, papryka, czerwona cebula, ogórek, mięta, ziołowy winegret",
+    "dishName": "Salad with grilled halloumi cheese",
+    "dishDescription": "Pearl couscous, \"mini\" romaine lettuce, bell pepper, red onion, cucumber, mint, herbal vinaigrette",
     "dishVariantPrice": 29,
     "dishVariantName": ""
   },
@@ -133,8 +133,8 @@
     "language": "en",
     "restaurant": "pelneszklo",
     "section": "SALADS",
-    "dishName": "Sałatka z pieczonymi grzybami",
-    "dishDescription": "Szpinak, jarmuż, czerwona cebula, mięta, płatki migdałów, koper, płatki chili, dressing balsamiczny z czerwonym winem",
+    "dishName": "Salad with roasted mushrooms",
+    "dishDescription": "Spinach, kale, red onion, mint, almond flakes, dill, chilli flakes, balsamic dressing with red wine",
     "dishVariantPrice": 28,
     "dishVariantName": ""
   },
@@ -143,8 +143,8 @@
     "language": "en",
     "restaurant": "pelneszklo",
     "section": "MAIN COURSES",
-    "dishName": "Kotleciki z boczniaka na ziołowym puree ziemniaczanym",
-    "dishDescription": "Włoska kapusta pieczona w demi glace, pieczone pomidorki koktajlowe",
+    "dishName": "Oyster mushroom chops with a herbal potato puree",
+    "dishDescription": "Italian cabbage roasted in vegan demi-glace, roasted cherry tomatoes, sprouts",
     "dishVariantPrice": 34,
     "dishVariantName": ""
   },
@@ -153,8 +153,8 @@
     "language": "en",
     "restaurant": "pelneszklo",
     "section": "MAIN COURSES",
-    "dishName": "Stek z pieczonego kalafiora w sosie teriyaki",
-    "dishDescription": "Puree z marchwi, pomarańczy i imbiru, salatka z kalarepy, rzodkiewki, ogórka, kopru włoskiego i czarnego sezamu",
+    "dishName": "Cauliflower steak in a teriyaki sauce",
+    "dishDescription": "Puree of carrot, orange and ginger; fresh salad of German turnip, raddish, cucumber, dill and black sesame",
     "dishVariantPrice": 32,
     "dishVariantName": ""
   },
@@ -163,8 +163,8 @@
     "language": "en",
     "restaurant": "pelneszklo",
     "section": "MAIN COURSES",
-    "dishName": "Lasagne z cukinią i pieczoną dynią",
-    "dishDescription": "Sos pomidorowy, rukola, parmezan wegański, bazylia",
+    "dishName": "Lasagne with zucchini and baked butternut squash",
+    "dishDescription": "Tomato sauce, arugula, vegan parmesan, basil",
     "dishVariantPrice": 25,
     "dishVariantName": ""
   },
@@ -173,8 +173,8 @@
     "language": "en",
     "restaurant": "pelneszklo",
     "section": "MAIN COURSES",
-    "dishName": "Wędzony tempeh z dzikim brokułem",
-    "dishDescription": "Młode opiekane ziemniaki, sos vierge",
+    "dishName": "Smoked tempeh with tenderstem broccoli",
+    "dishDescription": "Young toasted potatoes, vierge sauce",
     "dishVariantPrice": 39,
     "dishVariantName": ""
   },
@@ -184,7 +184,7 @@
     "restaurant": "pelneszklo",
     "section": "MAIN COURSES",
     "dishName": "Butter paneer",
-    "dishDescription": "Szpinak, garam masala, kardamon, pomidor, chili, ryż jaśminowy, chapati",
+    "dishDescription": "Spinach, garam masala, cardamom, tomato, chilli, jasmine rice, chapati",
     "dishVariantPrice": 27,
     "dishVariantName": ""
   },
@@ -194,7 +194,7 @@
     "restaurant": "pelneszklo",
     "section": "MAIN COURSES",
     "dishName": "Risotto primavera",
-    "dishDescription": "Szparagi, pomidory koktajlowe, młode ziemniaki, bób groszek, marchewka, mieszanka ziół",
+    "dishDescription": "Asparagus, cherry tomatoes, young potatoes, broad bean, peas, carrot, herbs mix ",
     "dishVariantPrice": 29,
     "dishVariantName": ""
   },
@@ -203,8 +203,8 @@
     "language": "en",
     "restaurant": "pelneszklo",
     "section": "MAIN COURSES",
-    "dishName": "Spaghetti gryczane z awokado",
-    "dishDescription": "Pesto bazyliowe, rukola, orzechy, parmezan wegański",
+    "dishName": "Buckwheat spaghetti with avocado",
+    "dishDescription": "Basil pesto, arugula, nuts, vegan parmesan ",
     "dishVariantPrice": 26,
     "dishVariantName": ""
   },
@@ -213,8 +213,8 @@
     "language": "en",
     "restaurant": "pelneszklo",
     "section": "MAIN COURSES",
-    "dishName": "Gnocchi z pesto jarmużowym",
-    "dishDescription": "Śmietana z nerkowców, suszone pomidory, pieczona czerwona cebula, rukola, wegański parmezan",
+    "dishName": "Gnocchi with kale pesto",
+    "dishDescription": "Vegan cashew cream, sundried tomatoes, roasted red onion, arugula, vegan parmesan",
     "dishVariantPrice": 26,
     "dishVariantName": ""
   },
@@ -223,8 +223,8 @@
     "language": "en",
     "restaurant": "pelneszklo",
     "section": "MAIN COURSES",
-    "dishName": "Pierogi ruskie",
-    "dishDescription": "Chips z batata, kwaśna śmietana wegańska, dymka",
+    "dishName": "Tofu dumplings",
+    "dishDescription": "Roasted sweet potatoes, sour vegan cream, spring onion",
     "dishVariantPrice": 24,
     "dishVariantName": ""
   },
@@ -233,8 +233,8 @@
     "language": "en",
     "restaurant": "pelneszklo",
     "section": "MAIN COURSES",
-    "dishName": "Ziołowe pierogi z bobem w sosi aglio olio",
-    "dishDescription": "Papryczka chili, czosnek, natka, oliwa, wegański parmezan, rukola",
+    "dishName": "Herbal dumplings with broad beans in aglio olio filling",
+    "dishDescription": "Chilli pepper, garlic, parsley, olive oil, vegan parmesan, arugula",
     "dishVariantPrice": 27,
     "dishVariantName": ""
   },
@@ -243,8 +243,8 @@
     "language": "en",
     "restaurant": "pelneszklo",
     "section": "MAIN COURSES",
-    "dishName": "Gołąbek z włoskiej kapusty z czarnym ryżem",
-    "dishDescription": "Tofu wędzone, cukinia, pomidory suszone, sos grzybowy z jarmużem i śmietaną wegańską, ziemniaki pieczone w soli \"jak z ogniska\"",
+    "dishName": "Stuffed cabbage rolls with black rice",
+    "dishDescription": "Smoked tofu, zucchini, sundried tomatoes, mushrooms sauce with kale and vegan cream, potatoes roasted in salt",
     "dishVariantPrice": 29,
     "dishVariantName": ""
   },
@@ -283,23 +283,13 @@
     "language": "en",
     "restaurant": "pelneszklo",
     "section": "DESSERTS",
-    "dishName": "Chocolate fondant with beetroot",
-    "dishDescription": "Raspberry sorbet",
-    "dishVariantPrice": 18,
-    "dishVariantName": ""
-  },
-  {
-    "index": 29,
-    "language": "en",
-    "restaurant": "pelneszklo",
-    "section": "DESSERTS",
     "dishName": "Coconut Semifreddo",
     "dishDescription": "Pistachio, strawberry mousse",
     "dishVariantPrice": 19,
     "dishVariantName": ""
   },
   {
-    "index": 30,
+    "index": 29,
     "language": "en",
     "restaurant": "pelneszklo",
     "section": "DESSERTS",
@@ -309,7 +299,7 @@
     "dishVariantName": ""
   },
   {
-    "index": 31,
+    "index": 30,
     "language": "en",
     "restaurant": "pelneszklo",
     "section": "DESSERTS",

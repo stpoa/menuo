@@ -51,85 +51,85 @@
           price: 3
 - name: 'SOUPS'
   dishes:
-    - name: 'Asparagus cappuccino with aquafaba mousse'
+    - name: 'Cauliflower cream'
       variants:
         - name: ''
-          price: 15
-      description: 'Green asparagus, aquafaba'
-    - name: 'Wegańska botwinka'
+          price: 18
+      description: 'With truffle oil and fried capers'
+    - name: 'Vegan beetroot leaf soup'
       variants:
         - name: ''
           price: 14
-      description: 'Mleko kokosowe, ziemniaki, imbir, kolendra'
+      description: 'Coconut milk, ginger, coriander'
 - name: 'SALADS'
   dishes:
-    - name: 'Sałatka z grillowanym serem halloumi'
+    - name: 'Salad with grilled halloumi cheese'
       variants:
         - name: ''
           price: 29
-      description: 'Kuskus perłowy. sałata rzymska, mini, papryka, czerwona cebula, ogórek, mięta, ziołowy winegret'
-    - name: 'Sałatka z pieczonymi grzybami'
+      description: 'Pearl couscous, "mini" romaine lettuce, bell pepper, red onion, cucumber, mint, herbal vinaigrette'
+    - name: 'Salad with roasted mushrooms'
       variants:
         - name: ''
           price: 28
-      description: 'Szpinak, jarmuż, czerwona cebula, mięta, płatki migdałów, koper, płatki chili, dressing balsamiczny z czerwonym winem'
+      description: 'Spinach, kale, red onion, mint, almond flakes, dill, chilli flakes, balsamic dressing with red wine'
 - name: 'MAIN COURSES'
   dishes:
-    - name: 'Kotleciki z boczniaka na ziołowym puree ziemniaczanym'
+    - name: 'Oyster mushroom chops with a herbal potato puree'
       variants:
         - name: ''
           price: 34
-      description: 'Włoska kapusta pieczona w demi glace, pieczone pomidorki koktajlowe'
-    - name: 'Stek z pieczonego kalafiora w sosie teriyaki'
+      description: 'Italian cabbage roasted in vegan demi-glace, roasted cherry tomatoes, sprouts'
+    - name: 'Cauliflower steak in a teriyaki sauce'
       variants:
         - name: ''
           price: 32
-      description: 'Puree z marchwi, pomarańczy i imbiru, salatka z kalarepy, rzodkiewki, ogórka, kopru włoskiego i czarnego sezamu'
-    - name: 'Lasagne z cukinią i pieczoną dynią'
+      description: 'Puree of carrot, orange and ginger; fresh salad of German turnip, raddish, cucumber, dill and black sesame'
+    - name: 'Lasagne with zucchini and baked butternut squash'
       variants:
         - name: ''
           price: 25
-      description: 'Sos pomidorowy, rukola, parmezan wegański, bazylia'
-    - name: 'Wędzony tempeh z dzikim brokułem'
+      description: 'Tomato sauce, arugula, vegan parmesan, basil'
+    - name: 'Smoked tempeh with tenderstem broccoli'
       variants:
         - name: ''
           price: 39
-      description: 'Młode opiekane ziemniaki, sos vierge'
+      description: 'Young toasted potatoes, vierge sauce'
     - name: 'Butter paneer'
       variants:
         - name: ''
           price: 27
-      description: 'Szpinak, garam masala, kardamon, pomidor, chili, ryż jaśminowy, chapati'
+      description: 'Spinach, garam masala, cardamom, tomato, chilli, jasmine rice, chapati'
     - name: 'Risotto primavera'
       variants:
         - name: ''
           price: 29
-      description: 'Szparagi, pomidory koktajlowe, młode ziemniaki, bób groszek, marchewka, mieszanka ziół'
-    - name: 'Spaghetti gryczane z awokado'
+      description: 'Asparagus, cherry tomatoes, young potatoes, broad bean, peas, carrot, herbs mix '
+    - name: 'Buckwheat spaghetti with avocado'
       variants:
         - name: ''
           price: 26
-      description: 'Pesto bazyliowe, rukola, orzechy, parmezan wegański'
-    - name: 'Gnocchi z pesto jarmużowym'
+      description: 'Basil pesto, arugula, nuts, vegan parmesan '
+    - name: 'Gnocchi with kale pesto'
       variants:
         - name: ''
           price: 26
-      description: 'Śmietana z nerkowców, suszone pomidory, pieczona czerwona cebula, rukola, wegański parmezan'
-    - name: 'Pierogi ruskie'
+      description: 'Vegan cashew cream, sundried tomatoes, roasted red onion, arugula, vegan parmesan'
+    - name: 'Tofu dumplings'
       variants:
         - name: ''
           price: 24
-      description: 'Chips z batata, kwaśna śmietana wegańska, dymka'
-    - name: 'Ziołowe pierogi z bobem w sosi aglio olio'
+      description: 'Roasted sweet potatoes, sour vegan cream, spring onion'
+    - name: 'Herbal dumplings with broad beans in aglio olio filling'
       variants:
         - name: ''
           price: 27
-      description: 'Papryczka chili, czosnek, natka, oliwa, wegański parmezan, rukola'
-    - name: 'Gołąbek z włoskiej kapusty z czarnym ryżem'
+      description: 'Chilli pepper, garlic, parsley, olive oil, vegan parmesan, arugula'
+    - name: 'Stuffed cabbage rolls with black rice'
       variants:
         - name: ''
           price: 29
-      description: 'Tofu wędzone, cukinia, pomidory suszone, sos grzybowy z jarmużem i śmietaną wegańską, ziemniaki pieczone w soli "jak z ogniska"'
+      description: 'Smoked tofu, zucchini, sundried tomatoes, mushrooms sauce with kale and vegan cream, potatoes roasted in salt'
 - name: 'BURGERS'
   dishes:
     - name: 'Burger with beans, sundried tomatoes and basil'
@@ -149,11 +149,6 @@
       description: 'Oriental salad with chinese cabbage and radish, french fries '
 - name: 'DESSERTS'
   dishes:
-    - name: 'Chocolate fondant with beetroot'
-      variants:
-        - name: ''
-          price: 18
-      description: 'Raspberry sorbet'
     - name: 'Coconut Semifreddo'
       variants:
         - name: ''

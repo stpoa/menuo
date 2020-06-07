@@ -283,23 +283,13 @@
     "language": "pl",
     "restaurant": "pelneszklo",
     "section": "DESERY",
-    "dishName": "Fondant z pieczonym burakiem",
-    "dishDescription": "Sorbet malinowy, andrut kaliski",
-    "dishVariantPrice": 18,
-    "dishVariantName": ""
-  },
-  {
-    "index": 29,
-    "language": "pl",
-    "restaurant": "pelneszklo",
-    "section": "DESERY",
     "dishName": "Semifreddo pietruszkowo-bazyliowe",
     "dishDescription": "Kruszonka czekoladowa, mus malinowy, marchew karmelizowana w syropie pomarańczowym",
     "dishVariantPrice": 19,
     "dishVariantName": ""
   },
   {
-    "index": 30,
+    "index": 29,
     "language": "pl",
     "restaurant": "pelneszklo",
     "section": "DESERY",
@@ -309,7 +299,7 @@
     "dishVariantName": ""
   },
   {
-    "index": 31,
+    "index": 30,
     "language": "pl",
     "restaurant": "pelneszklo",
     "section": "DESERY",

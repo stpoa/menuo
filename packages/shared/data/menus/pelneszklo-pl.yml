@@ -149,11 +149,6 @@
       description: 'Orientalna sałatka z kapusty pekińskiej z rzodkiewką, frytki'
 - name: 'DESERY'
   dishes:
-    - name: 'Fondant z pieczonym burakiem'
-      variants:
-        - name: ''
-          price: 18
-      description: 'Sorbet malinowy, andrut kaliski'
     - name: 'Semifreddo pietruszkowo-bazyliowe'
       variants:
         - name: ''
