@@ -576,47 +576,47 @@
             <div class="row form-group">
               <div class="col-md-6 mb-3 mb-md-0">
                 <label class="text-black" for="fname">Imię</label><span class="required">*</span>
-                <input type="text" id="fname" class="form-control">
+                <input type="text" id="fname" class="form-control" required>
               </div>
 
               <div class="col-md-6">
                 <label class="text-black" for="lname">Nazwisko</label><span class="required">*</span>
-                <input type="text" id="lname" class="form-control">
+                <input type="text" id="lname" class="form-control" required>
               </div>
             </div>
 
             <div class="row form-group">
               <div class="col-md-12">
                 <label class="text-black" for="rname">Nazwa Restauracji</label><span class="required">*</span>
-                <input type="text" id="rname" class="form-control">
+                <input type="text" id="rname" class="form-control" required>
               </div>
             </div>
 
             <div class="row form-group">
               <div class="col-md-12">
                 <label class="text-black" for="email">Email</label><span class="required">*</span>
-                <input type="email" id="email" class="form-control">
+                <input type="email" id="email" class="form-control" required>
               </div>
             </div>
 
             <div class="row form-group">
               <div class="col-md-12">
                 <label class="text-black" for="mobile">Telefon</label><span class="required">*</span>
-                <input type="tel" id="mobile" pattern="[0-9]{9}" class="form-control" placeholder="Wpisz same cyfry. Przykład: 517254583">
+                <input type="tel" id="mobile" pattern="[0-9]{9}" class="form-control" placeholder="Wpisz same cyfry. Przykład: 517254583" required>
               </div>
             </div>
 
             <div class="row form-group">
               <div class="col-md-12">
                 <label class="text-black" for="tables">Liczba stolików</label><span class="required">*</span>
-                <textarea name="message" id="message" cols="30" rows="3" class="form-control" placeholder="Podaj numery stolików wraz z ich ilością wewnątrz restauracji i na zewnątrz."></textarea>
+                <textarea name="message" id="message" cols="30" rows="3" class="form-control" placeholder="Podaj numery stolików wraz z ich ilością wewnątrz restauracji i na zewnątrz." required></textarea>
               </div>
             </div>
 
             <div class="row form-group">
               <div class="col-md-12">
                 <label class="text-black" for="waiters">Liczba kelnerów</label><span class="required">*</span>
-                <textarea name="message" id="message" cols="30" rows="1" class="form-control"></textarea>
+                <textarea name="message" id="message" cols="30" rows="1" class="form-control" required></textarea>
               </div>
             </div>
 
@@ -624,7 +624,7 @@
 
               <div class="col-md-12">
                 <label class="text-black" for="waiters">Menu</label><span class="required">*</span>
-                <textarea name="message" id="message" cols="30" rows="2" class="form-control" placeholder="Wklej link do swojego menu lub załącz je w dowolnym formacie."></textarea></br>
+                <textarea name="message" id="message" cols="30" rows="2" class="form-control" placeholder="Wklej link do swojego menu lub załącz je w dowolnym formacie." required></textarea></br>
                 <input class="menu-button" type="file" id="menu-file"/>
               </div>
             </div>
@@ -640,7 +640,7 @@
             </div>
 
             <div class="text-black">
-              <input type="checkbox" name="checkbox" value="check" id="agree" /> Zapoznałem się z <a href="./data/RODO.pdf">informacją o administratorze i przetwarzaniu danych osobowych<span class="required">*</span>  </br></br>
+              <input type="checkbox" name="checkbox" value="check" id="agree" required /> Zapoznałem się z <a href="./data/RODO.pdf">informacją o administratorze i przetwarzaniu danych osobowych<span class="required">*</span>  </br></br>
             </div>
 
             <div class="row form-group">
