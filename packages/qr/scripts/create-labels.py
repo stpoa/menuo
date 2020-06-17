@@ -1,5 +1,7 @@
 import PIL
 from PIL import Image
+from PIL import ImageFont
+from PIL import ImageDraw
 import os
 import shutil
 
@@ -18,6 +20,13 @@ for i in path:
 	back_im = im1.copy()
 	back_im.paste(im2, (8,100))
 	pathToSave = parentDir + "/qr/data/Stickers/Sticker" + i
+	ImageDraw.Draw(
+    back_im
+	).text(
+	    (320,410),
+	    i[:-4],
+	    (0,0,0)
+	)
 	back_im.save(pathToSave, quality=100)
 im1.close()
 back_im.close()
@@ -46,6 +55,13 @@ for i in path:
 	back_im = im1.copy()
 	back_im.paste(im2, (62,180))
 	pathToSave = parentDir + "/qr/data/EnReplacedQr/LabelEn" + i
+	ImageDraw.Draw(
+    back_im
+	).text(
+	    (400,580),
+	    i[:-4],
+	    (0,0,0)
+	)
 	back_im.save(pathToSave, quality=100)
 im1.close()
 back_im.close()
@@ -61,6 +77,13 @@ for i in path:
 	back_im = im1.copy()
 	back_im.paste(im2, (62,180))
 	pathToSave = parentDir + "/qr/data/PlReplacedQr/LabelPl" + i
+	ImageDraw.Draw(
+    back_im
+	).text(
+	    (400,580),
+	    i[:-4],
+	    (0,0,0)
+	)
 	back_im.save(pathToSave, quality=100)
 im1.close()
 back_im.close()
