@@ -574,6 +574,13 @@
             </h2>
 
             <div class="row form-group">
+              <div class="col-md-12">
+                <label class="text-black" for="rname">Nazwa Restauracji</label><span class="required">*</span>
+                <input type="text" id="rname" class="form-control" required>
+              </div>
+            </div>
+
+            <div class="row form-group">
               <div class="col-md-6 mb-3 mb-md-0">
                 <label class="text-black" for="fname">Imię</label><span class="required">*</span>
                 <input type="text" id="fname" class="form-control" required>
@@ -586,21 +593,11 @@
             </div>
 
             <div class="row form-group">
-              <div class="col-md-12">
-                <label class="text-black" for="rname">Nazwa Restauracji</label><span class="required">*</span>
-                <input type="text" id="rname" class="form-control" required>
-              </div>
-            </div>
-
-            <div class="row form-group">
-              <div class="col-md-12">
+              <div class="col-md-6">
                 <label class="text-black" for="email">Email</label><span class="required">*</span>
                 <input type="email" id="email" class="form-control" required>
               </div>
-            </div>
-
-            <div class="row form-group">
-              <div class="col-md-12">
+              <div class="col-md-6">
                 <label class="text-black" for="mobile">Telefon</label><span class="required">*</span>
                 <input type="tel" id="mobile" pattern="[0-9]{9}" class="form-control" placeholder="Wpisz same cyfry. Przykład: 517254583" required>
               </div>
@@ -608,8 +605,8 @@
 
             <div class="row form-group">
               <div class="col-md-12">
-                <label class="text-black" for="tables">Liczba stolików</label><span class="required">*</span>
-                <textarea name="message" id="tables" cols="30" rows="3" class="form-control" placeholder="Podaj numery stolików wraz z ich ilością wewnątrz restauracji i na zewnątrz." required></textarea>
+                <label class="text-black" for="tables">Numery stolików</label><span class="required">*</span>
+                <textarea name="message" id="tables" cols="30" rows="3" class="form-control" placeholder="Podaj numery stolików wraz z ich ilością wewnątrz restauracji i na zewnątrz. Przykłady: 1-30 (zewnątrz), 31-40 (wewnątrz) / 1, 2, 3, 4 (zewnątrz), 5, 6, 7, 8 (wewnątrz)." required></textarea>
               </div>
             </div>
 
@@ -626,7 +623,7 @@
                 <label class="text-black" for="menu">Menu</label><span class="required">*</span>
                 <textarea name="message" id="menu" cols="30" rows="2" class="form-control" placeholder="Wklej link do swojego menu lub załącz je w dowolnym formacie." required></textarea></br>
                 <label for="myfile">Wybierz pliki:</label>
-                <input type="file" id="myfile" name="myfile" multiple required><br><br>
+                <input type="file" id="myfile" name="myfile" multiple required><br>
               </div>
             </div>
 
