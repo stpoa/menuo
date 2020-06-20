@@ -17,22 +17,49 @@ interface FormData {
 }
 
 const sendEmail = (formData: FormData) => {
+  const SOURCE_EMAIL = 'slawek@menuo.app'
+  const DESTINATION_EMAIL = 'slawek@menuo.app'
+
+  const {
+    email,
+    message,
+    first_name,
+    restaurant_name,
+    last_name,
+    menu,
+    phone,
+    table_list,
+    waiters_count,
+  } = formData
+
+  const messageData = `
+${message}
+
+-----------------------------------------------------------------------------
+Restauracja: ${restaurant_name}
+Autor: ${first_name} ${last_name}
+Telefon: ${phone}
+Liczba kelnerów: ${waiters_count}
+Menu: ${menu}
+Lista stolików: ${table_list}
+`
+
   const emailParams = {
-    Source: 'slawek@menuo.app',
-    ReplyToAddresses: [formData.email],
+    Source: SOURCE_EMAIL,
+    ReplyToAddresses: [email],
     Destination: {
-      ToAddresses: ['slawek@menuo.app'],
+      ToAddresses: [DESTINATION_EMAIL],
     },
     Message: {
       Body: {
         Text: {
           Charset: 'UTF-8',
-          Data: `${formData.message}\n\nName: ${formData.first_name}\nEmail: ${formData.email}`,
+          Data: messageData,
         },
       },
       Subject: {
         Charset: 'UTF-8',
-        Data: 'New message from your_site.com',
+        Data: `Nowa wiadomość z formularza menuo od ${restaurant_name}`,
       },
     },
   }
@@ -52,7 +79,7 @@ export const staticSiteMailer: APIGatewayProxyHandler = async (
   }
 
   const sendMailErrorResponse = (e: any) => ({
-    statusCode: 500,
+    statusCode: 400,
     headers,
     body: e,
   })
@@ -60,6 +87,7 @@ export const staticSiteMailer: APIGatewayProxyHandler = async (
   try {
     await sendEmail(formData)
   } catch (e) {
+    console.log(e)
     return sendMailErrorResponse(e)
   }
 
