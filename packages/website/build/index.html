@@ -441,8 +441,8 @@
                 </h3>
                 <p>
                   Oczywiście, istnieje możliwość wdrożenia MENUO w dowolnym
-                  miejscu świata zdalnie. W celu poznania szczegółów skontaktuj
-                  się z Nami mailowo, telefonicznie lub poprzez messengera.
+                  miejscu świata zdalnie. W celu poznania szczegółów użyj
+                  <a href="#Kontakt-section">formularza kontaktowego</a>.
                 </p>
               </div>
 
@@ -835,13 +835,13 @@
                   form.reset()
                   console.log({ response })
                   window.alert(
-                    'Dziękujemy za wypełnienie formularza. Skontaktujemy się z tobą w ciągu 2 dni roboczych',
+                    'Dziękujemy za wypełnienie formularza. Skontaktujemy się z tobą w ciągu 2 dni roboczych.',
                   )
                 }
 
                 const handleFailureResponse = (statusText) => {
                   console.error(statusText)
-                  window.alert('Coś poszło nie tak')
+                  window.alert('Coś poszło nie tak..')
                 }
 
                 await fetch(form.action, {
