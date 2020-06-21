@@ -705,9 +705,9 @@
                   id="phone"
                   name="phone"
                   class="form-control"
-                  pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$"
+                  pattern="^[+]*[\s\./0-9]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$"
                   minlength="9"
-                  maxlength="15"
+                  maxlength="18"
                   required
                 />
               </div>
@@ -865,6 +865,8 @@
             <div class="col-md-4 text-center">
               <p class="h4 mb-4">
                 Aktywnych restauracji
+              </p>
+              <p class="h2 mb-4">
                 <script>
                   document.write(86 + Math.round(diffDays / 3))
                 </script>
@@ -873,6 +875,8 @@
             <div class="col-md-4 text-center">
               <p class="h4 mb-4">
                 Złożonych zamówień
+              </p>
+              <p class="h2 mb-4">
                 <script>
                   document.write(9832 + Math.round((20 * diffDays) / 3))
                 </script>
@@ -880,7 +884,10 @@
             </div>
             <div class="col-md-4 text-center">
               <p class="h4 mb-4">
-                Zadowolonych klientów &infin;
+                Zadowolonych klientów
+              </p>
+              <p class="h2 mb-4">
+                &infin;
               </p>
             </div>
           </div>
