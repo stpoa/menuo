@@ -17,8 +17,8 @@ interface FormData {
 }
 
 const sendEmail = (formData: FormData) => {
-  const SOURCE_EMAIL = 'slawek@menuo.app'
-  const DESTINATION_EMAIL = 'slawek@menuo.app'
+  const SOURCE_EMAIL = 'hi@menuo.app'
+  const DESTINATION_EMAIL = 'hi@menuo.app'
 
   const {
     email,
