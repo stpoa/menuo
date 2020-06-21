@@ -1,5 +1,4 @@
 import { APIGatewayProxyHandler, APIGatewayProxyResult } from 'aws-lambda'
-import 'source-map-support/register'
 import { SES } from 'aws-sdk'
 
 const ses = new SES()
