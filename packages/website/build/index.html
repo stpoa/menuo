@@ -705,7 +705,9 @@
                   id="phone"
                   name="phone"
                   class="form-control"
-                  placeholder="Wpisz same cyfry. Przykład: 517254583"
+                  pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$"
+                  minlength="9"
+                  maxlength="15"
                   required
                 />
               </div>
