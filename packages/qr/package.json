@@ -21,6 +21,8 @@
     "generate:links-from-json-restaurant": "python ./scripts/tables-to-json-restaurant.py",
     "generate:qr-from-links-restaurant": "ts-node ./scripts/create-qr-code-restaurant.ts",
     "generate:qr-from-links-demonstration": "ts-node ./scripts/create-qr-code-demonstration.ts",
+    "generate:qr-from-links-restaurant-no-nfc": "ts-node ./scripts/create-qr-code-restaurant-no-nfc.ts",
+    "generate:qr-from-links-demonstration-no-nfc": "ts-node ./scripts/create-qr-code-demonstration-no-nfc.ts",
     "generate:labels": "python ./scripts/create-labels.py"
   }
 }
