@@ -37,6 +37,7 @@ ${message}
 -----------------------------------------------------------------------------
 Restauracja: ${restaurant_name}
 Autor: ${first_name} ${last_name}
+Email: ${email}
 Telefon: ${phone}
 Liczba kelnerów: ${waiters_count}
 Menu: ${menu}
