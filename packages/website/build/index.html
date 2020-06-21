@@ -441,8 +441,8 @@
                 </h3>
                 <p>
                   Oczywiście, istnieje możliwość wdrożenia MENUO w dowolnym
-                  miejscu świata zdalnie. W celu poznania szczegółów skontaktuj
-                  się z Nami mailowo, telefonicznie lub poprzez messengera.
+                  miejscu świata zdalnie. W celu poznania szczegółów użyj
+                  <a href="#Kontakt-section">formularza kontaktowego</a>.
                 </p>
               </div>
 
@@ -707,7 +707,7 @@
                   class="form-control"
                   pattern="(\d|\s|[+\(\)-])+"
                   minlength="9"
-                  maxlength="15"
+                  maxlength="18"
                   required
                 />
               </div>
@@ -835,13 +835,13 @@
                   form.reset()
                   console.log({ response })
                   window.alert(
-                    'Dziękujemy za wypełnienie formularza. Skontaktujemy się z tobą w ciągu 2 dni roboczych',
+                    'Dziękujemy za wypełnienie formularza. Skontaktujemy się z tobą w ciągu 2 dni roboczych.',
                   )
                 }
 
                 const handleFailureResponse = (statusText) => {
                   console.error(statusText)
-                  window.alert('Coś poszło nie tak')
+                  window.alert('Coś poszło nie tak..')
                 }
 
                 await fetch(form.action, {
@@ -865,6 +865,8 @@
             <div class="col-md-4 text-center">
               <p class="h4 mb-4">
                 Aktywnych restauracji
+              </p>
+              <p class="h2 mb-4">
                 <script>
                   document.write(86 + Math.round(diffDays / 3))
                 </script>
@@ -873,6 +875,8 @@
             <div class="col-md-4 text-center">
               <p class="h4 mb-4">
                 Złożonych zamówień
+              </p>
+              <p class="h2 mb-4">
                 <script>
                   document.write(9832 + Math.round((20 * diffDays) / 3))
                 </script>
@@ -880,7 +884,10 @@
             </div>
             <div class="col-md-4 text-center">
               <p class="h4 mb-4">
-                Zadowolonych klientów &infin;
+                Zadowolonych klientów
+              </p>
+              <p class="h2 mb-4">
+                &infin;
               </p>
             </div>
           </div>
