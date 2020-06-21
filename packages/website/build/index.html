@@ -3,7 +3,7 @@
   <head>
     <!-- Google Tag Manager -->
     <script>
-      ;(function(w, d, s, l, i) {
+      ;(function (w, d, s, l, i) {
         w[l] = w[l] || []
         w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
         var f = d.getElementsByTagName(s)[0],
@@ -63,50 +63,53 @@
       }
     </script>
     <script>
-      const date1 = new Date('5/15/2020');
-      var today = new Date();
-      var dd = String(today.getDate()).padStart(2, '0');
-      var mm = String(today.getMonth() + 1).padStart(2, '0');
-      var yyyy = today.getFullYear();
-      today = mm + '/' + dd + '/' + yyyy;
-      const date2 = new Date(today);
-      const diffTime = Math.abs(date2 - date1);
-      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      const date1 = new Date('5/15/2020')
+      var today = new Date()
+      var dd = String(today.getDate()).padStart(2, '0')
+      var mm = String(today.getMonth() + 1).padStart(2, '0')
+      var yyyy = today.getFullYear()
+      today = mm + '/' + dd + '/' + yyyy
+      const date2 = new Date(today)
+      const diffTime = Math.abs(date2 - date1)
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
     </script>
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
     <!-- Load Facebook SDK for JavaScript -->
-      <div id="fb-root"></div>
-      <script>
-        window.fbAsyncInit = function() {
-          FB.init({
-            xfbml            : true,
-            version          : 'v6.0'
-          });
-        };
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          xfbml: true,
+          version: 'v6.0',
+        })
+      }
+      ;(function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0]
+        if (d.getElementById(id)) return
+        js = d.createElement(s)
+        js.id = id
+        js.src = 'https://connect.facebook.net/pl_PL/sdk/xfbml.customerchat.js'
+        fjs.parentNode.insertBefore(js, fjs)
+      })(document, 'script', 'facebook-jssdk')
+    </script>
 
-        (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/pl_PL/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
-
-      <!-- Your customer chat code -->
-      <div class="fb-customerchat"
-        attribution=install_email
-        page_id="103332457912347"
-        logged_in_greeting="Cześć! W czym możemy Ci pomóc?"
-        logged_out_greeting="Cześć! W czym możemy Ci pomóc?">
-      </div>
+    <!-- Your customer chat code -->
+    <div
+      class="fb-customerchat"
+      attribution="install_email"
+      page_id="103332457912347"
+      logged_in_greeting="Cześć! W czym możemy Ci pomóc?"
+      logged_out_greeting="Cześć! W czym możemy Ci pomóc?"
+    ></div>
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
         src="https://www.googletagmanager.com/ns.html?id=GTM-MG3XNKR"
         height="0"
         width="0"
-        style="display:none;visibility:hidden"
+        style="display: none; visibility: hidden;"
       ></iframe
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
@@ -357,8 +360,10 @@
               <div class="mb-4">
                 <h3 class="h3 mb-4 text-black">Brzmi interesująco?</h3>
                 <p>
-                  Skontaktuj się z Nami. W związku z obecną sytuacją <b>
-                  wdrożenie oraz 3 miesiące użytkowania gratis!</br></br></b>
+                  Skontaktuj się z Nami. W związku z obecną sytuacją
+                  <b>
+                    wdrożenie oraz 3 miesiące użytkowania gratis!<br /><br
+                  /></b>
                 </p>
               </div>
             </div>
@@ -386,42 +391,93 @@
             </div>
           </div>
           <div class="row mb-5">
-
             <div class="col-lg-6">
-
               <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-                <h3 class="text-black h4 mb-4">Jak to działa od strony klienta?</h3>
-                <p>Po umieszczeniu na kazdym stoliku Twojej restauracji stojaka lub naklejki MENUO z kodem QR oraz chipem NFC klient może za ich pomocą uruchomić aplikacje w swoim smartfonie. Nie wymaga ona instalacji ani podawania danych osobowych. Następnie za pomocą MENUO klient może złożyć zamówienie, poinformować kelnera o chęci płatności oraz każdej innej potrzebie.</p>
+                <h3 class="text-black h4 mb-4">
+                  Jak to działa od strony klienta?
+                </h3>
+                <p>
+                  Po umieszczeniu na kazdym stoliku Twojej restauracji stojaka
+                  lub naklejki MENUO z kodem QR oraz chipem NFC klient może za
+                  ich pomocą uruchomić aplikacje w swoim smartfonie. Nie wymaga
+                  ona instalacji ani podawania danych osobowych. Następnie za
+                  pomocą MENUO klient może złożyć zamówienie, poinformować
+                  kelnera o chęci płatności oraz każdej innej potrzebie.
+                </p>
               </div>
 
               <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-                <h3 class="text-black h4 mb-4">Jak to działa od strony restauracji?</h3>
-                <p>Każdy kelner otrzymuje swój login i hasło. Po zalogowaniu wybiera stoliki z których będzie otrzymywał powiadomienia. W każdej chwili oczywiście może zaznaczyć lub odznaczyć każdy z wybranych stolików. Aplikacja działa zarówno na smartfonie, tablecie jak i komputerze. Można również przyjąć model w którym wielu kelnerów korzysta z jednego wspólnego tableta.</p>
+                <h3 class="text-black h4 mb-4">
+                  Jak to działa od strony restauracji?
+                </h3>
+                <p>
+                  Każdy kelner otrzymuje swój login i hasło. Po zalogowaniu
+                  wybiera stoliki z których będzie otrzymywał powiadomienia. W
+                  każdej chwili oczywiście może zaznaczyć lub odznaczyć każdy z
+                  wybranych stolików. Aplikacja działa zarówno na smartfonie,
+                  tablecie jak i komputerze.
+                </p>
               </div>
 
               <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-                <h3 class="text-black h4 mb-4">Jak wygląda wdrożenie MENUO w restauracji?</h3>
-                <p>Na początek wysyłasz na <a href="mailto:hi@menuo.app">hi@menuo.app</a> e-mail ze swoim menu, numeracją stolików oraz ilością kelnerów. Następnie w ciągu 2-4 dni roboczych przesyłamy szczegółową instrukcje uruchomienia i użytkowania aplikacji wraz z loginami i hasłami dla kelnerów oraz stojaki i/lub naklejki dla wszystkich stolików. Od tej pory możesz cieszyć się innowacyjną, alternatywną obsługą klienta.</p>
+                <h3 class="text-black h4 mb-4">
+                  Jak wygląda wdrożenie MENUO w restauracji?
+                </h3>
+                <p>
+                  Skorzystaj z
+                  <a href="#Kontakt-section">formularza kontaktowego</a>. Po
+                  uzgodnieniu wszystkich szczegółów w ciągu 2-4 dni roboczych
+                  przesyłamy instrukcje wraz z loginami i hasłami dla kelnerów
+                  oraz stojaki i/lub naklejki dla wszystkich stolików. Od tej
+                  pory możesz cieszyć się innowacyjną, alternatywną obsługą
+                  klienta.
+                </p>
               </div>
-
             </div>
             <div class="col-lg-6">
-
               <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-                <h3 class="text-black h4 mb-4">Czy można wdrożyć MENUO w naszej restauracji w pełni zdalnie?</h3>
-                <p>Oczywiście, istnieje możliwość wdrożenia MENUO w dowolnym miejscu świata zdalnie. W celu poznania szczegółów skontaktuj się z Nami mailowo, telefonicznie lub poprzez messengera.</p>
+                <h3 class="text-black h4 mb-4">
+                  Czy można wdrożyć MENUO w naszej restauracji w pełni zdalnie?
+                </h3>
+                <p>
+                  Oczywiście, istnieje możliwość wdrożenia MENUO w dowolnym
+                  miejscu świata zdalnie. W celu poznania szczegółów użyj
+                  <a href="#Kontakt-section">formularza kontaktowego</a>.
+                </p>
               </div>
 
               <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-                <h3 class="text-black h4 mb-4">Jakie są koszty wdrożenia i użytkowania MENUO?</h3>
-                <p>Rozumiemy obecną sytuacje restauracji więc wdrożenie i pierwsze 3 miesiące użytkowania są w pełni bezpłatne. Następnie niezależnie od ilości użytkowników koszt miesięczny to 100 PLN netto / miesiąc. Można również skorzysać z opcji samego przeglądania menu przez klientów (brak aplikacji dla kelnerów oraz możliwości zamawiania). W takim przypadku koszt miesięczny to 50 PLN netto / miesiąc. Po okresie próbnym należy również uregulować opłatę za stojaki i/lub naklejki. Cena jednego stojaka to 10 PLN netto, cena jednej naklejki to 5 PLN netto. Zarówno naklejka jak i stojak zawerają kod QR oraz chip NFC.</p>
+                <h3 class="text-black h4 mb-4">
+                  Jakie są koszty wdrożenia i użytkowania MENUO?
+                </h3>
+                <p>
+                  Rozumiemy obecną sytuacje restauracji więc wdrożenie i
+                  pierwsze 3 miesiące użytkowania są w pełni bezpłatne.
+                  Następnie niezależnie od ilości użytkowników koszt miesięczny
+                  to 100 PLN netto / miesiąc. Można również skorzysać z opcji
+                  samego przeglądania menu przez klientów (brak aplikacji dla
+                  kelnerów oraz możliwości zamawiania). W takim przypadku koszt
+                  miesięczny to 50 PLN netto / miesiąc. Po okresie próbnym
+                  należy również uregulować opłatę za stojaki i/lub naklejki.
+                  Cena jednego stojaka to 10 PLN netto, cena jednej naklejki to
+                  5 PLN netto. Zarówno naklejka jak i stojak zawerają kod QR
+                  oraz chip NFC.
+                </p>
               </div>
 
               <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
-                <h3 class="text-black h4 mb-4">Na jak długo muszę podpisać umowę i jaki jest okres wypowiedzenia?</h3>
-                <p>Po okresie 3 miesięcy użytkowania umowa podpisywana jest na czas nieokreślony, jednak jeśli nie będziesz czuł, iż nasza aplikacja daje Ci odpowiednią wartość - możesz zakończyć umowę z 1-dniowym okresem wypowiedzenia. Nie ma w tym żadnych ukrytych haczyków.</p>
+                <h3 class="text-black h4 mb-4">
+                  Na jak długo muszę podpisać umowę i jaki jest okres
+                  wypowiedzenia?
+                </h3>
+                <p>
+                  Po okresie 3 miesięcy użytkowania umowa podpisywana jest na
+                  czas nieokreślony, jednak jeśli nie będziesz czuł, iż nasza
+                  aplikacja daje Ci odpowiednią wartość - możesz zakończyć umowę
+                  z 1-dniowym okresem wypowiedzenia. Nie ma w tym żadnych
+                  ukrytych haczyków.
+                </p>
               </div>
-
             </div>
           </div>
         </div>
@@ -555,7 +611,7 @@
             <div class="col-md-4 text-center">
               <p class="mb-4">
                 <a href="https://www.facebook.com/menuoappPL/">
-                  <img src="images/fb.png"/>
+                  <img src="images/fb.png" />
                 </a>
               </p>
             </div>
@@ -566,6 +622,240 @@
               </p>
             </div>
           </div>
+          <form
+            action="https://ew9oa8vds3.execute-api.eu-central-1.amazonaws.com/dev/static-site-mailer"
+            method="POST"
+          >
+            <h2 class="h4 text-black mb-5">
+              <p align="center">
+                Chcesz zacząć korzystać z MENUO? Wypełnij poniższy formularz..
+              </p>
+            </h2>
+            <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+              <p align="center">
+                Wypełnienie formularza
+                <u
+                  >nie oznacza oczywiście zobowiązania się do podjęcia
+                  współpracy</u
+                >. Jest dla Nas jedynie informacją iż jesteś wstępnie
+                zaniteresowany naszą aplikacją oraz zgromadzeniem wszystkich
+                koniecznych danych do podjęcia współpracy. Po wypełnieniu
+                formularza
+                <u>skontaktujemy się z Tobą w ciągu 2 dni roboczych</u>.
+              </p>
+            </div>
+
+            <div class="row form-group">
+              <div class="col-md-12">
+                <label class="text-black" for="rname">Nazwa Restauracji</label
+                ><span class="required">*</span>
+                <input
+                  type="text"
+                  id="restaurant-name"
+                  name="restaurant_name"
+                  class="form-control"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="row form-group">
+              <div class="col-md-6 mb-3 mb-md-0">
+                <label class="text-black" for="fname">Imię</label
+                ><span class="required">*</span>
+                <input
+                  type="text"
+                  id="first-name"
+                  name="first_name"
+                  class="form-control"
+                  required
+                />
+              </div>
+
+              <div class="col-md-6">
+                <label class="text-black" for="lname">Nazwisko</label
+                ><span class="required">*</span>
+                <input
+                  type="text"
+                  id="last-name"
+                  name="last_name"
+                  class="form-control"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="row form-group">
+              <div class="col-md-6">
+                <label class="text-black" for="email">Email</label
+                ><span class="required">*</span>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="col-md-6">
+                <label class="text-black" for="mobile">Telefon</label
+                ><span class="required">*</span>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="form-control"
+                  pattern="(\d|\s|[+\(\)-])+"
+                  minlength="9"
+                  maxlength="18"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="row form-group">
+              <div class="col-md-12">
+                <label class="text-black" for="tables">Numery stolików</label
+                ><span class="required">*</span>
+                <textarea
+                  id="table-list"
+                  name="table_list"
+                  cols="30"
+                  rows="3"
+                  class="form-control"
+                  placeholder="Podaj numery stolików wraz z ich ilością wewnątrz restauracji i na zewnątrz. Przykłady: 1-30 (zewnątrz), 31-40 (wewnątrz) / 1, 2, 3, 4 (zewnątrz), 5, 6, 7, 8 (wewnątrz)."
+                  required
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="row form-group">
+              <div class="col-md-12">
+                <label class="text-black" for="waiters">Liczba kelnerów</label
+                ><span class="required">*</span>
+                <input
+                  id="waiters-count"
+                  name="waiters_count"
+                  type="number"
+                  cols="30"
+                  rows="1"
+                  class="form-control"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="row form-group">
+              <div class="col-md-12">
+                <label class="text-black" for="menu">Menu</label
+                ><span class="required">*</span>
+                <textarea
+                  id="menu"
+                  name="menu"
+                  cols="30"
+                  rows="3"
+                  class="form-control"
+                  placeholder="Wklej link do swojego menu. Jeśli nie posiadasz menu online wklej link do Twojej restauracji lub jej profilu na FB."
+                  required
+                ></textarea
+                ><br />
+                <!-- <label for="myfile">Wybierz pliki:</label>
+                <input
+                  type="file"
+                  id="myfile"
+                  name="myfile"
+                  multiple
+                  required
+                /><br /> -->
+              </div>
+            </div>
+
+            <div class="box__input"></div>
+
+            <div class="row form-group">
+              <div class="col-md-12">
+                <label class="text-black" for="message">Wiadomość</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  cols="30"
+                  rows="7"
+                  class="form-control"
+                  placeholder="Jeśli masz jakieś dodatkowe pytania lub komentarze umieść je tutaj."
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="text-black">
+              <input id="rodo" type="checkbox" value="check" required />
+              Zapoznałem się z
+              <a href="./data/RODO.pdf"
+                >informacją o administratorze i przetwarzaniu danych
+                osobowych</a
+              ><span class="required">*</span> <br /><br />
+            </div>
+
+            <div class="row form-group">
+              <div class="col-md-12">
+                <p align="center">
+                  <input
+                    type="submit"
+                    value="Wyślij"
+                    class="btn btn-primary btn-md text-white"
+                  />
+                </p>
+              </div>
+            </div>
+          </form>
+
+          <script>
+            ;(() => {
+              const form = document.querySelector('form')
+              const formResponse = document.querySelector('js-form-response')
+
+              form.onsubmit = async (e) => {
+                e.preventDefault()
+
+                const data = Array.from(form)
+                  .filter((input) => input.name)
+                  .reduce(
+                    (acc, input) => ({ ...acc, [input.name]: input.value }),
+                    {},
+                  )
+
+                const headers = new Headers({
+                  Accept: 'application/json; charset=utf-8',
+                  'Content-Type': 'application/json; charset=UTF-8',
+                })
+
+                const body = JSON.stringify(data)
+                console.log({ headers, body, data })
+
+                const handleSuccessResponse = (response) => {
+                  form.reset()
+                  console.log({ response })
+                  window.alert(
+                    'Dziękujemy za wypełnienie formularza. Skontaktujemy się z tobą w ciągu 2 dni roboczych.',
+                  )
+                }
+
+                const handleFailureResponse = (statusText) => {
+                  console.error(statusText)
+                  window.alert('Coś poszło nie tak..')
+                }
+
+                await fetch(form.action, {
+                  headers,
+                  method: form.method,
+                  body,
+                }).then((res) =>
+                  res.ok
+                    ? res.text().then(handleSuccessResponse)
+                    : handleFailureResponse(res.statusText),
+                )
+              }
+            })()
+          </script>
         </div>
       </section>
 
@@ -575,29 +865,29 @@
             <div class="col-md-4 text-center">
               <p class="h4 mb-4">
                 Aktywnych restauracji
-                <p class="h2 mb-4">
-                  <script>
-                    document.write(86 + Math.round(diffDays/3));
-                  </script>
-                </p>
+              </p>
+              <p class="h2 mb-4">
+                <script>
+                  document.write(86 + Math.round(diffDays / 3))
+                </script>
               </p>
             </div>
             <div class="col-md-4 text-center">
               <p class="h4 mb-4">
                 Złożonych zamówień
-                <p class="h2 mb-4">
-                  <script>
-                    document.write(9832 + Math.round(20 * diffDays/3))
-                  </script>
-                </p>
+              </p>
+              <p class="h2 mb-4">
+                <script>
+                  document.write(9832 + Math.round((20 * diffDays) / 3))
+                </script>
               </p>
             </div>
             <div class="col-md-4 text-center">
               <p class="h4 mb-4">
                 Zadowolonych klientów
-                <p class="h2 mb-4">
-                  &infin;
-                </p>
+              </p>
+              <p class="h2 mb-4">
+                &infin;
               </p>
             </div>
           </div>
