@@ -11,7 +11,7 @@
           return language.toLowerCase().split(/[_-]+/)[0];
         }
         function init() {
-          language = getLanguageFromBrowser();
+          let language = getLanguageFromBrowser();
           language = language == "pl" || language == "en" ? language : "en";
           if (window.location.href.includes("://menuo.me/")) {
             window.location.href = "https://menuo.me/" + language;
