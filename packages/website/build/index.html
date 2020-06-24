@@ -5,13 +5,20 @@
       <script>
         function init()
         {
-			    language =
-				  (navigator.languages && navigator.languages[0]) ||
+          hasBeenCalled = true
+			    language = (navigator.languages && navigator.languages[0]) ||
 				  navigator.language ||
 				  navigator.userLanguage
 				  language.toLowerCase().split(/[_-]+/)[0]
 				  language = (language =='pl' || language == 'en') ? language : 'en'
-          window.location.href = "https://menuo.app/" + language;
+          if(window.location.href = "https://menuo.me")
+          {
+            window.location.href =  "https://menuo.me/" + language
+          }
+          else if(window.location.href = "https://menuo.app")
+          {
+            window.location.href =  "https://menuo.app/" + language
+          }
         }
       </script>
     </head>
