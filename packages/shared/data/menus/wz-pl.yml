@@ -1,0 +1,68 @@
+- name: WIERTŁA
+  dishes:
+    - name: 'Wiertło kręte DIN345 TypN HSS szlifowane 10,00 mm'
+      variants:
+        - name: ''
+          price: 24
+      description: ''
+    - name: 'Wiertło kręte DIN345 TypN HSS szlifowane 12,00 mm'
+      variants:
+        - name: ''
+          price: 29
+      description: ''
+    - name: 'Wiertło kręte DIN345 TypN HSS szlifowane 14,00 mm'
+      variants:
+        - name: ''
+          price: 39
+      description: ''
+- name: POGŁĘBIACZE
+  dishes:
+    - name: 'Pogłębiacz stożkowy 90 stopni ASP 20,00 mm'
+      variants:
+        - name: ''
+          price: 55
+      description: ''
+    - name: 'Pogłębiacz stożkowy 90 stopni ASP 30,00 mm'
+      variants:
+        - name: ''
+          price: 60
+      description: ''
+    - name: 'Pogłębiacz stożkowy 90 stopni ASP 40,00 mm'
+      variants:
+        - name: ''
+          price: 70
+      description: ''
+- name: FREZY
+  dishes:
+    - name: 'Frez trzpieniowy VHM FIRE 16,00 mm'
+      variants:
+        - name: ''
+          price: 34
+      description: ''
+    - name: 'Frez trzpieniowy VHM FIRE 18,00 mm'
+      variants:
+        - name: ''
+          price: 44
+      description: ''
+    - name: 'Frez trzpieniowy VHM FIRE 22,00 mm'
+      variants:
+        - name: ''
+          price: 54
+      description: ''
+- name: GWINTOWNIKI
+  dishes:
+    - name: 'Gwintownik MasterTAP M16x1'
+      variants:
+        - name: ''
+          price: 57
+      description: ''
+    - name: 'Gwintownik MasterTAP M18x2'
+      variants:
+        - name: ''
+          price: 77
+      description: ''
+    - name: 'Gwintownik MasterTAP M20x2,5'
+      variants:
+        - name: ''
+          price: 98
+      description: ''

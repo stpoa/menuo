@@ -1,0 +1,122 @@
+[
+  {
+    "index": 0,
+    "language": "en",
+    "restaurant": "wz",
+    "section": "DRILL",
+    "dishName": "Twist drill DIN345 Type N HSS ground 10,00 mm",
+    "dishDescription": "",
+    "dishVariantPrice": 24,
+    "dishVariantName": ""
+  },
+  {
+    "index": 1,
+    "language": "en",
+    "restaurant": "wz",
+    "section": "DRILL",
+    "dishName": "Twist drill DIN345 Type N HSS ground  12,00 mm",
+    "dishDescription": "",
+    "dishVariantPrice": 29,
+    "dishVariantName": ""
+  },
+  {
+    "index": 2,
+    "language": "en",
+    "restaurant": "wz",
+    "section": "DRILL",
+    "dishName": "Twist drill DIN345 Type N HSS ground  14,00 mm",
+    "dishDescription": "",
+    "dishVariantPrice": 39,
+    "dishVariantName": ""
+  },
+  {
+    "index": 3,
+    "language": "en",
+    "restaurant": "wz",
+    "section": "COUNTERSINK",
+    "dishName": "90 degree countersink ASP 20,00 mm",
+    "dishDescription": "",
+    "dishVariantPrice": 55,
+    "dishVariantName": ""
+  },
+  {
+    "index": 4,
+    "language": "en",
+    "restaurant": "wz",
+    "section": "COUNTERSINK",
+    "dishName": "90 degree countersink ASP 30,00 mm",
+    "dishDescription": "",
+    "dishVariantPrice": 60,
+    "dishVariantName": ""
+  },
+  {
+    "index": 5,
+    "language": "en",
+    "restaurant": "wz",
+    "section": "COUNTERSINK",
+    "dishName": "90 degree countersink ASP 40,00 mm",
+    "dishDescription": "",
+    "dishVariantPrice": 70,
+    "dishVariantName": ""
+  },
+  {
+    "index": 6,
+    "language": "en",
+    "restaurant": "wz",
+    "section": "MILLING CUTTER",
+    "dishName": "Shank cutter VHM FIRE 16,00 mm",
+    "dishDescription": "",
+    "dishVariantPrice": 34,
+    "dishVariantName": ""
+  },
+  {
+    "index": 7,
+    "language": "en",
+    "restaurant": "wz",
+    "section": "MILLING CUTTER",
+    "dishName": "Shank cutter VHM FIRE 18,00 mm",
+    "dishDescription": "",
+    "dishVariantPrice": 44,
+    "dishVariantName": ""
+  },
+  {
+    "index": 8,
+    "language": "en",
+    "restaurant": "wz",
+    "section": "MILLING CUTTER",
+    "dishName": "Shank cutter VHM FIRE 22,00 mm",
+    "dishDescription": "",
+    "dishVariantPrice": 54,
+    "dishVariantName": ""
+  },
+  {
+    "index": 9,
+    "language": "en",
+    "restaurant": "wz",
+    "section": "TAPS",
+    "dishName": "Screw tap MasterTAP M16x1",
+    "dishDescription": "",
+    "dishVariantPrice": 57,
+    "dishVariantName": ""
+  },
+  {
+    "index": 10,
+    "language": "en",
+    "restaurant": "wz",
+    "section": "TAPS",
+    "dishName": "Screw tap MasterTAP M18x2",
+    "dishDescription": "",
+    "dishVariantPrice": 77,
+    "dishVariantName": ""
+  },
+  {
+    "index": 11,
+    "language": "en",
+    "restaurant": "wz",
+    "section": "TAPS",
+    "dishName": "Screw tap MasterTAP M20x2,5",
+    "dishDescription": "",
+    "dishVariantPrice": 98,
+    "dishVariantName": ""
+  }
+]

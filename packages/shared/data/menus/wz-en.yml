@@ -1,0 +1,68 @@
+- name: DRILL
+  dishes:
+    - name: 'Twist drill DIN345 Type N HSS ground 10,00 mm'
+      variants:
+        - name: ''
+          price: 24
+      description: ''
+    - name: 'Twist drill DIN345 Type N HSS ground  12,00 mm'
+      variants:
+        - name: ''
+          price: 29
+      description: ''
+    - name: 'Twist drill DIN345 Type N HSS ground  14,00 mm'
+      variants:
+        - name: ''
+          price: 39
+      description: ''
+- name: COUNTERSINK
+  dishes:
+    - name: '90 degree countersink ASP 20,00 mm'
+      variants:
+        - name: ''
+          price: 55
+      description: ''
+    - name: '90 degree countersink ASP 30,00 mm'
+      variants:
+        - name: ''
+          price: 60
+      description: ''
+    - name: '90 degree countersink ASP 40,00 mm'
+      variants:
+        - name: ''
+          price: 70
+      description: ''
+- name: MILLING CUTTER
+  dishes:
+    - name: 'Shank cutter VHM FIRE 16,00 mm'
+      variants:
+        - name: ''
+          price: 34
+      description: ''
+    - name: 'Shank cutter VHM FIRE 18,00 mm'
+      variants:
+        - name: ''
+          price: 44
+      description: ''
+    - name: 'Shank cutter VHM FIRE 22,00 mm'
+      variants:
+        - name: ''
+          price: 54
+      description: ''
+- name: TAPS
+  dishes:
+    - name: 'Screw tap MasterTAP M16x1'
+      variants:
+        - name: ''
+          price: 57
+      description: ''
+    - name: 'Screw tap MasterTAP M18x2'
+      variants:
+        - name: ''
+          price: 77
+      description: ''
+    - name: 'Screw tap MasterTAP M20x2,5'
+      variants:
+        - name: ''
+          price: 98
+      description: ''
