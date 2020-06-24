@@ -11,11 +11,11 @@
          navigator.userLanguage
          language.toLowerCase().split(/[_-]+/)[0]
          language = (language =='pl' || language == 'en') ? language : 'en'
-           if(window.location.href == "https://menuo.me")
+           if(window.location.href.includes("https://menuo.me/"))
            {
              window.location.href = "https://menuo.me/" + language
            }
-           else if(window.location.href == "https://menuo.app/")
+           else if(window.location.href.includes("https://menuo.app/"))
            {
              window.location.href = "https://menuo.app/" + language
            }
