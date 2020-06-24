@@ -3,23 +3,22 @@
    <head>
       <title>MENUO - order in restaurant with Your smartphone</title>
       <script>
-         function init()
-         {
-           hasBeenCalled = true
-         language = (navigator.languages && navigator.languages[0]) ||
-         navigator.language ||
-         navigator.userLanguage
-         language.toLowerCase().split(/[_-]+/)[0]
-         language = (language =='pl' || language == 'en') ? language : 'en'
-           if(window.location.href.includes("https://menuo.me/"))
-           {
-             window.location.href = "https://menuo.me/" + language
-           }
-           else if(window.location.href.includes("https://menuo.app/"))
-           {
-             window.location.href = "https://menuo.app/" + language
-           }
-         }
+        function getLanguageFromBrowser() {
+          const language =
+            (navigator.languages && navigator.languages[0]) ||
+            navigator.language ||
+            navigator.userLanguage;
+          return language.toLowerCase().split(/[_-]+/)[0];
+        }
+        function init() {
+          language = getLanguageFromBrowser();
+          language = language == "pl" || language == "en" ? language : "en";
+          if (window.location.href.includes("://menuo.me/")) {
+            window.location.href = "https://menuo.me/" + language;
+          } else if (window.location.href.includes("://menuo.app/")) {
+            window.location.href = "https://menuo.app/" + language;
+          }
+        }
       </script>
    </head>
    <body onload="init()">
