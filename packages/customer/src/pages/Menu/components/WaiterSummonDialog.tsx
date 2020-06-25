@@ -9,9 +9,7 @@ import {
   WithStyles,
 } from '@material-ui/core'
 import { Translate } from 'react-localize-redux'
-import {
-  RestaurantConfig,
-} from '@menuo/shared'
+import { RestaurantConfig } from '@menuo/shared'
 
 interface WaiterSummonDialogProps extends WithStyles {
   open: boolean
@@ -37,8 +35,10 @@ export const WaiterSummonDialog: FC<WaiterSummonDialogProps> = ({
   return (
     <Dialog open={open} onClose={handleClose}>
       <DialogTitle>
-        <Translate id={isButtonAskForContact ? "contactWay" : "callWaiterAim"}>
-          {isButtonAskForContact ? "How should we contact You?" : "What do You want to call the waiter for?"}
+        <Translate id={isButtonAskForContact ? 'contactWay' : 'callWaiterAim'}>
+          {isButtonAskForContact
+            ? 'How should we contact You?'
+            : 'What do You want to call the waiter for?'}
         </Translate>
       </DialogTitle>
       <DialogContent></DialogContent>
@@ -48,8 +48,8 @@ export const WaiterSummonDialog: FC<WaiterSummonDialogProps> = ({
           onClick={handlePayCashClick}
           color="primary"
         >
-          <Translate id={isButtonAskForContact ? "mobile" : "payByCash"}>
-          {isButtonAskForContact ? "Mobile" : "Pay by cash"}
+          <Translate id={isButtonAskForContact ? 'mobile' : 'payByCash'}>
+            {isButtonAskForContact ? 'Mobile' : 'Pay by cash'}
           </Translate>
         </Button>
         <Button
@@ -57,8 +57,8 @@ export const WaiterSummonDialog: FC<WaiterSummonDialogProps> = ({
           onClick={handlePayCardClick}
           color="primary"
         >
-          <Translate id={isButtonAskForContact ? "email" : "payByCard"}>
-          {isButtonAskForContact ? "E-mail" : "Pay by card"}
+          <Translate id={isButtonAskForContact ? 'email' : 'payByCard'}>
+            {isButtonAskForContact ? 'E-mail' : 'Pay by card'}
           </Translate>
         </Button>
         <Button
@@ -66,8 +66,8 @@ export const WaiterSummonDialog: FC<WaiterSummonDialogProps> = ({
           color="primary"
           onClick={handleSummonClick}
         >
-          <Translate id={isButtonAskForContact ? "whatsApp" : "other"}>
-          {isButtonAskForContact ? "WhatsApp" : "Other"}
+          <Translate id={isButtonAskForContact ? 'whatsApp' : 'other'}>
+            {isButtonAskForContact ? 'WhatsApp' : 'Other'}
           </Translate>
         </Button>
       </div>

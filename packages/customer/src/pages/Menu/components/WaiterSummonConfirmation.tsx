@@ -9,9 +9,7 @@ import {
   WithStyles,
 } from '@material-ui/core'
 import { Translate } from 'react-localize-redux'
-import {
-  RestaurantConfig,
-} from '@menuo/shared'
+import { RestaurantConfig } from '@menuo/shared'
 
 interface WaiterSummonConfirmationProps extends WithStyles {
   open: boolean
@@ -35,8 +33,13 @@ export const WaiterSummonConfirmation: FC<WaiterSummonConfirmationProps> = ({
   return (
     <Dialog open={open} onClose={handleClose}>
       <DialogTitle>
-        <Translate id={isButtonAskForContact? "contactWayConfirmation": "callWaiterConfirmation"}>
-        </Translate>
+        <Translate
+          id={
+            isButtonAskForContact
+              ? 'contactWayConfirmation'
+              : 'callWaiterConfirmation'
+          }
+        ></Translate>
         <Translate id={reason}></Translate>
       </DialogTitle>
       <DialogContent></DialogContent>

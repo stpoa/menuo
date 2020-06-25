@@ -159,37 +159,37 @@ export const MenuPage: FC<MenuPageProps> = ({
   const handleSummonClick = (
     table: Table,
     reason: string,
-    mode: boolean
+    mode: boolean,
   ) => async () => {
-    setLoading(true);
-    await summonWaiter(restaurant, table);
-    setShowSummonDialog(false);
-    setLoading(false);
-    setShowSummonConfirmation(true);
-    reason = mode ? "whatsAppConfirmation" : "anotherNeed";
-    setReason(reason);
+    setLoading(true)
+    await summonWaiter(restaurant, table)
+    setShowSummonDialog(false)
+    setLoading(false)
+    setShowSummonConfirmation(true)
+    reason = mode ? 'whatsAppConfirmation' : 'anotherNeed'
+    setReason(reason)
   }
   const handlePayCardClick = (
     table: Table,
     reason: string,
-    mode: boolean
+    mode: boolean,
   ) => async () => {
-    await payByCard(restaurant, { ...table, status: "pay-card" });
-    setShowSummonDialog(false);
-    setShowSummonConfirmation(true);
-    reason = mode ? "emailConfirmation" : "cardPayment";
-    setReason(reason);
+    await payByCard(restaurant, { ...table, status: 'pay-card' })
+    setShowSummonDialog(false)
+    setShowSummonConfirmation(true)
+    reason = mode ? 'emailConfirmation' : 'cardPayment'
+    setReason(reason)
   }
   const handlePayCashClick = (
     table: Table,
     reason: string,
-    mode: boolean
+    mode: boolean,
   ) => async () => {
-    await payByCash(restaurant, { ...table, status: "pay-cash" });
-    setShowSummonDialog(false);
-    setShowSummonConfirmation(true);
-    reason = mode ? "mobileConfirmation" : "cashPayment";
-    setReason(reason);
+    await payByCash(restaurant, { ...table, status: 'pay-cash' })
+    setShowSummonDialog(false)
+    setShowSummonConfirmation(true)
+    reason = mode ? 'mobileConfirmation' : 'cashPayment'
+    setReason(reason)
   }
 
   const isMenuReadOnly = config.MENU_READ_ONLY !== false
@@ -215,9 +215,21 @@ export const MenuPage: FC<MenuPageProps> = ({
         disabled={loading}
         open={showSummonDialog}
         handleClose={() => setShowSummonDialog(false)}
-        handlePayCardClick={handlePayCardClick(table, reason, isButtonAskForContact)}
-        handlePayCashClick={handlePayCashClick(table, reason, isButtonAskForContact)}
-        handleSummonClick={handleSummonClick(table, reason, isButtonAskForContact)}
+        handlePayCardClick={handlePayCardClick(
+          table,
+          reason,
+          isButtonAskForContact,
+        )}
+        handlePayCashClick={handlePayCashClick(
+          table,
+          reason,
+          isButtonAskForContact,
+        )}
+        handleSummonClick={handleSummonClick(
+          table,
+          reason,
+          isButtonAskForContact,
+        )}
         config={config}
       />
       <WaiterSummonConfirmation
@@ -284,9 +296,11 @@ export const MenuPage: FC<MenuPageProps> = ({
                 color="primary"
                 onClick={handleSummonDialogClick}
               >
-              <Translate id={isButtonAskForContact ? "askForContact" : "callWaiter"}>
-                {isButtonAskForContact ? "Ask for contact" : "Call a waiter"}
-              </Translate>
+                <Translate
+                  id={isButtonAskForContact ? 'askForContact' : 'callWaiter'}
+                >
+                  {isButtonAskForContact ? 'Ask for contact' : 'Call a waiter'}
+                </Translate>
               </Button>
               <Button
                 {...{ 'data-cy': 'open-order-modal' }}
