@@ -86,7 +86,7 @@ export const MenuPage: FC<MenuPageProps> = ({
 
   const menu = nestMenu([
     ...dishes.filter(
-      (dish) =>
+      dish =>
         dish.section.toLowerCase().includes(query.toLowerCase()) ||
         dish.dishVariantName?.toLowerCase().includes(query.toLowerCase()) ||
         dish.dishName.toLowerCase().includes(query.toLowerCase()),
@@ -145,7 +145,7 @@ export const MenuPage: FC<MenuPageProps> = ({
       restaurant,
     })
     setShowOrderedInfo(true)
-    setOrdered((o) => [...o, ...getOrderedEntries(dishes, basket)])
+    setOrdered(o => [...o, ...getOrderedEntries(dishes, basket)])
     clearBasket()
     setLoading(false)
   }
@@ -344,17 +344,17 @@ const connectComponent = connect<
   MenuPageOwnProps,
   RootState
 >(
-  (state) => ({
+  state => ({
     dishes: state.menu.dishes,
     table: state.table,
     isLoading: state.menu.isFetching,
     basket: state.basket,
     restaurant: state.restaurant,
     query: state.menu.query,
-    language: state.user.locale.languages.find((l) => l.active)?.code || 'en',
+    language: state.user.locale.languages.find(l => l.active)?.code || 'en',
     config: state.config.config,
   }),
-  (dispatch) => ({
+  dispatch => ({
     getDishes: () => dispatch(actions.menuGetRequest()),
     getConfig: () => dispatch(actions.configGetRequest()),
     clearBasket: () => dispatch(actions.basketClear()),

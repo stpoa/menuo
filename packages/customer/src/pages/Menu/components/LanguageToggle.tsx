@@ -53,11 +53,11 @@ const connectComponent = connect<
   {},
   RootState
 >(
-  (state) => ({
+  state => ({
     languages: state.user.locale.languages as [Language, Language],
   }),
-  (dispatch) => ({
-    setActiveLanguage: (lang) => dispatch(setActiveLanguage(lang)),
+  dispatch => ({
+    setActiveLanguage: lang => dispatch(setActiveLanguage(lang)),
   }),
 )
 

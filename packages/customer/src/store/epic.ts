@@ -9,7 +9,7 @@ import { restaurantSetEpic } from './restaurant/epic'
 import { localeSetActiveLanguageEpic, localeInitEpic } from './user/locale/epic'
 import * as actions from './actions'
 
-const initEpic: Epic = (action$) =>
+const initEpic: Epic = action$ =>
   action$.pipe(
     filter(isActionOf(actions.init)),
     mergeMap(() => [actions.localeInit()]),

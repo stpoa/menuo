@@ -67,7 +67,7 @@ export const OrdersPage: FC<
     const doEffect = async () => {
       const tables = await getTables({ restaurant })
       setTables(
-        tables.every((v) => Number(v) >= 0)
+        tables.every(v => Number(v) >= 0)
           ? tables.sort((a, b) => +a - +b)
           : tables.sort(),
       )
@@ -85,7 +85,7 @@ export const OrdersPage: FC<
 
   useEffect(() => {
     try {
-      navigator.serviceWorker.addEventListener('message', (event) => {
+      navigator.serviceWorker.addEventListener('message', event => {
         setRefetch(event.data.refetch)
       })
     } catch (e) {
@@ -178,7 +178,7 @@ export const OrdersPage: FC<
         <ListIcon />
       </Fab>
       {orders.tables
-        .filter((t) => tablesMine.includes(t.table.name))
+        .filter(t => tablesMine.includes(t.table.name))
         .map(({ orders, table }) => (
           <OrdersTable
             {...{
@@ -190,11 +190,11 @@ export const OrdersPage: FC<
               handleDeleteOrder: handleDeleteOrder(restaurant),
               handleCompleteOrderToggle: handleCompleteOrderToggle(restaurant),
               handleCompleteAction: handleCompleteAction(restaurant)(table),
-              handlePriorityChange: (order) => (orderEntry) => async (e) => {
+              handlePriorityChange: order => orderEntry => async e => {
                 await updateRestaurantOrder(
                   { restaurant, order: order._id },
                   {
-                    entries: order.items.map((i) => {
+                    entries: order.items.map(i => {
                       const priority =
                         (i.entry.dishVariantName || '') ===
                           (orderEntry.entry.dishVariantName || '') &&
@@ -215,7 +215,7 @@ export const OrdersPage: FC<
       <TablesSelectionDialog
         open={showTablesDialog}
         onCheck={(table: string) => () => {
-          setCheckedTables((checked) => ({
+          setCheckedTables(checked => ({
             ...checked,
             [table]: !checked[table],
           }))
@@ -232,7 +232,7 @@ export const OrdersPage: FC<
           setShowTablesDialog(false)
           setRefetch(+new Date())
         }}
-        tables={tables.map((name) => {
+        tables={tables.map(name => {
           return {
             name,
             isMine: tablesMine.includes(name),
@@ -244,7 +244,7 @@ export const OrdersPage: FC<
   )
 }
 
-export default withStyles((_) =>
+export default withStyles(_ =>
   createStyles({
     root: {
       flexDirection: 'column',

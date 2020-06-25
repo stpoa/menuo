@@ -93,7 +93,7 @@ const HeaderRaw = ({
             disabled={!!basket.length}
           />
           <SearchButton
-            onClick={() => setShowSearchInput((set) => !set)}
+            onClick={() => setShowSearchInput(set => !set)}
             className={classes.searchButton}
           />
         </div>
@@ -132,7 +132,7 @@ const HeaderRaw = ({
             <InputBase
               autoFocus
               className={classes.searchInput}
-              onChange={(e) => filterDishes(e.target.value)}
+              onChange={e => filterDishes(e.target.value)}
               value={query}
               placeholder={translate('searchPlaceholderContent') + ''}
               inputProps={{ 'aria-label': 'search' }}
@@ -180,11 +180,11 @@ const connectComponent = connect<
   HeaderOwnProps,
   RootState
 >(
-  (state) => ({
+  state => ({
     basket: state.basket,
     query: state.menu.query,
   }),
-  (dispatch) => ({
+  dispatch => ({
     showBasketDialog: () => dispatch(actions.uiDialogShow(DialogType.BASKET)),
     getDishes: () => dispatch(actions.menuGetRequest()),
     clearBasket: () => dispatch(actions.basketClear()),
