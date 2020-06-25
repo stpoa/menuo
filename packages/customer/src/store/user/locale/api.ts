@@ -52,7 +52,7 @@ export const getTranslations = () => ({
   cardPayment: ['card payment!', 'płatność kartą!'],
   anotherNeed: ['another need!', 'inna potrzeba!'],
 
-  // Below temporary translating only for W-Z company to test MENUO as another app
+  // TODO: Below temporary translating only for W-Z company to test MENUO as another app, remove it after
   askForContact: ['Ask for contact', 'Poproś o kontakt'],
   mobile: ['Mobile', 'Telefon'],
   email: ['E-mail', 'E-mail'],
