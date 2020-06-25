@@ -8,7 +8,7 @@ const initialState = {
 }
 
 export const configReducer = createReducer(initialState)
-  .handleAction(actions.configGetRequest, (state) => ({
+  .handleAction(actions.configGetRequest, state => ({
     ...state,
     isFetching: true,
   }))

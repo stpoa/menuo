@@ -88,11 +88,11 @@ const connectComponent = connect<
   BasketDialogOwnProps,
   RootState
 >(
-  (state) => ({
+  state => ({
     open: state.ui.dialog === DialogType.BASKET,
     inBasket: getOrderedEntries(state.menu.dishes, state.basket),
   }),
-  (dispatch) => ({
+  dispatch => ({
     onClose: () => dispatch(actions.uiDialogHide()),
     onConfirm: () => dispatch(actions.uiDialogHide()),
   }),

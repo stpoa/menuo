@@ -21,7 +21,7 @@ export const configGetEpic: Epic = (
     ),
   )
 
-export const configRefetchEpic: Epic = (action$) =>
+export const configRefetchEpic: Epic = action$ =>
   action$.pipe(
     filter(isActionOf(actions.configGetRequest)),
     take(1),

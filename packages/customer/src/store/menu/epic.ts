@@ -18,7 +18,7 @@ export const menuGetEpic: Epic = (
         getRestaurantDishes({
           restaurant: state$.value.restaurant,
           language:
-            state$.value.user.locale.languages.find((l) => l.active)?.code ||
+            state$.value.user.locale.languages.find(l => l.active)?.code ||
             'en',
         }),
       ).pipe(
@@ -28,7 +28,7 @@ export const menuGetEpic: Epic = (
     ),
   )
 
-export const menuRefetchEpic: Epic = (action$) =>
+export const menuRefetchEpic: Epic = action$ =>
   action$.pipe(
     filter(isActionOf(actions.menuGetRequest)),
     take(1),

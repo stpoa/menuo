@@ -182,11 +182,11 @@ const connectComponent = connect<
   MenuSectionOwnProps,
   RootState
 >(
-  (state) => ({
+  state => ({
     basket: state.basket,
     isMenuReadOnly: state.config.config.MENU_READ_ONLY,
   }),
-  (dispatch) =>
+  dispatch =>
     bindActionCreators(
       {
         toggleBasketDish: actions.basketToggleDish,

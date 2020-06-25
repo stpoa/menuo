@@ -19,11 +19,11 @@ export const useGet: UseGet = (getData, defaultData, deps = []) => {
   return { data, error, loading, refetch }
 }
 
-export interface UseGetResult <T> {
-  data: T,
-  error: Error | undefined,
-  loading: boolean,
-  refetch: React.Dispatch<React.SetStateAction<number>>,
+export interface UseGetResult<T> {
+  data: T
+  error: Error | undefined
+  loading: boolean
+  refetch: React.Dispatch<React.SetStateAction<number>>
 }
 
 type UseGet = <T>(
