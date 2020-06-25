@@ -265,7 +265,7 @@ export const MenuPage: FC<MenuPageProps> = ({
                 color="primary"
                 onClick={handleSummonDialogClick}
               >
-                <Translate id="callWaiter">Call a waiter</Translate>
+                <Translate id="askForContact">Ask for contact</Translate>
               </Button>
               <Button
                 {...{ 'data-cy': 'open-order-modal' }}
