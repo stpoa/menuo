@@ -58,8 +58,8 @@ export const getTranslations = () => ({
   email: ['E-mail', 'E-mail'],
   whatsApp: ['WhatsApp', 'WhatsApp'],
   contactWay: ['How should we contact You?', 'W jaki sposób powinniśmy się z Tobą skontaktować?'],
-  contactWayConfirmation: ['We will contact You as soon as possible by','Skontaktujemy się z Tobą tak szybko jak to możliwe'],
-  mobileContact: ['mobile!', 'telefonicznie!'],
-  emailContact: ['e-mail!', 'e-mailowo!'],
-  whatsAppContact: ['WhatsApp!', 'poprzez WhatsApp!'],
+  contactWayConfirmation: ['We will contact You as soon as possible by ','Skontaktujemy się z Tobą tak szybko jak to możliwe '],
+  mobileConfirmation: ['mobile!', 'telefonicznie!'],
+  emailConfirmation: ['e-mail!', 'e-mailowo!'],
+  whatsAppConfirmation: ['WhatsApp!', 'poprzez WhatsApp!'],
 })
