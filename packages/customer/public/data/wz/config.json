@@ -1,3 +1,4 @@
 {
-  "MENU_READ_ONLY": false
+  "MENU_READ_ONLY": false,
+  "CHANGE_CALL_WAITER_TO_CONTACT": true
 }

@@ -9,6 +9,7 @@ import {
   WithStyles,
 } from '@material-ui/core'
 import { Translate } from 'react-localize-redux'
+import { RestaurantConfig } from '@menuo/shared'
 
 interface WaiterSummonDialogProps extends WithStyles {
   open: boolean
@@ -17,6 +18,7 @@ interface WaiterSummonDialogProps extends WithStyles {
   handlePayCardClick: () => void
   handlePayCashClick: () => void
   handleSummonClick: () => void
+  config: RestaurantConfig
 }
 
 export const WaiterSummonDialog: FC<WaiterSummonDialogProps> = ({
@@ -26,13 +28,17 @@ export const WaiterSummonDialog: FC<WaiterSummonDialogProps> = ({
   handlePayCardClick,
   handlePayCashClick,
   handleSummonClick,
+  config,
   classes,
 }) => {
+  const isButtonAskForContact = config.CHANGE_CALL_WAITER_TO_CONTACT !== false
   return (
     <Dialog open={open} onClose={handleClose}>
       <DialogTitle>
-        <Translate id="callWaiterAim">
-          What do You want to call the waiter for?
+        <Translate id={isButtonAskForContact ? 'contactWay' : 'callWaiterAim'}>
+          {isButtonAskForContact
+            ? 'How should we contact You?'
+            : 'What do You want to call the waiter for?'}
         </Translate>
       </DialogTitle>
       <DialogContent></DialogContent>
@@ -42,21 +48,27 @@ export const WaiterSummonDialog: FC<WaiterSummonDialogProps> = ({
           onClick={handlePayCashClick}
           color="primary"
         >
-          <Translate id="payByCash">Pay by cash</Translate>
+          <Translate id={isButtonAskForContact ? 'mobile' : 'payByCash'}>
+            {isButtonAskForContact ? 'Mobile' : 'Pay by cash'}
+          </Translate>
         </Button>
         <Button
           {...{ disabled, 'data-cy': 'summon-waiter-pay-card' }}
           onClick={handlePayCardClick}
           color="primary"
         >
-          <Translate id="payByCard">Pay by card</Translate>
+          <Translate id={isButtonAskForContact ? 'email' : 'payByCard'}>
+            {isButtonAskForContact ? 'E-mail' : 'Pay by card'}
+          </Translate>
         </Button>
         <Button
           {...{ disabled, 'data-cy': 'summon-waiter-other' }}
           color="primary"
           onClick={handleSummonClick}
         >
-          <Translate id="other">Other</Translate>
+          <Translate id={isButtonAskForContact ? 'whatsApp' : 'other'}>
+            {isButtonAskForContact ? 'WhatsApp' : 'Other'}
+          </Translate>
         </Button>
       </div>
     </Dialog>

@@ -51,4 +51,21 @@ export const getTranslations = () => ({
   cashPayment: ['cash payment!', 'płatność gotówką!'],
   cardPayment: ['card payment!', 'płatność kartą!'],
   anotherNeed: ['another need!', 'inna potrzeba!'],
+
+  // TODO: Below temporary translating only for W-Z company to test MENUO as another app, remove it after
+  askForContact: ['Ask for contact', 'Poproś o kontakt'],
+  mobile: ['Mobile', 'Telefon'],
+  email: ['E-mail', 'E-mail'],
+  whatsApp: ['WhatsApp', 'WhatsApp'],
+  contactWay: [
+    'How should we contact You?',
+    'W jaki sposób powinniśmy się z Tobą skontaktować?',
+  ],
+  contactWayConfirmation: [
+    'We will contact You as soon as possible by ',
+    'Skontaktujemy się z Tobą tak szybko jak to możliwe ',
+  ],
+  mobileConfirmation: ['mobile!', 'telefonicznie!'],
+  emailConfirmation: ['e-mail!', 'e-mailowo!'],
+  whatsAppConfirmation: ['WhatsApp!', 'poprzez WhatsApp!'],
 })
