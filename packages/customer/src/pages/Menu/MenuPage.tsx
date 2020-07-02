@@ -17,7 +17,7 @@ import {
   createRestaurantOrder,
   summonWaiter,
   payByCard,
-  payByCash,
+  payInCash,
 } from '../../store/menu/api'
 import MenuSection from './components/MenuSection'
 import { OrderSentDialog } from './components/OrderSentDialog'
@@ -185,7 +185,7 @@ export const MenuPage: FC<MenuPageProps> = ({
     reason: string,
     mode: boolean,
   ) => async () => {
-    await payByCash(restaurant, { ...table, status: 'pay-cash' })
+    await payInCash(restaurant, { ...table, status: 'pay-cash' })
     setShowSummonDialog(false)
     setShowSummonConfirmation(true)
     reason = mode ? 'mobileConfirmation' : 'cashPayment'

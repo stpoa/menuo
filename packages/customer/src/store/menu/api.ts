@@ -68,4 +68,4 @@ export const changeTableStatus = (status: string) => (
 }
 export const summonWaiter = changeTableStatus('summon-waiter')
 export const payByCard = changeTableStatus('pay-card')
-export const payByCash = changeTableStatus('pay-cash')
+export const payInCash = changeTableStatus('pay-cash')

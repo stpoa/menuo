@@ -11,8 +11,8 @@ export const getTranslations = () => ({
   callWaiter: ['Call a waiter', 'Przywołaj kelnera'],
   order: ['Order', 'Zamów'],
   searchPlaceholderContent: [
-    'Search in dishes and descriptions',
-    'Wyszukaj w daniach lub w opisach',
+    'Search for dishes, descriptions and categories',
+    'Wyszukaj dania, opisy lub kategorie',
   ],
   homePageUrlContent: ['https://menuo.app/en', 'https://menuo.app'],
   aboutUs: ['About us', 'O nas'],
@@ -25,14 +25,14 @@ export const getTranslations = () => ({
     "This menu currently works only in read mode. You can't place orders with it. This restriction results from the plan used by this restaurant. You can order with MENUO in many other restaurants.",
     'To menu działa aktualnie tylko w trybie odczytu. Nie możesz za jego pomocą składać zamówień. Ograniczenie to wynika z planu z którego korzysta restauracja. Możesz zamówić z MENUO we wielu innych restauracjach.',
   ],
-  payByCash: ['Pay by cash', 'Płatność gotówką'],
+  payInCash: ['Pay in cash', 'Płatność gotówką'],
   payByCard: ['Pay by card', 'Płatność kartą'],
   other: ['Other', 'Inne'],
   orderConfirmContent: [
     'Do you want to order entries below?',
     'Czy chcesz zamówić poniższe?',
   ],
-  orderListContent: ['List of Your orders:', 'Lista Twoich zamówień:'],
+  orderListContent: ['The list of Your orders:', 'Lista Twoich zamówień:'],
   back: ['back', 'powrót'],
   orderSentTitleContent: ['Order sent', 'Zamówienie wysłane!'],
   orderSentSubTitleContent: [
@@ -40,7 +40,7 @@ export const getTranslations = () => ({
     'Twoje zamówienie zostało wysłane!',
   ],
   orderSentContent: [
-    'Remember that at any moment you can make another order or call a waiter. Already ordered dishes can be seen by clicking an icon in upper right screen corner.',
+    'Remember that at any time you can make another order or call a waiter. Already ordered dishes can be seen by clicking an icon in the upper right corner.',
     'Pamiętaj, że w każdej chwili możesz złożyć kolejne zamówienie lub zawołać kelnera. Zamówione wcześniej dania możesz sprawdzić klikając ikonke w prawym, górnym rogu.',
   ],
   currentlyInBasket: ['Currently in basket', 'Aktualnie w koszyku'],

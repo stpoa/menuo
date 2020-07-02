@@ -48,8 +48,8 @@ export const WaiterSummonDialog: FC<WaiterSummonDialogProps> = ({
           onClick={handlePayCashClick}
           color="primary"
         >
-          <Translate id={isButtonAskForContact ? 'mobile' : 'payByCash'}>
-            {isButtonAskForContact ? 'Mobile' : 'Pay by cash'}
+          <Translate id={isButtonAskForContact ? 'mobile' : 'payInCash'}>
+            {isButtonAskForContact ? 'Mobile' : 'Pay in cash'}
           </Translate>
         </Button>
         <Button
