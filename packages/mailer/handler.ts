@@ -15,13 +15,44 @@ interface FormData {
   waiters_count: string
 }
 
-const sendEmail = (formData: FormData) => {
-  const SOURCE_EMAIL = 'hi@menuo.app'
-  const DESTINATION_EMAIL = 'hi@menuo.app'
+interface SendEmailInput {
+  from: string
+  to: string[]
+  replyTo: string[]
+  message: string
+  subject: string
+}
 
+const buildEmailParams = (data: SendEmailInput) => {
+  const emailParams = {
+    Source: data.from,
+    ReplyToAddresses: data.replyTo,
+    Destination: {
+      ToAddresses: data.to,
+    },
+    Message: {
+      Body: {
+        Text: {
+          Charset: 'UTF-8',
+          Data: data.message,
+        },
+      },
+      Subject: {
+        Charset: 'UTF-8',
+        Data: data.subject,
+      },
+    },
+  }
+
+  return emailParams
+}
+
+function sendContactEmail(formData: FormData) {
+  const from = 'hi@menuo.app'
+  const to = ['hi@menuo.app']
   const {
     email,
-    message,
+    message: messageFormText,
     first_name,
     restaurant_name,
     last_name,
@@ -30,9 +61,10 @@ const sendEmail = (formData: FormData) => {
     table_list,
     waiters_count,
   } = formData
-
-  const messageData = `
-${message}
+  const replyTo = [email]
+  const subject = `Nowa wiadomość z formularza menuo od ${restaurant_name}`
+  const message = `
+${messageFormText}
 
 -----------------------------------------------------------------------------
 Restauracja: ${restaurant_name}
@@ -44,33 +76,15 @@ Menu: ${menu}
 Lista stolików: ${table_list}
 `
 
-  const emailParams = {
-    Source: SOURCE_EMAIL,
-    ReplyToAddresses: [email],
-    Destination: {
-      ToAddresses: [DESTINATION_EMAIL],
-    },
-    Message: {
-      Body: {
-        Text: {
-          Charset: 'UTF-8',
-          Data: messageData,
-        },
-      },
-      Subject: {
-        Charset: 'UTF-8',
-        Data: `Nowa wiadomość z formularza menuo od ${restaurant_name}`,
-      },
-    },
-  }
-
-  return ses.sendEmail(emailParams).promise()
+  return ses
+    .sendEmail(buildEmailParams({ from, to, replyTo, message, subject }))
+    .promise()
 }
 
-export const staticSiteMailer: APIGatewayProxyHandler = async (
+export const staticSiteMailer: APIGatewayProxyHandler = async function (
   event,
   _context,
-): Promise<APIGatewayProxyResult> => {
+): Promise<APIGatewayProxyResult> {
   const formData = JSON.parse(event.body)
 
   const headers = {
@@ -85,7 +99,7 @@ export const staticSiteMailer: APIGatewayProxyHandler = async (
   })
 
   try {
-    await sendEmail(formData)
+    await sendContactEmail(formData)
   } catch (e) {
     console.log(e)
     return sendMailErrorResponse(e)

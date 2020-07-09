@@ -30,6 +30,7 @@ provider:
     - Effect: 'Allow'
       Action:
         - 'lambda:*'
+        - 'ses:SendEmail'
       Resource: '*'
 
 functions:
@@ -194,6 +195,14 @@ functions:
 
   send_notifications:
     handler: src/handlers.sendNotifications
+
+  send_email_order:
+    handler: src/handlers.send-email-order.handler
+    events:
+      - http:
+          method: post
+          path: static-site-mailer
+          cors: true
 
   # logs:
   #   handler: src/logs/handlers/log.handler

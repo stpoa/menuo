@@ -16,11 +16,12 @@ export const sendNotification = ({
 }: {
   title: string
   body: string
-}) => async (subscription: any) => {
-  return webPush
-    .sendNotification(subscription, JSON.stringify({ title, body }))
-    .catch(error => console.error(error))
-}
+}) =>
+  async function (subscription: any) {
+    return webPush
+      .sendNotification(subscription, JSON.stringify({ title, body }))
+      .catch(error => console.error(error))
+  }
 
 export const sendNotifications = ({
   functionName,
