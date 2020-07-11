@@ -53,7 +53,7 @@ export const getTranslations = () => ({
   anotherNeed: ['another need!', 'inna potrzeba!'],
 
   // TODO: Below temporary translating only for W-Z company to test MENUO as another app, remove it after
-  askForContact: ['Ask for contact', 'Poproś o kontakt'],
+  askForContact: ['Contact', 'Kontakt'],
   mobile: ['Mobile', 'Telefon'],
   email: ['E-mail', 'E-mail'],
   whatsApp: ['WhatsApp', 'WhatsApp'],
@@ -68,4 +68,8 @@ export const getTranslations = () => ({
   mobileConfirmation: ['mobile!', 'telefonicznie!'],
   emailConfirmation: ['e-mail!', 'e-mailowo!'],
   whatsAppConfirmation: ['WhatsApp!', 'poprzez WhatsApp!'],
+  orderSentContentWz: [
+    'If You have any further questions please use "CONTACT" button.',
+    'Jeśli masz jakieś dalsze pytania użyj przycisku "KONTAKT".',
+  ],
 })

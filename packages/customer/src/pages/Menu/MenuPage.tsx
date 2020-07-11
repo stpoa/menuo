@@ -258,6 +258,7 @@ export const MenuPage: FC<MenuPageProps> = ({
         }}
         showOrderedDialog={showOrderedInfo}
         ordered={[]}
+        config={config}
       />
       <OrderedListDialog
         open={showOrderedList}
@@ -299,7 +300,7 @@ export const MenuPage: FC<MenuPageProps> = ({
                 <Translate
                   id={isButtonAskForContact ? 'askForContact' : 'callWaiter'}
                 >
-                  {isButtonAskForContact ? 'Ask for contact' : 'Call a waiter'}
+                  {isButtonAskForContact ? 'Contact' : 'Call a waiter '}
                 </Translate>
               </Button>
               <Button
