@@ -150,46 +150,35 @@ export const MenuPage: FC<MenuPageProps> = ({
     setLoading(false)
   }
 
-  const handleSummonDialogClick = () => {
-    setShowSummonDialog(true)
-  }
-
   const isButtonAskForContact = config.CHANGE_CALL_WAITER_TO_CONTACT !== false
 
-  const handleSummonClick = (
-    table: Table,
-    reason: string,
-    mode: boolean,
-  ) => async () => {
+  const handleSummonDialogClick = () => {
+    {
+      isButtonAskForContact
+        ? setShowSummonConfirmation(true)
+        : setShowSummonDialog(true)
+    }
+  }
+
+  const handleSummonClick = (table: Table, reason: string) => async () => {
     setLoading(true)
     await summonWaiter(restaurant, table)
     setShowSummonDialog(false)
     setLoading(false)
     setShowSummonConfirmation(true)
-    reason = mode ? 'whatsAppConfirmation' : 'anotherNeed'
-    setReason(reason)
+    setReason('anotherNeed')
   }
-  const handlePayCardClick = (
-    table: Table,
-    reason: string,
-    mode: boolean,
-  ) => async () => {
+  const handlePayCardClick = (table: Table, reason: string) => async () => {
     await payByCard(restaurant, { ...table, status: 'pay-card' })
     setShowSummonDialog(false)
     setShowSummonConfirmation(true)
-    reason = mode ? 'emailConfirmation' : 'cardPayment'
-    setReason(reason)
+    setReason('cardPayment')
   }
-  const handlePayCashClick = (
-    table: Table,
-    reason: string,
-    mode: boolean,
-  ) => async () => {
+  const handlePayCashClick = (table: Table, reason: string) => async () => {
     await payInCash(restaurant, { ...table, status: 'pay-cash' })
     setShowSummonDialog(false)
     setShowSummonConfirmation(true)
-    reason = mode ? 'mobileConfirmation' : 'cashPayment'
-    setReason(reason)
+    setReason('cashPayment')
   }
 
   const isMenuReadOnly = config.MENU_READ_ONLY !== false
@@ -215,21 +204,9 @@ export const MenuPage: FC<MenuPageProps> = ({
         disabled={loading}
         open={showSummonDialog}
         handleClose={() => setShowSummonDialog(false)}
-        handlePayCardClick={handlePayCardClick(
-          table,
-          reason,
-          isButtonAskForContact,
-        )}
-        handlePayCashClick={handlePayCashClick(
-          table,
-          reason,
-          isButtonAskForContact,
-        )}
-        handleSummonClick={handleSummonClick(
-          table,
-          reason,
-          isButtonAskForContact,
-        )}
+        handlePayCardClick={handlePayCardClick(table, reason)}
+        handlePayCashClick={handlePayCashClick(table, reason)}
+        handleSummonClick={handleSummonClick(table, reason)}
         config={config}
       />
       <WaiterSummonConfirmation

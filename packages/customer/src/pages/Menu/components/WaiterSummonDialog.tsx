@@ -35,10 +35,8 @@ export const WaiterSummonDialog: FC<WaiterSummonDialogProps> = ({
   return (
     <Dialog open={open} onClose={handleClose}>
       <DialogTitle>
-        <Translate id={isButtonAskForContact ? 'contactWay' : 'callWaiterAim'}>
-          {isButtonAskForContact
-            ? 'How should we contact You?'
-            : 'What do You want to call the waiter for?'}
+        <Translate id="callWaiterAim">
+          What do You want to call the waiter for?
         </Translate>
       </DialogTitle>
       <DialogContent></DialogContent>
@@ -48,27 +46,21 @@ export const WaiterSummonDialog: FC<WaiterSummonDialogProps> = ({
           onClick={handlePayCashClick}
           color="primary"
         >
-          <Translate id={isButtonAskForContact ? 'mobile' : 'payInCash'}>
-            {isButtonAskForContact ? 'Mobile' : 'Pay in cash'}
-          </Translate>
+          <Translate id="payInCash">Pay in cash</Translate>
         </Button>
         <Button
           {...{ disabled, 'data-cy': 'summon-waiter-pay-card' }}
           onClick={handlePayCardClick}
           color="primary"
         >
-          <Translate id={isButtonAskForContact ? 'email' : 'payByCard'}>
-            {isButtonAskForContact ? 'E-mail' : 'Pay by card'}
-          </Translate>
+          <Translate id="payByCard">Pay by card</Translate>
         </Button>
         <Button
           {...{ disabled, 'data-cy': 'summon-waiter-other' }}
           color="primary"
           onClick={handleSummonClick}
         >
-          <Translate id={isButtonAskForContact ? 'whatsApp' : 'other'}>
-            {isButtonAskForContact ? 'WhatsApp' : 'Other'}
-          </Translate>
+          <Translate id="other">Other</Translate>
         </Button>
       </div>
     </Dialog>

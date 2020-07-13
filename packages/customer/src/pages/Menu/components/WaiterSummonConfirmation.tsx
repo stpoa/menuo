@@ -40,9 +40,14 @@ export const WaiterSummonConfirmation: FC<WaiterSummonConfirmationProps> = ({
               : 'callWaiterConfirmation'
           }
         ></Translate>
-        <Translate id={reason}></Translate>
+        {isButtonAskForContact ? '' : <Translate id={reason}></Translate>}
       </DialogTitle>
-      <DialogContent></DialogContent>
+      <DialogContent>
+        {isButtonAskForContact ? 'Mob: +48 510 993 180' : ''}
+      </DialogContent>
+      <DialogContent>
+        {isButtonAskForContact ? 'E-mail: m.koscielny@fachhandel.pl' : ''}
+      </DialogContent>
       <div className={classes.dialogButtons}>
         <Button
           {...{ disabled, 'data-cy': 'summon-waiter-confirmation' }}
