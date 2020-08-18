@@ -21,7 +21,7 @@ export const ReadOnlyMenuInfoDialog: FC<ReadOnlyMenuInfoDialogProps> = ({
       <Translate id="readOnlyMenuDialogContent">
         This menu works only in preview mode. You cannot make orders, but this
         only applies to this restaurant, because of plan it uses. You can try
-        ordering with menuo in other restaurants
+        ordering with MENUO in other restaurants
       </Translate>
     </DialogContent>
     <Button
