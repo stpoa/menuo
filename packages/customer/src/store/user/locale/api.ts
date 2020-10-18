@@ -34,9 +34,9 @@ export const getTranslations = () => ({
   ],
   orderListContent: ['The list of Your orders:', 'Lista Twoich zamówień:'],
   back: ['back', 'powrót'],
-  orderSentTitleContent: ['Order sent', 'Zamówienie wysłane!'],
+  orderSentTitleContent: ['Order sent!', 'Zamówienie wysłane!'],
   orderSentSubTitleContent: [
-    'Your order has been sent',
+    'Your order has been sent!',
     'Twoje zamówienie zostało wysłane!',
   ],
   orderSentContent: [
