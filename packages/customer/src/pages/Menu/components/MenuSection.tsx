@@ -157,7 +157,7 @@ const styleComponent = withStyles(() =>
   createStyles({
     root: {},
     head: {
-      color: '#777',
+      color: '#000',
       padding: '0 1rem',
       marginTop: '3rem',
     },

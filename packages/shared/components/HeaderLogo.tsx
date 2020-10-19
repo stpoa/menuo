@@ -22,7 +22,7 @@ export const HeaderLogo = withStyles((_) =>
     content: {
       textAlign: 'center',
       fontFamily: "'Megrim', sans-serif",
-      color: '#777',
+      color: '#000',
       fontSize: '2rem',
     },
   }),
