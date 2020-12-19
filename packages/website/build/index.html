@@ -22,8 +22,8 @@
         function init() {
           let language = getLanguageFromBrowser();
           language = language == "pl" || language == "en" ? language : "en";
-          if (window.location.href.includes("://menuo.me/")) {
-            window.location.href = "https://menuo.me/" + language;
+          if (window.location.href.includes("://menuo.ovh/")) {
+            window.location.href = "https://menuo.ovh/" + language;
           } else if (window.location.href.includes("://menuo.app/")) {
             window.location.href = "https://menuo.app/" + language;
           }

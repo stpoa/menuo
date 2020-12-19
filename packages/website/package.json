@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "deploy:staging": "aws s3 sync ./build s3://menuo.me",
+    "deploy:staging": "aws s3 sync ./build s3://menuo.ovh",
     "deploy:production": "aws s3 sync ./build s3://menuo.app"
   }
 }
